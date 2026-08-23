@@ -1,0 +1,12 @@
+id: res-algolia-search-api
+type: official
+title: Algolia Search API
+url: https://www.algolia.com/doc/rest-api/search
+description: 検索索引、レコード、検索条件、認証方法を確認するAlgoliaの公式API資料です。
+technologyIds:
+- algolia
+concepts:
+- search-api
+- index-synchronization
+currentUse: 現在の検索APIと索引同期方法の確認。
+limitations: 契約プラン、利用上限、データ処理条件は案件ごとに確認が必要です。

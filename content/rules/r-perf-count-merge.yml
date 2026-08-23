@@ -1,0 +1,16 @@
+id: r-perf-count-merge
+situationId: threejs-many-objects
+when:
+  all:
+  - large-object-count
+  - static-scene
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 1
+reason: 多数の静的Geometryをまとめられる場合、描画回数削減の候補になります。
+evidenceIds:
+- ev-three-many-objects
+lastReviewed: '2026-08-23'
+targetApproachId: geometry-merge-batching

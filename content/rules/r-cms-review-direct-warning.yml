@@ -1,0 +1,15 @@
+id: r-cms-review-direct-warning
+situationId: cms-architecture-selection
+when:
+  all:
+  - content-code-review-required
+  - cms-direct-publishing-required
+  any: []
+  none: []
+effect:
+  type: warn
+reason: Gitの必須レビューとCMSからの直接公開は異なる公開経路です。両方が必要なら、承認を強制できるCMS設定または連携フローを別途設計してください。
+evidenceIds:
+- ev-cms-github-branch-protection
+- ev-cms-wordpress-site-editor
+lastReviewed: '2026-08-24'

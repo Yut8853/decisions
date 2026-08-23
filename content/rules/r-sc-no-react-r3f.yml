@@ -1,0 +1,15 @@
+id: r-sc-no-react-r3f
+situationId: scroll-linked-3d
+when:
+  all: []
+  any: []
+  none:
+  - react-existing
+effect:
+  type: penalize
+  weight: 2
+reason: Reactを採用しないページではR3F導入の利点が小さくなります。
+evidenceIds:
+- ev-r3f-intro
+lastReviewed: '2026-08-23'
+targetApproachId: r3f-scrollcontrols

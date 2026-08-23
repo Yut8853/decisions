@@ -1,0 +1,11 @@
+id: res-r3f-intro
+type: official
+title: React Three Fiber Introduction
+url: https://r3f.docs.pmnd.rs/getting-started/introduction
+description: R3Fの基本構造とThree.jsとの関係を説明する公式ガイド。
+technologyIds:
+- r3f
+- react
+concepts:
+- component-design
+currentUse: 現在の導入方法と設計前提。

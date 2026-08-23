@@ -1,0 +1,11 @@
+id: ev-formspree-notification-rules
+title: Formspreeの通知ルール
+claim: Formspreeはフォーム送信時のメール通知を提供し、契約プランに応じて入力値を条件に通知先を変えるルールを設定できる。
+sourceType: official-documentation
+sourceName: Formspree
+url: https://help.formspree.io/articles/advanced-features/form-rules/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: 条件分岐を含むForm RulesはBusinessプラン向け。採用時に現在のプラン範囲を確認する。

@@ -1,0 +1,16 @@
+id: r-seo-maint-dom
+situationId: seo-rich-3d
+when:
+  all:
+  - maintainability-priority
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 1
+reason: HTML本文と3D機能を分けることで、担当範囲と障害影響を分離しやすくなります。
+evidenceIds:
+- ev-next-lazy
+- ev-js-seo
+lastReviewed: '2026-08-23'
+targetApproachId: dom-first-three-islands

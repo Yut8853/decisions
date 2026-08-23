@@ -1,0 +1,17 @@
+id: r-search-selfhost-external-relevance
+situationId: site-search
+targetApproachId: self-hosted-search-service
+when:
+  all:
+  - advanced-search-relevance
+  - external-service-restricted
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 10
+reason: 自前運用できる検索サーバーにも、検索対象、絞り込み、順位規則、同義語などを調整する設定があります。
+evidenceIds:
+- ev-meilisearch-self-hosting
+- ev-meilisearch-search-settings
+lastReviewed: '2026-08-24'

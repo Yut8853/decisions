@@ -1,0 +1,16 @@
+id: r-perf-static-merge
+situationId: threejs-many-objects
+when:
+  all:
+  - static-scene
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 3
+reason: 個別更新が不要な静的シーンではGeometry統合でDraw Callを減らせます。
+evidenceIds:
+- ev-three-buffergeometry
+- ev-three-many-objects
+lastReviewed: '2026-08-23'
+targetApproachId: geometry-merge-batching

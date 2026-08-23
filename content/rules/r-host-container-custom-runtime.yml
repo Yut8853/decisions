@@ -1,0 +1,15 @@
+id: r-host-container-custom-runtime
+situationId: hosting-runtime-selection
+when:
+  all:
+  - custom-runtime-required
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 5
+reason: 実行基盤のコンテナ仕様を満たす範囲で、アプリが必要とするシステムパッケージ、バイナリ、ランタイムをイメージに含められます。
+evidenceIds:
+- ev-host-cloud-run-container-image
+lastReviewed: '2026-08-24'
+targetApproachId: managed-container-runtime

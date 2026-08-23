@@ -1,0 +1,16 @@
+id: r-perf-repeat-lod
+situationId: threejs-many-objects
+when:
+  all:
+  - repeated-geometry
+  any: []
+  none: []
+effect:
+  type: penalize
+  weight: 1
+reason: 同一形状の大量反復だけなら、まずInstancingの方が直接的なDraw Call削減策です。
+evidenceIds:
+- ev-three-instancedmesh
+- ev-three-lod
+lastReviewed: '2026-08-23'
+targetApproachId: lod-frustum-culling

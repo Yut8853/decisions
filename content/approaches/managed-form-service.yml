@@ -1,0 +1,37 @@
+id: managed-form-service
+slug: managed-form-service
+title: フォーム受付サービスを利用する（Formspree）
+shortTitle: フォーム受付サービス
+summary: HTMLフォームの送信先に専用サービスを指定し、受付、迷惑送信対策、通知を任せる方法です。
+defaultLabel: fast
+baseScore: 3
+technologyIds:
+- formspree
+- html-forms
+concepts:
+- managed-form-backend
+- spam-filtering
+- submission-notification
+recommendedWhen:
+- 一般的な問い合わせフォームを短期間で公開したい
+- 受付用サーバーを保守する担当者がいない
+- 外部サービスの保存先、契約、権限を確認できる
+notRecommendedWhen:
+- 問い合わせ内容を外部SaaSへ送信できない
+- 送信と同じ処理内で複雑な業務判定や更新を行う
+- サービスの保存地域や保持条件が組織要件に合わない
+advantages:
+- 受付用のサーバー処理を書かずに始められる
+- 迷惑送信対策と通知機能を利用できる
+- フォームの受付先となるエンドポイントの運用をサービス側へ委ねられる
+disadvantages:
+- 問い合わせ内容を外部事業者が処理する
+- 料金プランと保存期間などの条件を継続確認する必要がある
+- 通知失敗、閲覧権限、保存期間、迷惑送信への対応状況は利用者側でも確認する必要がある
+- 独自の業務処理は連携機能の範囲に制約される
+resourceIds:
+- res-formspree-html-forms
+- res-formspree-security
+- res-formspree-notification-rules
+- res-owasp-input-validation
+lastReviewed: '2026-08-24'

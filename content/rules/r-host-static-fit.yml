@@ -1,0 +1,15 @@
+id: r-host-static-fit
+situationId: hosting-runtime-selection
+when:
+  all:
+  - static-output-possible
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 4
+reason: 閲覧時の動的処理が不要なら、公開時に生成したファイルを静的Webサーバーから配信できます。
+evidenceIds:
+- ev-host-static-export
+lastReviewed: '2026-08-24'
+targetApproachId: static-edge-hosting

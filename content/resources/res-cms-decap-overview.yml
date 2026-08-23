@@ -1,0 +1,11 @@
+id: res-cms-decap-overview
+type: official
+title: Decap CMS Overview
+url: https://decapcms.org/docs/intro/
+description: Gitリポジトリへコンテンツを保存するCMS構成と編集UIの役割を説明する公式資料。
+technologyIds:
+- decap-cms
+- git
+concepts:
+- git-based-content
+currentUse: Git管理CMSの保存方式を確認する。

@@ -1,0 +1,15 @@
+id: r-pv-short-babylon
+situationId: 3d-product-viewer
+when:
+  all:
+  - short-deadline
+  any: []
+  none: []
+effect:
+  type: penalize
+  weight: 2
+reason: 短納期の単純ビューアでは、統合エンジン全体を選ぶ利点より導入範囲が大きくなります。
+evidenceIds:
+- ev-babylon-loading
+lastReviewed: '2026-08-23'
+targetApproachId: babylonjs-product

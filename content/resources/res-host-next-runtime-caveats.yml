@@ -1,0 +1,12 @@
+id: res-host-next-runtime-caveats
+type: official
+title: Next.js Backend for Frontend Guide
+url: https://nextjs.org/docs/app/guides/backend-for-frontend
+description: ホストがルート処理を関数として実行する場合の状態、ファイル、長時間処理などの注意点を示す公式資料。
+technologyIds:
+- nextjs
+- serverless-functions
+concepts:
+- request-response
+- runtime-constraints
+currentUse: ホスティング先の関数実行制約を確認する。

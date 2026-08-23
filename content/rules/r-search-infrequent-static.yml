@@ -1,0 +1,15 @@
+id: r-search-infrequent-static
+situationId: site-search
+targetApproachId: build-time-static-search
+when:
+  all:
+  - infrequent-content-updates
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 3
+reason: 更新時に再公開できるなら、公開用HTMLから作る静的索引の更新方法と一致します。
+evidenceIds:
+- ev-pagefind-static-bundle
+lastReviewed: '2026-08-24'

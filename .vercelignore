@@ -1,0 +1,5 @@
+.ai/runs
+coverage
+playwright-report
+test-results
+artifacts

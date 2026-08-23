@@ -1,0 +1,10 @@
+id: ev-three-many-objects
+title: Optimize lots of objects
+claim: Three.js公式マニュアルは多数オブジェクトのDraw Call削減策としてGeometry統合などを例示する。
+sourceType: official-documentation
+sourceName: Three.js
+url: https://threejs.org/manual/en/optimize-lots-of-objects.html
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

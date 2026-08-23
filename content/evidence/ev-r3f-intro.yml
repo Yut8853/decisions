@@ -1,0 +1,10 @@
+id: ev-r3f-intro
+title: React Three Fiber introduction
+claim: React Three FiberはThree.jsのReact rendererであり、Three.jsシーンをReactの宣言的構成で記述する。
+sourceType: official-documentation
+sourceName: React Three Fiber
+url: https://r3f.docs.pmnd.rs/getting-started/introduction
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

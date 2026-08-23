@@ -1,0 +1,10 @@
+id: ev-r3f-performance
+title: React Three Fiber scaling performance
+claim: React Three Fiber公式ガイドはオブジェクト再利用、Instancing、状態更新などの性能上の注意を示している。
+sourceType: official-documentation
+sourceName: React Three Fiber
+url: https://r3f.docs.pmnd.rs/advanced/scaling-performance
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

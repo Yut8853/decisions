@@ -1,0 +1,15 @@
+id: r-pv-glsl-three
+situationId: 3d-product-viewer
+when:
+  all:
+  - existing-glsl-assets
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 3
+reason: 既存GLSL資産を直接活用する自由度が高いためThree.js構成を優先します。
+evidenceIds:
+- ev-three-webgpu
+lastReviewed: '2026-08-23'
+targetApproachId: threejs-gltf-product

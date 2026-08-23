@@ -1,0 +1,16 @@
+id: r-perf-dynamic-instancing
+situationId: threejs-many-objects
+when:
+  all:
+  - dynamic-objects
+  - repeated-geometry
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 2
+reason: 各Instanceの行列を更新できるため、同じ形状が個別に動く場合にも候補になります。
+evidenceIds:
+- ev-three-instancedmesh
+lastReviewed: '2026-08-23'
+targetApproachId: threejs-instancing

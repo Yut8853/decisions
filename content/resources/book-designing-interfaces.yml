@@ -1,0 +1,13 @@
+id: book-designing-interfaces
+type: book
+title: Designing Interfaces
+amazonUrl: https://www.amazon.co.jp/s?k=Designing+Interfaces
+description: UIパターンと情報の見せ方を体系的に扱う本。
+technologyIds:
+- html
+- css
+concepts:
+- interface-design
+- information-architecture
+currentUse: 3D表現の外側にあるUIと導線を設計する。
+limitations: 3Dライブラリの実装方法を扱う本ではない。

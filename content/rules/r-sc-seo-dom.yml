@@ -1,0 +1,16 @@
+id: r-sc-seo-dom
+situationId: scroll-linked-3d
+when:
+  all:
+  - seo-priority
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 3
+reason: 本文とリンクをDOMに保ちながらスクロール演出を追加できるため優先します。
+evidenceIds:
+- ev-js-seo
+- ev-gsap-scrolltrigger
+lastReviewed: '2026-08-23'
+targetApproachId: dom-gsap-scroll

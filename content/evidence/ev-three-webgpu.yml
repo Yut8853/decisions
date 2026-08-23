@@ -1,0 +1,10 @@
+id: ev-three-webgpu
+title: Three.js WebGPURenderer manual
+claim: Three.jsはWebGPURendererを提供し、WebGPU利用と対応状況に応じたバックエンド選択について説明している。
+sourceType: official-documentation
+sourceName: Three.js
+url: https://threejs.org/manual/en/webgpurenderer.html
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

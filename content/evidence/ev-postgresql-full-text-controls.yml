@@ -1,0 +1,11 @@
+id: ev-postgresql-full-text-controls
+title: PostgreSQL 18の全文検索機能
+claim: PostgreSQLは文書と検索語をtsvectorとtsqueryへ変換し、照合、順位付け、検索結果の見出し生成に使う関数を提供する。
+sourceType: official-documentation
+sourceName: PostgreSQL Global Development Group
+url: https://www.postgresql.org/docs/current/textsearch-controls.html
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []
+notes: 順位の意味は用途ごとに異なり、公式資料も組み込み順位関数を調整の出発点として説明している。

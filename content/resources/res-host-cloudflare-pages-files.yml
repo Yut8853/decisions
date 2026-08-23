@@ -1,0 +1,12 @@
+id: res-host-cloudflare-pages-files
+type: official
+title: Cloudflare Pages Limits
+url: https://developers.cloudflare.com/pages/platform/limits/
+description: Pagesの静的ファイル配信と、プランごとに確認すべき制限を示す公式資料。
+technologyIds:
+- cloudflare-pages
+concepts:
+- edge-delivery
+- static-assets
+currentUse: 静的ファイルの配置方法と現行制限を確認する。
+limitations: 制限値は変更され得るため、採用時に公式ページを再確認する。

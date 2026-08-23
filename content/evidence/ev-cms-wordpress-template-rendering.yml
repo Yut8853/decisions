@@ -1,0 +1,10 @@
+id: ev-cms-wordpress-template-rendering
+title: WordPress template rendering
+claim: WordPressのテーマテンプレートは文書構造を定義し、保存された投稿などの動的な内容をフロントエンドのHTMLへ出力する。
+sourceType: official-documentation
+sourceName: WordPress Theme Handbook
+url: https://developer.wordpress.org/themes/core-concepts/templates/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

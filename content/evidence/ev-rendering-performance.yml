@@ -1,0 +1,10 @@
+id: ev-rendering-performance
+title: Rendering performance
+claim: web.devのレンダリング性能ガイドは、各フレームで行う作業を抑え、滑らかな描画を保つ考え方を説明する。
+sourceType: official-documentation
+sourceName: web.dev
+url: https://web.dev/articles/rendering-performance
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

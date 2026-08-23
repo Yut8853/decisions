@@ -1,0 +1,32 @@
+id: dom-progressive-portfolio
+slug: dom-progressive-portfolio
+title: DOM中心 + 部分的3Dのプログレッシブ構成
+shortTitle: DOM + 3D Islands
+summary: 本文と導線をHTMLで構成し、必要な箇所だけThree.jsやCanvasを追加する方法です。
+defaultLabel: alternative
+baseScore: 2
+technologyIds:
+- html
+- css
+- javascript
+- threejs
+concepts:
+- progressive-enhancement
+- accessibility
+- seo
+recommendedWhen:
+- 作品説明と問い合わせ導線を確実に読ませる
+- SEOやアクセシビリティを重視する
+notRecommendedWhen:
+- 画面全体を一つの3D世界として成立させたい
+advantages:
+- HTML本文を保持できる
+- 低性能環境へフォールバックしやすい
+disadvantages:
+- DOMと3Dの境界設計が必要
+- 完全没入型より表現統一が難しい
+resourceIds:
+- res-js-seo
+- res-wcag-nontext
+- book-designing-interfaces
+lastReviewed: '2026-08-23'

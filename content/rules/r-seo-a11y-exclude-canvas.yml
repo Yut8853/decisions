@@ -1,0 +1,15 @@
+id: r-seo-a11y-exclude-canvas
+situationId: seo-rich-3d
+when:
+  all:
+  - accessibility-priority
+  any: []
+  none: []
+effect:
+  type: exclude
+reason: 非テキスト表現だけで情報を完結させず、同等のHTML代替を用意する必要があるため除外します。
+evidenceIds:
+- ev-canvas-fallback
+- ev-wcag-nontext
+lastReviewed: '2026-08-23'
+targetApproachId: full-canvas-three

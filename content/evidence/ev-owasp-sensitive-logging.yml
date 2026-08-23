@@ -1,0 +1,11 @@
+id: ev-owasp-sensitive-logging
+title: OWASPの機密情報を含むログ指針
+claim: OWASPは機密性の高い個人情報や認証情報などをログへ直接記録せず、除去、マスキング、暗号化などを検討するよう示している。
+sourceType: official-documentation
+sourceName: OWASP Cheat Sheet Series
+url: https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []
+notes: 問い合わせ本文を例外ログやデバッグログへ無条件に含めないための根拠として使用する。

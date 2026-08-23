@@ -1,0 +1,31 @@
+id: headless-api-cms
+slug: headless-api-cms
+title: API型ヘッドレスCMS
+shortTitle: ヘッドレスCMS
+summary: CMSで構造化したコンテンツを管理し、Webサイトやアプリが配信APIから取得して表示する構成です。
+defaultLabel: canonical
+baseScore: 3
+technologyIds:
+- headless-cms
+- content-api
+concepts:
+- content-model
+- api-delivery
+- multi-channel
+recommendedWhen:
+- 同じコンテンツを複数のサイトやアプリで再利用する
+- 項目、型、入力検証を定義して内容を管理する
+- 表示側とコンテンツ管理を別々に更新したい
+notRecommendedWhen:
+- 一つの小規模サイトだけで内容とレイアウトが強く結び付いている
+- API取得、プレビュー、障害時の扱いを実装する担当者がいない
+advantages:
+- 構造化した内容をAPIで複数の表示先へ渡せる
+- CMSとフロントエンドの役割を分けられる
+disadvantages:
+- API連携、キャッシュ、プレビューの実装が必要
+- CMSと表示側のデータモデル変更を調整する必要がある
+resourceIds:
+- res-cms-contentful-api-basics
+- res-cms-contentful-data-model
+lastReviewed: '2026-08-24'

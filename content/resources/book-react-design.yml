@@ -1,0 +1,12 @@
+id: book-react-design
+type: book
+title: React設計・コンポーネント設計の書籍を選ぶ
+amazonUrl: https://www.amazon.co.jp/s?k=React+設計+コンポーネント
+description: React固有APIだけでなく、状態境界とコンポーネント責務を体系的に学ぶための選書枠。
+technologyIds:
+- react
+concepts:
+- component-design
+- state-management
+currentUse: R3FをReactアプリへ統合する設計原則を理解する。
+limitations: 購入前に対象Reactバージョンと目次を確認する。

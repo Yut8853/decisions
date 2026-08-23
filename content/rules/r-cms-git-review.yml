@@ -1,0 +1,17 @@
+id: r-cms-git-review
+situationId: cms-architecture-selection
+when:
+  all:
+  - content-code-review-required
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 5
+reason: Pull Requestの差分確認に加え、ブランチ保護で承認と状態チェックを必須にすれば、未確認のコンテンツ変更をマージから除外できます。
+evidenceIds:
+- ev-cms-decap-editorial-workflow
+- ev-cms-github-pr-review
+- ev-cms-github-branch-protection
+lastReviewed: '2026-08-24'
+targetApproachId: git-based-content

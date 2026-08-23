@@ -1,0 +1,16 @@
+id: r-cms-git-no-build
+situationId: cms-architecture-selection
+when:
+  all:
+  - cms-direct-publishing-required
+  any: []
+  none: []
+effect:
+  type: penalize
+  weight: 4
+reason: この案ではコンテンツをGitへ保存して静的サイトを生成するため、更新の反映にビルドと配信が必要です。
+evidenceIds:
+- ev-cms-decap-git-storage
+- ev-host-static-export
+lastReviewed: '2026-08-24'
+targetApproachId: git-based-content

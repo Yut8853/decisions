@@ -1,0 +1,11 @@
+id: ev-postgresql-text-dictionaries
+title: PostgreSQLの全文検索辞書
+claim: PostgreSQLの全文検索設定は解析器と辞書を組み合わせ、不要語の除外や語の正規化に利用できる。
+sourceType: official-documentation
+sourceName: PostgreSQL Global Development Group
+url: https://www.postgresql.org/docs/current/textsearch-dictionaries.html
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []
+notes: 日本語の実用的な単語分割に必要な拡張機能までは、このEvidenceで確認していない。

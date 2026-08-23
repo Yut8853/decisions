@@ -1,0 +1,16 @@
+id: r-sc-mobile-sequence
+situationId: scroll-linked-3d
+when:
+  all:
+  - mobile-priority
+  any: []
+  none: []
+effect:
+  type: penalize
+  weight: 1
+reason: 連番画像は転送量とデコード負荷が増えやすいため、モバイル重視では慎重に評価します。
+evidenceIds:
+- ev-next-lazy
+- ev-rendering-performance
+lastReviewed: '2026-08-23'
+targetApproachId: canvas-image-sequence

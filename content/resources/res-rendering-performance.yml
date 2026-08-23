@@ -1,0 +1,11 @@
+id: res-rendering-performance
+type: official
+title: Rendering Performance
+url: https://web.dev/articles/rendering-performance
+description: 滑らかな描画に必要なフレーム処理の考え方。
+technologyIds:
+- javascript
+- webgl
+concepts:
+- performance
+currentUse: レンダリング負荷の基礎確認。

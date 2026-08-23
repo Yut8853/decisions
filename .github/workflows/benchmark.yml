@@ -1,0 +1,56 @@
+name: Run reproducible benchmark
+
+on:
+  workflow_dispatch:
+    inputs:
+      benchmark_id:
+        description: "Benchmark plan id"
+        required: true
+        default: bench-product-viewer-baseline
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm build
+      - name: Start production server
+        run: |
+          pnpm start > /tmp/vtd-server.log 2>&1 &
+          echo $! > /tmp/vtd-server.pid
+          for i in {1..60}; do
+            curl -fsS http://127.0.0.1:3000/labs >/dev/null && exit 0
+            sleep 2
+          done
+          cat /tmp/vtd-server.log
+          exit 1
+      - run: pnpm benchmark:run -- --id "${{ inputs.benchmark_id }}" --base-url http://127.0.0.1:3000
+      - run: pnpm benchmark:validate
+      - if: always()
+        run: test ! -f /tmp/vtd-server.pid || kill $(cat /tmp/vtd-server.pid) || true
+      - name: Create benchmark result pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: benchmark/${{ inputs.benchmark_id }}-${{ github.run_id }}
+          delete-branch: true
+          commit-message: "benchmark: ${{ inputs.benchmark_id }}"
+          title: "Benchmark result: ${{ inputs.benchmark_id }}"
+          body: |
+            Runner-generated desktop Chromium result. Do not merge as Decision Evidence until the protocol, environment and at least one physical mobile-device run have been reviewed.
+          labels: |
+            benchmark
+            needs-editorial-review

@@ -1,0 +1,15 @@
+id: r-search-maintain-static
+situationId: site-search
+targetApproachId: build-time-static-search
+when:
+  all:
+  - maintainability-priority
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 1
+reason: 検索索引を公開物へ含める構成は、検索用サーバーを別に保守する必要がありません。
+evidenceIds:
+- ev-pagefind-static-bundle
+lastReviewed: '2026-08-24'

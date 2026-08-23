@@ -1,0 +1,15 @@
+id: r-sc-short-dom
+situationId: scroll-linked-3d
+when:
+  all:
+  - short-deadline
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 2
+reason: 2D DOM演出が中心なら、3Dシーン構築を省き実装範囲を抑えられます。
+evidenceIds:
+- ev-gsap-scrolltrigger
+lastReviewed: '2026-08-23'
+targetApproachId: dom-gsap-scroll

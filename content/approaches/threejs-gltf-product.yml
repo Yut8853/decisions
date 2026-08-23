@@ -1,0 +1,34 @@
+id: threejs-gltf-product
+slug: threejs-gltf-product
+title: Three.js + glTFによる商品ビューア
+shortTitle: Three.js + glTF
+summary: Three.jsでシーン・カメラ・ライト・モデル・UI連携を個別に設計する王道構成です。
+defaultLabel: canonical
+baseScore: 3
+technologyIds:
+- threejs
+- gltf
+- javascript
+concepts:
+- scene
+- camera
+- lighting
+- gltf
+- rendering
+recommendedWhen:
+- 独自演出やUI連携が必要
+- ライティングやマテリアルを調整したい
+notRecommendedWhen:
+- 表示だけで十分で実装期間が短い
+- 3D保守を担当できる人がいない
+advantages:
+- 自由度が高い
+- 3D Webの情報と事例が多い
+disadvantages:
+- 設計・最適化・アクセシビリティを自分で担う
+- 更新時の確認範囲が広い
+resourceIds:
+- res-three-gltf
+- res-gltf-spec
+- book-real-time-rendering
+lastReviewed: '2026-08-23'

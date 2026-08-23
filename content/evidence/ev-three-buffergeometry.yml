@@ -1,0 +1,10 @@
+id: ev-three-buffergeometry
+title: Three.js BufferGeometry
+claim: BufferGeometryは頂点属性とIndexを保持し、GeometryデータをGPUへ渡す中心的な構造である。
+sourceType: official-documentation
+sourceName: Three.js
+url: https://threejs.org/docs/pages/BufferGeometry.html
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

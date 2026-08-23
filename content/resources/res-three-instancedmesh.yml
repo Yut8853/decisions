@@ -1,0 +1,10 @@
+id: res-three-instancedmesh
+type: official
+title: Three.js InstancedMesh
+url: https://threejs.org/docs/pages/InstancedMesh.html
+description: Instancingの公式API仕様。
+technologyIds:
+- threejs
+concepts:
+- instancing
+currentUse: 現在のAPIと制約の確認。

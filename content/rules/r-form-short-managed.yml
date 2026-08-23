@@ -1,0 +1,15 @@
+id: r-form-short-managed
+situationId: secure-contact-form
+targetApproachId: managed-form-service
+when:
+  all:
+  - short-deadline
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 3
+reason: FormspreeはHTMLフォームの送信先として利用でき、受付用のサーバー処理を書かずに導入できます。
+evidenceIds:
+- ev-formspree-managed-handler
+lastReviewed: '2026-08-24'

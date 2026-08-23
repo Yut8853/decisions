@@ -1,0 +1,16 @@
+id: r-pv-advanced-three
+situationId: 3d-product-viewer
+when:
+  all:
+  - advanced-visuals
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 3
+reason: マテリアル、ライト、カメラ、シェーダーを個別設計できるため独自表現に適します。
+evidenceIds:
+- ev-three-gltfloader
+- ev-three-webgpu
+lastReviewed: '2026-08-23'
+targetApproachId: threejs-gltf-product

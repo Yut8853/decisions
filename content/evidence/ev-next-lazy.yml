@@ -1,0 +1,10 @@
+id: ev-next-lazy
+title: Next.js lazy loading guide
+claim: Next.jsはClient Componentや外部ライブラリの遅延読込によって初期JavaScript量を減らす手段を提供する。
+sourceType: official-documentation
+sourceName: Next.js
+url: https://nextjs.org/docs/app/guides/lazy-loading
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

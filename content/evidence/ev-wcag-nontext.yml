@@ -1,0 +1,10 @@
+id: ev-wcag-nontext
+title: WCAG non-text content
+claim: WCAGは非テキストコンテンツに、同等の目的を果たすテキスト代替を提供することを求める。
+sourceType: specification
+sourceName: W3C WAI
+url: https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

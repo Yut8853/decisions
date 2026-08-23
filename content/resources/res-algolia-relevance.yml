@@ -1,0 +1,12 @@
+id: res-algolia-relevance
+type: official
+title: Algolia 検索結果調整ガイド
+url: https://www.algolia.com/doc/guides/managing-results/relevance-overview/in-depth/defining-relevance
+description: 一致判定、順位付け、同義語、検索ルールなどの調整範囲を確認する公式資料です。
+technologyIds:
+- algolia
+concepts:
+- search-relevance
+- custom-ranking
+currentUse: 検索品質を調整する現在の機能範囲の確認。
+limitations: 機能を有効にするだけで適切な順位になるとは限らず、実際の検索語と正解例で評価が必要です。

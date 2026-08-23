@@ -1,0 +1,11 @@
+id: dec-pv-default-2026-08
+slug: default
+situationId: 3d-product-viewer
+title: モバイル重視の標準構成
+conditionIds:
+- mobile-priority
+snapshotDate: '2026-08-23'
+summary: 独自要件が未確定な段階ではThree.js + glTFを基準案とし、単純表示ならmodel-viewerへ寄せます。
+expectedTopApproachIds:
+- threejs-gltf-product
+status: published

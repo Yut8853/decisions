@@ -1,0 +1,13 @@
+id: res-formspree-html-forms
+type: official
+title: Formspree HTMLフォームガイド
+url: https://formspree.io/library/html/
+description: HTMLフォームから受付サービスへ送信する構成と提供機能を確認する公式資料です。
+technologyIds:
+- formspree
+- html-forms
+concepts:
+- managed-form-backend
+- spam-filtering
+currentUse: 現在の送信方法と受付機能の確認。
+limitations: 利用できる連携、保存期間、上限は契約プランごとに確認が必要です。

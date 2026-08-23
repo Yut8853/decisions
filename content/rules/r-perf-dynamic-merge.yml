@@ -1,0 +1,15 @@
+id: r-perf-dynamic-merge
+situationId: threejs-many-objects
+when:
+  all:
+  - dynamic-objects
+  any: []
+  none: []
+effect:
+  type: penalize
+  weight: 2
+reason: Geometry統合後は個別オブジェクトの頻繁な移動・更新が扱いにくくなります。
+evidenceIds:
+- ev-three-buffergeometry
+lastReviewed: '2026-08-23'
+targetApproachId: geometry-merge-batching

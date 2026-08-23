@@ -1,0 +1,16 @@
+id: r-po-short-video
+situationId: 3d-portfolio
+when:
+  all:
+  - short-deadline
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 2
+reason: 演出とカメラが固定済みなら、事前レンダリング素材によって実行時3D実装を減らせます。
+evidenceIds:
+- ev-next-lazy
+- ev-rendering-performance
+lastReviewed: '2026-08-23'
+targetApproachId: video-sequence-portfolio

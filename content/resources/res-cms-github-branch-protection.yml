@@ -1,0 +1,12 @@
+id: res-cms-github-branch-protection
+type: official
+title: GitHub Protected Branches
+url: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches
+description: Pull Request承認、状態チェック、迂回禁止などをマージ条件にする公式資料。
+technologyIds:
+- github
+- git
+concepts:
+- branch-protection
+- required-review
+currentUse: コンテンツレビューを必須にする設定を確認する。

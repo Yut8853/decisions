@@ -1,0 +1,11 @@
+id: ev-formspree-hosting-security
+title: Formspreeの保存場所と暗号化
+claim: Formspreeは米国内のAWSでサービスを運用し、保存時暗号化とTLS、権限管理、データ処理契約と標準契約条項、削除要求への対応方針を公開している。
+sourceType: official-documentation
+sourceName: Formspree
+url: https://formspree.io/security/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: 公式Securityページの自己申告を確認した。個別契約の監査報告書やデータ処理契約は未確認。

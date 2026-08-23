@@ -1,0 +1,31 @@
+id: serverless-function-hosting
+slug: serverless-function-hosting
+title: サーバーレス関数による動的処理
+shortTitle: サーバーレス関数
+summary: HTTPリクエストやイベントを起点に関数を実行し、基盤の管理と増減をサービスへ委ねる構成です。
+defaultLabel: alternative
+baseScore: 2
+technologyIds:
+- serverless-functions
+- managed-runtime
+concepts:
+- event-driven
+- request-response
+- automatic-scaling
+recommendedWhen:
+- 認証やフォームなど、短く完結するサーバー処理が必要
+- アクセス量の変動に合わせて実行環境を増減させたい
+- サーバーの保守や容量管理をサービスへ委ねたい
+notRecommendedWhen:
+- 一つのプロセスを常時稼働させる必要がある
+- 呼び出しをまたいでローカル状態が残る前提の処理
+advantages:
+- サーバーの調達、保守、容量調整をサービスへ委ねられる
+- リクエストやイベント単位で処理を分けやすい
+disadvantages:
+- 実行時間、状態、利用可能なランタイムなど提供サービスの制約を確認する必要がある
+- 永続状態はデータベースやストレージへ分離する必要がある
+resourceIds:
+- res-host-aws-lambda-overview
+- res-host-next-runtime-caveats
+lastReviewed: '2026-08-24'

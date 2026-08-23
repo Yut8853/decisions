@@ -1,0 +1,13 @@
+id: dec-site-search-static-2026-08
+slug: static-small-team
+situationId: site-search
+title: 更新頻度が低い小規模サイト
+conditionIds:
+- infrequent-content-updates
+- short-deadline
+- small-team
+snapshotDate: '2026-08-23'
+summary: 公開時に索引を更新でき、短期導入と少人数運用を優先するため、Pagefindによる静的検索を第一候補とします。
+expectedTopApproachIds:
+- build-time-static-search
+status: published

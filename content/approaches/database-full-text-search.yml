@@ -1,0 +1,34 @@
+id: database-full-text-search
+slug: database-full-text-search
+title: 既存データベース内で全文検索する（PostgreSQL）
+shortTitle: データベース内で全文検索
+summary: PostgreSQLの全文検索機能を使い、保存済みデータの検索と順位付けをアプリケーション内で実装する方法です。
+defaultLabel: specialized
+baseScore: 1
+technologyIds:
+- postgresql
+- application-backend
+concepts:
+- full-text-search
+- query-ranking
+- data-consistency
+recommendedWhen:
+- 検索対象が既存のPostgreSQLに保存されている
+- 保存直後のデータを同じシステムから検索したい
+- 検索結果へ権限や業務上の条件を組み込みたい
+notRecommendedWhen:
+- 検索対象が静的HTMLだけでデータベースを運用していない
+- 検索API、監視、負荷対策を担当する体制がない
+- 日本語解析を追加せずに高度な日本語検索を実現したい
+advantages:
+- 検索対象と元データを同じデータベースで管理できる
+- 文書と検索語の変換、順位付け、見出し表示を組み立てられる
+- アプリケーションの権限や絞り込み条件と統合しやすい
+disadvantages:
+- 索引設計、検索API、監視を自分たちで保守する
+- 検索順位は実際の利用目的に合わせて調整が必要
+- 日本語の単語分割や辞書は別途選定と検証が必要
+resourceIds:
+- res-postgresql-full-text-search
+- res-postgresql-text-dictionaries
+lastReviewed: '2026-08-24'

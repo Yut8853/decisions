@@ -1,0 +1,13 @@
+id: dec-secure-contact-form-fast-2026-08
+slug: basic-small-team
+situationId: secure-contact-form
+title: 小規模サイトの一般的な問い合わせ
+conditionIds:
+- short-deadline
+- small-team
+- maintainability-priority
+snapshotDate: '2026-08-23'
+summary: 複雑な業務処理や外部送信制限がなく、短期導入と少人数運用を優先するため、フォーム受付サービスを第一候補とします。
+expectedTopApproachIds:
+- managed-form-service
+status: published

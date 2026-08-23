@@ -1,0 +1,12 @@
+id: res-meilisearch-document-updates
+type: official
+title: Meilisearch 文書更新API
+url: https://www.meilisearch.com/docs/reference/api/documents/add-or-update-documents
+description: 検索文書を追加または一部更新し、非同期タスクとして処理するAPIの公式資料です。
+technologyIds:
+- meilisearch
+concepts:
+- index-synchronization
+- asynchronous-task
+currentUse: 元データから検索索引を更新する処理と完了確認の設計。
+limitations: 受付応答だけで成功とせず、タスク状態と同期失敗を監視する必要があります。

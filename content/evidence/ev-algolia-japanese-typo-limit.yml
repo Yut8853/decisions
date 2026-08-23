@@ -1,0 +1,11 @@
+id: ev-algolia-japanese-typo-limit
+title: Algoliaの日本語検索における制約
+claim: Algoliaの標準タイプミス許容は日本語を含む表語文字の検索には適用されず、言語別辞書や日本語向け設定が別に提供される。
+sourceType: official-documentation
+sourceName: Algolia
+url: https://www.algolia.com/doc/guides/managing-results/optimize-search-results/handling-natural-languages-nlp
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []
+notes: 日本語での表記揺れ対応を英語のタイプミス許容と同一視しないための制約情報。

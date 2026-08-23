@@ -1,0 +1,16 @@
+id: r-perf-mobile-lod
+situationId: threejs-many-objects
+when:
+  all:
+  - mobile-priority
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 1
+reason: モバイルでは画面外・遠方オブジェクトの処理を減らす設計を優先します。
+evidenceIds:
+- ev-three-lod
+- ev-three-frustum
+lastReviewed: '2026-08-23'
+targetApproachId: lod-frustum-culling

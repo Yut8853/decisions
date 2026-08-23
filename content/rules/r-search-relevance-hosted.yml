@@ -1,0 +1,15 @@
+id: r-search-relevance-hosted
+situationId: site-search
+targetApproachId: hosted-search-service
+when:
+  all:
+  - advanced-search-relevance
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 4
+reason: 同義語、検索ルール、属性の一致、独自指標などの調整手段が公式機能として提供されています。
+evidenceIds:
+- ev-algolia-relevance-controls
+lastReviewed: '2026-08-24'

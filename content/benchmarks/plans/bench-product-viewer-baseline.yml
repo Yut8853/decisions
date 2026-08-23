@@ -1,0 +1,21 @@
+id: bench-product-viewer-baseline
+title: 3D商品ビューア4方式の合成シーン比較
+situationId: 3d-product-viewer
+approachIds:
+- model-viewer-product
+- threejs-gltf-product
+- r3f-product
+- babylonjs-product
+status: planned
+metrics:
+- fpsMedian
+- firstContentfulPaintMs
+- transferredBytes
+- jsHeapBytes
+- drawCalls
+- triangles
+fixture: 同一寸法・同一カメラ条件の回転Cube。公開判断に使う前に実商品glTFで再計測する。
+protocol:
+- 同一viewportとChromiumバージョンで各ページを読み込む。
+- Ready signal後に5秒間requestAnimationFrameを測定する。
+- 3回以上のRunを行い、生データと環境をGitへ保存する。

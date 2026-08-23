@@ -1,0 +1,31 @@
+id: static-fallback-progressive
+slug: static-fallback-progressive
+title: 静的フォールバック + 段階的3D読込
+shortTitle: Static Fallback
+summary: 最初に静的なHTML・画像を表示し、対応端末と条件を満たす場合だけ3Dを読み込む構成です。
+defaultLabel: fast
+baseScore: 2
+technologyIds:
+- html
+- nextjs
+- threejs
+concepts:
+- progressive-enhancement
+- lazy-loading
+- fallback
+recommendedWhen:
+- 初期表示と低性能端末対応を優先する
+- 3Dなしでも内容が成立する
+notRecommendedWhen:
+- 最初の瞬間から3D描画が必須
+advantages:
+- 失敗時も内容を提示できる
+- 読み込み条件を制御しやすい
+disadvantages:
+- 静的版と3D版の二重設計が必要
+- 体験の差を管理する必要がある
+resourceIds:
+- res-next-lazy
+- res-js-seo
+- res-rendering-performance
+lastReviewed: '2026-08-23'

@@ -1,0 +1,11 @@
+id: dec-host-static-2026-08
+slug: static-content-standard
+situationId: hosting-runtime-selection
+title: 閲覧時の処理が不要なサイト
+conditionIds:
+- static-output-possible
+snapshotDate: '2026-08-23'
+summary: 公開時に内容を確定できるサイトでは、アプリの実行環境を持たない静的生成とエッジ配信を第一候補にします。
+expectedTopApproachIds:
+- static-edge-hosting
+status: published

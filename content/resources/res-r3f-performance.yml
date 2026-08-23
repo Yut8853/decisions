@@ -1,0 +1,10 @@
+id: res-r3f-performance
+type: official
+title: R3F Scaling Performance
+url: https://r3f.docs.pmnd.rs/advanced/scaling-performance
+description: R3Fでの再利用、状態更新、Instancingなどの性能ガイド。
+technologyIds:
+- r3f
+concepts:
+- performance
+currentUse: R3F特有の最適化確認。

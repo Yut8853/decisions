@@ -1,0 +1,15 @@
+id: r-po-maint-dom
+situationId: 3d-portfolio
+when:
+  all:
+  - maintainability-priority
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 1
+reason: HTMLと3Dの責務を分離しやすいため、引き継ぎを重視する場合に優先します。
+evidenceIds:
+- ev-js-seo
+lastReviewed: '2026-08-23'
+targetApproachId: dom-progressive-portfolio

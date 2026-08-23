@@ -1,0 +1,15 @@
+id: r-search-existing-db
+situationId: site-search
+targetApproachId: database-full-text-search
+when:
+  all:
+  - existing-postgresql-database
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 5
+reason: 検索対象が既存PostgreSQLにある場合、組み込みの全文検索関数で文書変換、照合、順位付けを構成できます。
+evidenceIds:
+- ev-postgresql-full-text-controls
+lastReviewed: '2026-08-24'

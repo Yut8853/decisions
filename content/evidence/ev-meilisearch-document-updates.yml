@@ -1,0 +1,11 @@
+id: ev-meilisearch-document-updates
+title: Meilisearchの文書更新API
+claim: Meilisearchは文書を追加または一部更新するAPIを提供し、索引処理を非同期タスクとして受け付ける。
+sourceType: official-documentation
+sourceName: Meilisearch
+url: https://www.meilisearch.com/docs/reference/api/documents/add-or-update-documents
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: API応答は処理完了ではなく受付を示すため、タスクの成功または失敗を別途確認する。

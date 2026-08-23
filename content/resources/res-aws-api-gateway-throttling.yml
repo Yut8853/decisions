@@ -1,0 +1,12 @@
+id: res-aws-api-gateway-throttling
+type: official
+title: Amazon API Gateway 送信制限ガイド
+url: https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-throttling.html
+description: HTTP APIのステージと経路へ送信頻度の制限を設定する方法を確認する公式資料です。
+technologyIds:
+- api-gateway
+concepts:
+- request-throttling
+- abuse-mitigation
+currentUse: 受付経路の送信制限を設計する際の確認。
+limitations: 送信制限は迷惑送信対策の一部であり、入力検証や不正判定を代替しません。

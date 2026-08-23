@@ -1,0 +1,15 @@
+id: r-po-react-r3f
+situationId: 3d-portfolio
+when:
+  all:
+  - react-existing
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 3
+reason: 既存ReactサイトではUIと3Dの状態境界を統合できるためR3F案を上げます。
+evidenceIds:
+- ev-r3f-intro
+lastReviewed: '2026-08-23'
+targetApproachId: r3f-drei-portfolio

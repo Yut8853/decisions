@@ -1,0 +1,25 @@
+name: Propose a Situation
+about: Propose a new practical technology decision page
+labels: [situation-proposal]
+body:
+  - type: input
+    id: situation
+    attributes:
+      label: What is the practical situation?
+      placeholder: "Example: WebGPUへ今移行すべきか"
+    validations:
+      required: true
+  - type: textarea
+    id: conditions
+    attributes:
+      label: Which conditions change the answer?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Known Approaches or alternatives
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Direct sources or experience

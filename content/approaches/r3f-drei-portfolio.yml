@@ -1,0 +1,33 @@
+id: r3f-drei-portfolio
+slug: r3f-drei-portfolio
+title: R3F + DreiによるReact型3Dポートフォリオ
+shortTitle: R3F + Drei
+summary: ReactアプリとしてページUIと3Dシーンをコンポーネント化し、Dreiの補助機能を使う構成です。
+defaultLabel: alternative
+baseScore: 2
+technologyIds:
+- react
+- r3f
+- drei
+- threejs
+concepts:
+- component-design
+- scene
+- state-management
+recommendedWhen:
+- Reactでサイト全体を管理する
+- 3D要素を再利用可能な部品にする
+notRecommendedWhen:
+- Reactが不要
+- 最小構成を優先する
+advantages:
+- UIと3Dを同じ状態モデルで扱える
+- 補助コンポーネントが豊富
+disadvantages:
+- 抽象化レイヤーが増える
+- 不適切な再レンダリングに注意が必要
+resourceIds:
+- res-r3f-intro
+- res-r3f-performance
+- book-react-design
+lastReviewed: '2026-08-23'

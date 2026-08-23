@@ -1,0 +1,11 @@
+id: ev-api-gateway-route-throttling
+title: API Gatewayの経路別送信制限
+claim: Amazon API GatewayのHTTP APIは、ステージまたは個別経路に送信頻度と一時的な集中に対する制限値を設定できる。
+sourceType: official-documentation
+sourceName: Amazon Web Services
+url: https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-throttling.html
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []
+notes: 公式資料は制限値を保証された上限ではなく目標値として扱うよう明記している。

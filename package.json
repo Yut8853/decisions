@@ -1,0 +1,58 @@
+{
+  "name": "verified-technology-decisions",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Evidence-first technology decision explorer for JUNKBRANDING.",
+  "packageManager": "pnpm@10.15.0",
+  "engines": {
+    "node": ">=22 <25"
+  },
+  "scripts": {
+    "predev": "pnpm content:build",
+    "dev": "next dev",
+    "content:validate": "tsx scripts/validate-content.ts",
+    "content:build": "tsx scripts/build-content.ts",
+    "content:audit": "tsx scripts/audit-sources.ts",
+    "ai:pipeline": "tsx scripts/ai/pipeline.ts",
+    "ai:review-pr": "tsx scripts/ai/review-pr.ts",
+    "benchmark:run": "tsx scripts/benchmark/run.ts",
+    "benchmark:validate": "tsx scripts/benchmark/validate-results.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "lint": "next lint || true",
+    "prebuild": "pnpm content:validate && pnpm content:build && pnpm benchmark:validate",
+    "build": "next build",
+    "start": "next start",
+    "check": "pnpm content:validate && pnpm test && pnpm build",
+    "setup:check": "tsx scripts/setup-check.ts"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^8.0.0",
+    "@google/model-viewer": "^4.1.0",
+    "@react-three/drei": "^10.0.0",
+    "@react-three/fiber": "^9.0.0",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "gray-matter": "^4.0.3",
+    "next": "^16.0.0",
+    "openai": "^5.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "three": "^0.180.0",
+    "yaml": "^2.8.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/three": "^0.180.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

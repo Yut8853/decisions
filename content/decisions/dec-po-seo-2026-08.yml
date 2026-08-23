@@ -1,0 +1,13 @@
+id: dec-po-seo-2026-08
+slug: seo-content
+situationId: 3d-portfolio
+title: SEO・情報量重視
+conditionIds:
+- seo-priority
+- content-heavy
+- accessibility-priority
+snapshotDate: '2026-08-23'
+summary: HTML本文を中心に置くDOM + 3D Islands構成を優先します。
+expectedTopApproachIds:
+- dom-progressive-portfolio
+status: published

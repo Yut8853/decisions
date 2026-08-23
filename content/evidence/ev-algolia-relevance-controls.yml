@@ -1,0 +1,11 @@
+id: ev-algolia-relevance-controls
+title: Algoliaの検索結果調整
+claim: Algoliaは部分一致、同義語、検索ルール、属性の一致、独自指標を含む検索結果の一致判定と順位調整機能を提供する。
+sourceType: official-documentation
+sourceName: Algolia
+url: https://www.algolia.com/doc/guides/managing-results/relevance-overview/in-depth/defining-relevance
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []
+notes: 各機能が個別案件に適した検索結果を保証するというClaimではなく、調整手段の提供範囲を確認した。

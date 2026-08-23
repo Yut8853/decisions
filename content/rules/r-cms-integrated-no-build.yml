@@ -1,0 +1,16 @@
+id: r-cms-integrated-no-build
+situationId: cms-architecture-selection
+when:
+  all:
+  - cms-direct-publishing-required
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 5
+reason: CMSで公開状態を変更し、保存された内容をテンプレートが出力する構成では、静的フロントエンドの再ビルドを公開手順に含めずに済みます。
+evidenceIds:
+- ev-cms-wordpress-site-editor
+- ev-cms-wordpress-template-rendering
+lastReviewed: '2026-08-24'
+targetApproachId: integrated-cms

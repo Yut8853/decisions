@@ -1,0 +1,15 @@
+id: r-seo-performance-static
+situationId: seo-rich-3d
+when:
+  all:
+  - performance-priority
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 1
+reason: 初期表示に3D依存を置かず、遅延読込によって初期JavaScript量を抑えられます。
+evidenceIds:
+- ev-next-lazy
+lastReviewed: '2026-08-23'
+targetApproachId: static-fallback-progressive

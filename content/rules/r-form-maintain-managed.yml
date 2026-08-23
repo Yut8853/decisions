@@ -1,0 +1,15 @@
+id: r-form-maintain-managed
+situationId: secure-contact-form
+targetApproachId: managed-form-service
+when:
+  all:
+  - maintainability-priority
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 1
+reason: 受付用の独自サーバー処理を持たずに済むため、単純なフォームでは自分たちの保守範囲を抑えられます。
+evidenceIds:
+- ev-formspree-managed-handler
+lastReviewed: '2026-08-24'

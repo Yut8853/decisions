@@ -1,0 +1,10 @@
+id: ev-babylon-loading
+title: Babylon.js asset loading
+claim: Babylon.jsはglTFを含む3D資産をシーンへ読み込むための公式ローダーと手順を提供する。
+sourceType: official-documentation
+sourceName: Babylon.js
+url: https://doc.babylonjs.com/features/featuresDeepDive/importers/loadingFileTypes
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

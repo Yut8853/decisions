@@ -1,0 +1,16 @@
+id: r-perf-count-instancing
+situationId: threejs-many-objects
+when:
+  all:
+  - large-object-count
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 4
+reason: 大量表示ではDraw Call削減が重要になるため、反復形状をInstancingできるか最初に確認します。
+evidenceIds:
+- ev-three-instancedmesh
+- ev-three-many-objects
+lastReviewed: '2026-08-23'
+targetApproachId: threejs-instancing

@@ -1,0 +1,33 @@
+id: threejs-gsap-portfolio
+slug: threejs-gsap-portfolio
+title: Three.js + GSAPによる演出中心ポートフォリオ
+shortTitle: Three.js + GSAP
+summary: Three.jsの3D表現とGSAPのタイムライン・スクロール制御を組み合わせる構成です。
+defaultLabel: canonical
+baseScore: 3
+technologyIds:
+- threejs
+- gsap
+- javascript
+concepts:
+- timeline
+- scroll
+- shader
+- scene
+recommendedWhen:
+- 独自の3D世界観を主役にする
+- 演出タイミングを細かく制御する
+notRecommendedWhen:
+- テキスト量が多くSEOを最優先する
+- 保守担当に3D経験者がいない
+advantages:
+- 表現自由度が高い
+- DOMと3Dの時間軸を統合しやすい
+disadvantages:
+- モバイル最適化とフォールバックが必要
+- 複数ライブラリの更新影響を受ける
+resourceIds:
+- res-three-webgpu
+- res-gsap-scrolltrigger
+- book-book-of-shaders
+lastReviewed: '2026-08-23'

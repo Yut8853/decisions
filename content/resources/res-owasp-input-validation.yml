@@ -1,0 +1,11 @@
+id: res-owasp-input-validation
+type: official
+title: OWASP 入力検証ガイド
+url: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html
+description: 外部入力に対する形式検証、意味検証、サーバー側検証の基本を確認する公式ガイドです。
+technologyIds: []
+concepts:
+- input-validation
+- server-side-validation
+currentUse: 問い合わせ受付の検証要件とテスト項目の確認。
+limitations: 入力検証だけで認可、注入攻撃対策、迷惑送信対策のすべてを満たすものではありません。

@@ -1,0 +1,10 @@
+id: res-js-seo
+type: official
+title: JavaScript SEO basics
+url: https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics
+description: JavaScriptサイトをGoogle Searchが処理する際の公式ガイド。
+technologyIds:
+- javascript
+concepts:
+- seo
+currentUse: 検索可能な構造を判断する基準。

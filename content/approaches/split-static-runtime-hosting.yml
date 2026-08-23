@@ -1,0 +1,34 @@
+id: split-static-runtime-hosting
+slug: split-static-runtime-hosting
+title: 静的配信と動的な実行環境を分ける
+shortTitle: 静的配信 + 別実行環境
+summary: 公開画面は静的ファイルとして配信し、常駐処理や独自環境が必要な部分だけを関数またはコンテナへ分離する構成です。
+defaultLabel: specialized
+baseScore: 0
+technologyIds:
+- static-site-generation
+- managed-runtime
+- managed-container-platform
+concepts:
+- split-runtime
+- static-frontend
+- worker
+recommendedWhen:
+- 公開画面は静的出力できるが、別に常駐ワーカーが必要
+- 公開画面と、独自バイナリを使う処理の公開周期を分けたい
+- 複数の公開先、認証、監視、障害切り分けを運用できる
+notRecommendedWhen:
+- 静的ファイルの配信だけで全要件を満たせる
+- 一つの動的アプリとして配備した方が境界と運用を単純にできる
+- 複数環境の権限、通信、監視を担当できない
+advantages:
+- 閲覧画面の静的配信と、常駐処理または独自実行環境を両立できる
+- 各部分を異なる公開周期と実行条件で管理できる
+disadvantages:
+- 公開先、権限、ログ、障害箇所が複数になる
+- 静的画面と動的処理の通信契約や失敗時の扱いを設計する必要がある
+resourceIds:
+- res-host-next-static-export
+- res-host-cloud-run-overview
+- res-host-cloud-run-container-contract
+lastReviewed: '2026-08-24'

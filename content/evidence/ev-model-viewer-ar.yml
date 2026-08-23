@@ -1,0 +1,10 @@
+id: ev-model-viewer-ar
+title: model-viewer AR examples
+claim: model-viewerは対応環境でWebXRや各プラットフォームのAR表示へつなぐための機能を提供する。
+sourceType: official-documentation
+sourceName: model-viewer
+url: https://modelviewer.dev/examples/augmentedreality/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

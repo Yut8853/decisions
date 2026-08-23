@@ -1,0 +1,16 @@
+id: r-search-selfhost-operations
+situationId: site-search
+targetApproachId: self-hosted-search-service
+when:
+  all: []
+  any:
+  - small-team
+  - maintainability-priority
+  none: []
+effect:
+  type: penalize
+  weight: 2
+reason: 自前運用では常駐サービス、永続データ、認証、HTTPSなどを利用者側で構成するため、運用担当が限られる条件では負担を確認します。
+evidenceIds:
+- ev-meilisearch-self-hosting
+lastReviewed: '2026-08-24'

@@ -1,0 +1,17 @@
+id: r-host-split-static-persistent
+situationId: hosting-runtime-selection
+targetApproachId: split-static-runtime-hosting
+when:
+  all:
+  - static-output-possible
+  - persistent-worker-required
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 9
+reason: 公開画面を静的ファイルとして配信し、常時稼働する非HTTP処理を別のワーカープールへ分ければ、二つの実行条件を両立できます。
+evidenceIds:
+- ev-host-static-export
+- ev-host-cloud-run-workload-types
+lastReviewed: '2026-08-24'

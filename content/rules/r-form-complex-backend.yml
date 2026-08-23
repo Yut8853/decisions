@@ -1,0 +1,15 @@
+id: r-form-complex-backend
+situationId: secure-contact-form
+targetApproachId: application-backend-form
+when:
+  all:
+  - complex-form-workflow
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 6
+reason: 複雑な受付では、形式だけでなく業務上の意味をサーバー側で検証する必要があります。この条件では、検証と業務処理を同じバックエンドで管理する案を優先します。
+evidenceIds:
+- ev-owasp-server-side-validation
+lastReviewed: '2026-08-24'

@@ -1,0 +1,29 @@
+id: threejs-instancing
+slug: threejs-instancing
+title: InstancedMeshによる反復描画
+shortTitle: Instancing
+summary: 同一GeometryとMaterialを持つ多数オブジェクトを、InstancedMeshで少ないDraw Callにまとめる方法です。
+defaultLabel: canonical
+baseScore: 3
+technologyIds:
+- threejs
+- webgl
+concepts:
+- instancing
+- draw-calls
+- gpu
+recommendedWhen:
+- 同じ形状を大量に繰り返す
+- 個別Transformを更新したい
+notRecommendedWhen:
+- すべて異なるGeometryやMaterialを使う
+advantages:
+- 反復描画のDraw Callを大きく減らせる
+- 各Instanceの行列や色を変更できる
+disadvantages:
+- 個別オブジェクトとしての扱いが変わる
+- 選択やカリングの実装を調整する必要がある
+resourceIds:
+- res-three-instancedmesh
+- res-three-many-objects
+lastReviewed: '2026-08-23'

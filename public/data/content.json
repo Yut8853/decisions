@@ -1,0 +1,5622 @@
+{
+  "generatedAt": "2026-08-23T15:26:23.626Z",
+  "situations": [
+    {
+      "id": "3d-portfolio",
+      "slug": "3d-portfolio",
+      "title": "3Dポートフォリオサイトを作りたい",
+      "summary": "作品性と読みやすさを両立するために、3D中心・DOM中心・映像中心の構成を比較します。",
+      "type": "build",
+      "category": "sites",
+      "published": true,
+      "defaultConditionIds": [
+        "advanced-visuals"
+      ],
+      "conditionIds": [
+        "react-existing",
+        "mobile-priority",
+        "seo-priority",
+        "short-deadline",
+        "advanced-visuals",
+        "maintainability-priority",
+        "existing-glsl-assets",
+        "accessibility-priority",
+        "content-heavy"
+      ],
+      "approachIds": [
+        "threejs-gsap-portfolio",
+        "r3f-drei-portfolio",
+        "dom-progressive-portfolio",
+        "video-sequence-portfolio"
+      ],
+      "lastReviewed": "2026-08-23",
+      "body": "ポートフォリオでは、表現の強さだけでなく、作品説明・プロフィール・問い合わせ導線を読めることも重要です。\n\nフル3Dにする必要があるのか、DOMを軸に部分的な3Dを組み込むのか、映像へ置き換えるのかを条件から判断します。"
+    },
+    {
+      "id": "3d-product-viewer",
+      "slug": "3d-product-viewer",
+      "title": "3D商品ビューアを作りたい",
+      "summary": "商品モデルの回転・拡大・AR・UI連携を、要件と工数に合わせて選ぶための判断ページです。",
+      "type": "build",
+      "category": "products",
+      "published": true,
+      "defaultConditionIds": [
+        "mobile-priority"
+      ],
+      "conditionIds": [
+        "react-existing",
+        "ar-required",
+        "mobile-priority",
+        "short-deadline",
+        "advanced-visuals",
+        "maintainability-priority",
+        "existing-glsl-assets",
+        "small-team",
+        "performance-priority",
+        "simple-display"
+      ],
+      "approachIds": [
+        "model-viewer-product",
+        "threejs-gltf-product",
+        "r3f-product",
+        "babylonjs-product"
+      ],
+      "lastReviewed": "2026-08-23",
+      "body": "商品を3Dで見せるだけでも、実装方法によって自由度・工数・保守範囲が大きく変わります。\n\nこのページでは、単純な商品表示、AR、高度なシェーダー、React連携などの条件から、候補を絞り込みます。表示された順位は絶対評価ではなく、選択した条件に対する相対的な判断です。"
+    },
+    {
+      "id": "cms-architecture-selection",
+      "slug": "cms-architecture-selection",
+      "title": "更新しやすいCMS構成を選びたい",
+      "summary": "Git管理コンテンツ、API型ヘッドレスCMS、表示統合型CMSを、編集と配信の流れから比較します。",
+      "type": "architecture",
+      "category": "operations",
+      "published": true,
+      "defaultConditionIds": [
+        "structured-content-required",
+        "multi-channel-delivery-required"
+      ],
+      "conditionIds": [
+        "content-code-review-required",
+        "multi-channel-delivery-required",
+        "structured-content-required",
+        "cms-layout-editing-required",
+        "cms-direct-publishing-required"
+      ],
+      "approachIds": [
+        "git-based-content",
+        "headless-api-cms",
+        "integrated-cms"
+      ],
+      "lastReviewed": "2026-08-24",
+      "body": "構造化した内容をWebサイトやアプリで再利用するならAPI型ヘッドレスCMS、更新もコードと同じ差分確認を通すならGit管理、実際のページを見ながら直接公開するなら表示統合型CMSが候補です。\n\n「編集画面があるか」だけでは更新しやすさは決まりません。入力、確認、承認、配信、フロントエンドへの反映までを一つの流れとして比較します。"
+    },
+    {
+      "id": "hosting-runtime-selection",
+      "slug": "hosting-runtime-selection",
+      "title": "Webサイト・アプリの公開先を選びたい",
+      "summary": "静的・エッジ配信、サーバーレス関数、マネージドコンテナ、それらを分ける構成を、実行時処理と運用要件から比較します。",
+      "type": "selection",
+      "category": "operations",
+      "published": true,
+      "defaultConditionIds": [
+        "static-output-possible"
+      ],
+      "conditionIds": [
+        "static-output-possible",
+        "request-time-processing-required",
+        "bursty-traffic",
+        "persistent-worker-required",
+        "custom-runtime-required"
+      ],
+      "approachIds": [
+        "static-edge-hosting",
+        "serverless-function-hosting",
+        "managed-container-runtime",
+        "split-static-runtime-hosting"
+      ],
+      "lastReviewed": "2026-08-24",
+      "body": "閲覧時にサーバー処理が不要なら、静的ファイルをエッジから配信する構成が第一候補です。認証や利用者ごとの応答が必要ならサーバーレス関数、常駐処理や独自の実行環境が必要ならマネージドコンテナを検討します。\n\n公開サービスの名前から選ぶのではなく、リクエスト時に何を実行するか、処理を常駐させるか、実行環境をどこまで指定するかで比較します。データベース、監視、バックアップなど、公開先以外の運用設計は別途必要です。\n\n公開画面を静的配信できても、別に常駐処理や独自実行環境が必要なら、静的配信と動的な実行環境を分ける構成も候補です。このページは管理された配信・実行基盤を対象とし、仮想マシン、Kubernetes、特権実行、永続的なローカル状態、特殊なネットワーク要件は別の判断範囲とします。"
+    },
+    {
+      "id": "scroll-linked-3d",
+      "slug": "scroll-linked-3d",
+      "title": "スクロール連動のリッチサイトを作りたい",
+      "summary": "DOM、Three.js、React Three Fiber、画像シーケンスによるスクロール演出を比較します。",
+      "type": "build",
+      "category": "sites",
+      "published": true,
+      "defaultConditionIds": [
+        "mobile-priority"
+      ],
+      "conditionIds": [
+        "react-existing",
+        "mobile-priority",
+        "seo-priority",
+        "short-deadline",
+        "advanced-visuals",
+        "maintainability-priority",
+        "existing-glsl-assets",
+        "accessibility-priority",
+        "content-heavy",
+        "low-end-devices"
+      ],
+      "approachIds": [
+        "dom-gsap-scroll",
+        "threejs-scrolltrigger",
+        "r3f-scrollcontrols",
+        "canvas-image-sequence"
+      ],
+      "lastReviewed": "2026-08-23",
+      "body": "スクロール連動演出には複数の実装経路があります。すべてをCanvasに載せる方法が最適とは限りません。\n\nコンテンツ量、端末性能、React利用、演出の自由度を踏まえて、DOM・3D・画像シーケンスを比較します。"
+    },
+    {
+      "id": "secure-contact-form",
+      "slug": "secure-contact-form",
+      "title": "問い合わせフォームを安全に運用したい",
+      "summary": "フォーム受付サービス、サーバーレス関数、既存または新設するバックエンドを、入力内容と運用体制から選ぶ判断ページです。",
+      "type": "architecture",
+      "category": "apps",
+      "published": true,
+      "defaultConditionIds": [
+        "small-team"
+      ],
+      "conditionIds": [
+        "short-deadline",
+        "maintainability-priority",
+        "small-team",
+        "personal-data-form",
+        "confidential-form-data",
+        "complex-form-workflow",
+        "existing-application-backend",
+        "external-service-restricted"
+      ],
+      "approachIds": [
+        "managed-form-service",
+        "serverless-form-endpoint",
+        "application-backend-form"
+      ],
+      "lastReviewed": "2026-08-24",
+      "body": "公開フォームは、画面側の入力チェックだけでは安全に運用できません。受付側での入力検証、迷惑送信への対策、通知失敗の確認、保存期間と閲覧権限の設計が必要です。\n\n一般的な問い合わせを早く始めるなら受付サービス、専用の小さな処理が必要ならサーバーレス関数、複雑な業務処理まで一体で管理するならアプリのバックエンドを比較します。個人情報や業務上の機密情報を扱う場合は方式名だけで安全と判断せず、外部送信、処理地域、保存と削除、閲覧権限、契約条件を確認します。どの方式でも、必要以上の情報を集めず、送信内容をそのままログへ残さない設計が前提です。"
+    },
+    {
+      "id": "seo-rich-3d",
+      "slug": "seo-rich-3d",
+      "title": "SEOを維持しながらリッチな3Dサイトを作りたい",
+      "summary": "HTML本文を保ちながら3Dを組み込む構成と、Canvas中心構成の違いを判断します。",
+      "type": "architecture",
+      "category": "sites",
+      "published": true,
+      "defaultConditionIds": [
+        "seo-priority",
+        "content-heavy"
+      ],
+      "conditionIds": [
+        "react-existing",
+        "mobile-priority",
+        "seo-priority",
+        "short-deadline",
+        "advanced-visuals",
+        "maintainability-priority",
+        "accessibility-priority",
+        "content-heavy",
+        "low-end-devices",
+        "performance-priority"
+      ],
+      "approachIds": [
+        "dom-first-three-islands",
+        "full-canvas-three",
+        "static-fallback-progressive"
+      ],
+      "lastReviewed": "2026-08-23",
+      "body": "検索流入やアクセシビリティが重要なサイトでは、3D表現をページ構造の中心に置くか、HTMLの補助表現として扱うかが設計上の大きな分岐になります。\n\nここでは、DOM優先、フルCanvas、静的フォールバックの3案を比較します。"
+    },
+    {
+      "id": "site-search",
+      "slug": "site-search",
+      "title": "サイト内検索を実装したい",
+      "summary": "公開時の検索索引、外部または自前の検索サーバー、既存データベースの全文検索を、更新頻度と運用条件から選ぶ判断ページです。",
+      "type": "selection",
+      "category": "apps",
+      "published": true,
+      "defaultConditionIds": [
+        "infrequent-content-updates"
+      ],
+      "conditionIds": [
+        "short-deadline",
+        "maintainability-priority",
+        "small-team",
+        "frequent-content-updates",
+        "infrequent-content-updates",
+        "existing-postgresql-database",
+        "advanced-search-relevance",
+        "external-service-restricted"
+      ],
+      "approachIds": [
+        "build-time-static-search",
+        "hosted-search-service",
+        "self-hosted-search-service",
+        "database-full-text-search"
+      ],
+      "lastReviewed": "2026-08-24",
+      "body": "サイト内検索は、検索欄の見た目よりも「いつ索引を更新するか」と「誰が検索品質を調整するか」で構成が変わります。\n\n更新が公開作業と同時でよければ静的な検索索引が小さく始めやすく、頻繁な更新や細かな検索調整が必要なら検索専用サービスが候補です。検索データを外部サービスへ送れない場合は自分たちで動かす検索サーバー、検索対象が既存のPostgreSQLにある場合はデータベース内の全文検索も比較します。日本語の分かち書きや固有名詞は製品ごとに扱いが異なるため、採用前に実データで検索結果を確認します。"
+    },
+    {
+      "id": "threejs-many-objects",
+      "slug": "threejs-many-objects",
+      "title": "Three.jsで大量オブジェクトを表示すると重い",
+      "summary": "Instancing、Geometry統合、LODとカリングを、シーンの性質から選び分けます。",
+      "type": "performance",
+      "category": "performance",
+      "published": true,
+      "defaultConditionIds": [
+        "large-object-count",
+        "performance-priority"
+      ],
+      "conditionIds": [
+        "mobile-priority",
+        "short-deadline",
+        "advanced-visuals",
+        "maintainability-priority",
+        "performance-priority",
+        "large-object-count",
+        "low-end-devices",
+        "dynamic-objects",
+        "static-scene",
+        "repeated-geometry",
+        "varying-detail"
+      ],
+      "approachIds": [
+        "threejs-instancing",
+        "geometry-merge-batching",
+        "lod-frustum-culling"
+      ],
+      "lastReviewed": "2026-08-23",
+      "body": "大量表示の改善策は、単純な「軽量化テクニック一覧」では決まりません。同じ形状の反復か、個別形状か、動的か、距離による詳細度変更が可能かで有効な方法が変わります。\n\nまずDraw Callを減らすのか、Geometryを統合するのか、描画対象そのものを減らすのかを切り分けます。"
+    }
+  ],
+  "approaches": [
+    {
+      "id": "application-backend-form",
+      "slug": "application-backend-form",
+      "title": "アプリのバックエンドで一体管理する",
+      "shortTitle": "アプリのバックエンド",
+      "summary": "既存または新設するアプリの受付処理として実装し、入力検証、保存、権限、業務処理を一つの流れで管理する方法です。",
+      "defaultLabel": "alternative",
+      "baseScore": 1,
+      "technologyIds": [
+        "application-backend",
+        "database"
+      ],
+      "concepts": [
+        "server-side-validation",
+        "business-workflow",
+        "access-control"
+      ],
+      "recommendedWhen": [
+        "受付を担当できる既存バックエンドがある",
+        "受付後の業務処理のために専用バックエンドを設ける",
+        "機密情報の保存、閲覧権限、監査を既存方針へ統合したい",
+        "送信後に複数の業務処理や状態管理が必要"
+      ],
+      "notRecommendedWhen": [
+        "静的サイトへ単純な問い合わせ窓口だけを追加するために、新しいバックエンドが必要になる",
+        "バックエンドの保守担当者がいない",
+        "既存システムへ公開フォームの負荷と攻撃面を追加できない"
+      ],
+      "advantages": [
+        "アプリの認証、権限、データ保存、監視と一体で管理できる",
+        "業務上の意味を含む入力検証を一か所で実装できる",
+        "受付後の状態変更や他システム連携を管理しやすい"
+      ],
+      "disadvantages": [
+        "公開入力を受けるための安全設計と保守範囲が増える",
+        "迷惑送信対策、送信制限、通知失敗処理を実装する必要がある",
+        "単純なフォームには設計とテストの範囲が大きい"
+      ],
+      "resourceIds": [
+        "res-owasp-input-validation",
+        "res-owasp-logging"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "babylonjs-product",
+      "slug": "babylonjs-product",
+      "title": "Babylon.jsによる3Dアプリ型ビューア",
+      "shortTitle": "Babylon.js",
+      "summary": "エンジン機能を広く利用し、商品表示から複雑な3Dアプリへ拡張する構成です。",
+      "defaultLabel": "specialized",
+      "baseScore": 0,
+      "technologyIds": [
+        "babylonjs",
+        "gltf",
+        "typescript"
+      ],
+      "concepts": [
+        "scene",
+        "asset-loading",
+        "engine-tooling"
+      ],
+      "recommendedWhen": [
+        "ビューアから複雑な3Dアプリへ発展する",
+        "Babylon.jsの統合機能を活用したい"
+      ],
+      "notRecommendedWhen": [
+        "単純表示だけでよい",
+        "小さなチームで短期間に作る"
+      ],
+      "advantages": [
+        "統合された3Dエンジン機能が豊富",
+        "開発ツールを利用できる"
+      ],
+      "disadvantages": [
+        "小規模用途には機能と学習範囲が大きい",
+        "Three.js資産をそのまま流用できない"
+      ],
+      "resourceIds": [
+        "res-babylon-loading",
+        "book-real-time-rendering"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "build-time-static-search",
+      "slug": "build-time-static-search",
+      "title": "公開時に検索索引を作る（Pagefind）",
+      "shortTitle": "公開時に索引を作る",
+      "summary": "サイトの公開用HTMLから検索索引を生成し、ブラウザだけで検索を完結させる方法です。",
+      "defaultLabel": "canonical",
+      "baseScore": 3,
+      "technologyIds": [
+        "pagefind",
+        "static-site"
+      ],
+      "concepts": [
+        "static-search-index",
+        "client-side-search",
+        "build-pipeline"
+      ],
+      "recommendedWhen": [
+        "コンテンツ更新時にサイトを再生成できる",
+        "検索用のサーバーや外部サービスを増やしたくない",
+        "小規模チームで基本的な絞り込みや並び替えを提供したい"
+      ],
+      "notRecommendedWhen": [
+        "公開作業を待たずに検索結果へ更新を反映したい",
+        "同義語や業務ルールを使った検索順位の継続調整が主要要件",
+        "ログイン利用者ごとに検索対象を厳密に変える"
+      ],
+      "advantages": [
+        "検索専用のサーバーを運用せずに導入できる",
+        "生成済みHTMLを索引の原本にできる",
+        "用意された検索画面から小さく始められる"
+      ],
+      "disadvantages": [
+        "コンテンツ更新後に索引の再生成と再公開が必要",
+        "必要な同義語、検索ルール、業務上の並び順が設定やAPIの範囲に収まるか確認が必要",
+        "日本語の固有名詞や表記揺れは実データで確認が必要"
+      ],
+      "resourceIds": [
+        "res-pagefind-search-docs",
+        "res-pagefind-multilingual"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "canvas-image-sequence",
+      "slug": "canvas-image-sequence",
+      "title": "Canvas画像シーケンス",
+      "shortTitle": "Image Sequence",
+      "summary": "スクロール位置に合わせて事前生成した連番画像をCanvasへ描画する方法です。",
+      "defaultLabel": "fast",
+      "baseScore": 0,
+      "technologyIds": [
+        "canvas",
+        "javascript",
+        "image-delivery"
+      ],
+      "concepts": [
+        "preloading",
+        "media-delivery",
+        "scroll"
+      ],
+      "recommendedWhen": [
+        "カメラパスが固定",
+        "3Dランタイムを使わず立体的な見せ方をしたい"
+      ],
+      "notRecommendedWhen": [
+        "多方向の操作が必要",
+        "通信量を小さく抑えたい"
+      ],
+      "advantages": [
+        "見た目を制作時に確定できる",
+        "3Dライブラリを不要にできる"
+      ],
+      "disadvantages": [
+        "画像枚数と転送量が増えやすい",
+        "読み込み戦略が必要"
+      ],
+      "resourceIds": [
+        "res-next-lazy",
+        "res-rendering-performance"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "database-full-text-search",
+      "slug": "database-full-text-search",
+      "title": "既存データベース内で全文検索する（PostgreSQL）",
+      "shortTitle": "データベース内で全文検索",
+      "summary": "PostgreSQLの全文検索機能を使い、保存済みデータの検索と順位付けをアプリケーション内で実装する方法です。",
+      "defaultLabel": "specialized",
+      "baseScore": 1,
+      "technologyIds": [
+        "postgresql",
+        "application-backend"
+      ],
+      "concepts": [
+        "full-text-search",
+        "query-ranking",
+        "data-consistency"
+      ],
+      "recommendedWhen": [
+        "検索対象が既存のPostgreSQLに保存されている",
+        "保存直後のデータを同じシステムから検索したい",
+        "検索結果へ権限や業務上の条件を組み込みたい"
+      ],
+      "notRecommendedWhen": [
+        "検索対象が静的HTMLだけでデータベースを運用していない",
+        "検索API、監視、負荷対策を担当する体制がない",
+        "日本語解析を追加せずに高度な日本語検索を実現したい"
+      ],
+      "advantages": [
+        "検索対象と元データを同じデータベースで管理できる",
+        "文書と検索語の変換、順位付け、見出し表示を組み立てられる",
+        "アプリケーションの権限や絞り込み条件と統合しやすい"
+      ],
+      "disadvantages": [
+        "索引設計、検索API、監視を自分たちで保守する",
+        "検索順位は実際の利用目的に合わせて調整が必要",
+        "日本語の単語分割や辞書は別途選定と検証が必要"
+      ],
+      "resourceIds": [
+        "res-postgresql-full-text-search",
+        "res-postgresql-text-dictionaries"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "dom-first-three-islands",
+      "slug": "dom-first-three-islands",
+      "title": "DOM優先 + 3D Islands",
+      "shortTitle": "DOM-first",
+      "summary": "意味のあるHTMLをページの骨格にし、必要なセクションへ独立した3D表現を追加する構成です。",
+      "defaultLabel": "canonical",
+      "baseScore": 3,
+      "technologyIds": [
+        "html",
+        "css",
+        "threejs",
+        "nextjs"
+      ],
+      "concepts": [
+        "progressive-enhancement",
+        "seo",
+        "accessibility"
+      ],
+      "recommendedWhen": [
+        "本文と構造化された導線が重要",
+        "3Dを部分的な付加価値として使う"
+      ],
+      "notRecommendedWhen": [
+        "全画面を一つの連続3D空間にすることが絶対要件"
+      ],
+      "advantages": [
+        "HTMLコンテンツを維持しやすい",
+        "段階的読み込みとフォールバックを設計しやすい"
+      ],
+      "disadvantages": [
+        "複数表現レイヤーの設計が必要",
+        "完全没入型より制約が増える"
+      ],
+      "resourceIds": [
+        "res-js-seo",
+        "res-next-lazy",
+        "res-wcag-nontext"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "dom-gsap-scroll",
+      "slug": "dom-gsap-scroll",
+      "title": "DOM + GSAP ScrollTrigger",
+      "shortTitle": "DOM + GSAP",
+      "summary": "HTML要素を中心に、GSAP ScrollTriggerでスクロール進行とアニメーションを同期する方法です。",
+      "defaultLabel": "canonical",
+      "baseScore": 3,
+      "technologyIds": [
+        "html",
+        "css",
+        "gsap"
+      ],
+      "concepts": [
+        "scroll",
+        "timeline",
+        "accessibility"
+      ],
+      "recommendedWhen": [
+        "本文やUIをHTMLで保つ",
+        "2D変形と表示制御が中心"
+      ],
+      "notRecommendedWhen": [
+        "大量の3Dオブジェクトや独自シェーダーが主役"
+      ],
+      "advantages": [
+        "コンテンツ構造を維持しやすい",
+        "実装とデバッグの境界が明確"
+      ],
+      "disadvantages": [
+        "3D表現力には限界がある",
+        "過剰なスクロール固定はUXを損なう"
+      ],
+      "resourceIds": [
+        "res-gsap-scrolltrigger",
+        "res-js-seo"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "dom-progressive-portfolio",
+      "slug": "dom-progressive-portfolio",
+      "title": "DOM中心 + 部分的3Dのプログレッシブ構成",
+      "shortTitle": "DOM + 3D Islands",
+      "summary": "本文と導線をHTMLで構成し、必要な箇所だけThree.jsやCanvasを追加する方法です。",
+      "defaultLabel": "alternative",
+      "baseScore": 2,
+      "technologyIds": [
+        "html",
+        "css",
+        "javascript",
+        "threejs"
+      ],
+      "concepts": [
+        "progressive-enhancement",
+        "accessibility",
+        "seo"
+      ],
+      "recommendedWhen": [
+        "作品説明と問い合わせ導線を確実に読ませる",
+        "SEOやアクセシビリティを重視する"
+      ],
+      "notRecommendedWhen": [
+        "画面全体を一つの3D世界として成立させたい"
+      ],
+      "advantages": [
+        "HTML本文を保持できる",
+        "低性能環境へフォールバックしやすい"
+      ],
+      "disadvantages": [
+        "DOMと3Dの境界設計が必要",
+        "完全没入型より表現統一が難しい"
+      ],
+      "resourceIds": [
+        "res-js-seo",
+        "res-wcag-nontext",
+        "book-designing-interfaces"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "full-canvas-three",
+      "slug": "full-canvas-three",
+      "title": "フルCanvas Three.js構成",
+      "shortTitle": "Full Canvas",
+      "summary": "画面全体をCanvas上の3D空間として設計し、UIもオーバーレイまたは3D内に統合する構成です。",
+      "defaultLabel": "specialized",
+      "baseScore": 1,
+      "technologyIds": [
+        "threejs",
+        "webgl",
+        "glsl"
+      ],
+      "concepts": [
+        "canvas",
+        "scene",
+        "shader"
+      ],
+      "recommendedWhen": [
+        "没入型体験が最優先",
+        "HTML本文が少ないキャンペーンや作品サイト"
+      ],
+      "notRecommendedWhen": [
+        "SEO・アクセシビリティ・長文コンテンツが重要"
+      ],
+      "advantages": [
+        "表現を一つのレンダリング空間に統合できる",
+        "独自世界観を作りやすい"
+      ],
+      "disadvantages": [
+        "HTMLの代替構造が別途必要",
+        "低性能端末と入力方式への配慮が必要"
+      ],
+      "resourceIds": [
+        "res-three-webgpu",
+        "res-wcag-nontext",
+        "book-book-of-shaders"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "geometry-merge-batching",
+      "slug": "geometry-merge-batching",
+      "title": "Geometry統合によるBatching",
+      "shortTitle": "Geometry Merge",
+      "summary": "静的な複数Geometryを一つへ統合し、描画回数を減らす方法です。",
+      "defaultLabel": "alternative",
+      "baseScore": 1,
+      "technologyIds": [
+        "threejs",
+        "webgl"
+      ],
+      "concepts": [
+        "buffer-geometry",
+        "batching",
+        "draw-calls"
+      ],
+      "recommendedWhen": [
+        "シーンが静的",
+        "個別更新や選択が不要"
+      ],
+      "notRecommendedWhen": [
+        "オブジェクトが頻繁に動く",
+        "個別のMaterialやイベントが必要"
+      ],
+      "advantages": [
+        "静的シーンのDraw Callを減らせる",
+        "構成が比較的単純"
+      ],
+      "disadvantages": [
+        "個別更新しにくくなる",
+        "大きなGeometryの更新コストに注意が必要"
+      ],
+      "resourceIds": [
+        "res-three-buffergeometry",
+        "res-three-many-objects"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "git-based-content",
+      "slug": "git-based-content",
+      "title": "Git管理コンテンツ + 静的ビルド",
+      "shortTitle": "Git管理",
+      "summary": "MarkdownやYAMLなどのコンテンツをコードと同じGitリポジトリで管理し、承認後にサイトをビルドする構成です。",
+      "defaultLabel": "alternative",
+      "baseScore": 2,
+      "technologyIds": [
+        "git",
+        "static-site-generation",
+        "decap-cms"
+      ],
+      "concepts": [
+        "version-control",
+        "pull-request",
+        "build-pipeline"
+      ],
+      "recommendedWhen": [
+        "コンテンツ変更も差分レビューとテストを通したい",
+        "コードと内容を同じ版で再現したい",
+        "更新頻度より公開前の確認を優先する"
+      ],
+      "notRecommendedWhen": [
+        "フロントエンドを再ビルドせずに内容を反映したい",
+        "編集者がページレイアウトを自由に組み替える必要がある"
+      ],
+      "advantages": [
+        "コンテンツの差分と履歴をGitで確認できる",
+        "Pull Requestで差分へのコメント、承認、変更要求を記録できる"
+      ],
+      "disadvantages": [
+        "公開までにコミット、承認、ビルド、配信の工程が入る",
+        "編集UIやプレビューは別途設定が必要"
+      ],
+      "resourceIds": [
+        "res-cms-decap-overview",
+        "res-cms-decap-editorial-workflow",
+        "res-cms-github-pr-review",
+        "res-cms-github-branch-protection"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "headless-api-cms",
+      "slug": "headless-api-cms",
+      "title": "API型ヘッドレスCMS",
+      "shortTitle": "ヘッドレスCMS",
+      "summary": "CMSで構造化したコンテンツを管理し、Webサイトやアプリが配信APIから取得して表示する構成です。",
+      "defaultLabel": "canonical",
+      "baseScore": 3,
+      "technologyIds": [
+        "headless-cms",
+        "content-api"
+      ],
+      "concepts": [
+        "content-model",
+        "api-delivery",
+        "multi-channel"
+      ],
+      "recommendedWhen": [
+        "同じコンテンツを複数のサイトやアプリで再利用する",
+        "項目、型、入力検証を定義して内容を管理する",
+        "表示側とコンテンツ管理を別々に更新したい"
+      ],
+      "notRecommendedWhen": [
+        "一つの小規模サイトだけで内容とレイアウトが強く結び付いている",
+        "API取得、プレビュー、障害時の扱いを実装する担当者がいない"
+      ],
+      "advantages": [
+        "構造化した内容をAPIで複数の表示先へ渡せる",
+        "CMSとフロントエンドの役割を分けられる"
+      ],
+      "disadvantages": [
+        "API連携、キャッシュ、プレビューの実装が必要",
+        "CMSと表示側のデータモデル変更を調整する必要がある"
+      ],
+      "resourceIds": [
+        "res-cms-contentful-api-basics",
+        "res-cms-contentful-data-model"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "hosted-search-service",
+      "slug": "hosted-search-service",
+      "title": "検索専用サービスを利用する（Algolia）",
+      "shortTitle": "検索専用サービス",
+      "summary": "検索対象を外部の索引へ登録し、検索APIと検索品質の調整機能を利用する方法です。",
+      "defaultLabel": "alternative",
+      "baseScore": 2,
+      "technologyIds": [
+        "algolia",
+        "search-api"
+      ],
+      "concepts": [
+        "hosted-search",
+        "search-relevance",
+        "index-synchronization"
+      ],
+      "recommendedWhen": [
+        "コンテンツ更新を公開作業と分けて検索へ反映したい",
+        "同義語、絞り込み、検索ルール、独自の並び順を調整したい",
+        "検索基盤の運用を外部サービスへ任せられる"
+      ],
+      "notRecommendedWhen": [
+        "検索対象を外部SaaSへ送信できない",
+        "更新頻度が低く基本的な全文検索だけで足りる",
+        "利用量、契約、障害時の代替手段を管理できない"
+      ],
+      "advantages": [
+        "検索索引のレコードをAPIで追加・更新できる",
+        "同義語や検索ルールなどの調整機能を利用できる",
+        "検索基盤そのものを自前で保守しなくてよい"
+      ],
+      "disadvantages": [
+        "利用料、契約条件、利用上限を継続して確認する必要がある",
+        "元データと外部索引の同期処理が必要",
+        "Algoliaの標準タイプミス許容は日本語の表語文字検索には適用されないため、別の調整が必要"
+      ],
+      "resourceIds": [
+        "res-algolia-search-api",
+        "res-algolia-relevance",
+        "res-algolia-natural-languages"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "integrated-cms",
+      "slug": "integrated-cms",
+      "title": "表示統合型CMS",
+      "shortTitle": "表示統合型CMS",
+      "summary": "コンテンツ編集、テンプレート、公開画面を一つのCMSで管理し、CMSがページを生成する構成です。",
+      "defaultLabel": "fast",
+      "baseScore": 2,
+      "technologyIds": [
+        "integrated-cms",
+        "wordpress"
+      ],
+      "concepts": [
+        "visual-editing",
+        "template-rendering",
+        "direct-publishing"
+      ],
+      "recommendedWhen": [
+        "WordPressのBlock themeなど、編集画面でページを見ながら内容やブロックを変更できる構成を採用する",
+        "一つのWebサイトをCMSから直接公開する",
+        "編集権限と公開状態をCMS内で管理する"
+      ],
+      "notRecommendedWhen": [
+        "同じ構造化コンテンツを複数の独立した表示先で使うことが中心",
+        "表示側とCMSを別々の技術や公開周期で運用したい"
+      ],
+      "advantages": [
+        "対応するテーマと編集機能を使えば、編集画面、公開状態、テンプレートを一つの管理画面にまとめられる",
+        "コンテンツ変更をフロントエンドの静的ビルドと切り離せる"
+      ],
+      "disadvantages": [
+        "CMS本体、テーマ、拡張機能の更新を一体で管理する必要がある",
+        "表示を別アプリへ移す場合はデータとテンプレートの分離が必要"
+      ],
+      "resourceIds": [
+        "res-cms-wordpress-site-editor",
+        "res-cms-wordpress-templates"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "lod-frustum-culling",
+      "slug": "lod-frustum-culling",
+      "title": "LOD・カリングによる描画対象削減",
+      "shortTitle": "LOD / Culling",
+      "summary": "距離や視錐台に応じて詳細度と描画対象を減らし、不要な処理を避ける方法です。",
+      "defaultLabel": "specialized",
+      "baseScore": 2,
+      "technologyIds": [
+        "threejs",
+        "webgl"
+      ],
+      "concepts": [
+        "lod",
+        "frustum-culling",
+        "visibility"
+      ],
+      "recommendedWhen": [
+        "広い空間で遠方オブジェクトが多い",
+        "複数の詳細度モデルを用意できる"
+      ],
+      "notRecommendedWhen": [
+        "すべての対象が常に画面近くにある",
+        "LODモデルを準備できない"
+      ],
+      "advantages": [
+        "描画対象そのものを減らせる",
+        "端末性能に応じた段階調整ができる"
+      ],
+      "disadvantages": [
+        "モデル準備と切替設計が必要",
+        "切替が目立たない調整が必要"
+      ],
+      "resourceIds": [
+        "res-three-lod",
+        "res-three-frustum",
+        "res-rendering-performance"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "managed-container-runtime",
+      "slug": "managed-container-runtime",
+      "title": "マネージドコンテナ実行環境",
+      "shortTitle": "マネージドコンテナ",
+      "summary": "アプリと依存物をコンテナイメージにまとめ、サービス、ジョブ、常駐ワーカーとして実行する構成です。",
+      "defaultLabel": "specialized",
+      "baseScore": 1,
+      "technologyIds": [
+        "containers",
+        "managed-container-platform"
+      ],
+      "concepts": [
+        "container-image",
+        "service",
+        "job",
+        "worker"
+      ],
+      "recommendedWhen": [
+        "実行基盤のコンテナ仕様を満たす範囲で、OSパッケージや独自バイナリを含む実行環境が必要",
+        "HTTP以外の常駐ワーカーや完了まで動くジョブが必要",
+        "同じコンテナイメージを複数環境で扱いたい"
+      ],
+      "notRecommendedWhen": [
+        "静的ファイルの配信だけで要件を満たせる",
+        "コンテナイメージの更新と脆弱性対応を担当できない"
+      ],
+      "advantages": [
+        "ランタイムとシステム依存物をイメージへ含められる",
+        "Webサービス、完了型ジョブ、常駐ワーカーを分けて設計できる"
+      ],
+      "disadvantages": [
+        "イメージ作成、更新、起動、状態の外部化を設計する必要がある",
+        "対応OS、CPUアーキテクチャ、起動方法など実行基盤のコンテナ仕様に従う必要がある",
+        "静的配信や単純な関数より管理対象が増える"
+      ],
+      "resourceIds": [
+        "res-host-cloud-run-overview",
+        "res-host-cloud-run-container-contract"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "managed-form-service",
+      "slug": "managed-form-service",
+      "title": "フォーム受付サービスを利用する（Formspree）",
+      "shortTitle": "フォーム受付サービス",
+      "summary": "HTMLフォームの送信先に専用サービスを指定し、受付、迷惑送信対策、通知を任せる方法です。",
+      "defaultLabel": "fast",
+      "baseScore": 3,
+      "technologyIds": [
+        "formspree",
+        "html-forms"
+      ],
+      "concepts": [
+        "managed-form-backend",
+        "spam-filtering",
+        "submission-notification"
+      ],
+      "recommendedWhen": [
+        "一般的な問い合わせフォームを短期間で公開したい",
+        "受付用サーバーを保守する担当者がいない",
+        "外部サービスの保存先、契約、権限を確認できる"
+      ],
+      "notRecommendedWhen": [
+        "問い合わせ内容を外部SaaSへ送信できない",
+        "送信と同じ処理内で複雑な業務判定や更新を行う",
+        "サービスの保存地域や保持条件が組織要件に合わない"
+      ],
+      "advantages": [
+        "受付用のサーバー処理を書かずに始められる",
+        "迷惑送信対策と通知機能を利用できる",
+        "フォームの受付先となるエンドポイントの運用をサービス側へ委ねられる"
+      ],
+      "disadvantages": [
+        "問い合わせ内容を外部事業者が処理する",
+        "料金プランと保存期間などの条件を継続確認する必要がある",
+        "通知失敗、閲覧権限、保存期間、迷惑送信への対応状況は利用者側でも確認する必要がある",
+        "独自の業務処理は連携機能の範囲に制約される"
+      ],
+      "resourceIds": [
+        "res-formspree-html-forms",
+        "res-formspree-security",
+        "res-formspree-notification-rules",
+        "res-owasp-input-validation"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "model-viewer-product",
+      "slug": "model-viewer-product",
+      "title": "model-viewerによる商品表示",
+      "shortTitle": "model-viewer",
+      "summary": "Web Componentを使い、モデル表示・操作・AR導線を小さな実装範囲で提供する方法です。",
+      "defaultLabel": "fast",
+      "baseScore": 2,
+      "technologyIds": [
+        "model-viewer",
+        "web-components",
+        "gltf"
+      ],
+      "concepts": [
+        "gltf",
+        "ar",
+        "progressive-enhancement"
+      ],
+      "recommendedWhen": [
+        "単純な回転・拡大表示が中心",
+        "AR導線を短期間で実装したい",
+        "3D専任者がいない"
+      ],
+      "notRecommendedWhen": [
+        "独自シェーダーが主要要件",
+        "複雑な3Dシーンやゲームロジックが必要"
+      ],
+      "advantages": [
+        "実装範囲を抑えやすい",
+        "AR導線を組み込みやすい"
+      ],
+      "disadvantages": [
+        "レンダリング制御の自由度は低い",
+        "独自表現では内部制約を受ける"
+      ],
+      "resourceIds": [
+        "res-model-viewer-docs",
+        "book-real-time-rendering"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r3f-drei-portfolio",
+      "slug": "r3f-drei-portfolio",
+      "title": "R3F + DreiによるReact型3Dポートフォリオ",
+      "shortTitle": "R3F + Drei",
+      "summary": "ReactアプリとしてページUIと3Dシーンをコンポーネント化し、Dreiの補助機能を使う構成です。",
+      "defaultLabel": "alternative",
+      "baseScore": 2,
+      "technologyIds": [
+        "react",
+        "r3f",
+        "drei",
+        "threejs"
+      ],
+      "concepts": [
+        "component-design",
+        "scene",
+        "state-management"
+      ],
+      "recommendedWhen": [
+        "Reactでサイト全体を管理する",
+        "3D要素を再利用可能な部品にする"
+      ],
+      "notRecommendedWhen": [
+        "Reactが不要",
+        "最小構成を優先する"
+      ],
+      "advantages": [
+        "UIと3Dを同じ状態モデルで扱える",
+        "補助コンポーネントが豊富"
+      ],
+      "disadvantages": [
+        "抽象化レイヤーが増える",
+        "不適切な再レンダリングに注意が必要"
+      ],
+      "resourceIds": [
+        "res-r3f-intro",
+        "res-r3f-performance",
+        "book-react-design"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r3f-product",
+      "slug": "r3f-product",
+      "title": "React Three FiberによるReact統合型ビューア",
+      "shortTitle": "R3F + Three.js",
+      "summary": "Reactの宣言的な構成と状態管理の中にThree.jsシーンを組み込む方法です。",
+      "defaultLabel": "alternative",
+      "baseScore": 1,
+      "technologyIds": [
+        "react",
+        "r3f",
+        "threejs"
+      ],
+      "concepts": [
+        "react-reconciliation",
+        "scene",
+        "state-management"
+      ],
+      "recommendedWhen": [
+        "既存Reactアプリで3DとUI状態を連携する",
+        "チームがReactに習熟している"
+      ],
+      "notRecommendedWhen": [
+        "Reactを使用していない",
+        "単純表示だけで依存を増やしたくない"
+      ],
+      "advantages": [
+        "Reactコンポーネントとして管理できる",
+        "Dreiなど周辺機能を利用できる"
+      ],
+      "disadvantages": [
+        "ReactとThree.js双方の理解が必要",
+        "抽象化の挙動を理解せず最適化すると難しい"
+      ],
+      "resourceIds": [
+        "res-r3f-intro",
+        "res-r3f-performance",
+        "book-react-design"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r3f-scrollcontrols",
+      "slug": "r3f-scrollcontrols",
+      "title": "R3F + ScrollControls",
+      "shortTitle": "R3F + ScrollControls",
+      "summary": "React Three FiberのシーンをReact UIと統合し、スクロール値を3D状態へ反映する方法です。",
+      "defaultLabel": "alternative",
+      "baseScore": 1,
+      "technologyIds": [
+        "react",
+        "r3f",
+        "drei"
+      ],
+      "concepts": [
+        "scroll",
+        "component-design",
+        "state-management"
+      ],
+      "recommendedWhen": [
+        "ReactサイトでUIと3Dを統合する",
+        "R3F/Dreiを既に採用している"
+      ],
+      "notRecommendedWhen": [
+        "Reactを使用しない",
+        "単純なDOM演出で十分"
+      ],
+      "advantages": [
+        "React内で状態を共有できる",
+        "Dreiの補助機能を使える"
+      ],
+      "disadvantages": [
+        "抽象化に依存する",
+        "再レンダリング設計を誤ると負荷が増える"
+      ],
+      "resourceIds": [
+        "res-r3f-intro",
+        "res-r3f-performance"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "self-hosted-search-service",
+      "slug": "self-hosted-search-service",
+      "title": "検索サーバーを自分たちで運用する（Meilisearch）",
+      "shortTitle": "自前の検索サーバー",
+      "summary": "Meilisearchを自分たちの管理する実行環境で動かし、APIで検索索引を更新する方法です。",
+      "defaultLabel": "specialized",
+      "baseScore": 0,
+      "technologyIds": [
+        "meilisearch"
+      ],
+      "concepts": [
+        "self-hosted-search",
+        "search-api",
+        "index-synchronization"
+      ],
+      "recommendedWhen": [
+        "更新頻度が高く、公開作業とは別に検索索引を更新したい",
+        "検索データを第三者の検索サービスへ預けられない",
+        "検索サーバーの更新、認証、監視、バックアップを担当できる"
+      ],
+      "notRecommendedWhen": [
+        "検索サーバーの安全な公開と継続運用を担当できない",
+        "更新頻度が低く、公開時に作る静的索引で要件を満たせる",
+        "検索対象が既存PostgreSQLにあり、その全文検索だけで要件を満たせる"
+      ],
+      "advantages": [
+        "自分たちが管理する環境に検索索引を置ける",
+        "文書の追加と更新をAPI経由で行える",
+        "検索対象項目、絞り込み、並び順、同義語などを設定できる"
+      ],
+      "disadvantages": [
+        "サーバー、永続データ、認証、HTTPS、監視を自分たちで管理する",
+        "バージョン更新に備えてバックアップと復元手順を整える必要がある",
+        "日本語の検索結果は実データで確認と調整が必要"
+      ],
+      "resourceIds": [
+        "res-meilisearch-self-hosting",
+        "res-meilisearch-document-updates",
+        "res-meilisearch-search-settings"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "serverless-form-endpoint",
+      "slug": "serverless-form-endpoint",
+      "title": "サーバーレス関数で受付窓口を作る",
+      "shortTitle": "サーバーレス受付窓口",
+      "summary": "APIの一つの受付経路と関数を用意し、入力検証、送信制限、通知処理を必要な範囲で実装する方法です。",
+      "defaultLabel": "canonical",
+      "baseScore": 2,
+      "technologyIds": [
+        "aws-lambda",
+        "api-gateway"
+      ],
+      "concepts": [
+        "serverless-endpoint",
+        "server-side-validation",
+        "request-throttling"
+      ],
+      "recommendedWhen": [
+        "受付サービスでは足りない独自処理が少しだけ必要",
+        "フル構成のバックエンドを新設したくない",
+        "関数、通知先、失敗時の再処理を運用できる"
+      ],
+      "notRecommendedWhen": [
+        "複数段階の承認や多数の業務システム連携が必要",
+        "実行基盤の設定や監視を担当できない",
+        "既存バックエンドに同じ入力検証と業務処理がすでにある"
+      ],
+      "advantages": [
+        "問い合わせ専用の小さな受付処理として分離できる",
+        "入力検証と通知先を要件に合わせて実装できる",
+        "API経路ごとの送信制限を設定できる構成を選べる"
+      ],
+      "disadvantages": [
+        "入力検証、迷惑送信対策、通知失敗への対応は自分たちの責任",
+        "実行基盤と通知サービスの権限、ログ、上限を管理する",
+        "処理が増えると分散した関数の追跡が難しくなる"
+      ],
+      "resourceIds": [
+        "res-aws-api-gateway-throttling",
+        "res-owasp-input-validation",
+        "res-owasp-logging"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "serverless-function-hosting",
+      "slug": "serverless-function-hosting",
+      "title": "サーバーレス関数による動的処理",
+      "shortTitle": "サーバーレス関数",
+      "summary": "HTTPリクエストやイベントを起点に関数を実行し、基盤の管理と増減をサービスへ委ねる構成です。",
+      "defaultLabel": "alternative",
+      "baseScore": 2,
+      "technologyIds": [
+        "serverless-functions",
+        "managed-runtime"
+      ],
+      "concepts": [
+        "event-driven",
+        "request-response",
+        "automatic-scaling"
+      ],
+      "recommendedWhen": [
+        "認証やフォームなど、短く完結するサーバー処理が必要",
+        "アクセス量の変動に合わせて実行環境を増減させたい",
+        "サーバーの保守や容量管理をサービスへ委ねたい"
+      ],
+      "notRecommendedWhen": [
+        "一つのプロセスを常時稼働させる必要がある",
+        "呼び出しをまたいでローカル状態が残る前提の処理"
+      ],
+      "advantages": [
+        "サーバーの調達、保守、容量調整をサービスへ委ねられる",
+        "リクエストやイベント単位で処理を分けやすい"
+      ],
+      "disadvantages": [
+        "実行時間、状態、利用可能なランタイムなど提供サービスの制約を確認する必要がある",
+        "永続状態はデータベースやストレージへ分離する必要がある"
+      ],
+      "resourceIds": [
+        "res-host-aws-lambda-overview",
+        "res-host-next-runtime-caveats"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "split-static-runtime-hosting",
+      "slug": "split-static-runtime-hosting",
+      "title": "静的配信と動的な実行環境を分ける",
+      "shortTitle": "静的配信 + 別実行環境",
+      "summary": "公開画面は静的ファイルとして配信し、常駐処理や独自環境が必要な部分だけを関数またはコンテナへ分離する構成です。",
+      "defaultLabel": "specialized",
+      "baseScore": 0,
+      "technologyIds": [
+        "static-site-generation",
+        "managed-runtime",
+        "managed-container-platform"
+      ],
+      "concepts": [
+        "split-runtime",
+        "static-frontend",
+        "worker"
+      ],
+      "recommendedWhen": [
+        "公開画面は静的出力できるが、別に常駐ワーカーが必要",
+        "公開画面と、独自バイナリを使う処理の公開周期を分けたい",
+        "複数の公開先、認証、監視、障害切り分けを運用できる"
+      ],
+      "notRecommendedWhen": [
+        "静的ファイルの配信だけで全要件を満たせる",
+        "一つの動的アプリとして配備した方が境界と運用を単純にできる",
+        "複数環境の権限、通信、監視を担当できない"
+      ],
+      "advantages": [
+        "閲覧画面の静的配信と、常駐処理または独自実行環境を両立できる",
+        "各部分を異なる公開周期と実行条件で管理できる"
+      ],
+      "disadvantages": [
+        "公開先、権限、ログ、障害箇所が複数になる",
+        "静的画面と動的処理の通信契約や失敗時の扱いを設計する必要がある"
+      ],
+      "resourceIds": [
+        "res-host-next-static-export",
+        "res-host-cloud-run-overview",
+        "res-host-cloud-run-container-contract"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "static-edge-hosting",
+      "slug": "static-edge-hosting",
+      "title": "静的生成 + エッジ配信",
+      "shortTitle": "静的・エッジ配信",
+      "summary": "公開時にHTML・CSS・JavaScriptを生成し、静的ファイルとしてCDNやエッジから配信する構成です。",
+      "defaultLabel": "canonical",
+      "baseScore": 3,
+      "technologyIds": [
+        "static-site-generation",
+        "cdn",
+        "edge-hosting"
+      ],
+      "concepts": [
+        "static-export",
+        "edge-delivery",
+        "build-time-rendering"
+      ],
+      "recommendedWhen": [
+        "閲覧者によらず同じ内容を配信できる",
+        "公開時のビルドでページ内容を確定できる",
+        "閲覧時にアプリのサーバープロセスを動かしたくない"
+      ],
+      "notRecommendedWhen": [
+        "認証やCookieなど、リクエストごとの情報で応答を変える",
+        "サーバー側でデータを更新する処理が必要"
+      ],
+      "advantages": [
+        "HTML・CSS・JavaScriptを配信できるWebサーバーを選べる",
+        "閲覧時のアプリ実行環境を持たない構成にできる"
+      ],
+      "disadvantages": [
+        "サーバー機能を必要とする処理は別の実行環境へ分離する必要がある",
+        "内容の反映にビルドと配信を伴う"
+      ],
+      "resourceIds": [
+        "res-host-next-static-export",
+        "res-host-cloudflare-pages-files"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "static-fallback-progressive",
+      "slug": "static-fallback-progressive",
+      "title": "静的フォールバック + 段階的3D読込",
+      "shortTitle": "Static Fallback",
+      "summary": "最初に静的なHTML・画像を表示し、対応端末と条件を満たす場合だけ3Dを読み込む構成です。",
+      "defaultLabel": "fast",
+      "baseScore": 2,
+      "technologyIds": [
+        "html",
+        "nextjs",
+        "threejs"
+      ],
+      "concepts": [
+        "progressive-enhancement",
+        "lazy-loading",
+        "fallback"
+      ],
+      "recommendedWhen": [
+        "初期表示と低性能端末対応を優先する",
+        "3Dなしでも内容が成立する"
+      ],
+      "notRecommendedWhen": [
+        "最初の瞬間から3D描画が必須"
+      ],
+      "advantages": [
+        "失敗時も内容を提示できる",
+        "読み込み条件を制御しやすい"
+      ],
+      "disadvantages": [
+        "静的版と3D版の二重設計が必要",
+        "体験の差を管理する必要がある"
+      ],
+      "resourceIds": [
+        "res-next-lazy",
+        "res-js-seo",
+        "res-rendering-performance"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "threejs-gltf-product",
+      "slug": "threejs-gltf-product",
+      "title": "Three.js + glTFによる商品ビューア",
+      "shortTitle": "Three.js + glTF",
+      "summary": "Three.jsでシーン・カメラ・ライト・モデル・UI連携を個別に設計する王道構成です。",
+      "defaultLabel": "canonical",
+      "baseScore": 3,
+      "technologyIds": [
+        "threejs",
+        "gltf",
+        "javascript"
+      ],
+      "concepts": [
+        "scene",
+        "camera",
+        "lighting",
+        "gltf",
+        "rendering"
+      ],
+      "recommendedWhen": [
+        "独自演出やUI連携が必要",
+        "ライティングやマテリアルを調整したい"
+      ],
+      "notRecommendedWhen": [
+        "表示だけで十分で実装期間が短い",
+        "3D保守を担当できる人がいない"
+      ],
+      "advantages": [
+        "自由度が高い",
+        "3D Webの情報と事例が多い"
+      ],
+      "disadvantages": [
+        "設計・最適化・アクセシビリティを自分で担う",
+        "更新時の確認範囲が広い"
+      ],
+      "resourceIds": [
+        "res-three-gltf",
+        "res-gltf-spec",
+        "book-real-time-rendering"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "threejs-gsap-portfolio",
+      "slug": "threejs-gsap-portfolio",
+      "title": "Three.js + GSAPによる演出中心ポートフォリオ",
+      "shortTitle": "Three.js + GSAP",
+      "summary": "Three.jsの3D表現とGSAPのタイムライン・スクロール制御を組み合わせる構成です。",
+      "defaultLabel": "canonical",
+      "baseScore": 3,
+      "technologyIds": [
+        "threejs",
+        "gsap",
+        "javascript"
+      ],
+      "concepts": [
+        "timeline",
+        "scroll",
+        "shader",
+        "scene"
+      ],
+      "recommendedWhen": [
+        "独自の3D世界観を主役にする",
+        "演出タイミングを細かく制御する"
+      ],
+      "notRecommendedWhen": [
+        "テキスト量が多くSEOを最優先する",
+        "保守担当に3D経験者がいない"
+      ],
+      "advantages": [
+        "表現自由度が高い",
+        "DOMと3Dの時間軸を統合しやすい"
+      ],
+      "disadvantages": [
+        "モバイル最適化とフォールバックが必要",
+        "複数ライブラリの更新影響を受ける"
+      ],
+      "resourceIds": [
+        "res-three-webgpu",
+        "res-gsap-scrolltrigger",
+        "book-book-of-shaders"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "threejs-instancing",
+      "slug": "threejs-instancing",
+      "title": "InstancedMeshによる反復描画",
+      "shortTitle": "Instancing",
+      "summary": "同一GeometryとMaterialを持つ多数オブジェクトを、InstancedMeshで少ないDraw Callにまとめる方法です。",
+      "defaultLabel": "canonical",
+      "baseScore": 3,
+      "technologyIds": [
+        "threejs",
+        "webgl"
+      ],
+      "concepts": [
+        "instancing",
+        "draw-calls",
+        "gpu"
+      ],
+      "recommendedWhen": [
+        "同じ形状を大量に繰り返す",
+        "個別Transformを更新したい"
+      ],
+      "notRecommendedWhen": [
+        "すべて異なるGeometryやMaterialを使う"
+      ],
+      "advantages": [
+        "反復描画のDraw Callを大きく減らせる",
+        "各Instanceの行列や色を変更できる"
+      ],
+      "disadvantages": [
+        "個別オブジェクトとしての扱いが変わる",
+        "選択やカリングの実装を調整する必要がある"
+      ],
+      "resourceIds": [
+        "res-three-instancedmesh",
+        "res-three-many-objects"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "threejs-scrolltrigger",
+      "slug": "threejs-scrolltrigger",
+      "title": "Three.js + ScrollTrigger",
+      "shortTitle": "Three.js + ScrollTrigger",
+      "summary": "Three.jsシーンのカメラ・モデル・シェーダーをスクロール進行に合わせて制御する方法です。",
+      "defaultLabel": "specialized",
+      "baseScore": 2,
+      "technologyIds": [
+        "threejs",
+        "gsap",
+        "glsl"
+      ],
+      "concepts": [
+        "scroll",
+        "camera",
+        "shader",
+        "timeline"
+      ],
+      "recommendedWhen": [
+        "3D空間の変化をスクロールで演出する",
+        "独自シェーダーやパーティクルが必要"
+      ],
+      "notRecommendedWhen": [
+        "低性能端末を広く対象にする",
+        "短納期で検証期間が少ない"
+      ],
+      "advantages": [
+        "3D演出の自由度が高い",
+        "タイムライン制御を明示できる"
+      ],
+      "disadvantages": [
+        "スクロールとレンダリング負荷の同時最適化が必要",
+        "アクセシブルな代替導線が必要"
+      ],
+      "resourceIds": [
+        "res-gsap-scrolltrigger",
+        "res-three-webgpu",
+        "book-book-of-shaders"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "video-sequence-portfolio",
+      "slug": "video-sequence-portfolio",
+      "title": "映像・画像シーケンスによる疑似3D構成",
+      "shortTitle": "Video / Image Sequence",
+      "summary": "事前レンダリングした映像や連番画像で、複雑な3D表現をランタイム計算せず再生する方法です。",
+      "defaultLabel": "fast",
+      "baseScore": 0,
+      "technologyIds": [
+        "video",
+        "canvas",
+        "html"
+      ],
+      "concepts": [
+        "pre-rendering",
+        "media-delivery",
+        "fallback"
+      ],
+      "recommendedWhen": [
+        "カメラと演出が固定",
+        "実行時3Dより制作済み映像を優先する"
+      ],
+      "notRecommendedWhen": [
+        "視点を自由に操作する",
+        "リアルタイムで状態を変える"
+      ],
+      "advantages": [
+        "結果の見た目を固定できる",
+        "端末GPU差の影響を減らせる"
+      ],
+      "disadvantages": [
+        "容量が増えやすい",
+        "自由な3D操作はできない"
+      ],
+      "resourceIds": [
+        "res-next-lazy",
+        "res-rendering-performance"
+      ],
+      "lastReviewed": "2026-08-23"
+    }
+  ],
+  "rules": [
+    {
+      "id": "r-cms-git-no-build",
+      "situationId": "cms-architecture-selection",
+      "targetApproachId": "git-based-content",
+      "when": {
+        "all": [
+          "cms-direct-publishing-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 4
+      },
+      "reason": "この案ではコンテンツをGitへ保存して静的サイトを生成するため、更新の反映にビルドと配信が必要です。",
+      "evidenceIds": [
+        "ev-cms-decap-git-storage",
+        "ev-host-static-export"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-cms-git-review",
+      "situationId": "cms-architecture-selection",
+      "targetApproachId": "git-based-content",
+      "when": {
+        "all": [
+          "content-code-review-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "Pull Requestの差分確認に加え、ブランチ保護で承認と状態チェックを必須にすれば、未確認のコンテンツ変更をマージから除外できます。",
+      "evidenceIds": [
+        "ev-cms-decap-editorial-workflow",
+        "ev-cms-github-pr-review",
+        "ev-cms-github-branch-protection"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-cms-headless-multichannel",
+      "situationId": "cms-architecture-selection",
+      "targetApproachId": "headless-api-cms",
+      "when": {
+        "all": [
+          "multi-channel-delivery-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 4
+      },
+      "reason": "配信APIは公開コンテンツをWebサイト、アプリ、その他の表示先から共通して取得できるようにします。",
+      "evidenceIds": [
+        "ev-cms-contentful-api-delivery"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-cms-headless-structured",
+      "situationId": "cms-architecture-selection",
+      "targetApproachId": "headless-api-cms",
+      "when": {
+        "all": [
+          "structured-content-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 4
+      },
+      "reason": "コンテンツタイプの項目、型、検証を定義する方式は、内容を一定の構造で管理する要件に対応します。",
+      "evidenceIds": [
+        "ev-cms-contentful-data-model"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-cms-integrated-no-build",
+      "situationId": "cms-architecture-selection",
+      "targetApproachId": "integrated-cms",
+      "when": {
+        "all": [
+          "cms-direct-publishing-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "CMSで公開状態を変更し、保存された内容をテンプレートが出力する構成では、静的フロントエンドの再ビルドを公開手順に含めずに済みます。",
+      "evidenceIds": [
+        "ev-cms-wordpress-site-editor",
+        "ev-cms-wordpress-template-rendering"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-cms-integrated-visual",
+      "situationId": "cms-architecture-selection",
+      "targetApproachId": "integrated-cms",
+      "when": {
+        "all": [
+          "cms-layout-editing-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "Block themeを有効にしたWordPressのSite Editorでは、ページ内容をテンプレート内で確認しながらブロックを編集できます。",
+      "evidenceIds": [
+        "ev-cms-wordpress-site-editor"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-cms-review-direct-warning",
+      "situationId": "cms-architecture-selection",
+      "when": {
+        "all": [
+          "content-code-review-required",
+          "cms-direct-publishing-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "Gitの必須レビューとCMSからの直接公開は異なる公開経路です。両方が必要なら、承認を強制できるCMS設定または連携フローを別途設計してください。",
+      "evidenceIds": [
+        "ev-cms-github-branch-protection",
+        "ev-cms-wordpress-site-editor"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-form-complex-backend",
+      "situationId": "secure-contact-form",
+      "targetApproachId": "application-backend-form",
+      "when": {
+        "all": [
+          "complex-form-workflow"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 6
+      },
+      "reason": "複雑な受付では、形式だけでなく業務上の意味をサーバー側で検証する必要があります。この条件では、検証と業務処理を同じバックエンドで管理する案を優先します。",
+      "evidenceIds": [
+        "ev-owasp-server-side-validation"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-form-existing-backend",
+      "situationId": "secure-contact-form",
+      "targetApproachId": "application-backend-form",
+      "when": {
+        "all": [
+          "existing-application-backend"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "外部入力はサーバー側で検証する必要があります。既存バックエンドがその検証を担当できる条件では、新しい受付基盤を増やさず再利用する案を優先します。",
+      "evidenceIds": [
+        "ev-owasp-server-side-validation"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-form-external-managed",
+      "situationId": "secure-contact-form",
+      "targetApproachId": "managed-form-service",
+      "when": {
+        "all": [
+          "external-service-restricted"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "Formspree方式は外部の受付先へ問い合わせ内容を送信するため、外部SaaSへ送信できない条件と両立しません。",
+      "evidenceIds": [
+        "ev-formspree-managed-handler",
+        "ev-formspree-hosting-security"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-form-maintain-managed",
+      "situationId": "secure-contact-form",
+      "targetApproachId": "managed-form-service",
+      "when": {
+        "all": [
+          "maintainability-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 1
+      },
+      "reason": "受付用の独自サーバー処理を持たずに済むため、単純なフォームでは自分たちの保守範囲を抑えられます。",
+      "evidenceIds": [
+        "ev-formspree-managed-handler"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-form-managed-data-review-warning",
+      "situationId": "secure-contact-form",
+      "when": {
+        "all": [],
+        "any": [
+          "personal-data-form",
+          "confidential-form-data"
+        ],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "Formspreeは米国のAWSでサービスを運用すると公表しています。選ぶ場合は、保存と削除、閲覧権限、データ処理契約や標準契約条項が組織要件に合うか採用前に確認してください。",
+      "evidenceIds": [
+        "ev-formspree-hosting-security"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-form-sensitive-warning",
+      "situationId": "secure-contact-form",
+      "when": {
+        "all": [],
+        "any": [
+          "personal-data-form",
+          "confidential-form-data"
+        ],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "フォーム本文をログへ無条件に残さず、情報の機密度を分類し、必要に応じて除去、マスキング、暗号化を行ってください。",
+      "evidenceIds": [
+        "ev-owasp-sensitive-logging"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-form-short-managed",
+      "situationId": "secure-contact-form",
+      "targetApproachId": "managed-form-service",
+      "when": {
+        "all": [
+          "short-deadline"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "FormspreeはHTMLフォームの送信先として利用でき、受付用のサーバー処理を書かずに導入できます。",
+      "evidenceIds": [
+        "ev-formspree-managed-handler"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-form-small-managed",
+      "situationId": "secure-contact-form",
+      "targetApproachId": "managed-form-service",
+      "when": {
+        "all": [
+          "small-team"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "独自の受付処理を持たず、サービスが提供する迷惑送信対策と通知機能を利用できるため、少人数で保守する候補になります。",
+      "evidenceIds": [
+        "ev-formspree-managed-handler",
+        "ev-formspree-notification-rules"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-host-container-custom-runtime",
+      "situationId": "hosting-runtime-selection",
+      "targetApproachId": "managed-container-runtime",
+      "when": {
+        "all": [
+          "custom-runtime-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "実行基盤のコンテナ仕様を満たす範囲で、アプリが必要とするシステムパッケージ、バイナリ、ランタイムをイメージに含められます。",
+      "evidenceIds": [
+        "ev-host-cloud-run-container-image"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-host-container-persistent",
+      "situationId": "hosting-runtime-selection",
+      "targetApproachId": "managed-container-runtime",
+      "when": {
+        "all": [
+          "persistent-worker-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "常時稼働する非HTTP処理には、ワーカープールとしてコンテナを動かす実行形態があります。",
+      "evidenceIds": [
+        "ev-host-cloud-run-workload-types"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-host-serverless-burst",
+      "situationId": "hosting-runtime-selection",
+      "targetApproachId": "serverless-function-hosting",
+      "when": {
+        "all": [
+          "bursty-traffic",
+          "request-time-processing-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "関数の実行環境を需要に応じて増減させる基盤は、アクセス量が変動する処理に合わせやすい構成です。",
+      "evidenceIds": [
+        "ev-host-lambda-managed-scaling"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-host-serverless-dynamic",
+      "situationId": "hosting-runtime-selection",
+      "targetApproachId": "serverless-function-hosting",
+      "when": {
+        "all": [
+          "request-time-processing-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 4
+      },
+      "reason": "API呼び出しやイベントごとに関数を実行する方式は、リクエスト時の処理に対応します。",
+      "evidenceIds": [
+        "ev-host-lambda-managed-scaling"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-host-serverless-persistent",
+      "situationId": "hosting-runtime-selection",
+      "targetApproachId": "serverless-function-hosting",
+      "when": {
+        "all": [
+          "persistent-worker-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 4
+      },
+      "reason": "独立した呼び出しと実行時間の境界を持つ関数は、一つのプロセスを常時稼働させる要件と一致しません。",
+      "evidenceIds": [
+        "ev-host-lambda-invocation-boundary"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-host-split-static-custom",
+      "situationId": "hosting-runtime-selection",
+      "targetApproachId": "split-static-runtime-hosting",
+      "when": {
+        "all": [
+          "static-output-possible",
+          "custom-runtime-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 9
+      },
+      "reason": "公開画面を静的ファイルとして配信し、実行仕様を満たす独自ランタイムやバイナリを別のコンテナへ含めれば、二つの実行条件を分離できます。",
+      "evidenceIds": [
+        "ev-host-static-export",
+        "ev-host-cloud-run-container-image"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-host-split-static-persistent",
+      "situationId": "hosting-runtime-selection",
+      "targetApproachId": "split-static-runtime-hosting",
+      "when": {
+        "all": [
+          "static-output-possible",
+          "persistent-worker-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 9
+      },
+      "reason": "公開画面を静的ファイルとして配信し、常時稼働する非HTTP処理を別のワーカープールへ分ければ、二つの実行条件を両立できます。",
+      "evidenceIds": [
+        "ev-host-static-export",
+        "ev-host-cloud-run-workload-types"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-host-static-dynamic-exclude",
+      "situationId": "hosting-runtime-selection",
+      "targetApproachId": "static-edge-hosting",
+      "when": {
+        "all": [
+          "request-time-processing-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "静的出力だけでは、受信したリクエストの値を使うサーバー処理を実行できません。",
+      "evidenceIds": [
+        "ev-host-static-export"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-host-static-fit",
+      "situationId": "hosting-runtime-selection",
+      "targetApproachId": "static-edge-hosting",
+      "when": {
+        "all": [
+          "static-output-possible"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 4
+      },
+      "reason": "閲覧時の動的処理が不要なら、公開時に生成したファイルを静的Webサーバーから配信できます。",
+      "evidenceIds": [
+        "ev-host-static-export"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-perf-advanced-merge",
+      "situationId": "threejs-many-objects",
+      "targetApproachId": "geometry-merge-batching",
+      "when": {
+        "all": [
+          "advanced-visuals"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 1
+      },
+      "reason": "個別Materialや特殊表現が多い場合、単純なGeometry統合では設計自由度を失います。",
+      "evidenceIds": [
+        "ev-three-buffergeometry"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-perf-count-instancing",
+      "situationId": "threejs-many-objects",
+      "targetApproachId": "threejs-instancing",
+      "when": {
+        "all": [
+          "large-object-count"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 4
+      },
+      "reason": "大量表示ではDraw Call削減が重要になるため、反復形状をInstancingできるか最初に確認します。",
+      "evidenceIds": [
+        "ev-three-instancedmesh",
+        "ev-three-many-objects"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-perf-count-merge",
+      "situationId": "threejs-many-objects",
+      "targetApproachId": "geometry-merge-batching",
+      "when": {
+        "all": [
+          "large-object-count",
+          "static-scene"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 1
+      },
+      "reason": "多数の静的Geometryをまとめられる場合、描画回数削減の候補になります。",
+      "evidenceIds": [
+        "ev-three-many-objects"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-perf-detail-lod",
+      "situationId": "threejs-many-objects",
+      "targetApproachId": "lod-frustum-culling",
+      "when": {
+        "all": [
+          "varying-detail"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 4
+      },
+      "reason": "距離に応じた詳細度モデルを用意できるためLODの適用条件に合います。",
+      "evidenceIds": [
+        "ev-three-lod"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-perf-dynamic-instancing",
+      "situationId": "threejs-many-objects",
+      "targetApproachId": "threejs-instancing",
+      "when": {
+        "all": [
+          "dynamic-objects",
+          "repeated-geometry"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "各Instanceの行列を更新できるため、同じ形状が個別に動く場合にも候補になります。",
+      "evidenceIds": [
+        "ev-three-instancedmesh"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-perf-dynamic-merge",
+      "situationId": "threejs-many-objects",
+      "targetApproachId": "geometry-merge-batching",
+      "when": {
+        "all": [
+          "dynamic-objects"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 2
+      },
+      "reason": "Geometry統合後は個別オブジェクトの頻繁な移動・更新が扱いにくくなります。",
+      "evidenceIds": [
+        "ev-three-buffergeometry"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-perf-low-lod",
+      "situationId": "threejs-many-objects",
+      "targetApproachId": "lod-frustum-culling",
+      "when": {
+        "all": [
+          "low-end-devices"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "低性能端末では描画対象と詳細度を減らす手段を優先します。",
+      "evidenceIds": [
+        "ev-three-lod",
+        "ev-rendering-performance"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-perf-mobile-lod",
+      "situationId": "threejs-many-objects",
+      "targetApproachId": "lod-frustum-culling",
+      "when": {
+        "all": [
+          "mobile-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 1
+      },
+      "reason": "モバイルでは画面外・遠方オブジェクトの処理を減らす設計を優先します。",
+      "evidenceIds": [
+        "ev-three-lod",
+        "ev-three-frustum"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-perf-repeat-instancing",
+      "situationId": "threejs-many-objects",
+      "targetApproachId": "threejs-instancing",
+      "when": {
+        "all": [
+          "repeated-geometry"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 4
+      },
+      "reason": "同一GeometryとMaterialの反復はInstancedMeshの適用条件に合います。",
+      "evidenceIds": [
+        "ev-three-instancedmesh"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-perf-repeat-lod",
+      "situationId": "threejs-many-objects",
+      "targetApproachId": "lod-frustum-culling",
+      "when": {
+        "all": [
+          "repeated-geometry"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 1
+      },
+      "reason": "同一形状の大量反復だけなら、まずInstancingの方が直接的なDraw Call削減策です。",
+      "evidenceIds": [
+        "ev-three-instancedmesh",
+        "ev-three-lod"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-perf-static-dynamic-warning",
+      "situationId": "threejs-many-objects",
+      "when": {
+        "all": [
+          "static-scene",
+          "dynamic-objects"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "静的Geometry統合と頻繁な個別更新は要件が競合します。動かす対象と固定対象を分離してください。",
+      "evidenceIds": [
+        "ev-three-instancedmesh",
+        "ev-three-buffergeometry"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-perf-static-merge",
+      "situationId": "threejs-many-objects",
+      "targetApproachId": "geometry-merge-batching",
+      "when": {
+        "all": [
+          "static-scene"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "個別更新が不要な静的シーンではGeometry統合でDraw Callを減らせます。",
+      "evidenceIds": [
+        "ev-three-buffergeometry",
+        "ev-three-many-objects"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-po-a11y-dom",
+      "situationId": "3d-portfolio",
+      "targetApproachId": "dom-progressive-portfolio",
+      "when": {
+        "all": [
+          "accessibility-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "読み上げ可能な本文と代替導線をHTMLで構成しやすいためDOM中心案を上げます。",
+      "evidenceIds": [
+        "ev-canvas-fallback",
+        "ev-wcag-nontext"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-po-advanced-three",
+      "situationId": "3d-portfolio",
+      "targetApproachId": "threejs-gsap-portfolio",
+      "when": {
+        "all": [
+          "advanced-visuals"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "独自の3D世界観と時間軸制御が必要なためThree.js + GSAP案を優先します。",
+      "evidenceIds": [
+        "ev-three-webgpu",
+        "ev-gsap-scrolltrigger"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-po-advanced-video",
+      "situationId": "3d-portfolio",
+      "targetApproachId": "video-sequence-portfolio",
+      "when": {
+        "all": [
+          "advanced-visuals"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 2
+      },
+      "reason": "ユーザー操作に反応する高度な3D表現では、固定映像だけでは要件を満たしにくくなります。",
+      "evidenceIds": [
+        "ev-three-webgpu"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-po-content-dom",
+      "situationId": "3d-portfolio",
+      "targetApproachId": "dom-progressive-portfolio",
+      "when": {
+        "all": [
+          "content-heavy"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "情報量が多い場合は本文構造と3D表現を分離した方が閲覧経路を維持しやすくなります。",
+      "evidenceIds": [
+        "ev-js-seo"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-po-glsl-three",
+      "situationId": "3d-portfolio",
+      "targetApproachId": "threejs-gsap-portfolio",
+      "when": {
+        "all": [
+          "existing-glsl-assets"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "既存シェーダー資産を活用できるためThree.js案を上げます。",
+      "evidenceIds": [
+        "ev-three-webgpu"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-po-maint-dom",
+      "situationId": "3d-portfolio",
+      "targetApproachId": "dom-progressive-portfolio",
+      "when": {
+        "all": [
+          "maintainability-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 1
+      },
+      "reason": "HTMLと3Dの責務を分離しやすいため、引き継ぎを重視する場合に優先します。",
+      "evidenceIds": [
+        "ev-js-seo"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-po-mobile-r3f",
+      "situationId": "3d-portfolio",
+      "targetApproachId": "r3f-drei-portfolio",
+      "when": {
+        "all": [
+          "mobile-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 1
+      },
+      "reason": "モバイル重視ではReact層と3D描画双方の実行負荷を検証する必要があります。",
+      "evidenceIds": [
+        "ev-r3f-performance",
+        "ev-rendering-performance"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-po-mobile-three",
+      "situationId": "3d-portfolio",
+      "targetApproachId": "threejs-gsap-portfolio",
+      "when": {
+        "all": [
+          "mobile-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 1
+      },
+      "reason": "モバイル重視では3Dとスクロール制御を同時に最適化する負担を考慮して順位を下げます。",
+      "evidenceIds": [
+        "ev-rendering-performance"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-po-no-react-r3f",
+      "situationId": "3d-portfolio",
+      "targetApproachId": "r3f-drei-portfolio",
+      "when": {
+        "all": [],
+        "any": [],
+        "none": [
+          "react-existing"
+        ]
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 2
+      },
+      "reason": "Reactを使わない場合、R3Fを追加する理由が弱くなります。",
+      "evidenceIds": [
+        "ev-r3f-intro"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-po-react-r3f",
+      "situationId": "3d-portfolio",
+      "targetApproachId": "r3f-drei-portfolio",
+      "when": {
+        "all": [
+          "react-existing"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "既存ReactサイトではUIと3Dの状態境界を統合できるためR3F案を上げます。",
+      "evidenceIds": [
+        "ev-r3f-intro"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-po-seo-dom",
+      "situationId": "3d-portfolio",
+      "targetApproachId": "dom-progressive-portfolio",
+      "when": {
+        "all": [
+          "seo-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "作品説明とリンクをHTMLで保持しやすいためDOM中心構成を優先します。",
+      "evidenceIds": [
+        "ev-js-seo"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-po-short-video",
+      "situationId": "3d-portfolio",
+      "targetApproachId": "video-sequence-portfolio",
+      "when": {
+        "all": [
+          "short-deadline"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "演出とカメラが固定済みなら、事前レンダリング素材によって実行時3D実装を減らせます。",
+      "evidenceIds": [
+        "ev-next-lazy",
+        "ev-rendering-performance"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-advanced-exclude-model",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "model-viewer-product",
+      "when": {
+        "all": [
+          "advanced-visuals"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "独自シェーダーや複雑なシーン制御が主要要件の場合、model-viewerの抽象化範囲を超えるため除外します。",
+      "evidenceIds": [
+        "ev-model-viewer-docs",
+        "ev-three-webgpu"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-advanced-three",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "threejs-gltf-product",
+      "when": {
+        "all": [
+          "advanced-visuals"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "マテリアル、ライト、カメラ、シェーダーを個別設計できるため独自表現に適します。",
+      "evidenceIds": [
+        "ev-three-gltfloader",
+        "ev-three-webgpu"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-ar-advanced-warning",
+      "situationId": "3d-product-viewer",
+      "when": {
+        "all": [
+          "ar-required",
+          "advanced-visuals"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "ARの最短実装と高度な独自表現は同じApproachで両立しにくいため、AR導線とWeb内表現を分離する案も検討してください。",
+      "evidenceIds": [
+        "ev-model-viewer-ar",
+        "ev-three-webgpu"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-ar-model",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "model-viewer-product",
+      "when": {
+        "all": [
+          "ar-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 4
+      },
+      "reason": "AR導線を既成機能で提供できるため、AR必須ではmodel-viewerを優先します。",
+      "evidenceIds": [
+        "ev-model-viewer-ar"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-glsl-three",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "threejs-gltf-product",
+      "when": {
+        "all": [
+          "existing-glsl-assets"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "既存GLSL資産を直接活用する自由度が高いためThree.js構成を優先します。",
+      "evidenceIds": [
+        "ev-three-webgpu"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-maint-model",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "model-viewer-product",
+      "when": {
+        "all": [
+          "maintainability-priority",
+          "simple-display"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 1
+      },
+      "reason": "単純表示で保守性を重視する場合、公開API範囲が小さい構成を優先します。",
+      "evidenceIds": [
+        "ev-model-viewer-docs"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-no-react-r3f",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "r3f-product",
+      "when": {
+        "all": [],
+        "any": [],
+        "none": [
+          "react-existing"
+        ]
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 2
+      },
+      "reason": "Reactを使わない案件ではR3Fを導入する必然性が弱く、依存と学習範囲が増えます。",
+      "evidenceIds": [
+        "ev-r3f-intro"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-react-r3f",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "r3f-product",
+      "when": {
+        "all": [
+          "react-existing"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "既存React状態と3D UIを同じコンポーネントモデルで連携しやすいためR3Fを上げます。",
+      "evidenceIds": [
+        "ev-r3f-intro"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-short-babylon",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "babylonjs-product",
+      "when": {
+        "all": [
+          "short-deadline"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 2
+      },
+      "reason": "短納期の単純ビューアでは、統合エンジン全体を選ぶ利点より導入範囲が大きくなります。",
+      "evidenceIds": [
+        "ev-babylon-loading"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-short-model",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "model-viewer-product",
+      "when": {
+        "all": [
+          "short-deadline"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "短納期ではシーン制御を一から構築せずに済む構成を優先します。",
+      "evidenceIds": [
+        "ev-model-viewer-docs"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-simple-model",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "model-viewer-product",
+      "when": {
+        "all": [
+          "simple-display"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "基本的なモデル表示と操作が中心なら、専用Web Componentで実装範囲を抑えられます。",
+      "evidenceIds": [
+        "ev-model-viewer-docs"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-small-babylon",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "babylonjs-product",
+      "when": {
+        "all": [
+          "small-team"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 1
+      },
+      "reason": "小規模な商品表示では、広いエンジン機能を習得・保守する範囲が相対的に大きくなります。",
+      "evidenceIds": [
+        "ev-babylon-loading"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-sc-a11y-dom",
+      "situationId": "scroll-linked-3d",
+      "targetApproachId": "dom-gsap-scroll",
+      "when": {
+        "all": [
+          "accessibility-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "Canvas内だけに情報を閉じず、HTMLの読み順と操作性を維持しやすいため優先します。",
+      "evidenceIds": [
+        "ev-canvas-fallback",
+        "ev-wcag-nontext"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-sc-advanced-three",
+      "situationId": "scroll-linked-3d",
+      "targetApproachId": "threejs-scrolltrigger",
+      "when": {
+        "all": [
+          "advanced-visuals"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "カメラ、モデル、シェーダーをスクロールへ同期する自由度が必要なため優先します。",
+      "evidenceIds": [
+        "ev-three-webgpu",
+        "ev-gsap-scrolltrigger"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-sc-content-dom",
+      "situationId": "scroll-linked-3d",
+      "targetApproachId": "dom-gsap-scroll",
+      "when": {
+        "all": [
+          "content-heavy"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "長い本文と多数の導線がある場合、DOMを中心に保つ方が情報構造を維持しやすくなります。",
+      "evidenceIds": [
+        "ev-js-seo"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-sc-glsl-three",
+      "situationId": "scroll-linked-3d",
+      "targetApproachId": "threejs-scrolltrigger",
+      "when": {
+        "all": [
+          "existing-glsl-assets"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "既存GLSL資産をスクロール進行へ直接組み込めるため優先します。",
+      "evidenceIds": [
+        "ev-three-webgpu"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-sc-low-three",
+      "situationId": "scroll-linked-3d",
+      "targetApproachId": "threejs-scrolltrigger",
+      "when": {
+        "all": [
+          "low-end-devices"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 2
+      },
+      "reason": "低性能端末では3D描画とスクロール処理を同時に維持する負荷が高くなります。",
+      "evidenceIds": [
+        "ev-rendering-performance"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-sc-maint-dom",
+      "situationId": "scroll-linked-3d",
+      "targetApproachId": "dom-gsap-scroll",
+      "when": {
+        "all": [
+          "maintainability-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 1
+      },
+      "reason": "演出対象とHTML本文の責務が明確で、引き継ぎ時の理解範囲を抑えやすいためです。",
+      "evidenceIds": [
+        "ev-gsap-scrolltrigger"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-sc-mobile-sequence",
+      "situationId": "scroll-linked-3d",
+      "targetApproachId": "canvas-image-sequence",
+      "when": {
+        "all": [
+          "mobile-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 1
+      },
+      "reason": "連番画像は転送量とデコード負荷が増えやすいため、モバイル重視では慎重に評価します。",
+      "evidenceIds": [
+        "ev-next-lazy",
+        "ev-rendering-performance"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-sc-no-react-r3f",
+      "situationId": "scroll-linked-3d",
+      "targetApproachId": "r3f-scrollcontrols",
+      "when": {
+        "all": [],
+        "any": [],
+        "none": [
+          "react-existing"
+        ]
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 2
+      },
+      "reason": "Reactを採用しないページではR3F導入の利点が小さくなります。",
+      "evidenceIds": [
+        "ev-r3f-intro"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-sc-react-r3f",
+      "situationId": "scroll-linked-3d",
+      "targetApproachId": "r3f-scrollcontrols",
+      "when": {
+        "all": [
+          "react-existing"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "React UIと3Dシーンでスクロール状態を共有しやすいためR3F案を上げます。",
+      "evidenceIds": [
+        "ev-r3f-intro"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-sc-seo-dom",
+      "situationId": "scroll-linked-3d",
+      "targetApproachId": "dom-gsap-scroll",
+      "when": {
+        "all": [
+          "seo-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "本文とリンクをDOMに保ちながらスクロール演出を追加できるため優先します。",
+      "evidenceIds": [
+        "ev-js-seo",
+        "ev-gsap-scrolltrigger"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-sc-short-advanced-warning",
+      "situationId": "scroll-linked-3d",
+      "when": {
+        "all": [
+          "short-deadline",
+          "advanced-visuals"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "短納期と高度な3Dスクロール表現を同時に満たすには、表現範囲か対応端末を限定する必要があります。",
+      "evidenceIds": [
+        "ev-gsap-scrolltrigger",
+        "ev-rendering-performance"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-sc-short-dom",
+      "situationId": "scroll-linked-3d",
+      "targetApproachId": "dom-gsap-scroll",
+      "when": {
+        "all": [
+          "short-deadline"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "2D DOM演出が中心なら、3Dシーン構築を省き実装範囲を抑えられます。",
+      "evidenceIds": [
+        "ev-gsap-scrolltrigger"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-search-advanced-static",
+      "situationId": "site-search",
+      "targetApproachId": "build-time-static-search",
+      "when": {
+        "all": [
+          "advanced-search-relevance"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 10
+      },
+      "reason": "Pagefindの索引と設定は公開物として生成します。サイトの再公開とは別に同義語や業務上の並び順を継続調整する条件では、この案の優先度を下げます。",
+      "evidenceIds": [
+        "ev-pagefind-static-bundle"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-db-requires-postgresql",
+      "situationId": "site-search",
+      "targetApproachId": "database-full-text-search",
+      "when": {
+        "all": [],
+        "any": [],
+        "none": [
+          "existing-postgresql-database"
+        ]
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "PostgreSQLの全文検索を使う案は、検索対象を保持するPostgreSQLがない条件では前提を満たしません。",
+      "evidenceIds": [
+        "ev-postgresql-full-text-controls"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-existing-db",
+      "situationId": "site-search",
+      "targetApproachId": "database-full-text-search",
+      "when": {
+        "all": [
+          "existing-postgresql-database"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "検索対象が既存PostgreSQLにある場合、組み込みの全文検索関数で文書変換、照合、順位付けを構成できます。",
+      "evidenceIds": [
+        "ev-postgresql-full-text-controls"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-external-hosted",
+      "situationId": "site-search",
+      "targetApproachId": "hosted-search-service",
+      "when": {
+        "all": [
+          "external-service-restricted"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "Algolia方式は外部の検索APIへ検索レコードを登録するため、外部SaaSへ送信できない条件と両立しません。",
+      "evidenceIds": [
+        "ev-algolia-record-management"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-frequent-hosted",
+      "situationId": "site-search",
+      "targetApproachId": "hosted-search-service",
+      "when": {
+        "all": [
+          "frequent-content-updates"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "Algoliaは検索レコードをAPIで追加・更新できるため、サイト全体の再公開と索引更新を分けられます。",
+      "evidenceIds": [
+        "ev-algolia-record-management"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-frequent-static",
+      "situationId": "site-search",
+      "targetApproachId": "build-time-static-search",
+      "when": {
+        "all": [
+          "frequent-content-updates"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 4
+      },
+      "reason": "Pagefindの索引はサイトのビルド後に生成するため、頻繁な更新では再生成と再公開が反映経路になります。",
+      "evidenceIds": [
+        "ev-pagefind-static-bundle"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-infrequent-static",
+      "situationId": "site-search",
+      "targetApproachId": "build-time-static-search",
+      "when": {
+        "all": [
+          "infrequent-content-updates"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "更新時に再公開できるなら、公開用HTMLから作る静的索引の更新方法と一致します。",
+      "evidenceIds": [
+        "ev-pagefind-static-bundle"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-maintain-static",
+      "situationId": "site-search",
+      "targetApproachId": "build-time-static-search",
+      "when": {
+        "all": [
+          "maintainability-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 1
+      },
+      "reason": "検索索引を公開物へ含める構成は、検索用サーバーを別に保守する必要がありません。",
+      "evidenceIds": [
+        "ev-pagefind-static-bundle"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-relevance-hosted",
+      "situationId": "site-search",
+      "targetApproachId": "hosted-search-service",
+      "when": {
+        "all": [
+          "advanced-search-relevance"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 4
+      },
+      "reason": "同義語、検索ルール、属性の一致、独自指標などの調整手段が公式機能として提供されています。",
+      "evidenceIds": [
+        "ev-algolia-relevance-controls"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-relevance-ja-warning",
+      "situationId": "site-search",
+      "when": {
+        "all": [
+          "advanced-search-relevance"
+        ],
+        "any": [],
+        "none": [
+          "external-service-restricted"
+        ]
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "Algoliaを選ぶ場合も標準タイプミス許容は日本語の表語文字検索に適用されないため、表記揺れと固有名詞を実データで確認してください。",
+      "evidenceIds": [
+        "ev-algolia-japanese-typo-limit"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-selfhost-capacity-warning",
+      "situationId": "site-search",
+      "when": {
+        "all": [
+          "advanced-search-relevance",
+          "external-service-restricted"
+        ],
+        "any": [
+          "short-deadline",
+          "small-team",
+          "maintainability-priority"
+        ],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "高度な検索調整を外部サービスなしで行うには検索サーバーの運用が必要です。担当体制を確保できない場合は、外部サービス制限または検索調整要件を見直してください。",
+      "evidenceIds": [
+        "ev-meilisearch-search-settings",
+        "ev-meilisearch-self-hosting"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-selfhost-external-frequent",
+      "situationId": "site-search",
+      "targetApproachId": "self-hosted-search-service",
+      "when": {
+        "all": [
+          "frequent-content-updates",
+          "external-service-restricted"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 6
+      },
+      "reason": "文書をAPIで更新できる検索サーバーを自分たちの環境で動かす案は、頻繁な更新と第三者検索サービスへの送信制限を両立できます。",
+      "evidenceIds": [
+        "ev-meilisearch-self-hosting",
+        "ev-meilisearch-document-updates"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-selfhost-external-relevance",
+      "situationId": "site-search",
+      "targetApproachId": "self-hosted-search-service",
+      "when": {
+        "all": [
+          "advanced-search-relevance",
+          "external-service-restricted"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 10
+      },
+      "reason": "自前運用できる検索サーバーにも、検索対象、絞り込み、順位規則、同義語などを調整する設定があります。",
+      "evidenceIds": [
+        "ev-meilisearch-self-hosting",
+        "ev-meilisearch-search-settings"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-selfhost-operations",
+      "situationId": "site-search",
+      "targetApproachId": "self-hosted-search-service",
+      "when": {
+        "all": [],
+        "any": [
+          "small-team",
+          "maintainability-priority"
+        ],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 2
+      },
+      "reason": "自前運用では常駐サービス、永続データ、認証、HTTPSなどを利用者側で構成するため、運用担当が限られる条件では負担を確認します。",
+      "evidenceIds": [
+        "ev-meilisearch-self-hosting"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-short-static",
+      "situationId": "site-search",
+      "targetApproachId": "build-time-static-search",
+      "when": {
+        "all": [
+          "short-deadline"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "Pagefindは生成済みHTMLから索引と用意済みの検索画面を作れるため、短期導入の候補になります。",
+      "evidenceIds": [
+        "ev-pagefind-static-bundle"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-search-small-static",
+      "situationId": "site-search",
+      "targetApproachId": "build-time-static-search",
+      "when": {
+        "all": [
+          "small-team"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 1
+      },
+      "reason": "検索用サーバーを持たない構成なら、少人数チームが担当する運用対象を増やさずに済みます。",
+      "evidenceIds": [
+        "ev-pagefind-static-bundle"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-seo-a11y-exclude-canvas",
+      "situationId": "seo-rich-3d",
+      "targetApproachId": "full-canvas-three",
+      "when": {
+        "all": [
+          "accessibility-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "非テキスト表現だけで情報を完結させず、同等のHTML代替を用意する必要があるため除外します。",
+      "evidenceIds": [
+        "ev-canvas-fallback",
+        "ev-wcag-nontext"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-seo-advanced-dom",
+      "situationId": "seo-rich-3d",
+      "targetApproachId": "dom-first-three-islands",
+      "when": {
+        "all": [
+          "advanced-visuals"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "HTML本文を維持したまま、必要な箇所へ独自3Dを追加できるためです。",
+      "evidenceIds": [
+        "ev-three-webgpu",
+        "ev-js-seo"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-seo-advanced-warning",
+      "situationId": "seo-rich-3d",
+      "when": {
+        "all": [
+          "seo-priority",
+          "advanced-visuals"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "SEOを重視しながら高度な3Dを入れる場合、HTMLで伝える情報とCanvasで表現する情報を明確に分けてください。",
+      "evidenceIds": [
+        "ev-js-seo",
+        "ev-three-webgpu"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-seo-content-dom",
+      "situationId": "seo-rich-3d",
+      "targetApproachId": "dom-first-three-islands",
+      "when": {
+        "all": [
+          "content-heavy"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "本文量が多いサイトではDOMを情報構造の中心にする方が適します。",
+      "evidenceIds": [
+        "ev-js-seo"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-seo-exclude-canvas",
+      "situationId": "seo-rich-3d",
+      "targetApproachId": "full-canvas-three",
+      "when": {
+        "all": [
+          "seo-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "検索対象の本文をCanvas内だけに置く構成は避け、意味のあるHTMLを別途持つ必要があるため除外します。",
+      "evidenceIds": [
+        "ev-js-seo"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-seo-low-static",
+      "situationId": "seo-rich-3d",
+      "targetApproachId": "static-fallback-progressive",
+      "when": {
+        "all": [
+          "low-end-devices"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "3Dを読み込まなくても内容を提示できるため低性能端末を含む案件で優先します。",
+      "evidenceIds": [
+        "ev-next-lazy",
+        "ev-rendering-performance"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-seo-maint-dom",
+      "situationId": "seo-rich-3d",
+      "targetApproachId": "dom-first-three-islands",
+      "when": {
+        "all": [
+          "maintainability-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 1
+      },
+      "reason": "HTML本文と3D機能を分けることで、担当範囲と障害影響を分離しやすくなります。",
+      "evidenceIds": [
+        "ev-next-lazy",
+        "ev-js-seo"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-seo-mobile-static",
+      "situationId": "seo-rich-3d",
+      "targetApproachId": "static-fallback-progressive",
+      "when": {
+        "all": [
+          "mobile-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "静的表示を先に成立させ、必要な端末だけ3Dを遅延読込できるため優先します。",
+      "evidenceIds": [
+        "ev-next-lazy",
+        "ev-rendering-performance"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-seo-performance-static",
+      "situationId": "seo-rich-3d",
+      "targetApproachId": "static-fallback-progressive",
+      "when": {
+        "all": [
+          "performance-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 1
+      },
+      "reason": "初期表示に3D依存を置かず、遅延読込によって初期JavaScript量を抑えられます。",
+      "evidenceIds": [
+        "ev-next-lazy"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-seo-short-static",
+      "situationId": "seo-rich-3d",
+      "targetApproachId": "static-fallback-progressive",
+      "when": {
+        "all": [
+          "short-deadline"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "まず静的ページを完成させ、3Dを段階追加できるため納期リスクを分離できます。",
+      "evidenceIds": [
+        "ev-next-lazy"
+      ],
+      "lastReviewed": "2026-08-23"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-algolia-japanese-typo-limit",
+      "title": "Algoliaの日本語検索における制約",
+      "claim": "Algoliaの標準タイプミス許容は日本語を含む表語文字の検索には適用されず、言語別辞書や日本語向け設定が別に提供される。",
+      "sourceType": "official-documentation",
+      "sourceName": "Algolia",
+      "url": "https://www.algolia.com/doc/guides/managing-results/optimize-search-results/handling-natural-languages-nlp",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": [],
+      "notes": "日本語での表記揺れ対応を英語のタイプミス許容と同一視しないための制約情報。"
+    },
+    {
+      "id": "ev-algolia-record-management",
+      "title": "Algoliaの検索レコード更新API",
+      "claim": "Algoliaの検索APIは、識別子を指定した検索レコードの追加、置換、一部属性の更新を提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Algolia",
+      "url": "https://www.algolia.com/doc/rest-api/search/add-or-update-object",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": [],
+      "notes": "成功応答は処理の受付を示し、索引への反映完了はタスク状態で確認する必要がある。"
+    },
+    {
+      "id": "ev-algolia-relevance-controls",
+      "title": "Algoliaの検索結果調整",
+      "claim": "Algoliaは部分一致、同義語、検索ルール、属性の一致、独自指標を含む検索結果の一致判定と順位調整機能を提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Algolia",
+      "url": "https://www.algolia.com/doc/guides/managing-results/relevance-overview/in-depth/defining-relevance",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": [],
+      "notes": "各機能が個別案件に適した検索結果を保証するというClaimではなく、調整手段の提供範囲を確認した。"
+    },
+    {
+      "id": "ev-api-gateway-route-throttling",
+      "title": "API Gatewayの経路別送信制限",
+      "claim": "Amazon API GatewayのHTTP APIは、ステージまたは個別経路に送信頻度と一時的な集中に対する制限値を設定できる。",
+      "sourceType": "official-documentation",
+      "sourceName": "Amazon Web Services",
+      "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-throttling.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": [],
+      "notes": "公式資料は制限値を保証された上限ではなく目標値として扱うよう明記している。"
+    },
+    {
+      "id": "ev-babylon-loading",
+      "title": "Babylon.js asset loading",
+      "claim": "Babylon.jsはglTFを含む3D資産をシーンへ読み込むための公式ローダーと手順を提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Babylon.js",
+      "url": "https://doc.babylonjs.com/features/featuresDeepDive/importers/loadingFileTypes",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-canvas-fallback",
+      "title": "Canvas fallback content",
+      "claim": "Canvas要素は未対応環境や代替提示のため、要素内にフォールバックコンテンツを置ける。",
+      "sourceType": "official-documentation",
+      "sourceName": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage#fallback_content",
+      "primary": false,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-cms-contentful-api-delivery",
+      "title": "Contentful Content Delivery API",
+      "claim": "ContentfulのContent Delivery APIは公開コンテンツをJSONとメディアファイルとしてWebサイト、アプリ、その他の表示先へ配信する読み取り専用APIである。",
+      "sourceType": "official-documentation",
+      "sourceName": "Contentful",
+      "url": "https://www.contentful.com/developers/docs/references/content-delivery-api/overview/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-cms-contentful-data-model",
+      "title": "Contentful data model",
+      "claim": "Contentfulではコンテンツタイプに項目、型、検証などを定義し、その構造に基づくエントリーとしてコンテンツを保存する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Contentful",
+      "url": "https://www.contentful.com/developers/docs/concepts/data-model/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-cms-decap-editorial-workflow",
+      "title": "Decap CMS editorial workflow",
+      "claim": "Decap CMSのEditorial Workflowは下書きをブランチとPull Requestとして保存し、承認と公開をマージ操作へ対応させる。",
+      "sourceType": "official-documentation",
+      "sourceName": "Decap CMS",
+      "url": "https://decapcms.org/docs/editorial-workflows/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-cms-decap-git-storage",
+      "title": "Decap CMS Git storage",
+      "claim": "Decap CMSはコンテンツをコードと同じGitリポジトリへ保存し、編集操作をGit上の変更として扱う。",
+      "sourceType": "official-documentation",
+      "sourceName": "Decap CMS",
+      "url": "https://decapcms.org/docs/intro/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-cms-github-branch-protection",
+      "title": "GitHub protected branches",
+      "claim": "GitHubのブランチ保護では、マージ前のPull Request承認と状態チェックを必須にし、管理者を含む迂回を許可しない設定を選べる。",
+      "sourceType": "official-documentation",
+      "sourceName": "GitHub Docs",
+      "url": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": [],
+      "notes": "必須レビュー、必須チェック、迂回禁止はリポジトリ側で個別に設定する。"
+    },
+    {
+      "id": "ev-cms-github-pr-review",
+      "title": "GitHub Pull Request review",
+      "claim": "GitHubのPull Requestではコミット、ファイル、差分を確認し、コメント、承認、変更要求をマージ前に記録できる。",
+      "sourceType": "official-documentation",
+      "sourceName": "GitHub Docs",
+      "url": "https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/reviewing-proposed-changes-in-a-pull-request",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-cms-wordpress-site-editor",
+      "title": "WordPress Site Editor pages",
+      "claim": "Block themeを有効にしたWordPressのSite Editorでは、ページ内容をテンプレート内で確認しながらブロックを編集し、公開状態を変更できる。",
+      "sourceType": "official-documentation",
+      "sourceName": "WordPress.org",
+      "url": "https://wordpress.org/documentation/article/site-editor/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-cms-wordpress-template-rendering",
+      "title": "WordPress template rendering",
+      "claim": "WordPressのテーマテンプレートは文書構造を定義し、保存された投稿などの動的な内容をフロントエンドのHTMLへ出力する。",
+      "sourceType": "official-documentation",
+      "sourceName": "WordPress Theme Handbook",
+      "url": "https://developer.wordpress.org/themes/core-concepts/templates/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-formspree-hosting-security",
+      "title": "Formspreeの保存場所と暗号化",
+      "claim": "Formspreeは米国内のAWSでサービスを運用し、保存時暗号化とTLS、権限管理、データ処理契約と標準契約条項、削除要求への対応方針を公開している。",
+      "sourceType": "official-documentation",
+      "sourceName": "Formspree",
+      "url": "https://formspree.io/security/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "公式Securityページの自己申告を確認した。個別契約の監査報告書やデータ処理契約は未確認。"
+    },
+    {
+      "id": "ev-formspree-managed-handler",
+      "title": "Formspreeのフォーム受付機能",
+      "claim": "FormspreeはHTMLフォームの送信先として利用でき、独自のサーバー処理を書かずに迷惑送信対策と暗号化された受付経路を利用できる。",
+      "sourceType": "official-documentation",
+      "sourceName": "Formspree",
+      "url": "https://formspree.io/library/html/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": [],
+      "notes": "利用可能な機能と上限は契約プランごとに別途確認する必要がある。"
+    },
+    {
+      "id": "ev-formspree-notification-rules",
+      "title": "Formspreeの通知ルール",
+      "claim": "Formspreeはフォーム送信時のメール通知を提供し、契約プランに応じて入力値を条件に通知先を変えるルールを設定できる。",
+      "sourceType": "official-documentation",
+      "sourceName": "Formspree",
+      "url": "https://help.formspree.io/articles/advanced-features/form-rules/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "条件分岐を含むForm RulesはBusinessプラン向け。採用時に現在のプラン範囲を確認する。"
+    },
+    {
+      "id": "ev-gltf-spec",
+      "title": "glTF 2.0 Specification",
+      "claim": "glTF 2.0は3Dシーンとモデルを効率よく配信するための仕様とデータ構造を定義する。",
+      "sourceType": "specification",
+      "sourceName": "Khronos Group",
+      "url": "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-gsap-scrolltrigger",
+      "title": "GSAP ScrollTrigger documentation",
+      "claim": "ScrollTriggerはスクロール位置とアニメーション進行を結び付けるための設定とAPIを提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "GSAP",
+      "url": "https://gsap.com/docs/v3/Plugins/ScrollTrigger/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-host-cloud-run-container-image",
+      "title": "Cloud Run container image portability",
+      "claim": "Cloud Runのコンテナイメージには成果物、資産、システムパッケージ、ランタイムを含められ、Cloud Runのコンテナ実行仕様を満たす言語やバイナリを実行できる。",
+      "sourceType": "official-documentation",
+      "sourceName": "Google Cloud Run",
+      "url": "https://docs.cloud.google.com/run/docs/container-contract",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-host-cloud-run-workload-types",
+      "title": "Cloud Run services, jobs, and worker pools",
+      "claim": "Cloud RunはHTTPを扱うサービス、完了まで実行するジョブ、常時稼働する非HTTPのワーカープールを別の実行形態として提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Google Cloud Run",
+      "url": "https://docs.cloud.google.com/run/docs/overview/what-is-cloud-run",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-host-edge-files",
+      "title": "Cloudflare Pages file delivery",
+      "claim": "Cloudflare Pagesは公開された静的ファイルを同社の分散ネットワークへ配置して配信する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Cloudflare Pages",
+      "url": "https://developers.cloudflare.com/pages/platform/limits/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": [],
+      "notes": "制限値はプランにより変わるため、Claimには含めていない。"
+    },
+    {
+      "id": "ev-host-lambda-invocation-boundary",
+      "title": "AWS Lambda invocation boundaries",
+      "claim": "AWS Lambda Functionsの呼び出しは共有状態を前提とせず、実行時間に上限があるため、常時稼働する一つのプロセスとは異なる実行モデルである。",
+      "sourceType": "official-documentation",
+      "sourceName": "AWS Lambda",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": [],
+      "notes": "上限の具体値は変更され得るため、Claimには含めていない。"
+    },
+    {
+      "id": "ev-host-lambda-managed-scaling",
+      "title": "AWS Lambda request and event execution",
+      "claim": "AWS Lambda FunctionsはAPI呼び出しやイベントに応じて独立した関数を実行し、基盤保守と需要に応じた実行環境の増減をAWSが管理する。",
+      "sourceType": "official-documentation",
+      "sourceName": "AWS Lambda",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-host-static-export",
+      "title": "Next.js Static Exports",
+      "claim": "Next.jsの静的出力はルートごとのHTML・CSS・JavaScriptを生成して静的Webサーバーへ配置できるが、受信リクエストの動的な値を必要とする機能は利用できない。",
+      "sourceType": "official-documentation",
+      "sourceName": "Next.js",
+      "url": "https://nextjs.org/docs/app/guides/static-exports",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-js-seo",
+      "title": "JavaScript SEO basics",
+      "claim": "Google Searchの公式ガイドは、JavaScriptサイトでも意味のある本文・リンク・レンダリング可能性を設計する必要があると説明する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Google Search Central",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-meilisearch-document-updates",
+      "title": "Meilisearchの文書更新API",
+      "claim": "Meilisearchは文書を追加または一部更新するAPIを提供し、索引処理を非同期タスクとして受け付ける。",
+      "sourceType": "official-documentation",
+      "sourceName": "Meilisearch",
+      "url": "https://www.meilisearch.com/docs/reference/api/documents/add-or-update-documents",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "API応答は処理完了ではなく受付を示すため、タスクの成功または失敗を別途確認する。"
+    },
+    {
+      "id": "ev-meilisearch-search-settings",
+      "title": "Meilisearchの検索設定",
+      "claim": "Meilisearchは検索対象項目、絞り込み対象、並べ替え対象、順位規則、不要語、辞書、同義語などを索引設定として提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Meilisearch",
+      "url": "https://www.meilisearch.com/docs/reference/api/settings/list-all-settings",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "設定機能の存在を確認したもので、個別サイトで望ましい検索結果になることを保証しない。"
+    },
+    {
+      "id": "ev-meilisearch-self-hosting",
+      "title": "Meilisearchの自前運用",
+      "claim": "Meilisearchは利用者が管理するLinuxサーバーで実行でき、本番運用では常駐サービス、永続データ、認証、HTTPSなどを利用者側で構成する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Meilisearch",
+      "url": "https://www.meilisearch.com/docs/resources/self_hosting/deployment/running_production",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "公式手順は一例であり、利用する基盤に合わせて監視、バックアップ、復旧も設計する。"
+    },
+    {
+      "id": "ev-model-viewer-ar",
+      "title": "model-viewer AR examples",
+      "claim": "model-viewerは対応環境でWebXRや各プラットフォームのAR表示へつなぐための機能を提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "model-viewer",
+      "url": "https://modelviewer.dev/examples/augmentedreality/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-model-viewer-docs",
+      "title": "model-viewer documentation",
+      "claim": "model-viewerはWeb Componentとして3Dモデル表示とユーザー操作を組み込むための公開APIを提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "model-viewer",
+      "url": "https://modelviewer.dev/docs/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-next-dynamic",
+      "title": "Next.js dynamic import",
+      "claim": "Next.jsの遅延読み込みガイドはnext/dynamicとReact.lazyを用いた分割読み込みを説明する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Next.js",
+      "url": "https://nextjs.org/docs/app/guides/lazy-loading",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-next-lazy",
+      "title": "Next.js lazy loading guide",
+      "claim": "Next.jsはClient Componentや外部ライブラリの遅延読込によって初期JavaScript量を減らす手段を提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Next.js",
+      "url": "https://nextjs.org/docs/app/guides/lazy-loading",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-owasp-sensitive-logging",
+      "title": "OWASPの機密情報を含むログ指針",
+      "claim": "OWASPは機密性の高い個人情報や認証情報などをログへ直接記録せず、除去、マスキング、暗号化などを検討するよう示している。",
+      "sourceType": "official-documentation",
+      "sourceName": "OWASP Cheat Sheet Series",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": [],
+      "notes": "問い合わせ本文を例外ログやデバッグログへ無条件に含めないための根拠として使用する。"
+    },
+    {
+      "id": "ev-owasp-server-side-validation",
+      "title": "OWASPのサーバー側入力検証指針",
+      "claim": "OWASPは外部入力を処理前にサーバー側で検証し、形式上の検証と業務上の意味を含む検証の両方を行うよう推奨している。",
+      "sourceType": "official-documentation",
+      "sourceName": "OWASP Cheat Sheet Series",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": [],
+      "notes": "ブラウザ側の入力検証は操作性のために併用できるが、安全性の根拠として単独では使えない。"
+    },
+    {
+      "id": "ev-pagefind-multilingual-ja",
+      "title": "Pagefindの日本語索引",
+      "claim": "PagefindはHTMLのlang属性ごとに索引を分け、日本語では拡張版を使って空白で区切られていない語を分割する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Pagefind",
+      "url": "https://pagefind.app/docs/multilingual/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": [],
+      "notes": "公式資料では日本語の語幹処理は未対応で、拡張版の単語分割を利用すると説明されている。"
+    },
+    {
+      "id": "ev-pagefind-static-bundle",
+      "title": "Pagefindの索引生成と配信構成",
+      "claim": "Pagefindは静的サイト生成後のHTMLから検索用ファイルを作り、検索用のサーバー処理を持たずに生成物へ組み込める標準検索画面とJavaScript APIを提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Pagefind",
+      "url": "https://pagefind.app/docs/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": [],
+      "notes": "公式手順ではサイトのビルド後にPagefindを実行し、公開前に検索索引を生成する。"
+    },
+    {
+      "id": "ev-postgresql-full-text-controls",
+      "title": "PostgreSQL 18の全文検索機能",
+      "claim": "PostgreSQLは文書と検索語をtsvectorとtsqueryへ変換し、照合、順位付け、検索結果の見出し生成に使う関数を提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "PostgreSQL Global Development Group",
+      "url": "https://www.postgresql.org/docs/current/textsearch-controls.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": [],
+      "notes": "順位の意味は用途ごとに異なり、公式資料も組み込み順位関数を調整の出発点として説明している。"
+    },
+    {
+      "id": "ev-postgresql-text-dictionaries",
+      "title": "PostgreSQLの全文検索辞書",
+      "claim": "PostgreSQLの全文検索設定は解析器と辞書を組み合わせ、不要語の除外や語の正規化に利用できる。",
+      "sourceType": "official-documentation",
+      "sourceName": "PostgreSQL Global Development Group",
+      "url": "https://www.postgresql.org/docs/current/textsearch-dictionaries.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": [],
+      "notes": "日本語の実用的な単語分割に必要な拡張機能までは、このEvidenceで確認していない。"
+    },
+    {
+      "id": "ev-r3f-intro",
+      "title": "React Three Fiber introduction",
+      "claim": "React Three FiberはThree.jsのReact rendererであり、Three.jsシーンをReactの宣言的構成で記述する。",
+      "sourceType": "official-documentation",
+      "sourceName": "React Three Fiber",
+      "url": "https://r3f.docs.pmnd.rs/getting-started/introduction",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-r3f-performance",
+      "title": "React Three Fiber scaling performance",
+      "claim": "React Three Fiber公式ガイドはオブジェクト再利用、Instancing、状態更新などの性能上の注意を示している。",
+      "sourceType": "official-documentation",
+      "sourceName": "React Three Fiber",
+      "url": "https://r3f.docs.pmnd.rs/advanced/scaling-performance",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-react-lazy",
+      "title": "React lazy",
+      "claim": "React lazyはComponentコードの読み込みを初回レンダーまで遅延させるためのAPIを提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "React",
+      "url": "https://react.dev/reference/react/lazy",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-rendering-performance",
+      "title": "Rendering performance",
+      "claim": "web.devのレンダリング性能ガイドは、各フレームで行う作業を抑え、滑らかな描画を保つ考え方を説明する。",
+      "sourceType": "official-documentation",
+      "sourceName": "web.dev",
+      "url": "https://web.dev/articles/rendering-performance",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-three-buffergeometry",
+      "title": "Three.js BufferGeometry",
+      "claim": "BufferGeometryは頂点属性とIndexを保持し、GeometryデータをGPUへ渡す中心的な構造である。",
+      "sourceType": "official-documentation",
+      "sourceName": "Three.js",
+      "url": "https://threejs.org/docs/pages/BufferGeometry.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-three-frustum",
+      "title": "Three.js Frustum",
+      "claim": "Three.jsのFrustumは点・球・Box・Objectが視錐台と交差するかを判定するAPIを提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Three.js",
+      "url": "https://threejs.org/docs/pages/Frustum.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-three-gltfloader",
+      "title": "Three.js GLTFLoader",
+      "claim": "Three.jsはglTF 2.0資産を読み込むGLTFLoaderを公式アドオンとして提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Three.js",
+      "url": "https://threejs.org/docs/pages/GLTFLoader.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-three-instancedmesh",
+      "title": "Three.js InstancedMesh",
+      "claim": "InstancedMeshは同一GeometryとMaterialを持つ多数オブジェクトのDraw Call削減を目的とする。",
+      "sourceType": "official-documentation",
+      "sourceName": "Three.js",
+      "url": "https://threejs.org/docs/pages/InstancedMesh.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-three-lod",
+      "title": "Three.js LOD",
+      "claim": "Three.jsのLODはカメラ距離に応じて表示するオブジェクトの詳細度を切り替える。",
+      "sourceType": "official-documentation",
+      "sourceName": "Three.js",
+      "url": "https://threejs.org/docs/pages/LOD.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-three-many-objects",
+      "title": "Optimize lots of objects",
+      "claim": "Three.js公式マニュアルは多数オブジェクトのDraw Call削減策としてGeometry統合などを例示する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Three.js",
+      "url": "https://threejs.org/manual/en/optimize-lots-of-objects.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-three-webgpu",
+      "title": "Three.js WebGPURenderer manual",
+      "claim": "Three.jsはWebGPURendererを提供し、WebGPU利用と対応状況に応じたバックエンド選択について説明している。",
+      "sourceType": "official-documentation",
+      "sourceName": "Three.js",
+      "url": "https://threejs.org/manual/en/webgpurenderer.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-wcag-nontext",
+      "title": "WCAG non-text content",
+      "claim": "WCAGは非テキストコンテンツに、同等の目的を果たすテキスト代替を提供することを求める。",
+      "sourceType": "specification",
+      "sourceName": "W3C WAI",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    }
+  ],
+  "resources": [
+    {
+      "id": "book-book-of-shaders",
+      "type": "book",
+      "title": "The Book of Shaders",
+      "url": "https://thebookofshaders.com/",
+      "description": "GLSLとシェーダー表現を小さな例から学べるオンラインブック。",
+      "technologyIds": [
+        "glsl"
+      ],
+      "concepts": [
+        "shader"
+      ],
+      "currentUse": "シェーダーの考え方と表現の基礎。",
+      "limitations": "Three.js固有APIの最新手順は別途公式資料で確認する。"
+    },
+    {
+      "id": "book-designing-interfaces",
+      "type": "book",
+      "title": "Designing Interfaces",
+      "amazonUrl": "https://www.amazon.co.jp/s?k=Designing+Interfaces",
+      "description": "UIパターンと情報の見せ方を体系的に扱う本。",
+      "technologyIds": [
+        "html",
+        "css"
+      ],
+      "concepts": [
+        "interface-design",
+        "information-architecture"
+      ],
+      "currentUse": "3D表現の外側にあるUIと導線を設計する。",
+      "limitations": "3Dライブラリの実装方法を扱う本ではない。"
+    },
+    {
+      "id": "book-react-design",
+      "type": "book",
+      "title": "React設計・コンポーネント設計の書籍を選ぶ",
+      "amazonUrl": "https://www.amazon.co.jp/s?k=React+設計+コンポーネント",
+      "description": "React固有APIだけでなく、状態境界とコンポーネント責務を体系的に学ぶための選書枠。",
+      "technologyIds": [
+        "react"
+      ],
+      "concepts": [
+        "component-design",
+        "state-management"
+      ],
+      "currentUse": "R3FをReactアプリへ統合する設計原則を理解する。",
+      "limitations": "購入前に対象Reactバージョンと目次を確認する。"
+    },
+    {
+      "id": "book-real-time-rendering",
+      "type": "book",
+      "title": "Real-Time Rendering, Fourth Edition",
+      "amazonUrl": "https://www.amazon.co.jp/s?k=Real-Time+Rendering+Fourth+Edition",
+      "description": "リアルタイムレンダリングの原理とアルゴリズムを体系的に学ぶ本。",
+      "technologyIds": [
+        "webgl",
+        "webgpu"
+      ],
+      "concepts": [
+        "rendering",
+        "lighting",
+        "gpu"
+      ],
+      "currentUse": "APIではなく普遍的なレンダリング原理を理解する。",
+      "limitations": "個別ライブラリの最新API解説ではない。"
+    },
+    {
+      "id": "res-algolia-natural-languages",
+      "type": "official",
+      "title": "Algolia 言語別検索ガイド",
+      "url": "https://www.algolia.com/doc/guides/managing-results/optimize-search-results/handling-natural-languages-nlp",
+      "description": "言語別辞書、日本語を含む文字体系の扱い、タイプミス許容の範囲を確認する公式資料です。",
+      "technologyIds": [
+        "algolia"
+      ],
+      "concepts": [
+        "multilingual-search",
+        "japanese-search"
+      ],
+      "currentUse": "日本語検索で前提にできる機能と制約の確認。",
+      "limitations": "標準タイプミス許容は日本語の表語文字検索に適用されないため、表記揺れ対策を別に設計します。"
+    },
+    {
+      "id": "res-algolia-relevance",
+      "type": "official",
+      "title": "Algolia 検索結果調整ガイド",
+      "url": "https://www.algolia.com/doc/guides/managing-results/relevance-overview/in-depth/defining-relevance",
+      "description": "一致判定、順位付け、同義語、検索ルールなどの調整範囲を確認する公式資料です。",
+      "technologyIds": [
+        "algolia"
+      ],
+      "concepts": [
+        "search-relevance",
+        "custom-ranking"
+      ],
+      "currentUse": "検索品質を調整する現在の機能範囲の確認。",
+      "limitations": "機能を有効にするだけで適切な順位になるとは限らず、実際の検索語と正解例で評価が必要です。"
+    },
+    {
+      "id": "res-algolia-search-api",
+      "type": "official",
+      "title": "Algolia Search API",
+      "url": "https://www.algolia.com/doc/rest-api/search",
+      "description": "検索索引、レコード、検索条件、認証方法を確認するAlgoliaの公式API資料です。",
+      "technologyIds": [
+        "algolia"
+      ],
+      "concepts": [
+        "search-api",
+        "index-synchronization"
+      ],
+      "currentUse": "現在の検索APIと索引同期方法の確認。",
+      "limitations": "契約プラン、利用上限、データ処理条件は案件ごとに確認が必要です。"
+    },
+    {
+      "id": "res-aws-api-gateway-throttling",
+      "type": "official",
+      "title": "Amazon API Gateway 送信制限ガイド",
+      "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-throttling.html",
+      "description": "HTTP APIのステージと経路へ送信頻度の制限を設定する方法を確認する公式資料です。",
+      "technologyIds": [
+        "api-gateway"
+      ],
+      "concepts": [
+        "request-throttling",
+        "abuse-mitigation"
+      ],
+      "currentUse": "受付経路の送信制限を設計する際の確認。",
+      "limitations": "送信制限は迷惑送信対策の一部であり、入力検証や不正判定を代替しません。"
+    },
+    {
+      "id": "res-babylon-loading",
+      "type": "official",
+      "title": "Babylon.js Asset Loading",
+      "url": "https://doc.babylonjs.com/features/featuresDeepDive/importers/loadingFileTypes",
+      "description": "Babylon.jsへ3Dモデルを読み込むための公式ガイド。",
+      "technologyIds": [
+        "babylonjs",
+        "gltf"
+      ],
+      "concepts": [
+        "asset-loading"
+      ],
+      "currentUse": "現在のLoaderと対応形式の確認。"
+    },
+    {
+      "id": "res-cms-contentful-api-basics",
+      "type": "official",
+      "title": "Contentful Content Delivery API Overview",
+      "url": "https://www.contentful.com/developers/docs/references/content-delivery-api/overview/",
+      "description": "公開コンテンツをWebサイトやアプリへ配信する読み取り専用APIの公式資料。",
+      "technologyIds": [
+        "contentful",
+        "headless-cms"
+      ],
+      "concepts": [
+        "content-api",
+        "multi-channel"
+      ],
+      "currentUse": "API型CMSの配信方式と認証を確認する。"
+    },
+    {
+      "id": "res-cms-contentful-data-model",
+      "type": "official",
+      "title": "Contentful Data Model",
+      "url": "https://www.contentful.com/developers/docs/concepts/data-model/",
+      "description": "コンテンツタイプ、項目、型、検証、エントリーの構造を説明する公式資料。",
+      "technologyIds": [
+        "contentful",
+        "headless-cms"
+      ],
+      "concepts": [
+        "content-model"
+      ],
+      "currentUse": "構造化コンテンツの設計方法を確認する。"
+    },
+    {
+      "id": "res-cms-decap-editorial-workflow",
+      "type": "official",
+      "title": "Decap CMS Editorial Workflows",
+      "url": "https://decapcms.org/docs/editorial-workflows/",
+      "description": "下書き、レビュー、承認、公開をGitのブランチとPull Requestへ対応させる公式資料。",
+      "technologyIds": [
+        "decap-cms",
+        "git"
+      ],
+      "concepts": [
+        "editorial-workflow",
+        "pull-request"
+      ],
+      "currentUse": "Gitベースの承認フローを確認する。"
+    },
+    {
+      "id": "res-cms-decap-overview",
+      "type": "official",
+      "title": "Decap CMS Overview",
+      "url": "https://decapcms.org/docs/intro/",
+      "description": "Gitリポジトリへコンテンツを保存するCMS構成と編集UIの役割を説明する公式資料。",
+      "technologyIds": [
+        "decap-cms",
+        "git"
+      ],
+      "concepts": [
+        "git-based-content"
+      ],
+      "currentUse": "Git管理CMSの保存方式を確認する。"
+    },
+    {
+      "id": "res-cms-github-branch-protection",
+      "type": "official",
+      "title": "GitHub Protected Branches",
+      "url": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches",
+      "description": "Pull Request承認、状態チェック、迂回禁止などをマージ条件にする公式資料。",
+      "technologyIds": [
+        "github",
+        "git"
+      ],
+      "concepts": [
+        "branch-protection",
+        "required-review"
+      ],
+      "currentUse": "コンテンツレビューを必須にする設定を確認する。"
+    },
+    {
+      "id": "res-cms-github-pr-review",
+      "type": "official",
+      "title": "GitHub Pull Request Review",
+      "url": "https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/reviewing-proposed-changes-in-a-pull-request",
+      "description": "差分へのコメント、承認、変更要求をマージ前に行う方法を示す公式資料。",
+      "technologyIds": [
+        "github",
+        "git"
+      ],
+      "concepts": [
+        "pull-request",
+        "review"
+      ],
+      "currentUse": "コンテンツ差分のレビュー手順を確認する。"
+    },
+    {
+      "id": "res-cms-wordpress-site-editor",
+      "type": "official",
+      "title": "WordPress Site Editor Pages",
+      "url": "https://wordpress.org/documentation/article/site-editor/",
+      "description": "Block themeでページ、テンプレート、スタイルを編集するSite Editorの公式資料。",
+      "technologyIds": [
+        "wordpress"
+      ],
+      "concepts": [
+        "visual-editing",
+        "publishing"
+      ],
+      "currentUse": "Block themeを使う表示統合型CMSの編集と公開操作を確認する。",
+      "limitations": "Site Editorの利用にはBlock themeが必要です。"
+    },
+    {
+      "id": "res-cms-wordpress-templates",
+      "type": "official",
+      "title": "WordPress Theme Templates",
+      "url": "https://developer.wordpress.org/themes/core-concepts/templates/",
+      "description": "テーマテンプレートが文書構造と動的コンテンツをHTMLへ出力する仕組みを説明する公式資料。",
+      "technologyIds": [
+        "wordpress"
+      ],
+      "concepts": [
+        "template-rendering"
+      ],
+      "currentUse": "CMSと公開画面が統合される仕組みを確認する。"
+    },
+    {
+      "id": "res-formspree-html-forms",
+      "type": "official",
+      "title": "Formspree HTMLフォームガイド",
+      "url": "https://formspree.io/library/html/",
+      "description": "HTMLフォームから受付サービスへ送信する構成と提供機能を確認する公式資料です。",
+      "technologyIds": [
+        "formspree",
+        "html-forms"
+      ],
+      "concepts": [
+        "managed-form-backend",
+        "spam-filtering"
+      ],
+      "currentUse": "現在の送信方法と受付機能の確認。",
+      "limitations": "利用できる連携、保存期間、上限は契約プランごとに確認が必要です。"
+    },
+    {
+      "id": "res-formspree-notification-rules",
+      "type": "official",
+      "title": "Formspree 通知ルールガイド",
+      "url": "https://help.formspree.io/articles/advanced-features/form-rules/",
+      "description": "フォーム送信時のメール通知と、入力内容に応じた通知先ルールを確認する公式資料です。",
+      "technologyIds": [
+        "formspree"
+      ],
+      "concepts": [
+        "submission-notification",
+        "routing-rules"
+      ],
+      "currentUse": "通知方法と利用プランごとの設定範囲の確認。",
+      "limitations": "条件付きの通知ルールはBusinessプラン向けで、通知到達の監視や失敗時対応は別途必要です。"
+    },
+    {
+      "id": "res-formspree-security",
+      "type": "official",
+      "title": "Formspree Security",
+      "url": "https://formspree.io/security/",
+      "description": "運用地域、通信と保存時の暗号化、組織的な管理策を確認する公式資料です。",
+      "technologyIds": [
+        "formspree"
+      ],
+      "concepts": [
+        "data-processing",
+        "encryption"
+      ],
+      "currentUse": "外部サービス審査とデータ経路の確認。",
+      "limitations": "個別契約の監査報告書、保存期間、削除手順、法務要件は別途確認します。"
+    },
+    {
+      "id": "res-gltf-spec",
+      "type": "official",
+      "title": "glTF 2.0 Specification",
+      "url": "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html",
+      "description": "glTFのデータ構造と意味を定義する仕様。",
+      "technologyIds": [
+        "gltf"
+      ],
+      "concepts": [
+        "asset-format"
+      ],
+      "currentUse": "データ形式の正確な理解。"
+    },
+    {
+      "id": "res-gsap-scrolltrigger",
+      "type": "official",
+      "title": "GSAP ScrollTrigger",
+      "url": "https://gsap.com/docs/v3/Plugins/ScrollTrigger/",
+      "description": "スクロール連動制御の公式API資料。",
+      "technologyIds": [
+        "gsap"
+      ],
+      "concepts": [
+        "scroll",
+        "timeline"
+      ],
+      "currentUse": "現在の設定とイベントの確認。"
+    },
+    {
+      "id": "res-host-aws-lambda-overview",
+      "type": "official",
+      "title": "What is AWS Lambda?",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
+      "description": "関数の実行モデル、基盤管理、スケーリング、状態と実行境界を確認する公式資料。",
+      "technologyIds": [
+        "aws-lambda"
+      ],
+      "concepts": [
+        "serverless-functions",
+        "event-driven"
+      ],
+      "currentUse": "関数型ランタイムの適用範囲を確認する。"
+    },
+    {
+      "id": "res-host-cloud-run-container-contract",
+      "type": "official",
+      "title": "Cloud Run Container Runtime Contract",
+      "url": "https://docs.cloud.google.com/run/docs/container-contract",
+      "description": "コンテナの対応形式、ポート、ファイルシステム、ライフサイクルなどの実行条件を示す公式資料。",
+      "technologyIds": [
+        "cloud-run",
+        "containers"
+      ],
+      "concepts": [
+        "container-runtime"
+      ],
+      "currentUse": "デプロイするコンテナが満たす現行条件を確認する。"
+    },
+    {
+      "id": "res-host-cloud-run-overview",
+      "type": "official",
+      "title": "What is Cloud Run?",
+      "url": "https://docs.cloud.google.com/run/docs/overview/what-is-cloud-run",
+      "description": "サービス、ジョブ、ワーカープールとコンテナイメージの役割を確認する公式資料。",
+      "technologyIds": [
+        "cloud-run",
+        "containers"
+      ],
+      "concepts": [
+        "service",
+        "job",
+        "worker"
+      ],
+      "currentUse": "コンテナ実行形態と適用範囲を確認する。"
+    },
+    {
+      "id": "res-host-cloudflare-pages-files",
+      "type": "official",
+      "title": "Cloudflare Pages Limits",
+      "url": "https://developers.cloudflare.com/pages/platform/limits/",
+      "description": "Pagesの静的ファイル配信と、プランごとに確認すべき制限を示す公式資料。",
+      "technologyIds": [
+        "cloudflare-pages"
+      ],
+      "concepts": [
+        "edge-delivery",
+        "static-assets"
+      ],
+      "currentUse": "静的ファイルの配置方法と現行制限を確認する。",
+      "limitations": "制限値は変更され得るため、採用時に公式ページを再確認する。"
+    },
+    {
+      "id": "res-host-next-runtime-caveats",
+      "type": "official",
+      "title": "Next.js Backend for Frontend Guide",
+      "url": "https://nextjs.org/docs/app/guides/backend-for-frontend",
+      "description": "ホストがルート処理を関数として実行する場合の状態、ファイル、長時間処理などの注意点を示す公式資料。",
+      "technologyIds": [
+        "nextjs",
+        "serverless-functions"
+      ],
+      "concepts": [
+        "request-response",
+        "runtime-constraints"
+      ],
+      "currentUse": "ホスティング先の関数実行制約を確認する。"
+    },
+    {
+      "id": "res-host-next-static-export",
+      "type": "official",
+      "title": "Next.js Static Exports",
+      "url": "https://nextjs.org/docs/app/guides/static-exports",
+      "description": "静的出力で利用できる機能、利用できない動的機能、配置方法を確認する公式資料。",
+      "technologyIds": [
+        "nextjs"
+      ],
+      "concepts": [
+        "static-export"
+      ],
+      "currentUse": "静的出力の成立条件と制約を確認する。"
+    },
+    {
+      "id": "res-js-seo",
+      "type": "official",
+      "title": "JavaScript SEO basics",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
+      "description": "JavaScriptサイトをGoogle Searchが処理する際の公式ガイド。",
+      "technologyIds": [
+        "javascript"
+      ],
+      "concepts": [
+        "seo"
+      ],
+      "currentUse": "検索可能な構造を判断する基準。"
+    },
+    {
+      "id": "res-meilisearch-document-updates",
+      "type": "official",
+      "title": "Meilisearch 文書更新API",
+      "url": "https://www.meilisearch.com/docs/reference/api/documents/add-or-update-documents",
+      "description": "検索文書を追加または一部更新し、非同期タスクとして処理するAPIの公式資料です。",
+      "technologyIds": [
+        "meilisearch"
+      ],
+      "concepts": [
+        "index-synchronization",
+        "asynchronous-task"
+      ],
+      "currentUse": "元データから検索索引を更新する処理と完了確認の設計。",
+      "limitations": "受付応答だけで成功とせず、タスク状態と同期失敗を監視する必要があります。"
+    },
+    {
+      "id": "res-meilisearch-search-settings",
+      "type": "official",
+      "title": "Meilisearch 検索設定API",
+      "url": "https://www.meilisearch.com/docs/reference/api/settings/list-all-settings",
+      "description": "検索対象、絞り込み、並べ替え、順位規則、同義語などの索引設定を確認する公式資料です。",
+      "technologyIds": [
+        "meilisearch"
+      ],
+      "concepts": [
+        "search-relevance",
+        "index-settings"
+      ],
+      "currentUse": "必要な検索調整が設定範囲に含まれるかの確認。",
+      "limitations": "検索品質は実際の文書と検索語で評価し、設定変更に伴う再索引も確認します。"
+    },
+    {
+      "id": "res-meilisearch-self-hosting",
+      "type": "official",
+      "title": "Meilisearch 本番運用ガイド",
+      "url": "https://www.meilisearch.com/docs/resources/self_hosting/deployment/running_production",
+      "description": "管理するLinuxサーバーでMeilisearchを常駐させ、認証やHTTPSを設定する公式手順です。",
+      "technologyIds": [
+        "meilisearch"
+      ],
+      "concepts": [
+        "self-hosted-search",
+        "service-operation"
+      ],
+      "currentUse": "自前運用に必要な構成と担当範囲の確認。",
+      "limitations": "例示された基盤以外では、同等の安全設定、監視、復旧方法を別途設計します。"
+    },
+    {
+      "id": "res-model-viewer-docs",
+      "type": "official",
+      "title": "model-viewer Documentation",
+      "url": "https://modelviewer.dev/docs/",
+      "description": "model-viewerの属性、イベント、AR、操作方法を確認する公式資料。",
+      "technologyIds": [
+        "model-viewer"
+      ],
+      "concepts": [
+        "ar",
+        "gltf"
+      ],
+      "currentUse": "現在のAPIと実装方法の確認。"
+    },
+    {
+      "id": "res-next-lazy",
+      "type": "official",
+      "title": "Next.js Lazy Loading",
+      "url": "https://nextjs.org/docs/app/guides/lazy-loading",
+      "description": "Componentや外部ライブラリを遅延読み込みする公式ガイド。",
+      "technologyIds": [
+        "nextjs",
+        "react"
+      ],
+      "concepts": [
+        "code-splitting"
+      ],
+      "currentUse": "現在の遅延読込方法の確認。"
+    },
+    {
+      "id": "res-owasp-input-validation",
+      "type": "official",
+      "title": "OWASP 入力検証ガイド",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html",
+      "description": "外部入力に対する形式検証、意味検証、サーバー側検証の基本を確認する公式ガイドです。",
+      "technologyIds": [],
+      "concepts": [
+        "input-validation",
+        "server-side-validation"
+      ],
+      "currentUse": "問い合わせ受付の検証要件とテスト項目の確認。",
+      "limitations": "入力検証だけで認可、注入攻撃対策、迷惑送信対策のすべてを満たすものではありません。"
+    },
+    {
+      "id": "res-owasp-logging",
+      "type": "official",
+      "title": "OWASP ログ設計ガイド",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+      "description": "セキュリティと運用に必要なログ、記録を避ける情報、保護方法を確認する公式ガイドです。",
+      "technologyIds": [],
+      "concepts": [
+        "secure-logging",
+        "sensitive-data"
+      ],
+      "currentUse": "問い合わせ処理の監視と機密情報を残さないログ設計の確認。",
+      "limitations": "保存期間、閲覧権限、法令上の要件は組織と地域ごとに別途定義します。"
+    },
+    {
+      "id": "res-pagefind-multilingual",
+      "type": "official",
+      "title": "Pagefind 多言語検索ガイド",
+      "url": "https://pagefind.app/docs/multilingual/",
+      "description": "言語別索引と日本語の単語分割に関する現在の対応を確認する公式資料です。",
+      "technologyIds": [
+        "pagefind"
+      ],
+      "concepts": [
+        "multilingual-search",
+        "japanese-tokenization"
+      ],
+      "currentUse": "日本語ページのlang属性と拡張版の要件確認。",
+      "limitations": "日本語の語幹処理には対応していないため、固有名詞や表記揺れを実データで確認します。"
+    },
+    {
+      "id": "res-pagefind-search-docs",
+      "type": "official",
+      "title": "Pagefind 導入ガイド",
+      "url": "https://pagefind.app/docs/",
+      "description": "静的HTMLから検索索引と検索画面を生成する手順を確認する公式資料です。",
+      "technologyIds": [
+        "pagefind"
+      ],
+      "concepts": [
+        "static-search-index",
+        "build-pipeline"
+      ],
+      "currentUse": "現在の索引生成手順と配信構成の確認。",
+      "limitations": "公開後の更新を反映するには、索引の再生成と再公開が必要です。"
+    },
+    {
+      "id": "res-postgresql-full-text-search",
+      "type": "official",
+      "title": "PostgreSQL 全文検索ガイド",
+      "url": "https://www.postgresql.org/docs/current/textsearch-controls.html",
+      "description": "文書と検索語の変換、照合、順位付け、見出し生成を確認するPostgreSQL公式資料です。",
+      "technologyIds": [
+        "postgresql"
+      ],
+      "concepts": [
+        "full-text-search",
+        "query-ranking"
+      ],
+      "currentUse": "現行PostgreSQLの全文検索APIと設計範囲の確認。",
+      "limitations": "実際の順位品質と負荷はデータ、問い合わせ、索引設計に依存します。"
+    },
+    {
+      "id": "res-postgresql-text-dictionaries",
+      "type": "official",
+      "title": "PostgreSQL 全文検索辞書ガイド",
+      "url": "https://www.postgresql.org/docs/current/textsearch-dictionaries.html",
+      "description": "不要語、同義語、語の正規化に使う全文検索辞書の構成を確認する公式資料です。",
+      "technologyIds": [
+        "postgresql"
+      ],
+      "concepts": [
+        "text-dictionary",
+        "token-normalization"
+      ],
+      "currentUse": "検索対象言語に合わせた辞書構成の確認。",
+      "limitations": "日本語の単語分割に使う拡張機能の選定と運用は別途検証が必要です。"
+    },
+    {
+      "id": "res-r3f-intro",
+      "type": "official",
+      "title": "React Three Fiber Introduction",
+      "url": "https://r3f.docs.pmnd.rs/getting-started/introduction",
+      "description": "R3Fの基本構造とThree.jsとの関係を説明する公式ガイド。",
+      "technologyIds": [
+        "r3f",
+        "react"
+      ],
+      "concepts": [
+        "component-design"
+      ],
+      "currentUse": "現在の導入方法と設計前提。"
+    },
+    {
+      "id": "res-r3f-performance",
+      "type": "official",
+      "title": "R3F Scaling Performance",
+      "url": "https://r3f.docs.pmnd.rs/advanced/scaling-performance",
+      "description": "R3Fでの再利用、状態更新、Instancingなどの性能ガイド。",
+      "technologyIds": [
+        "r3f"
+      ],
+      "concepts": [
+        "performance"
+      ],
+      "currentUse": "R3F特有の最適化確認。"
+    },
+    {
+      "id": "res-rendering-performance",
+      "type": "official",
+      "title": "Rendering Performance",
+      "url": "https://web.dev/articles/rendering-performance",
+      "description": "滑らかな描画に必要なフレーム処理の考え方。",
+      "technologyIds": [
+        "javascript",
+        "webgl"
+      ],
+      "concepts": [
+        "performance"
+      ],
+      "currentUse": "レンダリング負荷の基礎確認。"
+    },
+    {
+      "id": "res-three-buffergeometry",
+      "type": "official",
+      "title": "Three.js BufferGeometry",
+      "url": "https://threejs.org/docs/pages/BufferGeometry.html",
+      "description": "BufferGeometryの公式API資料。",
+      "technologyIds": [
+        "threejs"
+      ],
+      "concepts": [
+        "buffer-geometry"
+      ],
+      "currentUse": "Geometry統合前提の確認。"
+    },
+    {
+      "id": "res-three-frustum",
+      "type": "official",
+      "title": "Three.js Frustum",
+      "url": "https://threejs.org/docs/pages/Frustum.html",
+      "description": "視錐台判定の公式API資料。",
+      "technologyIds": [
+        "threejs"
+      ],
+      "concepts": [
+        "frustum-culling"
+      ],
+      "currentUse": "カリング判定の確認。"
+    },
+    {
+      "id": "res-three-gltf",
+      "type": "official",
+      "title": "Three.js GLTFLoader",
+      "url": "https://threejs.org/docs/pages/GLTFLoader.html",
+      "description": "Three.jsでglTFを読み込むための公式API資料。",
+      "technologyIds": [
+        "threejs",
+        "gltf"
+      ],
+      "concepts": [
+        "asset-loading"
+      ],
+      "currentUse": "現在のLoader APIと拡張対応の確認。"
+    },
+    {
+      "id": "res-three-instancedmesh",
+      "type": "official",
+      "title": "Three.js InstancedMesh",
+      "url": "https://threejs.org/docs/pages/InstancedMesh.html",
+      "description": "Instancingの公式API仕様。",
+      "technologyIds": [
+        "threejs"
+      ],
+      "concepts": [
+        "instancing"
+      ],
+      "currentUse": "現在のAPIと制約の確認。"
+    },
+    {
+      "id": "res-three-lod",
+      "type": "official",
+      "title": "Three.js LOD",
+      "url": "https://threejs.org/docs/pages/LOD.html",
+      "description": "距離による詳細度切替の公式API資料。",
+      "technologyIds": [
+        "threejs"
+      ],
+      "concepts": [
+        "lod"
+      ],
+      "currentUse": "LOD APIの確認。"
+    },
+    {
+      "id": "res-three-many-objects",
+      "type": "official",
+      "title": "Optimize lots of objects",
+      "url": "https://threejs.org/manual/en/optimize-lots-of-objects.html",
+      "description": "多数オブジェクトの最適化を扱うThree.js公式マニュアル。",
+      "technologyIds": [
+        "threejs"
+      ],
+      "concepts": [
+        "draw-calls"
+      ],
+      "currentUse": "最適化方針の確認。"
+    },
+    {
+      "id": "res-three-webgpu",
+      "type": "official",
+      "title": "Three.js WebGPURenderer Manual",
+      "url": "https://threejs.org/manual/en/webgpurenderer.html",
+      "description": "WebGPURendererの位置付け、移行、制約を確認する公式マニュアル。",
+      "technologyIds": [
+        "threejs",
+        "webgpu"
+      ],
+      "concepts": [
+        "rendering"
+      ],
+      "currentUse": "現在のWebGPU対応状況の確認。"
+    },
+    {
+      "id": "res-wcag-nontext",
+      "type": "official",
+      "title": "WCAG: Non-text Content",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html",
+      "description": "画像・Canvas・3Dなど非テキスト情報の代替を考える基準。",
+      "technologyIds": [
+        "html"
+      ],
+      "concepts": [
+        "accessibility"
+      ],
+      "currentUse": "アクセシビリティ要件の判断。"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "react-existing",
+      "label": "Reactを利用",
+      "description": "既存プロジェクトがReactで構成されている。",
+      "category": "environment",
+      "conflictsWith": []
+    },
+    {
+      "id": "ar-required",
+      "label": "ARが必要",
+      "description": "端末のAR表示へつなぐ導線が要件に含まれる。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "mobile-priority",
+      "label": "モバイル重視",
+      "description": "スマートフォンでの表示品質と操作性を優先する。",
+      "category": "priority",
+      "conflictsWith": []
+    },
+    {
+      "id": "seo-priority",
+      "label": "SEO重視",
+      "description": "検索エンジンが理解できるHTML本文と導線を重要視する。",
+      "category": "priority",
+      "conflictsWith": []
+    },
+    {
+      "id": "short-deadline",
+      "label": "短納期",
+      "description": "実装と検証に使える期間が短い。",
+      "category": "priority",
+      "conflictsWith": [
+        "advanced-visuals"
+      ]
+    },
+    {
+      "id": "advanced-visuals",
+      "label": "高度な独自表現",
+      "description": "既成機能では足りないシェーダーや独自インタラクションが必要。",
+      "category": "requirement",
+      "conflictsWith": [
+        "short-deadline",
+        "simple-display"
+      ]
+    },
+    {
+      "id": "maintainability-priority",
+      "label": "保守性重視",
+      "description": "長期運用、引き継ぎ、変更容易性を優先する。",
+      "category": "priority",
+      "conflictsWith": []
+    },
+    {
+      "id": "existing-glsl-assets",
+      "label": "既存GLSL資産あり",
+      "description": "再利用したいGLSLシェーダーやWebGL資産が存在する。",
+      "category": "asset",
+      "conflictsWith": []
+    },
+    {
+      "id": "small-team",
+      "label": "少人数チーム",
+      "description": "専任3Dエンジニアを置かない小規模チームで開発する。",
+      "category": "team",
+      "conflictsWith": []
+    },
+    {
+      "id": "performance-priority",
+      "label": "性能重視",
+      "description": "描画性能、初期表示、実行負荷を優先して判断する。",
+      "category": "priority",
+      "conflictsWith": []
+    },
+    {
+      "id": "accessibility-priority",
+      "label": "アクセシビリティ重視",
+      "description": "代替コンテンツ、キーボード操作、読み上げ対応を優先する。",
+      "category": "priority",
+      "conflictsWith": []
+    },
+    {
+      "id": "content-heavy",
+      "label": "情報量が多い",
+      "description": "本文、商品情報、採用情報などHTMLコンテンツが多い。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "large-object-count",
+      "label": "大量オブジェクト",
+      "description": "数百〜数万規模の描画対象を扱う。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "low-end-devices",
+      "label": "低性能端末も対象",
+      "description": "GPU性能やメモリが限られる端末を利用対象に含める。",
+      "category": "environment",
+      "conflictsWith": []
+    },
+    {
+      "id": "dynamic-objects",
+      "label": "オブジェクトが動的",
+      "description": "個々のオブジェクトが頻繁に移動・更新される。",
+      "category": "requirement",
+      "conflictsWith": [
+        "static-scene"
+      ]
+    },
+    {
+      "id": "static-scene",
+      "label": "静的シーン",
+      "description": "配置や形状がほとんど変化しない。",
+      "category": "requirement",
+      "conflictsWith": [
+        "dynamic-objects"
+      ]
+    },
+    {
+      "id": "repeated-geometry",
+      "label": "同じ形状を反復",
+      "description": "同一GeometryやMaterialを持つオブジェクトを多数描画する。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "varying-detail",
+      "label": "距離で詳細度を変更",
+      "description": "カメラ距離に応じてモデルの詳細度を切り替えられる。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "simple-display",
+      "label": "単純表示が中心",
+      "description": "回転・拡大など基本操作が中心で、独自演出は少ない。",
+      "category": "requirement",
+      "conflictsWith": [
+        "advanced-visuals"
+      ]
+    },
+    {
+      "id": "frequent-content-updates",
+      "label": "更新頻度が高い",
+      "description": "コンテンツの追加や変更が頻繁に発生し、検索結果へ早く反映する必要がある。",
+      "category": "requirement",
+      "conflictsWith": [
+        "infrequent-content-updates"
+      ]
+    },
+    {
+      "id": "infrequent-content-updates",
+      "label": "更新頻度が低い",
+      "description": "コンテンツ更新は少なく、更新時にサイト全体を再生成しても支障が少ない。",
+      "category": "requirement",
+      "conflictsWith": [
+        "frequent-content-updates"
+      ]
+    },
+    {
+      "id": "existing-postgresql-database",
+      "label": "既存のPostgreSQLあり",
+      "description": "検索対象データを保持するPostgreSQLデータベースをすでに運用している。",
+      "category": "environment",
+      "conflictsWith": []
+    },
+    {
+      "id": "advanced-search-relevance",
+      "label": "継続的な検索調整が必要",
+      "description": "サイトの再公開とは別に、同義語、業務ルール、独自の並び順などを継続して調整する必要がある。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "personal-data-form",
+      "label": "個人情報を受け取る",
+      "description": "問い合わせで氏名、連絡先など、取り扱い方針が必要な個人情報を受け取る。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "confidential-form-data",
+      "label": "業務上の機密情報を受け取る",
+      "description": "問い合わせで未公開情報や契約上保護すべき業務データを受け取る。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "complex-form-workflow",
+      "label": "送信後の業務処理が複雑",
+      "description": "受付後にデータ保存、権限判定、複数システム連携などの処理が必要。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "existing-application-backend",
+      "label": "既存バックエンドあり",
+      "description": "入力検証やデータ保存を担当できる既存のアプリケーションサーバーがある。",
+      "category": "environment",
+      "conflictsWith": []
+    },
+    {
+      "id": "external-service-restricted",
+      "label": "外部サービス利用を制限",
+      "description": "契約、データ管理、セキュリティ方針により外部SaaSへの送信を避ける必要がある。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "static-output-possible",
+      "label": "静的出力で成立",
+      "description": "公開時にHTML・CSS・JavaScriptを生成でき、閲覧時のサーバー処理を必須としない。",
+      "category": "requirement",
+      "conflictsWith": [
+        "request-time-processing-required"
+      ]
+    },
+    {
+      "id": "request-time-processing-required",
+      "label": "閲覧時のサーバー処理が必要",
+      "description": "認証、個別表示、データ更新など、リクエストごとのサーバー処理が必要。",
+      "category": "requirement",
+      "conflictsWith": [
+        "static-output-possible"
+      ]
+    },
+    {
+      "id": "bursty-traffic",
+      "label": "アクセス変動が大きい",
+      "description": "アクセスが少ない時間と急増する時間の差が大きい。",
+      "category": "environment",
+      "conflictsWith": []
+    },
+    {
+      "id": "persistent-worker-required",
+      "label": "常駐処理が必要",
+      "description": "キューの監視など、HTTPリクエストの外で継続して動く処理が必要。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "custom-runtime-required",
+      "label": "実行環境を細かく指定",
+      "description": "OSパッケージ、バイナリ、言語ランタイムなどをアプリ側で指定する必要がある。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "content-code-review-required",
+      "label": "更新もコードレビュー",
+      "description": "コンテンツ変更も差分確認と承認を経て公開したい。",
+      "category": "priority",
+      "conflictsWith": []
+    },
+    {
+      "id": "multi-channel-delivery-required",
+      "label": "複数チャネルへ配信",
+      "description": "同じコンテンツをWebサイト、アプリなど複数の表示先で再利用する。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "structured-content-required",
+      "label": "構造化コンテンツ重視",
+      "description": "定義した項目や型に沿って入力し、コンテンツを再利用・検証したい。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "cms-layout-editing-required",
+      "label": "CMS内でページ構成を編集",
+      "description": "CMSのテンプレートやブロックを使い、本文だけでなくページ構成も直接編集したい。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "cms-direct-publishing-required",
+      "label": "CMSからページを直接公開",
+      "description": "別のフロントエンドをビルド・配信せず、CMSのテンプレートから公開ページへ反映したい。",
+      "category": "requirement",
+      "conflictsWith": []
+    }
+  ],
+  "decisions": [
+    {
+      "id": "dec-cms-multichannel-2026-08",
+      "slug": "structured-multichannel",
+      "situationId": "cms-architecture-selection",
+      "title": "構造化した内容を複数画面で再利用",
+      "conditionIds": [
+        "structured-content-required",
+        "multi-channel-delivery-required"
+      ],
+      "snapshotDate": "2026-08-23",
+      "summary": "定義した項目に沿うコンテンツをWebサイトとアプリで共有する条件では、API型ヘッドレスCMSを第一候補にします。",
+      "expectedTopApproachIds": [
+        "headless-api-cms"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-host-static-2026-08",
+      "slug": "static-content-standard",
+      "situationId": "hosting-runtime-selection",
+      "title": "閲覧時の処理が不要なサイト",
+      "conditionIds": [
+        "static-output-possible"
+      ],
+      "snapshotDate": "2026-08-23",
+      "summary": "公開時に内容を確定できるサイトでは、アプリの実行環境を持たない静的生成とエッジ配信を第一候補にします。",
+      "expectedTopApproachIds": [
+        "static-edge-hosting"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-perf-repeat-2026-08",
+      "slug": "repeated-dynamic",
+      "situationId": "threejs-many-objects",
+      "title": "大量の同一形状が動く",
+      "conditionIds": [
+        "large-object-count",
+        "repeated-geometry",
+        "dynamic-objects",
+        "performance-priority"
+      ],
+      "snapshotDate": "2026-08-23",
+      "summary": "同一形状の反復と個別更新があるためInstancedMeshを第一候補とします。",
+      "expectedTopApproachIds": [
+        "threejs-instancing"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-po-seo-2026-08",
+      "slug": "seo-content",
+      "situationId": "3d-portfolio",
+      "title": "SEO・情報量重視",
+      "conditionIds": [
+        "seo-priority",
+        "content-heavy",
+        "accessibility-priority"
+      ],
+      "snapshotDate": "2026-08-23",
+      "summary": "HTML本文を中心に置くDOM + 3D Islands構成を優先します。",
+      "expectedTopApproachIds": [
+        "dom-progressive-portfolio"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-pv-ar-fast-2026-08",
+      "slug": "ar-fast",
+      "situationId": "3d-product-viewer",
+      "title": "AR・短納期・単純表示",
+      "conditionIds": [
+        "ar-required",
+        "short-deadline",
+        "simple-display",
+        "mobile-priority"
+      ],
+      "snapshotDate": "2026-08-23",
+      "summary": "AR導線と短納期を優先するためmodel-viewerを第一候補とします。",
+      "expectedTopApproachIds": [
+        "model-viewer-product"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-pv-default-2026-08",
+      "slug": "default",
+      "situationId": "3d-product-viewer",
+      "title": "モバイル重視の標準構成",
+      "conditionIds": [
+        "mobile-priority"
+      ],
+      "snapshotDate": "2026-08-23",
+      "summary": "独自要件が未確定な段階ではThree.js + glTFを基準案とし、単純表示ならmodel-viewerへ寄せます。",
+      "expectedTopApproachIds": [
+        "threejs-gltf-product"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-sc-react-2026-08",
+      "slug": "react-rich",
+      "situationId": "scroll-linked-3d",
+      "title": "React既存・高度表現",
+      "conditionIds": [
+        "react-existing",
+        "advanced-visuals"
+      ],
+      "snapshotDate": "2026-08-23",
+      "summary": "R3F案とThree.js + ScrollTrigger案が近く、既存React状態との統合を優先してR3Fを上位にします。",
+      "expectedTopApproachIds": [
+        "r3f-scrollcontrols"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-secure-contact-form-fast-2026-08",
+      "slug": "basic-small-team",
+      "situationId": "secure-contact-form",
+      "title": "小規模サイトの一般的な問い合わせ",
+      "conditionIds": [
+        "short-deadline",
+        "small-team",
+        "maintainability-priority"
+      ],
+      "snapshotDate": "2026-08-23",
+      "summary": "複雑な業務処理や外部送信制限がなく、短期導入と少人数運用を優先するため、フォーム受付サービスを第一候補とします。",
+      "expectedTopApproachIds": [
+        "managed-form-service"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-seo-rich-2026-08",
+      "slug": "seo-rich",
+      "situationId": "seo-rich-3d",
+      "title": "SEOと高度表現を両立",
+      "conditionIds": [
+        "seo-priority",
+        "content-heavy",
+        "advanced-visuals"
+      ],
+      "snapshotDate": "2026-08-23",
+      "summary": "フルCanvasを外し、DOM優先 + 3D Islands構成を第一候補とします。",
+      "expectedTopApproachIds": [
+        "dom-first-three-islands"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-site-search-static-2026-08",
+      "slug": "static-small-team",
+      "situationId": "site-search",
+      "title": "更新頻度が低い小規模サイト",
+      "conditionIds": [
+        "infrequent-content-updates",
+        "short-deadline",
+        "small-team"
+      ],
+      "snapshotDate": "2026-08-23",
+      "summary": "公開時に索引を更新でき、短期導入と少人数運用を優先するため、Pagefindによる静的検索を第一候補とします。",
+      "expectedTopApproachIds": [
+        "build-time-static-search"
+      ],
+      "status": "published"
+    }
+  ],
+  "benchmarks": [
+    {
+      "id": "bench-many-objects-baseline",
+      "title": "大量オブジェクト最適化の合成比較",
+      "situationId": "threejs-many-objects",
+      "approachIds": [
+        "threejs-instancing",
+        "geometry-merge-batching",
+        "lod-frustum-culling"
+      ],
+      "status": "planned",
+      "metrics": [
+        "fpsMedian",
+        "drawCalls",
+        "triangles",
+        "jsHeapBytes"
+      ],
+      "fixture": "同一色・同一形状を1,000個配置する合成シーン。",
+      "protocol": [
+        "同一端末・ブラウザで実行する。",
+        "カメラ位置とオブジェクト数を固定する。",
+        "Runner生成値以外を結果ファイルへ記入しない。"
+      ]
+    },
+    {
+      "id": "bench-product-viewer-baseline",
+      "title": "3D商品ビューア4方式の合成シーン比較",
+      "situationId": "3d-product-viewer",
+      "approachIds": [
+        "model-viewer-product",
+        "threejs-gltf-product",
+        "r3f-product",
+        "babylonjs-product"
+      ],
+      "status": "planned",
+      "metrics": [
+        "fpsMedian",
+        "firstContentfulPaintMs",
+        "transferredBytes",
+        "jsHeapBytes",
+        "drawCalls",
+        "triangles"
+      ],
+      "fixture": "同一寸法・同一カメラ条件の回転Cube。公開判断に使う前に実商品glTFで再計測する。",
+      "protocol": [
+        "同一viewportとChromiumバージョンで各ページを読み込む。",
+        "Ready signal後に5秒間requestAnimationFrameを測定する。",
+        "3回以上のRunを行い、生データと環境をGitへ保存する。"
+      ]
+    }
+  ]
+}

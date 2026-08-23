@@ -1,0 +1,16 @@
+id: r-po-mobile-r3f
+situationId: 3d-portfolio
+when:
+  all:
+  - mobile-priority
+  any: []
+  none: []
+effect:
+  type: penalize
+  weight: 1
+reason: モバイル重視ではReact層と3D描画双方の実行負荷を検証する必要があります。
+evidenceIds:
+- ev-r3f-performance
+- ev-rendering-performance
+lastReviewed: '2026-08-23'
+targetApproachId: r3f-drei-portfolio

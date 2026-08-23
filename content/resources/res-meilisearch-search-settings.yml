@@ -1,0 +1,12 @@
+id: res-meilisearch-search-settings
+type: official
+title: Meilisearch 検索設定API
+url: https://www.meilisearch.com/docs/reference/api/settings/list-all-settings
+description: 検索対象、絞り込み、並べ替え、順位規則、同義語などの索引設定を確認する公式資料です。
+technologyIds:
+- meilisearch
+concepts:
+- search-relevance
+- index-settings
+currentUse: 必要な検索調整が設定範囲に含まれるかの確認。
+limitations: 検索品質は実際の文書と検索語で評価し、設定変更に伴う再索引も確認します。

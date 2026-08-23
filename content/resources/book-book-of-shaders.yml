@@ -1,0 +1,11 @@
+id: book-book-of-shaders
+type: book
+title: The Book of Shaders
+url: https://thebookofshaders.com/
+description: GLSLとシェーダー表現を小さな例から学べるオンラインブック。
+technologyIds:
+- glsl
+concepts:
+- shader
+currentUse: シェーダーの考え方と表現の基礎。
+limitations: Three.js固有APIの最新手順は別途公式資料で確認する。

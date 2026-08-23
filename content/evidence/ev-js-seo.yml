@@ -1,0 +1,10 @@
+id: ev-js-seo
+title: JavaScript SEO basics
+claim: Google Searchの公式ガイドは、JavaScriptサイトでも意味のある本文・リンク・レンダリング可能性を設計する必要があると説明する。
+sourceType: official-documentation
+sourceName: Google Search Central
+url: https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

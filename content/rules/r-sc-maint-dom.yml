@@ -1,0 +1,15 @@
+id: r-sc-maint-dom
+situationId: scroll-linked-3d
+when:
+  all:
+  - maintainability-priority
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 1
+reason: 演出対象とHTML本文の責務が明確で、引き継ぎ時の理解範囲を抑えやすいためです。
+evidenceIds:
+- ev-gsap-scrolltrigger
+lastReviewed: '2026-08-23'
+targetApproachId: dom-gsap-scroll

@@ -1,0 +1,10 @@
+id: ev-react-lazy
+title: React lazy
+claim: React lazyはComponentコードの読み込みを初回レンダーまで遅延させるためのAPIを提供する。
+sourceType: official-documentation
+sourceName: React
+url: https://react.dev/reference/react/lazy
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

@@ -1,0 +1,13 @@
+id: res-host-cloud-run-overview
+type: official
+title: What is Cloud Run?
+url: https://docs.cloud.google.com/run/docs/overview/what-is-cloud-run
+description: サービス、ジョブ、ワーカープールとコンテナイメージの役割を確認する公式資料。
+technologyIds:
+- cloud-run
+- containers
+concepts:
+- service
+- job
+- worker
+currentUse: コンテナ実行形態と適用範囲を確認する。

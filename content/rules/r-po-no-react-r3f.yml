@@ -1,0 +1,15 @@
+id: r-po-no-react-r3f
+situationId: 3d-portfolio
+when:
+  all: []
+  any: []
+  none:
+  - react-existing
+effect:
+  type: penalize
+  weight: 2
+reason: Reactを使わない場合、R3Fを追加する理由が弱くなります。
+evidenceIds:
+- ev-r3f-intro
+lastReviewed: '2026-08-23'
+targetApproachId: r3f-drei-portfolio

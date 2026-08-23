@@ -1,0 +1,35 @@
+id: application-backend-form
+slug: application-backend-form
+title: アプリのバックエンドで一体管理する
+shortTitle: アプリのバックエンド
+summary: 既存または新設するアプリの受付処理として実装し、入力検証、保存、権限、業務処理を一つの流れで管理する方法です。
+defaultLabel: alternative
+baseScore: 1
+technologyIds:
+- application-backend
+- database
+concepts:
+- server-side-validation
+- business-workflow
+- access-control
+recommendedWhen:
+- 受付を担当できる既存バックエンドがある
+- 受付後の業務処理のために専用バックエンドを設ける
+- 機密情報の保存、閲覧権限、監査を既存方針へ統合したい
+- 送信後に複数の業務処理や状態管理が必要
+notRecommendedWhen:
+- 静的サイトへ単純な問い合わせ窓口だけを追加するために、新しいバックエンドが必要になる
+- バックエンドの保守担当者がいない
+- 既存システムへ公開フォームの負荷と攻撃面を追加できない
+advantages:
+- アプリの認証、権限、データ保存、監視と一体で管理できる
+- 業務上の意味を含む入力検証を一か所で実装できる
+- 受付後の状態変更や他システム連携を管理しやすい
+disadvantages:
+- 公開入力を受けるための安全設計と保守範囲が増える
+- 迷惑送信対策、送信制限、通知失敗処理を実装する必要がある
+- 単純なフォームには設計とテストの範囲が大きい
+resourceIds:
+- res-owasp-input-validation
+- res-owasp-logging
+lastReviewed: '2026-08-24'

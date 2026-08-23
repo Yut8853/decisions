@@ -1,0 +1,14 @@
+id: book-real-time-rendering
+type: book
+title: Real-Time Rendering, Fourth Edition
+amazonUrl: https://www.amazon.co.jp/s?k=Real-Time+Rendering+Fourth+Edition
+description: リアルタイムレンダリングの原理とアルゴリズムを体系的に学ぶ本。
+technologyIds:
+- webgl
+- webgpu
+concepts:
+- rendering
+- lighting
+- gpu
+currentUse: APIではなく普遍的なレンダリング原理を理解する。
+limitations: 個別ライブラリの最新API解説ではない。

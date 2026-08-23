@@ -1,0 +1,32 @@
+id: model-viewer-product
+slug: model-viewer-product
+title: model-viewerによる商品表示
+shortTitle: model-viewer
+summary: Web Componentを使い、モデル表示・操作・AR導線を小さな実装範囲で提供する方法です。
+defaultLabel: fast
+baseScore: 2
+technologyIds:
+- model-viewer
+- web-components
+- gltf
+concepts:
+- gltf
+- ar
+- progressive-enhancement
+recommendedWhen:
+- 単純な回転・拡大表示が中心
+- AR導線を短期間で実装したい
+- 3D専任者がいない
+notRecommendedWhen:
+- 独自シェーダーが主要要件
+- 複雑な3Dシーンやゲームロジックが必要
+advantages:
+- 実装範囲を抑えやすい
+- AR導線を組み込みやすい
+disadvantages:
+- レンダリング制御の自由度は低い
+- 独自表現では内部制約を受ける
+resourceIds:
+- res-model-viewer-docs
+- book-real-time-rendering
+lastReviewed: '2026-08-23'

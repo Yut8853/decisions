@@ -1,0 +1,15 @@
+id: r-po-glsl-three
+situationId: 3d-portfolio
+when:
+  all:
+  - existing-glsl-assets
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 2
+reason: 既存シェーダー資産を活用できるためThree.js案を上げます。
+evidenceIds:
+- ev-three-webgpu
+lastReviewed: '2026-08-23'
+targetApproachId: threejs-gsap-portfolio

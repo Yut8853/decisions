@@ -1,0 +1,16 @@
+# Verified Technology Decisions / JUNKBRANDING
+
+Evidence-first technology decisions with explicit conditions, negative recommendations, and review dates.
+
+- [3Dポートフォリオサイトを作りたい](https://decisions.junkbranding.com/decisions/3d-portfolio): 作品性と読みやすさを両立するために、3D中心・DOM中心・映像中心の構成を比較します。
+- [3D商品ビューアを作りたい](https://decisions.junkbranding.com/decisions/3d-product-viewer): 商品モデルの回転・拡大・AR・UI連携を、要件と工数に合わせて選ぶための判断ページです。
+- [更新しやすいCMS構成を選びたい](https://decisions.junkbranding.com/decisions/cms-architecture-selection): Git管理コンテンツ、API型ヘッドレスCMS、表示統合型CMSを、編集と配信の流れから比較します。
+- [Webサイト・アプリの公開先を選びたい](https://decisions.junkbranding.com/decisions/hosting-runtime-selection): 静的・エッジ配信、サーバーレス関数、マネージドコンテナ、それらを分ける構成を、実行時処理と運用要件から比較します。
+- [スクロール連動のリッチサイトを作りたい](https://decisions.junkbranding.com/decisions/scroll-linked-3d): DOM、Three.js、React Three Fiber、画像シーケンスによるスクロール演出を比較します。
+- [問い合わせフォームを安全に運用したい](https://decisions.junkbranding.com/decisions/secure-contact-form): フォーム受付サービス、サーバーレス関数、既存または新設するバックエンドを、入力内容と運用体制から選ぶ判断ページです。
+- [SEOを維持しながらリッチな3Dサイトを作りたい](https://decisions.junkbranding.com/decisions/seo-rich-3d): HTML本文を保ちながら3Dを組み込む構成と、Canvas中心構成の違いを判断します。
+- [サイト内検索を実装したい](https://decisions.junkbranding.com/decisions/site-search): 公開時の検索索引、外部または自前の検索サーバー、既存データベースの全文検索を、更新頻度と運用条件から選ぶ判断ページです。
+- [Three.jsで大量オブジェクトを表示すると重い](https://decisions.junkbranding.com/decisions/threejs-many-objects): Instancing、Geometry統合、LODとカリングを、シーンの性質から選び分けます。
+
+Policy version: 1.0.0
+Generated: 2026-08-23T15:26:23.626Z

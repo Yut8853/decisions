@@ -1,0 +1,15 @@
+id: r-po-mobile-three
+situationId: 3d-portfolio
+when:
+  all:
+  - mobile-priority
+  any: []
+  none: []
+effect:
+  type: penalize
+  weight: 1
+reason: モバイル重視では3Dとスクロール制御を同時に最適化する負担を考慮して順位を下げます。
+evidenceIds:
+- ev-rendering-performance
+lastReviewed: '2026-08-23'
+targetApproachId: threejs-gsap-portfolio

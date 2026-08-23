@@ -1,0 +1,10 @@
+id: ev-cms-wordpress-site-editor
+title: WordPress Site Editor pages
+claim: Block themeを有効にしたWordPressのSite Editorでは、ページ内容をテンプレート内で確認しながらブロックを編集し、公開状態を変更できる。
+sourceType: official-documentation
+sourceName: WordPress.org
+url: https://wordpress.org/documentation/article/site-editor/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

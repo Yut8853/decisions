@@ -1,0 +1,64 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { siteConfig } from "@/lib/site";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: `${siteConfig.name} — ${siteConfig.brand}`,
+    template: `%s — ${siteConfig.name}`
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  openGraph: {
+    type: "website",
+    siteName: siteConfig.name,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description
+  }
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="ja" data-scroll-behavior="smooth">
+      <body>
+        <a className="skip-link" href="#main">本文へ移動</a>
+        <header className="site-header">
+          <Link className="brand" href="/" aria-label="Verified Technology Decisions ホーム">
+            <span className="brand-mark">JB</span>
+            <span>
+              <strong>VERIFIED</strong>
+              <small>TECHNOLOGY DECISIONS</small>
+            </span>
+          </Link>
+          <nav aria-label="メインナビゲーション">
+            <Link href="/decisions">技術判断</Link>
+            <Link href="/methodology">判定方法</Link>
+          </nav>
+        </header>
+        <main id="main">{children}</main>
+        <footer className="site-footer">
+          <div>
+            <strong>JUNKBRANDING</strong>
+            <p>検証可能な技術判断を、日付・条件・根拠とともに残す。</p>
+          </div>
+          <div className="footer-links">
+            <Link href="/about">このサイトについて</Link>
+            <a href="https://junkbranding.com" target="_blank" rel="noreferrer">junkbranding.com</a>
+          </div>
+        </footer>
+        <Analytics />
+        <SpeedInsights />
+      </body>
+    </html>
+  );
+}

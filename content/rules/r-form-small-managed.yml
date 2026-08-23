@@ -1,0 +1,16 @@
+id: r-form-small-managed
+situationId: secure-contact-form
+targetApproachId: managed-form-service
+when:
+  all:
+  - small-team
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 2
+reason: 独自の受付処理を持たず、サービスが提供する迷惑送信対策と通知機能を利用できるため、少人数で保守する候補になります。
+evidenceIds:
+- ev-formspree-managed-handler
+- ev-formspree-notification-rules
+lastReviewed: '2026-08-24'

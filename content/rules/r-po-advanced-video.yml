@@ -1,0 +1,15 @@
+id: r-po-advanced-video
+situationId: 3d-portfolio
+when:
+  all:
+  - advanced-visuals
+  any: []
+  none: []
+effect:
+  type: penalize
+  weight: 2
+reason: ユーザー操作に反応する高度な3D表現では、固定映像だけでは要件を満たしにくくなります。
+evidenceIds:
+- ev-three-webgpu
+lastReviewed: '2026-08-23'
+targetApproachId: video-sequence-portfolio

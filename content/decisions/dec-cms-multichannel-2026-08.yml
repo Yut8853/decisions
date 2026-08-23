@@ -1,0 +1,12 @@
+id: dec-cms-multichannel-2026-08
+slug: structured-multichannel
+situationId: cms-architecture-selection
+title: 構造化した内容を複数画面で再利用
+conditionIds:
+- structured-content-required
+- multi-channel-delivery-required
+snapshotDate: '2026-08-23'
+summary: 定義した項目に沿うコンテンツをWebサイトとアプリで共有する条件では、API型ヘッドレスCMSを第一候補にします。
+expectedTopApproachIds:
+- headless-api-cms
+status: published

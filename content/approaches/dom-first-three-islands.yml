@@ -1,0 +1,32 @@
+id: dom-first-three-islands
+slug: dom-first-three-islands
+title: DOM優先 + 3D Islands
+shortTitle: DOM-first
+summary: 意味のあるHTMLをページの骨格にし、必要なセクションへ独立した3D表現を追加する構成です。
+defaultLabel: canonical
+baseScore: 3
+technologyIds:
+- html
+- css
+- threejs
+- nextjs
+concepts:
+- progressive-enhancement
+- seo
+- accessibility
+recommendedWhen:
+- 本文と構造化された導線が重要
+- 3Dを部分的な付加価値として使う
+notRecommendedWhen:
+- 全画面を一つの連続3D空間にすることが絶対要件
+advantages:
+- HTMLコンテンツを維持しやすい
+- 段階的読み込みとフォールバックを設計しやすい
+disadvantages:
+- 複数表現レイヤーの設計が必要
+- 完全没入型より制約が増える
+resourceIds:
+- res-js-seo
+- res-next-lazy
+- res-wcag-nontext
+lastReviewed: '2026-08-23'

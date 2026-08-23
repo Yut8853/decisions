@@ -1,0 +1,34 @@
+id: self-hosted-search-service
+slug: self-hosted-search-service
+title: 検索サーバーを自分たちで運用する（Meilisearch）
+shortTitle: 自前の検索サーバー
+summary: Meilisearchを自分たちの管理する実行環境で動かし、APIで検索索引を更新する方法です。
+defaultLabel: specialized
+baseScore: 0
+technologyIds:
+- meilisearch
+concepts:
+- self-hosted-search
+- search-api
+- index-synchronization
+recommendedWhen:
+- 更新頻度が高く、公開作業とは別に検索索引を更新したい
+- 検索データを第三者の検索サービスへ預けられない
+- 検索サーバーの更新、認証、監視、バックアップを担当できる
+notRecommendedWhen:
+- 検索サーバーの安全な公開と継続運用を担当できない
+- 更新頻度が低く、公開時に作る静的索引で要件を満たせる
+- 検索対象が既存PostgreSQLにあり、その全文検索だけで要件を満たせる
+advantages:
+- 自分たちが管理する環境に検索索引を置ける
+- 文書の追加と更新をAPI経由で行える
+- 検索対象項目、絞り込み、並び順、同義語などを設定できる
+disadvantages:
+- サーバー、永続データ、認証、HTTPS、監視を自分たちで管理する
+- バージョン更新に備えてバックアップと復元手順を整える必要がある
+- 日本語の検索結果は実データで確認と調整が必要
+resourceIds:
+- res-meilisearch-self-hosting
+- res-meilisearch-document-updates
+- res-meilisearch-search-settings
+lastReviewed: '2026-08-24'

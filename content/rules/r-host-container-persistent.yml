@@ -1,0 +1,15 @@
+id: r-host-container-persistent
+situationId: hosting-runtime-selection
+when:
+  all:
+  - persistent-worker-required
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 5
+reason: 常時稼働する非HTTP処理には、ワーカープールとしてコンテナを動かす実行形態があります。
+evidenceIds:
+- ev-host-cloud-run-workload-types
+lastReviewed: '2026-08-24'
+targetApproachId: managed-container-runtime

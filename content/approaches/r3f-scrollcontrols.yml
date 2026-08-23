@@ -1,0 +1,31 @@
+id: r3f-scrollcontrols
+slug: r3f-scrollcontrols
+title: R3F + ScrollControls
+shortTitle: R3F + ScrollControls
+summary: React Three FiberのシーンをReact UIと統合し、スクロール値を3D状態へ反映する方法です。
+defaultLabel: alternative
+baseScore: 1
+technologyIds:
+- react
+- r3f
+- drei
+concepts:
+- scroll
+- component-design
+- state-management
+recommendedWhen:
+- ReactサイトでUIと3Dを統合する
+- R3F/Dreiを既に採用している
+notRecommendedWhen:
+- Reactを使用しない
+- 単純なDOM演出で十分
+advantages:
+- React内で状態を共有できる
+- Dreiの補助機能を使える
+disadvantages:
+- 抽象化に依存する
+- 再レンダリング設計を誤ると負荷が増える
+resourceIds:
+- res-r3f-intro
+- res-r3f-performance
+lastReviewed: '2026-08-23'

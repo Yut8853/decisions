@@ -1,0 +1,11 @@
+id: ev-pagefind-multilingual-ja
+title: Pagefindの日本語索引
+claim: PagefindはHTMLのlang属性ごとに索引を分け、日本語では拡張版を使って空白で区切られていない語を分割する。
+sourceType: official-documentation
+sourceName: Pagefind
+url: https://pagefind.app/docs/multilingual/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []
+notes: 公式資料では日本語の語幹処理は未対応で、拡張版の単語分割を利用すると説明されている。

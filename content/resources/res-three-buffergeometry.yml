@@ -1,0 +1,10 @@
+id: res-three-buffergeometry
+type: official
+title: Three.js BufferGeometry
+url: https://threejs.org/docs/pages/BufferGeometry.html
+description: BufferGeometryの公式API資料。
+technologyIds:
+- threejs
+concepts:
+- buffer-geometry
+currentUse: Geometry統合前提の確認。

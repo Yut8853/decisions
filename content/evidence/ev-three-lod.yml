@@ -1,0 +1,10 @@
+id: ev-three-lod
+title: Three.js LOD
+claim: Three.jsのLODはカメラ距離に応じて表示するオブジェクトの詳細度を切り替える。
+sourceType: official-documentation
+sourceName: Three.js
+url: https://threejs.org/docs/pages/LOD.html
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

@@ -1,0 +1,30 @@
+id: geometry-merge-batching
+slug: geometry-merge-batching
+title: Geometry統合によるBatching
+shortTitle: Geometry Merge
+summary: 静的な複数Geometryを一つへ統合し、描画回数を減らす方法です。
+defaultLabel: alternative
+baseScore: 1
+technologyIds:
+- threejs
+- webgl
+concepts:
+- buffer-geometry
+- batching
+- draw-calls
+recommendedWhen:
+- シーンが静的
+- 個別更新や選択が不要
+notRecommendedWhen:
+- オブジェクトが頻繁に動く
+- 個別のMaterialやイベントが必要
+advantages:
+- 静的シーンのDraw Callを減らせる
+- 構成が比較的単純
+disadvantages:
+- 個別更新しにくくなる
+- 大きなGeometryの更新コストに注意が必要
+resourceIds:
+- res-three-buffergeometry
+- res-three-many-objects
+lastReviewed: '2026-08-23'

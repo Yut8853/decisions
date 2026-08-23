@@ -1,0 +1,12 @@
+id: dec-sc-react-2026-08
+slug: react-rich
+situationId: scroll-linked-3d
+title: React既存・高度表現
+conditionIds:
+- react-existing
+- advanced-visuals
+snapshotDate: '2026-08-23'
+summary: R3F案とThree.js + ScrollTrigger案が近く、既存React状態との統合を優先してR3Fを上位にします。
+expectedTopApproachIds:
+- r3f-scrollcontrols
+status: published

@@ -1,0 +1,11 @@
+id: res-babylon-loading
+type: official
+title: Babylon.js Asset Loading
+url: https://doc.babylonjs.com/features/featuresDeepDive/importers/loadingFileTypes
+description: Babylon.jsへ3Dモデルを読み込むための公式ガイド。
+technologyIds:
+- babylonjs
+- gltf
+concepts:
+- asset-loading
+currentUse: 現在のLoaderと対応形式の確認。

@@ -1,0 +1,16 @@
+id: r-seo-low-static
+situationId: seo-rich-3d
+when:
+  all:
+  - low-end-devices
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 2
+reason: 3Dを読み込まなくても内容を提示できるため低性能端末を含む案件で優先します。
+evidenceIds:
+- ev-next-lazy
+- ev-rendering-performance
+lastReviewed: '2026-08-23'
+targetApproachId: static-fallback-progressive

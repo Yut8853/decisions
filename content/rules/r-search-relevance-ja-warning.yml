@@ -1,0 +1,14 @@
+id: r-search-relevance-ja-warning
+situationId: site-search
+when:
+  all:
+  - advanced-search-relevance
+  any: []
+  none:
+  - external-service-restricted
+effect:
+  type: warn
+reason: Algoliaを選ぶ場合も標準タイプミス許容は日本語の表語文字検索に適用されないため、表記揺れと固有名詞を実データで確認してください。
+evidenceIds:
+- ev-algolia-japanese-typo-limit
+lastReviewed: '2026-08-24'

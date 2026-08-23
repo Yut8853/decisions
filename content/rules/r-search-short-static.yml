@@ -1,0 +1,15 @@
+id: r-search-short-static
+situationId: site-search
+targetApproachId: build-time-static-search
+when:
+  all:
+  - short-deadline
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 2
+reason: Pagefindは生成済みHTMLから索引と用意済みの検索画面を作れるため、短期導入の候補になります。
+evidenceIds:
+- ev-pagefind-static-bundle
+lastReviewed: '2026-08-24'

@@ -1,0 +1,31 @@
+id: canvas-image-sequence
+slug: canvas-image-sequence
+title: Canvas画像シーケンス
+shortTitle: Image Sequence
+summary: スクロール位置に合わせて事前生成した連番画像をCanvasへ描画する方法です。
+defaultLabel: fast
+baseScore: 0
+technologyIds:
+- canvas
+- javascript
+- image-delivery
+concepts:
+- preloading
+- media-delivery
+- scroll
+recommendedWhen:
+- カメラパスが固定
+- 3Dランタイムを使わず立体的な見せ方をしたい
+notRecommendedWhen:
+- 多方向の操作が必要
+- 通信量を小さく抑えたい
+advantages:
+- 見た目を制作時に確定できる
+- 3Dライブラリを不要にできる
+disadvantages:
+- 画像枚数と転送量が増えやすい
+- 読み込み戦略が必要
+resourceIds:
+- res-next-lazy
+- res-rendering-performance
+lastReviewed: '2026-08-23'

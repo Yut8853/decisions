@@ -1,0 +1,14 @@
+id: dec-pv-ar-fast-2026-08
+slug: ar-fast
+situationId: 3d-product-viewer
+title: AR・短納期・単純表示
+conditionIds:
+- ar-required
+- short-deadline
+- simple-display
+- mobile-priority
+snapshotDate: '2026-08-23'
+summary: AR導線と短納期を優先するためmodel-viewerを第一候補とします。
+expectedTopApproachIds:
+- model-viewer-product
+status: published

@@ -1,0 +1,10 @@
+id: ev-host-cloud-run-workload-types
+title: Cloud Run services, jobs, and worker pools
+claim: Cloud RunはHTTPを扱うサービス、完了まで実行するジョブ、常時稼働する非HTTPのワーカープールを別の実行形態として提供する。
+sourceType: official-documentation
+sourceName: Google Cloud Run
+url: https://docs.cloud.google.com/run/docs/overview/what-is-cloud-run
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

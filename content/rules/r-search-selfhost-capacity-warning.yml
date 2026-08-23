@@ -1,0 +1,18 @@
+id: r-search-selfhost-capacity-warning
+situationId: site-search
+when:
+  all:
+  - advanced-search-relevance
+  - external-service-restricted
+  any:
+  - short-deadline
+  - small-team
+  - maintainability-priority
+  none: []
+effect:
+  type: warn
+reason: 高度な検索調整を外部サービスなしで行うには検索サーバーの運用が必要です。担当体制を確保できない場合は、外部サービス制限または検索調整要件を見直してください。
+evidenceIds:
+- ev-meilisearch-search-settings
+- ev-meilisearch-self-hosting
+lastReviewed: '2026-08-24'

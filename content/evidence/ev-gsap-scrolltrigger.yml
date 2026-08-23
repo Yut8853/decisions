@@ -1,0 +1,10 @@
+id: ev-gsap-scrolltrigger
+title: GSAP ScrollTrigger documentation
+claim: ScrollTriggerはスクロール位置とアニメーション進行を結び付けるための設定とAPIを提供する。
+sourceType: official-documentation
+sourceName: GSAP
+url: https://gsap.com/docs/v3/Plugins/ScrollTrigger/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

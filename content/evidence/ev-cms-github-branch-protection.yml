@@ -1,0 +1,11 @@
+id: ev-cms-github-branch-protection
+title: GitHub protected branches
+claim: GitHubのブランチ保護では、マージ前のPull Request承認と状態チェックを必須にし、管理者を含む迂回を許可しない設定を選べる。
+sourceType: official-documentation
+sourceName: GitHub Docs
+url: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []
+notes: 必須レビュー、必須チェック、迂回禁止はリポジトリ側で個別に設定する。

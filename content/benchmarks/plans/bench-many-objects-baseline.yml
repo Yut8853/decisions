@@ -1,0 +1,18 @@
+id: bench-many-objects-baseline
+title: 大量オブジェクト最適化の合成比較
+situationId: threejs-many-objects
+approachIds:
+- threejs-instancing
+- geometry-merge-batching
+- lod-frustum-culling
+status: planned
+metrics:
+- fpsMedian
+- drawCalls
+- triangles
+- jsHeapBytes
+fixture: 同一色・同一形状を1,000個配置する合成シーン。
+protocol:
+- 同一端末・ブラウザで実行する。
+- カメラ位置とオブジェクト数を固定する。
+- Runner生成値以外を結果ファイルへ記入しない。

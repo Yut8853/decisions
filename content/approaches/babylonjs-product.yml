@@ -1,0 +1,31 @@
+id: babylonjs-product
+slug: babylonjs-product
+title: Babylon.jsによる3Dアプリ型ビューア
+shortTitle: Babylon.js
+summary: エンジン機能を広く利用し、商品表示から複雑な3Dアプリへ拡張する構成です。
+defaultLabel: specialized
+baseScore: 0
+technologyIds:
+- babylonjs
+- gltf
+- typescript
+concepts:
+- scene
+- asset-loading
+- engine-tooling
+recommendedWhen:
+- ビューアから複雑な3Dアプリへ発展する
+- Babylon.jsの統合機能を活用したい
+notRecommendedWhen:
+- 単純表示だけでよい
+- 小さなチームで短期間に作る
+advantages:
+- 統合された3Dエンジン機能が豊富
+- 開発ツールを利用できる
+disadvantages:
+- 小規模用途には機能と学習範囲が大きい
+- Three.js資産をそのまま流用できない
+resourceIds:
+- res-babylon-loading
+- book-real-time-rendering
+lastReviewed: '2026-08-23'

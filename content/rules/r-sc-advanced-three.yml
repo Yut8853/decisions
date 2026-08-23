@@ -1,0 +1,16 @@
+id: r-sc-advanced-three
+situationId: scroll-linked-3d
+when:
+  all:
+  - advanced-visuals
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 3
+reason: カメラ、モデル、シェーダーをスクロールへ同期する自由度が必要なため優先します。
+evidenceIds:
+- ev-three-webgpu
+- ev-gsap-scrolltrigger
+lastReviewed: '2026-08-23'
+targetApproachId: threejs-scrolltrigger

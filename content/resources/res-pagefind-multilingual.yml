@@ -1,0 +1,12 @@
+id: res-pagefind-multilingual
+type: official
+title: Pagefind 多言語検索ガイド
+url: https://pagefind.app/docs/multilingual/
+description: 言語別索引と日本語の単語分割に関する現在の対応を確認する公式資料です。
+technologyIds:
+- pagefind
+concepts:
+- multilingual-search
+- japanese-tokenization
+currentUse: 日本語ページのlang属性と拡張版の要件確認。
+limitations: 日本語の語幹処理には対応していないため、固有名詞や表記揺れを実データで確認します。

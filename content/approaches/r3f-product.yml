@@ -1,0 +1,32 @@
+id: r3f-product
+slug: r3f-product
+title: React Three FiberによるReact統合型ビューア
+shortTitle: R3F + Three.js
+summary: Reactの宣言的な構成と状態管理の中にThree.jsシーンを組み込む方法です。
+defaultLabel: alternative
+baseScore: 1
+technologyIds:
+- react
+- r3f
+- threejs
+concepts:
+- react-reconciliation
+- scene
+- state-management
+recommendedWhen:
+- 既存Reactアプリで3DとUI状態を連携する
+- チームがReactに習熟している
+notRecommendedWhen:
+- Reactを使用していない
+- 単純表示だけで依存を増やしたくない
+advantages:
+- Reactコンポーネントとして管理できる
+- Dreiなど周辺機能を利用できる
+disadvantages:
+- ReactとThree.js双方の理解が必要
+- 抽象化の挙動を理解せず最適化すると難しい
+resourceIds:
+- res-r3f-intro
+- res-r3f-performance
+- book-react-design
+lastReviewed: '2026-08-23'

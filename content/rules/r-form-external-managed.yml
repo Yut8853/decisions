@@ -1,0 +1,15 @@
+id: r-form-external-managed
+situationId: secure-contact-form
+targetApproachId: managed-form-service
+when:
+  all:
+  - external-service-restricted
+  any: []
+  none: []
+effect:
+  type: exclude
+reason: Formspree方式は外部の受付先へ問い合わせ内容を送信するため、外部SaaSへ送信できない条件と両立しません。
+evidenceIds:
+- ev-formspree-managed-handler
+- ev-formspree-hosting-security
+lastReviewed: '2026-08-24'

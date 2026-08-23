@@ -1,0 +1,15 @@
+id: r-sc-low-three
+situationId: scroll-linked-3d
+when:
+  all:
+  - low-end-devices
+  any: []
+  none: []
+effect:
+  type: penalize
+  weight: 2
+reason: 低性能端末では3D描画とスクロール処理を同時に維持する負荷が高くなります。
+evidenceIds:
+- ev-rendering-performance
+lastReviewed: '2026-08-23'
+targetApproachId: threejs-scrolltrigger

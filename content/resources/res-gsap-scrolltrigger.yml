@@ -1,0 +1,11 @@
+id: res-gsap-scrolltrigger
+type: official
+title: GSAP ScrollTrigger
+url: https://gsap.com/docs/v3/Plugins/ScrollTrigger/
+description: スクロール連動制御の公式API資料。
+technologyIds:
+- gsap
+concepts:
+- scroll
+- timeline
+currentUse: 現在の設定とイベントの確認。

@@ -1,0 +1,15 @@
+id: r-search-frequent-hosted
+situationId: site-search
+targetApproachId: hosted-search-service
+when:
+  all:
+  - frequent-content-updates
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 3
+reason: Algoliaは検索レコードをAPIで追加・更新できるため、サイト全体の再公開と索引更新を分けられます。
+evidenceIds:
+- ev-algolia-record-management
+lastReviewed: '2026-08-24'
