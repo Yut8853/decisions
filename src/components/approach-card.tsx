@@ -1,6 +1,7 @@
 "use client";
 
 import { track } from "@vercel/analytics";
+import Link from "next/link";
 import type { Evidence, RankedApproach, Resource } from "@/lib/types";
 
 const evidenceTypeLabels: Record<Evidence["sourceType"], string> = {
@@ -35,6 +36,8 @@ export function ApproachCard({
 }) {
   const evidence = item.evidenceIds.map((id) => evidenceMap.get(id)).filter(Boolean) as Evidence[];
   const resources = item.approach.resourceIds.map((id) => resourceMap.get(id)).filter(Boolean) as Resource[];
+  const books = resources.filter((resource) => resource.type === "book");
+  const otherResources = resources.filter((resource) => resource.type !== "book");
   return (
     <article className={rank === 1 ? "approach-card top" : "approach-card"}>
       <header>
@@ -49,6 +52,39 @@ export function ApproachCard({
         <div><strong>向いている</strong><ul>{item.approach.recommendedWhen.map((text) => <li key={text}>{text}</li>)}</ul></div>
         <div><strong>向いていない</strong><ul>{item.approach.notRecommendedWhen.map((text) => <li key={text}>{text}</li>)}</ul></div>
       </div>
+      {books.length ? (
+        <section className="approach-books" aria-label="この実装案に関連する書籍">
+          <header>
+            <div>
+              <h4>この実装案に関連する書籍</h4>
+              <p>背景知識や設計の考え方を深く学べます。</p>
+            </div>
+            <Link href="/books">書籍一覧を見る →</Link>
+          </header>
+          <div className="approach-book-grid">
+            {books.map((book) => (
+              <a
+                className="approach-book-card"
+                href={book.url}
+                target="_blank"
+                rel="noreferrer"
+                key={book.id}
+                onClick={() => track("book_click", { situation: situationSlug, resource: book.id })}
+              >
+                <span className="approach-book-cover">
+                  <img src={book.coverImageUrl} alt={book.coverImageAlt} loading="lazy" decoding="async" />
+                </span>
+                <span className="approach-book-copy">
+                  <small>{[book.language, book.edition, book.versionNote].filter(Boolean).join("・")}</small>
+                  <b>{book.title}</b>
+                  <span>著者：{book.authors?.join("、")}</span>
+                  <i>書籍ページを開く<span className="sr-only">（新しいタブで開きます）</span> ↗</i>
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ) : null}
       <details className="approach-details" onToggle={(event) => {
         if ((event.currentTarget as HTMLDetailsElement).open) track("approach_expand", { situation: situationSlug, approach: item.approach.slug });
       }}>
@@ -65,14 +101,16 @@ export function ApproachCard({
             </a>
           )) : <p>標準の並び順です。追加条件による根拠はありません。</p>}
         </div>
-        <div className="resource-links">
-          <h4>さらに確認・理解する</h4>
-          {resources.map((resource) => (
-            <a key={resource.id} href={resource.url ?? resource.amazonUrl} target="_blank" rel="noreferrer" onClick={() => track(resource.type === "book" ? "book_click" : "official_docs_click", { situation: situationSlug, resource: resource.id })}>
-              <small>{resourceTypeLabels[resource.type]}</small><b>{resource.title}</b><span>{resource.currentUse}</span><i>↗</i>
-            </a>
-          ))}
-        </div>
+        {otherResources.length ? (
+          <div className="resource-links">
+            <h4>さらに確認・理解する</h4>
+            {otherResources.map((resource) => (
+              <a key={resource.id} href={resource.url ?? resource.amazonUrl} target="_blank" rel="noreferrer" onClick={() => track("official_docs_click", { situation: situationSlug, resource: resource.id })}>
+                <small>{resourceTypeLabels[resource.type]}</small><b>{resource.title}</b><span>{resource.currentUse}</span><i>↗</i>
+              </a>
+            ))}
+          </div>
+        ) : null}
       </details>
     </article>
   );

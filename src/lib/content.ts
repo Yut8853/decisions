@@ -1,10 +1,14 @@
 import content from "@/generated/content.json";
-import type { ContentBundle } from "./types";
+import type { BookResource, ContentBundle } from "./types";
 
 export const contentBundle = content as ContentBundle;
 
 export function getPublishedSituations() {
   return contentBundle.situations.filter((item) => item.published);
+}
+
+export function getBookResources(): BookResource[] {
+  return contentBundle.resources.filter((item): item is BookResource => item.type === "book");
 }
 
 export function getSituationBySlug(slug: string) {

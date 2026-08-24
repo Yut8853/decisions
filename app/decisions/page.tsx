@@ -10,7 +10,7 @@ export default function DecisionsPage() {
     <section className="shell page-shell">
       <p className="eyebrow">技術判断の一覧</p>
       <h1 className="page-title">何をしたいですか？</h1>
-      <p className="page-intro">目的のカテゴリーを選ぶか、困っていることを検索してください。技術名が分からなくても探せます。</p>
+      <p className="page-intro">近い分野を選ぶか、やりたいことを検索してください。技術名が分からなくても探せます。</p>
       <DecisionDirectory situations={situations} />
     </section>
   );

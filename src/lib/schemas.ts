@@ -98,12 +98,42 @@ export const resourceSchema = z.object({
   title: z.string().min(1),
   url: z.string().url().optional(),
   amazonUrl: z.string().url().optional(),
+  authors: z.array(z.string().min(1)).optional(),
+  language: z.string().min(1).optional(),
+  edition: z.string().min(1).optional(),
+  versionNote: z.string().min(1).optional(),
+  isbn: z.string().min(10).optional(),
+  coverImageUrl: z.string().url().optional(),
+  coverImageAlt: z.string().min(1).optional(),
+  coverSourceName: z.string().min(1).optional(),
+  coverSourceUrl: z.string().url().optional(),
   description: z.string().min(10),
   technologyIds: z.array(id).default([]),
   concepts: z.array(id).default([]),
   currentUse: z.string().min(5),
   limitations: z.string().optional()
-}).refine((value) => value.url || value.amazonUrl, "A resource requires url or amazonUrl.");
+}).superRefine((value, ctx) => {
+  if (!value.url && !value.amazonUrl) {
+    ctx.addIssue({ code: "custom", message: "A resource requires url or amazonUrl." });
+  }
+  if (value.type !== "book") return;
+
+  const requiredBookFields = [
+    ["url", value.url],
+    ["authors", value.authors?.length],
+    ["language", value.language],
+    ["coverImageUrl", value.coverImageUrl],
+    ["coverImageAlt", value.coverImageAlt],
+    ["coverSourceName", value.coverSourceName],
+    ["coverSourceUrl", value.coverSourceUrl],
+    ["limitations", value.limitations]
+  ] as const;
+  for (const [field, fieldValue] of requiredBookFields) {
+    if (!fieldValue) {
+      ctx.addIssue({ code: "custom", path: [field], message: `A book resource requires ${field}.` });
+    }
+  }
+});
 
 export const decisionPresetSchema = z.object({
   id,

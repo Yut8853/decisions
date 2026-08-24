@@ -94,11 +94,32 @@ export type Resource = {
   title: string;
   url?: string;
   amazonUrl?: string;
+  authors?: string[];
+  language?: string;
+  edition?: string;
+  versionNote?: string;
+  isbn?: string;
+  coverImageUrl?: string;
+  coverImageAlt?: string;
+  coverSourceName?: string;
+  coverSourceUrl?: string;
   description: string;
   technologyIds: string[];
   concepts: string[];
   currentUse: string;
   limitations?: string;
+};
+
+export type BookResource = Resource & {
+  type: "book";
+  url: string;
+  authors: string[];
+  language: string;
+  coverImageUrl: string;
+  coverImageAlt: string;
+  coverSourceName: string;
+  coverSourceUrl: string;
+  limitations: string;
 };
 
 export type DecisionPreset = {

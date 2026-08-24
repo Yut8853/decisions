@@ -79,4 +79,12 @@ PlanとResultを分離します。Resultは `benchmark-runner` が生成したpr
 - 公式：現在のAPI・Support・Migration
 - 書籍：原理・設計・体系的理解
 
-書籍が現在の実装手順を扱わない場合は `limitations` に明記します。
+書籍Resourceは、曖昧な検索リンクではなく、書籍を特定できる直接の `url` を持たせます。表示と出典確認のため、次の項目も必須です。
+
+- `authors`
+- `language`
+- `coverImageUrl` / `coverImageAlt`
+- `coverSourceName` / `coverSourceUrl`
+- `limitations`
+
+`edition`、`versionNote`、`isbn` は該当する場合に記録します。`limitations` には、対応言語や現在の実装手順にそのまま使えない範囲を明記します。

@@ -42,6 +42,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </Link>
           <nav aria-label="メインナビゲーション">
             <Link href="/decisions">技術判断</Link>
+            <Link href="/books">書籍</Link>
             <Link href="/methodology">判定方法</Link>
           </nav>
         </header>

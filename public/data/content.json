@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T11:22:02.972Z",
+  "generatedAt": "2026-08-24T11:58:23.374Z",
   "situations": [
     {
       "id": "3d-portfolio",
@@ -7829,23 +7829,45 @@
       "id": "book-book-of-shaders",
       "type": "book",
       "title": "The Book of Shaders",
-      "url": "https://thebookofshaders.com/",
-      "description": "GLSLとシェーダー表現を小さな例から学べるオンラインブック。",
+      "url": "https://thebookofshaders.com/?lan=jp",
+      "authors": [
+        "Patricio Gonzalez Vivo",
+        "Jen Lowe"
+      ],
+      "language": "日本語（一部英語）",
+      "versionNote": "無料オンラインブック",
+      "coverImageUrl": "https://thebookofshaders.com/thumb.png",
+      "coverImageAlt": "The Book of Shadersの公式画像",
+      "coverSourceName": "The Book of Shaders公式サイト",
+      "coverSourceUrl": "https://thebookofshaders.com/?lan=jp",
+      "description": "GLSLとシェーダー表現を、実際に動かせる小さな例から学べる無料のオンラインブック。",
       "technologyIds": [
         "glsl"
       ],
       "concepts": [
         "shader"
       ],
-      "currentUse": "シェーダーの考え方と表現の基礎。",
-      "limitations": "Three.js固有APIの最新手順は別途公式資料で確認する。"
+      "currentUse": "シェーダーの基本的な考え方と、形や色を数式で表現する方法を学ぶ。",
+      "limitations": "一部の章は日本語化されていない。Three.js固有APIの最新手順は公式資料で確認する。"
     },
     {
       "id": "book-designing-interfaces",
       "type": "book",
-      "title": "Designing Interfaces",
-      "amazonUrl": "https://www.amazon.co.jp/s?k=Designing+Interfaces",
-      "description": "UIパターンと情報の見せ方を体系的に扱う本。",
+      "title": "Designing Interfaces: Patterns for Effective Interaction Design",
+      "url": "https://www.oreilly.com/library/view/designing-interfaces-3rd/9781492051954/",
+      "authors": [
+        "Jenifer Tidwell",
+        "Charles Brewer",
+        "Aynne Valencia"
+      ],
+      "language": "英語",
+      "edition": "第3版",
+      "isbn": "978-1-4920-5196-1",
+      "coverImageUrl": "https://covers.openlibrary.org/b/id/14572298-M.jpg",
+      "coverImageAlt": "Designing Interfaces 第3版の表紙",
+      "coverSourceName": "Open Library",
+      "coverSourceUrl": "https://openlibrary.org/isbn/9781492051961",
+      "description": "画面設計で繰り返し使われるパターンと、情報を分かりやすく見せる方法を体系的に扱う本。",
       "technologyIds": [
         "html",
         "css"
@@ -7855,14 +7877,24 @@
         "information-architecture"
       ],
       "currentUse": "3D表現の外側にあるUIと導線を設計する。",
-      "limitations": "3Dライブラリの実装方法を扱う本ではない。"
+      "limitations": "英語の書籍であり、3Dライブラリの実装方法や最新APIを扱う本ではない。"
     },
     {
       "id": "book-react-design",
       "type": "book",
-      "title": "React設計・コンポーネント設計の書籍を選ぶ",
-      "amazonUrl": "https://www.amazon.co.jp/s?k=React+設計+コンポーネント",
-      "description": "React固有APIだけでなく、状態境界とコンポーネント責務を体系的に学ぶための選書枠。",
+      "title": "React本格入門 ～実践力が身に付くコンポーネント開発～",
+      "url": "https://gihyo.jp/book/2026/978-4-297-15523-0",
+      "authors": [
+        "樹下雅章"
+      ],
+      "language": "日本語",
+      "versionNote": "React 19対応",
+      "isbn": "978-4-297-15523-0",
+      "coverImageUrl": "https://gihyo.jp/assets/images/cover/2026/thumb/TH800_9784297155230.jpg",
+      "coverImageAlt": "React本格入門の表紙",
+      "coverSourceName": "技術評論社",
+      "coverSourceUrl": "https://gihyo.jp/book/2026/978-4-297-15523-0",
+      "description": "React 19を対象に、画面を部品へ分ける考え方、propsとstate、状態管理を日本語で学べる本。",
       "technologyIds": [
         "react"
       ],
@@ -7870,15 +7902,30 @@
         "component-design",
         "state-management"
       ],
-      "currentUse": "R3FをReactアプリへ統合する設計原則を理解する。",
-      "limitations": "購入前に対象Reactバージョンと目次を確認する。"
+      "currentUse": "React Three FiberをReactアプリへ組み込む際の、コンポーネント設計と状態の分け方を理解する。",
+      "limitations": "React Three FiberやThree.js自体の詳しい使い方は扱わないため、それぞれの公式資料も確認する。"
     },
     {
       "id": "book-real-time-rendering",
       "type": "book",
       "title": "Real-Time Rendering, Fourth Edition",
-      "amazonUrl": "https://www.amazon.co.jp/s?k=Real-Time+Rendering+Fourth+Edition",
-      "description": "リアルタイムレンダリングの原理とアルゴリズムを体系的に学ぶ本。",
+      "url": "https://www.routledge.com/Real-Time-Rendering-Fourth-Edition/Akenine-Moller-Haines-Hillaire-Hoffman-Iwanicki-Pesce/p/book/9781138627000",
+      "authors": [
+        "Tomas Akenine-Möller",
+        "Eric Haines",
+        "Naty Hoffman",
+        "Angelo Pesce",
+        "Michał Iwanicki",
+        "Sébastien Hillaire"
+      ],
+      "language": "英語",
+      "edition": "第4版",
+      "isbn": "978-1-138-62700-0",
+      "coverImageUrl": "https://covers.openlibrary.org/b/id/9234619-M.jpg",
+      "coverImageAlt": "Real-Time Rendering 第4版の表紙",
+      "coverSourceName": "Open Library",
+      "coverSourceUrl": "https://openlibrary.org/isbn/9781138627000",
+      "description": "リアルタイムで3Dを描画するための原理とアルゴリズムを、幅広く体系的に学べる本。",
       "technologyIds": [
         "webgl",
         "webgpu"
@@ -7888,8 +7935,8 @@
         "lighting",
         "gpu"
       ],
-      "currentUse": "APIではなく普遍的なレンダリング原理を理解する。",
-      "limitations": "個別ライブラリの最新API解説ではない。"
+      "currentUse": "個別のAPIに依存しない、描画・光・GPU処理の基本原理を理解する。",
+      "limitations": "英語の書籍であり、Three.jsなど個別ライブラリの最新API解説ではない。"
     },
     {
       "id": "res-ae-wai-evaluation-tools",

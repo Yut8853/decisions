@@ -1,8 +1,19 @@
 id: book-designing-interfaces
 type: book
-title: Designing Interfaces
-amazonUrl: https://www.amazon.co.jp/s?k=Designing+Interfaces
-description: UIパターンと情報の見せ方を体系的に扱う本。
+title: "Designing Interfaces: Patterns for Effective Interaction Design"
+url: https://www.oreilly.com/library/view/designing-interfaces-3rd/9781492051954/
+authors:
+- Jenifer Tidwell
+- Charles Brewer
+- Aynne Valencia
+language: 英語
+edition: 第3版
+isbn: 978-1-4920-5196-1
+coverImageUrl: https://covers.openlibrary.org/b/id/14572298-M.jpg
+coverImageAlt: Designing Interfaces 第3版の表紙
+coverSourceName: Open Library
+coverSourceUrl: https://openlibrary.org/isbn/9781492051961
+description: 画面設計で繰り返し使われるパターンと、情報を分かりやすく見せる方法を体系的に扱う本。
 technologyIds:
 - html
 - css
@@ -10,4 +21,4 @@ concepts:
 - interface-design
 - information-architecture
 currentUse: 3D表現の外側にあるUIと導線を設計する。
-limitations: 3Dライブラリの実装方法を扱う本ではない。
+limitations: 英語の書籍であり、3Dライブラリの実装方法や最新APIを扱う本ではない。

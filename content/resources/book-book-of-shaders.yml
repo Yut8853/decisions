@@ -1,11 +1,20 @@
 id: book-book-of-shaders
 type: book
 title: The Book of Shaders
-url: https://thebookofshaders.com/
-description: GLSLとシェーダー表現を小さな例から学べるオンラインブック。
+url: https://thebookofshaders.com/?lan=jp
+authors:
+- Patricio Gonzalez Vivo
+- Jen Lowe
+language: 日本語（一部英語）
+versionNote: 無料オンラインブック
+coverImageUrl: https://thebookofshaders.com/thumb.png
+coverImageAlt: The Book of Shadersの公式画像
+coverSourceName: The Book of Shaders公式サイト
+coverSourceUrl: https://thebookofshaders.com/?lan=jp
+description: GLSLとシェーダー表現を、実際に動かせる小さな例から学べる無料のオンラインブック。
 technologyIds:
 - glsl
 concepts:
 - shader
-currentUse: シェーダーの考え方と表現の基礎。
-limitations: Three.js固有APIの最新手順は別途公式資料で確認する。
+currentUse: シェーダーの基本的な考え方と、形や色を数式で表現する方法を学ぶ。
+limitations: 一部の章は日本語化されていない。Three.js固有APIの最新手順は公式資料で確認する。

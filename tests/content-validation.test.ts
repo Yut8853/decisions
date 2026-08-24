@@ -32,4 +32,20 @@ describe("content validation", () => {
     expect(new Set(featured.map(({ situation }) => situation.id)).size).toBe(featured.length);
     expect(new Set(featured.map(({ categoryTitle }) => categoryTitle))).toEqual(new Set(categories.map(({ title }) => title)));
   });
+
+  it("requires complete display and direct-source data for every book", () => {
+    const books = loadContent().resources.filter((resource) => resource.type === "book");
+    expect(books.length).toBeGreaterThanOrEqual(4);
+    for (const book of books) {
+      expect(book.url).toMatch(/^https:\/\//);
+      expect(book.url).not.toMatch(/amazon\.[^/]+\/s\?/);
+      if (book.amazonUrl) expect(book.amazonUrl).not.toMatch(/amazon\.[^/]+\/s\?/);
+      expect(book.authors?.length).toBeGreaterThan(0);
+      expect(book.language).toBeTruthy();
+      expect(book.coverImageUrl).toMatch(/^https:\/\//);
+      expect(book.coverImageAlt).toBeTruthy();
+      expect(book.coverSourceName).toBeTruthy();
+      expect(book.coverSourceUrl).toMatch(/^https:\/\//);
+    }
+  });
 });
