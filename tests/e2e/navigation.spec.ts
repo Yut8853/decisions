@@ -1,4 +1,26 @@
 import { test, expect } from "@playwright/test";
+import content from "../../src/generated/content.json";
+
+const publishedSituations = content.situations.filter((situation) => situation.published);
+
+test("home exposes every current goal and keeps category routes", async ({ page }) => {
+  await page.goto("/");
+
+  const goals = page.getByRole("navigation", { name: "やりたいことから探す" });
+  await expect(goals.getByRole("link")).toHaveCount(publishedSituations.length);
+  for (const situation of publishedSituations) {
+    const link = goals.locator(`a[href="/decisions/${situation.slug}"]`);
+    await expect(link).toHaveCount(1);
+    await expect(link).toContainText(situation.title);
+  }
+
+  const categories = page.getByRole("navigation", { name: "カテゴリで絞る" });
+  await expect(categories.getByRole("link")).toHaveCount(5);
+  await expect(categories.getByRole("heading", { name: "開発・運用を整える" })).toBeVisible();
+
+  await goals.getByRole("link", { name: /問い合わせフォームを安全に運用したい/ }).click();
+  await expect(page).toHaveURL(/\/decisions\/secure-contact-form$/);
+});
 
 test("category directory filters and searches decisions", async ({ page }) => {
   await page.goto("/decisions");

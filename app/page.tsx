@@ -5,6 +5,13 @@ import { getVisibleSituationCategories } from "@/lib/situation-categories";
 export default function HomePage() {
   const situations = getPublishedSituations();
   const categories = getVisibleSituationCategories(situations);
+  const situationChoices = categories.flatMap((category) =>
+    category.situations.map((situation) => ({
+      situation,
+      categoryTitle: category.title
+    }))
+  );
+
   return (
     <>
       <section className="hero shell">
@@ -17,7 +24,7 @@ export default function HomePage() {
           作りたいものと条件を選ぶと、おすすめの実装案と避けるべき案が分かります。判断の根拠、確認日、向いていない条件も掲載しています。
         </p>
         <div className="hero-actions">
-          <Link className="button primary" href="#categories">カテゴリから探す</Link>
+          <Link className="button primary" href="#categories">やりたいことから探す</Link>
           <Link className="button ghost" href="/decisions">すべての判断を見る</Link>
         </div>
       </section>
@@ -25,26 +32,46 @@ export default function HomePage() {
       <section className="shell section-block" id="categories">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">カテゴリから探す</p>
+            <p className="eyebrow">やりたいことから探す</p>
             <h2>まず、やりたいことを選ぶ</h2>
           </div>
-          <Link href="/decisions">すべて見る →</Link>
+          <Link href="/decisions">{situationChoices.length}件を一覧で見る →</Link>
         </div>
-        <div className="home-category-grid">
+
+        <nav aria-label="やりたいことから探す">
+          <ul className="home-choice-grid">
+            {situationChoices.map(({ situation, categoryTitle }) => (
+              <li key={situation.id}>
+                <Link className="home-choice-card" href={`/decisions/${situation.slug}`}>
+                  <span className="home-choice-category">{categoryTitle}</span>
+                  <h3>{situation.title}</h3>
+                  <p>{situation.summary}</p>
+                  <span className="home-choice-link">条件を選んで比較する →</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="home-category-heading">
+          <div>
+            <h3 id="home-category-heading">カテゴリで絞る</h3>
+            <p>近い目的をまとめて探せます。</p>
+          </div>
+          <Link href="/decisions">検索と絞り込みを使う →</Link>
+        </div>
+        <nav aria-labelledby="home-category-heading" className="home-category-grid">
           {categories.map((category) => (
             <Link className="home-category-card" href={`/decisions#category-${category.id}`} key={category.id}>
               <div>
                 <small>{category.situations.length}件</small>
-                <h3>{category.title}</h3>
-                <p>{category.description}</p>
+                <h4>{category.title}</h4>
+                <p>{category.prompt}</p>
               </div>
-              <ul>
-                {category.situations.slice(0, 3).map((situation) => <li key={situation.id}>{situation.title}</li>)}
-              </ul>
-              <span>このカテゴリを見る →</span>
+              <span>まとめて見る →</span>
             </Link>
           ))}
-        </div>
+        </nav>
       </section>
 
       <section className="shell principles section-block">
