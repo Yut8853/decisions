@@ -26,4 +26,5 @@ disadvantages:
 resourceIds:
 - res-three-instancedmesh
 - res-three-many-objects
+- book-real-time-rendering
 lastReviewed: '2026-08-23'

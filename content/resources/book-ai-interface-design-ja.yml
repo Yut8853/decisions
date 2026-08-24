@@ -1,0 +1,25 @@
+id: book-ai-interface-design-ja
+type: book
+title: AIインターフェースデザイン
+url: https://www.oreilly.co.jp/books/9784814401772/
+authors:
+- Louise Macfadyen
+- 江川崇（訳）
+language: 日本語
+versionNote: 2026年日本語版
+isbn: 978-4-8144-0177-2
+coverImageUrl: https://www.oreilly.co.jp/books/images/picture_large978-4-8144-0177-2.jpeg
+coverImageAlt: AIインターフェースデザインの表紙
+coverSourceName: オライリー・ジャパン
+coverSourceUrl: https://www.oreilly.co.jp/books/9784814401772/
+bookTopicIds:
+- data-ai-search
+- design-ux
+description: 出力が一定しないAI機能について、入力、処理中の状態、エラー、根拠、検証可能な出力、エージェントの計画を利用者へ伝える原則を扱う本。
+technologyIds:
+- llm
+concepts:
+- ai-interface
+- human-ai-interaction
+currentUse: 資料に基づく質問機能で、出典、処理状況、失敗、確認方法を利用者に分かる形で提示する。
+limitations: UI設計の本であり、検索精度、モデル安全性、個人情報管理を単独で保証しない。採用するAIサービスの仕様確認も必要になる。

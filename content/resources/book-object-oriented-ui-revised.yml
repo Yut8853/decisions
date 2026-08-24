@@ -1,0 +1,27 @@
+id: book-object-oriented-ui-revised
+type: book
+title: ［改訂新版］オブジェクト指向UIデザイン
+url: https://gihyo.jp/book/2026/978-4-297-15716-6
+authors:
+- ソシオメディア株式会社
+- 上野学
+- 藤井幸多
+language: 日本語
+edition: 改訂新版
+versionNote: 2026年刊
+isbn: 978-4-297-15716-6
+coverImageUrl: https://gihyo.jp/assets/images/cover/2026/thumb/TH800_9784297157166.jpg
+coverImageAlt: 改訂新版 オブジェクト指向UIデザインの表紙
+coverSourceName: 技術評論社
+coverSourceUrl: https://gihyo.jp/book/2026/978-4-297-15716-6
+bookTopicIds:
+- design-ux
+- frontend
+description: 利用者が扱う対象を起点に、画面、移動、操作を組み立てるオブジェクト指向UIの原理と演習を扱う本。
+technologyIds:
+- user-interface
+concepts:
+- object-oriented-ui
+- information-architecture
+currentUse: 業務やアプリの画面を、手続きの順番だけでなく対象とその関係から整理する。
+limitations: 改訂新版では図版とあとがきが更新されたが、本文は2020年版から変更されていない。すべての手続き型画面を否定するものではない。

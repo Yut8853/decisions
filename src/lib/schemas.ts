@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { bookTopicIds } from "./book-topic-ids";
 import { situationCategoryIds } from "./situation-category-ids";
 
 const id = z.string().min(2).regex(/^[a-z0-9][a-z0-9-]*$/);
@@ -107,6 +108,7 @@ export const resourceSchema = z.object({
   coverImageAlt: z.string().min(1).optional(),
   coverSourceName: z.string().min(1).optional(),
   coverSourceUrl: z.string().url().optional(),
+  bookTopicIds: z.array(z.enum(bookTopicIds)).optional(),
   description: z.string().min(10),
   technologyIds: z.array(id).default([]),
   concepts: z.array(id).default([]),
@@ -126,6 +128,7 @@ export const resourceSchema = z.object({
     ["coverImageAlt", value.coverImageAlt],
     ["coverSourceName", value.coverSourceName],
     ["coverSourceUrl", value.coverSourceUrl],
+    ["bookTopicIds", value.bookTopicIds?.length],
     ["limitations", value.limitations]
   ] as const;
   for (const [field, fieldValue] of requiredBookFields) {

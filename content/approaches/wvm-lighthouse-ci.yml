@@ -29,4 +29,6 @@ disadvantages:
 - 認証や画面操作が必要な対象には追加設定が必要
 resourceIds:
 - res-wvm-lighthouse-ci
+- book-web-frontend-performance-tuning
+- book-web-performance-engineering-ai
 lastReviewed: '2026-08-24'

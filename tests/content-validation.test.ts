@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { loadContent, loadManifest } from "../scripts/lib/load-content";
 import { validateBundle } from "../scripts/lib/validate-bundle";
+import { bookTopics } from "@/lib/book-topics";
 import { getFeaturedSituationChoices, getVisibleSituationCategories } from "@/lib/situation-categories";
 
 describe("content validation", () => {
@@ -35,7 +36,8 @@ describe("content validation", () => {
 
   it("requires complete display and direct-source data for every book", () => {
     const books = loadContent().resources.filter((resource) => resource.type === "book");
-    expect(books.length).toBeGreaterThanOrEqual(4);
+    expect(books.length).toBeGreaterThanOrEqual(20);
+    expect(new Set(books.map((book) => book.url)).size).toBe(books.length);
     for (const book of books) {
       expect(book.url).toMatch(/^https:\/\//);
       expect(book.url).not.toMatch(/amazon\.[^/]+\/s\?/);
@@ -46,6 +48,34 @@ describe("content validation", () => {
       expect(book.coverImageAlt).toBeTruthy();
       expect(book.coverSourceName).toBeTruthy();
       expect(book.coverSourceUrl).toMatch(/^https:\/\//);
+      expect(book.bookTopicIds?.length).toBeGreaterThan(0);
+    }
+  });
+
+  it("backs every book topic with multiple books and substantial accessibility coverage", () => {
+    const books = loadContent().resources.filter((resource) => resource.type === "book");
+    for (const topic of bookTopics) {
+      expect(books.filter((book) => book.bookTopicIds?.includes(topic.id)).length).toBeGreaterThanOrEqual(2);
+    }
+    expect(books.filter((book) => book.bookTopicIds?.includes("accessibility")).length).toBeGreaterThanOrEqual(5);
+  });
+
+  it("links every book from at least one decision approach", () => {
+    const content = loadContent();
+    const referencedIds = new Set(content.approaches.flatMap((approach) => approach.resourceIds));
+    const books = content.resources.filter((resource) => resource.type === "book");
+    for (const book of books) {
+      expect(referencedIds.has(book.id)).toBe(true);
+    }
+  });
+
+  it("offers at least one related book from every published decision", () => {
+    const content = loadContent();
+    const bookIds = new Set(content.resources.filter((resource) => resource.type === "book").map((book) => book.id));
+    const approachMap = new Map(content.approaches.map((approach) => [approach.id, approach]));
+    for (const situation of content.situations.filter((item) => item.published)) {
+      const relatedResourceIds = situation.approachIds.flatMap((id) => approachMap.get(id)?.resourceIds ?? []);
+      expect(relatedResourceIds.some((id) => bookIds.has(id))).toBe(true);
     }
   });
 });

@@ -1,12 +1,14 @@
 import { test, expect, type Page } from "@playwright/test";
 import content from "../../src/generated/content.json";
+import { bookTopics, getBookTopicsWithCounts } from "../../src/lib/book-topics";
 import { getFeaturedSituationChoices, getVisibleSituationCategories } from "../../src/lib/situation-categories";
-import type { Situation } from "../../src/lib/types";
+import type { BookResource, Situation } from "../../src/lib/types";
 
 const publishedSituations = content.situations.filter((situation) => situation.published) as Situation[];
 const visibleCategories = getVisibleSituationCategories(publishedSituations);
 const featuredSituations = getFeaturedSituationChoices(visibleCategories);
-const bookResources = content.resources.filter((resource) => resource.type === "book");
+const bookResources = content.resources.filter((resource) => resource.type === "book") as BookResource[];
+const bookTopicsWithCounts = getBookTopicsWithCounts(bookResources);
 
 async function expectStableLayout(page: Page) {
   const layout = await page.evaluate(() => ({
@@ -124,7 +126,9 @@ test("book library shows covers, authors and direct links", async ({ page }) => 
 
   const cards = page.locator(".book-library-card");
   await expect(cards).toHaveCount(bookResources.length);
-  await expect(page.getByRole("heading", { name: "掲載中の書籍" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "分野から本を探す" })).toBeVisible();
+  const topicFilter = page.getByRole("group", { name: "書籍の分野を選ぶ" });
+  await expect(topicFilter.getByRole("radio")).toHaveCount(bookTopics.length + 1);
 
   for (const book of bookResources) {
     const card = cards.filter({ has: page.getByRole("heading", { name: book.title, exact: true }) });
@@ -136,11 +140,39 @@ test("book library shows covers, authors and direct links", async ({ page }) => 
       const cover = image as HTMLImageElement;
       return cover.complete && cover.naturalWidth > 0;
     })).toBe(true);
-    await expect(card.getByRole("link", { name: /書籍ページを開く/ })).toHaveAttribute("href", book.url);
-    await expect(card.getByRole("link", { name: /書籍ページを開く/ })).toContainText("新しいタブで開きます");
+    await expect(card.getByRole("link", { name: /出版社・公式ページを開く/ })).toHaveAttribute("href", book.url);
+    await expect(card.getByRole("link", { name: /出版社・公式ページを開く/ })).toContainText("新しいタブで開きます");
     await expect(card).toContainText("著者：");
   }
   await expectStableLayout(page);
+});
+
+test("book library filters by topic, search and URL history", async ({ page }) => {
+  await page.goto("/books");
+  const accessibilityCount = bookTopicsWithCounts.find((topic) => topic.id === "accessibility")?.count ?? 0;
+  const cards = page.locator(".book-library-card");
+
+  await page.getByRole("radio", { name: /アクセシビリティ/ }).check();
+  await expect(page).toHaveURL(/\/books#book-topic-accessibility$/);
+  await expect(cards).toHaveCount(accessibilityCount);
+  await expect(page.getByRole("heading", { name: "具体例と解決策で学ぶ Webアクセシビリティの教科書", exact: true })).toBeVisible();
+
+  await page.getByRole("radio", { name: /セキュリティ・認証/ }).check();
+  await expect(page).toHaveURL(/\/books#book-topic-security-auth$/);
+  await page.goBack();
+  await expect(page.getByRole("radio", { name: /アクセシビリティ/ })).toBeChecked();
+
+  await page.getByRole("radio", { name: /すべての分野/ }).check();
+  const search = page.getByRole("searchbox", { name: "書名・著者・学びたい内容で探す" });
+  await search.fill("OpenID Connect");
+  await expect(page.getByRole("status")).toHaveText("1冊の書籍が見つかりました");
+  await expect(cards).toHaveCount(1);
+  await expect(cards.first()).toContainText("OpenID Connect入門");
+  await search.fill("該当しない検索語");
+  await expect(page.getByRole("button", { name: "検索と絞り込みを解除する" })).toBeVisible();
+  await page.getByRole("button", { name: "検索と絞り込みを解除する" }).click();
+  await expect(search).toBeFocused();
+  await expect(cards).toHaveCount(bookResources.length);
 });
 
 test("decision approaches show related book covers without expanding details", async ({ page }) => {
@@ -150,6 +182,15 @@ test("decision approaches show related book covers without expanding details", a
   await expect(relatedBooks.first()).toBeVisible();
   await expect(relatedBooks.first().locator("img")).toBeVisible();
   await expect(relatedBooks.first().getByRole("link", { name: /The Book of Shaders/ })).toHaveAttribute("href", "https://thebookofshaders.com/?lan=jp");
+});
+
+test("accessibility decision exposes implementation, evaluation and participant books", async ({ page }) => {
+  await page.goto("/decisions/accessibility-evaluation");
+
+  const relatedBooks = page.locator(".approach-books");
+  await expect(relatedBooks.getByRole("link", { name: /Webアクセシビリティの教科書/ }).first()).toBeVisible();
+  await expect(relatedBooks.getByRole("link", { name: /Webアプリケーションアクセシビリティ/ }).first()).toBeVisible();
+  await expect(relatedBooks.getByRole("link", { name: /ウェブ・インクルーシブデザイン/ }).first()).toBeVisible();
 });
 
 test("decision page recalculates after a condition toggle", async ({ page }) => {

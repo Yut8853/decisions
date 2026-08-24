@@ -1,0 +1,32 @@
+id: book-web-accessibility-textbook
+type: book
+title: 具体例と解決策で学ぶ Webアクセシビリティの教科書
+url: https://www.borndigital.co.jp/book/9784862466617/
+authors:
+- 伊原力也
+- 太田良典
+- 秋山豊志
+- 佐野実生
+- 富本弥生
+- 平尾優典
+- 堀口真人
+language: 日本語
+edition: WCAG 2.2対応増補改訂版
+versionNote: 2026年刊
+isbn: 978-4-86246-661-7
+coverImageUrl: https://www.borndigital.co.jp/app/uploads/2026/04/books_page_978-4-86246-661-7.jpg
+coverImageAlt: Webアクセシビリティの教科書の表紙
+coverSourceName: ボーンデジタル
+coverSourceUrl: https://www.borndigital.co.jp/book/9784862466617/
+bookTopicIds:
+- accessibility
+- design-ux
+description: 要件、ナビゲーション、フォーム、コンテンツ、実装、組織への定着までを具体例から学べる日本語の実践書。
+technologyIds:
+- html
+- wai-aria
+concepts:
+- web-accessibility
+- inclusive-design
+currentUse: アクセシビリティを個別修正ではなく、企画から運用まで続く設計課題として理解する。
+limitations: WCAG-EMに沿った適合性評価の手順書ではない。出版社が公開する正誤表と、現在のW3C仕様も確認する。

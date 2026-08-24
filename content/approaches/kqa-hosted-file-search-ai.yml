@@ -28,4 +28,6 @@ disadvantages:
 resourceIds:
 - res-kqa-openai-file-search
 - res-kqa-openai-data-controls
+- book-ai-engineering-ja
+- book-ai-interface-design-ja
 lastReviewed: '2026-08-24'

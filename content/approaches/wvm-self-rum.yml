@@ -29,4 +29,6 @@ disadvantages:
 - ブラウザの対応状況と指標定義の更新を追う必要がある
 resourceIds:
 - res-wvm-web-vitals
+- book-web-frontend-performance-tuning
+- book-web-performance-engineering-ai
 lastReviewed: '2026-08-24'

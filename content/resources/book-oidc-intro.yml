@@ -1,0 +1,25 @@
+id: book-oidc-intro
+type: book
+title: OpenID Connect入門――アプリケーション開発者のための実践技術解説
+url: https://gihyo.jp/book/2026/978-4-297-15456-1
+authors:
+- 土岐孝平
+- 倉林雅（監修）
+language: 日本語
+versionNote: 2026年刊
+isbn: 978-4-297-15456-1
+coverImageUrl: https://gihyo.jp/assets/images/ogp/2026/9784297154561.jpg
+coverImageAlt: OpenID Connect入門の表紙
+coverSourceName: 技術評論社
+coverSourceUrl: https://gihyo.jp/book/2026/978-4-297-15456-1
+bookTopicIds:
+- security-auth
+- architecture-operations
+description: OpenID Connect、PKCE、SPAとBFF、トークン検証、ログアウト、Keycloakを用いた確認を体系的に扱う日本語書籍。
+technologyIds:
+- openid-connect
+concepts:
+- federated-identity
+- token-validation
+currentUse: 組織の認証基盤と連携するときに、認証フローとアプリ側の検証責任を理解する。
+limitations: パスキーやパスワード保存は対象外。採用するIdPの設定、対応機能、現在の標準は公式資料でも確認する。

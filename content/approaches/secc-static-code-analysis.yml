@@ -32,4 +32,5 @@ disadvantages:
 resourceIds:
 - res-secc-codeql-scanning
 - res-secc-codeql-cli-terms
+- book-frontend-security-intro
 lastReviewed: '2026-08-24'

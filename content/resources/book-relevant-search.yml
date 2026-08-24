@@ -1,0 +1,25 @@
+id: book-relevant-search
+type: book
+title: Relevant Search
+url: https://www.manning.com/books/relevant-search
+authors:
+- Doug Turnbull
+- John Berryman
+language: 英語
+versionNote: 2016年刊
+isbn: 978-1-61729-277-4
+coverImageUrl: https://images.manning.com/360/480/resize/book/f/bc52c02-c239-4644-9b97-5df9760ccdb9/Turnbull-RS-HI.png
+coverImageAlt: Relevant Searchの表紙
+coverSourceName: Manning Publications
+coverSourceUrl: https://www.manning.com/books/relevant-search
+bookTopicIds:
+- data-ai-search
+description: 検索結果の関連度を、利用目的、分類、テキスト分析、補助データ、画面、継続的な測定から改善する方法を扱う本。
+technologyIds:
+- elasticsearch
+- solr
+concepts:
+- search-relevance
+- relevance-evaluation
+currentUse: サイト内検索で何を上位に出すべきかを定義し、実際の検索語と結果から改善を続ける考え方を学ぶ。
+limitations: 英語で、ElasticsearchとSolrの2016年時点の実装例が中心。製品APIは現行公式資料で確認し、原理と評価方法を主に参照する。

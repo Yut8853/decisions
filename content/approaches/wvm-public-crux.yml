@@ -29,4 +29,5 @@ disadvantages:
 - 自分で送信項目や集計期間を変更できない
 resourceIds:
 - res-wvm-crux-overview
+- book-web-performance-engineering-ai
 lastReviewed: '2026-08-24'

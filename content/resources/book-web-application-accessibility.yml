@@ -1,0 +1,28 @@
+id: book-web-application-accessibility
+type: book
+title: Webアプリケーションアクセシビリティ――今日から始める現場からの改善
+url: https://gihyo.jp/book/2023/978-4-297-13366-5
+authors:
+- 伊原力也
+- 小林大輔
+- 桝田草一
+- 山本伶
+language: 日本語
+versionNote: 2023年刊
+isbn: 978-4-297-13366-5
+coverImageUrl: https://gihyo.jp/assets/images/cover/2023/9784297133665.jpg
+coverImageAlt: Webアプリケーションアクセシビリティの表紙
+coverSourceName: 技術評論社
+coverSourceUrl: https://gihyo.jp/book/2023/978-4-297-13366-5
+bookTopicIds:
+- accessibility
+- frontend
+description: HTML、WAI-ARIA、キーボード操作、フォーム、複雑なUI、支援技術による確認を現場で改善する方法を扱う本。
+technologyIds:
+- html
+- wai-aria
+concepts:
+- keyboard-accessibility
+- assistive-technology
+currentUse: 自動検査だけでは判断できない操作や読み上げの問題を、実装と手動確認の両面から理解する。
+limitations: 2023年刊でWCAG 2.2対応を明示していない。現在のW3C仕様、ブラウザ、支援技術でも実装例を再確認する。

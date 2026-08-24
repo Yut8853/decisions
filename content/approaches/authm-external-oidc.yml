@@ -32,4 +32,5 @@ resourceIds:
 - res-authm-oidc-core
 - res-authm-session-management
 - res-authm-keycloak-oidc-server
+- book-oidc-intro
 lastReviewed: '2026-08-24'

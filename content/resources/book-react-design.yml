@@ -11,6 +11,9 @@ coverImageUrl: https://gihyo.jp/assets/images/cover/2026/thumb/TH800_97842971552
 coverImageAlt: React本格入門の表紙
 coverSourceName: 技術評論社
 coverSourceUrl: https://gihyo.jp/book/2026/978-4-297-15523-0
+bookTopicIds:
+- frontend
+- architecture-operations
 description: React 19を対象に、画面を部品へ分ける考え方、propsとstate、状態管理を日本語で学べる本。
 technologyIds:
 - react

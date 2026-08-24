@@ -1,0 +1,27 @@
+id: book-frontend-security-intro
+type: book
+title: フロントエンド開発のためのセキュリティ入門
+url: https://www.shoeisha.co.jp/book/detail/9784798169477
+authors:
+- 平野昌士
+- はせがわようすけ（監修）
+- 後藤つぐみ（監修）
+language: 日本語
+versionNote: 2023年刊
+isbn: 978-4-7981-6947-7
+coverImageUrl: https://www.shoeisha.co.jp/static/book/og_image/9784798169477.jpg
+coverImageAlt: フロントエンド開発のためのセキュリティ入門の表紙
+coverSourceName: 翔泳社
+coverSourceUrl: https://www.shoeisha.co.jp/book/detail/9784798169477
+bookTopicIds:
+- security-auth
+- frontend
+description: HTTP、オリジン、XSS、CSRF、認証と認可、JavaScriptライブラリの危険を、フロントエンド開発者向けに説明する本。
+technologyIds:
+- javascript
+- http
+concepts:
+- web-security
+- authentication
+currentUse: セキュリティ検査で見つける脆弱性が、どのような仕組みで生じるのかを理解する。
+limitations: 入門書であり、Dependabot、ZAP、CodeQLの操作書ではない。サーバーやクラウドを含む全体の脅威分析も別途必要になる。

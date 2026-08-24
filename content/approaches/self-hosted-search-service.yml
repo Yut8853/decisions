@@ -31,4 +31,5 @@ resourceIds:
 - res-meilisearch-self-hosting
 - res-meilisearch-document-updates
 - res-meilisearch-search-settings
+- book-relevant-search
 lastReviewed: '2026-08-24'

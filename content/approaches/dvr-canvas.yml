@@ -26,4 +26,5 @@ disadvantages:
 - 再描画、拡大時の見え方、入力処理を実装側で管理する
 resourceIds:
 - res-dvr-canvas-standard
+- book-data-visualization-fundamentals-ja
 lastReviewed: '2026-08-24'

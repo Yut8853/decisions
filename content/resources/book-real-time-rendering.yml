@@ -16,6 +16,8 @@ coverImageUrl: https://covers.openlibrary.org/b/id/9234619-M.jpg
 coverImageAlt: Real-Time Rendering 第4版の表紙
 coverSourceName: Open Library
 coverSourceUrl: https://openlibrary.org/isbn/9781138627000
+bookTopicIds:
+- performance-graphics
 description: リアルタイムで3Dを描画するための原理とアルゴリズムを、幅広く体系的に学べる本。
 technologyIds:
 - webgl

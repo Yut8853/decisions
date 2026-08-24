@@ -29,4 +29,6 @@ disadvantages:
 resourceIds:
 - res-kqa-pgvector
 - res-kqa-postgresql-row-security
+- book-ai-engineering-ja
+- book-ai-interface-design-ja
 lastReviewed: '2026-08-24'

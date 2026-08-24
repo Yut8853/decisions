@@ -25,4 +25,5 @@ disadvantages:
 - 単体で正しくても画面やサービスをつないだ導線は保証しない
 resourceIds:
 - res-ftp-vitest-environment
+- book-frontend-testing-intro
 lastReviewed: '2026-08-24'

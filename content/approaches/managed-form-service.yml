@@ -34,4 +34,5 @@ resourceIds:
 - res-formspree-security
 - res-formspree-notification-rules
 - res-owasp-input-validation
+- book-form-design-patterns
 lastReviewed: '2026-08-24'

@@ -30,4 +30,5 @@ disadvantages:
 resourceIds:
 - res-authm-webauthn-level3
 - res-authm-nist-authenticators
+- book-passkeys-everything
 lastReviewed: '2026-08-24'

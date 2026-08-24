@@ -28,4 +28,5 @@ resourceIds:
 - res-three-lod
 - res-three-frustum
 - res-rendering-performance
+- book-real-time-rendering
 lastReviewed: '2026-08-23'

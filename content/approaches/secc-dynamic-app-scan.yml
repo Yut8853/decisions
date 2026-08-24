@@ -29,4 +29,5 @@ disadvantages:
 - すべての画面と業務上の操作を自動で網羅できるとは限らない
 resourceIds:
 - res-secc-zap-full-scan
+- book-frontend-security-intro
 lastReviewed: '2026-08-24'

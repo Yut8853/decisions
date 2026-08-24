@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T11:58:23.374Z",
+  "generatedAt": "2026-08-24T13:07:30.627Z",
   "situations": [
     {
       "id": "3d-portfolio",
@@ -536,7 +536,9 @@
         "誤検出や見落としを担当者が確認する必要がある"
       ],
       "resourceIds": [
-        "res-ae-wai-evaluation-tools"
+        "res-ae-wai-evaluation-tools",
+        "book-practical-web-accessibility",
+        "book-frontend-testing-intro"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -573,7 +575,9 @@
         "参加者の結果だけでアクセシビリティ全体は判定できない"
       ],
       "resourceIds": [
-        "res-ae-wai-involving-users"
+        "res-ae-wai-involving-users",
+        "book-web-inclusive-design",
+        "book-web-accessibility-textbook"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -611,7 +615,10 @@
         "規格への適合確認だけでは実利用上の課題を拾い切れない"
       ],
       "resourceIds": [
-        "res-ae-wcag-em"
+        "res-ae-wcag-em",
+        "book-web-accessibility-textbook",
+        "book-web-application-accessibility",
+        "book-practical-web-accessibility"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -655,7 +662,9 @@
       ],
       "resourceIds": [
         "res-owasp-input-validation",
-        "res-owasp-logging"
+        "res-owasp-logging",
+        "book-form-design-patterns",
+        "book-frontend-security-intro"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -699,7 +708,8 @@
       "resourceIds": [
         "res-authm-oidc-core",
         "res-authm-session-management",
-        "res-authm-keycloak-oidc-server"
+        "res-authm-keycloak-oidc-server",
+        "book-oidc-intro"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -741,7 +751,8 @@
       ],
       "resourceIds": [
         "res-authm-webauthn-level3",
-        "res-authm-nist-authenticators"
+        "res-authm-nist-authenticators",
+        "book-passkeys-everything"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -783,7 +794,8 @@
       ],
       "resourceIds": [
         "res-authm-password-storage",
-        "res-authm-session-management"
+        "res-authm-session-management",
+        "book-frontend-security-intro"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -866,7 +878,8 @@
       ],
       "resourceIds": [
         "res-pagefind-search-docs",
-        "res-pagefind-multilingual"
+        "res-pagefind-multilingual",
+        "book-relevant-search"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -949,7 +962,8 @@
       ],
       "resourceIds": [
         "res-postgresql-full-text-search",
-        "res-postgresql-text-dictionaries"
+        "res-postgresql-text-dictionaries",
+        "book-relevant-search"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1070,7 +1084,10 @@
       "resourceIds": [
         "res-js-seo",
         "res-wcag-nontext",
-        "book-designing-interfaces"
+        "book-designing-interfaces",
+        "book-laws-of-ux-2e-ja",
+        "book-web-accessibility-textbook",
+        "book-object-oriented-ui-revised"
       ],
       "lastReviewed": "2026-08-23"
     },
@@ -1108,7 +1125,8 @@
         "再描画、拡大時の見え方、入力処理を実装側で管理する"
       ],
       "resourceIds": [
-        "res-dvr-canvas-standard"
+        "res-dvr-canvas-standard",
+        "book-data-visualization-fundamentals-ja"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1147,7 +1165,10 @@
       ],
       "resourceIds": [
         "res-dvr-wai-tables",
-        "res-dvr-svg-spec"
+        "res-dvr-svg-spec",
+        "book-data-visualization-fundamentals-ja",
+        "book-designing-interfaces",
+        "book-laws-of-ux-2e-ja"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1187,7 +1208,9 @@
       ],
       "resourceIds": [
         "res-dvr-webgl-standard",
-        "res-dvr-deck-interactivity"
+        "res-dvr-deck-interactivity",
+        "book-data-visualization-fundamentals-ja",
+        "book-real-time-rendering"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1272,7 +1295,8 @@
       ],
       "resourceIds": [
         "res-fem-otel-browser",
-        "res-fem-otel-collector"
+        "res-fem-otel-collector",
+        "book-learning-opentelemetry-ja"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1314,7 +1338,8 @@
       ],
       "resourceIds": [
         "res-fem-whatwg-errors",
-        "res-fem-owasp-logging"
+        "res-fem-owasp-logging",
+        "book-learning-opentelemetry-ja"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1351,7 +1376,8 @@
         "コンポーネントの外にある画面遷移やバックエンド連携は別途確認が必要"
       ],
       "resourceIds": [
-        "res-ftp-vitest-browser-components"
+        "res-ftp-vitest-browser-components",
+        "book-frontend-testing-intro"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1388,7 +1414,8 @@
         "細かな内部ロジックの網羅には別のテスト層が必要になる"
       ],
       "resourceIds": [
-        "res-ftp-playwright-best-practices"
+        "res-ftp-playwright-best-practices",
+        "book-frontend-testing-intro"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1425,7 +1452,8 @@
         "単体で正しくても画面やサービスをつないだ導線は保証しない"
       ],
       "resourceIds": [
-        "res-ftp-vitest-environment"
+        "res-ftp-vitest-environment",
+        "book-frontend-testing-intro"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1504,7 +1532,8 @@
       ],
       "resourceIds": [
         "res-three-buffergeometry",
-        "res-three-many-objects"
+        "res-three-many-objects",
+        "book-real-time-rendering"
       ],
       "lastReviewed": "2026-08-23"
     },
@@ -1547,7 +1576,8 @@
         "res-cms-decap-overview",
         "res-cms-decap-editorial-workflow",
         "res-cms-github-pr-review",
-        "res-cms-github-branch-protection"
+        "res-cms-github-branch-protection",
+        "book-software-architecture-fundamentals-2e-ja"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1587,7 +1617,8 @@
       ],
       "resourceIds": [
         "res-cms-contentful-api-basics",
-        "res-cms-contentful-data-model"
+        "res-cms-contentful-data-model",
+        "book-software-architecture-fundamentals-2e-ja"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1631,7 +1662,8 @@
       "resourceIds": [
         "res-algolia-search-api",
         "res-algolia-relevance",
-        "res-algolia-natural-languages"
+        "res-algolia-natural-languages",
+        "book-relevant-search"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1671,7 +1703,8 @@
       ],
       "resourceIds": [
         "res-cms-wordpress-site-editor",
-        "res-cms-wordpress-templates"
+        "res-cms-wordpress-templates",
+        "book-software-architecture-fundamentals-2e-ja"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1750,7 +1783,9 @@
       ],
       "resourceIds": [
         "res-kqa-pgvector",
-        "res-kqa-postgresql-row-security"
+        "res-kqa-postgresql-row-security",
+        "book-ai-engineering-ja",
+        "book-ai-interface-design-ja"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1790,7 +1825,9 @@
       ],
       "resourceIds": [
         "res-kqa-openai-file-search",
-        "res-kqa-openai-data-controls"
+        "res-kqa-openai-data-controls",
+        "book-ai-engineering-ja",
+        "book-ai-interface-design-ja"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1830,7 +1867,8 @@
       "resourceIds": [
         "res-three-lod",
         "res-three-frustum",
-        "res-rendering-performance"
+        "res-rendering-performance",
+        "book-real-time-rendering"
       ],
       "lastReviewed": "2026-08-23"
     },
@@ -1872,7 +1910,8 @@
       ],
       "resourceIds": [
         "res-host-cloud-run-overview",
-        "res-host-cloud-run-container-contract"
+        "res-host-cloud-run-container-contract",
+        "book-software-architecture-fundamentals-2e-ja"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -1918,7 +1957,8 @@
         "res-formspree-html-forms",
         "res-formspree-security",
         "res-formspree-notification-rules",
-        "res-owasp-input-validation"
+        "res-owasp-input-validation",
+        "book-form-design-patterns"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -2124,7 +2164,8 @@
         "誤った依存関係情報や古いロックファイルは検出精度を下げる"
       ],
       "resourceIds": [
-        "res-secc-dependabot-alerts"
+        "res-secc-dependabot-alerts",
+        "book-frontend-security-intro"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -2165,7 +2206,8 @@
         "すべての画面と業務上の操作を自動で網羅できるとは限らない"
       ],
       "resourceIds": [
-        "res-secc-zap-full-scan"
+        "res-secc-zap-full-scan",
+        "book-frontend-security-intro"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -2209,7 +2251,8 @@
       ],
       "resourceIds": [
         "res-secc-codeql-scanning",
-        "res-secc-codeql-cli-terms"
+        "res-secc-codeql-cli-terms",
+        "book-frontend-security-intro"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -2252,7 +2295,8 @@
       "resourceIds": [
         "res-meilisearch-self-hosting",
         "res-meilisearch-document-updates",
-        "res-meilisearch-search-settings"
+        "res-meilisearch-search-settings",
+        "book-relevant-search"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -2296,7 +2340,9 @@
       "resourceIds": [
         "res-aws-api-gateway-throttling",
         "res-owasp-input-validation",
-        "res-owasp-logging"
+        "res-owasp-logging",
+        "book-form-design-patterns",
+        "book-frontend-security-intro"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -2379,7 +2425,8 @@
       "resourceIds": [
         "res-host-next-static-export",
         "res-host-cloud-run-overview",
-        "res-host-cloud-run-container-contract"
+        "res-host-cloud-run-container-contract",
+        "book-software-architecture-fundamentals-2e-ja"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -2420,7 +2467,8 @@
       ],
       "resourceIds": [
         "res-host-next-static-export",
-        "res-host-cloudflare-pages-files"
+        "res-host-cloudflare-pages-files",
+        "book-software-architecture-fundamentals-2e-ja"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -2583,7 +2631,8 @@
       ],
       "resourceIds": [
         "res-three-instancedmesh",
-        "res-three-many-objects"
+        "res-three-many-objects",
+        "book-real-time-rendering"
       ],
       "lastReviewed": "2026-08-23"
     },
@@ -2706,7 +2755,9 @@
         "認証や画面操作が必要な対象には追加設定が必要"
       ],
       "resourceIds": [
-        "res-wvm-lighthouse-ci"
+        "res-wvm-lighthouse-ci",
+        "book-web-frontend-performance-tuning",
+        "book-web-performance-engineering-ai"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -2747,7 +2798,8 @@
         "自分で送信項目や集計期間を変更できない"
       ],
       "resourceIds": [
-        "res-wvm-crux-overview"
+        "res-wvm-crux-overview",
+        "book-web-performance-engineering-ai"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -2788,7 +2840,9 @@
         "ブラウザの対応状況と指標定義の更新を追う必要がある"
       ],
       "resourceIds": [
-        "res-wvm-web-vitals"
+        "res-wvm-web-vitals",
+        "book-web-frontend-performance-tuning",
+        "book-web-performance-engineering-ai"
       ],
       "lastReviewed": "2026-08-24"
     }
@@ -7826,6 +7880,71 @@
   ],
   "resources": [
     {
+      "id": "book-ai-engineering-ja",
+      "type": "book",
+      "title": "AIエンジニアリング",
+      "url": "https://www.oreilly.co.jp/books/9784814401383/",
+      "authors": [
+        "Chip Huyen",
+        "加賀谷諒（訳）",
+        "菅野憲也（訳）"
+      ],
+      "language": "日本語",
+      "versionNote": "2025年日本語版",
+      "isbn": "978-4-8144-0138-3",
+      "coverImageUrl": "https://www.oreilly.co.jp/books/images/picture_large978-4-8144-0138-3.jpeg",
+      "coverImageAlt": "AIエンジニアリングの表紙",
+      "coverSourceName": "オライリー・ジャパン",
+      "coverSourceUrl": "https://www.oreilly.co.jp/books/9784814401383/",
+      "bookTopicIds": [
+        "data-ai-search",
+        "architecture-operations",
+        "testing-quality"
+      ],
+      "description": "基盤モデルを使うAI機能について、評価、RAG、検索、エージェント、データ、ガードレール、運用までを体系的に扱う本。",
+      "technologyIds": [
+        "llm",
+        "retrieval-augmented-generation"
+      ],
+      "concepts": [
+        "ai-evaluation",
+        "retrieval"
+      ],
+      "currentUse": "資料検索付き質問機能を、デモではなく評価可能で運用できる仕組みとして設計する。",
+      "limitations": "モデル、API、サービスの機能と価格は変化する。採用時は各提供元の現行仕様を確認し、出版社の正誤表も参照する。"
+    },
+    {
+      "id": "book-ai-interface-design-ja",
+      "type": "book",
+      "title": "AIインターフェースデザイン",
+      "url": "https://www.oreilly.co.jp/books/9784814401772/",
+      "authors": [
+        "Louise Macfadyen",
+        "江川崇（訳）"
+      ],
+      "language": "日本語",
+      "versionNote": "2026年日本語版",
+      "isbn": "978-4-8144-0177-2",
+      "coverImageUrl": "https://www.oreilly.co.jp/books/images/picture_large978-4-8144-0177-2.jpeg",
+      "coverImageAlt": "AIインターフェースデザインの表紙",
+      "coverSourceName": "オライリー・ジャパン",
+      "coverSourceUrl": "https://www.oreilly.co.jp/books/9784814401772/",
+      "bookTopicIds": [
+        "data-ai-search",
+        "design-ux"
+      ],
+      "description": "出力が一定しないAI機能について、入力、処理中の状態、エラー、根拠、検証可能な出力、エージェントの計画を利用者へ伝える原則を扱う本。",
+      "technologyIds": [
+        "llm"
+      ],
+      "concepts": [
+        "ai-interface",
+        "human-ai-interaction"
+      ],
+      "currentUse": "資料に基づく質問機能で、出典、処理状況、失敗、確認方法を利用者に分かる形で提示する。",
+      "limitations": "UI設計の本であり、検索精度、モデル安全性、個人情報管理を単独で保証しない。採用するAIサービスの仕様確認も必要になる。"
+    },
+    {
       "id": "book-book-of-shaders",
       "type": "book",
       "title": "The Book of Shaders",
@@ -7840,6 +7959,9 @@
       "coverImageAlt": "The Book of Shadersの公式画像",
       "coverSourceName": "The Book of Shaders公式サイト",
       "coverSourceUrl": "https://thebookofshaders.com/?lan=jp",
+      "bookTopicIds": [
+        "performance-graphics"
+      ],
       "description": "GLSLとシェーダー表現を、実際に動かせる小さな例から学べる無料のオンラインブック。",
       "technologyIds": [
         "glsl"
@@ -7849,6 +7971,39 @@
       ],
       "currentUse": "シェーダーの基本的な考え方と、形や色を数式で表現する方法を学ぶ。",
       "limitations": "一部の章は日本語化されていない。Three.js固有APIの最新手順は公式資料で確認する。"
+    },
+    {
+      "id": "book-data-visualization-fundamentals-ja",
+      "type": "book",
+      "title": "データビジュアライゼーションの基礎",
+      "url": "https://www.oreilly.co.jp/books/9784873119533/",
+      "authors": [
+        "Claus O. Wilke",
+        "小林儀匡（訳）",
+        "瀬戸山雅人（訳）"
+      ],
+      "language": "日本語",
+      "versionNote": "2022年日本語版",
+      "isbn": "978-4-87311-953-3",
+      "coverImageUrl": "https://www.oreilly.co.jp/books/images/picture_large978-4-87311-953-3.jpeg",
+      "coverImageAlt": "データビジュアライゼーションの基礎の表紙",
+      "coverSourceName": "オライリー・ジャパン",
+      "coverSourceUrl": "https://www.oreilly.co.jp/books/9784873119533/",
+      "bookTopicIds": [
+        "data-ai-search",
+        "design-ux",
+        "accessibility"
+      ],
+      "description": "データの種類に合う図、軸、色、分布、不確かさ、説明の組み立て方を、良い例と避けたい例から学べる本。",
+      "technologyIds": [
+        "data-visualization"
+      ],
+      "concepts": [
+        "visual-encoding",
+        "color-accessibility"
+      ],
+      "currentUse": "HTML表、SVG、Canvas、WebGLのどれを使う場合でも、データを正確に読み取れる見せ方を設計する。",
+      "limitations": "掲載コードは主にRを使う。Web実装のライブラリ選定やアクセシビリティ評価は、別の現行資料で補う。"
     },
     {
       "id": "book-designing-interfaces",
@@ -7867,6 +8022,10 @@
       "coverImageAlt": "Designing Interfaces 第3版の表紙",
       "coverSourceName": "Open Library",
       "coverSourceUrl": "https://openlibrary.org/isbn/9781492051961",
+      "bookTopicIds": [
+        "design-ux",
+        "frontend"
+      ],
       "description": "画面設計で繰り返し使われるパターンと、情報を分かりやすく見せる方法を体系的に扱う本。",
       "technologyIds": [
         "html",
@@ -7878,6 +8037,295 @@
       ],
       "currentUse": "3D表現の外側にあるUIと導線を設計する。",
       "limitations": "英語の書籍であり、3Dライブラリの実装方法や最新APIを扱う本ではない。"
+    },
+    {
+      "id": "book-form-design-patterns",
+      "type": "book",
+      "title": "Form Design Patterns",
+      "url": "https://www.smashingmagazine.com/printed-books/form-design-patterns/",
+      "authors": [
+        "Adam Silver"
+      ],
+      "language": "英語",
+      "versionNote": "2018年刊",
+      "isbn": "978-3-945749-73-9",
+      "coverImageUrl": "https://res.cloudinary.com/indysigner/image/upload/v1543936070/shop/form-design-patterns-shop-image.png",
+      "coverImageAlt": "Form Design Patternsの表紙",
+      "coverSourceName": "Smashing Media",
+      "coverSourceUrl": "https://www.smashingmagazine.com/printed-books/form-design-patterns/",
+      "bookTopicIds": [
+        "accessibility",
+        "design-ux",
+        "frontend"
+      ],
+      "description": "登録、購入、ログイン、検索などのフォームを、利用者が迷わず操作できるよう設計し実装するパターン集。",
+      "technologyIds": [
+        "html"
+      ],
+      "concepts": [
+        "accessible-forms",
+        "interaction-design"
+      ],
+      "currentUse": "入力項目、エラー、確認、完了までのフォーム導線をアクセシブルに組み立てる。",
+      "limitations": "2018年刊のため、ARIA、ブラウザ、支援技術の実装例は現在のHTML、WAI-ARIA、APGで再確認する。"
+    },
+    {
+      "id": "book-frontend-security-intro",
+      "type": "book",
+      "title": "フロントエンド開発のためのセキュリティ入門",
+      "url": "https://www.shoeisha.co.jp/book/detail/9784798169477",
+      "authors": [
+        "平野昌士",
+        "はせがわようすけ（監修）",
+        "後藤つぐみ（監修）"
+      ],
+      "language": "日本語",
+      "versionNote": "2023年刊",
+      "isbn": "978-4-7981-6947-7",
+      "coverImageUrl": "https://www.shoeisha.co.jp/static/book/og_image/9784798169477.jpg",
+      "coverImageAlt": "フロントエンド開発のためのセキュリティ入門の表紙",
+      "coverSourceName": "翔泳社",
+      "coverSourceUrl": "https://www.shoeisha.co.jp/book/detail/9784798169477",
+      "bookTopicIds": [
+        "security-auth",
+        "frontend"
+      ],
+      "description": "HTTP、オリジン、XSS、CSRF、認証と認可、JavaScriptライブラリの危険を、フロントエンド開発者向けに説明する本。",
+      "technologyIds": [
+        "javascript",
+        "http"
+      ],
+      "concepts": [
+        "web-security",
+        "authentication"
+      ],
+      "currentUse": "セキュリティ検査で見つける脆弱性が、どのような仕組みで生じるのかを理解する。",
+      "limitations": "入門書であり、Dependabot、ZAP、CodeQLの操作書ではない。サーバーやクラウドを含む全体の脅威分析も別途必要になる。"
+    },
+    {
+      "id": "book-frontend-testing-intro",
+      "type": "book",
+      "title": "フロントエンド開発のためのテスト入門",
+      "url": "https://www.shoeisha.co.jp/book/detail/9784798178189",
+      "authors": [
+        "吉井健文"
+      ],
+      "language": "日本語",
+      "versionNote": "2023年刊",
+      "isbn": "978-4-7981-7818-9",
+      "coverImageUrl": "https://www.shoeisha.co.jp/static/book/og_image/9784798178189.jpg",
+      "coverImageAlt": "フロントエンド開発のためのテスト入門の表紙",
+      "coverSourceName": "翔泳社",
+      "coverSourceUrl": "https://www.shoeisha.co.jp/book/detail/9784798178189",
+      "bookTopicIds": [
+        "testing-quality",
+        "frontend"
+      ],
+      "description": "単体テスト、UIコンポーネントテスト、E2Eテスト、継続的な検査を、役割の違いから学べる日本語の入門書。",
+      "technologyIds": [
+        "playwright",
+        "testing-library"
+      ],
+      "concepts": [
+        "test-strategy",
+        "automated-testing"
+      ],
+      "currentUse": "何を単体、コンポーネント、E2Eのどこで確認するかを分け、最初のテスト方針を組み立てる。",
+      "limitations": "2023年時点のJest、Testing Library、Storybook、Playwright、Next.jsが中心。現在のVitestなどの操作は公式資料で確認する。"
+    },
+    {
+      "id": "book-laws-of-ux-2e-ja",
+      "type": "book",
+      "title": "UXデザインの法則 第2版",
+      "url": "https://www.oreilly.co.jp/books/9784814401000/",
+      "authors": [
+        "Jon Yablonski",
+        "相島雅樹（訳）",
+        "磯谷拓也（訳）",
+        "反中望（訳）",
+        "松村草也（訳）"
+      ],
+      "language": "日本語",
+      "edition": "第2版",
+      "versionNote": "2025年日本語版",
+      "isbn": "978-4-8144-0100-0",
+      "coverImageUrl": "https://www.oreilly.co.jp/books/images/picture_large978-4-8144-0100-0.jpeg",
+      "coverImageAlt": "UXデザインの法則 第2版の表紙",
+      "coverSourceName": "オライリー・ジャパン",
+      "coverSourceUrl": "https://www.oreilly.co.jp/books/9784814401000/",
+      "bookTopicIds": [
+        "design-ux",
+        "accessibility"
+      ],
+      "description": "選択肢の複雑さ、目標の大きさと距離、認知負荷など、画面設計に関わる心理学の法則を事例から学べる本。",
+      "technologyIds": [
+        "user-interface"
+      ],
+      "concepts": [
+        "interaction-design",
+        "cognitive-load"
+      ],
+      "currentUse": "画面の選択肢、操作対象、段階的な情報表示を、見た目の好みではなく利用者の行動から考える。",
+      "limitations": "心理学の法則は設計の手掛かりであり、個別の利用者調査やアクセシビリティ評価の結果を置き換えない。"
+    },
+    {
+      "id": "book-learning-opentelemetry-ja",
+      "type": "book",
+      "title": "入門 OpenTelemetry――現代的なオブザーバビリティシステムの構築と運用",
+      "url": "https://www.oreilly.co.jp/books/9784814401024/",
+      "authors": [
+        "Ted Young",
+        "Austin Parker",
+        "山口能迪（訳）"
+      ],
+      "language": "日本語",
+      "versionNote": "2025年日本語版",
+      "isbn": "978-4-8144-0102-4",
+      "coverImageUrl": "https://www.oreilly.co.jp/books/images/picture_large978-4-8144-0102-4.jpeg",
+      "coverImageAlt": "入門 OpenTelemetryの表紙",
+      "coverSourceName": "オライリー・ジャパン",
+      "coverSourceUrl": "https://www.oreilly.co.jp/books/9784814401024/",
+      "bookTopicIds": [
+        "architecture-operations",
+        "testing-quality"
+      ],
+      "description": "計装、ブラウザとモバイル、Collector、データ処理、フィルタリング、サンプリング、プライバシーを扱う入門書。",
+      "technologyIds": [
+        "opentelemetry"
+      ],
+      "concepts": [
+        "observability",
+        "telemetry-pipeline"
+      ],
+      "currentUse": "画面エラーや追跡情報を収集し、保存先へ安全に渡す観測基盤の役割分担を理解する。",
+      "limitations": "Sentryなど管理型サービス固有の画面や通知は扱わない。ブラウザ向けSDKの成熟度と現行仕様は公式資料で確認する。"
+    },
+    {
+      "id": "book-object-oriented-ui-revised",
+      "type": "book",
+      "title": "［改訂新版］オブジェクト指向UIデザイン",
+      "url": "https://gihyo.jp/book/2026/978-4-297-15716-6",
+      "authors": [
+        "ソシオメディア株式会社",
+        "上野学",
+        "藤井幸多"
+      ],
+      "language": "日本語",
+      "edition": "改訂新版",
+      "versionNote": "2026年刊",
+      "isbn": "978-4-297-15716-6",
+      "coverImageUrl": "https://gihyo.jp/assets/images/cover/2026/thumb/TH800_9784297157166.jpg",
+      "coverImageAlt": "改訂新版 オブジェクト指向UIデザインの表紙",
+      "coverSourceName": "技術評論社",
+      "coverSourceUrl": "https://gihyo.jp/book/2026/978-4-297-15716-6",
+      "bookTopicIds": [
+        "design-ux",
+        "frontend"
+      ],
+      "description": "利用者が扱う対象を起点に、画面、移動、操作を組み立てるオブジェクト指向UIの原理と演習を扱う本。",
+      "technologyIds": [
+        "user-interface"
+      ],
+      "concepts": [
+        "object-oriented-ui",
+        "information-architecture"
+      ],
+      "currentUse": "業務やアプリの画面を、手続きの順番だけでなく対象とその関係から整理する。",
+      "limitations": "改訂新版では図版とあとがきが更新されたが、本文は2020年版から変更されていない。すべての手続き型画面を否定するものではない。"
+    },
+    {
+      "id": "book-oidc-intro",
+      "type": "book",
+      "title": "OpenID Connect入門――アプリケーション開発者のための実践技術解説",
+      "url": "https://gihyo.jp/book/2026/978-4-297-15456-1",
+      "authors": [
+        "土岐孝平",
+        "倉林雅（監修）"
+      ],
+      "language": "日本語",
+      "versionNote": "2026年刊",
+      "isbn": "978-4-297-15456-1",
+      "coverImageUrl": "https://gihyo.jp/assets/images/ogp/2026/9784297154561.jpg",
+      "coverImageAlt": "OpenID Connect入門の表紙",
+      "coverSourceName": "技術評論社",
+      "coverSourceUrl": "https://gihyo.jp/book/2026/978-4-297-15456-1",
+      "bookTopicIds": [
+        "security-auth",
+        "architecture-operations"
+      ],
+      "description": "OpenID Connect、PKCE、SPAとBFF、トークン検証、ログアウト、Keycloakを用いた確認を体系的に扱う日本語書籍。",
+      "technologyIds": [
+        "openid-connect"
+      ],
+      "concepts": [
+        "federated-identity",
+        "token-validation"
+      ],
+      "currentUse": "組織の認証基盤と連携するときに、認証フローとアプリ側の検証責任を理解する。",
+      "limitations": "パスキーやパスワード保存は対象外。採用するIdPの設定、対応機能、現在の標準は公式資料でも確認する。"
+    },
+    {
+      "id": "book-passkeys-everything",
+      "type": "book",
+      "title": "パスキーのすべて――導入・UX設計・実装",
+      "url": "https://gihyo.jp/book/2025/978-4-297-14653-5",
+      "authors": [
+        "えーじ",
+        "倉林雅",
+        "小岩井航介"
+      ],
+      "language": "日本語",
+      "versionNote": "2025年刊",
+      "isbn": "978-4-297-14653-5",
+      "coverImageUrl": "https://gihyo.jp/assets/images/ogp/2025/9784297146535.jpg",
+      "coverImageAlt": "パスキーのすべての表紙",
+      "coverSourceName": "技術評論社",
+      "coverSourceUrl": "https://gihyo.jp/book/2025/978-4-297-14653-5",
+      "bookTopicIds": [
+        "security-auth",
+        "design-ux"
+      ],
+      "description": "WebAuthnとFIDO2の仕組み、登録・認証・管理の体験、サーバー検証、復旧、端末間利用を日本語で扱う実践書。",
+      "technologyIds": [
+        "webauthn"
+      ],
+      "concepts": [
+        "passkeys",
+        "authentication-ux"
+      ],
+      "currentUse": "パスキーを安全に実装するだけでなく、登録、端末変更、復旧まで含む利用者の導線を設計する。",
+      "limitations": "ブラウザ、OS、APIの対応状況は変化する。W3C、FIDO Alliance、採用する環境の現行資料も確認する。"
+    },
+    {
+      "id": "book-practical-web-accessibility",
+      "type": "book",
+      "title": "Practical Web Accessibility: A Comprehensive Guide to Digital Inclusion",
+      "url": "https://link.springer.com/book/10.1007/979-8-8688-0152-5",
+      "authors": [
+        "Ashley Firth"
+      ],
+      "language": "英語",
+      "edition": "第2版",
+      "versionNote": "WCAG 2.2対応",
+      "isbn": "979-8-8688-0151-8",
+      "coverImageUrl": "https://media.springernature.com/w316/springer-static/cover/book/979-8-8688-0152-5.jpg",
+      "coverImageAlt": "Practical Web Accessibility 第2版の表紙",
+      "coverSourceName": "Springer Nature",
+      "coverSourceUrl": "https://link.springer.com/book/10.1007/979-8-8688-0152-5",
+      "bookTopicIds": [
+        "accessibility",
+        "testing-quality"
+      ],
+      "description": "アクセシビリティ監査、既存サイトの修正、自動検査を開発工程へ取り入れる方法をまとめた実践書。",
+      "technologyIds": [
+        "accessibility-evaluation-tools"
+      ],
+      "concepts": [
+        "accessibility-audit",
+        "continuous-quality-check"
+      ],
+      "currentUse": "自動検査と人による確認の役割を分け、継続できる評価工程を設計する。",
+      "limitations": "著者独自の評価枠組みはWCAG-EMの代替ではない。WCAG 3に関する記述も確定規格として扱わない。"
     },
     {
       "id": "book-react-design",
@@ -7894,6 +8342,10 @@
       "coverImageAlt": "React本格入門の表紙",
       "coverSourceName": "技術評論社",
       "coverSourceUrl": "https://gihyo.jp/book/2026/978-4-297-15523-0",
+      "bookTopicIds": [
+        "frontend",
+        "architecture-operations"
+      ],
       "description": "React 19を対象に、画面を部品へ分ける考え方、propsとstate、状態管理を日本語で学べる本。",
       "technologyIds": [
         "react"
@@ -7925,6 +8377,9 @@
       "coverImageAlt": "Real-Time Rendering 第4版の表紙",
       "coverSourceName": "Open Library",
       "coverSourceUrl": "https://openlibrary.org/isbn/9781138627000",
+      "bookTopicIds": [
+        "performance-graphics"
+      ],
       "description": "リアルタイムで3Dを描画するための原理とアルゴリズムを、幅広く体系的に学べる本。",
       "technologyIds": [
         "webgl",
@@ -7937,6 +8392,236 @@
       ],
       "currentUse": "個別のAPIに依存しない、描画・光・GPU処理の基本原理を理解する。",
       "limitations": "英語の書籍であり、Three.jsなど個別ライブラリの最新API解説ではない。"
+    },
+    {
+      "id": "book-relevant-search",
+      "type": "book",
+      "title": "Relevant Search",
+      "url": "https://www.manning.com/books/relevant-search",
+      "authors": [
+        "Doug Turnbull",
+        "John Berryman"
+      ],
+      "language": "英語",
+      "versionNote": "2016年刊",
+      "isbn": "978-1-61729-277-4",
+      "coverImageUrl": "https://images.manning.com/360/480/resize/book/f/bc52c02-c239-4644-9b97-5df9760ccdb9/Turnbull-RS-HI.png",
+      "coverImageAlt": "Relevant Searchの表紙",
+      "coverSourceName": "Manning Publications",
+      "coverSourceUrl": "https://www.manning.com/books/relevant-search",
+      "bookTopicIds": [
+        "data-ai-search"
+      ],
+      "description": "検索結果の関連度を、利用目的、分類、テキスト分析、補助データ、画面、継続的な測定から改善する方法を扱う本。",
+      "technologyIds": [
+        "elasticsearch",
+        "solr"
+      ],
+      "concepts": [
+        "search-relevance",
+        "relevance-evaluation"
+      ],
+      "currentUse": "サイト内検索で何を上位に出すべきかを定義し、実際の検索語と結果から改善を続ける考え方を学ぶ。",
+      "limitations": "英語で、ElasticsearchとSolrの2016年時点の実装例が中心。製品APIは現行公式資料で確認し、原理と評価方法を主に参照する。"
+    },
+    {
+      "id": "book-software-architecture-fundamentals-2e-ja",
+      "type": "book",
+      "title": "ソフトウェアアーキテクチャの基礎 第2版",
+      "url": "https://www.oreilly.co.jp/books/9784814401550/",
+      "authors": [
+        "Mark Richards",
+        "Neal Ford",
+        "島田浩二（訳）"
+      ],
+      "language": "日本語",
+      "edition": "第2版",
+      "versionNote": "2026年日本語版",
+      "isbn": "978-4-8144-0155-0",
+      "coverImageUrl": "https://www.oreilly.co.jp/books/images/picture_large978-4-8144-0155-0.jpeg",
+      "coverImageAlt": "ソフトウェアアーキテクチャの基礎 第2版の表紙",
+      "coverSourceName": "オライリー・ジャパン",
+      "coverSourceUrl": "https://www.oreilly.co.jp/books/9784814401550/",
+      "bookTopicIds": [
+        "architecture-operations",
+        "frontend"
+      ],
+      "description": "構成の特性、結合、アーキテクチャスタイル、クラウド、データ、チーム、統制を、選択のトレードオフから学ぶ本。",
+      "technologyIds": [
+        "software-architecture"
+      ],
+      "concepts": [
+        "architecture-tradeoffs",
+        "modularity"
+      ],
+      "currentUse": "配信、動的処理、CMS、監視をどこまで分けるかを、変更しやすさと運用負荷の両面から考える。",
+      "limitations": "特定のクラウドやフレームワークの導入手順書ではない。実際の制限、料金、対応機能は各公式資料で確認する。"
+    },
+    {
+      "id": "book-web-accessibility-textbook",
+      "type": "book",
+      "title": "具体例と解決策で学ぶ Webアクセシビリティの教科書",
+      "url": "https://www.borndigital.co.jp/book/9784862466617/",
+      "authors": [
+        "伊原力也",
+        "太田良典",
+        "秋山豊志",
+        "佐野実生",
+        "富本弥生",
+        "平尾優典",
+        "堀口真人"
+      ],
+      "language": "日本語",
+      "edition": "WCAG 2.2対応増補改訂版",
+      "versionNote": "2026年刊",
+      "isbn": "978-4-86246-661-7",
+      "coverImageUrl": "https://www.borndigital.co.jp/app/uploads/2026/04/books_page_978-4-86246-661-7.jpg",
+      "coverImageAlt": "Webアクセシビリティの教科書の表紙",
+      "coverSourceName": "ボーンデジタル",
+      "coverSourceUrl": "https://www.borndigital.co.jp/book/9784862466617/",
+      "bookTopicIds": [
+        "accessibility",
+        "design-ux"
+      ],
+      "description": "要件、ナビゲーション、フォーム、コンテンツ、実装、組織への定着までを具体例から学べる日本語の実践書。",
+      "technologyIds": [
+        "html",
+        "wai-aria"
+      ],
+      "concepts": [
+        "web-accessibility",
+        "inclusive-design"
+      ],
+      "currentUse": "アクセシビリティを個別修正ではなく、企画から運用まで続く設計課題として理解する。",
+      "limitations": "WCAG-EMに沿った適合性評価の手順書ではない。出版社が公開する正誤表と、現在のW3C仕様も確認する。"
+    },
+    {
+      "id": "book-web-application-accessibility",
+      "type": "book",
+      "title": "Webアプリケーションアクセシビリティ――今日から始める現場からの改善",
+      "url": "https://gihyo.jp/book/2023/978-4-297-13366-5",
+      "authors": [
+        "伊原力也",
+        "小林大輔",
+        "桝田草一",
+        "山本伶"
+      ],
+      "language": "日本語",
+      "versionNote": "2023年刊",
+      "isbn": "978-4-297-13366-5",
+      "coverImageUrl": "https://gihyo.jp/assets/images/cover/2023/9784297133665.jpg",
+      "coverImageAlt": "Webアプリケーションアクセシビリティの表紙",
+      "coverSourceName": "技術評論社",
+      "coverSourceUrl": "https://gihyo.jp/book/2023/978-4-297-13366-5",
+      "bookTopicIds": [
+        "accessibility",
+        "frontend"
+      ],
+      "description": "HTML、WAI-ARIA、キーボード操作、フォーム、複雑なUI、支援技術による確認を現場で改善する方法を扱う本。",
+      "technologyIds": [
+        "html",
+        "wai-aria"
+      ],
+      "concepts": [
+        "keyboard-accessibility",
+        "assistive-technology"
+      ],
+      "currentUse": "自動検査だけでは判断できない操作や読み上げの問題を、実装と手動確認の両面から理解する。",
+      "limitations": "2023年刊でWCAG 2.2対応を明示していない。現在のW3C仕様、ブラウザ、支援技術でも実装例を再確認する。"
+    },
+    {
+      "id": "book-web-frontend-performance-tuning",
+      "type": "book",
+      "title": "Webフロントエンド ハイパフォーマンス チューニング",
+      "url": "https://gihyo.jp/book/2017/978-4-7741-8967-3",
+      "authors": [
+        "久保田光則"
+      ],
+      "language": "日本語",
+      "versionNote": "2017年刊",
+      "isbn": "978-4-7741-8967-3",
+      "coverImageUrl": "https://gihyo.jp/assets/images/ogp/2017/9784774189673.jpg",
+      "coverImageAlt": "Webフロントエンド ハイパフォーマンス チューニングの表紙",
+      "coverSourceName": "技術評論社",
+      "coverSourceUrl": "https://gihyo.jp/book/2017/978-4-7741-8967-3",
+      "bookTopicIds": [
+        "performance-graphics",
+        "frontend"
+      ],
+      "description": "ブラウザの描画、開発者ツールによる計測、読み込み、JavaScript、CSSの改善を仕組みから学べる日本語書籍。",
+      "technologyIds": [
+        "browser-devtools"
+      ],
+      "concepts": [
+        "web-performance",
+        "rendering-performance"
+      ],
+      "currentUse": "表示速度を勘ではなく計測結果から改善するための、ブラウザ処理の基礎を理解する。",
+      "limitations": "Core Web VitalsとINPが導入される前の本。asm.jsやドメイン分割など古い手法を現在の推奨として使わない。"
+    },
+    {
+      "id": "book-web-inclusive-design",
+      "type": "book",
+      "title": "ウェブ・インクルーシブデザイン",
+      "url": "https://book.mynavi.jp/ec/products/detail/id=137838",
+      "authors": [
+        "Regine M. Gilbert",
+        "奥泉直子（訳）",
+        "川合俊輔（監訳）"
+      ],
+      "language": "日本語",
+      "versionNote": "2023年日本語版",
+      "isbn": "978-4-8399-8095-5",
+      "coverImageUrl": "https://book.mynavi.jp/files/topics/137838_ext_06_0.jpg",
+      "coverImageAlt": "ウェブ・インクルーシブデザインの表紙",
+      "coverSourceName": "マイナビ出版",
+      "coverSourceUrl": "https://book.mynavi.jp/ec/products/detail/id=137838",
+      "bookTopicIds": [
+        "accessibility",
+        "design-ux"
+      ],
+      "description": "障害のある利用者を含むリサーチ、支援技術、ユーザビリティテスト、組織での取り組みを扱う実践ガイド。",
+      "technologyIds": [
+        "assistive-technology"
+      ],
+      "concepts": [
+        "inclusive-research",
+        "usability-testing"
+      ],
+      "currentUse": "障害のある利用者に参加してもらう評価を、準備、進行、組織的な改善まで含めて考える。",
+      "limitations": "規格への適合判定や個別の実装リファレンスを置き換える本ではない。現在のW3C公式資料も確認する。"
+    },
+    {
+      "id": "book-web-performance-engineering-ai",
+      "type": "book",
+      "title": "Web Performance Engineering in the Age of AI",
+      "url": "https://www.oreilly.com/library/view/web-performance-engineering/9798341660182/",
+      "authors": [
+        "Addy Osmani"
+      ],
+      "language": "英語",
+      "versionNote": "2026年刊",
+      "isbn": "979-8-3416-6018-2",
+      "coverImageUrl": "https://www.oreilly.com/covers/urn%3Aorm%3Abook%3A9798341660182/296w/?format=webp",
+      "coverImageAlt": "Web Performance Engineering in the Age of AIの表紙",
+      "coverSourceName": "O'Reilly Media",
+      "coverSourceUrl": "https://www.oreilly.com/library/view/web-performance-engineering/9798341660182/",
+      "bookTopicIds": [
+        "performance-graphics",
+        "testing-quality"
+      ],
+      "description": "LCP、INP、CLS、Lighthouse、CrUX、web-vitalsを使い、開発時と実利用時の性能を継続して改善する方法を扱う本。",
+      "technologyIds": [
+        "lighthouse",
+        "crux",
+        "web-vitals"
+      ],
+      "concepts": [
+        "core-web-vitals",
+        "performance-monitoring"
+      ],
+      "currentUse": "公開前の検査、公開後の集計、自前の利用者計測を、目的の異なる測定として組み合わせる。",
+      "limitations": "英語で、AI生成フロントエンドに関する話題を含む。指標の定義と良否の基準はGoogleの現行公式資料でも確認する。"
     },
     {
       "id": "res-ae-wai-evaluation-tools",

@@ -25,4 +25,6 @@ disadvantages:
 - 誤検出や見落としを担当者が確認する必要がある
 resourceIds:
 - res-ae-wai-evaluation-tools
+- book-practical-web-accessibility
+- book-frontend-testing-intro
 lastReviewed: '2026-08-24'

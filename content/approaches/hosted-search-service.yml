@@ -32,4 +32,5 @@ resourceIds:
 - res-algolia-search-api
 - res-algolia-relevance
 - res-algolia-natural-languages
+- book-relevant-search
 lastReviewed: '2026-08-24'

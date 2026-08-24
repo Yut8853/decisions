@@ -1,0 +1,26 @@
+id: book-passkeys-everything
+type: book
+title: パスキーのすべて――導入・UX設計・実装
+url: https://gihyo.jp/book/2025/978-4-297-14653-5
+authors:
+- えーじ
+- 倉林雅
+- 小岩井航介
+language: 日本語
+versionNote: 2025年刊
+isbn: 978-4-297-14653-5
+coverImageUrl: https://gihyo.jp/assets/images/ogp/2025/9784297146535.jpg
+coverImageAlt: パスキーのすべての表紙
+coverSourceName: 技術評論社
+coverSourceUrl: https://gihyo.jp/book/2025/978-4-297-14653-5
+bookTopicIds:
+- security-auth
+- design-ux
+description: WebAuthnとFIDO2の仕組み、登録・認証・管理の体験、サーバー検証、復旧、端末間利用を日本語で扱う実践書。
+technologyIds:
+- webauthn
+concepts:
+- passkeys
+- authentication-ux
+currentUse: パスキーを安全に実装するだけでなく、登録、端末変更、復旧まで含む利用者の導線を設計する。
+limitations: ブラウザ、OS、APIの対応状況は変化する。W3C、FIDO Alliance、採用する環境の現行資料も確認する。

@@ -30,4 +30,5 @@ disadvantages:
 resourceIds:
 - res-fem-whatwg-errors
 - res-fem-owasp-logging
+- book-learning-opentelemetry-ja
 lastReviewed: '2026-08-24'

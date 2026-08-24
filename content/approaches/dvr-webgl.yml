@@ -28,4 +28,6 @@ disadvantages:
 resourceIds:
 - res-dvr-webgl-standard
 - res-dvr-deck-interactivity
+- book-data-visualization-fundamentals-ja
+- book-real-time-rendering
 lastReviewed: '2026-08-24'

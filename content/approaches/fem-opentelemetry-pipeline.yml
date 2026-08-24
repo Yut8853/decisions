@@ -30,4 +30,5 @@ disadvantages:
 resourceIds:
 - res-fem-otel-browser
 - res-fem-otel-collector
+- book-learning-opentelemetry-ja
 lastReviewed: '2026-08-24'

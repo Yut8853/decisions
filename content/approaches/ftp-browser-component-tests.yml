@@ -25,4 +25,5 @@ disadvantages:
 - コンポーネントの外にある画面遷移やバックエンド連携は別途確認が必要
 resourceIds:
 - res-ftp-vitest-browser-components
+- book-frontend-testing-intro
 lastReviewed: '2026-08-24'

@@ -32,4 +32,6 @@ disadvantages:
 resourceIds:
 - res-owasp-input-validation
 - res-owasp-logging
+- book-form-design-patterns
+- book-frontend-security-intro
 lastReviewed: '2026-08-24'

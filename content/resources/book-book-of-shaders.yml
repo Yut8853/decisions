@@ -11,6 +11,8 @@ coverImageUrl: https://thebookofshaders.com/thumb.png
 coverImageAlt: The Book of Shadersの公式画像
 coverSourceName: The Book of Shaders公式サイト
 coverSourceUrl: https://thebookofshaders.com/?lan=jp
+bookTopicIds:
+- performance-graphics
 description: GLSLとシェーダー表現を、実際に動かせる小さな例から学べる無料のオンラインブック。
 technologyIds:
 - glsl

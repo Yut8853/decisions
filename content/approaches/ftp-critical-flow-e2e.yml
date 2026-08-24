@@ -25,4 +25,5 @@ disadvantages:
 - 細かな内部ロジックの網羅には別のテスト層が必要になる
 resourceIds:
 - res-ftp-playwright-best-practices
+- book-frontend-testing-intro
 lastReviewed: '2026-08-24'

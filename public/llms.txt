@@ -21,4 +21,4 @@ Evidence-first technology decisions with explicit conditions, negative recommend
 - [実際の表示品質を継続して測りたい](https://decisions.junkbranding.com/decisions/web-vitals-monitoring): 公開された実利用データ、自前の利用者計測、公開前の自動検査を、調べたい範囲と運用条件に合わせて比較します。
 
 Policy version: 1.0.0
-Generated: 2026-08-24T11:58:23.374Z
+Generated: 2026-08-24T13:07:30.627Z

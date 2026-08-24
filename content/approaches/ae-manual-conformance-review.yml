@@ -26,4 +26,7 @@ disadvantages:
 - 規格への適合確認だけでは実利用上の課題を拾い切れない
 resourceIds:
 - res-ae-wcag-em
+- book-web-accessibility-textbook
+- book-web-application-accessibility
+- book-practical-web-accessibility
 lastReviewed: '2026-08-24'

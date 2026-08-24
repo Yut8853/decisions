@@ -31,4 +31,5 @@ disadvantages:
 resourceIds:
 - res-postgresql-full-text-search
 - res-postgresql-text-dictionaries
+- book-relevant-search
 lastReviewed: '2026-08-24'

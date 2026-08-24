@@ -13,6 +13,9 @@ coverImageUrl: https://covers.openlibrary.org/b/id/14572298-M.jpg
 coverImageAlt: Designing Interfaces 第3版の表紙
 coverSourceName: Open Library
 coverSourceUrl: https://openlibrary.org/isbn/9781492051961
+bookTopicIds:
+- design-ux
+- frontend
 description: 画面設計で繰り返し使われるパターンと、情報を分かりやすく見せる方法を体系的に扱う本。
 technologyIds:
 - html

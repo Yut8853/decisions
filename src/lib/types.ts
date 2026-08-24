@@ -1,7 +1,9 @@
 import type { SituationCategoryId } from "./situation-category-ids";
+import type { BookTopicId } from "./book-topic-ids";
 
 export type SituationType = "build" | "selection" | "performance" | "architecture";
 export type { SituationCategoryId } from "./situation-category-ids";
+export type { BookTopicId } from "./book-topic-ids";
 export type RuleEffectType = "require" | "exclude" | "boost" | "penalize" | "warn";
 export type SourceType =
   | "specification"
@@ -103,6 +105,7 @@ export type Resource = {
   coverImageAlt?: string;
   coverSourceName?: string;
   coverSourceUrl?: string;
+  bookTopicIds?: BookTopicId[];
   description: string;
   technologyIds: string[];
   concepts: string[];
@@ -119,6 +122,7 @@ export type BookResource = Resource & {
   coverImageAlt: string;
   coverSourceName: string;
   coverSourceUrl: string;
+  bookTopicIds: BookTopicId[];
   limitations: string;
 };
 
