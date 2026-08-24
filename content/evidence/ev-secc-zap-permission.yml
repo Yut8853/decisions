@@ -1,0 +1,11 @@
+id: ev-secc-zap-permission
+title: ZAPの能動検査は許可を得た対象だけに実行する
+claim: ZAP公式資料は、能動検査を攻撃と説明し、攻撃する許可を得たアプリケーションだけを対象にするよう明記している。
+sourceType: official-documentation
+sourceName: OWASP ZAP
+url: https://www.zaproxy.org/docs/desktop/addons/automation-framework/job-ascan/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: 本番とは分離され、復元できる検証環境であっても、所有者が許可した対象と範囲を実行前に確認する。

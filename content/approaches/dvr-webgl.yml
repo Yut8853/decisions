@@ -1,0 +1,31 @@
+id: dvr-webgl
+slug: dvr-webgl
+title: WebGLで可視化する
+shortTitle: WebGL
+summary: シェーダーを使う描画と対象の選択機能を組み合わせ、多数のデータを操作できる画面を構成する方法です。
+defaultLabel: specialized
+baseScore: 1
+technologyIds:
+- webgl
+- deck-gl
+concepts:
+- gpu-rendering
+- object-picking
+recommendedWhen:
+- 多数のデータを低レベルの描画APIで制御したい
+- 拡大、移動、選択など密度の高い操作が必要
+- 対応端末と実データで描画を検証できる
+notRecommendedWhen:
+- 少数の静的な図表だけで目的を満たせる
+- 表や文章、キーボード操作の代替を用意できない
+- 利用端末のGPU対応を確認できない
+advantages:
+- Canvasから低レベルのシェーダーベース描画APIを利用できる
+- deck.glなどの仕組みで描画対象の選択やポインター操作を実装できる
+disadvantages:
+- GPU対応、描画資源、端末差を確認する必要がある
+- 表、文章、キーボード操作などの代替を別に設計する必要がある
+resourceIds:
+- res-dvr-webgl-standard
+- res-dvr-deck-interactivity
+lastReviewed: '2026-08-24'

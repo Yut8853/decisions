@@ -1,0 +1,12 @@
+id: res-wvm-crux-overview
+type: official
+title: Chrome UX Report（CrUX）概要
+url: https://developer.chrome.com/docs/crux/
+description: CrUXの実利用データ、公開方法、ページとサイトの収録条件を確認するChrome公式資料です。
+technologyIds:
+- crux
+concepts:
+- field-data
+- core-web-vitals
+currentUse: 公開実測データが目的と対象URLに合うかの確認。
+limitations: 公開され十分な利用者数があるページやサイトだけが収録対象です。

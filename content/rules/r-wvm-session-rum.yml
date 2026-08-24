@@ -1,0 +1,15 @@
+id: r-wvm-session-rum
+situationId: web-vitals-monitoring
+targetApproachId: wvm-self-rum
+when:
+  all:
+  - per-session-diagnostics-required
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 9
+reason: web-vitalsは実際のページ訪問で得た指標と追加の診断情報をコールバックへ渡せるため、必要な画面情報と一緒に自前収集できます。
+evidenceIds:
+- ev-wvm-web-vitals-rum
+lastReviewed: '2026-08-24'

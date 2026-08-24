@@ -1,0 +1,16 @@
+id: r-fem-tracing-otel
+situationId: frontend-error-monitoring
+targetApproachId: fem-opentelemetry-pipeline
+when:
+  all:
+  - distributed-tracing-required
+  any: []
+  none: []
+effect:
+  type: require
+  group: fem-distributed-tracing
+reason: OpenTelemetryはブラウザで捕捉した例外をSpan（処理区間の記録）へ加え、Collector（記録の受信・中継プログラム）から既存の追跡保存先へ送る構成を作れます。
+evidenceIds:
+- ev-fem-otel-exception-span
+- ev-fem-otel-collector-routing
+lastReviewed: '2026-08-24'

@@ -1,0 +1,33 @@
+id: fem-self-error-endpoint
+slug: fem-self-error-endpoint
+title: 画面エラーの収集先を自作する
+shortTitle: 収集先を自作する
+summary: ブラウザ標準が通知する実行エラーと未処理の失敗を必要な範囲で受け取り、自分たちのAPIで保存と通知まで行う方法です。
+defaultLabel: alternative
+baseScore: 1
+technologyIds:
+- browser-error-events
+concepts:
+- self-hosted-error-collection
+- error-event
+- data-governance
+recommendedWhen:
+- エラー情報の送信先と保持期間を自分たちで厳密に管理する
+- 外部の監視サービスを利用できない
+- 受信、整理、検索、通知を継続運用できる
+notRecommendedWhen:
+- 短期間で検索画面や通知まで用意したい
+- 記録の分類、再送、保存容量、閲覧権限を運用できない
+- ブラウザイベントだけで全種類の失敗を自動収集できると想定している
+advantages:
+- 送信項目と保存先を自分たちの方針に合わせられる
+- 外部のエラー監視サービスにデータを送らずに済む
+- 必要な画面とエラーだけに収集範囲を絞れる
+disadvantages:
+- 受信API、保存、分類、検索、通知を作る必要がある
+- 配送失敗、送信量、悪用への対策が必要
+- ブラウザ標準の二つの通知だけでは通信失敗や業務上の失敗を網羅しない
+resourceIds:
+- res-fem-whatwg-errors
+- res-fem-owasp-logging
+lastReviewed: '2026-08-24'

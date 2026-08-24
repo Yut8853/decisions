@@ -1,0 +1,11 @@
+id: ev-authm-webauthn-public-key
+title: WebAuthnはサイトに結び付く公開鍵資格情報を扱う
+claim: WebAuthnは、Webアプリが利用者を強く認証するため、そのアプリの範囲に結び付く公開鍵資格情報を作成して使用するAPIを定める。
+sourceType: specification
+sourceName: W3C Web Authentication Working Group
+url: https://www.w3.org/TR/webauthn-3/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: パスキーはWebAuthnのdiscoverable credentialとして扱われるが、復旧手順はアプリ側の別設計になる。

@@ -1,0 +1,11 @@
+id: ev-ftp-vitest-component-scope
+title: ブラウザ内コンポーネントテストの範囲
+claim: Vitestは、コンポーネントテストを個別のUI部品を分離して検証する方法と説明し、アプリ全体のテストには専用のE2Eテストランナーとの併用を勧めている。
+sourceType: official-documentation
+sourceName: Vitest
+url: https://vitest.dev/guide/browser/component-testing
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: コンポーネントテストだけで複数画面の導線を保証しない根拠として確認した。

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { situationCategoryIds } from "./situation-category-ids";
 
 const id = z.string().min(2).regex(/^[a-z0-9][a-z0-9-]*$/);
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
@@ -17,7 +18,7 @@ export const situationFrontmatterSchema = z.object({
   title: z.string().min(1),
   summary: z.string().min(20),
   type: z.enum(["build", "selection", "performance", "architecture"]),
-  category: z.enum(["sites", "products", "performance", "apps", "operations"]),
+  category: z.enum(situationCategoryIds),
   published: z.boolean(),
   defaultConditionIds: z.array(id).default([]),
   conditionIds: z.array(id).min(1),

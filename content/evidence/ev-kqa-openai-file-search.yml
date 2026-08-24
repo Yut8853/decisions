@@ -1,0 +1,11 @@
+id: ev-kqa-openai-file-search
+title: OpenAIのファイル検索と出典情報
+claim: OpenAIのファイル検索は応答APIのホスト型ツールで、登録済みのベクトル検索用保管領域を意味検索とキーワード検索で検索し、応答に参照ファイルを示す出典注記を含められる。
+sourceType: official-documentation
+sourceName: OpenAI API
+url: https://developers.openai.com/api/docs/guides/tools-file-search
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: 検索結果そのものの正しさや生成回答の正確性を保証する資料ではない。

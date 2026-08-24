@@ -1,0 +1,11 @@
+id: res-ftp-vitest-environment
+type: official
+title: Vitest テスト環境
+url: https://vitest.dev/config/environment.html
+description: Node.jsを含むテスト環境の選択と、ファイルごとの環境指定を確認する公式資料です。
+technologyIds:
+- vitest
+concepts:
+- unit-testing
+currentUse: ロジック単体テストが実行される環境の確認。
+limitations: 実ブラウザのコンポーネント操作は、Vitestの実ブラウザ実行に関する資料を別途確認します。

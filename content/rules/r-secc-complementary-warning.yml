@@ -1,0 +1,14 @@
+id: r-secc-complementary-warning
+situationId: web-security-check-priority
+when:
+  all: []
+  any: []
+  none: []
+effect:
+  type: warn
+reason: 三つは相互補完です。依存関係、ソースコード、稼働中の応答という異なる範囲を調べるため、最初の一つで他を代替したとは扱いません。
+evidenceIds:
+- ev-secc-dependabot-scope
+- ev-secc-codeql-scope
+- ev-secc-zap-active-scan
+lastReviewed: '2026-08-24'

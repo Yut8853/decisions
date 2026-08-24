@@ -1,0 +1,12 @@
+id: res-wvm-web-vitals
+type: official
+title: GoogleChrome web-vitals
+url: https://github.com/GoogleChrome/web-vitals/blob/main/README.md
+description: 実際の利用者のWeb Vitals取得、診断情報、分析先への送信例を確認する公式リポジトリです。
+technologyIds:
+- web-vitals
+concepts:
+- real-user-monitoring
+- field-measurement
+currentUse: 自前の利用者計測で取得できる指標と送信処理の確認。
+limitations: 保存、集計、閲覧画面、同意管理はライブラリに含まれません。

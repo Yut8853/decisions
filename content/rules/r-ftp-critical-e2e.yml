@@ -1,0 +1,15 @@
+id: r-ftp-critical-e2e
+situationId: frontend-test-priority
+targetApproachId: ftp-critical-flow-e2e
+when:
+  all:
+  - critical-user-journeys
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 5
+reason: Playwright Testは利用者に見える動作をブラウザから検証できるため、複数の仕組みを通る主要導線を優先できます。
+evidenceIds:
+- ev-ftp-playwright-e2e
+lastReviewed: '2026-08-24'

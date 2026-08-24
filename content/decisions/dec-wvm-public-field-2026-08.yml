@@ -1,0 +1,13 @@
+id: dec-wvm-public-field-2026-08
+slug: public-field-small-team
+situationId: web-vitals-monitoring
+title: 公開実測データから始める
+conditionIds:
+- public-field-data-available
+- small-team
+- maintainability-priority
+snapshotDate: '2026-08-24'
+summary: 対象URLに公開実測データがあり、少人数で収集基盤を増やさず継続確認したいため、CrUXを第一候補とします。
+expectedTopApproachIds:
+- wvm-public-crux
+status: published

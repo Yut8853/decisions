@@ -1,0 +1,11 @@
+id: ev-dvr-wai-tables
+title: データ表の見出しとセルの関係
+claim: W3C WAIは、データ表の見出しセルとデータセルをHTMLで構造化すると、支援技術が両者の関係を利用者へ伝えられると説明している。
+sourceType: official-documentation
+sourceName: W3C Web Accessibility Initiative
+url: https://www.w3.org/WAI/tutorials/tables/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: 数値を視覚表現だけでなく表として提供する根拠を確認した。

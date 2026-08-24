@@ -1,0 +1,12 @@
+id: res-dvr-canvas-standard
+type: official
+title: WHATWG HTML Canvas Standard
+url: https://html.spec.whatwg.org/multipage/canvas.html
+description: canvasのbitmap描画面、2D context、静的媒体での扱い、fallback contentを定めるHTML仕様です。
+technologyIds:
+- canvas-api
+concepts:
+- immediate-mode-rendering
+- bitmap-graphics
+currentUse: Canvasの描画方式と代替内容の要件確認。
+limitations: ライブラリ間や描画方式間の性能比較は示しません。

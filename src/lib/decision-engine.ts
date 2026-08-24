@@ -117,7 +117,7 @@ export function decide(input: {
   if (ranked.length > 1 && Math.abs(ranked[0].score - ranked[1].score) <= 1) {
     warnings.push({
       id: "close-decision",
-      message: "上位案の差は小さいため、単独の正解ではなく、優先したい条件で最終判断してください。",
+      message: "上位案の差は小さいため、優先したい条件を確認し、役割が異なる場合は併用も検討してください。",
       evidenceIds: unique([...ranked[0].evidenceIds, ...ranked[1].evidenceIds])
     });
   }

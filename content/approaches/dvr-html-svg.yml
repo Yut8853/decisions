@@ -1,0 +1,30 @@
+id: dvr-html-svg
+slug: dvr-html-svg
+title: HTML表とSVGで可視化する
+shortTitle: HTML表＋SVG
+summary: 数値をHTML表で読めるようにし、図形は文書内のSVG要素として表現する方法です。
+defaultLabel: canonical
+baseScore: 3
+technologyIds:
+- html
+- svg
+concepts:
+- accessible-data-table
+- vector-graphics
+recommendedWhen:
+- 数値と見出しの関係を支援技術でも読めるようにしたい
+- 図と同じ情報を表や文章でも提供したい
+- 文書として扱いやすい静的な表現を重視する
+notRecommendedWhen:
+- 一度に非常に多くの図形を頻繁に更新することが主要要件
+- GPUを使う描画や大量の対象を細かく選択する必要がある
+advantages:
+- 表の見出しとセルの関係をHTMLで明示できる
+- SVGの図形をDOM、CSS、JavaScriptから扱える
+disadvantages:
+- 図形ごとの要素が増える構成では実データで描画を確認する必要がある
+- 複雑な図には短い説明と詳しい代替情報を別途用意する必要がある
+resourceIds:
+- res-dvr-wai-tables
+- res-dvr-svg-spec
+lastReviewed: '2026-08-24'

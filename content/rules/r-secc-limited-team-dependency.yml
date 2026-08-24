@@ -1,0 +1,18 @@
+id: r-secc-limited-team-dependency
+situationId: web-security-check-priority
+targetApproachId: secc-dependency-monitoring
+when:
+  all:
+  - github-dependency-graph-available
+  any:
+  - short-deadline
+  - small-team
+  - maintainability-priority
+  none: []
+effect:
+  type: boost
+  weight: 2
+reason: Dependabot alertsはリポジトリの依存関係変更と新しい既知の脆弱性から警告を作るため、対象を絞って継続確認を始められます。
+evidenceIds:
+- ev-secc-dependabot-scope
+lastReviewed: '2026-08-24'

@@ -37,8 +37,12 @@ content/decisions/*.yml（代表Presetがある場合）
 sites        サイトをつくる
 products     商品を見せる
 performance  表示を速くする
-apps         アプリ・機能をつくる（該当Contentができるまで非表示）
-operations   開発・運用を整える（該当Contentができるまで非表示）
+apps         アプリ・機能をつくる
+operations   開発・運用を整える
+quality      品質・使いやすさを高める
+security     安全性を高める
+data-ai      データ・生成AIを活用する
+measurement  計測して改善する
 ```
 
 SEO、モバイル、React、納期などの横断要件はCategoryを増やさずConditionとして扱います。既存Categoryで目的が説明できず、同種のSituationを複数追加する計画がある場合だけ新Categoryを検討します。

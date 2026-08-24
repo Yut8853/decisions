@@ -1,0 +1,35 @@
+id: authm-external-oidc
+slug: authm-external-oidc
+title: 組織の認証基盤と連携する（OpenID Connect）
+shortTitle: 組織の認証基盤を使う
+summary: IdP（本人確認とアカウント管理を担う認証基盤）でログインし、アプリはOpenID Connectで届く認証結果を検証する方法です。
+defaultLabel: fast
+baseScore: 3
+technologyIds:
+- openid-connect
+concepts:
+- identity-provider
+- federated-login
+- token-validation
+recommendedWhen:
+- 会社や学校の既存アカウントでログインさせたい
+- 認証情報と復旧の主要運用を組織のIdPへまとめたい
+- 利用できる既存の組織IdPがある
+- 外部のクラウドサービスまたは組織内で運用するIdPを利用できる
+notRecommendedWhen:
+- 連携できる組織IdPも、自分たちで運用できるIdPもない
+- IdP停止時にも同じログイン経路を必ず維持したい
+- IDトークンの発行元、対象アプリ、有効期限などを採用した流れに沿って検証できない
+advantages:
+- 組織の本人確認結果をアプリから利用できる
+- 複数アプリのログイン方針をIdP側にまとめやすい
+- アプリが利用者のパスワードを直接保管せずに済む
+disadvantages:
+- 選んだIdPの利用条件、運用体制、可用性に依存する
+- IDトークンの検証とアプリ側セッション管理は残る
+- 復旧方法やパスキー対応は選ぶIdPごとに確認が必要
+resourceIds:
+- res-authm-oidc-core
+- res-authm-session-management
+- res-authm-keycloak-oidc-server
+lastReviewed: '2026-08-24'

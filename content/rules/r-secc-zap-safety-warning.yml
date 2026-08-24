@@ -1,0 +1,14 @@
+id: r-secc-zap-safety-warning
+situationId: web-security-check-priority
+when:
+  all:
+  - authorized-security-test-environment
+  any: []
+  none: []
+effect:
+  type: warn
+reason: ZAPの能動検査は対象へ実際の攻撃に相当する操作を行います。選択した検証環境のうち、所有者が明示的に許可した範囲だけへ実行してください。
+evidenceIds:
+- ev-secc-zap-active-scan
+- ev-secc-zap-permission
+lastReviewed: '2026-08-24'

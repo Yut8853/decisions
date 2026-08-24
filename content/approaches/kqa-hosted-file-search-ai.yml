@@ -1,0 +1,31 @@
+id: kqa-hosted-file-search-ai
+slug: kqa-hosted-file-search-ai
+title: ホスト型ファイル検索付き生成AIを使う
+shortTitle: ホスト型ファイル検索＋生成AI
+summary: 資料を管理サービスの検索領域へ登録し、検索結果を根拠として生成AIが回答する方法です。
+defaultLabel: fast
+baseScore: 2
+technologyIds:
+- openai-file-search
+- responses-api
+concepts:
+- retrieval-augmented-generation
+- hosted-vector-store
+recommendedWhen:
+- 少人数で資料検索と生成回答を組み合わせたい
+- 回答から参照ファイルを確認できるようにしたい
+- サービスの保存、削除、利用条件が資料の扱いに合う
+notRecommendedWhen:
+- 資料を外部サービスへ保存できない
+- 同じ質問へ承認済みの文章だけを必ず返したい
+- 検索順位や権限判定を業務固有の処理で細かく制御したい
+advantages:
+- 検索実行の基盤を自前で実装せずに始められる
+- 意味検索とキーワード検索、ファイルの出典情報を利用できる
+disadvantages:
+- ファイルの保存と削除、利用可能なデータ管理設定を確認する必要がある
+- 生成回答の正しさは別途評価し、根拠を利用者が確認できるようにする必要がある
+resourceIds:
+- res-kqa-openai-file-search
+- res-kqa-openai-data-controls
+lastReviewed: '2026-08-24'

@@ -1,0 +1,11 @@
+id: ev-fem-application-log-operations
+title: 自前の画面エラー収集には受信後のログ運用が必要
+claim: OWASPのアプリケーションログ資料は、JavaScriptの例外処理を記録元の一つに挙げ、外部から届く記録の検証と無害化、保存、閲覧保護、監視と通知を設計・運用するよう案内している。
+sourceType: official-documentation
+sourceName: OWASP
+url: https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: ブラウザから自前APIへ送るだけでは、受信後の保存、閲覧、監視、通知は完成しない。

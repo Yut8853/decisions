@@ -1,0 +1,12 @@
+id: res-kqa-pagefind-docs
+type: official
+title: Pagefind 公式ガイド
+url: https://pagefind.app/docs/
+description: 公開済みHTMLから静的検索索引を生成し、検索画面やAPIから利用する手順を確認する公式資料です。
+technologyIds:
+- pagefind
+concepts:
+- static-search-index
+- curated-knowledge-base
+currentUse: 承認済みFAQを検索する構成の確認。
+limitations: FAQの回答内容と更新責任は編集側で管理します。

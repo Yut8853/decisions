@@ -1,0 +1,16 @@
+id: r-wvm-ci-lighthouse
+situationId: web-vitals-monitoring
+targetApproachId: wvm-lighthouse-ci
+when:
+  all:
+  - ci-regression-gate-required
+  any: []
+  none:
+  - per-session-diagnostics-required
+effect:
+  type: require
+  group: wvm-ci-regression-gate
+reason: 公開前の自動検査ゲートが必須で、個別の利用状況を調べる要件がない場合は、判定条件に失敗したとき自動処理を失敗にできるLighthouse CIを選びます。
+evidenceIds:
+- ev-wvm-lhci-assertions
+lastReviewed: '2026-08-24'

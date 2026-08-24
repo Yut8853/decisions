@@ -1,0 +1,32 @@
+id: wvm-lighthouse-ci
+slug: wvm-lighthouse-ci
+title: Lighthouse CIで公開前に検査する
+shortTitle: 公開前に自動検査する
+summary: Lighthouse CI（公開前の自動検査）を決めた実験室条件で繰り返し実行し、変更前に品質低下を検知する方法です。
+defaultLabel: specialized
+baseScore: 1
+technologyIds:
+- lighthouse-ci
+concepts:
+- lab-measurement
+- continuous-integration
+- regression-gate
+recommendedWhen:
+- 変更ごとの自動検査で品質低下を止めたい
+- 継続的インテグレーション環境を利用できる
+- 実行条件と判定基準をチームで固定できる
+notRecommendedWhen:
+- 実際の利用者や端末のばらつきだけを把握したい
+- 自動実行環境や検査対象URLを用意できない
+- 一回の計測値だけで公開後の体験を断定したい
+advantages:
+- 公開前の変更ごとに同じ手順で検査できる
+- 判定条件を設定し、自動処理の成否へ反映できる
+- 実利用データがまだない画面も検査できる
+disadvantages:
+- 実験室計測であり実際の利用者データではない
+- 実行環境の揺れを考慮して判定条件を調整する必要がある
+- 認証や画面操作が必要な対象には追加設定が必要
+resourceIds:
+- res-wvm-lighthouse-ci
+lastReviewed: '2026-08-24'

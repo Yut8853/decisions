@@ -8,7 +8,7 @@ when:
   none: []
 effect:
   type: exclude
-reason: Algolia方式は外部の検索APIへ検索レコードを登録するため、外部SaaSへ送信できない条件と両立しません。
+reason: Algolia方式は外部の検索APIへ検索レコードを登録するため、外部のクラウドサービスへ送信できない条件と両立しません。
 evidenceIds:
 - ev-algolia-record-management
 lastReviewed: '2026-08-24'

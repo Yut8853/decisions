@@ -1,0 +1,19 @@
+id: r-authm-limited-team-passkey
+situationId: authentication-method
+targetApproachId: authm-passkey-webauthn
+when:
+  all: []
+  any:
+  - short-deadline
+  - small-team
+  - maintainability-priority
+  none:
+  - authentication-team-available
+effect:
+  type: penalize
+  weight: -3
+reason: WebAuthnを直接組み込む方式には登録、署名された認証結果の検証、復旧の運用が残るため、担当者がいない状態で短納期や保守負担の小ささを優先する場合は優先度を下げます。
+evidenceIds:
+- ev-authm-webauthn-rp-operations
+- ev-authm-account-recovery
+lastReviewed: '2026-08-24'

@@ -1,0 +1,15 @@
+id: r-ae-accessibility-manual
+situationId: accessibility-evaluation
+targetApproachId: ae-manual-conformance-review
+when:
+  all:
+  - accessibility-priority
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 2
+reason: 評価範囲、代表サンプル、適合目標、結果報告を明示する手順があるため、規格に沿う確認を重視する場合に優先します。
+evidenceIds:
+- ev-ae-wcag-em-procedure
+lastReviewed: '2026-08-24'

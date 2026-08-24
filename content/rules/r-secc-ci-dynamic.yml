@@ -1,0 +1,16 @@
+id: r-secc-ci-dynamic
+situationId: web-security-check-priority
+targetApproachId: secc-dynamic-app-scan
+when:
+  all:
+  - ci-available
+  - authorized-security-test-environment
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 1
+reason: ZAP Full ScanはDockerから実行し、警告・失敗・無視の設定に応じた終了状態を返せるため、許可済み検証環境への自動実行に組み込めます。
+evidenceIds:
+- ev-secc-zap-active-scan
+lastReviewed: '2026-08-24'

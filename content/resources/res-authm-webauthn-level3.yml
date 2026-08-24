@@ -1,0 +1,12 @@
+id: res-authm-webauthn-level3
+type: official
+title: W3C Web Authentication Level 3
+url: https://www.w3.org/TR/webauthn-3/
+description: WebAuthnの登録、認証、資格情報、セキュリティ上の要件を確認するW3C仕様です。
+technologyIds:
+- webauthn
+concepts:
+- passkey
+- public-key-authentication
+currentUse: パスキーを直接実装する際の登録と検証要件の確認。
+limitations: 仕様だけではアカウント復旧や利用者向け画面の設計は完成しません。

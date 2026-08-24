@@ -1,0 +1,11 @@
+id: ev-wvm-crux-api-access
+title: CrUX APIはGoogleの公開APIから実利用データを取得する
+claim: Chrome公式資料は、CrUX APIへURLまたはサイトを指定して実利用データを取得する手順と、Google CloudのAPIキーを使うアクセス方法を示している。
+sourceType: official-documentation
+sourceName: Chrome for Developers
+url: https://developer.chrome.com/docs/crux/api
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: 自サイトから新しい計測記録を送る処理ではないが、Googleの公開APIを参照できるかは組織のアクセス方針で確認する。

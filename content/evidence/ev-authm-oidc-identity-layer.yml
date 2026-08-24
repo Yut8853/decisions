@@ -1,0 +1,11 @@
+id: ev-authm-oidc-identity-layer
+title: OpenID Connectは外部の認証結果をアプリへ伝える
+claim: OpenID ConnectはOAuth 2.0上の本人確認層で、認証基盤が行った認証に基づき、連携するアプリが利用者の本人性と属性を確認できるようにする。
+sourceType: specification
+sourceName: OpenID Foundation
+url: https://openid.net/specs/openid-connect-core-1_0.html
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: 個別IdPが提供するSSO、復旧、パスキーの機能範囲は仕様外なので採用時に確認する。

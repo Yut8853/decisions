@@ -1,0 +1,15 @@
+id: r-kqa-small-hosted
+situationId: knowledge-qa
+targetApproachId: kqa-hosted-file-search-ai
+when:
+  all:
+  - small-team
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 2
+reason: OpenAIのファイル検索は検索処理をサービス側で管理するため、自前の検索実行基盤を持たずに始められます。
+evidenceIds:
+- ev-kqa-openai-file-search
+lastReviewed: '2026-08-24'

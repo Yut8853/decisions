@@ -1,0 +1,11 @@
+id: ev-fem-sentry-browser-capture
+title: Sentry JavaScript SDKはブラウザの未捕捉エラーを扱う
+claim: Sentry JavaScript Browser SDKの標準GlobalHandlersは、window.onerrorとunhandledrejectionから未捕捉のエラー情報を受け取る実装を含む。
+sourceType: official-repository
+sourceName: getsentry/sentry-javascript
+url: https://github.com/getsentry/sentry-javascript/blob/develop/packages/browser/src/integrations/globalhandlers.ts
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: すべての失敗を自動で取得するとは限らず、対象に合わせた追加記録と除外設定が必要。

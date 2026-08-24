@@ -33,11 +33,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <a className="skip-link" href="#main">本文へ移動</a>
         <header className="site-header">
-          <Link className="brand" href="/" aria-label="Verified Technology Decisions ホーム">
+          <Link className="brand" href="/" aria-label="技術判断集 ホーム">
             <span className="brand-mark">JB</span>
             <span>
-              <strong>VERIFIED</strong>
-              <small>TECHNOLOGY DECISIONS</small>
+              <strong>技術判断集</strong>
+              <small>JUNKBRANDING</small>
             </span>
           </Link>
           <nav aria-label="メインナビゲーション">

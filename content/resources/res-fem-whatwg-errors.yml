@@ -1,0 +1,12 @@
+id: res-fem-whatwg-errors
+type: official
+title: WHATWG HTML Runtime Script Errors
+url: https://html.spec.whatwg.org/multipage/webappapis.html#runtime-script-errors
+description: ブラウザのerrorイベントと未処理Promise rejectionの通知手順を定めるHTML標準です。
+technologyIds:
+- html
+concepts:
+- error-event
+- unhandled-promise-rejection
+currentUse: 自前収集で利用できるブラウザ標準イベントの範囲確認。
+limitations: 受信API、保存、再送、分類、通知は標準の範囲外です。

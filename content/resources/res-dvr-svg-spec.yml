@@ -1,0 +1,12 @@
+id: res-dvr-svg-spec
+type: official
+title: W3C SVG 2
+url: https://www.w3.org/TR/SVG2/
+description: XMLベースのベクター画像、HTML統合、CSS、DOM、スクリプトを定めるSVG仕様です。
+technologyIds:
+- svg
+concepts:
+- vector-graphics
+- document-graphics
+currentUse: SVGの文書形式とHTMLでの利用方法の確認。
+limitations: 多数の図形を扱う際の実行性能は実データと対象端末で確認します。

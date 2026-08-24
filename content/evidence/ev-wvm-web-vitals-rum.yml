@@ -1,0 +1,11 @@
+id: ev-wvm-web-vitals-rum
+title: web-vitalsは実利用者の指標を任意の分析先へ送れる
+claim: GoogleChromeのweb-vitalsライブラリは実利用者のWeb Vitalsをコールバックへ渡し、指定した分析エンドポイントへ画面情報とともに送る例と、現在のページ訪問に関する追加の診断情報を提供する。
+sourceType: official-repository
+sourceName: GoogleChrome web-vitals
+url: https://github.com/GoogleChrome/web-vitals/blob/main/README.md
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: 保存、集計、利用者識別、同意、閲覧画面は利用側で設計する。

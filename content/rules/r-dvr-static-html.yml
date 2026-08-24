@@ -1,0 +1,16 @@
+id: r-dvr-static-html
+situationId: data-visualization-rendering
+targetApproachId: dvr-html-svg
+when:
+  all:
+  - static-export-required
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 3
+reason: 数値と見出しをHTML表として保持し、解像度に合わせて拡大できるSVGを単独表示またはHTMLへ埋め込めるため、印刷用の数値とベクター図を保持できます。
+evidenceIds:
+- ev-dvr-wai-tables
+- ev-dvr-svg-spec
+lastReviewed: '2026-08-24'

@@ -1,0 +1,11 @@
+id: ev-dvr-svg-spec
+title: SVG 2の文書形式とHTML統合
+claim: SVG 2は、SVGをXMLに基づく2Dのベクターおよび混合画像を記述する言語と定義し、単独表示、HTMLとの混在、CSSによる装飾、スクリプトによる変更を扱えるとしている。
+sourceType: specification
+sourceName: W3C SVG 2
+url: https://www.w3.org/TR/SVG2/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: SVGが静的な文書形式としてもHTML内の要素としても扱える範囲を確認した。

@@ -1,0 +1,12 @@
+id: res-ae-wcag-em
+type: official
+title: WAI WCAG-EM Overview
+url: https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/
+description: WebサイトのWCAG適合状況を評価する範囲、代表サンプル、評価、報告の手順を確認する公式資料です。
+technologyIds:
+- wcag-em
+- wcag
+concepts:
+- conformance-evaluation
+currentUse: 手動の規格適合評価の手順と必要知識の確認。
+limitations: WCAGへ新しい要件を加える規格ではなく、評価方法を示す資料です。

@@ -1,0 +1,15 @@
+id: r-ae-release-auto
+situationId: accessibility-evaluation
+targetApproachId: ae-automated-checks
+when:
+  all:
+  - release-gate-required
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 5
+reason: 機械で判定できる項目を公開前ごとに同じ条件で確認できるため、自動判定の入口として優先します。
+evidenceIds:
+- ev-ae-automated-limits
+lastReviewed: '2026-08-24'

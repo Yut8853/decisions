@@ -8,7 +8,7 @@ JUNKBRANDINGが運営する、**SituationとConditionから実装Approachを比�
 
 - Next.js App Router / TypeScript / Vercel向け構成
 - Git内のMarkdown・YAMLを原本にするContent system
-- 9件の目的・32件の実装案・98件の判定基準・51件の根拠資料
+- 9カテゴリー・17件の目的・56件の実装案・173件の判定基準・104件の根拠資料
 - Conditionで順位・除外・警告を再計算する決定論的Rule Engine
 - Zod Schema、参照整合性、公開Presetの自動検証
 - VitestとPlaywright

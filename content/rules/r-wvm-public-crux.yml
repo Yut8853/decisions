@@ -1,0 +1,15 @@
+id: r-wvm-public-crux
+situationId: web-vitals-monitoring
+targetApproachId: wvm-public-crux
+when:
+  all:
+  - public-field-data-available
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 8
+reason: 対象URLに公開実測データがあれば、計測コードを追加せず、実際のChrome利用者の集計された体験を確認できます。
+evidenceIds:
+- ev-wvm-crux-field-eligibility
+lastReviewed: '2026-08-24'

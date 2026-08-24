@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { loadContent, loadManifest } from "../scripts/lib/load-content";
 import { validateBundle } from "../scripts/lib/validate-bundle";
-import { getVisibleSituationCategories } from "@/lib/situation-categories";
+import { getFeaturedSituationChoices, getVisibleSituationCategories } from "@/lib/situation-categories";
 
 describe("content validation", () => {
   it("passes schemas, references, evidence gates and decision snapshots", () => {
@@ -14,5 +14,22 @@ describe("content validation", () => {
     const grouped = getVisibleSituationCategories(published).flatMap((category) => category.situations);
     expect(grouped.map((situation) => situation.id).sort()).toEqual(published.map((situation) => situation.id).sort());
     expect(new Set(grouped.map((situation) => situation.id)).size).toBe(published.length);
+  });
+
+  it("backs every expanded category with multiple published decisions", () => {
+    const published = loadContent().situations.filter((situation) => situation.published);
+    const categories = getVisibleSituationCategories(published);
+    for (const id of ["quality", "security", "data-ai", "measurement"] as const) {
+      expect(categories.find((category) => category.id === id)?.situations.length).toBeGreaterThanOrEqual(2);
+    }
+  });
+
+  it("keeps the home selection bounded while representing every visible category", () => {
+    const published = loadContent().situations.filter((situation) => situation.published);
+    const categories = getVisibleSituationCategories(published);
+    const featured = getFeaturedSituationChoices(categories);
+    expect(featured.length).toBeLessThanOrEqual(12);
+    expect(new Set(featured.map(({ situation }) => situation.id)).size).toBe(featured.length);
+    expect(new Set(featured.map(({ categoryTitle }) => categoryTitle))).toEqual(new Set(categories.map(({ title }) => title)));
   });
 });

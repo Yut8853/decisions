@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T15:26:23.626Z",
+  "generatedAt": "2026-08-24T11:22:02.972Z",
   "situations": [
     {
       "id": "3d-portfolio",
@@ -65,6 +65,63 @@
       "body": "商品を3Dで見せるだけでも、実装方法によって自由度・工数・保守範囲が大きく変わります。\n\nこのページでは、単純な商品表示、AR、高度なシェーダー、React連携などの条件から、候補を絞り込みます。表示された順位は絶対評価ではなく、選択した条件に対する相対的な判断です。"
     },
     {
+      "id": "accessibility-evaluation",
+      "slug": "accessibility-evaluation",
+      "title": "Webサイトの使いやすさを検証したい",
+      "summary": "アクセシビリティの自動検査、規格に沿った手動評価、障害のある利用者を含む利用確認のうち、最初に重点を置く方法を選びます。",
+      "type": "selection",
+      "category": "quality",
+      "published": true,
+      "defaultConditionIds": [
+        "release-gate-required"
+      ],
+      "conditionIds": [
+        "release-gate-required",
+        "expert-review-available",
+        "user-research-available",
+        "short-deadline",
+        "accessibility-priority"
+      ],
+      "approachIds": [
+        "ae-automated-checks",
+        "ae-manual-conformance-review",
+        "ae-inclusive-usability-review"
+      ],
+      "lastReviewed": "2026-08-24",
+      "body": "アクセシビリティの評価方法は、どれか一つですべてを確認できるものではありません。ここでは、限られた時間の中で「最初にどの評価へ重点を置くか」を比較します。\n\n公開前に繰り返し確認するなら自動検査、規格への適合状況を整理するなら専門家による手動評価、実際の操作で起きるつまずきを知るなら障害のある利用者を含む利用確認が候補です。自動検査だけ、または少人数の利用確認だけで「アクセシブル」と断定せず、目的に応じて組み合わせます。"
+    },
+    {
+      "id": "authentication-method",
+      "slug": "authentication-method",
+      "title": "Webアプリのログイン方法を選びたい",
+      "summary": "パスキー、組織の共通ログイン、アプリで管理するパスワードを、利用者の要望と運用体制に合わせて比較します。",
+      "type": "selection",
+      "category": "security",
+      "published": true,
+      "defaultConditionIds": [
+        "maintainability-priority",
+        "existing-organization-idp-available"
+      ],
+      "conditionIds": [
+        "passwordless-priority",
+        "enterprise-sso-required",
+        "account-recovery-required",
+        "authentication-team-available",
+        "existing-organization-idp-available",
+        "short-deadline",
+        "small-team",
+        "maintainability-priority",
+        "external-service-restricted"
+      ],
+      "approachIds": [
+        "authm-passkey-webauthn",
+        "authm-external-oidc",
+        "authm-password-session"
+      ],
+      "lastReviewed": "2026-08-24",
+      "body": "ログイン方法は、入力画面だけでなく、本人確認をどこで行い、紛失時の復旧を誰が支えるかまで含めて選びます。\n\nパスキーは、WebAuthn（ブラウザと端末の本人確認機能をつなぐ標準）を使い、サイト用パスワードを入力しないログインを実現します。IdP（本人確認と組織アカウントの管理を担う認証基盤）とのOpenID Connect連携は、その認証結果をアプリへ伝える標準を使って、会社や学校の共通ログインへ接続します。\n\nIdPは外部のクラウドサービスだけでなく、組織内で運用する認証基盤も選べます。そのため「外部サービスへ情報を送れない」だけでOpenID Connectを除外せず、利用できるIdP、データの経路、運用責任を確認します。利用できる既存IdPがなく外部サービスも使えない場合は、新たな認証基盤の構築と運用が必要になるため、OpenID Connect案の優先度を下げます。組織ログインとパスワードを使わないことを両方求める場合は、選ぶIdP自身がパスキーなどに対応しているかも確認します。\n\nパスワードとセッション（ログイン済み状態）をアプリで管理する方法は外部の認証基盤に依存しませんが、安全な保存、試行制限、復旧、セッション保護を自分たちで運用します。このページでは、アプリが最初に責任を置く場所を比較します。"
+    },
+    {
       "id": "cms-architecture-selection",
       "slug": "cms-architecture-selection",
       "title": "更新しやすいCMS構成を選びたい",
@@ -92,6 +149,85 @@
       "body": "構造化した内容をWebサイトやアプリで再利用するならAPI型ヘッドレスCMS、更新もコードと同じ差分確認を通すならGit管理、実際のページを見ながら直接公開するなら表示統合型CMSが候補です。\n\n「編集画面があるか」だけでは更新しやすさは決まりません。入力、確認、承認、配信、フロントエンドへの反映までを一つの流れとして比較します。"
     },
     {
+      "id": "data-visualization-rendering",
+      "slug": "data-visualization-rendering",
+      "title": "データを分かりやすく可視化したい",
+      "summary": "HTML表とSVG、Canvas、WebGLを、情報の読み取りやすさ、データ量、操作、静的な出力の条件から選びます。",
+      "type": "selection",
+      "category": "data-ai",
+      "published": true,
+      "defaultConditionIds": [
+        "accessibility-priority"
+      ],
+      "conditionIds": [
+        "large-dataset",
+        "dense-interaction-required",
+        "static-export-required",
+        "accessibility-priority",
+        "performance-priority"
+      ],
+      "approachIds": [
+        "dvr-html-svg",
+        "dvr-canvas",
+        "dvr-webgl"
+      ],
+      "lastReviewed": "2026-08-24",
+      "body": "可視化は、見た目の種類だけで描画方法を決めません。数値を表として正確に読めること、多数の図形を更新すること、拡大や選択を行うことでは、必要な仕組みが変わります。\n\n読み上げや静的な資料への利用を重視するならHTML表とSVG、多数の図形を一枚の描画面へまとめるならCanvas、低レベルの描画制御と細かな選択が必要ならWebGLが候補です。CanvasやWebGLを選ぶ場合も、要点を読める表や文章を別に用意します。"
+    },
+    {
+      "id": "frontend-error-monitoring",
+      "slug": "frontend-error-monitoring",
+      "title": "公開後の画面エラーを見つけたい",
+      "summary": "管理型のエラー監視、既存の追跡基盤との連携、自前収集を、発見までの速さとデータ管理方針に合わせて比較します。",
+      "type": "selection",
+      "category": "measurement",
+      "published": true,
+      "defaultConditionIds": [
+        "production-errors-priority"
+      ],
+      "conditionIds": [
+        "distributed-tracing-required",
+        "production-errors-priority",
+        "data-control-priority",
+        "short-deadline",
+        "small-team",
+        "maintainability-priority",
+        "external-service-restricted"
+      ],
+      "approachIds": [
+        "fem-managed-error-service",
+        "fem-opentelemetry-pipeline",
+        "fem-self-error-endpoint"
+      ],
+      "lastReviewed": "2026-08-24",
+      "body": "公開後の画面エラーは、利用者から連絡が来るまで待たず、ブラウザから必要な情報だけを収集して担当者が確認できる流れを作ります。\n\n管理型サービスは、SDK（ブラウザへ組み込む収集用ライブラリ）、確認画面、通知をまとめて用意できます。OpenTelemetry（異なるシステムの記録を共通形式でつなぐ仕組み）は、ブラウザのエラーをSpan（ひと続きの処理区間の記録）へ加え、Collector（記録を受信・中継するプログラム）から既存の追跡基盤へ送る場合の候補です。\n\n自前収集は保存先を細かく管理できますが、受信、分類、検索、通知、保守を自分たちで担います。どの方法でも個人情報や認証情報を送らない設計が必要です。圧縮後のエラー位置を元のコードへ対応させるソースマップを使う場合は、ビルドとの対応と公開範囲も確認します。"
+    },
+    {
+      "id": "frontend-test-priority",
+      "slug": "frontend-test-priority",
+      "title": "最初に整備するテストを選びたい",
+      "summary": "ロジックの単体テスト、ブラウザ内のコンポーネントテスト、主要な利用導線のE2Eテストから、最初に厚くする層を選びます。",
+      "type": "selection",
+      "category": "quality",
+      "published": true,
+      "defaultConditionIds": [
+        "critical-user-journeys"
+      ],
+      "conditionIds": [
+        "logic-heavy",
+        "browser-behavior-priority",
+        "critical-user-journeys",
+        "accessibility-priority"
+      ],
+      "approachIds": [
+        "ftp-logic-unit-tests",
+        "ftp-browser-component-tests",
+        "ftp-critical-flow-e2e"
+      ],
+      "lastReviewed": "2026-08-24",
+      "body": "テストは数を増やす前に、どの失敗を最初に見つけたいかを決めます。計算や変換の誤り、入力やフォーカスの崩れ、ログインや申し込みの途中失敗では、適したテストの範囲が異なります。\n\nここでは三つのテストを排他的に選ぶのではなく、最初に重点を置く層を決めます。重要な箇所から始め、残るリスクを別の層で補います。"
+    },
+    {
       "id": "hosting-runtime-selection",
       "slug": "hosting-runtime-selection",
       "title": "Webサイト・アプリの公開先を選びたい",
@@ -117,6 +253,34 @@
       ],
       "lastReviewed": "2026-08-24",
       "body": "閲覧時にサーバー処理が不要なら、静的ファイルをエッジから配信する構成が第一候補です。認証や利用者ごとの応答が必要ならサーバーレス関数、常駐処理や独自の実行環境が必要ならマネージドコンテナを検討します。\n\n公開サービスの名前から選ぶのではなく、リクエスト時に何を実行するか、処理を常駐させるか、実行環境をどこまで指定するかで比較します。データベース、監視、バックアップなど、公開先以外の運用設計は別途必要です。\n\n公開画面を静的配信できても、別に常駐処理や独自実行環境が必要なら、静的配信と動的な実行環境を分ける構成も候補です。このページは管理された配信・実行基盤を対象とし、仮想マシン、Kubernetes、特権実行、永続的なローカル状態、特殊なネットワーク要件は別の判断範囲とします。"
+    },
+    {
+      "id": "knowledge-qa",
+      "slug": "knowledge-qa",
+      "title": "自社資料に答える質問機能を作りたい",
+      "summary": "承認済みFAQの検索、ホスト型ファイル検索を使う生成AI、自前の検索と生成AIの組み合わせを、回答の確実さと資料の扱いから選びます。",
+      "type": "architecture",
+      "category": "data-ai",
+      "published": true,
+      "defaultConditionIds": [
+        "source-citations-required"
+      ],
+      "conditionIds": [
+        "source-citations-required",
+        "sensitive-knowledge-base",
+        "frequent-knowledge-updates",
+        "retrieval-customization-required",
+        "deterministic-answers-required",
+        "small-team",
+        "external-service-restricted"
+      ],
+      "approachIds": [
+        "kqa-curated-faq-search",
+        "kqa-hosted-file-search-ai",
+        "kqa-custom-retrieval-ai"
+      ],
+      "lastReviewed": "2026-08-24",
+      "body": "自社資料への質問機能は、回答を作る方法だけでなく、根拠を示せるか、資料をどこへ保存するか、同じ質問へどこまで同じ内容を返すかで選びます。\n\n承認済みの回答をそのまま返したいならFAQ検索、少人数で資料検索付きの生成回答を始めたいならホスト型のファイル検索、権限や検索順を業務に合わせて制御したいなら自前検索との組み合わせが候補です。生成AIは誤り得るため、出典表示、回答できない場合の扱い、評価用の質問集を別途設計します。"
     },
     {
       "id": "scroll-linked-3d",
@@ -273,9 +437,184 @@
       ],
       "lastReviewed": "2026-08-23",
       "body": "大量表示の改善策は、単純な「軽量化テクニック一覧」では決まりません。同じ形状の反復か、個別形状か、動的か、距離による詳細度変更が可能かで有効な方法が変わります。\n\nまずDraw Callを減らすのか、Geometryを統合するのか、描画対象そのものを減らすのかを切り分けます。"
+    },
+    {
+      "id": "web-security-check-priority",
+      "slug": "web-security-check-priority",
+      "title": "最初に導入するセキュリティ検査を選びたい",
+      "summary": "依存パッケージの脆弱性監視、ソースコード解析、稼働中アプリの検査を、優先するリスクと運用体制に合わせて比較します。",
+      "type": "selection",
+      "category": "security",
+      "published": true,
+      "defaultConditionIds": [
+        "ci-available",
+        "codeql-use-authorized"
+      ],
+      "conditionIds": [
+        "dependency-risk-priority",
+        "custom-code-risk-priority",
+        "public-attack-surface",
+        "ci-available",
+        "codeql-use-authorized",
+        "github-dependency-graph-available",
+        "authorized-security-test-environment",
+        "security-expert-available",
+        "short-deadline",
+        "small-team",
+        "maintainability-priority",
+        "external-service-restricted"
+      ],
+      "approachIds": [
+        "secc-dependency-monitoring",
+        "secc-static-code-analysis",
+        "secc-dynamic-app-scan"
+      ],
+      "lastReviewed": "2026-08-24",
+      "body": "セキュリティ検査は、道具を一つ導入すれば終わるものではありません。Dependabot（利用中の外部パッケージと既知の脆弱性を照合するGitHub機能）は依存パッケージ、CodeQL（ソースコードへ検査ルールを実行する解析機能）は独自コード、ZAP（稼働中のWebアプリへ検査リクエストを送る道具）は実際の画面やAPIの応答を調べます。\n\n三つは対象が異なるため相互補完です。まず優先するリスクに合う一つを継続運用できる形で始め、検出結果を直す流れを整えてから残りを加えます。CIは、変更ごとに自動検査する実行環境を指します。CodeQLは、対象言語だけでなく、公開・非公開の別や自動解析の用途によって利用条件が変わるため、契約または利用許可を先に確認します。動的検査は対象へ実際の攻撃に相当するリクエストを送るため、所有者から明示的に許可された検証環境だけで実行します。\n\nリポジトリ情報を外部のクラウドサービスへ送れない場合、このページで扱うGitHubのDependabot方式は候補から外します。組織内の実行環境でCodeQLを使う場合も、外部へ送信しないことだけでなく、CodeQLの利用条件を満たしているかを確認してください。"
+    },
+    {
+      "id": "web-vitals-monitoring",
+      "slug": "web-vitals-monitoring",
+      "title": "実際の表示品質を継続して測りたい",
+      "summary": "公開された実利用データ、自前の利用者計測、公開前の自動検査を、調べたい範囲と運用条件に合わせて比較します。",
+      "type": "performance",
+      "category": "measurement",
+      "published": true,
+      "defaultConditionIds": [
+        "public-field-data-available"
+      ],
+      "conditionIds": [
+        "public-field-data-available",
+        "per-session-diagnostics-required",
+        "ci-regression-gate-required",
+        "data-control-priority",
+        "short-deadline",
+        "small-team",
+        "maintainability-priority",
+        "external-service-restricted"
+      ],
+      "approachIds": [
+        "wvm-public-crux",
+        "wvm-self-rum",
+        "wvm-lighthouse-ci"
+      ],
+      "lastReviewed": "2026-08-24",
+      "body": "表示品質には、実際の利用者が体験した結果と、決めた端末条件で繰り返す検査があります。CrUX（Chrome UX Reportの略）は、Googleが公開する集計済みの実利用データです。導入負担が小さい一方、対象URLに十分な利用実績が必要で、個別の利用状況は追えません。\n\n自前RUM（実際の利用者のブラウザで行う計測）は画面ごとの状況を詳しく調べられますが、送信項目、保存先、閲覧権限を設計します。Lighthouse CI（公開前に同じ条件で繰り返す自動検査）は変更前の比較に向きますが、実利用データの代わりではありません。個別状況の調査と公開前の回帰検査を両方求める場合は、自前RUMとLighthouse CIを組み合わせます。\n\n専用の管理型RUMや既存のアクセス解析サービスでも、実利用者の表示品質を収集できます。このページでは、公開済みの集計データを見る方法、自分たちで収集先を用意する方法、公開前に自動検査する方法の違いへ比較範囲を絞り、管理型RUMは個別候補に含めません。"
     }
   ],
   "approaches": [
+    {
+      "id": "ae-automated-checks",
+      "slug": "ae-automated-checks",
+      "title": "公開前にアクセシビリティを自動検査する",
+      "shortTitle": "自動検査",
+      "summary": "ページを機械的に検査し、判定できる問題を開発中や公開前に繰り返し見つける方法です。",
+      "defaultLabel": "fast",
+      "baseScore": 3,
+      "technologyIds": [
+        "accessibility-evaluation-tools"
+      ],
+      "concepts": [
+        "automated-accessibility-testing",
+        "continuous-quality-check"
+      ],
+      "recommendedWhen": [
+        "公開処理のたびに同じ検査を繰り返したい",
+        "まず明確な実装ミスを早く見つけたい",
+        "少人数で継続できる確認方法から始めたい"
+      ],
+      "notRecommendedWhen": [
+        "自動検査の結果だけでアクセシビリティ全体の合否を決めたい",
+        "支援技術を使った実際の操作のしやすさを確かめたい"
+      ],
+      "advantages": [
+        "開発中と公開前に同じ条件で繰り返せる",
+        "機械で判定できる問題を早い段階で見つけられる"
+      ],
+      "disadvantages": [
+        "人の判断が必要な問題は検査だけでは確定できない",
+        "誤検出や見落としを担当者が確認する必要がある"
+      ],
+      "resourceIds": [
+        "res-ae-wai-evaluation-tools"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "ae-inclusive-usability-review",
+      "slug": "ae-inclusive-usability-review",
+      "title": "障害のある利用者と操作を確認する",
+      "shortTitle": "当事者を含む利用確認",
+      "summary": "障害のある利用者を含む参加者に実際の操作を試してもらい、規格評価だけでは分からないつまずきを見つける方法です。",
+      "defaultLabel": "specialized",
+      "baseScore": 1,
+      "technologyIds": [
+        "inclusive-user-research"
+      ],
+      "concepts": [
+        "usability-evaluation",
+        "assistive-technology"
+      ],
+      "recommendedWhen": [
+        "実際の作業を完了できるか確かめたい",
+        "支援技術や異なる操作方法でのつまずきを知りたい",
+        "利用者へ参加を依頼できる体制がある"
+      ],
+      "notRecommendedWhen": [
+        "少人数の所見だけを全利用者へ一般化したい",
+        "利用確認だけでWCAGへの適合を判定したい"
+      ],
+      "advantages": [
+        "実際の操作で起きる分かりにくさを把握できる",
+        "規格評価だけでは見つからない利用上の課題を得られる"
+      ],
+      "disadvantages": [
+        "参加者の募集、配慮、同意、日程調整が必要になる",
+        "参加者の結果だけでアクセシビリティ全体は判定できない"
+      ],
+      "resourceIds": [
+        "res-ae-wai-involving-users"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "ae-manual-conformance-review",
+      "slug": "ae-manual-conformance-review",
+      "title": "専門家が規格に沿って手動評価する",
+      "shortTitle": "手動の規格適合評価",
+      "summary": "評価範囲と代表ページを定め、専門知識を持つ確認者がWCAGへの適合状況を調べて報告する方法です。",
+      "defaultLabel": "canonical",
+      "baseScore": 2,
+      "technologyIds": [
+        "wcag-em",
+        "wcag"
+      ],
+      "concepts": [
+        "conformance-evaluation",
+        "expert-review"
+      ],
+      "recommendedWhen": [
+        "規格に沿った評価範囲と結果を説明したい",
+        "WCAGと支援技術を理解した確認者を確保できる",
+        "自動検査で判定できない項目も確認したい"
+      ],
+      "notRecommendedWhen": [
+        "専門知識を持つ確認者を確保できない",
+        "実際の利用者のつまずきを規格評価だけで把握したい"
+      ],
+      "advantages": [
+        "評価範囲、代表ページ、適合目標を明示して進められる",
+        "自動化できない項目を人が判断できる"
+      ],
+      "disadvantages": [
+        "WCAGや支援技術を理解した評価者が必要になる",
+        "規格への適合確認だけでは実利用上の課題を拾い切れない"
+      ],
+      "resourceIds": [
+        "res-ae-wcag-em"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
     {
       "id": "application-backend-form",
       "slug": "application-backend-form",
@@ -317,6 +656,134 @@
       "resourceIds": [
         "res-owasp-input-validation",
         "res-owasp-logging"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "authm-external-oidc",
+      "slug": "authm-external-oidc",
+      "title": "組織の認証基盤と連携する（OpenID Connect）",
+      "shortTitle": "組織の認証基盤を使う",
+      "summary": "IdP（本人確認とアカウント管理を担う認証基盤）でログインし、アプリはOpenID Connectで届く認証結果を検証する方法です。",
+      "defaultLabel": "fast",
+      "baseScore": 3,
+      "technologyIds": [
+        "openid-connect"
+      ],
+      "concepts": [
+        "identity-provider",
+        "federated-login",
+        "token-validation"
+      ],
+      "recommendedWhen": [
+        "会社や学校の既存アカウントでログインさせたい",
+        "認証情報と復旧の主要運用を組織のIdPへまとめたい",
+        "利用できる既存の組織IdPがある",
+        "外部のクラウドサービスまたは組織内で運用するIdPを利用できる"
+      ],
+      "notRecommendedWhen": [
+        "連携できる組織IdPも、自分たちで運用できるIdPもない",
+        "IdP停止時にも同じログイン経路を必ず維持したい",
+        "IDトークンの発行元、対象アプリ、有効期限などを採用した流れに沿って検証できない"
+      ],
+      "advantages": [
+        "組織の本人確認結果をアプリから利用できる",
+        "複数アプリのログイン方針をIdP側にまとめやすい",
+        "アプリが利用者のパスワードを直接保管せずに済む"
+      ],
+      "disadvantages": [
+        "選んだIdPの利用条件、運用体制、可用性に依存する",
+        "IDトークンの検証とアプリ側セッション管理は残る",
+        "復旧方法やパスキー対応は選ぶIdPごとに確認が必要"
+      ],
+      "resourceIds": [
+        "res-authm-oidc-core",
+        "res-authm-session-management",
+        "res-authm-keycloak-oidc-server"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "authm-passkey-webauthn",
+      "slug": "authm-passkey-webauthn",
+      "title": "パスキーをアプリに直接組み込む",
+      "shortTitle": "パスキーを組み込む",
+      "summary": "WebAuthn（ブラウザと端末の本人確認をつなぐ標準）を使い、公開鍵の資格情報を登録してパスワードなしでログインする方法です。",
+      "defaultLabel": "specialized",
+      "baseScore": 2,
+      "technologyIds": [
+        "webauthn"
+      ],
+      "concepts": [
+        "passkey",
+        "public-key-authentication",
+        "account-recovery"
+      ],
+      "recommendedWhen": [
+        "パスワードを作成・入力しない体験を優先する",
+        "対応端末を試し、登録、追加、削除、復旧まで設計できる",
+        "認証を継続して運用できる担当者がいる"
+      ],
+      "notRecommendedWhen": [
+        "組織の既存IdPによる共通ログインが必須",
+        "端末紛失時の復旧や予備のログイン手段を設計できない",
+        "対象利用者のブラウザと端末で事前検証できない"
+      ],
+      "advantages": [
+        "利用者がパスワードを記憶して入力する必要をなくせる",
+        "資格情報がWebサイトの範囲に結び付く",
+        "パスワードの共有や使い回しを前提にしない"
+      ],
+      "disadvantages": [
+        "登録、認証、ログイン手段の追加と削除をアプリ側で実装する",
+        "端末変更や紛失に備えた復旧手順が別に必要",
+        "利用者の端末環境による違いを試す必要がある"
+      ],
+      "resourceIds": [
+        "res-authm-webauthn-level3",
+        "res-authm-nist-authenticators"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "authm-password-session",
+      "slug": "authm-password-session",
+      "title": "パスワードとセッションをアプリで管理する",
+      "shortTitle": "アプリで管理する",
+      "summary": "パスワードの保存、試行制限、復旧、セッション（ログイン済み状態）をアプリ側で一貫して管理する方法です。",
+      "defaultLabel": "alternative",
+      "baseScore": 1,
+      "technologyIds": [
+        "password-authentication"
+      ],
+      "concepts": [
+        "password-hashing",
+        "session-management",
+        "account-recovery"
+      ],
+      "recommendedWhen": [
+        "外部IdPを利用できず、認証データの保存先を自分たちで管理する",
+        "既存アプリのパスワード利用者を継続して支える",
+        "認証と事故対応を継続運用できる担当者がいる"
+      ],
+      "notRecommendedWhen": [
+        "パスワードを使わないことが必須",
+        "安全な保存、試行制限、復旧、セッション失効を継続運用できない",
+        "組織の既存アカウントとの共通ログインが必須"
+      ],
+      "advantages": [
+        "外部IdPの仕様や障害にログイン経路を依存させない",
+        "認証データの保存先と運用手順を自分たちで決められる",
+        "既存のパスワード利用者を移行せず継続できる"
+      ],
+      "disadvantages": [
+        "パスワードを平文で保存せず安全にハッシュ化する必要がある",
+        "不正な試行、漏えい、復旧依頼への対応が必要",
+        "Cookie属性、失効、期限を含むセッション保護が必要"
+      ],
+      "resourceIds": [
+        "res-authm-password-storage",
+        "res-authm-session-management"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -608,6 +1075,361 @@
       "lastReviewed": "2026-08-23"
     },
     {
+      "id": "dvr-canvas",
+      "slug": "dvr-canvas",
+      "title": "Canvas 2Dで可視化する",
+      "shortTitle": "Canvas",
+      "summary": "JavaScriptから一つのCanvas描画面へ図形を描き、更新やアニメーションを制御する方法です。",
+      "defaultLabel": "alternative",
+      "baseScore": 2,
+      "technologyIds": [
+        "canvas-api"
+      ],
+      "concepts": [
+        "immediate-mode-rendering",
+        "bitmap-graphics"
+      ],
+      "recommendedWhen": [
+        "多数の2D図形を一つの描画面へまとめたい",
+        "JavaScriptで描画の更新を細かく制御したい",
+        "GPU固有の表現までは必要ない"
+      ],
+      "notRecommendedWhen": [
+        "図形ごとの意味や操作をHTML要素としてそのまま提供したい",
+        "JavaScriptなしで図の内容を読めることが必須",
+        "3D表現やGPUを使う大量描画が主要要件"
+      ],
+      "advantages": [
+        "一つの描画面へ2D図形をスクリプトで描ける",
+        "アニメーションやリアルタイム更新へ利用できる"
+      ],
+      "disadvantages": [
+        "描いた図形は個別のHTML要素にならないため、操作判定と代替情報を別に設計する",
+        "再描画、拡大時の見え方、入力処理を実装側で管理する"
+      ],
+      "resourceIds": [
+        "res-dvr-canvas-standard"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "dvr-html-svg",
+      "slug": "dvr-html-svg",
+      "title": "HTML表とSVGで可視化する",
+      "shortTitle": "HTML表＋SVG",
+      "summary": "数値をHTML表で読めるようにし、図形は文書内のSVG要素として表現する方法です。",
+      "defaultLabel": "canonical",
+      "baseScore": 3,
+      "technologyIds": [
+        "html",
+        "svg"
+      ],
+      "concepts": [
+        "accessible-data-table",
+        "vector-graphics"
+      ],
+      "recommendedWhen": [
+        "数値と見出しの関係を支援技術でも読めるようにしたい",
+        "図と同じ情報を表や文章でも提供したい",
+        "文書として扱いやすい静的な表現を重視する"
+      ],
+      "notRecommendedWhen": [
+        "一度に非常に多くの図形を頻繁に更新することが主要要件",
+        "GPUを使う描画や大量の対象を細かく選択する必要がある"
+      ],
+      "advantages": [
+        "表の見出しとセルの関係をHTMLで明示できる",
+        "SVGの図形をDOM、CSS、JavaScriptから扱える"
+      ],
+      "disadvantages": [
+        "図形ごとの要素が増える構成では実データで描画を確認する必要がある",
+        "複雑な図には短い説明と詳しい代替情報を別途用意する必要がある"
+      ],
+      "resourceIds": [
+        "res-dvr-wai-tables",
+        "res-dvr-svg-spec"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "dvr-webgl",
+      "slug": "dvr-webgl",
+      "title": "WebGLで可視化する",
+      "shortTitle": "WebGL",
+      "summary": "シェーダーを使う描画と対象の選択機能を組み合わせ、多数のデータを操作できる画面を構成する方法です。",
+      "defaultLabel": "specialized",
+      "baseScore": 1,
+      "technologyIds": [
+        "webgl",
+        "deck-gl"
+      ],
+      "concepts": [
+        "gpu-rendering",
+        "object-picking"
+      ],
+      "recommendedWhen": [
+        "多数のデータを低レベルの描画APIで制御したい",
+        "拡大、移動、選択など密度の高い操作が必要",
+        "対応端末と実データで描画を検証できる"
+      ],
+      "notRecommendedWhen": [
+        "少数の静的な図表だけで目的を満たせる",
+        "表や文章、キーボード操作の代替を用意できない",
+        "利用端末のGPU対応を確認できない"
+      ],
+      "advantages": [
+        "Canvasから低レベルのシェーダーベース描画APIを利用できる",
+        "deck.glなどの仕組みで描画対象の選択やポインター操作を実装できる"
+      ],
+      "disadvantages": [
+        "GPU対応、描画資源、端末差を確認する必要がある",
+        "表、文章、キーボード操作などの代替を別に設計する必要がある"
+      ],
+      "resourceIds": [
+        "res-dvr-webgl-standard",
+        "res-dvr-deck-interactivity"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "fem-managed-error-service",
+      "slug": "fem-managed-error-service",
+      "title": "管理型エラー監視を使う（Sentryなど）",
+      "shortTitle": "管理型監視を使う",
+      "summary": "SDK（ブラウザへ組み込む収集用ライブラリ）でエラーを管理サービスへ送り、検索、まとめ表示、通知を行う方法です。",
+      "defaultLabel": "fast",
+      "baseScore": 3,
+      "technologyIds": [
+        "sentry"
+      ],
+      "concepts": [
+        "managed-error-monitoring",
+        "browser-sdk",
+        "error-alerting"
+      ],
+      "recommendedWhen": [
+        "公開後の画面エラーを短期間で収集し始めたい",
+        "エラーの一覧、まとめ表示、通知を自前で作りたくない",
+        "送信先のデータ処理条件を確認して利用できる"
+      ],
+      "notRecommendedWhen": [
+        "エラー情報を外部サービスへ送信できない",
+        "保存場所と保持方法を自分たちの基盤だけに限定する",
+        "SDKが収集する項目を確認して不要情報を除外できない"
+      ],
+      "advantages": [
+        "ブラウザSDKと管理画面から早く始められる",
+        "似たエラーのまとめ表示、発生状況、条件に応じた通知を一つのサービスで扱える",
+        "ソースマップを使って圧縮前の位置を確認できる"
+      ],
+      "disadvantages": [
+        "外部サービスの契約、保存先、利用条件に依存する",
+        "送信前に個人情報や認証情報を除外する設定が必要",
+        "ソースマップの公開範囲とアップロード方法を管理する必要がある"
+      ],
+      "resourceIds": [
+        "res-fem-sentry-javascript",
+        "res-fem-sentry-sourcemaps",
+        "res-fem-sentry-alerts"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "fem-opentelemetry-pipeline",
+      "slug": "fem-opentelemetry-pipeline",
+      "title": "OpenTelemetryの追跡基盤へつなぐ",
+      "shortTitle": "追跡基盤へつなぐ",
+      "summary": "ブラウザの例外をSpan（処理区間の記録）へ加え、Collector（記録の受信・中継プログラム）から既存の追跡先へ送る方法です。",
+      "defaultLabel": "canonical",
+      "baseScore": 2,
+      "technologyIds": [
+        "opentelemetry"
+      ],
+      "concepts": [
+        "distributed-tracing",
+        "exception-telemetry",
+        "telemetry-collector"
+      ],
+      "recommendedWhen": [
+        "ブラウザからAPIやサーバーまで同じ追跡基盤で調べたい",
+        "OpenTelemetry Collectorと保存先をすでに運用している",
+        "必要なブラウザ計装と例外記録を自分たちで設計できる"
+      ],
+      "notRecommendedWhen": [
+        "一覧画面や通知まで含む完成したエラー監視をすぐ使いたい",
+        "Collectorと保存先を運用できない",
+        "ブラウザ向け機能の成熟度と制約を継続確認できない"
+      ],
+      "advantages": [
+        "ブラウザとサーバーの記録を同じ追跡の流れへつなげられる",
+        "Collectorから要件に合う送信先を選べる",
+        "特定の監視画面だけにデータ形式を固定しない"
+      ],
+      "disadvantages": [
+        "ブラウザの例外収集と処理区間への記録を設計する必要がある",
+        "検索、まとめ表示、通知には別の保存・表示先が必要",
+        "JavaScriptのブラウザ計装には実験的な要素がある"
+      ],
+      "resourceIds": [
+        "res-fem-otel-browser",
+        "res-fem-otel-collector"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "fem-self-error-endpoint",
+      "slug": "fem-self-error-endpoint",
+      "title": "画面エラーの収集先を自作する",
+      "shortTitle": "収集先を自作する",
+      "summary": "ブラウザ標準が通知する実行エラーと未処理の失敗を必要な範囲で受け取り、自分たちのAPIで保存と通知まで行う方法です。",
+      "defaultLabel": "alternative",
+      "baseScore": 1,
+      "technologyIds": [
+        "browser-error-events"
+      ],
+      "concepts": [
+        "self-hosted-error-collection",
+        "error-event",
+        "data-governance"
+      ],
+      "recommendedWhen": [
+        "エラー情報の送信先と保持期間を自分たちで厳密に管理する",
+        "外部の監視サービスを利用できない",
+        "受信、整理、検索、通知を継続運用できる"
+      ],
+      "notRecommendedWhen": [
+        "短期間で検索画面や通知まで用意したい",
+        "記録の分類、再送、保存容量、閲覧権限を運用できない",
+        "ブラウザイベントだけで全種類の失敗を自動収集できると想定している"
+      ],
+      "advantages": [
+        "送信項目と保存先を自分たちの方針に合わせられる",
+        "外部のエラー監視サービスにデータを送らずに済む",
+        "必要な画面とエラーだけに収集範囲を絞れる"
+      ],
+      "disadvantages": [
+        "受信API、保存、分類、検索、通知を作る必要がある",
+        "配送失敗、送信量、悪用への対策が必要",
+        "ブラウザ標準の二つの通知だけでは通信失敗や業務上の失敗を網羅しない"
+      ],
+      "resourceIds": [
+        "res-fem-whatwg-errors",
+        "res-fem-owasp-logging"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "ftp-browser-component-tests",
+      "slug": "ftp-browser-component-tests",
+      "title": "ブラウザ内のコンポーネントテストから整備する",
+      "shortTitle": "ブラウザ内コンポーネントテスト",
+      "summary": "ボタンやフォームなどのUIを個別に表示し、実ブラウザで操作、表示更新、フォーカスを確認する方法です。",
+      "defaultLabel": "alternative",
+      "baseScore": 2,
+      "technologyIds": [
+        "vitest-browser-mode"
+      ],
+      "concepts": [
+        "component-testing",
+        "browser-testing"
+      ],
+      "recommendedWhen": [
+        "UI部品の状態や操作が品質上の中心",
+        "実際のDOM、CSS、イベント、フォーカスを確認したい",
+        "アプリ全体より小さな範囲で画面の原因を調べたい"
+      ],
+      "notRecommendedWhen": [
+        "ログインから完了まで複数画面をまたぐ導線を保証したい",
+        "画面から分離した計算ロジックの境界値が主要なリスク"
+      ],
+      "advantages": [
+        "実ブラウザのDOMとBrowser APIを使ってUIを検証できる",
+        "アプリ全体より小さな範囲で失敗原因を追いやすい"
+      ],
+      "disadvantages": [
+        "ブラウザの準備とテスト用の表示環境が必要になる",
+        "コンポーネントの外にある画面遷移やバックエンド連携は別途確認が必要"
+      ],
+      "resourceIds": [
+        "res-ftp-vitest-browser-components"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "ftp-critical-flow-e2e",
+      "slug": "ftp-critical-flow-e2e",
+      "title": "主要な利用導線のE2Eテストから整備する",
+      "shortTitle": "主要導線E2E",
+      "summary": "利用者と同じ見える操作で、ログイン、申し込み、購入など重要な一連の流れをブラウザから確認する方法です。",
+      "defaultLabel": "specialized",
+      "baseScore": 1,
+      "technologyIds": [
+        "playwright"
+      ],
+      "concepts": [
+        "end-to-end-testing",
+        "critical-user-journey"
+      ],
+      "recommendedWhen": [
+        "複数画面や複数の仕組みをまたぐ重要な導線がある",
+        "利用者が見て操作する結果をブラウザで確認したい",
+        "複数のブラウザで主要機能を確認したい"
+      ],
+      "notRecommendedWhen": [
+        "内部関数の多数の境界値を主に検証したい",
+        "制御できない外部サービスを毎回直接呼ぶテストにしたい"
+      ],
+      "advantages": [
+        "画面から連携先までを通した主要導線を確認できる",
+        "Chromium、WebKit、Firefoxを対象にできる"
+      ],
+      "disadvantages": [
+        "ブラウザ、テストデータ、認証状態などの環境整備が必要になる",
+        "細かな内部ロジックの網羅には別のテスト層が必要になる"
+      ],
+      "resourceIds": [
+        "res-ftp-playwright-best-practices"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "ftp-logic-unit-tests",
+      "slug": "ftp-logic-unit-tests",
+      "title": "ロジックの単体テストから整備する",
+      "shortTitle": "ロジック単体テスト",
+      "summary": "計算、変換、状態遷移など、画面から分けられる処理を小さな単位で直接確認する方法です。",
+      "defaultLabel": "canonical",
+      "baseScore": 3,
+      "technologyIds": [
+        "vitest"
+      ],
+      "concepts": [
+        "unit-testing",
+        "dependency-isolation"
+      ],
+      "recommendedWhen": [
+        "分岐や計算、データ変換の誤りが主要なリスク",
+        "外部依存を分けて入力と出力を詳しく確認したい",
+        "画面を起動せずに検証できる処理が多い"
+      ],
+      "notRecommendedWhen": [
+        "実際のDOM、CSS、フォーカス、ブラウザAPIの挙動が主要なリスク",
+        "複数画面をまたぐ利用導線の成立を直接確かめたい"
+      ],
+      "advantages": [
+        "内部ロジックの境界値を直接検証できる",
+        "依存関係を分離して失敗箇所を絞りやすい"
+      ],
+      "disadvantages": [
+        "既定のNode.js環境では実ブラウザの挙動を確認できない",
+        "単体で正しくても画面やサービスをつないだ導線は保証しない"
+      ],
+      "resourceIds": [
+        "res-ftp-vitest-environment"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
       "id": "full-canvas-three",
       "slug": "full-canvas-three",
       "title": "フルCanvas Three.js構成",
@@ -792,7 +1614,7 @@
         "検索基盤の運用を外部サービスへ任せられる"
       ],
       "notRecommendedWhen": [
-        "検索対象を外部SaaSへ送信できない",
+        "検索対象を外部のクラウドサービスへ送信できない",
         "更新頻度が低く基本的な全文検索だけで足りる",
         "利用量、契約、障害時の代替手段を管理できない"
       ],
@@ -850,6 +1672,125 @@
       "resourceIds": [
         "res-cms-wordpress-site-editor",
         "res-cms-wordpress-templates"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "kqa-curated-faq-search",
+      "slug": "kqa-curated-faq-search",
+      "title": "承認済みFAQを検索して表示する",
+      "shortTitle": "固定FAQ検索",
+      "summary": "質問を検索し、編集者が承認して公開した回答へ案内する、生成AIを使わない方法です。",
+      "defaultLabel": "canonical",
+      "baseScore": 3,
+      "technologyIds": [
+        "pagefind",
+        "static-site"
+      ],
+      "concepts": [
+        "curated-knowledge-base",
+        "static-search-index"
+      ],
+      "recommendedWhen": [
+        "同じ質問には承認済みの同じ内容を返したい",
+        "質問の種類と回答範囲を編集者が管理できる",
+        "外部の生成AIサービスへ資料を送れない"
+      ],
+      "notRecommendedWhen": [
+        "多数の長い資料を横断して新しい文章で回答したい",
+        "資料の更新を公開作業なしですぐ検索へ反映したい"
+      ],
+      "advantages": [
+        "生成による表現の揺れや推測を回答経路から外せる",
+        "回答本文を通常の公開コンテンツとして確認できる"
+      ],
+      "disadvantages": [
+        "想定質問と回答を人が用意して更新する必要がある",
+        "FAQにない質問へ柔軟な文章で回答できない"
+      ],
+      "resourceIds": [
+        "res-kqa-pagefind-docs"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "kqa-custom-retrieval-ai",
+      "slug": "kqa-custom-retrieval-ai",
+      "title": "自前の検索と生成AIを組み合わせる",
+      "shortTitle": "自前検索＋生成AI",
+      "summary": "検索索引、権限判定、検索順を自分たちで管理し、取得した資料だけを選んだ生成モデルへ渡す方法です。",
+      "defaultLabel": "specialized",
+      "baseScore": 1,
+      "technologyIds": [
+        "postgresql",
+        "pgvector"
+      ],
+      "concepts": [
+        "custom-retrieval",
+        "retrieval-augmented-generation"
+      ],
+      "recommendedWhen": [
+        "部門、期間、権限で検索対象を細かく変えたい",
+        "検索方式や順位、回答前後の処理を自分たちで制御したい",
+        "検索基盤と生成モデルを分けて選びたい"
+      ],
+      "notRecommendedWhen": [
+        "検索索引、権限、評価、監視を担当する体制がない",
+        "少数の固定FAQだけで目的を満たせる",
+        "取得した資料を渡す生成モデルの送信先、保存、削除条件を確認できない"
+      ],
+      "advantages": [
+        "キーワード検索、ベクトル検索、業務条件を組み合わせられる",
+        "検索対象への権限判定を自分たちのデータ設計へ組み込める"
+      ],
+      "disadvantages": [
+        "索引更新、検索品質、権限、生成回答の評価を自分たちで運用する",
+        "構成要素が増え、障害箇所と保守範囲が広がる",
+        "検索側の権限とは別に、生成モデル側のデータ取扱条件を確認する必要がある"
+      ],
+      "resourceIds": [
+        "res-kqa-pgvector",
+        "res-kqa-postgresql-row-security"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "kqa-hosted-file-search-ai",
+      "slug": "kqa-hosted-file-search-ai",
+      "title": "ホスト型ファイル検索付き生成AIを使う",
+      "shortTitle": "ホスト型ファイル検索＋生成AI",
+      "summary": "資料を管理サービスの検索領域へ登録し、検索結果を根拠として生成AIが回答する方法です。",
+      "defaultLabel": "fast",
+      "baseScore": 2,
+      "technologyIds": [
+        "openai-file-search",
+        "responses-api"
+      ],
+      "concepts": [
+        "retrieval-augmented-generation",
+        "hosted-vector-store"
+      ],
+      "recommendedWhen": [
+        "少人数で資料検索と生成回答を組み合わせたい",
+        "回答から参照ファイルを確認できるようにしたい",
+        "サービスの保存、削除、利用条件が資料の扱いに合う"
+      ],
+      "notRecommendedWhen": [
+        "資料を外部サービスへ保存できない",
+        "同じ質問へ承認済みの文章だけを必ず返したい",
+        "検索順位や権限判定を業務固有の処理で細かく制御したい"
+      ],
+      "advantages": [
+        "検索実行の基盤を自前で実装せずに始められる",
+        "意味検索とキーワード検索、ファイルの出典情報を利用できる"
+      ],
+      "disadvantages": [
+        "ファイルの保存と削除、利用可能なデータ管理設定を確認する必要がある",
+        "生成回答の正しさは別途評価し、根拠を利用者が確認できるようにする必要がある"
+      ],
+      "resourceIds": [
+        "res-kqa-openai-file-search",
+        "res-kqa-openai-data-controls"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -958,7 +1899,7 @@
         "外部サービスの保存先、契約、権限を確認できる"
       ],
       "notRecommendedWhen": [
-        "問い合わせ内容を外部SaaSへ送信できない",
+        "問い合わせ内容を外部のクラウドサービスへ送信できない",
         "送信と同じ処理内で複雑な業務判定や更新を行う",
         "サービスの保存地域や保持条件が組織要件に合わない"
       ],
@@ -1144,6 +2085,133 @@
         "res-r3f-performance"
       ],
       "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "secc-dependency-monitoring",
+      "slug": "secc-dependency-monitoring",
+      "title": "依存パッケージの既知の脆弱性を監視する（Dependabot）",
+      "shortTitle": "依存パッケージを監視する",
+      "summary": "GitHubの依存関係グラフ（利用中の外部パッケージ一覧）と既知の脆弱性情報を照合し、警告を受ける方法です。",
+      "defaultLabel": "fast",
+      "baseScore": 3,
+      "technologyIds": [
+        "dependabot"
+      ],
+      "concepts": [
+        "dependency-monitoring",
+        "vulnerability-advisory",
+        "software-supply-chain"
+      ],
+      "recommendedWhen": [
+        "外部ライブラリやパッケージを利用している",
+        "既知の脆弱性を継続して把握し更新につなげたい",
+        "リポジトリをGitHubで管理し、依存関係グラフを利用できる"
+      ],
+      "notRecommendedWhen": [
+        "リポジトリ情報をGitHubの監視機能へ渡せない",
+        "対象リポジトリでGitHubの依存関係グラフを利用できない",
+        "独自コードの入力処理や権限判定だけを検査したい",
+        "警告を確認して更新可否を判断する担当者を決められない"
+      ],
+      "advantages": [
+        "依存関係の変更と新しいセキュリティ情報をきっかけに警告を受けられる",
+        "影響するファイルと修正版の情報を確認できる場合がある",
+        "GitHubリポジトリから小さく始められる"
+      ],
+      "disadvantages": [
+        "GitHubの既知の脆弱性情報と対応する依存パッケージが対象になる",
+        "未知の問題や独自コードの問題は見つけられない",
+        "誤った依存関係情報や古いロックファイルは検出精度を下げる"
+      ],
+      "resourceIds": [
+        "res-secc-dependabot-alerts"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "secc-dynamic-app-scan",
+      "slug": "secc-dynamic-app-scan",
+      "title": "稼働中アプリを動的検査する（OWASP ZAP）",
+      "shortTitle": "稼働中アプリを検査する",
+      "summary": "所有者が許可した検証環境へZAPから検査リクエストを送り、実際の応答から問題の候補を調べる方法です。",
+      "defaultLabel": "specialized",
+      "baseScore": 1,
+      "technologyIds": [
+        "owasp-zap"
+      ],
+      "concepts": [
+        "dynamic-application-security-testing",
+        "active-scan",
+        "attack-surface"
+      ],
+      "recommendedWhen": [
+        "ログイン、入力画面、APIなど外部から操作できる機能がある",
+        "所有者から能動検査の許可を得た検証環境を用意できる",
+        "検出結果と誤検知を判断できる担当者がいる"
+      ],
+      "notRecommendedWhen": [
+        "攻撃に相当するリクエストを送ってよい検証環境がない",
+        "対象の状態を初期化できず、データ変更の影響を管理できない",
+        "依存パッケージの既知の脆弱性だけを継続監視したい"
+      ],
+      "advantages": [
+        "実際に動くURL、画面遷移、応答を対象にできる",
+        "能動検査と受動検査の結果を報告できる",
+        "検出結果を設定により警告、失敗、無視へ分類できる"
+      ],
+      "disadvantages": [
+        "能動検査は対象へ実際の攻撃に相当する操作を行う",
+        "認証後の画面や複雑な操作には対象ごとの設定が必要",
+        "すべての画面と業務上の操作を自動で網羅できるとは限らない"
+      ],
+      "resourceIds": [
+        "res-secc-zap-full-scan"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "secc-static-code-analysis",
+      "slug": "secc-static-code-analysis",
+      "title": "ソースコードを静的解析する（CodeQL）",
+      "shortTitle": "コードを静的解析する",
+      "summary": "CodeQLでソースコードから解析用データを作り、クエリ（検査ルール）を実行して問題の候補を見つける方法です。",
+      "defaultLabel": "canonical",
+      "baseScore": 2,
+      "technologyIds": [
+        "codeql"
+      ],
+      "concepts": [
+        "static-analysis",
+        "code-scanning",
+        "data-flow-analysis"
+      ],
+      "recommendedWhen": [
+        "独自コードの入力処理やデータの流れを継続して確認したい",
+        "対象言語がCodeQLの対応範囲に入っている",
+        "リポジトリ種別と解析用途に対するCodeQLの利用条件を確認している",
+        "変更ごとに解析を実行する環境がある"
+      ],
+      "notRecommendedWhen": [
+        "対象言語や利用するフレームワークが解析対象として扱えない",
+        "公開リポジトリ向けの条件、または非公開コードと自動解析に必要な契約・利用許可を満たせない",
+        "実際に動く設定、認証状態、外部サービスとの接続だけを調べたい",
+        "検出結果を確認して修正へつなぐ担当者を置けない"
+      ],
+      "advantages": [
+        "アプリを外部公開する前にソースコードを調べられる",
+        "変更ごとの自動解析へ組み込みやすい",
+        "問題につながるデータの流れをクエリで調べられる"
+      ],
+      "disadvantages": [
+        "対応言語とモデル化されたフレームワークに範囲が限られる",
+        "実行環境だけで起きる問題は直接確認できない",
+        "警告の優先順位と誤検知を人が判断する必要がある"
+      ],
+      "resourceIds": [
+        "res-secc-codeql-scanning",
+        "res-secc-codeql-cli-terms"
+      ],
+      "lastReviewed": "2026-08-24"
     },
     {
       "id": "self-hosted-search-service",
@@ -1600,9 +2668,545 @@
         "res-rendering-performance"
       ],
       "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "wvm-lighthouse-ci",
+      "slug": "wvm-lighthouse-ci",
+      "title": "Lighthouse CIで公開前に検査する",
+      "shortTitle": "公開前に自動検査する",
+      "summary": "Lighthouse CI（公開前の自動検査）を決めた実験室条件で繰り返し実行し、変更前に品質低下を検知する方法です。",
+      "defaultLabel": "specialized",
+      "baseScore": 1,
+      "technologyIds": [
+        "lighthouse-ci"
+      ],
+      "concepts": [
+        "lab-measurement",
+        "continuous-integration",
+        "regression-gate"
+      ],
+      "recommendedWhen": [
+        "変更ごとの自動検査で品質低下を止めたい",
+        "継続的インテグレーション環境を利用できる",
+        "実行条件と判定基準をチームで固定できる"
+      ],
+      "notRecommendedWhen": [
+        "実際の利用者や端末のばらつきだけを把握したい",
+        "自動実行環境や検査対象URLを用意できない",
+        "一回の計測値だけで公開後の体験を断定したい"
+      ],
+      "advantages": [
+        "公開前の変更ごとに同じ手順で検査できる",
+        "判定条件を設定し、自動処理の成否へ反映できる",
+        "実利用データがまだない画面も検査できる"
+      ],
+      "disadvantages": [
+        "実験室計測であり実際の利用者データではない",
+        "実行環境の揺れを考慮して判定条件を調整する必要がある",
+        "認証や画面操作が必要な対象には追加設定が必要"
+      ],
+      "resourceIds": [
+        "res-wvm-lighthouse-ci"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "wvm-public-crux",
+      "slug": "wvm-public-crux",
+      "title": "公開された実利用データを見る（CrUX）",
+      "shortTitle": "公開実測データを見る",
+      "summary": "CrUX（Chrome UX Report）が集計した公開URLの実利用データから、表示品質の傾向を見る方法です。",
+      "defaultLabel": "fast",
+      "baseScore": 3,
+      "technologyIds": [
+        "crux"
+      ],
+      "concepts": [
+        "field-data",
+        "core-web-vitals",
+        "aggregate-measurement"
+      ],
+      "recommendedWhen": [
+        "公開URLにCrUXで確認できるだけの利用実績がある",
+        "個別利用者ではなく、集計された実測の傾向を知りたい",
+        "計測コードと収集基盤を追加せずに始めたい"
+      ],
+      "notRecommendedWhen": [
+        "公開したばかりで対象URLの実測データが利用できない",
+        "個別の画面表示や端末条件を詳しく調べたい",
+        "Googleの公開データやAPIを利用できない"
+      ],
+      "advantages": [
+        "自サイトへ計測コードを追加せず実利用データを確認できる",
+        "URLまたはサイト単位の集計結果を取得できる",
+        "実際の利用環境を含む表示品質の傾向を見られる"
+      ],
+      "disadvantages": [
+        "すべてのサイトやURLにデータがあるわけではない",
+        "集計データのため個別の利用状況は追えない",
+        "自分で送信項目や集計期間を変更できない"
+      ],
+      "resourceIds": [
+        "res-wvm-crux-overview"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "wvm-self-rum",
+      "slug": "wvm-self-rum",
+      "title": "web-vitalsで自前の利用者計測を行う",
+      "shortTitle": "自前で利用者計測する",
+      "summary": "web-vitalsライブラリで実際の利用者の指標を取得し、自分たちの収集先へ必要な状況と一緒に送る方法です。",
+      "defaultLabel": "canonical",
+      "baseScore": 2,
+      "technologyIds": [
+        "web-vitals"
+      ],
+      "concepts": [
+        "real-user-monitoring",
+        "field-measurement",
+        "telemetry-pipeline"
+      ],
+      "recommendedWhen": [
+        "画面や端末ごとの表示品質を詳しく調べたい",
+        "送信項目、保存先、保持期間を自分たちで決めたい",
+        "収集APIと分析画面を継続して運用できる"
+      ],
+      "notRecommendedWhen": [
+        "計測データの受信、保存、集計を運用できない",
+        "個別利用の情報を収集する同意や方針を整理できない",
+        "公開前の変更を同じ条件で比較することだけが目的"
+      ],
+      "advantages": [
+        "実際の利用者のブラウザで指標を取得できる",
+        "画面情報など自分たちに必要な文脈と結び付けられる",
+        "送信先と分析方法を要件に合わせて選べる"
+      ],
+      "disadvantages": [
+        "収集API、保存、集計、閲覧画面を用意する必要がある",
+        "送信量と個人情報を抑える設計が必要",
+        "ブラウザの対応状況と指標定義の更新を追う必要がある"
+      ],
+      "resourceIds": [
+        "res-wvm-web-vitals"
+      ],
+      "lastReviewed": "2026-08-24"
     }
   ],
   "rules": [
+    {
+      "id": "r-ae-accessibility-manual",
+      "situationId": "accessibility-evaluation",
+      "targetApproachId": "ae-manual-conformance-review",
+      "when": {
+        "all": [
+          "accessibility-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "評価範囲、代表サンプル、適合目標、結果報告を明示する手順があるため、規格に沿う確認を重視する場合に優先します。",
+      "evidenceIds": [
+        "ev-ae-wcag-em-procedure"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-ae-auto-limit-warning",
+      "situationId": "accessibility-evaluation",
+      "when": {
+        "all": [
+          "release-gate-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "自動検査で公開を判定しても、すべてのアクセシビリティ要件は確認できません。人の判断が必要な項目を別に確認してください。",
+      "evidenceIds": [
+        "ev-ae-automated-limits"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-ae-expert-manual",
+      "situationId": "accessibility-evaluation",
+      "targetApproachId": "ae-manual-conformance-review",
+      "when": {
+        "all": [
+          "expert-review-available"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 4
+      },
+      "reason": "WCAGと支援技術を理解した確認者がいるなら、WCAG-EMの手順に沿う評価を実施できます。",
+      "evidenceIds": [
+        "ev-ae-wcag-em-procedure"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-ae-release-auto",
+      "situationId": "accessibility-evaluation",
+      "targetApproachId": "ae-automated-checks",
+      "when": {
+        "all": [
+          "release-gate-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "機械で判定できる項目を公開前ごとに同じ条件で確認できるため、自動判定の入口として優先します。",
+      "evidenceIds": [
+        "ev-ae-automated-limits"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-ae-short-auto",
+      "situationId": "accessibility-evaluation",
+      "targetApproachId": "ae-automated-checks",
+      "when": {
+        "all": [
+          "short-deadline"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "評価ツールは設計・開発中の問題発見に利用できるため、短期間で反復できる最初の確認に向きます。",
+      "evidenceIds": [
+        "ev-ae-automated-limits"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-ae-users-inclusive",
+      "situationId": "accessibility-evaluation",
+      "targetApproachId": "ae-inclusive-usability-review",
+      "when": {
+        "all": [
+          "user-research-available"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "利用者に参加してもらえるなら、規格適合評価だけでは見つからない実操作上の問題を確認できます。",
+      "evidenceIds": [
+        "ev-ae-user-involvement"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-authm-enterprise-oidc",
+      "situationId": "authentication-method",
+      "targetApproachId": "authm-external-oidc",
+      "when": {
+        "all": [
+          "enterprise-sso-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "require",
+        "group": "authm-enterprise-login"
+      },
+      "reason": "OpenID Connectは認証基盤が行った本人確認の結果をアプリへ伝えるため、選んだ組織IdPの共通ログインへ接続できます。",
+      "evidenceIds": [
+        "ev-authm-oidc-identity-layer"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-authm-external-oidc",
+      "situationId": "authentication-method",
+      "when": {
+        "all": [
+          "external-service-restricted"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "外部のクラウドサービスへの送信制限だけではOpenID Connectを除外しません。組織内で運用するIdPも選べますが、その運用責任とアプリ側のIDトークン検証は残ります。",
+      "evidenceIds": [
+        "ev-authm-self-hosted-oidc",
+        "ev-authm-oidc-token-validation"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-authm-limited-team-passkey-warning",
+      "situationId": "authentication-method",
+      "when": {
+        "all": [],
+        "any": [
+          "short-deadline",
+          "small-team",
+          "maintainability-priority"
+        ],
+        "none": [
+          "authentication-team-available"
+        ]
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "パスキーを直接組み込んでも、登録、認証結果の検証、端末を失った利用者の復旧はアプリ側に残ります。導入前に実装と復旧運用の担当を決めてください。",
+      "evidenceIds": [
+        "ev-authm-webauthn-rp-operations",
+        "ev-authm-account-recovery"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-authm-limited-team-passkey",
+      "situationId": "authentication-method",
+      "targetApproachId": "authm-passkey-webauthn",
+      "when": {
+        "all": [],
+        "any": [
+          "short-deadline",
+          "small-team",
+          "maintainability-priority"
+        ],
+        "none": [
+          "authentication-team-available"
+        ]
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": -3
+      },
+      "reason": "WebAuthnを直接組み込む方式には登録、署名された認証結果の検証、復旧の運用が残るため、担当者がいない状態で短納期や保守負担の小ささを優先する場合は優先度を下げます。",
+      "evidenceIds": [
+        "ev-authm-webauthn-rp-operations",
+        "ev-authm-account-recovery"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-authm-limited-team-password",
+      "situationId": "authentication-method",
+      "targetApproachId": "authm-password-session",
+      "when": {
+        "all": [],
+        "any": [
+          "short-deadline",
+          "small-team",
+          "maintainability-priority"
+        ],
+        "none": [
+          "authentication-team-available"
+        ]
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": -3
+      },
+      "reason": "担当者がいない状態では、パスワードの安全な保存、復旧、セッション保護を自分たちで継続する負担が条件と合いません。",
+      "evidenceIds": [
+        "ev-authm-password-storage-session",
+        "ev-authm-session-cookie-protection",
+        "ev-authm-account-recovery"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-authm-missing-existing-idp",
+      "situationId": "authentication-method",
+      "targetApproachId": "authm-external-oidc",
+      "when": {
+        "all": [
+          "external-service-restricted"
+        ],
+        "any": [],
+        "none": [
+          "existing-organization-idp-available"
+        ]
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": -5
+      },
+      "reason": "外部の認証サービスを使えず、利用できる既存の組織IdPもない場合は、OpenID Connectを使う前に認証基盤の構築と本番運用が必要になるため、優先度を下げます。",
+      "evidenceIds": [
+        "ev-authm-self-hosted-oidc"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-authm-oidc-validation-warning",
+      "situationId": "authentication-method",
+      "when": {
+        "all": [
+          "enterprise-sso-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "組織の認証基盤を使っても、アプリにはIDトークンの発行元、対象アプリ、有効期限などを採用したOpenID Connectの流れに従って検証し、ログイン済み状態を保護する責任が残ります。",
+      "evidenceIds": [
+        "ev-authm-oidc-token-validation",
+        "ev-authm-session-cookie-protection"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-authm-passwordless-passkey",
+      "situationId": "authentication-method",
+      "targetApproachId": "authm-passkey-webauthn",
+      "when": {
+        "all": [
+          "passwordless-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 8
+      },
+      "reason": "パスキーは公開鍵資格情報を使い、利用者がサイト用パスワードを作成・入力しないログインを実現できます。",
+      "evidenceIds": [
+        "ev-authm-passkey-passwordless",
+        "ev-authm-webauthn-public-key"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-authm-passwordless-password",
+      "situationId": "authentication-method",
+      "targetApproachId": "authm-password-session",
+      "when": {
+        "all": [
+          "passwordless-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": -8
+      },
+      "reason": "アプリ管理方式は利用者のパスワードを前提とするため、パスワードを使わないことを優先する条件と合いません。",
+      "evidenceIds": [
+        "ev-authm-password-not-phishing-resistant"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-authm-recovery-warning",
+      "situationId": "authentication-method",
+      "when": {
+        "all": [
+          "account-recovery-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "ログイン方法だけでは復旧は完成しません。予備の認証手段、本人確認、復旧通知を選び、IdP利用時は提供範囲を確認してください。",
+      "evidenceIds": [
+        "ev-authm-account-recovery"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-authm-sso-passwordless-warning",
+      "situationId": "authentication-method",
+      "when": {
+        "all": [
+          "enterprise-sso-required",
+          "passwordless-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "OpenID Connectは組織IdPの認証結果を伝えますが、認証方法はIdPごとに異なります。選ぶIdPがパスキーなどのパスワードを使わないログインを提供し、その結果を確認できるか調べてください。",
+      "evidenceIds": [
+        "ev-authm-oidc-auth-method",
+        "ev-authm-passkey-passwordless"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-authm-team-passkey",
+      "situationId": "authentication-method",
+      "targetApproachId": "authm-passkey-webauthn",
+      "when": {
+        "all": [
+          "authentication-team-available"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "WebAuthnを直接組み込む方式には、公開鍵資格情報の登録、署名された認証結果の検証、別途設計する復旧を継続して管理する役割が必要です。",
+      "evidenceIds": [
+        "ev-authm-webauthn-rp-operations",
+        "ev-authm-account-recovery"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-authm-team-password",
+      "situationId": "authentication-method",
+      "targetApproachId": "authm-password-session",
+      "when": {
+        "all": [
+          "authentication-team-available"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "認証担当者がいれば、パスワード保存、復旧、Cookieセッションの保護をアプリの責任として継続運用できます。",
+      "evidenceIds": [
+        "ev-authm-password-storage-session",
+        "ev-authm-session-cookie-protection",
+        "ev-authm-account-recovery"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
     {
       "id": "r-cms-git-no-build",
       "situationId": "cms-architecture-selection",
@@ -1755,6 +3359,399 @@
       "lastReviewed": "2026-08-24"
     },
     {
+      "id": "r-dvr-accessibility-canvas-penalty",
+      "situationId": "data-visualization-rendering",
+      "targetApproachId": "dvr-canvas",
+      "when": {
+        "all": [
+          "accessibility-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 2
+      },
+      "reason": "Canvasの図形とは別に詳しい文章やデータ表を用意する必要があるため、支援技術で読める情報を最優先する場合は順位を下げます。",
+      "evidenceIds": [
+        "ev-dvr-canvas-standard",
+        "ev-dvr-wai-complex-images"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-dvr-accessibility-html",
+      "situationId": "data-visualization-rendering",
+      "targetApproachId": "dvr-html-svg",
+      "when": {
+        "all": [
+          "accessibility-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "HTML表なら見出しと数値の関係を支援技術へ伝えられ、図と同じ情報を文章または表でも提供できます。",
+      "evidenceIds": [
+        "ev-dvr-wai-tables",
+        "ev-dvr-wai-complex-images"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-dvr-accessibility-webgl-penalty",
+      "situationId": "data-visualization-rendering",
+      "targetApproachId": "dvr-webgl",
+      "when": {
+        "all": [
+          "accessibility-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 2
+      },
+      "reason": "WebGLの視覚表現とポインター操作だけでは情報を完結させず、詳しい文章、データ表、別の操作手段を用意する必要があります。",
+      "evidenceIds": [
+        "ev-dvr-wai-complex-images",
+        "ev-dvr-deck-picking"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-dvr-dense-webgl",
+      "situationId": "data-visualization-rendering",
+      "targetApproachId": "dvr-webgl",
+      "when": {
+        "all": [
+          "dense-interaction-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "deck.glは画面上の位置から描画対象を特定し、ポインターを重ねる、クリックする、ドラッグする操作へ接続できます。",
+      "evidenceIds": [
+        "ev-dvr-deck-picking"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-dvr-large-canvas",
+      "situationId": "data-visualization-rendering",
+      "targetApproachId": "dvr-canvas",
+      "when": {
+        "all": [
+          "large-dataset"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "Canvas APIは一つのcanvas要素へJavaScriptで2D図形を描けるため、多数の図形を要素ごとにHTMLへ追加しない構成を選べます。",
+      "evidenceIds": [
+        "ev-dvr-canvas-standard"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-dvr-performance-warning",
+      "situationId": "data-visualization-rendering",
+      "when": {
+        "all": [
+          "performance-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "APIの方式名だけでは性能を確定できません。実際のデータ量、更新方法、対象端末をそろえて候補を計測してください。",
+      "evidenceIds": [
+        "ev-dvr-canvas-standard",
+        "ev-dvr-webgl-spec"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-dvr-static-html",
+      "situationId": "data-visualization-rendering",
+      "targetApproachId": "dvr-html-svg",
+      "when": {
+        "all": [
+          "static-export-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "数値と見出しをHTML表として保持し、解像度に合わせて拡大できるSVGを単独表示またはHTMLへ埋め込めるため、印刷用の数値とベクター図を保持できます。",
+      "evidenceIds": [
+        "ev-dvr-wai-tables",
+        "ev-dvr-svg-spec"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-fem-control-otel",
+      "situationId": "frontend-error-monitoring",
+      "targetApproachId": "fem-opentelemetry-pipeline",
+      "when": {
+        "all": [
+          "data-control-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "OpenTelemetry Collector（記録の受信・中継プログラム）は受信、処理、出力を構成できるため、要件に合う自分たちの保存・分析先を選べます。",
+      "evidenceIds": [
+        "ev-fem-otel-collector-routing"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-fem-control-self",
+      "situationId": "frontend-error-monitoring",
+      "targetApproachId": "fem-self-error-endpoint",
+      "when": {
+        "all": [
+          "data-control-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 8
+      },
+      "reason": "ブラウザ標準のエラー通知から選んだ項目を指定URLの自前APIへ送るため、送信項目と送信先を自分たちで決められます。受信後の保存と保持は別途設計します。",
+      "evidenceIds": [
+        "ev-fem-browser-error-events",
+        "ev-fem-beacon-delivery"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-fem-external-managed",
+      "situationId": "frontend-error-monitoring",
+      "targetApproachId": "fem-managed-error-service",
+      "when": {
+        "all": [
+          "external-service-restricted"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "この方式はブラウザエラーを外部の管理サービスへ送るため、外部サービスを利用できない条件とは両立しません。",
+      "evidenceIds": [
+        "ev-fem-sentry-browser-capture",
+        "ev-fem-sentry-event-send"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-fem-external-self",
+      "situationId": "frontend-error-monitoring",
+      "targetApproachId": "fem-self-error-endpoint",
+      "when": {
+        "all": [
+          "external-service-restricted"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 4
+      },
+      "reason": "ブラウザ標準のエラー通知から選んだ記録を指定URLの自前APIへ送る構成なら、外部のエラー監視サービスを送信先にせず運用できます。",
+      "evidenceIds": [
+        "ev-fem-browser-error-events",
+        "ev-fem-beacon-delivery"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-fem-fast-managed",
+      "situationId": "frontend-error-monitoring",
+      "targetApproachId": "fem-managed-error-service",
+      "when": {
+        "all": [],
+        "any": [
+          "short-deadline",
+          "small-team",
+          "maintainability-priority"
+        ],
+        "none": [
+          "external-service-restricted"
+        ]
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "ブラウザSDK、関連イベントをまとめる管理画面、条件に応じた通知を利用できるため、収集API、閲覧画面、通知処理を最初から自作せずに導入できます。",
+      "evidenceIds": [
+        "ev-fem-sentry-browser-capture",
+        "ev-fem-sentry-issue-view",
+        "ev-fem-sentry-alerts"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-fem-limited-team-self",
+      "situationId": "frontend-error-monitoring",
+      "targetApproachId": "fem-self-error-endpoint",
+      "when": {
+        "all": [],
+        "any": [
+          "short-deadline",
+          "small-team",
+          "maintainability-priority"
+        ],
+        "none": [
+          "data-control-priority",
+          "external-service-restricted"
+        ]
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": -3
+      },
+      "reason": "ブラウザ標準は実行時エラーを通知しますが、自前方式では受信記録の検証と無害化、保存、閲覧、監視、通知を自分たちで用意するため、短納期や少人数で保守負担を抑える場合は優先度を下げます。",
+      "evidenceIds": [
+        "ev-fem-browser-error-events",
+        "ev-fem-application-log-operations"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-fem-otel-maturity-warning",
+      "situationId": "frontend-error-monitoring",
+      "when": {
+        "all": [
+          "distributed-tracing-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "OpenTelemetryのブラウザ向け計装は実験的です。採用する計装が対象の例外を捕捉してSpan（処理区間の記録）へ加えられるか、保存・検索・通知を行う接続先まで含めて実環境で確認してください。",
+      "evidenceIds": [
+        "ev-fem-otel-browser-experimental",
+        "ev-fem-otel-exception-span",
+        "ev-fem-otel-collector-routing"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-fem-production-managed",
+      "situationId": "frontend-error-monitoring",
+      "targetApproachId": "fem-managed-error-service",
+      "when": {
+        "all": [
+          "production-errors-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 7
+      },
+      "reason": "管理型サービスのブラウザSDKは未捕捉エラーを受け取り、関連イベントをIssue（同種のエラーをまとめた単位）として表示し、条件に応じた通知を設定できるため、公開後の監視を始められます。",
+      "evidenceIds": [
+        "ev-fem-sentry-browser-capture",
+        "ev-fem-sentry-issue-view",
+        "ev-fem-sentry-alerts"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-fem-redaction-warning",
+      "situationId": "frontend-error-monitoring",
+      "when": {
+        "all": [],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "どの方式でも、パスワード、アクセストークン、セッション識別子、不要な個人情報をエラー記録へ直接含めないでください。",
+      "evidenceIds": [
+        "ev-fem-sensitive-log-data"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-fem-sourcemap-warning",
+      "situationId": "frontend-error-monitoring",
+      "when": {
+        "all": [
+          "production-errors-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "公開JavaScriptを圧縮または変換しており、元のコード位置で調べる場合は、同じビルドのソースマップを用意します。元のソース本文を含められるため、公開先と閲覧範囲も確認してください。",
+      "evidenceIds": [
+        "ev-fem-source-map-standard",
+        "ev-fem-sentry-sourcemaps"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-fem-tracing-otel",
+      "situationId": "frontend-error-monitoring",
+      "targetApproachId": "fem-opentelemetry-pipeline",
+      "when": {
+        "all": [
+          "distributed-tracing-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "require",
+        "group": "fem-distributed-tracing"
+      },
+      "reason": "OpenTelemetryはブラウザで捕捉した例外をSpan（処理区間の記録）へ加え、Collector（記録の受信・中継プログラム）から既存の追跡保存先へ送る構成を作れます。",
+      "evidenceIds": [
+        "ev-fem-otel-exception-span",
+        "ev-fem-otel-collector-routing"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
       "id": "r-form-complex-backend",
       "situationId": "secure-contact-form",
       "targetApproachId": "application-backend-form",
@@ -1810,7 +3807,7 @@
       "effect": {
         "type": "exclude"
       },
-      "reason": "Formspree方式は外部の受付先へ問い合わせ内容を送信するため、外部SaaSへ送信できない条件と両立しません。",
+      "reason": "Formspree方式は外部の受付先へ問い合わせ内容を送信するため、外部のクラウドサービスへ送信できない条件と両立しません。",
       "evidenceIds": [
         "ev-formspree-managed-handler",
         "ev-formspree-hosting-security"
@@ -1918,6 +3915,133 @@
       "evidenceIds": [
         "ev-formspree-managed-handler",
         "ev-formspree-notification-rules"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-ftp-accessibility-component",
+      "situationId": "frontend-test-priority",
+      "targetApproachId": "ftp-browser-component-tests",
+      "when": {
+        "all": [
+          "accessibility-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "Vitestの実ブラウザ実行では、フォーカス管理とアクセシビリティ機能を扱えるため、UI部品の操作確認を優先できます。",
+      "evidenceIds": [
+        "ev-ftp-vitest-browser-mode"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-ftp-browser-component",
+      "situationId": "frontend-test-priority",
+      "targetApproachId": "ftp-browser-component-tests",
+      "when": {
+        "all": [
+          "browser-behavior-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "Vitestの実ブラウザ実行では、画面構造、表示、操作イベント、フォーカス管理を実ブラウザで扱えるため、UIの振る舞いを重点確認できます。",
+      "evidenceIds": [
+        "ev-ftp-vitest-browser-mode"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-ftp-browser-unit-penalty",
+      "situationId": "frontend-test-priority",
+      "targetApproachId": "ftp-logic-unit-tests",
+      "when": {
+        "all": [
+          "browser-behavior-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 2
+      },
+      "reason": "Vitestの既定環境はNode.jsなので、実ブラウザのDOM、CSS、フォーカスを主に確認する条件では優先度を下げます。",
+      "evidenceIds": [
+        "ev-ftp-vitest-node-environment",
+        "ev-ftp-vitest-browser-mode"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-ftp-critical-component-penalty",
+      "situationId": "frontend-test-priority",
+      "targetApproachId": "ftp-browser-component-tests",
+      "when": {
+        "all": [
+          "critical-user-journeys"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 2
+      },
+      "reason": "コンポーネントテストはUI部品を分離して確認する範囲なので、複数画面を通す主要導線を最優先する条件では順位を下げます。",
+      "evidenceIds": [
+        "ev-ftp-vitest-component-scope"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-ftp-critical-e2e",
+      "situationId": "frontend-test-priority",
+      "targetApproachId": "ftp-critical-flow-e2e",
+      "when": {
+        "all": [
+          "critical-user-journeys"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "Playwright Testは利用者に見える動作をブラウザから検証できるため、複数の仕組みを通る主要導線を優先できます。",
+      "evidenceIds": [
+        "ev-ftp-playwright-e2e"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-ftp-logic-unit",
+      "situationId": "frontend-test-priority",
+      "targetApproachId": "ftp-logic-unit-tests",
+      "when": {
+        "all": [
+          "logic-heavy"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "ブラウザ環境を必要としない計算や変換が中心なら、Node.js環境で対象ロジックを直接検証できます。",
+      "evidenceIds": [
+        "ev-ftp-vitest-node-environment"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -2111,6 +4235,175 @@
       "reason": "閲覧時の動的処理が不要なら、公開時に生成したファイルを静的Webサーバーから配信できます。",
       "evidenceIds": [
         "ev-host-static-export"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-kqa-citations-hosted",
+      "situationId": "knowledge-qa",
+      "targetApproachId": "kqa-hosted-file-search-ai",
+      "when": {
+        "all": [
+          "source-citations-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 4
+      },
+      "reason": "ファイル検索の応答には参照ファイルを示す出典注記を含められるため、回答から根拠資料へ戻る実装を作れます。",
+      "evidenceIds": [
+        "ev-kqa-openai-file-search"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-kqa-deterministic-faq",
+      "situationId": "knowledge-qa",
+      "targetApproachId": "kqa-curated-faq-search",
+      "when": {
+        "all": [
+          "deterministic-answers-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 6
+      },
+      "reason": "承認済みのFAQページを検索して表示する構成なら、回答本文をその場で生成せず、公開済みの内容へ案内できます。",
+      "evidenceIds": [
+        "ev-kqa-pagefind-static-search"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-kqa-external-hosted",
+      "situationId": "knowledge-qa",
+      "targetApproachId": "kqa-hosted-file-search-ai",
+      "when": {
+        "all": [
+          "external-service-restricted"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "OpenAIのファイル検索は外部サービス上のベクトル検索用保管領域へ資料を登録するため、外部へ資料を保存できない条件と両立しません。",
+      "evidenceIds": [
+        "ev-kqa-openai-file-search",
+        "ev-kqa-openai-data-controls"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-kqa-frequent-hosted",
+      "situationId": "knowledge-qa",
+      "targetApproachId": "kqa-hosted-file-search-ai",
+      "when": {
+        "all": [
+          "frequent-knowledge-updates"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "OpenAIのファイル検索は保管領域へ追加したファイルを検索対象にできます。一方、Pagefindは公開用HTMLから検索索引を生成します。",
+      "evidenceIds": [
+        "ev-kqa-openai-file-search",
+        "ev-kqa-pagefind-static-search"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-kqa-retrieval-custom",
+      "situationId": "knowledge-qa",
+      "targetApproachId": "kqa-custom-retrieval-ai",
+      "when": {
+        "all": [
+          "retrieval-customization-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 5
+      },
+      "reason": "PostgreSQLの全文検索とベクトル検索を組み合わせ、行単位のアクセス規則で取得可能な資料を絞れるため、検索方法と権限を自分たちで設計できます。",
+      "evidenceIds": [
+        "ev-kqa-pgvector-retrieval",
+        "ev-kqa-postgresql-rls"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-kqa-sensitive-generation-warning",
+      "situationId": "knowledge-qa",
+      "when": {
+        "all": [
+          "sensitive-knowledge-base"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "生成AIを選ぶ場合、検索側の行権限だけでは、取得後に資料を渡す生成モデル側の送信先、保存、削除条件を決められません。利用する生成先ごとに確認してください。",
+      "evidenceIds": [
+        "ev-kqa-postgresql-rls",
+        "ev-kqa-openai-data-controls"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-kqa-sensitive-hosted-penalty",
+      "situationId": "knowledge-qa",
+      "targetApproachId": "kqa-hosted-file-search-ai",
+      "when": {
+        "all": [
+          "sensitive-knowledge-base"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 3
+      },
+      "reason": "ベクトル検索用の保管領域は削除するまで保持され、データを保持しない特別設定の対象外なので、機密資料では保存、削除、契約条件の確認が先に必要です。",
+      "evidenceIds": [
+        "ev-kqa-openai-data-controls"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-kqa-small-hosted",
+      "situationId": "knowledge-qa",
+      "targetApproachId": "kqa-hosted-file-search-ai",
+      "when": {
+        "all": [
+          "small-team"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "OpenAIのファイル検索は検索処理をサービス側で管理するため、自前の検索実行基盤を持たずに始められます。",
+      "evidenceIds": [
+        "ev-kqa-openai-file-search"
       ],
       "lastReviewed": "2026-08-24"
     },
@@ -3215,7 +5508,7 @@
       "effect": {
         "type": "exclude"
       },
-      "reason": "Algolia方式は外部の検索APIへ検索レコードを登録するため、外部SaaSへ送信できない条件と両立しません。",
+      "reason": "Algolia方式は外部の検索APIへ検索レコードを登録するため、外部のクラウドサービスへ送信できない条件と両立しません。",
       "evidenceIds": [
         "ev-algolia-record-management"
       ],
@@ -3483,6 +5776,307 @@
       "lastReviewed": "2026-08-24"
     },
     {
+      "id": "r-secc-ci-dynamic",
+      "situationId": "web-security-check-priority",
+      "targetApproachId": "secc-dynamic-app-scan",
+      "when": {
+        "all": [
+          "ci-available",
+          "authorized-security-test-environment"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 1
+      },
+      "reason": "ZAP Full ScanはDockerから実行し、警告・失敗・無視の設定に応じた終了状態を返せるため、許可済み検証環境への自動実行に組み込めます。",
+      "evidenceIds": [
+        "ev-secc-zap-active-scan"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-secc-ci-static",
+      "situationId": "web-security-check-priority",
+      "targetApproachId": "secc-static-code-analysis",
+      "when": {
+        "all": [
+          "ci-available",
+          "codeql-use-authorized"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "CodeQLの利用条件を確認済みで、自動検査の実行環境がある場合は、変更ごとの静的解析を継続できます。",
+      "evidenceIds": [
+        "ev-secc-codeql-scope",
+        "ev-secc-codeql-ci-availability",
+        "ev-secc-codeql-license-eligibility"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-secc-codeql-availability-warning",
+      "situationId": "web-security-check-priority",
+      "when": {
+        "all": [],
+        "any": [],
+        "none": [
+          "codeql-use-authorized"
+        ]
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "CodeQLの利用可否をまだ確認していません。対象言語とリポジトリ種別に加え、非公開コードや自動解析では必要な契約・利用許可を確認してから採用してください。",
+      "evidenceIds": [
+        "ev-secc-codeql-ci-availability",
+        "ev-secc-codeql-license-eligibility"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-secc-complementary-warning",
+      "situationId": "web-security-check-priority",
+      "when": {
+        "all": [],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "三つは相互補完です。依存関係、ソースコード、稼働中の応答という異なる範囲を調べるため、最初の一つで他を代替したとは扱いません。",
+      "evidenceIds": [
+        "ev-secc-dependabot-scope",
+        "ev-secc-codeql-scope",
+        "ev-secc-zap-active-scan"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-secc-custom-code",
+      "situationId": "web-security-check-priority",
+      "targetApproachId": "secc-static-code-analysis",
+      "when": {
+        "all": [
+          "custom-code-risk-priority",
+          "codeql-use-authorized"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 8
+      },
+      "reason": "CodeQLはソースコードから解析用データを作り、クエリを実行するため、対応言語の独自コードにある問題の候補を確認できます。",
+      "evidenceIds": [
+        "ev-secc-codeql-scope",
+        "ev-secc-codeql-license-eligibility"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-secc-dependency-risk",
+      "situationId": "web-security-check-priority",
+      "targetApproachId": "secc-dependency-monitoring",
+      "when": {
+        "all": [
+          "dependency-risk-priority",
+          "github-dependency-graph-available"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 8
+      },
+      "reason": "Dependabot alertsは依存関係グラフと既知の脆弱性情報を照合するため、依存パッケージの更新を最初の対象にできます。",
+      "evidenceIds": [
+        "ev-secc-dependabot-scope"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-secc-expert-dynamic",
+      "situationId": "web-security-check-priority",
+      "targetApproachId": "secc-dynamic-app-scan",
+      "when": {
+        "all": [
+          "security-expert-available",
+          "authorized-security-test-environment"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "ZAP Full Scanは検出結果ごとに警告、失敗、無視を設定するため、その判断を担う担当者がいる条件と合います。",
+      "evidenceIds": [
+        "ev-secc-zap-active-scan"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-secc-external-dependency",
+      "situationId": "web-security-check-priority",
+      "targetApproachId": "secc-dependency-monitoring",
+      "when": {
+        "all": [
+          "external-service-restricted"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "このページで扱うDependabot方式は、GitHubの依存関係グラフと脆弱性情報を使うため、リポジトリ情報を外部のクラウドサービスへ送れない条件では採用しません。",
+      "evidenceIds": [
+        "ev-secc-dependabot-scope"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-secc-limited-team-dependency",
+      "situationId": "web-security-check-priority",
+      "targetApproachId": "secc-dependency-monitoring",
+      "when": {
+        "all": [
+          "github-dependency-graph-available"
+        ],
+        "any": [
+          "short-deadline",
+          "small-team",
+          "maintainability-priority"
+        ],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "Dependabot alertsはリポジトリの依存関係変更と新しい既知の脆弱性から警告を作るため、対象を絞って継続確認を始められます。",
+      "evidenceIds": [
+        "ev-secc-dependabot-scope"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-secc-missing-authorized-environment",
+      "situationId": "web-security-check-priority",
+      "targetApproachId": "secc-dynamic-app-scan",
+      "when": {
+        "all": [],
+        "any": [],
+        "none": [
+          "authorized-security-test-environment"
+        ]
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "ZAPの能動検査は実際の攻撃に相当し、所有者の許可を得た対象だけに使う必要があるため、許可された検証環境がない条件では実行できません。",
+      "evidenceIds": [
+        "ev-secc-zap-active-scan",
+        "ev-secc-zap-permission"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-secc-missing-dependency-graph",
+      "situationId": "web-security-check-priority",
+      "targetApproachId": "secc-dependency-monitoring",
+      "when": {
+        "all": [],
+        "any": [],
+        "none": [
+          "github-dependency-graph-available"
+        ]
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "Dependabot alertsは対象リポジトリの依存関係グラフを使うため、そのグラフを利用できない条件ではこの方式を開始できません。",
+      "evidenceIds": [
+        "ev-secc-dependabot-scope"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-secc-no-expert-dynamic",
+      "situationId": "web-security-check-priority",
+      "targetApproachId": "secc-dynamic-app-scan",
+      "when": {
+        "all": [],
+        "any": [],
+        "none": [
+          "security-expert-available"
+        ]
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": -3
+      },
+      "reason": "能動検査は実際の攻撃に相当し結果の分類も必要なため、担当者なしで最初の一つにする場合は運用上の注意が増えます。",
+      "evidenceIds": [
+        "ev-secc-zap-active-scan"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-secc-public-dynamic",
+      "situationId": "web-security-check-priority",
+      "targetApproachId": "secc-dynamic-app-scan",
+      "when": {
+        "all": [
+          "public-attack-surface",
+          "authorized-security-test-environment"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 8
+      },
+      "reason": "ZAPは許可された稼働中URLを探索して能動検査できるため、外部から操作できる画面やAPIの応答確認を優先できます。",
+      "evidenceIds": [
+        "ev-secc-zap-active-scan"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-secc-zap-safety-warning",
+      "situationId": "web-security-check-priority",
+      "when": {
+        "all": [
+          "authorized-security-test-environment"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "ZAPの能動検査は対象へ実際の攻撃に相当する操作を行います。選択した検証環境のうち、所有者が明示的に許可した範囲だけへ実行してください。",
+      "evidenceIds": [
+        "ev-secc-zap-active-scan",
+        "ev-secc-zap-permission"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
       "id": "r-seo-a11y-exclude-canvas",
       "situationId": "seo-rich-3d",
       "targetApproachId": "full-canvas-three",
@@ -3694,9 +6288,260 @@
         "ev-next-lazy"
       ],
       "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-wvm-ci-lighthouse",
+      "situationId": "web-vitals-monitoring",
+      "targetApproachId": "wvm-lighthouse-ci",
+      "when": {
+        "all": [
+          "ci-regression-gate-required"
+        ],
+        "any": [],
+        "none": [
+          "per-session-diagnostics-required"
+        ]
+      },
+      "effect": {
+        "type": "require",
+        "group": "wvm-ci-regression-gate"
+      },
+      "reason": "公開前の自動検査ゲートが必須で、個別の利用状況を調べる要件がない場合は、判定条件に失敗したとき自動処理を失敗にできるLighthouse CIを選びます。",
+      "evidenceIds": [
+        "ev-wvm-lhci-assertions"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-wvm-control-rum",
+      "situationId": "web-vitals-monitoring",
+      "targetApproachId": "wvm-self-rum",
+      "when": {
+        "all": [
+          "data-control-priority"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 4
+      },
+      "reason": "web-vitalsは指標と必要な画面情報を指定した送信先へ渡せるため、送信項目と送信先を自分たちで設計できます。受信後の保存と集計は別途用意します。",
+      "evidenceIds": [
+        "ev-wvm-web-vitals-rum"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-wvm-external-crux",
+      "situationId": "web-vitals-monitoring",
+      "when": {
+        "all": [
+          "external-service-restricted",
+          "public-field-data-available"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "CrUXはGoogleがすでに集計して公開している実利用データを見る方法で、自サイトから新たな計測記録を外部のクラウドサービスへ送る方式ではありません。ただし、Googleの公開ページやAPIへのアクセス自体を制限している組織では利用可否を確認してください。",
+      "evidenceIds": [
+        "ev-wvm-crux-field-eligibility",
+        "ev-wvm-crux-api-access"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-wvm-field-ci-combination-warning",
+      "situationId": "web-vitals-monitoring",
+      "when": {
+        "all": [
+          "per-session-diagnostics-required",
+          "ci-regression-gate-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "個々のページ訪問を調べる自前RUMと、公開前に同じ条件で回帰を検査するLighthouse CIは役割が異なります。両方の条件を満たすには二つを組み合わせてください。",
+      "evidenceIds": [
+        "ev-wvm-web-vitals-rum",
+        "ev-wvm-lhci-assertions",
+        "ev-wvm-field-lab-difference"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-wvm-field-lab-warning",
+      "situationId": "web-vitals-monitoring",
+      "when": {
+        "all": [],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "CrUXと自前RUMは実利用時の情報、Lighthouse CIは制御した実験室検査です。目的が異なるため、一方だけで両方を測ったとは扱いません。",
+      "evidenceIds": [
+        "ev-wvm-field-lab-difference",
+        "ev-wvm-web-vitals-rum"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-wvm-missing-crux",
+      "situationId": "web-vitals-monitoring",
+      "targetApproachId": "wvm-public-crux",
+      "when": {
+        "all": [],
+        "any": [],
+        "none": [
+          "public-field-data-available"
+        ]
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "CrUXは収録条件を満たすページとサイトだけを公開するため、対象URLの公開実測データがない場合はこの方法を利用できません。",
+      "evidenceIds": [
+        "ev-wvm-crux-field-eligibility"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-wvm-public-crux",
+      "situationId": "web-vitals-monitoring",
+      "targetApproachId": "wvm-public-crux",
+      "when": {
+        "all": [
+          "public-field-data-available"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 8
+      },
+      "reason": "対象URLに公開実測データがあれば、計測コードを追加せず、実際のChrome利用者の集計された体験を確認できます。",
+      "evidenceIds": [
+        "ev-wvm-crux-field-eligibility"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-wvm-session-crux",
+      "situationId": "web-vitals-monitoring",
+      "targetApproachId": "wvm-public-crux",
+      "when": {
+        "all": [
+          "per-session-diagnostics-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "CrUXは公開された集計データであり、端末や画面ごとの個別の利用状況を保存して調べる要件には対応しません。",
+      "evidenceIds": [
+        "ev-wvm-crux-field-eligibility"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-wvm-session-rum",
+      "situationId": "web-vitals-monitoring",
+      "targetApproachId": "wvm-self-rum",
+      "when": {
+        "all": [
+          "per-session-diagnostics-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 9
+      },
+      "reason": "web-vitalsは実際のページ訪問で得た指標と追加の診断情報をコールバックへ渡せるため、必要な画面情報と一緒に自前収集できます。",
+      "evidenceIds": [
+        "ev-wvm-web-vitals-rum"
+      ],
+      "lastReviewed": "2026-08-24"
+    },
+    {
+      "id": "r-wvm-small-public-crux",
+      "situationId": "web-vitals-monitoring",
+      "targetApproachId": "wvm-public-crux",
+      "when": {
+        "all": [
+          "public-field-data-available"
+        ],
+        "any": [
+          "short-deadline",
+          "small-team",
+          "maintainability-priority"
+        ],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "すでに公開されている集計データを使えるため、自前の計測コード、受信API、保存基盤を追加せずに確認を始められます。",
+      "evidenceIds": [
+        "ev-wvm-crux-field-eligibility"
+      ],
+      "lastReviewed": "2026-08-24"
     }
   ],
   "evidence": [
+    {
+      "id": "ev-ae-automated-limits",
+      "title": "自動評価ツールで確認できる範囲",
+      "claim": "W3C WAIは、評価ツールが設計・開発中の問題発見と手動確認の支援に使える一方、すべてのアクセシビリティ要件を自動判定できず、人の判断が必要で、ツールだけではアクセシビリティを判定できないと説明している。",
+      "sourceType": "official-documentation",
+      "sourceName": "W3C Web Accessibility Initiative",
+      "url": "https://www.w3.org/WAI/test-evaluate/tools/selecting/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "自動検査を早期発見と反復確認に用い、最終的な適合判定とは分けて扱う根拠として確認した。"
+    },
+    {
+      "id": "ev-ae-user-involvement",
+      "title": "障害のある利用者を含む評価の役割",
+      "claim": "W3C WAIは、障害のある利用者による評価が適合評価だけでは見つからないユーザビリティ上の問題を見つけ得る一方、少人数の結果は一般化できず、利用者評価だけではアクセシビリティを判定できないためWCAG適合評価と組み合わせるよう説明している。",
+      "sourceType": "official-documentation",
+      "sourceName": "W3C Web Accessibility Initiative",
+      "url": "https://www.w3.org/WAI/test-evaluate/involving-users/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "利用確認を規格適合評価の代替ではなく補完として扱う根拠を確認した。"
+    },
+    {
+      "id": "ev-ae-wcag-em-procedure",
+      "title": "WCAG-EMの評価手順と必要な知識",
+      "claim": "WCAG-EMは、評価範囲と適合目標の決定、対象の調査、代表サンプルの選択、WCAG適合の評価、結果報告という手順を示し、適切な利用にはWCAG、アクセシブル設計、支援技術などの知識が必要だと説明している。",
+      "sourceType": "official-documentation",
+      "sourceName": "W3C Web Accessibility Initiative",
+      "url": "https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "WCAG-EM 2はWCAGへ新しい適合要件を追加するものではなく、評価方法を示すW3C Group Noteとして確認した。"
+    },
     {
       "id": "ev-algolia-japanese-typo-limit",
       "title": "Algoliaの日本語検索における制約",
@@ -3748,6 +6593,149 @@
       "verifiedAt": "2026-08-23",
       "conflictsWith": [],
       "notes": "公式資料は制限値を保証された上限ではなく目標値として扱うよう明記している。"
+    },
+    {
+      "id": "ev-authm-account-recovery",
+      "title": "認証情報の紛失には独立した復旧手順が必要",
+      "claim": "NIST SP 800-63B-4は、認証手段を失った利用者向けにアカウント復旧方法を用意し、復旧時には利用者へ通知することを求める。",
+      "sourceType": "official-documentation",
+      "sourceName": "NIST",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b/events/#account-recovery",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "必要な本人確認水準と法令に合わせ、採用する復旧方法を別途設計する。"
+    },
+    {
+      "id": "ev-authm-oidc-auth-method",
+      "title": "OpenID Connectの認証結果には認証方法の情報を含められる",
+      "claim": "OpenID Connect Coreは、認証方法を表すamrを任意のIDトークン情報として定め、パスワードやワンタイムパスワードなど複数の認証方法があり得る例を示している。",
+      "sourceType": "specification",
+      "sourceName": "OpenID Foundation",
+      "url": "https://openid.net/specs/openid-connect-core-1_0.html#IDToken",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "OpenID Connect連携だけではパスワードレスを保証しないため、選ぶIdPの認証方法とアプリ側で確認できる情報を調べる。"
+    },
+    {
+      "id": "ev-authm-oidc-identity-layer",
+      "title": "OpenID Connectは外部の認証結果をアプリへ伝える",
+      "claim": "OpenID ConnectはOAuth 2.0上の本人確認層で、認証基盤が行った認証に基づき、連携するアプリが利用者の本人性と属性を確認できるようにする。",
+      "sourceType": "specification",
+      "sourceName": "OpenID Foundation",
+      "url": "https://openid.net/specs/openid-connect-core-1_0.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "個別IdPが提供するSSO、復旧、パスキーの機能範囲は仕様外なので採用時に確認する。"
+    },
+    {
+      "id": "ev-authm-oidc-token-validation",
+      "title": "OpenID Connectでは採用したフローに沿うIDトークン検証が必要",
+      "claim": "OpenID Connect Coreはアプリに、IDトークンの発行元、対象アプリ、有効期限などを検証させる。署名検証の要否と方法は、トークンを受け取る経路と採用したフローに従う。",
+      "sourceType": "specification",
+      "sourceName": "OpenID Foundation",
+      "url": "https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "IdPへ本人確認を委ねても、アプリ側には採用したフローに沿うトークン検証とログイン後セッションの保護が残る。"
+    },
+    {
+      "id": "ev-authm-passkey-passwordless",
+      "title": "パスキーはサイト用パスワードの入力を置き換えられる",
+      "claim": "FIDO Allianceは、パスキーをFIDO2とWebAuthnを利用するパスワード置換技術と説明し、利用者がサイト用のユーザー名やパスワードを入力せず端末の解除操作でログインできるとしている。",
+      "sourceType": "official-documentation",
+      "sourceName": "FIDO Alliance",
+      "url": "https://fidoalliance.org/passkeys/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "端末紛失時の復旧、利用者の端末対応、予備のログイン方法は別に設計する。"
+    },
+    {
+      "id": "ev-authm-password-not-phishing-resistant",
+      "title": "パスワードは利用者が選ぶ認証情報でフィッシング耐性を持たない",
+      "claim": "NIST SP 800-63B-4は、パスワードを利用者が選択または認証側が割り当てる認証情報として扱い、フィッシング耐性のある認証手段とは扱っていない。",
+      "sourceType": "official-documentation",
+      "sourceName": "NIST",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "パスワードを採用する場合も、多要素認証や不正試行対策を別に検討する。"
+    },
+    {
+      "id": "ev-authm-password-storage-session",
+      "title": "パスワードの安全な保存はアプリの責任になる",
+      "claim": "OWASPはパスワードを平文で保存せず、復号する暗号化ではなく、用途に合う低速なパスワードハッシュで保護するよう案内している。",
+      "sourceType": "official-documentation",
+      "sourceName": "OWASP",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "推奨パラメータは更新されるため、このEvidenceでは変動する数値を固定しない。"
+    },
+    {
+      "id": "ev-authm-self-hosted-oidc",
+      "title": "OpenID Connectの認証基盤は組織側でも運用できる",
+      "claim": "Keycloak公式手順は、自分たちの環境でKeycloakサーバーをコンテナ起動し、OpenID Connectを使うアプリを登録して、そのサーバーで利用者を認証する構成を示している。",
+      "sourceType": "official-documentation",
+      "sourceName": "Keycloak",
+      "url": "https://www.keycloak.org/getting-started/getting-started-docker",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "開発モードの設定は本番用ではない。組織内運用を選ぶ場合は本番構成、更新、可用性を別に設計する。"
+    },
+    {
+      "id": "ev-authm-session-cookie-protection",
+      "title": "ログイン後のCookieには保護属性が必要",
+      "claim": "OWASPはセッションCookieにSecure、HttpOnly、SameSiteなどの属性を適切に設定し、通信やスクリプトからの漏えいを抑えるよう案内している。",
+      "sourceType": "official-documentation",
+      "sourceName": "OWASP",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "認証方式を外部IdPにしても、アプリがCookieセッションを使うならこの責任は残る。"
+    },
+    {
+      "id": "ev-authm-webauthn-public-key",
+      "title": "WebAuthnはサイトに結び付く公開鍵資格情報を扱う",
+      "claim": "WebAuthnは、Webアプリが利用者を強く認証するため、そのアプリの範囲に結び付く公開鍵資格情報を作成して使用するAPIを定める。",
+      "sourceType": "specification",
+      "sourceName": "W3C Web Authentication Working Group",
+      "url": "https://www.w3.org/TR/webauthn-3/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "パスキーはWebAuthnのdiscoverable credentialとして扱われるが、復旧手順はアプリ側の別設計になる。"
+    },
+    {
+      "id": "ev-authm-webauthn-rp-operations",
+      "title": "WebAuthnを使うアプリには登録と認証結果の検証処理がある",
+      "claim": "WebAuthn仕様は、Webアプリ側に公開鍵資格情報の登録処理と、署名された認証結果を検証する処理を定めている。",
+      "sourceType": "specification",
+      "sourceName": "W3C Web Authentication Working Group",
+      "url": "https://www.w3.org/TR/webauthn-3/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "ブラウザAPIを呼ぶだけでアカウント復旧を含む運用全体が完成するわけではない。"
     },
     {
       "id": "ev-babylon-loading",
@@ -3871,6 +6859,253 @@
       "conflictsWith": []
     },
     {
+      "id": "ev-dvr-canvas-standard",
+      "title": "HTML Canvasの描画面と代替内容",
+      "claim": "HTML Standardは、canvas要素をスクリプトで動的な図を描ける解像度依存のbitmap canvasと定義し、同じ機能または目的を伝えるfallback contentも提供するよう求めている。",
+      "sourceType": "specification",
+      "sourceName": "WHATWG HTML Standard",
+      "url": "https://html.spec.whatwg.org/multipage/canvas.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "一つのcanvas要素とbitmapへ描画する方式、ならびに代替内容の必要性を確認した。"
+    },
+    {
+      "id": "ev-dvr-deck-picking",
+      "title": "deck.glの描画対象選択と操作イベント",
+      "claim": "deck.glは、画面上の位置から描画された層と対象を特定する選択機能を提供し、ポインターを重ねる、クリックする、ドラッグする操作へ接続できる。",
+      "sourceType": "official-documentation",
+      "sourceName": "deck.gl",
+      "url": "https://deck.gl/docs/developer-guide/interactivity",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "キーボード操作や支援技術向けの意味付けは、このpicking機能とは別に設計する必要がある。"
+    },
+    {
+      "id": "ev-dvr-svg-spec",
+      "title": "SVG 2の文書形式とHTML統合",
+      "claim": "SVG 2は、SVGをXMLに基づく2Dのベクターおよび混合画像を記述する言語と定義し、単独表示、HTMLとの混在、CSSによる装飾、スクリプトによる変更を扱えるとしている。",
+      "sourceType": "specification",
+      "sourceName": "W3C SVG 2",
+      "url": "https://www.w3.org/TR/SVG2/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "SVGが静的な文書形式としてもHTML内の要素としても扱える範囲を確認した。"
+    },
+    {
+      "id": "ev-dvr-wai-complex-images",
+      "title": "グラフや図に必要な代替情報",
+      "claim": "W3C WAIは、グラフや図などの複雑な画像には短い説明に加えて、主要な傾向や数値を伝える詳しい文章またはデータ表を提供するよう説明している。",
+      "sourceType": "official-documentation",
+      "sourceName": "W3C Web Accessibility Initiative",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "描画方式にかかわらず、視覚表現だけで情報を完結させない根拠として確認した。"
+    },
+    {
+      "id": "ev-dvr-wai-tables",
+      "title": "データ表の見出しとセルの関係",
+      "claim": "W3C WAIは、データ表の見出しセルとデータセルをHTMLで構造化すると、支援技術が両者の関係を利用者へ伝えられると説明している。",
+      "sourceType": "official-documentation",
+      "sourceName": "W3C Web Accessibility Initiative",
+      "url": "https://www.w3.org/WAI/tutorials/tables/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "数値を視覚表現だけでなく表として提供する根拠を確認した。"
+    },
+    {
+      "id": "ev-dvr-webgl-spec",
+      "title": "WebGLの描画APIとCanvasとの関係",
+      "claim": "WebGL仕様は、HTML Canvasから取得するOpenGL ES 2.0由来の描画contextを定義し、OSや端末をまたいだ移植性のために元のAPIへ変更を加えている。",
+      "sourceType": "specification",
+      "sourceName": "Khronos WebGL Working Group",
+      "url": "https://registry.khronos.org/webgl/specs/latest/1.0/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "特定端末での性能やハードウェアアクセラレーションを保証するClaimには使用しない。"
+    },
+    {
+      "id": "ev-fem-application-log-operations",
+      "title": "自前の画面エラー収集には受信後のログ運用が必要",
+      "claim": "OWASPのアプリケーションログ資料は、JavaScriptの例外処理を記録元の一つに挙げ、外部から届く記録の検証と無害化、保存、閲覧保護、監視と通知を設計・運用するよう案内している。",
+      "sourceType": "official-documentation",
+      "sourceName": "OWASP",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "ブラウザから自前APIへ送るだけでは、受信後の保存、閲覧、監視、通知は完成しない。"
+    },
+    {
+      "id": "ev-fem-beacon-delivery",
+      "title": "Beacon APIは指定したデータを指定URLへ送信する",
+      "claim": "W3C Beacon仕様は、アプリが指定したデータを指定URLへ非同期に送るsendBeaconを定め、画面上の出来事や計測データをサーバーへ届ける例を示している。",
+      "sourceType": "specification",
+      "sourceName": "W3C Web Performance Working Group",
+      "url": "https://www.w3.org/TR/beacon/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "配送成功の確認、再送、受信後の保存、検索、通知はBeacon APIの範囲外である。"
+    },
+    {
+      "id": "ev-fem-browser-error-events",
+      "title": "HTML標準は実行時エラーと未処理Promiseを通知する",
+      "claim": "HTML標準は、実行時スクリプトエラーをglobal error eventとして報告し、未処理のPromise rejectionをunhandledrejectionとして通知する手順を定める。",
+      "sourceType": "specification",
+      "sourceName": "WHATWG HTML",
+      "url": "https://html.spec.whatwg.org/multipage/webappapis.html#runtime-script-errors",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "標準は保存、分類、再送、検索、通知を提供せず、外部オリジンの詳細が制限される場合もある。"
+    },
+    {
+      "id": "ev-fem-otel-browser-experimental",
+      "title": "OpenTelemetry JavaScriptのブラウザ計装は実験的である",
+      "claim": "OpenTelemetryのJavaScript公式資料は、ブラウザ向けクライアント計装を実験的と位置付け、Webページの追跡を構成する手順を示している。",
+      "sourceType": "official-documentation",
+      "sourceName": "OpenTelemetry",
+      "url": "https://opentelemetry.io/docs/languages/js/getting-started/browser/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "完成済みのエラー管理製品とは扱わず、採用時に現行の対応状況を再確認する。"
+    },
+    {
+      "id": "ev-fem-otel-collector-routing",
+      "title": "OpenTelemetry Collectorはテレメトリーを受信して送信先へ渡す",
+      "claim": "OpenTelemetry Collectorはテレメトリーを受信、処理、出力する構成要素を持ち、選択した一つ以上の保存・分析先へデータを渡せる。",
+      "sourceType": "official-documentation",
+      "sourceName": "OpenTelemetry",
+      "url": "https://opentelemetry.io/docs/collector/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "Collector自体はエラーの検索画面や通知サービスではない。"
+    },
+    {
+      "id": "ev-fem-otel-exception-span",
+      "title": "OpenTelemetryは例外をSpanへ記録する方法を定める",
+      "claim": "OpenTelemetry Trace仕様は、例外をSpanイベントとして記録し、例外の種類、メッセージ、スタックトレースなどの属性を付ける方法を定める。",
+      "sourceType": "specification",
+      "sourceName": "OpenTelemetry",
+      "url": "https://opentelemetry.io/docs/specs/otel/trace/exceptions/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "ブラウザから未処理例外を捕捉する処理と、保存・検索・通知は別に構成する。"
+    },
+    {
+      "id": "ev-fem-sensitive-log-data",
+      "title": "エラーログには認証情報などを直接残さない",
+      "claim": "OWASPはログへパスワード、アクセストークン、セッション識別子、不要な個人情報などを直接記録せず、除去、伏字化、暗号化などを行うよう案内している。",
+      "sourceType": "official-documentation",
+      "sourceName": "OWASP",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "管理型、OpenTelemetry、自前のどの方法でも送信前のデータ削減を行う。"
+    },
+    {
+      "id": "ev-fem-sentry-alerts",
+      "title": "Sentryは条件に応じた通知処理を構成できる",
+      "claim": "Sentry公式API資料は、エラーの初回発生や再発などを条件にAlertを作り、条件成立時にメールやSlackなどへ通知するActionを設定できることを示している。",
+      "sourceType": "official-documentation",
+      "sourceName": "Sentry",
+      "url": "https://docs.sentry.io/api/monitors/create-an-alert-for-an-organization/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "利用できる通知先、契約条件、通知頻度は採用時の設定で確認する。"
+    },
+    {
+      "id": "ev-fem-sentry-browser-capture",
+      "title": "Sentry JavaScript SDKはブラウザの未捕捉エラーを扱う",
+      "claim": "Sentry JavaScript Browser SDKの標準GlobalHandlersは、window.onerrorとunhandledrejectionから未捕捉のエラー情報を受け取る実装を含む。",
+      "sourceType": "official-repository",
+      "sourceName": "getsentry/sentry-javascript",
+      "url": "https://github.com/getsentry/sentry-javascript/blob/develop/packages/browser/src/integrations/globalhandlers.ts",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "すべての失敗を自動で取得するとは限らず、対象に合わせた追加記録と除外設定が必要。"
+    },
+    {
+      "id": "ev-fem-sentry-event-send",
+      "title": "Sentry JavaScript SDKは取得した記録をSentryへ送る",
+      "claim": "SentryのJavaScript公式資料は、SDKが取得したイベントをSentryへ送信し、送信前にイベントへ付加する情報を設定できることを説明している。",
+      "sourceType": "official-documentation",
+      "sourceName": "Sentry",
+      "url": "https://docs.sentry.io/platforms/javascript/enriching-events/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "外部の管理型Sentryを使う場合、送信項目、保存場所、保持期間、契約条件を採用前に確認する。"
+    },
+    {
+      "id": "ev-fem-sentry-issue-view",
+      "title": "Sentryは関連イベントをIssueとして表示する",
+      "claim": "SentryのIssue詳細画面は関連するエラーイベントを一つのIssueとして扱い、スタックトレースや発生状況を確認する表示を提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Sentry",
+      "url": "https://docs.sentry.io/product/issues/issue-details/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "通知条件、保存期間、契約上限は採用する設定と契約で別途確認する。"
+    },
+    {
+      "id": "ev-fem-sentry-sourcemaps",
+      "title": "Sentryはビルドに対応するソースマップを安全に連携できる",
+      "claim": "Sentryは圧縮・変換後のJavaScriptエラーを元のソース位置へ対応させるため、ビルドに対応するソースマップを生成してアップロードする手順を案内し、公開配置ではソースが漏れる可能性に注意を求めている。",
+      "sourceType": "official-documentation",
+      "sourceName": "Sentry",
+      "url": "https://docs.sentry.io/platforms/javascript/sourcemaps/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "ソースマップに含まれる元コードを確認し、一般公開せず監視先だけへ渡す構成を優先する。"
+    },
+    {
+      "id": "ev-fem-source-map-standard",
+      "title": "ソースマップは変換後のコードを元のソースへ対応させる",
+      "claim": "ECMA-426は、変換または圧縮されたコードを元のソースへ対応付けるソースマップ形式を定め、元のソース本文をsourcesContent欄へ含められると規定している。",
+      "sourceType": "specification",
+      "sourceName": "Ecma International TC39",
+      "url": "https://tc39.es/ecma426/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "実際の監視先へ渡す方法と、元コードを含むファイルの公開範囲は採用する道具ごとに確認する。"
+    },
+    {
       "id": "ev-formspree-hosting-security",
       "title": "Formspreeの保存場所と暗号化",
       "claim": "Formspreeは米国内のAWSでサービスを運用し、保存時暗号化とTLS、権限管理、データ処理契約と標準契約条項、削除要求への対応方針を公開している。",
@@ -3908,6 +7143,58 @@
       "verifiedAt": "2026-08-24",
       "conflictsWith": [],
       "notes": "条件分岐を含むForm RulesはBusinessプラン向け。採用時に現在のプラン範囲を確認する。"
+    },
+    {
+      "id": "ev-ftp-playwright-e2e",
+      "title": "Playwright TestのE2E対象と検証方針",
+      "claim": "Playwright TestはWebアプリ向けE2EテストフレームワークでChromium、WebKit、Firefoxを対象にでき、公式の推奨事項は実装詳細ではなく利用者に見える動作を検証するよう勧めている。",
+      "sourceType": "official-documentation",
+      "sourceName": "Playwright",
+      "url": "https://playwright.dev/docs/best-practices",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "主要導線を利用者の操作として確認する用途と、内部実装の単体確認を分ける根拠として確認した。"
+    },
+    {
+      "id": "ev-ftp-vitest-browser-mode",
+      "title": "Vitestの実ブラウザ実行で扱える機能",
+      "claim": "Vitestは、実ブラウザ実行が画面構造、CSS描画、ブラウザAPI、イベント伝播、フォーカス管理を実ブラウザで扱えると説明している。",
+      "sourceType": "official-documentation",
+      "sourceName": "Vitest",
+      "url": "https://vitest.dev/guide/browser/component-testing",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "DOMを模擬する環境と実ブラウザでのコンポーネント確認を区別する根拠として確認した。"
+    },
+    {
+      "id": "ev-ftp-vitest-component-scope",
+      "title": "ブラウザ内コンポーネントテストの範囲",
+      "claim": "Vitestは、コンポーネントテストを個別のUI部品を分離して検証する方法と説明し、アプリ全体のテストには専用のE2Eテストランナーとの併用を勧めている。",
+      "sourceType": "official-documentation",
+      "sourceName": "Vitest",
+      "url": "https://vitest.dev/guide/browser/component-testing",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "コンポーネントテストだけで複数画面の導線を保証しない根拠として確認した。"
+    },
+    {
+      "id": "ev-ftp-vitest-node-environment",
+      "title": "Vitestの既定テスト環境",
+      "claim": "Vitestの既定テスト環境はNode.jsであり、Web APIやブラウザAPIを利用するコードには別の環境を選ぶ必要がある。",
+      "sourceType": "official-documentation",
+      "sourceName": "Vitest",
+      "url": "https://vitest.dev/config/environment.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "ロジック単体テストと実ブラウザ確認の範囲を区別するために確認した。"
     },
     {
       "id": "ev-gltf-spec",
@@ -4018,6 +7305,71 @@
       "verificationStatus": "verified",
       "verifiedAt": "2026-08-23",
       "conflictsWith": []
+    },
+    {
+      "id": "ev-kqa-openai-data-controls",
+      "title": "OpenAI APIの学習利用と保存期間",
+      "claim": "OpenAIはAPIデータを明示的な同意なしに学習へ使用しない一方、不正利用監視ログは既定で最大30日保持され得て、ベクトル検索用の保管領域は削除するまで保持され、データを保持しない特別設定の対象外だと説明している。",
+      "sourceType": "official-documentation",
+      "sourceName": "OpenAI API",
+      "url": "https://developers.openai.com/api/docs/guides/your-data",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "機密資料では組織ごとの契約、保存、削除、対象endpointのデータ管理設定を採用前に確認する。"
+    },
+    {
+      "id": "ev-kqa-openai-file-search",
+      "title": "OpenAIのファイル検索と出典情報",
+      "claim": "OpenAIのファイル検索は応答APIのホスト型ツールで、登録済みのベクトル検索用保管領域を意味検索とキーワード検索で検索し、応答に参照ファイルを示す出典注記を含められる。",
+      "sourceType": "official-documentation",
+      "sourceName": "OpenAI API",
+      "url": "https://developers.openai.com/api/docs/guides/tools-file-search",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "検索結果そのものの正しさや生成回答の正確性を保証する資料ではない。"
+    },
+    {
+      "id": "ev-kqa-pagefind-static-search",
+      "title": "Pagefindによる公開済みHTMLの検索",
+      "claim": "Pagefindは、公開用HTMLから静的な検索索引を生成し、検索サーバーを用意せずに標準UIまたはJavaScript APIから検索できる。",
+      "sourceType": "official-documentation",
+      "sourceName": "Pagefind",
+      "url": "https://pagefind.app/docs/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "承認済みFAQを通常の公開コンテンツとして検索する構成の根拠として確認した。"
+    },
+    {
+      "id": "ev-kqa-pgvector-retrieval",
+      "title": "pgvectorの検索方式",
+      "claim": "pgvectorはPostgreSQLに数値ベクトルを保存し、厳密または近似の近傍検索を行え、PostgreSQLの全文検索と組み合わせた検索も構成できる。",
+      "sourceType": "official-repository",
+      "sourceName": "pgvector",
+      "url": "https://github.com/pgvector/pgvector",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "業務固有の検索品質は、実際の資料と質問集で別途評価する必要がある。"
+    },
+    {
+      "id": "ev-kqa-postgresql-rls",
+      "title": "PostgreSQLの行単位アクセス制御",
+      "claim": "PostgreSQLの行単位セキュリティは、利用者ごとに取得または変更できる行を制限でき、有効にした状態で適用可能な規則がなければアクセスを許可しない。",
+      "sourceType": "official-documentation",
+      "sourceName": "PostgreSQL",
+      "url": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "検索前の認証やアプリケーション全体の権限設計まで自動で保証する機能ではない。"
     },
     {
       "id": "ev-meilisearch-document-updates",
@@ -4233,6 +7585,84 @@
       "conflictsWith": []
     },
     {
+      "id": "ev-secc-codeql-ci-availability",
+      "title": "CodeQLはGitHub Actionsまたは外部CIで実行できる",
+      "claim": "GitHub公式資料は、CodeQLをGitHub Actionsまたは外部CIで実行できると説明し、GitHubのCode scanningを利用できるリポジトリの種類と対応言語を明示している。",
+      "sourceType": "official-documentation",
+      "sourceName": "GitHub",
+      "url": "https://docs.github.com/en/code-security/concepts/code-scanning/codeql/codeql-code-scanning",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "対応言語、リポジトリ種別、組織のGitHub Code Security利用可否を導入前に確認する。"
+    },
+    {
+      "id": "ev-secc-codeql-license-eligibility",
+      "title": "CodeQL CLIはコードの公開範囲と解析用途で利用条件が変わる",
+      "claim": "GitHubのCodeQL利用条件は、公開されたオープンソースコードの解析と、非公開コードまたは継続的インテグレーションでの自動解析を区別し、後者にはGitHub Code Securityの有効な契約など別の利用権が必要だと定めている。",
+      "sourceType": "official-documentation",
+      "sourceName": "GitHub",
+      "url": "https://github.com/github/codeql-cli-binaries/blob/main/LICENSE.md",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "導入前に最新の利用条件、対象リポジトリ、組織の契約を確認する。"
+    },
+    {
+      "id": "ev-secc-codeql-scope",
+      "title": "CodeQLはソースコードへ解析クエリを実行する",
+      "claim": "CodeQLはコードベースから解析用データベースを作り、クエリ（検査ルール）を実行して、対応言語のコードにある脆弱性やエラーの候補を見つける。",
+      "sourceType": "official-documentation",
+      "sourceName": "GitHub",
+      "url": "https://docs.github.com/en/code-security/concepts/code-scanning/codeql/codeql-code-scanning",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "公式資料にない言語は対応せず、独自のフレームワークは追加のモデル化が必要になる場合がある。"
+    },
+    {
+      "id": "ev-secc-dependabot-scope",
+      "title": "Dependabot alertsは依存関係と既知の脆弱性を照合する",
+      "claim": "Dependabot alertsはGitHubリポジトリの既定ブランチにある依存関係グラフを確認し、GitHub Advisory Databaseの新情報や依存関係変更に応じて警告を作る。",
+      "sourceType": "official-documentation",
+      "sourceName": "GitHub",
+      "url": "https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-alerts",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "GitHub自身も、すべての脆弱性を検出できるわけではなく、正確なパッケージ定義ファイルとバージョン固定ファイルが必要と説明している。"
+    },
+    {
+      "id": "ev-secc-zap-active-scan",
+      "title": "ZAP Full Scanは稼働中の対象へ能動検査を行う",
+      "claim": "ZAP Full ScanはDockerイメージから指定URLを探索して能動検査を行い、実際の攻撃に相当する操作を送り、設定した警告・失敗・無視の区分に応じた終了状態を返す。",
+      "sourceType": "official-documentation",
+      "sourceName": "OWASP ZAP",
+      "url": "https://www.zaproxy.org/docs/docker/full-scan/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "ZAP公式資料は能動検査を実際の攻撃と説明するため、所有者から明示的に許可された対象だけに実行する。"
+    },
+    {
+      "id": "ev-secc-zap-permission",
+      "title": "ZAPの能動検査は許可を得た対象だけに実行する",
+      "claim": "ZAP公式資料は、能動検査を攻撃と説明し、攻撃する許可を得たアプリケーションだけを対象にするよう明記している。",
+      "sourceType": "official-documentation",
+      "sourceName": "OWASP ZAP",
+      "url": "https://www.zaproxy.org/docs/desktop/addons/automation-framework/job-ascan/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "本番とは分離され、復元できる検証環境であっても、所有者が許可した対象と範囲を実行前に確認する。"
+    },
+    {
       "id": "ev-three-buffergeometry",
       "title": "Three.js BufferGeometry",
       "claim": "BufferGeometryは頂点属性とIndexを保持し、GeometryデータをGPUへ渡す中心的な構造である。",
@@ -4327,6 +7757,71 @@
       "verificationStatus": "verified",
       "verifiedAt": "2026-08-23",
       "conflictsWith": []
+    },
+    {
+      "id": "ev-wvm-crux-api-access",
+      "title": "CrUX APIはGoogleの公開APIから実利用データを取得する",
+      "claim": "Chrome公式資料は、CrUX APIへURLまたはサイトを指定して実利用データを取得する手順と、Google CloudのAPIキーを使うアクセス方法を示している。",
+      "sourceType": "official-documentation",
+      "sourceName": "Chrome for Developers",
+      "url": "https://developer.chrome.com/docs/crux/api",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "自サイトから新しい計測記録を送る処理ではないが、Googleの公開APIを参照できるかは組織のアクセス方針で確認する。"
+    },
+    {
+      "id": "ev-wvm-crux-field-eligibility",
+      "title": "CrUXは公開された集計済み実利用データである",
+      "claim": "CrUXは実際のChrome利用者の体験を集計して公開するデータであり、公開され十分な利用者数があるなどの条件を満たすページとサイトだけを収録する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Chrome for Developers",
+      "url": "https://developer.chrome.com/docs/crux/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "対象URLにデータがあることを確認してから、このApproachを候補にする。"
+    },
+    {
+      "id": "ev-wvm-field-lab-difference",
+      "title": "CrUXとLighthouseは異なる測定環境を扱う",
+      "claim": "Chrome公式資料は、CrUXを実利用者の体験を集めたフィールドデータ、Lighthouseを制御した環境で行う実験室検査として区別している。",
+      "sourceType": "official-documentation",
+      "sourceName": "Chrome for Developers",
+      "url": "https://developer.chrome.com/docs/crux/guides/pagespeed-insights",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "二つの値が異なること自体を異常とは扱わず、目的に応じて併用する。"
+    },
+    {
+      "id": "ev-wvm-lhci-assertions",
+      "title": "Lighthouse CIは監査結果を自動判定できる",
+      "claim": "Lighthouse CIは監査結果に対する判定条件を設定でき、errorレベルの条件に失敗した場合は終了状態を失敗にしてCIの判定へ利用できる。",
+      "sourceType": "official-documentation",
+      "sourceName": "GoogleChrome Lighthouse CI",
+      "url": "https://googlechrome.github.io/lighthouse-ci/docs/configuration.html#assert",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "実行環境による揺れを踏まえ、単一の測定値だけで厳しい判定を固定しない。"
+    },
+    {
+      "id": "ev-wvm-web-vitals-rum",
+      "title": "web-vitalsは実利用者の指標を任意の分析先へ送れる",
+      "claim": "GoogleChromeのweb-vitalsライブラリは実利用者のWeb Vitalsをコールバックへ渡し、指定した分析エンドポイントへ画面情報とともに送る例と、現在のページ訪問に関する追加の診断情報を提供する。",
+      "sourceType": "official-repository",
+      "sourceName": "GoogleChrome web-vitals",
+      "url": "https://github.com/GoogleChrome/web-vitals/blob/main/README.md",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-24",
+      "conflictsWith": [],
+      "notes": "保存、集計、利用者識別、同意、閲覧画面は利用側で設計する。"
     }
   ],
   "resources": [
@@ -4397,6 +7892,53 @@
       "limitations": "個別ライブラリの最新API解説ではない。"
     },
     {
+      "id": "res-ae-wai-evaluation-tools",
+      "type": "official",
+      "title": "WAI アクセシビリティ評価ツールの選び方",
+      "url": "https://www.w3.org/WAI/test-evaluate/tools/selecting/",
+      "description": "自動検査で確認できる範囲、人による確認の必要性、ツール選定時の観点を確認する公式資料です。",
+      "technologyIds": [
+        "accessibility-evaluation-tools"
+      ],
+      "concepts": [
+        "automated-accessibility-testing"
+      ],
+      "currentUse": "自動検査の役割と限界の確認。",
+      "limitations": "個別製品の導入手順やプロジェクト固有の合格基準は含みません。"
+    },
+    {
+      "id": "res-ae-wai-involving-users",
+      "type": "official",
+      "title": "WAI 障害のある利用者を含む評価",
+      "url": "https://www.w3.org/WAI/test-evaluate/involving-users/",
+      "description": "障害のある利用者による評価の進め方、得られる知見、一般化できない範囲を確認する公式資料です。",
+      "technologyIds": [
+        "inclusive-user-research"
+      ],
+      "concepts": [
+        "usability-evaluation",
+        "assistive-technology"
+      ],
+      "currentUse": "当事者を含む利用確認の役割と限界の確認。",
+      "limitations": "利用者評価だけでWCAG適合を判定する方法ではありません。"
+    },
+    {
+      "id": "res-ae-wcag-em",
+      "type": "official",
+      "title": "WAI WCAG-EM Overview",
+      "url": "https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/",
+      "description": "WebサイトのWCAG適合状況を評価する範囲、代表サンプル、評価、報告の手順を確認する公式資料です。",
+      "technologyIds": [
+        "wcag-em",
+        "wcag"
+      ],
+      "concepts": [
+        "conformance-evaluation"
+      ],
+      "currentUse": "手動の規格適合評価の手順と必要知識の確認。",
+      "limitations": "WCAGへ新しい要件を加える規格ではなく、評価方法を示す資料です。"
+    },
+    {
       "id": "res-algolia-natural-languages",
       "type": "official",
       "title": "Algolia 言語別検索ガイド",
@@ -4443,6 +7985,104 @@
       ],
       "currentUse": "現在の検索APIと索引同期方法の確認。",
       "limitations": "契約プラン、利用上限、データ処理条件は案件ごとに確認が必要です。"
+    },
+    {
+      "id": "res-authm-keycloak-oidc-server",
+      "type": "official",
+      "title": "Keycloakを自分たちの環境で起動してOpenID Connectを使う",
+      "url": "https://www.keycloak.org/getting-started/getting-started-docker",
+      "description": "Keycloakサーバーをコンテナで起動し、利用者とOpenID Connect対応アプリを登録する公式入門です。",
+      "technologyIds": [
+        "keycloak",
+        "openid-connect"
+      ],
+      "concepts": [
+        "self-hosted-identity-provider",
+        "federated-login"
+      ],
+      "currentUse": "外部のクラウドサービスを使わず、組織が運用する認証基盤とアプリを連携できることの確認。",
+      "limitations": "掲載される開発モードは本番用ではありません。本番ではTLS、データベース、更新、可用性を別途設計します。"
+    },
+    {
+      "id": "res-authm-nist-authenticators",
+      "type": "official",
+      "title": "NIST SP 800-63B-4 認証ガイドライン",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "description": "認証手段、フィッシング耐性、資格情報のライフサイクル、復旧要件を確認する公式資料です。",
+      "technologyIds": [
+        "webauthn",
+        "password-authentication"
+      ],
+      "concepts": [
+        "authentication-assurance",
+        "account-recovery"
+      ],
+      "currentUse": "認証方法と復旧運用を分けて確認するために使用。",
+      "limitations": "米国政府向け要件を含むため、案件の法令や本人確認水準は別に整理します。"
+    },
+    {
+      "id": "res-authm-oidc-core",
+      "type": "official",
+      "title": "OpenID Connect Core 1.0",
+      "url": "https://openid.net/specs/openid-connect-core-1_0.html",
+      "description": "外部IdPとの認証フロー、IDトークン、発行者や対象アプリの検証要件を定める公式仕様です。",
+      "technologyIds": [
+        "openid-connect"
+      ],
+      "concepts": [
+        "identity-provider",
+        "token-validation"
+      ],
+      "currentUse": "外部IdP連携の責任範囲とIDトークン検証の確認。",
+      "limitations": "個別IdPのアカウント復旧、パスキー対応、契約条件は別に確認が必要です。"
+    },
+    {
+      "id": "res-authm-password-storage",
+      "type": "official",
+      "title": "OWASP Password Storage Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+      "description": "アプリでパスワードを保管するときのハッシュ化と更新上の注意を確認する公式資料です。",
+      "technologyIds": [
+        "password-authentication"
+      ],
+      "concepts": [
+        "password-hashing",
+        "credential-storage"
+      ],
+      "currentUse": "平文保存を避け、安全なパスワード検証方法を確認。",
+      "limitations": "ログイン試行制限、復旧、セッション保護は別の設計が必要です。"
+    },
+    {
+      "id": "res-authm-session-management",
+      "type": "official",
+      "title": "OWASP Session Management Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+      "description": "ログイン後のセッション識別子、Cookie属性、期限、失効の扱いを確認する公式資料です。",
+      "technologyIds": [
+        "session-cookie"
+      ],
+      "concepts": [
+        "session-management",
+        "cookie-security"
+      ],
+      "currentUse": "認証方式とは別に残るアプリ側セッションの保護を確認。",
+      "limitations": "採用するWebフレームワークの標準機能と設定も別に確認します。"
+    },
+    {
+      "id": "res-authm-webauthn-level3",
+      "type": "official",
+      "title": "W3C Web Authentication Level 3",
+      "url": "https://www.w3.org/TR/webauthn-3/",
+      "description": "WebAuthnの登録、認証、資格情報、セキュリティ上の要件を確認するW3C仕様です。",
+      "technologyIds": [
+        "webauthn"
+      ],
+      "concepts": [
+        "passkey",
+        "public-key-authentication"
+      ],
+      "currentUse": "パスキーを直接実装する際の登録と検証要件の確認。",
+      "limitations": "仕様だけではアカウント復旧や利用者向け画面の設計は完成しません。"
     },
     {
       "id": "res-aws-api-gateway-throttling",
@@ -4600,6 +8240,198 @@
       "currentUse": "CMSと公開画面が統合される仕組みを確認する。"
     },
     {
+      "id": "res-dvr-canvas-standard",
+      "type": "official",
+      "title": "WHATWG HTML Canvas Standard",
+      "url": "https://html.spec.whatwg.org/multipage/canvas.html",
+      "description": "canvasのbitmap描画面、2D context、静的媒体での扱い、fallback contentを定めるHTML仕様です。",
+      "technologyIds": [
+        "canvas-api"
+      ],
+      "concepts": [
+        "immediate-mode-rendering",
+        "bitmap-graphics"
+      ],
+      "currentUse": "Canvasの描画方式と代替内容の要件確認。",
+      "limitations": "ライブラリ間や描画方式間の性能比較は示しません。"
+    },
+    {
+      "id": "res-dvr-deck-interactivity",
+      "type": "official",
+      "title": "deck.gl Interactivity",
+      "url": "https://deck.gl/docs/developer-guide/interactivity",
+      "description": "描画した対象を位置から特定し、ポインターを重ねる、クリックする、ドラッグする操作へ接続する選択機能の公式資料です。",
+      "technologyIds": [
+        "deck-gl",
+        "webgl"
+      ],
+      "concepts": [
+        "object-picking",
+        "dense-interaction"
+      ],
+      "currentUse": "大量描画に対する選択とポインター操作の確認。",
+      "limitations": "キーボード操作や支援技術向けの意味付けは別に実装する必要があります。"
+    },
+    {
+      "id": "res-dvr-svg-spec",
+      "type": "official",
+      "title": "W3C SVG 2",
+      "url": "https://www.w3.org/TR/SVG2/",
+      "description": "XMLベースのベクター画像、HTML統合、CSS、DOM、スクリプトを定めるSVG仕様です。",
+      "technologyIds": [
+        "svg"
+      ],
+      "concepts": [
+        "vector-graphics",
+        "document-graphics"
+      ],
+      "currentUse": "SVGの文書形式とHTMLでの利用方法の確認。",
+      "limitations": "多数の図形を扱う際の実行性能は実データと対象端末で確認します。"
+    },
+    {
+      "id": "res-dvr-wai-tables",
+      "type": "official",
+      "title": "WAI Tables Tutorial",
+      "url": "https://www.w3.org/WAI/tutorials/tables/",
+      "description": "データ表の見出し、セル、複雑な関係を支援技術へ伝えるHTML構造を確認する公式資料です。",
+      "technologyIds": [
+        "html"
+      ],
+      "concepts": [
+        "accessible-data-table"
+      ],
+      "currentUse": "可視化と併記するデータ表の設計確認。",
+      "limitations": "図の表現方法や描画性能は扱いません。"
+    },
+    {
+      "id": "res-dvr-webgl-standard",
+      "type": "official",
+      "title": "Khronos WebGL Specification",
+      "url": "https://registry.khronos.org/webgl/specs/latest/1.0/",
+      "description": "HTML Canvasから利用するOpenGL ES由来の低レベル描画contextを定めるWebGL仕様です。",
+      "technologyIds": [
+        "webgl"
+      ],
+      "concepts": [
+        "shader-rendering",
+        "low-level-graphics-api"
+      ],
+      "currentUse": "WebGLのAPI範囲、Canvasとの関係、端末差の確認。",
+      "limitations": "可視化方式間の性能比較は示さないため、実データと対象端末で計測が必要です。"
+    },
+    {
+      "id": "res-fem-otel-browser",
+      "type": "official",
+      "title": "OpenTelemetry JavaScript Browser",
+      "url": "https://opentelemetry.io/docs/languages/js/getting-started/browser/",
+      "description": "ブラウザで処理区間の記録を始める方法、送信設定、現在の成熟度を確認する公式資料です。",
+      "technologyIds": [
+        "opentelemetry"
+      ],
+      "concepts": [
+        "browser-instrumentation",
+        "distributed-tracing"
+      ],
+      "currentUse": "ブラウザから既存の追跡基盤へつなぐ実装範囲の確認。",
+      "limitations": "ブラウザ向けのクライアント計装は実験的で、完成したエラー管理画面は提供しません。"
+    },
+    {
+      "id": "res-fem-otel-collector",
+      "type": "official",
+      "title": "OpenTelemetry Collector（記録の受信・中継）",
+      "url": "https://opentelemetry.io/docs/collector/",
+      "description": "稼働状況の記録を受信、処理し、一つ以上の保存・分析先へ送る構成を確認する公式資料です。",
+      "technologyIds": [
+        "opentelemetry-collector"
+      ],
+      "concepts": [
+        "telemetry-pipeline",
+        "observability-backend"
+      ],
+      "currentUse": "ブラウザとサーバーの記録を選択した保存先へ送る構成の確認。",
+      "limitations": "エラーの検索画面、保管、通知には対応する保存・表示先が別に必要です。"
+    },
+    {
+      "id": "res-fem-owasp-logging",
+      "type": "official",
+      "title": "OWASP Logging Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+      "description": "ログへ記録すべきでない情報、無害化、アクセス制御、送信失敗時の扱いを確認する公式資料です。",
+      "technologyIds": [
+        "application-logging"
+      ],
+      "concepts": [
+        "sensitive-data-redaction",
+        "log-security"
+      ],
+      "currentUse": "画面エラーを送る前の項目削減と保存先保護の確認。",
+      "limitations": "各地域の個人情報保護や社内の保持方針は別に確認が必要です。"
+    },
+    {
+      "id": "res-fem-sentry-alerts",
+      "type": "official",
+      "title": "Sentry Alertと通知Action",
+      "url": "https://docs.sentry.io/api/monitors/create-an-alert-for-an-organization/",
+      "description": "エラーの発生条件と、メールやSlackなどへの通知処理を組み合わせるSentry公式資料です。",
+      "technologyIds": [
+        "sentry"
+      ],
+      "concepts": [
+        "error-alerting",
+        "notification-action"
+      ],
+      "currentUse": "管理型エラー監視で、確認画面だけでなく担当者への通知を構成できることの確認。",
+      "limitations": "利用できる通知先、権限、契約条件、通知頻度は採用時の設定で確認します。"
+    },
+    {
+      "id": "res-fem-sentry-javascript",
+      "type": "official",
+      "title": "Sentry for JavaScript",
+      "url": "https://docs.sentry.io/platforms/javascript/",
+      "description": "JavaScript SDKの導入、エラー送信、設定項目を確認するSentry公式資料です。",
+      "technologyIds": [
+        "sentry"
+      ],
+      "concepts": [
+        "managed-error-monitoring",
+        "browser-sdk"
+      ],
+      "currentUse": "管理型エラー監視をブラウザへ導入する手順の確認。",
+      "limitations": "収集範囲、個人情報、契約、保存場所は採用前に個別確認が必要です。"
+    },
+    {
+      "id": "res-fem-sentry-sourcemaps",
+      "type": "official",
+      "title": "Sentry JavaScript Source Maps",
+      "url": "https://docs.sentry.io/platforms/javascript/sourcemaps/",
+      "description": "圧縮後のエラー位置を元のソースへ対応させるための生成とアップロードを確認する公式資料です。",
+      "technologyIds": [
+        "sentry"
+      ],
+      "concepts": [
+        "source-map",
+        "stack-trace"
+      ],
+      "currentUse": "公開ビルドのスタックトレースを読める形にする手順の確認。",
+      "limitations": "リリースとソースマップの対応、公開範囲、機密情報の混入を管理する必要があります。"
+    },
+    {
+      "id": "res-fem-whatwg-errors",
+      "type": "official",
+      "title": "WHATWG HTML Runtime Script Errors",
+      "url": "https://html.spec.whatwg.org/multipage/webappapis.html#runtime-script-errors",
+      "description": "ブラウザのerrorイベントと未処理Promise rejectionの通知手順を定めるHTML標準です。",
+      "technologyIds": [
+        "html"
+      ],
+      "concepts": [
+        "error-event",
+        "unhandled-promise-rejection"
+      ],
+      "currentUse": "自前収集で利用できるブラウザ標準イベントの範囲確認。",
+      "limitations": "受信API、保存、再送、分類、通知は標準の範囲外です。"
+    },
+    {
       "id": "res-formspree-html-forms",
       "type": "official",
       "title": "Formspree HTMLフォームガイド",
@@ -4647,6 +8479,53 @@
       ],
       "currentUse": "外部サービス審査とデータ経路の確認。",
       "limitations": "個別契約の監査報告書、保存期間、削除手順、法務要件は別途確認します。"
+    },
+    {
+      "id": "res-ftp-playwright-best-practices",
+      "type": "official",
+      "title": "Playwright Test Best Practices",
+      "url": "https://playwright.dev/docs/best-practices",
+      "description": "利用者に見える動作、独立したテスト、locator、制御できない外部依存の扱いを確認する公式資料です。",
+      "technologyIds": [
+        "playwright"
+      ],
+      "concepts": [
+        "end-to-end-testing",
+        "critical-user-journey"
+      ],
+      "currentUse": "主要導線E2Eの設計と安定運用の確認。",
+      "limitations": "個々の内部ロジックを網羅する単体テストの代わりにはなりません。"
+    },
+    {
+      "id": "res-ftp-vitest-browser-components",
+      "type": "official",
+      "title": "Vitest 実ブラウザでのコンポーネントテスト",
+      "url": "https://vitest.dev/guide/browser/component-testing",
+      "description": "実ブラウザでUIコンポーネントを表示して操作を検証する構成を確認する公式資料です。",
+      "technologyIds": [
+        "vitest-browser-mode"
+      ],
+      "concepts": [
+        "component-testing",
+        "browser-testing"
+      ],
+      "currentUse": "コンポーネントテストの対象範囲と設定の確認。",
+      "limitations": "アプリ全体の主要導線には専用のE2Eテストも必要です。"
+    },
+    {
+      "id": "res-ftp-vitest-environment",
+      "type": "official",
+      "title": "Vitest テスト環境",
+      "url": "https://vitest.dev/config/environment.html",
+      "description": "Node.jsを含むテスト環境の選択と、ファイルごとの環境指定を確認する公式資料です。",
+      "technologyIds": [
+        "vitest"
+      ],
+      "concepts": [
+        "unit-testing"
+      ],
+      "currentUse": "ロジック単体テストが実行される環境の確認。",
+      "limitations": "実ブラウザのコンポーネント操作は、Vitestの実ブラウザ実行に関する資料を別途確認します。"
     },
     {
       "id": "res-gltf-spec",
@@ -4783,6 +8662,89 @@
         "seo"
       ],
       "currentUse": "検索可能な構造を判断する基準。"
+    },
+    {
+      "id": "res-kqa-openai-data-controls",
+      "type": "official",
+      "title": "OpenAI APIのデータ管理",
+      "url": "https://developers.openai.com/api/docs/guides/your-data",
+      "description": "APIデータの学習利用、不正利用監視ログ、保存状態、削除、データを保持しない特別設定の対象を確認する公式資料です。",
+      "technologyIds": [
+        "openai-file-search",
+        "responses-api"
+      ],
+      "concepts": [
+        "data-retention",
+        "data-governance"
+      ],
+      "currentUse": "機密資料を登録する前のデータ取扱条件の確認。",
+      "limitations": "利用組織の契約、法務、地域、権限要件への適合は個別確認が必要です。"
+    },
+    {
+      "id": "res-kqa-openai-file-search",
+      "type": "official",
+      "title": "OpenAI ファイル検索ガイド",
+      "url": "https://developers.openai.com/api/docs/guides/tools-file-search",
+      "description": "OpenAIの応答APIからホスト型のファイル検索を使い、ベクトル検索用の保管領域と出典情報を扱う手順を確認する公式資料です。",
+      "technologyIds": [
+        "openai-file-search",
+        "responses-api"
+      ],
+      "concepts": [
+        "retrieval-augmented-generation",
+        "hosted-vector-store"
+      ],
+      "currentUse": "検索方式、ファイル登録、出典注記の確認。",
+      "limitations": "生成回答の正確性を保証する資料ではなく、評価と失敗時の扱いは別途設計します。"
+    },
+    {
+      "id": "res-kqa-pagefind-docs",
+      "type": "official",
+      "title": "Pagefind 公式ガイド",
+      "url": "https://pagefind.app/docs/",
+      "description": "公開済みHTMLから静的検索索引を生成し、検索画面やAPIから利用する手順を確認する公式資料です。",
+      "technologyIds": [
+        "pagefind"
+      ],
+      "concepts": [
+        "static-search-index",
+        "curated-knowledge-base"
+      ],
+      "currentUse": "承認済みFAQを検索する構成の確認。",
+      "limitations": "FAQの回答内容と更新責任は編集側で管理します。"
+    },
+    {
+      "id": "res-kqa-pgvector",
+      "type": "official",
+      "title": "pgvector 公式リポジトリ",
+      "url": "https://github.com/pgvector/pgvector",
+      "description": "PostgreSQLでvectorを保存し、近傍検索や全文検索との組み合わせを構成する手順を確認する公式資料です。",
+      "technologyIds": [
+        "pgvector",
+        "postgresql"
+      ],
+      "concepts": [
+        "custom-retrieval",
+        "vector-search"
+      ],
+      "currentUse": "自前検索の方式、索引、全文検索とベクトル検索の組み合わせ確認。",
+      "limitations": "実際の検索品質、必要資源、運用負荷は自社資料で検証する必要があります。"
+    },
+    {
+      "id": "res-kqa-postgresql-row-security",
+      "type": "official",
+      "title": "PostgreSQL Row Security Policies",
+      "url": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html",
+      "description": "利用者ごとに参照または変更できる行をpolicyで制限する仕組みを確認する公式資料です。",
+      "technologyIds": [
+        "postgresql"
+      ],
+      "concepts": [
+        "row-level-security",
+        "access-control"
+      ],
+      "currentUse": "部門や利用者によって検索対象を変える構成の確認。",
+      "limitations": "認証、接続権限、生成モデルへ渡す前の検査を含む全体設計は別途必要です。"
     },
     {
       "id": "res-meilisearch-document-updates",
@@ -4999,6 +8961,70 @@
       "currentUse": "レンダリング負荷の基礎確認。"
     },
     {
+      "id": "res-secc-codeql-cli-terms",
+      "type": "official",
+      "title": "GitHub CodeQLの利用条件",
+      "url": "https://github.com/github/codeql-cli-binaries/blob/main/LICENSE.md",
+      "description": "CodeQL CLIを利用できるコードの公開範囲と、自動解析・継続的インテグレーションに関する条件を確認する公式文書です。",
+      "technologyIds": [
+        "codeql"
+      ],
+      "concepts": [
+        "static-analysis",
+        "license-eligibility"
+      ],
+      "currentUse": "公開・非公開の別と自動解析の用途に応じたCodeQLの利用可否を確認する。",
+      "limitations": "利用条件は変更される可能性があるため、導入時点の文書と組織の契約を再確認します。"
+    },
+    {
+      "id": "res-secc-codeql-scanning",
+      "type": "official",
+      "title": "GitHub Code scanning with CodeQL",
+      "url": "https://docs.github.com/en/code-security/concepts/code-scanning/codeql/codeql-code-scanning",
+      "description": "CodeQLの解析手順、対応言語、GitHub Actionsや外部CIでの実行方法、利用できるリポジトリを確認する公式資料です。",
+      "technologyIds": [
+        "codeql"
+      ],
+      "concepts": [
+        "static-analysis",
+        "code-scanning"
+      ],
+      "currentUse": "独自コードを対象とする静的解析の範囲と導入方法の確認。",
+      "limitations": "対応外の言語やモデル化されていない独自のフレームワークは解析できません。GitHub上で結果を表示する場合は、リポジトリ種別とGitHub Code Securityの利用可否も確認します。"
+    },
+    {
+      "id": "res-secc-dependabot-alerts",
+      "type": "official",
+      "title": "GitHub Dependabot alerts",
+      "url": "https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-alerts",
+      "description": "依存関係グラフとGitHub Advisory Databaseから警告が作られる条件と限界を確認する公式資料です。",
+      "technologyIds": [
+        "dependabot"
+      ],
+      "concepts": [
+        "dependency-monitoring",
+        "vulnerability-advisory"
+      ],
+      "currentUse": "依存パッケージ監視の対象範囲と通知条件の確認。",
+      "limitations": "すべての問題を検出するものではなく、対応するパッケージ管理方式にも範囲があります。"
+    },
+    {
+      "id": "res-secc-zap-full-scan",
+      "type": "official",
+      "title": "OWASP ZAP Full Scan",
+      "url": "https://www.zaproxy.org/docs/docker/full-scan/",
+      "description": "ZAPの探索、能動検査、結果の判定、Dockerでの実行方法を確認する公式資料です。",
+      "technologyIds": [
+        "owasp-zap"
+      ],
+      "concepts": [
+        "dynamic-application-security-testing",
+        "active-scan"
+      ],
+      "currentUse": "許可済み検証環境を動的検査する手順と影響の確認。",
+      "limitations": "能動検査は実際の攻撃に相当するため、所有者から明示的に許可された対象以外へ実行してはいけません。"
+    },
+    {
       "id": "res-three-buffergeometry",
       "type": "official",
       "title": "Three.js BufferGeometry",
@@ -5111,6 +9137,54 @@
         "accessibility"
       ],
       "currentUse": "アクセシビリティ要件の判断。"
+    },
+    {
+      "id": "res-wvm-crux-overview",
+      "type": "official",
+      "title": "Chrome UX Report（CrUX）概要",
+      "url": "https://developer.chrome.com/docs/crux/",
+      "description": "CrUXの実利用データ、公開方法、ページとサイトの収録条件を確認するChrome公式資料です。",
+      "technologyIds": [
+        "crux"
+      ],
+      "concepts": [
+        "field-data",
+        "core-web-vitals"
+      ],
+      "currentUse": "公開実測データが目的と対象URLに合うかの確認。",
+      "limitations": "公開され十分な利用者数があるページやサイトだけが収録対象です。"
+    },
+    {
+      "id": "res-wvm-lighthouse-ci",
+      "type": "official",
+      "title": "Lighthouse CI",
+      "url": "https://googlechrome.github.io/lighthouse-ci/",
+      "description": "変更ごとの自動検査環境でLighthouseを繰り返し実行し、結果保存や判定条件を設定する公式資料です。",
+      "technologyIds": [
+        "lighthouse-ci"
+      ],
+      "concepts": [
+        "lab-measurement",
+        "regression-gate"
+      ],
+      "currentUse": "公開前の自動検査と回帰判定の構成確認。",
+      "limitations": "実験室条件の結果であり、実際の利用者の体験を直接集計したデータではありません。"
+    },
+    {
+      "id": "res-wvm-web-vitals",
+      "type": "official",
+      "title": "GoogleChrome web-vitals",
+      "url": "https://github.com/GoogleChrome/web-vitals/blob/main/README.md",
+      "description": "実際の利用者のWeb Vitals取得、診断情報、分析先への送信例を確認する公式リポジトリです。",
+      "technologyIds": [
+        "web-vitals"
+      ],
+      "concepts": [
+        "real-user-monitoring",
+        "field-measurement"
+      ],
+      "currentUse": "自前の利用者計測で取得できる指標と送信処理の確認。",
+      "limitations": "保存、集計、閲覧画面、同意管理はライブラリに含まれません。"
     }
   ],
   "conditions": [
@@ -5178,7 +9252,7 @@
     {
       "id": "small-team",
       "label": "少人数チーム",
-      "description": "専任3Dエンジニアを置かない小規模チームで開発する。",
+      "description": "専任担当者を多く置けず、設計・実装・運用を少人数で分担する。",
       "category": "team",
       "conflictsWith": []
     },
@@ -5321,7 +9395,7 @@
     {
       "id": "external-service-restricted",
       "label": "外部サービス利用を制限",
-      "description": "契約、データ管理、セキュリティ方針により外部SaaSへの送信を避ける必要がある。",
+      "description": "契約、データ管理、セキュリティ方針により、情報を外部のクラウドサービスへ送信できない。",
       "category": "requirement",
       "conflictsWith": []
     },
@@ -5398,9 +9472,273 @@
       "description": "別のフロントエンドをビルド・配信せず、CMSのテンプレートから公開ページへ反映したい。",
       "category": "requirement",
       "conflictsWith": []
+    },
+    {
+      "id": "release-gate-required",
+      "label": "公開前の自動判定が必要",
+      "description": "問題を検知した場合に、公開処理を自動で止める仕組みが必要。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "expert-review-available",
+      "label": "専門知識を持つ確認者がいる",
+      "description": "規格や支援技術を理解した担当者が、手作業で結果を判断できる。",
+      "category": "team",
+      "conflictsWith": []
+    },
+    {
+      "id": "user-research-available",
+      "label": "利用者による確認ができる",
+      "description": "実際の利用者に操作してもらい、つまずきや理解しにくさを確認できる。",
+      "category": "team",
+      "conflictsWith": []
+    },
+    {
+      "id": "logic-heavy",
+      "label": "複雑なロジックが中心",
+      "description": "計算、変換、状態遷移など、画面から分離できる処理が品質上の中心になる。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "browser-behavior-priority",
+      "label": "ブラウザ上の操作を重視",
+      "description": "入力、フォーカス、表示更新など、実際のブラウザでの振る舞いを重点的に確認したい。",
+      "category": "priority",
+      "conflictsWith": []
+    },
+    {
+      "id": "critical-user-journeys",
+      "label": "失敗できない主要導線がある",
+      "description": "購入、申し込み、ログインなど、複数画面をまたぐ重要な操作を守る必要がある。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "source-citations-required",
+      "label": "回答の出典が必要",
+      "description": "質問への回答から、根拠になった社内資料や該当箇所を確認できる必要がある。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "sensitive-knowledge-base",
+      "label": "機密資料を扱う",
+      "description": "権限管理や外部送信の可否を個別に確認すべき社内情報を検索対象に含む。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "frequent-knowledge-updates",
+      "label": "資料の更新頻度が高い",
+      "description": "検索対象の資料が頻繁に追加・更新され、回答へ早く反映する必要がある。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "retrieval-customization-required",
+      "label": "検索方法を細かく調整",
+      "description": "部門、期間、権限などで検索範囲や並び方を細かく制御する必要がある。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "deterministic-answers-required",
+      "label": "同じ質問には同じ回答が必要",
+      "description": "表現の揺れや推測を避け、承認済みの内容だけをそのまま返す必要がある。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "large-dataset",
+      "label": "表示するデータ量が多い",
+      "description": "一度に多数の点や系列を扱い、描画負荷が判断に影響する。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "dense-interaction-required",
+      "label": "細かな操作が必要",
+      "description": "拡大、選択、範囲指定など、データを詳しく調べる操作を重視する。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "static-export-required",
+      "label": "印刷・静止画への出力が必要",
+      "description": "画面だけでなく、印刷物や資料に載せる静的な出力も必要になる。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "passwordless-priority",
+      "label": "パスワードを使わない",
+      "description": "利用者がパスワードを作成・入力せずにログインできることを優先する。",
+      "category": "priority",
+      "conflictsWith": []
+    },
+    {
+      "id": "enterprise-sso-required",
+      "label": "組織の共通ログインが必要",
+      "description": "会社や学校の既存アカウントと連携し、所属組織の管理下でログインさせる必要がある。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "account-recovery-required",
+      "label": "アカウント復旧を重視",
+      "description": "端末紛失や認証情報を忘れた場合の復旧手順を、運用として用意する必要がある。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "authentication-team-available",
+      "label": "認証を運用できる担当者がいる",
+      "description": "認証情報、セッション、復旧、事故対応を継続して設計・運用できる。",
+      "category": "team",
+      "conflictsWith": []
+    },
+    {
+      "id": "existing-organization-idp-available",
+      "label": "利用できる組織の認証基盤がある",
+      "description": "会社や学校がすでに運用し、対象アプリとの連携を許可している認証基盤がある。",
+      "category": "environment",
+      "conflictsWith": []
+    },
+    {
+      "id": "dependency-risk-priority",
+      "label": "依存部品の更新を重視",
+      "description": "外部ライブラリやパッケージの既知の問題を継続して把握することを優先する。",
+      "category": "priority",
+      "conflictsWith": []
+    },
+    {
+      "id": "custom-code-risk-priority",
+      "label": "独自コードの確認を重視",
+      "description": "アプリ固有の入力処理、権限判定、データ処理にある問題の発見を優先する。",
+      "category": "priority",
+      "conflictsWith": []
+    },
+    {
+      "id": "public-attack-surface",
+      "label": "外部公開する機能が多い",
+      "description": "ログイン、入力、APIなど、インターネットから操作できる機能を含む。",
+      "category": "environment",
+      "conflictsWith": []
+    },
+    {
+      "id": "ci-available",
+      "label": "自動検査の実行環境がある",
+      "description": "変更ごとにテストや解析を実行できる継続的インテグレーション環境がある。",
+      "category": "environment",
+      "conflictsWith": []
+    },
+    {
+      "id": "codeql-use-authorized",
+      "label": "CodeQLを利用できる",
+      "description": "対象言語とリポジトリ種別が対応範囲に入り、非公開コードや自動解析に必要な契約または利用許可を確認している。",
+      "category": "environment",
+      "conflictsWith": []
+    },
+    {
+      "id": "security-expert-available",
+      "label": "セキュリティ担当者がいる",
+      "description": "検出結果の優先順位と誤検知を判断し、改善を進められる担当者がいる。",
+      "category": "team",
+      "conflictsWith": []
+    },
+    {
+      "id": "authorized-security-test-environment",
+      "label": "能動検査を許可された環境がある",
+      "description": "対象の所有者から能動検査の許可を得ており、検査対象URLを限定できる環境がある。",
+      "category": "environment",
+      "conflictsWith": []
+    },
+    {
+      "id": "github-dependency-graph-available",
+      "label": "GitHubの依存関係グラフを利用できる",
+      "description": "対象リポジトリでGitHubの依存関係グラフを有効にし、依存部品の情報を継続して確認できる。",
+      "category": "environment",
+      "conflictsWith": []
+    },
+    {
+      "id": "public-field-data-available",
+      "label": "公開サイトに十分な利用実績がある",
+      "description": "公開URLに、集計された実利用データを確認できるだけの継続的なアクセスがある。",
+      "category": "environment",
+      "conflictsWith": []
+    },
+    {
+      "id": "per-session-diagnostics-required",
+      "label": "個別の利用状況を詳しく調べたい",
+      "description": "端末や画面ごとの計測値を保存し、問題が起きた状況を詳しく追いたい。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "ci-regression-gate-required",
+      "label": "変更前に性能低下を検知",
+      "description": "公開前の自動検査で、性能や品質の悪化を検知して変更を止めたい。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "distributed-tracing-required",
+      "label": "サーバー処理まで追跡したい",
+      "description": "ブラウザからAPIやバックエンドまで、処理のつながりを共通の記録で追う必要がある。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "production-errors-priority",
+      "label": "公開後の画面エラーを重視",
+      "description": "実際の利用者のブラウザで発生した例外や失敗を早く発見したい。",
+      "category": "priority",
+      "conflictsWith": []
+    },
+    {
+      "id": "data-control-priority",
+      "label": "計測データの管理を重視",
+      "description": "保存場所、送信先、保持期間を自分たちの方針に合わせて制御したい。",
+      "category": "priority",
+      "conflictsWith": []
     }
   ],
   "decisions": [
+    {
+      "id": "dec-ae-release-2026-08",
+      "slug": "automated-release-check",
+      "situationId": "accessibility-evaluation",
+      "title": "公開前に同じ確認を繰り返すサイト",
+      "conditionIds": [
+        "release-gate-required",
+        "short-deadline"
+      ],
+      "snapshotDate": "2026-08-24",
+      "summary": "公開処理ごとに機械で判定できる問題を確認し、短期間で反復するため、自動検査を最初の重点とします。",
+      "expectedTopApproachIds": [
+        "ae-automated-checks"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-authm-enterprise-2026-08",
+      "slug": "enterprise-small-team",
+      "situationId": "authentication-method",
+      "title": "組織ログインを使う小規模チーム",
+      "conditionIds": [
+        "enterprise-sso-required",
+        "small-team",
+        "maintainability-priority"
+      ],
+      "snapshotDate": "2026-08-24",
+      "summary": "組織の既存アカウントによる共通ログインが必要で、少人数での継続運用を重視するため、組織の認証基盤とのOpenID Connect連携を第一候補とします。",
+      "expectedTopApproachIds": [
+        "authm-external-oidc"
+      ],
+      "status": "published"
+    },
     {
       "id": "dec-cms-multichannel-2026-08",
       "slug": "structured-multichannel",
@@ -5418,6 +9756,54 @@
       "status": "published"
     },
     {
+      "id": "dec-dvr-accessible-static-2026-08",
+      "slug": "accessible-static-chart",
+      "situationId": "data-visualization-rendering",
+      "title": "読み上げと静的資料に使う可視化",
+      "conditionIds": [
+        "accessibility-priority",
+        "static-export-required"
+      ],
+      "snapshotDate": "2026-08-24",
+      "summary": "数値と見出しの関係をHTML表で伝え、図をベクター形式で扱うため、HTML表とSVGを第一候補にします。",
+      "expectedTopApproachIds": [
+        "dvr-html-svg"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-fem-managed-fast-2026-08",
+      "slug": "managed-production-errors",
+      "situationId": "frontend-error-monitoring",
+      "title": "管理型サービスで公開後のエラーを見つける",
+      "conditionIds": [
+        "production-errors-priority",
+        "short-deadline",
+        "small-team"
+      ],
+      "snapshotDate": "2026-08-24",
+      "summary": "公開後の画面エラーを短期間で収集し、少人数で閲覧画面と通知を運用するため、管理型エラー監視を第一候補とします。",
+      "expectedTopApproachIds": [
+        "fem-managed-error-service"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-ftp-critical-2026-08",
+      "slug": "critical-user-flow-first",
+      "situationId": "frontend-test-priority",
+      "title": "申し込みの主要導線を最初に守る",
+      "conditionIds": [
+        "critical-user-journeys"
+      ],
+      "snapshotDate": "2026-08-24",
+      "summary": "複数画面と連携先を通る失敗できない操作を利用者と同じ流れで確認するため、主要導線E2Eを最初に整備します。",
+      "expectedTopApproachIds": [
+        "ftp-critical-flow-e2e"
+      ],
+      "status": "published"
+    },
+    {
       "id": "dec-host-static-2026-08",
       "slug": "static-content-standard",
       "situationId": "hosting-runtime-selection",
@@ -5429,6 +9815,22 @@
       "summary": "公開時に内容を確定できるサイトでは、アプリの実行環境を持たない静的生成とエッジ配信を第一候補にします。",
       "expectedTopApproachIds": [
         "static-edge-hosting"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-kqa-cited-2026-08",
+      "slug": "cited-answers-small-team",
+      "situationId": "knowledge-qa",
+      "title": "少人数で出典付き回答を始める",
+      "conditionIds": [
+        "source-citations-required",
+        "small-team"
+      ],
+      "snapshotDate": "2026-08-24",
+      "summary": "自前の検索実行基盤を持たず、回答から参照ファイルを確認できるようにするため、ホスト型ファイル検索を第一候補にします。",
+      "expectedTopApproachIds": [
+        "kqa-hosted-file-search-ai"
       ],
       "status": "published"
     },
@@ -5517,6 +9919,24 @@
       "status": "published"
     },
     {
+      "id": "dec-secc-dependencies-2026-08",
+      "slug": "dependency-first-with-ci",
+      "situationId": "web-security-check-priority",
+      "title": "依存パッケージの監視から始める",
+      "conditionIds": [
+        "dependency-risk-priority",
+        "ci-available",
+        "github-dependency-graph-available",
+        "small-team"
+      ],
+      "snapshotDate": "2026-08-24",
+      "summary": "依存パッケージの既知の脆弱性を優先し、対象リポジトリで依存関係グラフを利用できるため、Dependabotによる継続監視を最初の確認にします。",
+      "expectedTopApproachIds": [
+        "secc-dependency-monitoring"
+      ],
+      "status": "published"
+    },
+    {
       "id": "dec-secure-contact-form-fast-2026-08",
       "slug": "basic-small-team",
       "situationId": "secure-contact-form",
@@ -5564,6 +9984,23 @@
       "summary": "公開時に索引を更新でき、短期導入と少人数運用を優先するため、Pagefindによる静的検索を第一候補とします。",
       "expectedTopApproachIds": [
         "build-time-static-search"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-wvm-public-field-2026-08",
+      "slug": "public-field-small-team",
+      "situationId": "web-vitals-monitoring",
+      "title": "公開実測データから始める",
+      "conditionIds": [
+        "public-field-data-available",
+        "small-team",
+        "maintainability-priority"
+      ],
+      "snapshotDate": "2026-08-24",
+      "summary": "対象URLに公開実測データがあり、少人数で収集基盤を増やさず継続確認したいため、CrUXを第一候補とします。",
+      "expectedTopApproachIds": [
+        "wvm-public-crux"
       ],
       "status": "published"
     }

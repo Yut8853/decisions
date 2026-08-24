@@ -1,0 +1,11 @@
+id: res-dvr-wai-tables
+type: official
+title: WAI Tables Tutorial
+url: https://www.w3.org/WAI/tutorials/tables/
+description: データ表の見出し、セル、複雑な関係を支援技術へ伝えるHTML構造を確認する公式資料です。
+technologyIds:
+- html
+concepts:
+- accessible-data-table
+currentUse: 可視化と併記するデータ表の設計確認。
+limitations: 図の表現方法や描画性能は扱いません。

@@ -1,0 +1,11 @@
+id: ev-fem-sensitive-log-data
+title: エラーログには認証情報などを直接残さない
+claim: OWASPはログへパスワード、アクセストークン、セッション識別子、不要な個人情報などを直接記録せず、除去、伏字化、暗号化などを行うよう案内している。
+sourceType: official-documentation
+sourceName: OWASP
+url: https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: 管理型、OpenTelemetry、自前のどの方法でも送信前のデータ削減を行う。

@@ -1,0 +1,33 @@
+id: fem-opentelemetry-pipeline
+slug: fem-opentelemetry-pipeline
+title: OpenTelemetryの追跡基盤へつなぐ
+shortTitle: 追跡基盤へつなぐ
+summary: ブラウザの例外をSpan（処理区間の記録）へ加え、Collector（記録の受信・中継プログラム）から既存の追跡先へ送る方法です。
+defaultLabel: canonical
+baseScore: 2
+technologyIds:
+- opentelemetry
+concepts:
+- distributed-tracing
+- exception-telemetry
+- telemetry-collector
+recommendedWhen:
+- ブラウザからAPIやサーバーまで同じ追跡基盤で調べたい
+- OpenTelemetry Collectorと保存先をすでに運用している
+- 必要なブラウザ計装と例外記録を自分たちで設計できる
+notRecommendedWhen:
+- 一覧画面や通知まで含む完成したエラー監視をすぐ使いたい
+- Collectorと保存先を運用できない
+- ブラウザ向け機能の成熟度と制約を継続確認できない
+advantages:
+- ブラウザとサーバーの記録を同じ追跡の流れへつなげられる
+- Collectorから要件に合う送信先を選べる
+- 特定の監視画面だけにデータ形式を固定しない
+disadvantages:
+- ブラウザの例外収集と処理区間への記録を設計する必要がある
+- 検索、まとめ表示、通知には別の保存・表示先が必要
+- JavaScriptのブラウザ計装には実験的な要素がある
+resourceIds:
+- res-fem-otel-browser
+- res-fem-otel-collector
+lastReviewed: '2026-08-24'

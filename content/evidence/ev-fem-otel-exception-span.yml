@@ -1,0 +1,11 @@
+id: ev-fem-otel-exception-span
+title: OpenTelemetryは例外をSpanへ記録する方法を定める
+claim: OpenTelemetry Trace仕様は、例外をSpanイベントとして記録し、例外の種類、メッセージ、スタックトレースなどの属性を付ける方法を定める。
+sourceType: specification
+sourceName: OpenTelemetry
+url: https://opentelemetry.io/docs/specs/otel/trace/exceptions/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: ブラウザから未処理例外を捕捉する処理と、保存・検索・通知は別に構成する。

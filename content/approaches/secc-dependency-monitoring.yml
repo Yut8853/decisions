@@ -1,0 +1,33 @@
+id: secc-dependency-monitoring
+slug: secc-dependency-monitoring
+title: 依存パッケージの既知の脆弱性を監視する（Dependabot）
+shortTitle: 依存パッケージを監視する
+summary: GitHubの依存関係グラフ（利用中の外部パッケージ一覧）と既知の脆弱性情報を照合し、警告を受ける方法です。
+defaultLabel: fast
+baseScore: 3
+technologyIds:
+- dependabot
+concepts:
+- dependency-monitoring
+- vulnerability-advisory
+- software-supply-chain
+recommendedWhen:
+- 外部ライブラリやパッケージを利用している
+- 既知の脆弱性を継続して把握し更新につなげたい
+- リポジトリをGitHubで管理し、依存関係グラフを利用できる
+notRecommendedWhen:
+- リポジトリ情報をGitHubの監視機能へ渡せない
+- 対象リポジトリでGitHubの依存関係グラフを利用できない
+- 独自コードの入力処理や権限判定だけを検査したい
+- 警告を確認して更新可否を判断する担当者を決められない
+advantages:
+- 依存関係の変更と新しいセキュリティ情報をきっかけに警告を受けられる
+- 影響するファイルと修正版の情報を確認できる場合がある
+- GitHubリポジトリから小さく始められる
+disadvantages:
+- GitHubの既知の脆弱性情報と対応する依存パッケージが対象になる
+- 未知の問題や独自コードの問題は見つけられない
+- 誤った依存関係情報や古いロックファイルは検出精度を下げる
+resourceIds:
+- res-secc-dependabot-alerts
+lastReviewed: '2026-08-24'

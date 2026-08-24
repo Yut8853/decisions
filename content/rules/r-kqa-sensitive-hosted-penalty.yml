@@ -1,0 +1,15 @@
+id: r-kqa-sensitive-hosted-penalty
+situationId: knowledge-qa
+targetApproachId: kqa-hosted-file-search-ai
+when:
+  all:
+  - sensitive-knowledge-base
+  any: []
+  none: []
+effect:
+  type: penalize
+  weight: 3
+reason: ベクトル検索用の保管領域は削除するまで保持され、データを保持しない特別設定の対象外なので、機密資料では保存、削除、契約条件の確認が先に必要です。
+evidenceIds:
+- ev-kqa-openai-data-controls
+lastReviewed: '2026-08-24'

@@ -1,0 +1,13 @@
+id: res-kqa-openai-data-controls
+type: official
+title: OpenAI APIのデータ管理
+url: https://developers.openai.com/api/docs/guides/your-data
+description: APIデータの学習利用、不正利用監視ログ、保存状態、削除、データを保持しない特別設定の対象を確認する公式資料です。
+technologyIds:
+- openai-file-search
+- responses-api
+concepts:
+- data-retention
+- data-governance
+currentUse: 機密資料を登録する前のデータ取扱条件の確認。
+limitations: 利用組織の契約、法務、地域、権限要件への適合は個別確認が必要です。

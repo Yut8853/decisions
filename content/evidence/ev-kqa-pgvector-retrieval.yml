@@ -1,0 +1,11 @@
+id: ev-kqa-pgvector-retrieval
+title: pgvectorの検索方式
+claim: pgvectorはPostgreSQLに数値ベクトルを保存し、厳密または近似の近傍検索を行え、PostgreSQLの全文検索と組み合わせた検索も構成できる。
+sourceType: official-repository
+sourceName: pgvector
+url: https://github.com/pgvector/pgvector
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: 業務固有の検索品質は、実際の資料と質問集で別途評価する必要がある。

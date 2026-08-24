@@ -1,0 +1,13 @@
+id: dec-authm-enterprise-2026-08
+slug: enterprise-small-team
+situationId: authentication-method
+title: 組織ログインを使う小規模チーム
+conditionIds:
+- enterprise-sso-required
+- small-team
+- maintainability-priority
+snapshotDate: '2026-08-24'
+summary: 組織の既存アカウントによる共通ログインが必要で、少人数での継続運用を重視するため、組織の認証基盤とのOpenID Connect連携を第一候補とします。
+expectedTopApproachIds:
+- authm-external-oidc
+status: published

@@ -1,0 +1,15 @@
+id: r-ae-users-inclusive
+situationId: accessibility-evaluation
+targetApproachId: ae-inclusive-usability-review
+when:
+  all:
+  - user-research-available
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 5
+reason: 利用者に参加してもらえるなら、規格適合評価だけでは見つからない実操作上の問題を確認できます。
+evidenceIds:
+- ev-ae-user-involvement
+lastReviewed: '2026-08-24'

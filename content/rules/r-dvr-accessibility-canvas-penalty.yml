@@ -1,0 +1,16 @@
+id: r-dvr-accessibility-canvas-penalty
+situationId: data-visualization-rendering
+targetApproachId: dvr-canvas
+when:
+  all:
+  - accessibility-priority
+  any: []
+  none: []
+effect:
+  type: penalize
+  weight: 2
+reason: Canvasの図形とは別に詳しい文章やデータ表を用意する必要があるため、支援技術で読める情報を最優先する場合は順位を下げます。
+evidenceIds:
+- ev-dvr-canvas-standard
+- ev-dvr-wai-complex-images
+lastReviewed: '2026-08-24'

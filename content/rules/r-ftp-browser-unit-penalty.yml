@@ -1,0 +1,16 @@
+id: r-ftp-browser-unit-penalty
+situationId: frontend-test-priority
+targetApproachId: ftp-logic-unit-tests
+when:
+  all:
+  - browser-behavior-priority
+  any: []
+  none: []
+effect:
+  type: penalize
+  weight: 2
+reason: Vitestの既定環境はNode.jsなので、実ブラウザのDOM、CSS、フォーカスを主に確認する条件では優先度を下げます。
+evidenceIds:
+- ev-ftp-vitest-node-environment
+- ev-ftp-vitest-browser-mode
+lastReviewed: '2026-08-24'

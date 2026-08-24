@@ -1,0 +1,11 @@
+id: ev-ftp-vitest-node-environment
+title: Vitestの既定テスト環境
+claim: Vitestの既定テスト環境はNode.jsであり、Web APIやブラウザAPIを利用するコードには別の環境を選ぶ必要がある。
+sourceType: official-documentation
+sourceName: Vitest
+url: https://vitest.dev/config/environment.html
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: ロジック単体テストと実ブラウザ確認の範囲を区別するために確認した。

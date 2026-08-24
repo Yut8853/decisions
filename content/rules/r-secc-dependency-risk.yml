@@ -1,0 +1,16 @@
+id: r-secc-dependency-risk
+situationId: web-security-check-priority
+targetApproachId: secc-dependency-monitoring
+when:
+  all:
+  - dependency-risk-priority
+  - github-dependency-graph-available
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 8
+reason: Dependabot alertsは依存関係グラフと既知の脆弱性情報を照合するため、依存パッケージの更新を最初の対象にできます。
+evidenceIds:
+- ev-secc-dependabot-scope
+lastReviewed: '2026-08-24'

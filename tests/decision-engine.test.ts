@@ -1,8 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { loadContent } from "../scripts/lib/load-content";
+import { loadContent, loadManifest } from "../scripts/lib/load-content";
 import { decide } from "@/lib/decision-engine";
 
 const bundle = loadContent();
+const minimums = loadManifest().minimums;
 function run(slug: string, conditionIds: string[]) {
   const situation = bundle.situations.find((item) => item.slug === slug);
   if (!situation) throw new Error(`Missing situation ${slug}`);
@@ -11,10 +12,108 @@ function run(slug: string, conditionIds: string[]) {
 
 describe("initial corpus", () => {
   it("contains the promised minimum scope", () => {
-    expect(bundle.situations.length).toBeGreaterThanOrEqual(5);
-    expect(bundle.approaches.length).toBeGreaterThanOrEqual(18);
-    expect(bundle.rules.length).toBeGreaterThanOrEqual(58);
-    expect(bundle.evidence.length).toBeGreaterThanOrEqual(21);
+    expect(bundle.situations.length).toBeGreaterThanOrEqual(minimums.situations ?? 0);
+    expect(bundle.approaches.length).toBeGreaterThanOrEqual(minimums.approaches ?? 0);
+    expect(bundle.rules.length).toBeGreaterThanOrEqual(minimums.rules ?? 0);
+    expect(bundle.evidence.length).toBeGreaterThanOrEqual(minimums.evidence ?? 0);
+  });
+
+  it("calculates a usable default result for every published situation", () => {
+    for (const situation of bundle.situations.filter((item) => item.published)) {
+      const result = run(situation.slug, situation.defaultConditionIds);
+      expect(result.ranked[0]?.approach.id, situation.id).toBeTruthy();
+    }
+  });
+
+  it("keeps every published preset aligned with the rule engine", () => {
+    for (const preset of bundle.decisions.filter((item) => item.status === "published")) {
+      const situation = bundle.situations.find((item) => item.id === preset.situationId);
+      if (!situation) throw new Error(`Missing situation ${preset.situationId}`);
+      const result = run(situation.slug, preset.conditionIds);
+      expect(preset.expectedTopApproachIds, preset.id).toContain(result.ranked[0]?.approach.id);
+    }
+  });
+
+  it("keeps a candidate for every non-conflicting pair of selectable conditions", () => {
+    const conditionMap = new Map(bundle.conditions.map((condition) => [condition.id, condition]));
+    for (const situation of bundle.situations.filter((item) => item.published)) {
+      for (const [index, first] of situation.conditionIds.entries()) {
+        for (const second of situation.conditionIds.slice(index + 1)) {
+          const isConflict = conditionMap.get(first)?.conflictsWith.includes(second)
+            || conditionMap.get(second)?.conflictsWith.includes(first);
+          if (isConflict) continue;
+          const result = run(situation.slug, [first, second]);
+          expect(result.ranked.length, `${situation.id}: ${first} + ${second}`).toBeGreaterThan(0);
+        }
+      }
+    }
+  });
+
+  it("keeps organization login available with an existing IdP when external cloud sending is restricted", () => {
+    const result = run("authentication-method", [
+      "enterprise-sso-required",
+      "external-service-restricted",
+      "existing-organization-idp-available"
+    ]);
+    expect(result.ranked.map((item) => item.approach.id)).toEqual(["authm-external-oidc"]);
+    expect(result.warnings.some((warning) => warning.id === "r-authm-external-oidc")).toBe(true);
+  });
+
+  it("does not assume a self-hosted IdP is low-maintenance when no existing IdP is available", () => {
+    const result = run("authentication-method", ["external-service-restricted", "maintainability-priority"]);
+    expect(result.ranked[0].approach.id).toBe("authm-passkey-webauthn");
+    expect(result.ranked.find((item) => item.approach.id === "authm-external-oidc")?.firedRuleIds)
+      .toContain("r-authm-missing-existing-idp");
+  });
+
+  it("requires the real prerequisites before ranking GitHub dependency checks or an active scan", () => {
+    const ciOnly = run("web-security-check-priority", ["ci-available"]);
+    expect(ciOnly.ranked[0].approach.id).toBe("secc-static-code-analysis");
+    expect(ciOnly.warnings.some((warning) => warning.id === "r-secc-codeql-availability-warning")).toBe(true);
+    expect(ciOnly.excluded.map((item) => item.approach.id)).toEqual(expect.arrayContaining([
+      "secc-dependency-monitoring",
+      "secc-dynamic-app-scan"
+    ]));
+
+    const authorized = run("web-security-check-priority", [
+      "public-attack-surface",
+      "ci-available",
+      "authorized-security-test-environment"
+    ]);
+    expect(authorized.ranked[0].approach.id).toBe("secc-dynamic-app-scan");
+  });
+
+  it("excludes GitHub dependency monitoring when repository data cannot use an external cloud service", () => {
+    const result = run("web-security-check-priority", [
+      "dependency-risk-priority",
+      "github-dependency-graph-available",
+      "external-service-restricted",
+      "ci-available",
+      "codeql-use-authorized"
+    ]);
+    expect(result.excluded.map((item) => item.approach.id)).toContain("secc-dependency-monitoring");
+    expect(result.ranked[0].approach.id).toBe("secc-static-code-analysis");
+  });
+
+  it("keeps field diagnostics and pre-release checks together when both are required", () => {
+    const result = run("web-vitals-monitoring", ["per-session-diagnostics-required", "ci-regression-gate-required"]);
+    expect(result.ranked.map((item) => item.approach.id)).toEqual(["wvm-self-rum", "wvm-lighthouse-ci"]);
+    expect(result.warnings.some((warning) => warning.id === "r-wvm-field-ci-combination-warning")).toBe(true);
+  });
+
+  it("requires the pre-release check when public field data and a CI gate are both selected", () => {
+    const result = run("web-vitals-monitoring", ["public-field-data-available", "ci-regression-gate-required"]);
+    expect(result.ranked.map((item) => item.approach.id)).toEqual(["wvm-lighthouse-ci"]);
+    expect(result.excluded.map((item) => item.approach.id)).toEqual(expect.arrayContaining([
+      "wvm-public-crux",
+      "wvm-self-rum"
+    ]));
+  });
+
+  it("keeps error records inside the selected boundary when external sending is restricted", () => {
+    const result = run("frontend-error-monitoring", ["external-service-restricted"]);
+    expect(result.ranked[0].approach.id).toBe("fem-self-error-endpoint");
+    expect(result.excluded.map((item) => item.approach.id)).toContain("fem-managed-error-service");
   });
 
   it("ranks model-viewer first for AR + short deadline + simple display", () => {

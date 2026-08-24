@@ -1,0 +1,15 @@
+id: r-kqa-external-hosted
+situationId: knowledge-qa
+targetApproachId: kqa-hosted-file-search-ai
+when:
+  all:
+  - external-service-restricted
+  any: []
+  none: []
+effect:
+  type: exclude
+reason: OpenAIのファイル検索は外部サービス上のベクトル検索用保管領域へ資料を登録するため、外部へ資料を保存できない条件と両立しません。
+evidenceIds:
+- ev-kqa-openai-file-search
+- ev-kqa-openai-data-controls
+lastReviewed: '2026-08-24'

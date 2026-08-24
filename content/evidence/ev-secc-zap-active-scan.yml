@@ -1,0 +1,11 @@
+id: ev-secc-zap-active-scan
+title: ZAP Full Scanは稼働中の対象へ能動検査を行う
+claim: ZAP Full ScanはDockerイメージから指定URLを探索して能動検査を行い、実際の攻撃に相当する操作を送り、設定した警告・失敗・無視の区分に応じた終了状態を返す。
+sourceType: official-documentation
+sourceName: OWASP ZAP
+url: https://www.zaproxy.org/docs/docker/full-scan/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: ZAP公式資料は能動検査を実際の攻撃と説明するため、所有者から明示的に許可された対象だけに実行する。

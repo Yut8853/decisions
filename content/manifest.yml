@@ -1,8 +1,8 @@
 schemaVersion: 1
 minimums:
-  situations: 5
-  approaches: 18
-  rules: 58
-  evidence: 21
+  situations: 17
+  approaches: 56
+  rules: 173
+  evidence: 104
 defaultDomain: https://decisions.junkbranding.com
 policyVersion: 1.0.0

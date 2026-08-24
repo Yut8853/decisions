@@ -1,16 +1,11 @@
 import Link from "next/link";
 import { getPublishedSituations } from "@/lib/content";
-import { getVisibleSituationCategories } from "@/lib/situation-categories";
+import { getFeaturedSituationChoices, getVisibleSituationCategories } from "@/lib/situation-categories";
 
 export default function HomePage() {
   const situations = getPublishedSituations();
   const categories = getVisibleSituationCategories(situations);
-  const situationChoices = categories.flatMap((category) =>
-    category.situations.map((situation) => ({
-      situation,
-      categoryTitle: category.title
-    }))
-  );
+  const situationChoices = getFeaturedSituationChoices(categories);
 
   return (
     <>
@@ -33,12 +28,32 @@ export default function HomePage() {
         <div className="section-heading">
           <div>
             <p className="eyebrow">やりたいことから探す</p>
-            <h2>まず、やりたいことを選ぶ</h2>
+            <h2>まず、近いカテゴリーを選ぶ</h2>
           </div>
-          <Link href="/decisions">{situationChoices.length}件を一覧で見る →</Link>
+          <Link href="/decisions">全{situations.length}件を一覧で見る →</Link>
         </div>
 
-        <nav aria-label="やりたいことから探す">
+        <nav aria-label="カテゴリーで絞る" className="home-category-grid">
+          {categories.map((category) => (
+            <Link className="home-category-card" href={`/decisions#category-${category.id}`} key={category.id}>
+              <div>
+                <small>{category.situations.length}件</small>
+                <h3>{category.title}</h3>
+                <p>{category.prompt}</p>
+              </div>
+              <span>まとめて見る →</span>
+            </Link>
+          ))}
+        </nav>
+
+        <div className="home-category-heading">
+          <div>
+            <h3 id="home-purpose-heading">具体的な目的から選ぶ</h3>
+            <p>各カテゴリーから代表的な目的を掲載しています。</p>
+          </div>
+          <Link href="/decisions">全{situations.length}件を見る →</Link>
+        </div>
+        <nav aria-labelledby="home-purpose-heading">
           <ul className="home-choice-grid">
             {situationChoices.map(({ situation, categoryTitle }) => (
               <li key={situation.id}>
@@ -52,26 +67,6 @@ export default function HomePage() {
             ))}
           </ul>
         </nav>
-
-        <div className="home-category-heading">
-          <div>
-            <h3 id="home-category-heading">カテゴリで絞る</h3>
-            <p>近い目的をまとめて探せます。</p>
-          </div>
-          <Link href="/decisions">検索と絞り込みを使う →</Link>
-        </div>
-        <nav aria-labelledby="home-category-heading" className="home-category-grid">
-          {categories.map((category) => (
-            <Link className="home-category-card" href={`/decisions#category-${category.id}`} key={category.id}>
-              <div>
-                <small>{category.situations.length}件</small>
-                <h4>{category.title}</h4>
-                <p>{category.prompt}</p>
-              </div>
-              <span>まとめて見る →</span>
-            </Link>
-          ))}
-        </nav>
       </section>
 
       <section className="shell principles section-block">
@@ -80,7 +75,7 @@ export default function HomePage() {
           <h2>AIの回答だけでは見えにくい判断材料を、公開記録にする。</h2>
         </div>
         <ol>
-          <li><strong>条件</strong><span>同じ目的でも、SEO・納期・React・端末の条件に合わせて答えを変える。</span></li>
+          <li><strong>条件</strong><span>同じ目的でも、検索で見つけてもらうこと、納期、使用中の開発環境、端末などの条件に合わせて答えを変える。</span></li>
           <li><strong>向いていない条件</strong><span>何を使うかだけでなく、どんな場合に使わないかも必ず示す。</span></li>
           <li><strong>根拠と確認日</strong><span>何を根拠に、いつ確認した判断なのかをたどれるようにする。</span></li>
           <li><strong>再現できる判定基準</strong><span>曖昧な点数ではなく、該当した判定基準から理由を組み立てる。</span></li>

@@ -1,0 +1,18 @@
+id: r-wvm-small-public-crux
+situationId: web-vitals-monitoring
+targetApproachId: wvm-public-crux
+when:
+  all:
+  - public-field-data-available
+  any:
+  - short-deadline
+  - small-team
+  - maintainability-priority
+  none: []
+effect:
+  type: boost
+  weight: 2
+reason: すでに公開されている集計データを使えるため、自前の計測コード、受信API、保存基盤を追加せずに確認を始められます。
+evidenceIds:
+- ev-wvm-crux-field-eligibility
+lastReviewed: '2026-08-24'

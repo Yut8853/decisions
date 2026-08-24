@@ -1,0 +1,12 @@
+id: res-fem-sentry-alerts
+type: official
+title: Sentry Alertと通知Action
+url: https://docs.sentry.io/api/monitors/create-an-alert-for-an-organization/
+description: エラーの発生条件と、メールやSlackなどへの通知処理を組み合わせるSentry公式資料です。
+technologyIds:
+- sentry
+concepts:
+- error-alerting
+- notification-action
+currentUse: 管理型エラー監視で、確認画面だけでなく担当者への通知を構成できることの確認。
+limitations: 利用できる通知先、権限、契約条件、通知頻度は採用時の設定で確認します。

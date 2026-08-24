@@ -1,0 +1,11 @@
+id: ev-secc-codeql-ci-availability
+title: CodeQLはGitHub Actionsまたは外部CIで実行できる
+claim: GitHub公式資料は、CodeQLをGitHub Actionsまたは外部CIで実行できると説明し、GitHubのCode scanningを利用できるリポジトリの種類と対応言語を明示している。
+sourceType: official-documentation
+sourceName: GitHub
+url: https://docs.github.com/en/code-security/concepts/code-scanning/codeql/codeql-code-scanning
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: 対応言語、リポジトリ種別、組織のGitHub Code Security利用可否を導入前に確認する。

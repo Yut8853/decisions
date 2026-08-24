@@ -1,0 +1,13 @@
+id: res-authm-keycloak-oidc-server
+type: official
+title: Keycloakを自分たちの環境で起動してOpenID Connectを使う
+url: https://www.keycloak.org/getting-started/getting-started-docker
+description: Keycloakサーバーをコンテナで起動し、利用者とOpenID Connect対応アプリを登録する公式入門です。
+technologyIds:
+- keycloak
+- openid-connect
+concepts:
+- self-hosted-identity-provider
+- federated-login
+currentUse: 外部のクラウドサービスを使わず、組織が運用する認証基盤とアプリを連携できることの確認。
+limitations: 掲載される開発モードは本番用ではありません。本番ではTLS、データベース、更新、可用性を別途設計します。

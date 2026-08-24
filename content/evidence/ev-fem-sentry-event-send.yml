@@ -1,0 +1,11 @@
+id: ev-fem-sentry-event-send
+title: Sentry JavaScript SDKは取得した記録をSentryへ送る
+claim: SentryのJavaScript公式資料は、SDKが取得したイベントをSentryへ送信し、送信前にイベントへ付加する情報を設定できることを説明している。
+sourceType: official-documentation
+sourceName: Sentry
+url: https://docs.sentry.io/platforms/javascript/enriching-events/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: 外部の管理型Sentryを使う場合、送信項目、保存場所、保持期間、契約条件を採用前に確認する。

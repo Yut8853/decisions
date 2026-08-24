@@ -1,0 +1,14 @@
+id: r-authm-external-oidc
+situationId: authentication-method
+when:
+  all:
+  - external-service-restricted
+  any: []
+  none: []
+effect:
+  type: warn
+reason: 外部のクラウドサービスへの送信制限だけではOpenID Connectを除外しません。組織内で運用するIdPも選べますが、その運用責任とアプリ側のIDトークン検証は残ります。
+evidenceIds:
+- ev-authm-self-hosted-oidc
+- ev-authm-oidc-token-validation
+lastReviewed: '2026-08-24'

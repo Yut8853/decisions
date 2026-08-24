@@ -1,5 +1,7 @@
+import type { SituationCategoryId } from "./situation-category-ids";
+
 export type SituationType = "build" | "selection" | "performance" | "architecture";
-export type SituationCategoryId = "sites" | "products" | "performance" | "apps" | "operations";
+export type { SituationCategoryId } from "./situation-category-ids";
 export type RuleEffectType = "require" | "exclude" | "boost" | "penalize" | "warn";
 export type SourceType =
   | "specification"

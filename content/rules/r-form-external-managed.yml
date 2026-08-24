@@ -8,7 +8,7 @@ when:
   none: []
 effect:
   type: exclude
-reason: Formspree方式は外部の受付先へ問い合わせ内容を送信するため、外部SaaSへ送信できない条件と両立しません。
+reason: Formspree方式は外部の受付先へ問い合わせ内容を送信するため、外部のクラウドサービスへ送信できない条件と両立しません。
 evidenceIds:
 - ev-formspree-managed-handler
 - ev-formspree-hosting-security

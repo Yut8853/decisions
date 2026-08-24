@@ -1,0 +1,11 @@
+id: ev-fem-beacon-delivery
+title: Beacon APIは指定したデータを指定URLへ送信する
+claim: W3C Beacon仕様は、アプリが指定したデータを指定URLへ非同期に送るsendBeaconを定め、画面上の出来事や計測データをサーバーへ届ける例を示している。
+sourceType: specification
+sourceName: W3C Web Performance Working Group
+url: https://www.w3.org/TR/beacon/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: 配送成功の確認、再送、受信後の保存、検索、通知はBeacon APIの範囲外である。

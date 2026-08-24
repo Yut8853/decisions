@@ -1,0 +1,12 @@
+id: dec-dvr-accessible-static-2026-08
+slug: accessible-static-chart
+situationId: data-visualization-rendering
+title: 読み上げと静的資料に使う可視化
+conditionIds:
+- accessibility-priority
+- static-export-required
+snapshotDate: '2026-08-24'
+summary: 数値と見出しの関係をHTML表で伝え、図をベクター形式で扱うため、HTML表とSVGを第一候補にします。
+expectedTopApproachIds:
+- dvr-html-svg
+status: published

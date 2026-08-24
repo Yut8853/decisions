@@ -1,0 +1,13 @@
+id: r-ae-auto-limit-warning
+situationId: accessibility-evaluation
+when:
+  all:
+  - release-gate-required
+  any: []
+  none: []
+effect:
+  type: warn
+reason: 自動検査で公開を判定しても、すべてのアクセシビリティ要件は確認できません。人の判断が必要な項目を別に確認してください。
+evidenceIds:
+- ev-ae-automated-limits
+lastReviewed: '2026-08-24'

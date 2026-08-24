@@ -1,0 +1,16 @@
+id: r-fem-control-self
+situationId: frontend-error-monitoring
+targetApproachId: fem-self-error-endpoint
+when:
+  all:
+  - data-control-priority
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 8
+reason: ブラウザ標準のエラー通知から選んだ項目を指定URLの自前APIへ送るため、送信項目と送信先を自分たちで決められます。受信後の保存と保持は別途設計します。
+evidenceIds:
+- ev-fem-browser-error-events
+- ev-fem-beacon-delivery
+lastReviewed: '2026-08-24'

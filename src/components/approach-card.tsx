@@ -39,7 +39,7 @@ export function ApproachCard({
     <article className={rank === 1 ? "approach-card top" : "approach-card"}>
       <header>
         <div className="rank"><span>{String(rank).padStart(2, "0")}</span><small>{item.label}</small></div>
-        <div className="approach-title"><p>{item.approach.technologyIds.join(" / ")}</p><h3>{item.approach.title}</h3><span>{item.approach.summary}</span></div>
+        <div className="approach-title"><h3>{item.approach.title}</h3><span>{item.approach.summary}</span></div>
       </header>
       <div className="reason-panel">
         <strong>なぜこの位置か</strong>

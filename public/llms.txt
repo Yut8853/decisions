@@ -4,13 +4,21 @@ Evidence-first technology decisions with explicit conditions, negative recommend
 
 - [3Dポートフォリオサイトを作りたい](https://decisions.junkbranding.com/decisions/3d-portfolio): 作品性と読みやすさを両立するために、3D中心・DOM中心・映像中心の構成を比較します。
 - [3D商品ビューアを作りたい](https://decisions.junkbranding.com/decisions/3d-product-viewer): 商品モデルの回転・拡大・AR・UI連携を、要件と工数に合わせて選ぶための判断ページです。
+- [Webサイトの使いやすさを検証したい](https://decisions.junkbranding.com/decisions/accessibility-evaluation): アクセシビリティの自動検査、規格に沿った手動評価、障害のある利用者を含む利用確認のうち、最初に重点を置く方法を選びます。
+- [Webアプリのログイン方法を選びたい](https://decisions.junkbranding.com/decisions/authentication-method): パスキー、組織の共通ログイン、アプリで管理するパスワードを、利用者の要望と運用体制に合わせて比較します。
 - [更新しやすいCMS構成を選びたい](https://decisions.junkbranding.com/decisions/cms-architecture-selection): Git管理コンテンツ、API型ヘッドレスCMS、表示統合型CMSを、編集と配信の流れから比較します。
+- [データを分かりやすく可視化したい](https://decisions.junkbranding.com/decisions/data-visualization-rendering): HTML表とSVG、Canvas、WebGLを、情報の読み取りやすさ、データ量、操作、静的な出力の条件から選びます。
+- [公開後の画面エラーを見つけたい](https://decisions.junkbranding.com/decisions/frontend-error-monitoring): 管理型のエラー監視、既存の追跡基盤との連携、自前収集を、発見までの速さとデータ管理方針に合わせて比較します。
+- [最初に整備するテストを選びたい](https://decisions.junkbranding.com/decisions/frontend-test-priority): ロジックの単体テスト、ブラウザ内のコンポーネントテスト、主要な利用導線のE2Eテストから、最初に厚くする層を選びます。
 - [Webサイト・アプリの公開先を選びたい](https://decisions.junkbranding.com/decisions/hosting-runtime-selection): 静的・エッジ配信、サーバーレス関数、マネージドコンテナ、それらを分ける構成を、実行時処理と運用要件から比較します。
+- [自社資料に答える質問機能を作りたい](https://decisions.junkbranding.com/decisions/knowledge-qa): 承認済みFAQの検索、ホスト型ファイル検索を使う生成AI、自前の検索と生成AIの組み合わせを、回答の確実さと資料の扱いから選びます。
 - [スクロール連動のリッチサイトを作りたい](https://decisions.junkbranding.com/decisions/scroll-linked-3d): DOM、Three.js、React Three Fiber、画像シーケンスによるスクロール演出を比較します。
 - [問い合わせフォームを安全に運用したい](https://decisions.junkbranding.com/decisions/secure-contact-form): フォーム受付サービス、サーバーレス関数、既存または新設するバックエンドを、入力内容と運用体制から選ぶ判断ページです。
 - [SEOを維持しながらリッチな3Dサイトを作りたい](https://decisions.junkbranding.com/decisions/seo-rich-3d): HTML本文を保ちながら3Dを組み込む構成と、Canvas中心構成の違いを判断します。
 - [サイト内検索を実装したい](https://decisions.junkbranding.com/decisions/site-search): 公開時の検索索引、外部または自前の検索サーバー、既存データベースの全文検索を、更新頻度と運用条件から選ぶ判断ページです。
 - [Three.jsで大量オブジェクトを表示すると重い](https://decisions.junkbranding.com/decisions/threejs-many-objects): Instancing、Geometry統合、LODとカリングを、シーンの性質から選び分けます。
+- [最初に導入するセキュリティ検査を選びたい](https://decisions.junkbranding.com/decisions/web-security-check-priority): 依存パッケージの脆弱性監視、ソースコード解析、稼働中アプリの検査を、優先するリスクと運用体制に合わせて比較します。
+- [実際の表示品質を継続して測りたい](https://decisions.junkbranding.com/decisions/web-vitals-monitoring): 公開された実利用データ、自前の利用者計測、公開前の自動検査を、調べたい範囲と運用条件に合わせて比較します。
 
 Policy version: 1.0.0
-Generated: 2026-08-23T15:26:23.626Z
+Generated: 2026-08-24T11:22:02.972Z

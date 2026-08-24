@@ -1,0 +1,11 @@
+id: ev-ftp-vitest-browser-mode
+title: Vitestの実ブラウザ実行で扱える機能
+claim: Vitestは、実ブラウザ実行が画面構造、CSS描画、ブラウザAPI、イベント伝播、フォーカス管理を実ブラウザで扱えると説明している。
+sourceType: official-documentation
+sourceName: Vitest
+url: https://vitest.dev/guide/browser/component-testing
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: DOMを模擬する環境と実ブラウザでのコンポーネント確認を区別する根拠として確認した。

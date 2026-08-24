@@ -1,0 +1,15 @@
+id: r-ftp-logic-unit
+situationId: frontend-test-priority
+targetApproachId: ftp-logic-unit-tests
+when:
+  all:
+  - logic-heavy
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 5
+reason: ブラウザ環境を必要としない計算や変換が中心なら、Node.js環境で対象ロジックを直接検証できます。
+evidenceIds:
+- ev-ftp-vitest-node-environment
+lastReviewed: '2026-08-24'

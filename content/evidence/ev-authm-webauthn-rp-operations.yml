@@ -1,0 +1,11 @@
+id: ev-authm-webauthn-rp-operations
+title: WebAuthnを使うアプリには登録と認証結果の検証処理がある
+claim: WebAuthn仕様は、Webアプリ側に公開鍵資格情報の登録処理と、署名された認証結果を検証する処理を定めている。
+sourceType: specification
+sourceName: W3C Web Authentication Working Group
+url: https://www.w3.org/TR/webauthn-3/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-24'
+conflictsWith: []
+notes: ブラウザAPIを呼ぶだけでアカウント復旧を含む運用全体が完成するわけではない。

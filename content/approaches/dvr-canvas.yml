@@ -1,0 +1,29 @@
+id: dvr-canvas
+slug: dvr-canvas
+title: Canvas 2Dで可視化する
+shortTitle: Canvas
+summary: JavaScriptから一つのCanvas描画面へ図形を描き、更新やアニメーションを制御する方法です。
+defaultLabel: alternative
+baseScore: 2
+technologyIds:
+- canvas-api
+concepts:
+- immediate-mode-rendering
+- bitmap-graphics
+recommendedWhen:
+- 多数の2D図形を一つの描画面へまとめたい
+- JavaScriptで描画の更新を細かく制御したい
+- GPU固有の表現までは必要ない
+notRecommendedWhen:
+- 図形ごとの意味や操作をHTML要素としてそのまま提供したい
+- JavaScriptなしで図の内容を読めることが必須
+- 3D表現やGPUを使う大量描画が主要要件
+advantages:
+- 一つの描画面へ2D図形をスクリプトで描ける
+- アニメーションやリアルタイム更新へ利用できる
+disadvantages:
+- 描いた図形は個別のHTML要素にならないため、操作判定と代替情報を別に設計する
+- 再描画、拡大時の見え方、入力処理を実装側で管理する
+resourceIds:
+- res-dvr-canvas-standard
+lastReviewed: '2026-08-24'

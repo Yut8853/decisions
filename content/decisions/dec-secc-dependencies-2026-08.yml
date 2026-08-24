@@ -1,0 +1,14 @@
+id: dec-secc-dependencies-2026-08
+slug: dependency-first-with-ci
+situationId: web-security-check-priority
+title: 依存パッケージの監視から始める
+conditionIds:
+- dependency-risk-priority
+- ci-available
+- github-dependency-graph-available
+- small-team
+snapshotDate: '2026-08-24'
+summary: 依存パッケージの既知の脆弱性を優先し、対象リポジトリで依存関係グラフを利用できるため、Dependabotによる継続監視を最初の確認にします。
+expectedTopApproachIds:
+- secc-dependency-monitoring
+status: published
