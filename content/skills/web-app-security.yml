@@ -1,0 +1,14 @@
+id: web-app-security
+slug: web-app-security
+title: Webアプリの脆弱性と対策
+summary: SQLインジェクションやクロスサイト・スクリプティングなど、Webアプリで起きる脆弱性の原理と対策です。
+canDo: 自社のWebサイトにどんな脆弱性がありうるかを、原理から説明できる。
+domainIds: [security, web]
+prerequisites: [web-basics, security-basics]
+volatility: medium
+technologyIds: [web-security]
+resources:
+- resourceId: book-tokumaru-2e
+  level: intro
+  reason: Webセキュリティの定番で、脆弱性が生まれる原理から学べます。分量が多いので、最初は原理を説明した章から読みます。
+lastReviewed: "2026-10-10"

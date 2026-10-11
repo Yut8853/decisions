@@ -1,0 +1,62 @@
+id: threejs-gltf-product
+slug: threejs-gltf-product
+title: Three.js + glTFによる商品ビューア
+shortTitle: Three.js + glTF
+summary: Three.jsでシーン・カメラ・ライト・モデル・UI連携を個別に設計する王道構成です。
+defaultLabel: canonical
+baseScore: 3
+technologyIds:
+- threejs
+- gltf
+- javascript
+concepts:
+- scene
+- camera
+- lighting
+- gltf
+- rendering
+- shader
+recommendedWhen:
+- 独自演出やUI連携が必要
+- ライティングやマテリアルを調整したい
+notRecommendedWhen:
+- 表示だけで十分で実装期間が短い
+- 3D保守を担当できる人がいない
+advantages:
+- 自由度が高い
+- 3D Webの情報と事例が多い
+disadvantages:
+- 設計・最適化・アクセシビリティを自分で担う
+- 更新時の確認範囲が広い
+learningPath:
+- resourceId: res-three-gltf
+  stage: start
+  reason: 商品モデルの読み込みはGLTFLoaderが入口になるため、まず公式資料で現在の使い方を確認します。
+- resourceId: course-threejs-journey
+  stage: start
+  reason: Three.jsを基礎から順に学べる動画講座で、シーン・カメラ・ライト・モデルの読み込みまで一通り扱います（英語）。
+- resourceId: book-learn-threejs-4e
+  stage: stuck
+  reason: ライト、マテリアル、glTFなど外部モデルの読み込み、アニメーションを章ごとに引けるため、実装中に詰まった箇所を調べるのに向きます（英語）。
+- resourceId: book-javascript-7e-ja
+  stage: stuck
+  reason: Three.jsのコードで、クラス・モジュール・非同期の読み込みなど、JavaScript自体の書き方でつまずいたときに引きます。
+- resourceId: book-book-of-shaders
+  stage: deepen
+  reason: 独自の質感や演出をシェーダーで作る段階で、GLSLの考え方を小さな例から学べます。
+  showWhenAny:
+  - advanced-visuals
+  - existing-glsl-assets
+- resourceId: book-webgl2-intro-2e-ja
+  stage: deepen
+  reason: 描画が重い、独自シェーダーが思った通りに動かないなど、Three.jsの内側のWebGLまで確認する必要が出たときに読みます。
+  showWhenAny:
+  - advanced-visuals
+  - performance-priority
+  - existing-glsl-assets
+- resourceId: book-real-time-rendering
+  stage: deepen
+  reason: ライティングやマテリアルを自分で作り込む段階で、描画の原理を体系的に確認する専門書です（英語）。
+  showWhenAny:
+  - advanced-visuals
+lastReviewed: '2026-08-23'

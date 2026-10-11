@@ -1,0 +1,15 @@
+id: r-pv-ar-advanced-warning
+situationId: 3d-product-viewer
+when:
+  all:
+  - ar-required
+  - advanced-visuals
+  any: []
+  none: []
+effect:
+  type: warn
+reason: ARの最短実装と高度な独自表現は同じApproachで両立しにくいため、AR導線とWeb内表現を分離する案も検討してください。
+evidenceIds:
+- ev-model-viewer-ar
+- ev-three-webgpu
+lastReviewed: '2026-08-23'

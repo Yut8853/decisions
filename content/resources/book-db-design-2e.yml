@@ -1,0 +1,21 @@
+id: book-db-design-2e
+type: book
+title: "達人に学ぶDB設計徹底指南書 第2版"
+url: https://www.maruzenjunkudo.co.jp/products/9784798186627
+authors:
+- "ミック"
+language: 日本語
+edition: "第2版"
+versionNote: "2024年刊"
+publishedYear: 2024
+isbn: 978-4-7981-8662-7
+bookTopicIds:
+- "data-ai-search"
+description: "論理設計の基本、正規化、パフォーマンス、やってはいけないアンチパターンまでを、練習問題つきで体系的に説明する本。第2版でクラウドにも対応。"
+technologyIds:
+- "db-design"
+- "sql"
+concepts:
+- "normalization"
+currentUse: "業務の内容から、表と表の関係を理由をつけて設計できるようにする。"
+limitations: "出版社の分類は中級〜上級。SQLの基本を終えてから読む。"

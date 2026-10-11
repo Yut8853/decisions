@@ -1,0 +1,15 @@
+id: r-pv-small-babylon
+situationId: 3d-product-viewer
+when:
+  all:
+  - small-team
+  any: []
+  none: []
+effect:
+  type: penalize
+  weight: 1
+reason: 小規模な商品表示では、広いエンジン機能を習得・保守する範囲が相対的に大きくなります。
+evidenceIds:
+- ev-babylon-loading
+lastReviewed: '2026-08-23'
+targetApproachId: babylonjs-product

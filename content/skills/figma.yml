@@ -1,0 +1,17 @@
+id: figma
+slug: figma
+title: "Figma"
+summary: "Webサイトやアプリの画面デザイン（デザインカンプ）を作るためのツールです。"
+canDo: "ページのデザインカンプと、クリックできる試作（プロトタイプ）をFigmaで作れる。"
+domainIds:
+- "design-tools"
+- "web-design"
+prerequisites: []
+volatility: medium
+technologyIds:
+- "figma"
+resources:
+- resourceId: book-figma-tsukutte
+  level: intro
+  reason: "手順に沿って手を動かしながら、Figmaの操作とWeb・UIデザインの基本を学べます。2025年刊です。"
+lastReviewed: "2026-10-10"

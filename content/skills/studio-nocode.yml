@@ -1,0 +1,17 @@
+id: studio-nocode
+slug: studio-nocode
+title: "Studio（ノーコード）"
+summary: "コードを書かずに、画面上の操作でホームページを作って公開できるツールです。"
+canDo: "Studioでレスポンシブ対応のサイトを作り、お知らせ（CMS）を更新して公開できる。"
+domainIds:
+- "web"
+prerequisites:
+- "web-basics"
+volatility: medium
+technologyIds:
+- "studio"
+resources:
+- resourceId: book-studio-nocode
+  level: intro
+  reason: "レスポンシブ対応の前提になるボックスレイアウトの考え方から、CMS、SEO、公開後の運用までを、基本と実践の演習で学べます。2026年刊です。"
+lastReviewed: "2026-10-10"

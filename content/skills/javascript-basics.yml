@@ -1,0 +1,17 @@
+id: javascript-basics
+slug: javascript-basics
+title: JavaScriptの基礎
+summary: メニューの開閉やスライドなど、ページに動きをつけるためのプログラミング言語の基本です。
+canDo: ボタンを押したらメニューが開く、といった動きを自分で書ける。
+domainIds: [web]
+prerequisites: [html, css]
+volatility: medium
+technologyIds: [javascript]
+resources:
+- resourceId: book-mana-javascript
+  level: intro
+  reason: jQueryを使わない今の書き方で、イベントやアニメーションまで学べます。最後にエラーの読み方と解決方法の章があります。
+- resourceId: book-javascript-7e-ja
+  level: reference
+  reason: 言語の仕様を体系的に確かめたいときに引く本です。入門書を終えてから使います。
+lastReviewed: "2026-10-10"

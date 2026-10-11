@@ -1,0 +1,14 @@
+id: monitoring
+slug: monitoring
+title: 監視の考え方
+summary: サーバーやサービスの異常に早く気づくために、何をどう監視するかの考え方です。
+canDo: 何を監視し、いつ誰に知らせるかを、理由をつけて決められる。
+domainIds: [infra-ops]
+prerequisites: [linux-basics, network-basics]
+volatility: low
+technologyIds: [monitoring]
+resources:
+- resourceId: book-intro-monitoring
+  level: intro
+  reason: 特定のツールではなく、何を監視すべきかという原則から書かれているので、職場のツールが変わっても使えます。出版社の分類は初級〜中級です。
+lastReviewed: "2026-10-10"

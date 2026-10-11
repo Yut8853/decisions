@@ -1,0 +1,15 @@
+id: r-pv-simple-model
+situationId: 3d-product-viewer
+when:
+  all:
+  - simple-display
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 3
+reason: 基本的なモデル表示と操作が中心なら、専用Web Componentで実装範囲を抑えられます。
+evidenceIds:
+- ev-model-viewer-docs
+lastReviewed: '2026-08-23'
+targetApproachId: model-viewer-product

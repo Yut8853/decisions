@@ -1,0 +1,24 @@
+id: book-test-theory
+type: book
+title: "ソフトウェアテストのセオリー 土台からしっかり学ぶ"
+url: https://www.ric.co.jp/book/development/detail/2395
+authors:
+- "小川秀人"
+- "佐藤陽春"
+- "森拓郎"
+- "加賀洋渡"
+language: 日本語
+versionNote: "2023年刊"
+publishedYear: 2023
+isbn: 978-4-86594-362-7
+bookTopicIds:
+- "testing-quality"
+description: "テストの全体像を、テストプロセス、テスト設計と各種の技法、テスト環境、計画と管理、自動テストまで、初歩から体系的に整理した本。"
+technologyIds:
+- "web-testing"
+- "test-automation"
+- "software-testing"
+concepts:
+- "test-design"
+currentUse: "何をどう確認すればよいかを、テスト技法を使って洗い出せるようにする。"
+limitations: "Webサイトに限らない一般的なソフトウェアテストの本。ブラウザや端末ごとの確認方法は、自分のサイトに合わせて当てはめる。"

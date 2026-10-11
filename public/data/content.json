@@ -1,0 +1,5964 @@
+{
+  "generatedAt": "2026-10-11T01:44:38.620Z",
+  "domains": [
+    {
+      "id": "web",
+      "title": "ホームページ制作",
+      "description": "ホームページやWebサイトを作って公開する、といった目的です。",
+      "schoolEligible": true
+    },
+    {
+      "id": "web-design",
+      "title": "UI・Webデザイン",
+      "description": "見やすく使いやすい画面を作る、デザインの基本を身につける、といった目的です。",
+      "schoolEligible": true
+    },
+    {
+      "id": "web-animation",
+      "title": "Webアニメーション・演出",
+      "description": "ホームページに動きや演出をつける目的です。",
+      "schoolEligible": true
+    },
+    {
+      "id": "design-tools",
+      "title": "デザインツール（Figma・Photoshop）",
+      "description": "デザインカンプを作る、サイト用の画像を加工する、といった目的です。",
+      "schoolEligible": true
+    },
+    {
+      "id": "cms",
+      "title": "WordPress・CMS",
+      "description": "管理画面から更新できるサイトを作る目的です。",
+      "schoolEligible": true
+    },
+    {
+      "id": "web-marketing",
+      "title": "SEO・集客",
+      "description": "検索で見つけてもらう、アクセスを増やして改善する、といった目的です。",
+      "schoolEligible": true
+    },
+    {
+      "id": "accessibility",
+      "title": "アクセシビリティ",
+      "description": "障害のある人や高齢の人を含め、誰でも使えるサイトにする目的です。",
+      "schoolEligible": true
+    },
+    {
+      "id": "web-career",
+      "title": "Web制作の仕事",
+      "description": "Web制作を仕事にする、案件を取る、といった目的です。",
+      "schoolEligible": true
+    },
+    {
+      "id": "frontend",
+      "title": "フロントエンド開発",
+      "description": "ReactやTypeScriptで、Webアプリの画面を作る目的です。",
+      "schoolEligible": false
+    },
+    {
+      "id": "backend",
+      "title": "Webアプリ・バックエンド",
+      "description": "問い合わせフォームや会員機能など、サーバー側の仕組みを作る目的です。",
+      "schoolEligible": false
+    },
+    {
+      "id": "app",
+      "title": "スマホアプリ開発",
+      "description": "iPhoneやAndroidのアプリを作る目的です。",
+      "schoolEligible": false
+    },
+    {
+      "id": "game",
+      "title": "ゲーム開発",
+      "description": "パソコンやスマホ、ブラウザで遊べるゲームを作る目的です。",
+      "schoolEligible": false
+    },
+    {
+      "id": "infra-ops",
+      "title": "サーバー・運用保守",
+      "description": "サーバーを動かし続ける、障害に気づいて直す、といった仕事に向けた目的です。",
+      "schoolEligible": false
+    },
+    {
+      "id": "cloud",
+      "title": "クラウド",
+      "description": "AWSなどのクラウドでサーバーやサービスを動かす目的です。",
+      "schoolEligible": false
+    },
+    {
+      "id": "security",
+      "title": "セキュリティ",
+      "description": "会社やサービスの情報を守る、脆弱性に気づく、といった目的です。",
+      "schoolEligible": false
+    },
+    {
+      "id": "database",
+      "title": "データベース・SQL",
+      "description": "データを保存し、必要な形で取り出す目的です。",
+      "schoolEligible": false
+    },
+    {
+      "id": "data-ai",
+      "title": "データ分析・AI",
+      "description": "データを集計・分析する、生成AIを仕事に使う、といった目的です。",
+      "schoolEligible": false
+    },
+    {
+      "id": "programming-basics",
+      "title": "プログラミングの基礎",
+      "description": "プログラミングを初めて学ぶ、基礎を固める、といった目的です。",
+      "schoolEligible": false
+    },
+    {
+      "id": "team-dev",
+      "title": "Git・チーム開発",
+      "description": "変更を管理する、チームで開発を進める、といった目的です。",
+      "schoolEligible": false
+    },
+    {
+      "id": "testing",
+      "title": "テスト・品質",
+      "description": "作ったものが正しく動くかを確かめる目的です。",
+      "schoolEligible": false
+    }
+  ],
+  "goals": [
+    {
+      "id": "a11y-compliance",
+      "slug": "a11y-compliance",
+      "title": "会社のサイトを、アクセシビリティの基準に沿って改善したい",
+      "summary": "Webアクセシビリティの基本を押さえたうえで、WCAG 2.2やJIS X 8341-3の基準に沿って、問題を洗い出して直す方法を学びます。",
+      "kind": "build",
+      "domainId": "accessibility",
+      "aliases": [
+        "JIS X 8341-3に対応したい",
+        "WCAG 2.2に対応したい"
+      ],
+      "published": true,
+      "skillIds": [
+        "a11y-standards"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "後付けの対応ツールだけに頼ること",
+          "reason": "サイトに部品を足すだけでは、根本的な対応にならないことが多いです。HTMLを正しく書くことが基本です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "規格に沿った対応では、どの基準をどこまで満たすかを決め、制作の各工程で問題を見つけて直していきます。\n\nまずWebアクセシビリティの基本を押さえ、そのうえで基準に照らした改善に進みます。"
+    },
+    {
+      "id": "accessible-contact-form",
+      "slug": "accessible-contact-form",
+      "title": "入力ミスがあっても直しやすいフォーム画面を作りたい",
+      "summary": "項目名、入力例、必須項目、エラーの場所が伝わるフォーム画面を作ります。HTMLの構造と入力を助ける表示を学びます。",
+      "kind": "build",
+      "domainId": "accessibility",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "javascript-basics",
+        "web-accessibility"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "後付けの対応ツールだけに頼ること",
+          "reason": "サイトに部品を足すだけでは、根本的な対応にならないことが多いです。HTMLを正しく書くことが基本です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "名前とメールアドレスを入力する、送信しない練習用フォームを作ります。入力ミスを見つけるだけでなく、何をどう直せばよいか伝え、入力済みの内容を失わない画面が目標です。サーバーで受け付ける仕組みはこのコースの範囲外です。\n\n## まず取り組むこと\n\n1. 入力欄に対応する項目名を置き、必須か任意か、入力形式の例を文章で示します。\n2. 空欄や形式違いを試し、該当する項目の近くに修正方法を表示します。色だけでエラーを示さないようにします。\n3. キーボードだけで移動して修正できるか、読み上げでも項目名が分かるかを確かめます。\n\n## この目的で本を読む理由\n\n[HTML](/skills/html)と[JavaScriptの基礎](/skills/javascript-basics)で入力要素とイベントを理解してから、[Webアクセシビリティ](/skills/web-accessibility)の資料で説明と操作を見直します。[アクセシビリティ入門書の出版社紹介](https://book.impress.co.jp/books/1125101037)が扱う実装・評価の流れを、このフォームの確認に使います。フォーム専用の完成コードが載っているという意味ではありません。\n\n## できたか確認すること\n\n未入力、間違った形式、修正後の3通りを試し、エラーの理由と直す場所が分かることを確認します。実際の送信時はサーバー側の入力検証も別途必要です。\n\n## 学習内容の根拠\n\n- [W3C WAI：フォームの作り方](https://www.w3.org/WAI/tutorials/forms/)：ラベル、入力説明、入力の検証、通知を別々に確認する根拠です。"
+    },
+    {
+      "id": "ai-at-work",
+      "slug": "ai-at-work",
+      "title": "生成AIを仕事に使いたい",
+      "summary": "生成AIへの指示の書き方と、出力の確認の仕方を学び、仕事で安全に使えるようにします。",
+      "kind": "build",
+      "domainId": "data-ai",
+      "aliases": [
+        "生成AIを使えるようになりたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "generative-ai-use"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "AIの仕組みを数学から学ぶこと",
+          "reason": "仕事で使うだけなら、指示の書き方と確認の仕方が先です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "生成AIは便利ですが、間違いを含む出力もします。確認の仕方とあわせて学びます。"
+    },
+    {
+      "id": "algorithm-goal",
+      "slug": "algorithm-goal",
+      "title": "アルゴリズムの基礎を身につけたい",
+      "summary": "プログラミングの基本を押さえたうえで、探索や並べ替えなどの考え方を学びます。",
+      "kind": "build",
+      "domainId": "programming-basics",
+      "aliases": [
+        "アルゴリズムを学びたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "algorithm-basics"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "競技プログラミングの難問から始めること",
+          "reason": "まず基本的な探索と並べ替えを、自分で説明できるようにするのが先です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "アルゴリズムを知ると、同じ処理をより速く、少ない手間で書けるようになります。"
+    },
+    {
+      "id": "android-app",
+      "slug": "android-app",
+      "title": "Androidアプリを作りたい",
+      "summary": "プログラミングの基本を押さえたうえで、KotlinでAndroidアプリを作ります。",
+      "kind": "build",
+      "domainId": "app",
+      "aliases": [
+        "Kotlinを学びたい"
+      ],
+      "published": false,
+      "skillIds": [
+        "kotlin-android"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "iPhoneとAndroidを同時に学ぶこと",
+          "reason": "まず1つの端末で最後まで作れるようになるのが先です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "Androidアプリは、Kotlinという言語とGoogleの開発ツールで作ります。"
+    },
+    {
+      "id": "aws-access-control",
+      "slug": "aws-access-control",
+      "title": "AWSの操作権限を担当者の仕事に合わせて分けたい",
+      "summary": "閲覧だけの人と設定を変える人の権限を分けます。IAMの基本を学び、必要な操作だけができるかを確認します。",
+      "kind": "build",
+      "domainId": "cloud",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "aws-basics"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "多くのサービスを一度に覚えること",
+          "reason": "AWSのサービスは非常に多くあります。最初はサーバー・ネットワーク・保存場所の基本だけで足ります。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "AWSの機能を増やす前に、誰が何をしてよいかを整理する課題です。学習用の範囲で権限の案を作り、必要な操作ができることと、不要な操作ができないことを対にして確認します。\n\n## まず取り組むこと\n\n1. 担当者ごとに、見る、作る、変更する、削除する作業を一覧にします。\n2. IAMの役割とポリシーを読み、必要なリソースと操作に範囲を絞った案を作ります。\n3. 許可した操作と許可していない操作を確認する手順を用意し、不要になった権限の見直し時期も決めます。\n\n## この目的で本を読む理由\n\n[AWSの基礎](/skills/aws-basics)の本の[IAMとアクセス権の説明](https://gihyo.jp/book/2025/978-4-297-14820-1)を入口にします。短期認証情報や最小権限などの運用上の方針はAWS公式資料で確認し、本の用語理解と組み合わせます。\n\n## できたか確認すること\n\n権限を付けた理由を作業と対応付けて説明できれば一区切りです。組織全体の制御や既存の権限への影響は別途確認し、会社の本番アカウントで無断変更する練習にはしません。\n\n## 学習内容の根拠\n\n- [AWS：IAMのセキュリティ推奨事項](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)：最小権限、短期認証情報、不要な権限の見直しを学ぶ根拠です。"
+    },
+    {
+      "id": "aws-architecture",
+      "slug": "aws-architecture",
+      "title": "AWSで止まりにくい構成を設計したい",
+      "summary": "AWSの基本を押さえたうえで、資格の出題範囲を地図にして構成の考え方を学びます。",
+      "kind": "career",
+      "domainId": "cloud",
+      "aliases": [
+        "AWSの設計を学びたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "cloud-architecture"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "資格の暗記だけで終えること",
+          "reason": "出題範囲は学ぶ順番の地図として使い、実際に構成を作って確かめます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "止まりにくく、費用と安全性のバランスが取れた構成を、理由をつけて設計できるようにします。"
+    },
+    {
+      "id": "aws-cost-check",
+      "slug": "aws-cost-check",
+      "title": "AWSで何に料金がかかっているか確認したい",
+      "summary": "利用料金をサービス別に確認し、予算の通知を設定する考え方を学びます。通知が来れば課金が止まる、という誤解も避けます。",
+      "kind": "build",
+      "domainId": "cloud",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "aws-basics"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "多くのサービスを一度に覚えること",
+          "reason": "AWSのサービスは非常に多くあります。最初はサーバー・ネットワーク・保存場所の基本だけで足ります。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "AWSでサーバーを作る課題とは別に、使ったものと費用の関係を説明する練習です。料金の閲覧権限がある学習用アカウントを使い、誰の何の用途で使っているリソースかを整理します。\n\n## まず取り組むこと\n\n1. 請求やコスト管理の画面で、対象期間とサービスごとの利用を確認します。\n2. 残しているリソースの用途と担当を一覧にし、不明なものは削除せずに確認対象にします。\n3. AWS Budgetsで通知する条件と宛先を決め、通知後に何を調べるかを書きます。\n\n## この目的で本を読む理由\n\n[AWSの基礎](/skills/aws-basics)の本を使います。[出版社の目次](https://gihyo.jp/book/2025/978-4-297-14820-1)のAWSのコスト、料金計算、Billing and Cost Managementが、この目的に対応します。変わる料金表を暗記する本としては使いません。\n\n## できたか確認すること\n\n費用が発生する主なサービスを説明し、予算通知後の確認先を決められれば一区切りです。料金の反映や通知には遅れがあり、通知の設定だけで支払い上限が保証されるわけではありません。\n\n## 学習内容の根拠\n\n- [AWS：Budgetsによるコスト管理](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html)：予算通知の用途と、課金の反映・通知に遅れがあることの根拠です。"
+    },
+    {
+      "id": "aws-start",
+      "slug": "aws-start",
+      "title": "AWSでサーバーを動かしたい",
+      "summary": "Linuxとネットワークの基本を押さえたうえで、AWSでサーバーを用意してサービスを動かします。",
+      "kind": "build",
+      "domainId": "cloud",
+      "aliases": [
+        "AWSを学びたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "aws-basics"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "多くのサービスを一度に覚えること",
+          "reason": "AWSのサービスは非常に多くあります。最初はサーバー・ネットワーク・保存場所の基本だけで足ります。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "AWSでは、サーバーやネットワークを必要なときに必要な分だけ借りられます。"
+    },
+    {
+      "id": "banner-design",
+      "slug": "banner-design",
+      "title": "写真と文字を組み合わせた告知バナーを作りたい",
+      "summary": "イベント名や日付が読み取れる告知画像を作ります。情報の優先順位を決め、Photoshopで写真と文字を編集できる形にします。",
+      "kind": "build",
+      "domainId": "design-tools",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "design-basics",
+        "photoshop"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "Illustratorを同時に覚えること",
+          "reason": "ロゴや図形を作るための別のソフトです。写真の加工ができるようになってから、必要に応じて学びます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "写真の補正だけでなく、見出し、日付、補足を読んでもらうための画像を作ります。架空のイベント告知を題材に、目立たせたい情報を決めてから配置します。広告配信や効果測定はこの練習には含めません。\n\n## まず取り組むこと\n\n1. イベント名、日付、場所のうち、最初に読んでほしい順番を決めます。\n2. 写真と文字を別のレイヤーで置き、文字の大きさ、整列、余白を調整します。\n3. 実際の掲載サイズで見て、日付や場所が読めるか確認します。文言を差し替えられる編集用ファイルも保存します。\n\n## この目的で本を読む理由\n\n[デザインの基本](/skills/design-basics)で情報の強弱を、[Photoshop](/skills/photoshop)で合成と文字操作を学びます。[Photoshopの本の目次](https://gihyo.jp/book/2026/978-4-297-15527-8)には合成と文字を入れた制作例があります。[デザイン書の基本原則](https://book.mynavi.jp/ec/products/detail/id%3D53645)を合わせて使うのは、操作ができても読みやすい配置を判断する練習が別に必要だからです。\n\n## できたか確認すること\n\n縮小しても主な告知内容が読め、写真と文字を個別に差し替えられれば完成です。閲覧数や申込数の向上を保証するものではありません。\n\n## 学習内容の根拠\n\n- [Adobe：文字レイヤーのしくみ](https://helpx.adobe.com/photoshop/desktop/text-typography/type-layers-creation/type-layers-in-photoshop.html)：文言や書式を編集できる文字レイヤーを残す根拠です。"
+    },
+    {
+      "id": "browser-game",
+      "slug": "browser-game",
+      "title": "ブラウザで遊べるゲームを作りたい",
+      "summary": "JavaScriptの基礎を押さえたうえで、ブラウザの描画機能を使ってゲームを作ります。",
+      "kind": "build",
+      "domainId": "game",
+      "aliases": [
+        "JavaScriptでゲームを作りたい"
+      ],
+      "published": false,
+      "skillIds": [
+        "game-js"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "ゲームエンジンを最初から導入すること",
+          "reason": "簡単なゲームならJavaScriptだけで作れます。仕組みを理解してから選びます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "簡単なゲームなら、JavaScriptとブラウザの描画機能だけで作れます。"
+    },
+    {
+      "id": "campaign-measurement",
+      "slug": "campaign-measurement",
+      "title": "メールやSNSの案内から何人がサイトに来たか調べたい",
+      "summary": "案内に載せるURLへ識別用の情報を付け、GA4で流入元を分けて確認します。命名ルールと、比較する指標の決め方を学びます。",
+      "kind": "build",
+      "domainId": "web-marketing",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "web-analytics"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "多くの指標を一度に追うこと",
+          "reason": "最初は、目的に関係する数字を2〜3個に絞って見ます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "アクセス解析全体ではなく、同じページをメールとSNSで案内したときの違いを調べる練習です。リンクに付けた情報とレポートの見方を揃え、案内ごとの結果を比較できる状態を作ります。\n\n## まず取り組むこと\n\n1. 案内元、配信方法、企画名の命名ルールを決めます。表記の揺れを防ぐため、使う値を一覧にします。\n2. UTMパラメーターを付けた練習用URLを作り、遷移先が正しいかを確認します。氏名やメールアドレスは値に入れません。\n3. GA4の流入レポートで反映を確認し、期間と指標を揃えて比較する表を作ります。\n\n## この目的で本を読む理由\n\n[アクセス解析](/skills/web-analytics)の本を使います。[GA4入門書の出版社紹介](https://books.mdn.co.jp/books/3224303047/)が扱う指標と分析の基本を先に押さえ、実際のパラメーター名はGoogleの公式ヘルプで確認します。リンクのクリック数とサイト内の行動を同じ数字として扱わないために読む本です。\n\n## できたか確認すること\n\nどの案内のためのURLかを説明でき、同じ命名で後から追加できれば一区切りです。計測条件や同意の状態によって全ての訪問を把握できるとは限らず、流入だけで売上への効果を断定しません。\n\n## 学習内容の根拠\n\n- [Google：キャンペーンURLによるデータ収集](https://support.google.com/analytics/answer/10917952?hl=en)：UTMパラメーターで案内元を区別する根拠です。"
+    },
+    {
+      "id": "company-security",
+      "slug": "company-security",
+      "title": "会社の情報をセキュリティで守りたい",
+      "summary": "ネットワークとLinuxの基本を押さえたうえで、組織のセキュリティの考え方と、Webサイトの脆弱性の原理を学びます。",
+      "kind": "protect",
+      "domainId": "security",
+      "aliases": [
+        "企業のセキュリティを守りたい",
+        "セキュリティ担当になりたい",
+        "情報セキュリティを学びたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "network-basics",
+        "linux-basics",
+        "security-basics",
+        "web-app-security"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "攻撃ツールの使い方から入ること",
+          "reason": "仕組みを知らないままツールを使っても、守る側の仕事には役立ちません。許可のない相手に使えば、法律に触れるおそれもあります。"
+        },
+        {
+          "label": "特定のセキュリティ製品の操作",
+          "reason": "製品は会社ごとに違い、入れ替わりも早いため、考え方を先に押さえます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "守る対象は、ネットワーク、サーバー、Webサイトにまたがります。それぞれの仕組みを知らないと、何が危ないのかを判断できません。\n\nまず通信とサーバーの基本を押さえ、次に組織として守る考え方、最後にWebサイトの脆弱性の原理に進みます。"
+    },
+    {
+      "id": "csv-cleaning",
+      "slug": "csv-cleaning",
+      "title": "CSVの空欄や重複を整理して集計できるようにしたい",
+      "summary": "CSVをPythonで読み込み、空欄、重複、表記の違いを整理します。元データを残し、何を変更したか説明できる前処理を学びます。",
+      "kind": "build",
+      "domainId": "data-ai",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "data-analysis"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "機械学習から始めること",
+          "reason": "まず、データを集計してグラフにできることが先です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "グラフを作る前に、集計に使える表を準備する課題です。架空の売上CSVを使い、空欄をゼロにしてよいか、同じ行を削除してよいかを先に決めます。見た目が揃ったことだけで正しいデータとは判断しません。\n\n## まず取り組むこと\n\n1. CSVを読み込み、列の型、行数、空欄と重複の件数を調べます。\n2. 削除・補完・表記統一のルールを決め、そのルールをコードにします。\n3. 元のCSVを残したまま結果を別ファイルへ出し、変わった行と集計値を確認します。\n\n## この目的で本を読む理由\n\n[データ分析](/skills/data-analysis)の本を使います。[出版社の目次](https://www.oreilly.co.jp/books/9784814400195/)の6章が入出力、7章がクリーニングと前処理に対応します。Pythonの入門を終えてから該当箇所を読み、pandasの操作は現行の公式資料でも確認します。\n\n## できたか確認すること\n\n同じ元データから同じ結果を作れ、消した行と値を補った理由を説明できれば完成です。外れた値も、間違いと確かめずに削除しません。\n\n## 学習内容の根拠\n\n- [pandas：欠損データの扱い](https://pandas.pydata.org/docs/user_guide/missing_data.html)：欠損の検出、除去、補完を区別して選ぶための資料です。"
+    },
+    {
+      "id": "database-transactions",
+      "slug": "database-transactions",
+      "title": "途中で失敗してもデータのつじつまが合う更新を学びたい",
+      "summary": "複数の更新をひとまとめにして確定・取り消しするトランザクションを学びます。練習用データで、途中失敗の前後を比較します。",
+      "kind": "build",
+      "domainId": "database",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "sql"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "特定のデータベース製品の細かい設定",
+          "reason": "SQLの基本は製品が変わってもほぼ共通です。製品ごとの設定は、使う製品が決まってから覚えます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "片方の更新だけが残ると困る処理を、SQLで確かめる課題です。架空の倉庫間で在庫を移す例を使い、移動元だけ減って移動先が増えない状態をどう避けるか考えます。実際の在庫システムへ直接適用する練習ではありません。\n\n## まず取り組むこと\n\n1. 二つの倉庫の在庫数を用意し、移動前の合計を記録します。\n2. 複数の更新をトランザクション内で実行し、確定したときの結果を確認します。\n3. 途中で取り消して、どの値が元へ戻るかを調べます。\n\n## この目的で本を読む理由\n\n[SQL](/skills/sql)の本を再利用します。[出版社の目次](https://book.impress.co.jp/books/1123101107)にはトランザクションの章があり、基本文法の次に学ぶ根拠があります。同時更新や分離レベルを全て解決する課題ではなく、まず確定と取り消しを理解します。\n\n## できたか確認すること\n\n成功時と取り消し時の結果を説明でき、複数の更新をまとめる理由が分かれば一区切りです。使うデータベースによる挙動の違いは、その製品の資料で確認します。\n\n## 学習内容の根拠\n\n- [PostgreSQL：トランザクション](https://www.postgresql.org/docs/current/tutorial-transactions.html)：複数操作をまとめ、COMMITとROLLBACKで結果を決める説明の根拠です。"
+    },
+    {
+      "id": "db-design-goal",
+      "slug": "db-design-goal",
+      "title": "データベースを設計したい",
+      "summary": "SQLの基本を押さえたうえで、表の設計（正規化）の考え方を学びます。",
+      "kind": "build",
+      "domainId": "database",
+      "aliases": [
+        "データベース設計を学びたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "db-design"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "NoSQLから始めること",
+          "reason": "表の設計の考え方を先に身につけると、ほかの方式も理解しやすくなります。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "データベースの設計が悪いと、あとから直すのに大きな手間がかかります。"
+    },
+    {
+      "id": "design-principles",
+      "slug": "design-principles",
+      "title": "配色・文字・レイアウトの基本を身につけたい",
+      "summary": "デザインを専門に学んでいない人が、見やすい画面や資料を作れるようになるための基本原則を学びます。",
+      "kind": "build",
+      "domainId": "web-design",
+      "aliases": [
+        "デザインの基本を学びたい",
+        "ノンデザイナーでもデザインしたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "design-basics"
+      ],
+      "branches": [
+        {
+          "id": "use",
+          "question": "身につけた基本を、何に使いたいですか？",
+          "options": [
+            {
+              "label": "Webサイトの画面",
+              "note": "UIの考え方を加えます。",
+              "skillIds": [
+                "ui-design"
+              ]
+            },
+            {
+              "label": "写真やバナーなどの画像",
+              "note": "Photoshopで画像を加工できるようにします。",
+              "skillIds": [
+                "photoshop"
+              ]
+            }
+          ]
+        }
+      ],
+      "notNeededNow": [
+        {
+          "label": "高価なデザインソフトをそろえること",
+          "reason": "基本原則は、手持ちのソフトや紙とペンでも練習できます。ツールは作るものが決まってから選びます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "見やすいデザインには、要素の近さ、そろえ方、くり返し、強弱といった基本の原則があります。センスではなく、理由をつけて決められる部分が多くあります。\n\n基本を身につけたら、何に使うかに合わせて次に進みます。"
+    },
+    {
+      "id": "figma-basics",
+      "slug": "figma-basics",
+      "title": "Figmaでデザインカンプを作りたい",
+      "summary": "デザインの基本原則を押さえたうえで、Figmaでページのデザインカンプと試作（プロトタイプ）を作れるようにします。",
+      "kind": "build",
+      "domainId": "design-tools",
+      "aliases": [
+        "Figmaを使えるようになりたい",
+        "デザインカンプを作りたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "design-basics",
+        "figma"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "プラグインをたくさん入れること",
+          "reason": "基本の操作で作れるようになってから、必要なものだけ足します。"
+        },
+        {
+          "label": "複数のデザインツールを並行して覚えること",
+          "reason": "まずFigma1つで画面を作れるようになるのが先です。ツールの操作より、何を作るかの判断が大事です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "Figmaは、ホームページやアプリの画面デザインを作るためのツールです。ブラウザでも動き、作ったデザインをほかの人と共有できます。\n\n操作を覚える前に、配色・文字・レイアウトの基本を押さえておくと、Figmaで何をどう作ればよいかが分かります。"
+    },
+    {
+      "id": "figma-components",
+      "slug": "figma-components",
+      "title": "Figmaのボタンやカードをまとめて修正できるようにしたい",
+      "summary": "同じ部品を何度も描き直さずに済むよう、Figmaのコンポーネントを使います。文章の長さが変わっても使える部品に整えます。",
+      "kind": "build",
+      "domainId": "design-tools",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "figma"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "プラグインをたくさん入れること",
+          "reason": "基本の操作で作れるようになってから、必要なものだけ足します。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "画面ごとにコピーしたボタンの色や余白が少しずつ違う、という問題を直します。ひとつのファイル内で共通のボタンとカードを作り、変更を反映できるようにする練習です。大規模なデザインシステムの運用までは扱いません。\n\n## まず取り組むこと\n\n1. 同じ役割なのに見た目が違うボタンを集め、文字、余白、色の基準を決めます。\n2. 元になるコンポーネントと、その部品を配置したインスタンスを作ります。\n3. 元の部品を修正して反映を確かめ、長いボタン名や説明文でも配置が崩れないか試します。\n\n## この目的で本を読む理由\n\n[Figma](/skills/figma)の入門書のうち、[目次](https://gihyo.jp/book/2025/978-4-297-14678-8)にあるオートレイアウトとコンポーネントの基本操作を重点的に読みます。画面を描く基礎と共通の本ですが、今回の目的は繰り返し使う部品の管理です。\n\n## できたか確認すること\n\n共通部分の変更が配置先へ反映され、個別の文章を保てることを確認します。変更が伝わらない場合は、単なる複製や切り離した部品になっていないか調べます。\n\n## 学習内容の根拠\n\n- [Figma：コンポーネントのガイド](https://help.figma.com/hc/en-us/articles/360038662654-Guide-to-components-in-Figma)：元の部品とインスタンスの関係を学ぶ根拠です。\n- [Figma：オートレイアウト](https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout)：内容に応じて配置を調整するための資料です。"
+    },
+    {
+      "id": "figma-prototype",
+      "slug": "figma-prototype",
+      "title": "Figmaでクリックして試せる画面を作りたい",
+      "summary": "一覧から詳細へ進み、前の画面へ戻れる試作品をFigmaで作ります。画面の見た目だけでなく、操作の流れを確認します。",
+      "kind": "build",
+      "domainId": "design-tools",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "figma"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "プラグインをたくさん入れること",
+          "reason": "基本の操作で作れるようになってから、必要なものだけ足します。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "デザイン画像を並べるだけでは、ボタンを押した後の流れを伝えきれません。ここでは一覧、詳細、確認の画面をつないだ試作品を作り、実装を始める前に操作の順番を試します。\n\n## まず取り組むこと\n\n1. 架空の商品一覧、商品詳細、申込確認の画面を用意し、それぞれで何を判断するかを書きます。\n2. ボタンから次の画面へ移る接続と、戻る接続を設定します。開始位置も決めます。\n3. 説明を聞いていない人に操作してもらい、押し先や戻り方に迷った箇所を直します。\n\n## この目的で本を読む理由\n\n[Figma](/skills/figma)にある入門書を再利用します。[出版社の目次](https://gihyo.jp/book/2025/978-4-297-14678-8)のLESSON 3にプロトタイプ、LESSON 4にページ遷移とオーバーレイがあり、この練習の操作に直接対応します。\n\n## できたか確認すること\n\n共有した試作品で開始から確認画面まで進み、途中で戻れることを確かめます。保存や決済が実際に動くアプリとは区別して見せます。\n\n## 学習内容の根拠\n\n- [Figma：プロトタイピングのガイド](https://help.figma.com/hc/en-us/articles/360040314193-Guide-to-prototyping-in-Figma)：画面間の接続と開始位置を使って操作の流れを試す根拠です。"
+    },
+    {
+      "id": "freelance-web",
+      "slug": "freelance-web",
+      "title": "フリーランスでWeb制作の案件を取りたい",
+      "summary": "作品集の作り方と、見積もり・契約・進行の基本を学び、案件を受けられるようにします。",
+      "kind": "career",
+      "domainId": "web-career",
+      "aliases": [
+        "Web制作の案件を取りたい"
+      ],
+      "published": false,
+      "skillIds": [
+        "web-portfolio",
+        "freelance-business"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "高額な集客ツールや広告から始めること",
+          "reason": "まず作品集と、見積もりや契約の基本を整えるのが先です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "案件を受けるには、作れることに加えて、作業範囲を決めて見積もり、約束どおりに納品する力が必要です。"
+    },
+    {
+      "id": "git-basics",
+      "slug": "git-basics",
+      "title": "Gitでファイルの変更を管理したい",
+      "summary": "ファイルの変更履歴を記録し、GitHubでほかの人と共有する方法を、コマンド操作から学びます。",
+      "kind": "build",
+      "domainId": "team-dev",
+      "aliases": [
+        "Gitを学びたい",
+        "GitHubを使えるようになりたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "git"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "Gitの内部の仕組みを深く学ぶこと",
+          "reason": "最初は、記録・取り消し・共有・衝突の解決ができれば十分です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "Gitを使うと、ファイルの変更を記録しておき、いつでも前の状態に戻せます。GitHubを使えば、同じファイルを複数人で安全に編集できます。\n\nWeb制作でも開発でも、今はほぼ必ず使われる仕組みです。"
+    },
+    {
+      "id": "git-undo",
+      "slug": "git-undo",
+      "title": "Gitで間違えた変更を安全に取り消したい",
+      "summary": "未記録の変更と共有済みの変更を分け、履歴を確認して取り消します。残したい変更を消さずに戻す方法を練習します。",
+      "kind": "build",
+      "domainId": "team-dev",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "git"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "Gitの内部の仕組みを深く学ぶこと",
+          "reason": "最初は、記録・取り消し・共有・衝突の解決ができれば十分です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "Gitの保存操作を覚えた後に、間違いから戻る練習をします。自分の練習用リポジトリで、未コミット、コミット済み、共有済みの状態を区別し、何を残したいか決めてから操作します。\n\n## まず取り組むこと\n\n1. 練習用の文章を変更し、差分と履歴を見て取り消したい範囲を確認します。\n2. 未コミットの変更と記録済みの変更で、扱いが違うことを確かめます。\n3. 共有済みの変更を打ち消すコミットを作り、後から加えた別の変更が残っているかを確認します。\n\n## この目的で本を読む理由\n\n[Git](/skills/git)の本を使います。[出版社の目次と正誤表](https://book.impress.co.jp/books/1124101049)でバージョン管理と取り消しに関する操作を確認できます。共有履歴をどう残すかは、git revertの公式説明で補います。\n\n## できたか確認すること\n\n何を取り消し、どの変更を残したかを差分で説明できれば完成です。秘密情報を公開してしまった場合の対応は、単なる取り消しとは別に必要です。\n\n## 学習内容の根拠\n\n- [Git：git revert](https://git-scm.com/docs/git-revert)：既存のコミットの効果を打ち消す新しいコミットを記録する根拠です。"
+    },
+    {
+      "id": "homepage-animation",
+      "slug": "homepage-animation",
+      "title": "ホームページにアニメーションを実装したい",
+      "summary": "HTML・CSS・JavaScriptの基礎を押さえたうえで、ボタンやスクロールの動きを自分で実装できるようにします。",
+      "kind": "build",
+      "domainId": "web-animation",
+      "aliases": [
+        "ホームページに動きをつけたい",
+        "Webアニメーションを作りたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "css-animation"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "jQuery",
+          "skillId": "jquery",
+          "reason": "今はCSSと標準のJavaScriptで同じ動きが作れます。jQueryを使う古い本や記事のコードを写しても、今のサイトには合わないことがあります。"
+        },
+        {
+          "label": "3Dの表現（WebGL）",
+          "reason": "まず平面の動きを思い通りに作れるようになってからで十分です。3Dは別の技術の選び方が必要になります。"
+        }
+      ],
+      "relatedSituationIds": [
+        "3d-product-viewer"
+      ],
+      "lastReviewed": "2026-10-10",
+      "body": "ホームページの動きには、CSSだけで作れるものと、JavaScriptが必要なものがあります。どちらも基礎が分かっていないと、サンプルを写しても自分のサイトに合わせて調整できません。\n\nHTML・CSS・JavaScriptの基礎を順に押さえてから、動きの実装に進みます。"
+    },
+    {
+      "id": "homepage",
+      "slug": "homepage",
+      "title": "お店や会社のホームページを作りたい",
+      "summary": "HTMLとCSSで見た目を作り、JavaScriptで少し動きをつけるところまでを、順番に学びます。",
+      "kind": "build",
+      "domainId": "web",
+      "aliases": [
+        "ホームページ制作",
+        "ホームページを作りたい",
+        "Webサイトを作りたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "javascript-basics"
+      ],
+      "branches": [
+        {
+          "id": "self-update",
+          "question": "必要に応じて、WordPressを学ぶ",
+          "options": [
+            {
+              "label": "HTMLを編集せずに、お知らせを更新できるようにしたい",
+              "note": "WordPressを使うと、管理画面に文章を入力して、お知らせを公開できます。お店や会社の担当者が自分で更新できるサイトを作りたい場合は、次にWordPressの使い方を学びます。",
+              "skillIds": [
+                "wordpress"
+              ]
+            },
+            {
+              "label": "HTMLを編集して更新する方法でよい",
+              "note": "お知らせを変えるときは、HTMLの文章を書き換えて、公開先のファイルを更新します。この方法で作るなら、WordPressの学習は後回しで構いません。",
+              "skillIds": []
+            }
+          ]
+        }
+      ],
+      "notNeededNow": [
+        {
+          "label": "jQuery",
+          "skillId": "jquery",
+          "reason": "今のJavaScriptは標準の機能だけで同じことが書けます。古いサイトを直す仕事で出会ったら、その範囲だけ覚えれば十分です。"
+        },
+        {
+          "label": "Ruby・Python・Rust",
+          "reason": "サーバー側の仕組みやアプリを作るための言語で、ホームページの見た目を作るのには使いません。"
+        },
+        {
+          "label": "React・Vue",
+          "reason": "大きなWebアプリの画面を作るための仕組みです。HTML・CSS・JavaScriptの基礎がないと使いこなせず、ホームページ制作では多くの場合いりません。"
+        },
+        {
+          "label": "Laravel",
+          "reason": "PHPでWebアプリを作るためのフレームワークです。会員登録や予約の仕組みなど、アプリを作る段階まではいりません。"
+        }
+      ],
+      "relatedSituationIds": [
+        "3d-product-viewer"
+      ],
+      "lastReviewed": "2026-10-10",
+      "body": "ホームページは、HTML（中身）、CSS（見た目）、JavaScript（動き）の3つでできています。この順番で学ぶと、前に学んだことを土台に次へ進めます。\n\nお店や会社の担当者が、HTMLを編集せずにお知らせを更新できるようにしたい場合は、最後にWordPressの使い方を学びます。"
+    },
+    {
+      "id": "ios-app",
+      "slug": "ios-app",
+      "title": "iPhoneアプリを作りたい",
+      "summary": "プログラミングの基本を押さえたうえで、SwiftでiPhoneアプリを作ります。",
+      "kind": "build",
+      "domainId": "app",
+      "aliases": [
+        "Swiftを学びたい"
+      ],
+      "published": false,
+      "skillIds": [
+        "swift-ios"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "iPhoneとAndroidを同時に学ぶこと",
+          "reason": "まず1つの端末で最後まで作れるようになるのが先です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "iPhoneアプリは、Swiftという言語とAppleの開発ツールで作ります。"
+    },
+    {
+      "id": "javascript-api",
+      "slug": "javascript-api",
+      "title": "APIから取得した情報をページに表示したい",
+      "summary": "JSON形式の情報を取得し、読み込み中・成功・失敗を表示する画面を作ります。通信と画面更新を分けて考える練習です。",
+      "kind": "build",
+      "domainId": "frontend",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "javascript-basics"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "jQuery",
+          "skillId": "jquery",
+          "reason": "今のJavaScriptは標準の機能だけで同じことが書けます。古いサイトを直す仕事で出会ったら、その範囲だけ覚えれば十分です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "HTMLに直接書いた内容ではなく、通信で受け取ったデータを表示する課題です。まず自分で用意したJSONファイルを取得するところから始め、通信に失敗しても画面が止まったままにならないようにします。\n\n## まず取り組むこと\n\n1. 商品名と説明を持つJSONを用意し、取得した値をページに表示します。\n2. 読み込み中の表示を出し、取得後には消えるようにします。\n3. 存在しないURL、空の配列、想定と違うデータを試し、状況に合った説明を表示します。\n\n## この目的で本を読む理由\n\n[JavaScriptの基礎](/skills/javascript-basics)の本でデータとエラーの扱いを学び、[出版社の目次](https://www.sbcr.jp/product/4815615758/)にある複数データ・エラー解決の部分を使います。Fetchの通信手順は下の公式資料で補います。この入門書だけで外部サービスの認証まで学べるとはしていません。\n\n## できたか確認すること\n\n成功と失敗を見分け、HTTPエラーも確認できれば一区切りです。公開できないAPIキーをブラウザーへ埋め込まないこと、外部APIの利用条件は別に確かめることも学習範囲に含めます。\n\n## 学習内容の根拠\n\n- [MDN：Fetch APIの利用](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)：JSONの取得とHTTPの成功状態の確認を学ぶ根拠です。"
+    },
+    {
+      "id": "javascript-filter",
+      "slug": "javascript-filter",
+      "title": "商品一覧を条件で絞り込めるようにしたい",
+      "summary": "カテゴリを選ぶと一覧が切り替わる画面を、JavaScriptで作ります。元データ、条件、表示を分け、該当する商品がない場合も扱います。",
+      "kind": "build",
+      "domainId": "frontend",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "javascript-basics"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "jQuery",
+          "skillId": "jquery",
+          "reason": "今のJavaScriptは標準の機能だけで同じことが書けます。古いサイトを直す仕事で出会ったら、その範囲だけ覚えれば十分です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "手元にある小さな商品データを使い、画面内で一覧を絞り込む練習です。サーバー側の全文検索や大量データへの対応とは分けて、配列と入力イベントを使えることを目標にします。\n\n## まず取り組むこと\n\n1. 名前とカテゴリを持つ架空の商品を配列に入れ、まず全件を表示します。\n2. 選択したカテゴリに合う商品だけを取り出し、一覧と件数を更新します。\n3. 該当なしと条件解除の表示を用意し、元データが書き換わっていないか確認します。\n\n## この目的で本を読む理由\n\n[JavaScriptの基礎](/skills/javascript-basics)の入門書を使います。[出版社の目次](https://www.sbcr.jp/product/4815615758/)のイベントと複数データの章が、この課題の中心です。単なるアニメーションの練習と違い、条件とデータの関係を説明するために読みます。\n\n## できたか確認すること\n\n全件、1種類、該当なし、条件解除で正しく切り替われば完成です。ブラウザーに全件を渡せない量や公開できない情報を扱う場合は、サーバー側の設計も必要です。\n\n## 学習内容の根拠\n\n- [MDN：Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)：条件に合う要素を別の配列として取り出す根拠です。"
+    },
+    {
+      "id": "keyboard-navigation",
+      "slug": "keyboard-navigation",
+      "title": "マウスなしでも操作できるサイトに直したい",
+      "summary": "リンクやボタンをキーボードで順に操作し、現在位置が見えるように直します。操作できない場所と移動順を調べます。",
+      "kind": "build",
+      "domainId": "accessibility",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "web-accessibility"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "後付けの対応ツールだけに頼ること",
+          "reason": "サイトに部品を足すだけでは、根本的な対応にならないことが多いです。HTMLを正しく書くことが基本です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "見た目は完成しているサイトを、キーボードだけで使って点検します。アクセシビリティ全体の適合を判定するコースではなく、リンク、ボタン、メニューの操作とフォーカスに対象を絞った修正です。\n\n## まず取り組むこと\n\n1. 練習用ページのリンクとボタンをTabキーでたどり、移動順と操作できない場所をメモします。\n2. クリック専用の見た目の部品を、役割に合うリンクやボタンに置き換え、現在位置が見える表示を用意します。\n3. メニューを開いた後も次へ進めるか、閉じて元の操作に戻れるかを確認します。\n\n## この目的で本を読む理由\n\n[Webアクセシビリティ](/skills/web-accessibility)の入門資料を使い、基準を読んでから実際のページで確かめます。[出版社が説明する実装から評価までの範囲](https://book.impress.co.jp/books/1125101037)が、この点検の進め方に対応します。操作の仕様はW3Cの解説で補います。\n\n## できたか確認すること\n\nマウスを使わずに主要な操作ができ、現在位置を見失わず、特定の部品から抜け出せなくならないことを確認します。この点検だけで全ての利用者への対応が終わるわけではありません。\n\n## 学習内容の根拠\n\n- [W3C：キーボード操作の達成基準の解説](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html)：キーボードで機能を利用できることを確認する根拠です。"
+    },
+    {
+      "id": "landing-page",
+      "slug": "landing-page",
+      "title": "商品やイベントを紹介する1ページを作りたい",
+      "summary": "商品説明、料金、よくある質問、申込先を1ページにまとめます。情報の並べ方と、スマホでも読めるHTML・CSSを学びます。",
+      "kind": "build",
+      "domainId": "web",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "design-basics",
+        "css"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "jQuery",
+          "skillId": "jquery",
+          "reason": "今のJavaScriptは標準の機能だけで同じことが書けます。古いサイトを直す仕事で出会ったら、その範囲だけ覚えれば十分です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "複数ページの会社サイトを作る前に、ひとつの商品やイベントを説明するページを完成させます。申込処理は既存サービスのリンクを使う練習にし、ページの構成と見た目に学習範囲を絞ります。\n\n## まず取り組むこと\n\n1. 誰に何を伝え、最後に何をしてほしいかを一文で決めます。商品説明、料金、注意事項、申込先を紙に並べます。\n2. HTMLで見出しと本文を作り、CSSで文字、余白、背景を整えます。画像の中だけに説明文を閉じ込めないようにします。\n3. 狭い画面で読み直し、説明の途中でも料金と申込先を見つけられるか、第三者に確かめてもらいます。\n\n## この目的で本を読む理由\n\n[デザインの基本](/skills/design-basics)で情報のまとまりと強弱を考え、[CSS](/skills/css)でページにします。[HTML・CSS入門書の目次](https://www.sbcr.jp/product/4815618469/)にある1カラムの制作が実装の練習に対応します。[デザイン書の出版社紹介](https://book.mynavi.jp/ec/products/detail/id%3D53645)にある整列や近接の原則は、料金と補足説明を整理するために使います。広告の成果を保証する本としては扱いません。\n\n## できたか確認すること\n\nページを初めて見た人が、対象者、内容、料金、申込方法を説明でき、リンク先へ進めれば完成です。決済や個人情報の受け付けは別の課題です。\n\n## 学習内容の根拠\n\n- [MDN：レスポンシブデザイン](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)：1ページでも端末に応じたレイアウトを必要とする根拠です。"
+    },
+    {
+      "id": "laravel-app",
+      "slug": "laravel-app",
+      "title": "Laravelで予約システムを作りたい",
+      "summary": "PHPとSQLの基本を押さえたうえで、Laravelで機能のあるWebアプリを作ります。",
+      "kind": "build",
+      "domainId": "backend",
+      "aliases": [
+        "Laravelを学びたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "laravel"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "React・Vue",
+          "reason": "まずはLaravelだけで画面を作れます。画面を作り込む段階で検討します。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "Laravelを使うと、会員登録や予約などの機能を効率よく作れます。PHPとSQLの基本が前提です。"
+    },
+    {
+      "id": "linux-permissions",
+      "slug": "linux-permissions",
+      "title": "Linuxでファイルを読めない・書けない原因を調べたい",
+      "summary": "所有者、グループ、読み書きの権限を確認し、必要な範囲だけ直します。全員へ権限を広げずに原因を切り分ける練習です。",
+      "kind": "build",
+      "domainId": "infra-ops",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "linux-basics"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "Kubernetes",
+          "reason": "多数のコンテナをまとめて動かす仕組みです。1台のLinuxサーバーを扱えるようになってからで十分です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "ファイル操作でPermission deniedと出たときに、設定をむやみに変えず状況を調べる課題です。自分の練習用Linux環境を使い、誰として操作しているかと、誰に何が許されているかを区別します。\n\n## まず取り組むこと\n\n1. 操作しているユーザーと、ファイル・親ディレクトリの所有者と権限を確認します。\n2. 練習用ファイルで、読む場合と書く場合に必要な権限の違いを調べます。\n3. 必要な対象だけを変更し、目的の操作ができることと、不要な書き込みができないことを確かめます。\n\n## この目的で本を読む理由\n\n[Linuxの基礎](/skills/linux-basics)の入門書をコマンド操作の土台にします。[出版社の紹介と目次](https://www.shoeisha.co.jp/book/detail/9784798181974)の第5章でユーザー、グループ、パーミッションを扱うことを確認しています。所有者と権限の具体的な判断はRed Hatの公式資料で補います。本の学習用OSと手元の環境の違いにも注意します。\n\n## できたか確認すること\n\n誰にどの権限が足りなかったかを説明できれば一区切りです。原因がACLやSELinuxなど別の制御にある場合は、この基本確認だけで解決したと決めず、対象の仕組みを追加で調べます。\n\n## 学習内容の根拠\n\n- [Red Hat：ファイルシステムの権限管理](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/managing-file-system-permissions_configuring-basic-system-settings)：所有者・グループ・その他の権限を区別する根拠です。"
+    },
+    {
+      "id": "network-troubleshooting",
+      "slug": "network-troubleshooting",
+      "title": "サイトにつながらない原因を順番に調べたい",
+      "summary": "名前解決、接続、HTTPの応答を分けて調べます。やみくもに設定を変えず、どの段階で止まっているかを記録する練習です。",
+      "kind": "build",
+      "domainId": "infra-ops",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "network-basics",
+        "linux-basics"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "Kubernetes",
+          "reason": "多数のコンテナをまとめて動かす仕組みです。1台のLinuxサーバーを扱えるようになってからで十分です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "「ブラウザーで開けない」という症状を、もう少し具体的に説明できるようにします。自分の端末と許可された確認先を使い、通信が始まる前の問題と、接続後にサーバーが返すエラーを分けて考えます。\n\n## まず取り組むこと\n\n1. いつ、どの端末で、どのURLが開けないかを記録し、他のページとの違いを整理します。\n2. 名前が引けるか、接続できるか、HTTP応答があるかを段階ごとに確認します。\n3. curlの詳細表示を読み、成功した段階と止まった段階を短い調査メモにします。\n\n## この目的で本を読む理由\n\n[ネットワークの基礎](/skills/network-basics)の本でIP、TCP、アプリケーションの役割を学びます。[出版社の紹介](https://www.ohmsha.co.jp/book/9784274224478.html)が扱うTCP/IPの基礎を、調査結果の読み分けに使います。[Linuxの基礎](/skills/linux-basics)は端末操作のために必要です。\n\n## できたか確認すること\n\n設定を変更する前に、確認できた事実とまだ不明な点を分けて報告できれば一区切りです。詳細ログには認証情報などが出る場合があるため、共有前に内容を確認します。\n\n## 学習内容の根拠\n\n- [curl：詳細表示の読み方](https://everything.curl.dev/usingcurl/verbose/)：名前解決、接続先、送受信ヘッダーを段階ごとに読む根拠です。"
+    },
+    {
+      "id": "nocode-homepage",
+      "slug": "nocode-homepage",
+      "title": "コードを書かずにホームページを作りたい",
+      "summary": "ノーコードツールのStudioで、デザインから公開・更新までを進めます。HTMLやCSSを書かずに始められます。",
+      "kind": "build",
+      "domainId": "web",
+      "aliases": [
+        "ノーコードでホームページを作りたい",
+        "Studioでサイトを作りたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "design-basics",
+        "studio-nocode"
+      ],
+      "branches": [
+        {
+          "id": "code-later",
+          "question": "あとからコードで細かく作り込みたくなりそうですか？",
+          "options": [
+            {
+              "label": "はい",
+              "note": "HTMLとCSSの基本を学んでおくと、ノーコードツールで表現しきれない部分を補えます。",
+              "skillIds": [
+                "css"
+              ]
+            },
+            {
+              "label": "いいえ",
+              "note": "Studioだけで作り続けられます。追加で学ぶものはありません。",
+              "skillIds": []
+            }
+          ]
+        }
+      ],
+      "notNeededNow": [
+        {
+          "label": "JavaScript",
+          "skillId": "javascript-basics",
+          "reason": "Studioでは、動きの多くを画面上の設定で作れます。コードで作り込む段階になるまでは不要です。"
+        },
+        {
+          "label": "WordPress",
+          "skillId": "wordpress",
+          "reason": "サーバーの準備やプラグインの管理が必要になります。Studioで足りるうちは、別の仕組みを並行して覚える必要はありません。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "ノーコードツールを使うと、HTMLやCSSを書かずにホームページを作って公開できます。ただし、見やすい画面にするためのデザインの基本と、Webの仕組みは、ツールに関係なく必要です。\n\nまずデザインの基本とWebの仕組みを押さえてから、Studioで作り始めます。"
+    },
+    {
+      "id": "photoshop-basics",
+      "slug": "photoshop-basics",
+      "title": "Photoshopでホームページ用の画像を加工したい",
+      "summary": "写真の補正・切り抜き・合成など、サイトに載せる画像を整える基本操作を学びます。",
+      "kind": "build",
+      "domainId": "design-tools",
+      "aliases": [
+        "Photoshopを使えるようになりたい",
+        "写真を加工したい"
+      ],
+      "published": true,
+      "skillIds": [
+        "photoshop"
+      ],
+      "branches": [
+        {
+          "id": "banner",
+          "question": "バナーなど、文字を入れた画像も作りたいですか？",
+          "options": [
+            {
+              "label": "はい",
+              "note": "文字の配置や配色の基本を加えます。",
+              "skillIds": [
+                "design-basics"
+              ]
+            },
+            {
+              "label": "いいえ（写真の加工だけ）",
+              "note": "追加で学ぶものはありません。",
+              "skillIds": []
+            }
+          ]
+        }
+      ],
+      "notNeededNow": [
+        {
+          "label": "Illustratorを同時に覚えること",
+          "reason": "ロゴや図形を作るための別のソフトです。写真の加工ができるようになってから、必要に応じて学びます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "Photoshopは、写真の明るさや色の補正、切り抜き、合成などに使うソフトです。ホームページでは、写真をきれいに見せるためと、ファイルを軽くして書き出すために使います。\n\nPhotoshopの本は毎年のように新しい版が出て、そのたびに画面や機能が変わります。なるべく新しい年の版を選びます。"
+    },
+    {
+      "id": "php-json-api",
+      "slug": "php-json-api",
+      "title": "PHPでJSONを返す小さなAPIを作りたい",
+      "summary": "HTMLの代わりにJSONを返す処理をPHPで作ります。入力パラメーター、HTTPの結果、返すデータの形を決めます。",
+      "kind": "build",
+      "domainId": "backend",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "php-basics"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "Laravel",
+          "skillId": "laravel",
+          "reason": "PHPの基本が分かってからでないと、フレームワークが何をしているかを理解できません。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "固定の架空の商品データを返す、読み取り専用APIを作る練習です。会員機能やデータベースへの書き込みを含めず、リクエストを受け取って一定の形式で応答するところまでに絞ります。\n\n## まず取り組むこと\n\n1. 商品IDを受け取り、対応する商品名と説明を配列で用意します。\n2. JSONへ変換して返し、Content-TypeとHTTPステータスを確認します。\n3. 存在しないIDや不正な形式の入力で、成功時と区別できる応答を返します。\n\n## この目的で本を読む理由\n\n[PHPの基礎](/skills/php-basics)の本を使います。[出版社の目次](https://www.shoeisha.co.jp/book/detail/9784798168494)で配列とリクエスト情報を扱うことを確認しています。JSON変換の指定や失敗の扱いはPHP公式マニュアルで補います。認証付きの公開APIを作り切る本としては扱いません。\n\n## できたか確認すること\n\n正常なID、不明なID、不正な入力について、受け取り側が結果を区別できれば完成です。練習はローカルで行い、公開時の認証、アクセス制限、秘密情報の管理は別途学びます。\n\n## 学習内容の根拠\n\n- [PHP：json_encode](https://www.php.net/manual/en/function.json-encode.php)：PHPの値をJSONへ変換する関数と失敗時の扱いを確認する資料です。"
+    },
+    {
+      "id": "php-webapp",
+      "slug": "php-webapp",
+      "title": "PHPで問い合わせフォームや会員機能を作りたい",
+      "summary": "HTMLとSQLの基本を押さえたうえで、PHPでサーバー側の処理を書けるようにします。",
+      "kind": "build",
+      "domainId": "backend",
+      "aliases": [
+        "PHPを学びたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "php-basics",
+        "sql"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "Laravel",
+          "skillId": "laravel",
+          "reason": "PHPの基本が分かってからでないと、フレームワークが何をしているかを理解できません。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "問い合わせフォームの送信や会員機能は、サーバー側で動くプログラムが必要です。"
+    },
+    {
+      "id": "product-photo",
+      "slug": "product-photo",
+      "title": "商品写真の背景を切り抜いてサイトに載せたい",
+      "summary": "商品の輪郭を整えて背景を切り抜き、明るさと大きさを揃えます。元画像を残しながら、サイト用の画像を書き出します。",
+      "kind": "build",
+      "domainId": "design-tools",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "photoshop"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "Illustratorを同時に覚えること",
+          "reason": "ロゴや図形を作るための別のソフトです。写真の加工ができるようになってから、必要に応じて学びます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "商品一覧で背景や明るさがばらばらに見える写真を揃える練習です。写真全般を加工するコースより範囲を絞り、商品そのものの形や色が分かる画像を作ります。元の写真は上書きせずに残します。\n\n## まず取り組むこと\n\n1. 商品を選択し、レイヤーマスクを使って背景を隠します。拡大して輪郭と抜けを確認します。\n2. 暗さや色の偏りを調整し、同じ大きさの枠に収めます。実際の商品と違う色に見せないよう元写真と比較します。\n3. 編集用ファイルと掲載用ファイルを分け、白い背景と濃い背景の両方で輪郭を確認します。\n\n## この目的で本を読む理由\n\n[Photoshop](/skills/photoshop)の入門書を使います。[出版社の目次](https://gihyo.jp/book/2026/978-4-297-15527-8)の写真補正、選択範囲、レイヤーマスクの説明が、この作業の基礎になります。自動選択でうまく抜けたかの目視確認は省きません。\n\n## できたか確認すること\n\n輪郭の欠けや背景の残りがなく、複数の商品を並べても大きさと明るさが不自然に違わないことを確認します。\n\n## 学習内容の根拠\n\n- [Adobe：レイヤーマスクの追加と編集](https://helpx.adobe.com/photoshop/desktop/create-masks/layer-masks/add-layer-masks.html)：画像の一部を隠す・見せる操作にマスクを使う根拠です。"
+    },
+    {
+      "id": "programming-first",
+      "slug": "programming-first",
+      "title": "プログラミングを初めて学びたい",
+      "summary": "どの言語にも共通する基本を押さえ、Pythonで簡単なプログラムを書けるようにします。",
+      "kind": "build",
+      "domainId": "programming-basics",
+      "aliases": [
+        "プログラミングを始めたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "python-basics"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "複数の言語を同時に学ぶこと",
+          "reason": "1つの言語で変数・条件分岐・繰り返しが書けるようになれば、ほかの言語にも応用できます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "最初の1つの言語で基本を身につければ、ほかの言語を学ぶときも同じ考え方が使えます。"
+    },
+    {
+      "id": "pull-request-review",
+      "slug": "pull-request-review",
+      "title": "GitHubで変更内容を説明してレビューを受けたい",
+      "summary": "小さな変更をブランチで作り、理由と確認結果を添えてPull Requestにします。指摘への対応と差分の読み方を学びます。",
+      "kind": "build",
+      "domainId": "team-dev",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "git"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "Gitの内部の仕組みを深く学ぶこと",
+          "reason": "最初は、記録・取り消し・共有・衝突の解決ができれば十分です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "チーム開発全体を学ぶ前に、他の人へひとつの変更を見てもらう流れを練習します。対象は説明文の修正など、結果を確認しやすい小さな変更にします。レビューが通ること自体より、判断に必要な情報を伝えることが目標です。\n\n## まず取り組むこと\n\n1. 変更前の問題を一文で書き、関係するファイルだけをブランチで修正します。\n2. Pull Requestに変更理由、見てほしい箇所、確認したことを書きます。\n3. 差分を自分でも読み、指摘を受けたら修正内容と再確認の結果を伝えます。\n\n## この目的で本を読む理由\n\n[Git](/skills/git)の本の[ブランチとGitHubを扱う章](https://book.impress.co.jp/books/1124101049)を使います。Gitの記録操作と、他の人に変更を伝える操作をつなげるための再利用です。組織ごとの承認ルールは別途確認します。\n\n## できたか確認すること\n\n第三者が差分と説明から変更の目的を追え、指摘への対応を確認できれば一区切りです。レビュー済みという記録を自分で作ったり、テスト未実行を成功と書いたりしません。\n\n## 学習内容の根拠\n\n- [GitHub：Pull Requestのレビュー](https://docs.github.com/en/pull-requests/reference/pull-request-reviews)：コメント、承認、変更要求を使って変更を確認する流れの根拠です。"
+    },
+    {
+      "id": "python-data",
+      "slug": "python-data",
+      "title": "Pythonでデータ分析をしたい",
+      "summary": "Pythonの基礎を押さえたうえで、表形式のデータを集計してグラフにする方法を学びます。",
+      "kind": "build",
+      "domainId": "data-ai",
+      "aliases": [
+        "データ分析を学びたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "data-analysis"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "機械学習から始めること",
+          "reason": "まず、データを集計してグラフにできることが先です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "データ分析の多くは、データを集めて、集計して、グラフにして説明することです。"
+    },
+    {
+      "id": "python-error-handling",
+      "slug": "python-error-handling",
+      "title": "Pythonのエラーを読んで原因を切り分けたい",
+      "summary": "エラーの種類と発生した行を読み、少ないコードで再現して直します。例外を無視せず、入力ミスとプログラムの不具合を分けて扱います。",
+      "kind": "build",
+      "domainId": "programming-basics",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "python-basics"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "複数の言語を同時に学ぶこと",
+          "reason": "1つの言語で変数・条件分岐・繰り返しが書けるようになれば、ほかの言語にも応用できます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "エラーが出るたびに全文を書き直す状態から抜け出すための練習です。文法の学習とは別に、失敗を再現する入力と、原因を絞る手順を残せることを目指します。\n\n## まず取り組むこと\n\n1. 数値への変換失敗や存在しないファイルの読み込みなど、原因が分かる小さな例を作ります。\n2. エラーの種類と該当する行を読み、入力と途中の値を確認します。\n3. 想定する失敗だけを扱い、修正前に失敗した入力と正常な入力の両方を試します。\n\n## この目的で本を読む理由\n\n[Pythonの基礎](/skills/python-basics)の本の[付録「エラー解決・虎の巻」](https://book.impress.co.jp/books/1122101165)を使います。文法を読み直す場所と、エラーの意味を調べる場所を分けられるためです。例外の構造はPython公式チュートリアルで補います。\n\n## できたか確認すること\n\n何が原因で、どの入力で再現し、何を変えて直ったかを短く説明できれば一区切りです。全ての例外を握りつぶして動いたように見せる方法は取りません。\n\n## 学習内容の根拠\n\n- [Python：エラーと例外](https://docs.python.org/3/tutorial/errors.html)：構文エラーと例外、例外処理の役割を区別する根拠です。"
+    },
+    {
+      "id": "python-file-automation",
+      "slug": "python-file-automation",
+      "title": "たくさんのファイル名をルールに沿って整理したい",
+      "summary": "Pythonでフォルダ内のファイルを調べ、変更前と変更後の名前を一覧にします。実行前の確認と、同名ファイルの衝突を避ける処理を学びます。",
+      "kind": "build",
+      "domainId": "programming-basics",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "python-basics"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "複数の言語を同時に学ぶこと",
+          "reason": "1つの言語で変数・条件分岐・繰り返しが書けるようになれば、ほかの言語にも応用できます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "ファイル整理を題材に、繰り返しと条件分岐を使う練習です。コピーした練習用フォルダだけを対象にし、いきなり一括変更せず、最初に変更予定の一覧を出します。\n\n## まず取り組むこと\n\n1. 練習用フォルダのファイルを列挙し、対象にする拡張子と名前のルールを決めます。\n2. 変更予定を表示するだけの処理を作り、対象外のファイルと名前の衝突を検出します。\n3. 予定を確認してから練習用ファイルに適用し、変更履歴を残します。\n\n## この目的で本を読む理由\n\n[Pythonの基礎](/skills/python-basics)の本を使います。[出版社の目次](https://book.impress.co.jp/books/1122101165)の条件分岐、繰り返し、モジュールが土台です。pathlibの個別操作は公式資料で補います。入門書がファイル整理の完成ツールを提供するという選び方ではありません。\n\n## できたか確認すること\n\n対象と対象外が分かれ、衝突する名前があれば変更を止められることを確認します。原本を保管し、やり直せる練習にします。\n\n## 学習内容の根拠\n\n- [Python：pathlib](https://docs.python.org/3/library/pathlib.html)：パスの操作、ファイルの列挙、名前の変更を確認する公式資料です。"
+    },
+    {
+      "id": "react-app",
+      "slug": "react-app",
+      "title": "Reactで画面を作れるようになりたい",
+      "summary": "HTML・CSS・JavaScriptの基礎を押さえたうえで、画面を部品に分けて組み立てるReactを学びます。",
+      "kind": "build",
+      "domainId": "frontend",
+      "aliases": [
+        "Reactを学びたい",
+        "Webアプリの画面を作りたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "react"
+      ],
+      "branches": [
+        {
+          "id": "typescript",
+          "question": "チームでの開発や、長く保守するアプリを作る予定ですか？",
+          "options": [
+            {
+              "label": "はい",
+              "note": "TypeScriptを加えると、書き間違いを早く見つけられます。",
+              "skillIds": [
+                "typescript"
+              ]
+            },
+            {
+              "label": "いいえ",
+              "note": "まずはJavaScriptのままで構いません。",
+              "skillIds": []
+            }
+          ]
+        }
+      ],
+      "notNeededNow": [
+        {
+          "label": "jQuery",
+          "skillId": "jquery",
+          "reason": "Reactでは画面の更新をReactに任せます。jQueryで直接画面を書き換える方法とは考え方が合いません。"
+        },
+        {
+          "label": "Next.jsなどのフレームワーク",
+          "reason": "Reactの基本が分かってから選びます。最初から使うと、どこまでがReactの機能か分からなくなります。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "Reactは、画面をボタンや一覧などの部品に分けて組み立てるためのライブラリです。部品の中身はJavaScriptで書くため、JavaScriptの基礎がないと先に進めません。\n\nホームページを作るだけなら、Reactは多くの場合いりません。会員機能のある画面など、データによって表示が変わるWebアプリを作るときに使います。"
+    },
+    {
+      "id": "react-form",
+      "slug": "react-form",
+      "title": "Reactで入力内容を確認しながら進める画面を作りたい",
+      "summary": "入力した内容を確認画面へ引き継ぎ、戻って修正できる画面をReactで作ります。stateとイベント、部品間のデータの渡し方を学びます。",
+      "kind": "build",
+      "domainId": "frontend",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "react"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "jQuery",
+          "skillId": "jquery",
+          "reason": "Reactでは画面の更新をReactに任せます。jQueryで直接画面を書き換える方法とは考え方が合いません。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "Reactの画面作りを、入力・確認・修正というひとつの流れで練習します。送信先は作らず、氏名などの架空データを使います。入力欄と表示内容が食い違わないよう、どの部品が値を持つかを決めます。\n\n## まず取り組むこと\n\n1. 入力値をstateで管理し、入力欄を変えると確認表示も変わるようにします。\n2. 入力と確認を別の部品へ分け、必要な値と操作を受け渡します。\n3. 確認から入力へ戻って修正し、入力した文字が意図せず消えないか確かめます。\n\n## この目的で本を読む理由\n\n[React](/skills/react)の本を使います。[出版社の目次](https://gihyo.jp/book/2026/978-4-297-15523-0)のstate、状態のリフトアップ、フォームと入力値の管理が、この課題に対応します。外部の状態管理ライブラリを先に覚えず、Reactの基本だけでデータの置き場所を理解します。\n\n## できたか確認すること\n\n確認画面に最新の値が出て、戻って修正でき、必須項目の不足も伝えられれば完成です。本人確認やデータ保存の安全性は別途設計します。\n\n## 学習内容の根拠\n\n- [React：inputコンポーネント](https://react.dev/reference/react-dom/components/input)：入力値と変更イベントを組み合わせる制御された入力の根拠です。"
+    },
+    {
+      "id": "reduced-motion-animation",
+      "slug": "reduced-motion-animation",
+      "title": "動きが苦手な人には演出を控えたページを見せたい",
+      "summary": "端末の「動きを減らす」設定に合わせて、アニメーションを控える表示を作ります。動かなくても情報と操作が伝わるようにします。",
+      "kind": "build",
+      "domainId": "web-animation",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "css-animation"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "jQuery",
+          "skillId": "jquery",
+          "reason": "今はCSSと標準のJavaScriptで同じ動きが作れます。jQueryを使う古い本や記事のコードを写しても、今のサイトには合わないことがあります。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "アニメーションを増やす課題とは逆に、演出が不要な場合の表示を用意する練習です。大きな移動や拡大を含む練習用ページで、通常時と動きを減らす設定の両方を確認します。\n\n## まず取り組むこと\n\n1. ページ内の動きを一覧にし、装飾なのか、処理中などの状態を伝えるものなのか分けます。\n2. prefers-reduced-motionを使い、装飾の移動をなくすか、控えた表示へ切り替えます。\n3. 動きを止めても説明文や操作ボタンが現れること、状態の変化が別の方法でも伝わることを確認します。\n\n## この目的で本を読む理由\n\n[CSSアニメーション](/skills/css-animation)の本で動きを付ける仕組みを理解します。[出版社の目次](https://book.impress.co.jp/books/1123101113)にあるCSS・JavaScriptの基礎とボタン・スクロールの例を、見直す対象として使います。動きを減らす設定の具体的な判定はMDNで補います。\n\n## できたか確認すること\n\n端末またはブラウザーの検証機能で設定を切り替え、両方の状態で内容を読んで操作できれば完成です。CSSだけで止まらないJavaScriptの動きは、別途切り替えを実装します。\n\n## 学習内容の根拠\n\n- [MDN：prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)：利用者の動きを減らす設定をCSSで参照する根拠です。"
+    },
+    {
+      "id": "regression-scenarios",
+      "slug": "regression-scenarios",
+      "title": "修正のたびに確認するテストを決めたい",
+      "summary": "変更で壊れると困る操作を選び、繰り返し確認する手順にします。手動で残す確認と自動化の候補を分けます。",
+      "kind": "build",
+      "domainId": "testing",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "test-automation"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "テストの網羅率を目標にすること",
+          "reason": "数字を上げることより、壊れると困る部分から書くことが先です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "自動テストの書き方に入る前に、何を繰り返し確かめるべきかを整理する課題です。架空の商品サイトを題材に、一覧から詳細へ進む、条件を解除するなど、利用者に見える操作で確認手順を書きます。\n\n## まず取り組むこと\n\n1. できなくなると困る操作と、その理由を一覧にします。\n2. 各操作の開始状態、入力、期待する画面を揃え、別の人が同じ確認をできる手順にします。\n3. 毎回の条件を用意しやすい確認と、人が見て判断したい確認を分け、自動化する候補を選びます。\n\n## この目的で本を読む理由\n\n[テスト自動化](/skills/test-automation)の本を使います。[出版社の目次](https://gihyo.jp/book/2025/978-4-297-14909-3)の第5章でリグレッションテストの戦略、第18章でテストの選択と優先付けを扱うことを確認しています。今回は特定ツールの構文より、保守できる確認内容を選ぶために読みます。\n\n## できたか確認すること\n\n修正後に何を確認し、何を未確認のまま残したかが分かる一覧を作れれば完成です。自動化の候補を決める課題なので、テストコードを書いて実行したことにはなりません。\n\n## 学習内容の根拠\n\n- [Playwright：テストの推奨事項](https://playwright.dev/docs/best-practices)：利用者に見える動作を確かめ、テスト同士を独立させる考え方の根拠です。"
+    },
+    {
+      "id": "responsive-layout",
+      "slug": "responsive-layout",
+      "title": "スマホで横にはみ出すホームページを直したい",
+      "summary": "画面が狭いと文字や画像がはみ出すページを、CSSで読みやすく直します。幅・段組み・画像の指定を順に確認します。",
+      "kind": "build",
+      "domainId": "web",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "css"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "jQuery",
+          "skillId": "jquery",
+          "reason": "今のJavaScriptは標準の機能だけで同じことが書けます。古いサイトを直す仕事で出会ったら、その範囲だけ覚えれば十分です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "パソコンでは読めるのにスマホでは横にスクロールしてしまうページを直す練習です。サイトを一から作るコースとは違い、すでにある見出し・画像・カードの幅を調べ、崩れの原因を説明できることを目指します。\n\n## まず取り組むこと\n\n1. 見出し、画像、カード一覧のある練習用ページを用意し、どの要素が画面の外へ出ているか調べます。\n2. 固定した幅を見直し、画像を親要素に収め、カードを狭い画面では縦に並べます。\n3. 画面幅を連続して変え、文字を拡大しても読めるか確認します。特定の機種の幅だけに合わせて終えません。\n\n## この目的で本を読む理由\n\n[CSSの学習項目](/skills/css)の入門書を使います。[出版社の紹介と目次](https://www.sbcr.jp/product/4815618469/)で、レスポンシブ、Flexbox、複数の段組みの制作を扱うことを確認しています。同じ本をHTML入門で使っていても、ここでは幅と配置の章を読み直す理由があります。\n\n## できたか確認すること\n\n狭い画面でも本文が横にはみ出さず、画像とカードが読める順に並び、修正したCSSの役割を説明できれば一区切りです。\n\n## 学習内容の根拠\n\n- [MDN：レスポンシブデザイン](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)：柔軟な配置、画像の幅、メディアクエリーを学ぶ根拠です。"
+    },
+    {
+      "id": "scroll-animation",
+      "slug": "scroll-animation",
+      "title": "スクロールに合わせた演出を作りたい",
+      "summary": "CSSとJavaScriptのアニメーションを押さえたうえで、スクロールに連動する演出をライブラリで作ります。",
+      "kind": "build",
+      "domainId": "web-animation",
+      "aliases": [
+        "スクロールアニメーションを作りたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "gsap-animation"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "3Dの表現（WebGL）",
+          "reason": "まず平面の動きを思い通りに作れるようになってからで十分です。3Dは別の技術の選び方が必要になります。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "スクロールに合わせて要素が動く演出は、ライブラリを使うと細かく制御できます。基本の動きを自分で作れることが前提です。"
+    },
+    {
+      "id": "search-console-improvements",
+      "slug": "search-console-improvements",
+      "title": "検索で表示されるのに読まれないページを調べたい",
+      "summary": "Search Consoleで検索語とページを確認し、表示回数とクリック数から見直す候補を探します。順位だけで良し悪しを決めない読み方を学びます。",
+      "kind": "build",
+      "domainId": "web-marketing",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "seo"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "検索順位を上げる小手先の手法",
+          "reason": "検索エンジンの評価は変わり続けます。流行の手法より、検索する人の質問に答えるという考え方を先に押さえます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "検索対策を全体的に学ぶ記事とは別に、改善するページを選ぶための練習です。自分が閲覧権限を持つサイトのデータで、検索された言葉とページの内容が合っているかを確かめます。\n\n## まず取り組むこと\n\n1. 対象の期間とページを決め、検索語、表示回数、クリック数を並べます。期間を変える場合は条件も記録します。\n2. 表示されている検索語に、そのページの見出しと本文が答えているかを読み直します。\n3. 書き直す候補と理由を記録し、変更後も同じ条件で確認できるようにします。\n\n## この目的で本を読む理由\n\n[SEO](/skills/seo)の入門書を使い、検索する人が知りたいこととページの関係を考えます。[出版社が説明する基礎の範囲](https://gihyo.jp/book/2026/978-4-297-15616-9)を判断の土台にし、Search Consoleの指標は公式ヘルプで確認します。ツールの操作だけで改善案を決めないための組み合わせです。\n\n## できたか確認すること\n\n見直すページ、検索語、修正理由、比較条件をひと組で説明できれば完成です。クリック率の低さだけで原因を断定せず、順位や検索意図の違いも確認します。\n\n## 学習内容の根拠\n\n- [Google：検索パフォーマンスレポート](https://support.google.com/webmasters/answer/7576553?hl=ja)：検索語・ページ別の表示回数とクリック数を使う根拠です。"
+    },
+    {
+      "id": "seo-basics",
+      "slug": "seo-basics",
+      "title": "ホームページを検索で見つけてもらいたい",
+      "summary": "HTMLの基本を押さえたうえで、検索エンジンが何を評価するかと、検索する人に合わせたページの作り方を学びます。",
+      "kind": "build",
+      "domainId": "web-marketing",
+      "aliases": [
+        "SEOを学びたい",
+        "検索順位を上げたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "seo"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "検索順位を上げる小手先の手法",
+          "reason": "検索エンジンの評価は変わり続けます。流行の手法より、検索する人の質問に答えるという考え方を先に押さえます。"
+        },
+        {
+          "label": "有料のSEOツールの導入",
+          "reason": "まず考え方を押さえるのが先です。ツールは、調べたいことが決まってから選びます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "SEOは、検索結果の上位に表示させるための裏技ではなく、検索する人が知りたいことに応えるページを作ることです。AIによる検索が広がっても、この考え方は変わりません。\n\nページの構造を正しく書くために、HTMLの基本を先に押さえます。"
+    },
+    {
+      "id": "server-operations",
+      "slug": "server-operations",
+      "title": "サーバーの運用保守の仕事がしたい",
+      "summary": "Linuxとネットワークの基本から始めて、資格の出題範囲を地図に運用で必要な範囲を一通り押さえ、監視の考え方まで学びます。",
+      "kind": "career",
+      "domainId": "infra-ops",
+      "aliases": [
+        "運用保守",
+        "運用保守の仕事がしたい",
+        "インフラエンジニアになりたい",
+        "サーバーエンジニアになりたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "linux-basics",
+        "network-basics",
+        "linuc-level1",
+        "shell-script",
+        "monitoring"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "Kubernetes",
+          "reason": "多数のコンテナをまとめて動かす仕組みです。1台のLinuxサーバーを扱えるようになってからで十分です。"
+        },
+        {
+          "label": "プログラミング言語を深く学ぶこと",
+          "reason": "運用保守の入口では、シェルスクリプトで定型作業を自動にできれば足ります。開発の仕事に進む段階で検討します。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "運用保守の仕事は、サーバーを止めずに動かし続け、異常に早く気づいて直すことです。まず1台のLinuxサーバーを自分で操作できるようになり、次に資格の出題範囲を使って、運用で必要な項目を抜けなく押さえます。\n\n資格は、取ること自体より「何を学べば一通りか」の地図として使います。"
+    },
+    {
+      "id": "service-monitoring",
+      "slug": "service-monitoring",
+      "title": "サイトの異常に気づいて対応できる監視を考えたい",
+      "summary": "利用者が困る状態を決め、確認する項目と通知後の手順を用意します。通知を増やすだけで終わらない監視の設計を学びます。",
+      "kind": "build",
+      "domainId": "infra-ops",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "monitoring"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "Kubernetes",
+          "reason": "多数のコンテナをまとめて動かす仕組みです。1台のLinuxサーバーを扱えるようになってからで十分です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "サーバーを動かす知識とは別に、動かなくなったときに誰がどう気づくかを考える課題です。架空の案内サイトを題材に、表示できない、応答が遅い、エラーが増えるといった状態を整理します。\n\n## まず取り組むこと\n\n1. 利用者ができなくなると困る操作を選び、その異常をどう確認するかを書きます。\n2. 通知先と対応する人、最初に調べる場所を決め、通知文の例を作ります。\n3. 練習環境の停止を想定し、気づく、連絡する、復旧を確認するまでの手順を読み合わせます。\n\n## この目的で本を読む理由\n\n[監視の考え方](/skills/monitoring)の本を使います。[出版社の目次](https://www.oreilly.co.jp/books/9784873118642/)にあるユーザー視点の監視とアラート・手順書が、この課題に対応します。特定ツールの画面を覚えるより、監視対象を選ぶ理由を学ぶための本です。\n\n## できたか確認すること\n\n通知を受けた人が何を確認するか分かり、復旧の判断も書けていれば一区切りです。監視を入れただけで故障を防げるとは考えず、通知の見落としや過剰さも後で見直します。\n\n## 学習内容の根拠\n\n- [Google SRE：分散システムの監視](https://sre.google/sre-book/monitoring-distributed-systems/)：利用者に見える症状と、原因調査に使う情報を分けて考える根拠です。"
+    },
+    {
+      "id": "shell-log-summary",
+      "slug": "shell-log-summary",
+      "title": "ログから必要な行を取り出す定型作業を自動化したい",
+      "summary": "ログの検索と集計をシェルスクリプトにまとめます。入力ファイル、出力先、失敗したときの動きを決めて同じ作業を繰り返せるようにします。",
+      "kind": "build",
+      "domainId": "infra-ops",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "shell-script"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "Kubernetes",
+          "reason": "多数のコンテナをまとめて動かす仕組みです。1台のLinuxサーバーを扱えるようになってからで十分です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "手作業で毎回同じ文字を検索する代わりに、決まった形式の練習用ログから情報を取り出します。サーバー運用全般ではなく、テキスト処理の手順を短いスクリプトへまとめる課題です。\n\n## まず取り組むこと\n\n1. 個人情報を含まない練習用ログから、指定した日付やエラーを持つ行を探します。\n2. 抽出、並べ替え、件数の集計を一つずつ確かめてからつなぎます。\n3. ファイルがない場合や該当する行がない場合も試し、元のログを上書きしない出力先を決めます。\n\n## この目的で本を読む理由\n\n[シェルスクリプト](/skills/shell-script)にある本を使います。[出版社の目次](https://gihyo.jp/book/2024/978-4-297-14236-0)にはテキストストリーム、パイプ、リダイレクト、シェルの学習範囲があります。資格の受験を勧めるためではなく、この作業に必要な項目を順に押さえるために使います。\n\n## できたか確認すること\n\n同じログから同じ結果を作れ、入力が違えば結果も変わることを確認します。ログの形式が変わった場合は処理を見直し、機密情報を含む実ログを外部へ送らない運用にします。\n\n## 学習内容の根拠\n\n- [技術評論社：LinuCレベル1教本の目次](https://gihyo.jp/book/2024/978-4-297-14236-0)：テキスト処理、パイプ、リダイレクトを組み合わせて学ぶ範囲の根拠です。"
+    },
+    {
+      "id": "sql-basics",
+      "slug": "sql-basics",
+      "title": "SQLでデータを扱えるようになりたい",
+      "summary": "データベースからデータを取り出す・追加する・更新するためのSQLを、基礎から学びます。",
+      "kind": "build",
+      "domainId": "database",
+      "aliases": [
+        "SQLを学びたい",
+        "データベースを使えるようになりたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "sql"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "特定のデータベース製品の細かい設定",
+          "reason": "SQLの基本は製品が変わってもほぼ共通です。製品ごとの設定は、使う製品が決まってから覚えます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "SQLは、データベースに「この条件のデータを、この順番で出して」と伝えるための言語です。Webアプリ、業務システム、データ分析など、多くの分野で使われます。\n\n基本の文法は製品が違ってもほぼ共通なので、どの分野に進む場合も最初に学ぶ価値があります。"
+    },
+    {
+      "id": "sql-join-reports",
+      "slug": "sql-join-reports",
+      "title": "顧客表と注文表をつないで一覧を作りたい",
+      "summary": "別々の表にある顧客名と注文情報をSQLで組み合わせます。結合の条件、注文のない顧客、重複する行の扱いを学びます。",
+      "kind": "build",
+      "domainId": "database",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "sql"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "特定のデータベース製品の細かい設定",
+          "reason": "SQLの基本は製品が変わってもほぼ共通です。製品ごとの設定は、使う製品が決まってから覚えます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "同じ名前を両方の表へ毎回書かず、IDで関連付けた表から一覧を作る練習です。SQL集計の記事とは異なり、表を結合したときに行が増えたり消えたりする理由を確かめます。\n\n## まず取り組むこと\n\n1. 顧客表と注文表を作り、1人が複数回注文した場合と、注文のない顧客を含めます。\n2. INNER JOINとLEFT JOINで一覧を作り、残る顧客と行数の違いを比較します。\n3. 同名の顧客を追加し、名前ではなくIDで結び付ける理由を確認します。\n\n## この目的で本を読む理由\n\n[SQL](/skills/sql)の本の[複数テーブルの結合の章](https://book.impress.co.jp/books/1123101107)を読みます。集計の前に、何を1行として取り出しているかを把握するための学習です。表そのものの設計に進む場合は、別のデータベース設計コースを使います。\n\n## できたか確認すること\n\n注文のない顧客を含めるかどうかを選べ、想定外の重複があれば結合条件を調べられることを確認します。\n\n## 学習内容の根拠\n\n- [PostgreSQL：表の結合](https://www.postgresql.org/docs/current/tutorial-join.html)：内部結合と外部結合の結果の違いを理解する根拠です。"
+    },
+    {
+      "id": "sql-sales-report",
+      "slug": "sql-sales-report",
+      "title": "売上データをSQLで月別・商品別に集計したい",
+      "summary": "明細データを集計し、月や商品ごとの売上を表にします。集計前の条件と集計後の条件を区別して学びます。",
+      "kind": "build",
+      "domainId": "database",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "sql"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "特定のデータベース製品の細かい設定",
+          "reason": "SQLの基本は製品が変わってもほぼ共通です。製品ごとの設定は、使う製品が決まってから覚えます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "SQLの文法を一通り眺めるより先に、集計表という成果物を作りたい人向けです。実在しない注文データを使い、対象期間と除外する注文を決めてから合計を計算します。\n\n## まず取り組むこと\n\n1. 注文日、商品、数量、単価、取消状態のある練習用明細を用意します。\n2. 集計対象の行を絞り、商品や月でまとめて件数と金額を出します。\n3. 少数の明細で手計算した値と照合し、取消や空の値をどう扱ったかを記録します。\n\n## この目的で本を読む理由\n\n[SQL](/skills/sql)の本の[集計とグループ化の章](https://book.impress.co.jp/books/1123101107)を中心に使います。同じ本を表の結合で使う場合とは違い、ここでは集計する単位と条件に注目します。日付のまとめ方は使用する製品の関数に合わせます。\n\n## できたか確認すること\n\n集計対象と計算方法を説明でき、明細の合計と集計表の合計を照合できれば完成です。練習結果の数値を実際の事業の売上として扱いません。\n\n## 学習内容の根拠\n\n- [PostgreSQL：集約関数](https://www.postgresql.org/docs/current/tutorial-agg.html)：集約関数、GROUP BY、WHEREとHAVINGの違いを学ぶ根拠です。"
+    },
+    {
+      "id": "team-development-goal",
+      "slug": "team-development-goal",
+      "title": "チームで開発する流れを知りたい",
+      "summary": "Gitの基本を押さえたうえで、レビューやタスク管理など、複数人で開発を進める方法を学びます。",
+      "kind": "build",
+      "domainId": "team-dev",
+      "aliases": [
+        "チーム開発を学びたい"
+      ],
+      "published": false,
+      "skillIds": [
+        "team-development"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "管理ツールの細かい機能を覚えること",
+          "reason": "ツールより先に、タスクの分け方とレビューの進め方を押さえます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "チームで開発するときは、作業の分け方と、互いのコードを確認する仕組みが大事です。"
+    },
+    {
+      "id": "test-automation-goal",
+      "slug": "test-automation-goal",
+      "title": "自動テストを書けるようになりたい",
+      "summary": "JavaScriptとGitの基本を押さえたうえで、壊れると困る部分から自動テストを書く方法を学びます。",
+      "kind": "build",
+      "domainId": "testing",
+      "aliases": [
+        "テストコードを書きたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "test-automation"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "テストの網羅率を目標にすること",
+          "reason": "数字を上げることより、壊れると困る部分から書くことが先です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "自動テストがあると、変更したときに壊れていないかをすぐに確かめられます。"
+    },
+    {
+      "id": "test-boundaries",
+      "slug": "test-boundaries",
+      "title": "入力欄で試すべき値を整理したい",
+      "summary": "文字数や数値の上限・下限から、確認する入力値を選びます。思いついた値だけで試すのをやめ、期待する結果を先に書きます。",
+      "kind": "build",
+      "domainId": "testing",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "web-testing"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "自動テストから始めること",
+          "reason": "まず、何を確認すべきかを手で確かめられることが先です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "画面全体の表示確認とは別に、ひとつの入力欄のルールからテストを作る練習です。架空の申込フォームで、空欄、受け付ける値、受け付けない値を整理します。ここで使う数値は練習用の入力条件です。\n\n## まず取り組むこと\n\n1. たとえば数量を1から5まで受け付ける、という練習用の仕様を決めます。\n2. 0、1、2、4、5、6と空欄を試す表を作り、入力前に期待結果を書きます。\n3. 実際の結果と比べ、仕様が曖昧だった箇所と実装の不具合を分けて記録します。\n\n## この目的で本を読む理由\n\n[Webサイトのテスト](/skills/web-testing)の本を使います。[出版社の内容紹介](https://www.ric.co.jp/book/development/detail/2395)が扱うテスト技法と設計の考え方を、入力値の選択に当てはめます。境界値という技法の定義はISTQBのシラバスでも確認します。試験を受けるためのコースではありません。\n\n## できたか確認すること\n\nどの値を選んだかをルールと対応付けて説明できれば完成です。境界だけで全ての不具合を見つけられるわけではなく、形式違いや項目間の組み合わせは別に確認します。\n\n## 学習内容の根拠\n\n- [ISTQB：Foundation Levelシラバス 4.2.2](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf)：境界値分析を、順序のある入力範囲の境目で考える根拠です。"
+    },
+    {
+      "id": "typescript-basics",
+      "slug": "typescript-basics",
+      "title": "TypeScriptで安全にコードを書きたい",
+      "summary": "JavaScriptの基礎を押さえたうえで、型を使って書き間違いを実行前に見つける書き方を学びます。",
+      "kind": "build",
+      "domainId": "frontend",
+      "aliases": [
+        "TypeScriptを学びたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "typescript"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "高度な型の書き方を深追いすること",
+          "reason": "最初は、変数や関数に型をつけてエラーを読めれば十分です。ライブラリを作る段階までは深追いしません。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "TypeScriptは、JavaScriptに型を加えた言語です。書いたコードを実行する前に、エディターが間違いを教えてくれます。\n\n書き方の土台はJavaScriptそのものなので、JavaScriptの基礎を先に押さえます。"
+    },
+    {
+      "id": "ui-design-basics",
+      "slug": "ui-design-basics",
+      "title": "ホームページのUIデザインを学びたい",
+      "summary": "デザインの基本原則から始めて、迷わず使えるボタンやメニューを作るためのUIデザインの考え方を学び、Figmaで画面にします。",
+      "kind": "build",
+      "domainId": "web-design",
+      "aliases": [
+        "UIデザインを学びたい",
+        "使いやすい画面を作りたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "ui-design",
+        "figma"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "UXリサーチの手法を深く学ぶこと",
+          "reason": "ユーザー調査の手法は、画面を作る基本が身についてから広げれば十分です。"
+        },
+        {
+          "label": "複数のデザインツールを並行して覚えること",
+          "reason": "まずFigma1つで画面を作れるようになるのが先です。ツールの操作より、何を作るかの判断が大事です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "UIデザインは、見た目を整えることだけではありません。ボタンやメニューを、迷わず押せて、押した結果が分かる形にすることです。\n\nまず配色・文字・レイアウトの基本原則を学び、次にUIの考え方、最後にFigmaで画面にします。"
+    },
+    {
+      "id": "unity-game",
+      "slug": "unity-game",
+      "title": "Unityでゲームを作りたい",
+      "summary": "プログラミングの基本を押さえたうえで、Unityで簡単なゲームを最後まで作ります。",
+      "kind": "build",
+      "domainId": "game",
+      "aliases": [
+        "Unityを学びたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "unity"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "3Dモデリングから始めること",
+          "reason": "まずは用意された素材で、動くゲームを1本作り切るのが先です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "Unityは、パソコンやスマホのゲームを作るためのゲームエンジンです。"
+    },
+    {
+      "id": "web-accessibility",
+      "slug": "web-accessibility",
+      "title": "誰でも使えるホームページを作りたい",
+      "summary": "HTML・CSSの基本を押さえたうえで、WCAGの考え方に沿って、障害のある人や高齢の人も使えるサイトにする方法を学びます。",
+      "kind": "build",
+      "domainId": "accessibility",
+      "aliases": [
+        "Webアクセシビリティを学びたい",
+        "アクセシビリティに対応したい"
+      ],
+      "published": true,
+      "skillIds": [
+        "web-accessibility"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "後付けの対応ツールだけに頼ること",
+          "reason": "サイトに部品を足すだけでは、根本的な対応にならないことが多いです。HTMLを正しく書くことが基本です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "アクセシビリティは、障害のある人のためだけのものではありません。スマホを片手で使う人、明るい屋外で画面を見る人など、さまざまな状況で使えるようにすることです。\n\n多くの対応はHTMLを正しく書くことから始まるため、HTMLとCSSの基本を先に押さえます。"
+    },
+    {
+      "id": "web-analytics-improve",
+      "slug": "web-analytics-improve",
+      "title": "アクセス解析でサイトを改善したい",
+      "summary": "SEOの基本を押さえたうえで、アクセス解析の数字からサイトの改善点を見つける方法を学びます。",
+      "kind": "build",
+      "domainId": "web-marketing",
+      "aliases": [
+        "アクセス解析を学びたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "web-analytics"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "多くの指標を一度に追うこと",
+          "reason": "最初は、目的に関係する数字を2〜3個に絞って見ます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "アクセス解析では、どこから人が来て、どのページで離れたかが分かります。数字を見る前に、サイトの目的を決めておくことが大事です。"
+    },
+    {
+      "id": "web-creator-career",
+      "slug": "web-creator-career",
+      "title": "Web制作を仕事にしたい",
+      "summary": "HTML・CSS・JavaScriptとデザインツールの基本を押さえ、作品集を作って仕事につなげます。",
+      "kind": "career",
+      "domainId": "web-career",
+      "aliases": [
+        "Webデザイナーになりたい",
+        "Web制作者になりたい"
+      ],
+      "published": false,
+      "skillIds": [
+        "javascript-basics",
+        "figma",
+        "web-portfolio"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "最初から多くの言語に手を広げること",
+          "reason": "ホームページ制作の仕事では、HTML・CSS・JavaScriptを確実に使えることが先です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "Web制作の仕事では、作れることに加えて、何を考えて作ったかを説明できることが求められます。"
+    },
+    {
+      "id": "web-security-dev",
+      "slug": "web-security-dev",
+      "title": "安全なWebアプリを作りたい",
+      "summary": "SQLとWebの仕組み、情報セキュリティの基礎を押さえたうえで、Webアプリの脆弱性が生まれる原理と対策を学びます。",
+      "kind": "build",
+      "domainId": "security",
+      "aliases": [
+        "脆弱性対策を学びたい",
+        "Webアプリのセキュリティを学びたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "sql",
+        "web-app-security"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "攻撃ツールの使い方から入ること",
+          "reason": "仕組みを知らないままツールを使っても、守る側の仕事には役立ちません。許可のない相手に使えば、法律に触れるおそれもあります。"
+        },
+        {
+          "label": "セキュリティ製品の導入から考えること",
+          "reason": "製品で防げるのは一部です。作る側が脆弱性の原理を知らないと、同じ問題を作り続けます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "Webアプリの脆弱性の多くは、作る側の書き方から生まれます。SQLインジェクションのように、データベースへの命令の組み立て方が原因になるものもあります。\n\nSQLとWebの仕組みを押さえてから、脆弱性の原理と対策に進みます。"
+    },
+    {
+      "id": "web-server-build",
+      "slug": "web-server-build",
+      "title": "自分でWebサーバーを立てて公開したい",
+      "summary": "Linuxとネットワークの基本を押さえたうえで、nginxでWebサイトを公開します。",
+      "kind": "build",
+      "domainId": "infra-ops",
+      "aliases": [
+        "Webサーバーを構築したい"
+      ],
+      "published": false,
+      "skillIds": [
+        "nginx-web-server"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "Kubernetes",
+          "reason": "多数のコンテナをまとめて動かす仕組みです。1台のLinuxサーバーを扱えるようになってからで十分です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "自分でWebサーバーを立てると、サイトが表示されるまでの仕組みを一通り理解できます。"
+    },
+    {
+      "id": "web-testing-goal",
+      "slug": "web-testing-goal",
+      "title": "作ったサイトの表示崩れや不具合を確認したい",
+      "summary": "確認する項目の作り方と、ブラウザや端末ごとの確認の進め方を学びます。",
+      "kind": "build",
+      "domainId": "testing",
+      "aliases": [
+        "サイトの動作確認をしたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "web-testing"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "自動テストから始めること",
+          "reason": "まず、何を確認すべきかを手で確かめられることが先です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "公開前の確認では、何をどの端末で確かめるかを一覧にしておくことが大事です。"
+    },
+    {
+      "id": "wordpress-backup",
+      "slug": "wordpress-backup",
+      "title": "WordPressを更新する前にバックアップと復元を練習したい",
+      "summary": "更新で不具合が出たときに戻せるよう、データとファイルを保存します。バックアップを取るだけでなく、練習環境で復元まで試します。",
+      "kind": "build",
+      "domainId": "cms",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "wordpress"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "PHP",
+          "reason": "テーマを自作するまでは不要です。まず管理画面とブロックエディターで作れる範囲を覚えます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "本番サイトの更新前に、戻せる手順を用意するための学習です。作業は複製した練習環境で行い、記事や画像が戻るかを確認します。特定のバックアップ用プラグインを入れることだけを目的にしません。\n\n## まず取り組むこと\n\n1. どの記事、画像、設定を戻す必要があるかを一覧にし、データベースとファイルの保存先を確認します。\n2. 同じ時点の保存データをひと組として残し、保存日と対象サイトが区別できるようにします。\n3. 練習環境へ戻し、記事、画像、ログイン、代表的なリンクを確認して手順を記録します。\n\n## この目的で本を読む理由\n\n[WordPress](/skills/wordpress)の本の[安全な運用の章](https://book.impress.co.jp/books/1124101161)を入口にします。実際の保存・復元手順はホスティング環境でも異なるため、本の画面だけを写さず、公式資料と利用先の案内を照合します。\n\n## できたか確認すること\n\n保存したデータから練習環境を復元でき、何が戻り、何が別途必要かを説明できれば一区切りです。復元を試していないファイルを、使えるバックアップと決めつけません。\n\n## 学習内容の根拠\n\n- [WordPress：バックアップ](https://developer.wordpress.org/advanced-administration/security/backup/)：復元にはデータベースとファイルを揃えて保存する必要があることの根拠です。"
+    },
+    {
+      "id": "wordpress-editor-workflow",
+      "slug": "wordpress-editor-workflow",
+      "title": "WordPressのお知らせを複数人で確認してから公開したい",
+      "summary": "書く人と公開を確認する人の役割を分け、お知らせを下書きから公開へ進めます。管理者権限を配る前に権限の違いを学びます。",
+      "kind": "build",
+      "domainId": "cms",
+      "aliases": [],
+      "published": true,
+      "skillIds": [
+        "wordpress"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "PHP",
+          "reason": "テーマを自作するまでは不要です。まず管理画面とブロックエディターで作れる範囲を覚えます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-11",
+      "body": "サイトを作る作業から一歩進み、複数の担当者で更新する手順を整えます。練習用サイトに担当を分けたアカウントを作り、下書き、確認、公開の順番を試します。特別な承認システムを開発するコースではありません。\n\n## まず取り組むこと\n\n1. 記事を書く人、内容を確認して公開する人、サイト設定を管理する人の作業を書き分けます。\n2. それぞれの役割でログインし、記事の作成・公開・設定変更で何ができるか確認します。\n3. 確認してほしい項目を一覧にし、画像、日付、リンク先を確認してから公開する練習をします。\n\n## この目的で本を読む理由\n\n[WordPress](/skills/wordpress)の入門書で管理画面の操作を押さえます。[出版社の目次](https://book.impress.co.jp/books/1124101161)にあるコンテンツ作成と安全な運用が基礎になります。本は6.x対応なので、権限の具体的な一覧は公式資料を確認します。\n\n## できたか確認すること\n\n書く担当者が不要な設定変更をできず、公開担当者が下書きを確認して公開できることを確かめます。複雑な承認段階や監査要件がある場合は、別の仕組みの検討が必要です。\n\n## 学習内容の根拠\n\n- [WordPress：権限グループと権限](https://wordpress.org/documentation/article/roles-and-capabilities/)：投稿の編集・公開や管理作業に必要な権限を確認する根拠です。"
+    },
+    {
+      "id": "wordpress-site",
+      "slug": "wordpress-site",
+      "title": "WordPressでサイトを作って自分で更新したい",
+      "summary": "Webの仕組みとHTML・CSSの基本を押さえたうえで、WordPressでサイトを作り、管理画面から更新できるようにします。",
+      "kind": "build",
+      "domainId": "cms",
+      "aliases": [
+        "WordPressでホームページを作りたい",
+        "自分で更新できるサイトを作りたい"
+      ],
+      "published": true,
+      "skillIds": [
+        "wordpress"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "PHP",
+          "reason": "テーマを自作するまでは不要です。まず管理画面とブロックエディターで作れる範囲を覚えます。"
+        },
+        {
+          "label": "プラグインをたくさん入れること",
+          "reason": "プラグインは便利ですが、増やすほど更新の手間と不具合の原因が増えます。必要なものだけ入れます。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "WordPressは、管理画面からお知らせやページを更新できる仕組みです。HTMLやCSSを知らなくても使い始められますが、表示を少し直したいときに基本が分かっていると困りません。\n\nWebの仕組みとHTML・CSSの基本を押さえてから、WordPressに進みます。"
+    },
+    {
+      "id": "wordpress-theme",
+      "slug": "wordpress-theme",
+      "title": "WordPressのオリジナルテーマを作りたい",
+      "summary": "WordPressの使い方とPHPの基礎を押さえたうえで、デザインに合わせたテーマを一から作ります。",
+      "kind": "build",
+      "domainId": "cms",
+      "aliases": [
+        "WordPressのテーマを自作したい"
+      ],
+      "published": true,
+      "skillIds": [
+        "wordpress-theme-dev"
+      ],
+      "branches": [],
+      "notNeededNow": [
+        {
+          "label": "Laravelなどのフレームワーク",
+          "reason": "WordPressのテーマ制作には使いません。PHPの基本とWordPressの仕組みが先です。"
+        }
+      ],
+      "relatedSituationIds": [],
+      "lastReviewed": "2026-10-10",
+      "body": "オリジナルテーマを作ると、デザインどおりのサイトをWordPressで更新できるようにできます。WordPressの使い方とPHPの基本が前提です。"
+    }
+  ],
+  "skills": [
+    {
+      "id": "a11y-standards",
+      "slug": "a11y-standards",
+      "title": "基準に沿ったアクセシビリティ改善（WCAG 2.2・JIS X 8341-3）",
+      "summary": "WCAGやJIS X 8341-3の基準に沿って、制作の各工程でアクセシビリティの問題を見つけて直す方法です。",
+      "canDo": "自社サイトの問題を基準に照らして洗い出し、直す順番を決めて改善を進められる。",
+      "domainIds": [
+        "accessibility"
+      ],
+      "prerequisites": [
+        "web-accessibility"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "web-accessibility",
+        "jis-x-8341-3"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "res-digital-agency-a11y-guidebook",
+          "level": "intro",
+          "reason": "何を達成すべきかを、JIS X 8341-3の達成基準に沿って説明している無料の資料です。対応の範囲を決めるときの土台になります。"
+        },
+        {
+          "resourceId": "book-a11y-kyokasho",
+          "level": "intro",
+          "reason": "制作の各工程で起きやすい問題と解決策を、実例つきのパターンで学べます。WCAG 2.2に対応した2026年刊です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "algorithm-basics",
+      "slug": "algorithm-basics",
+      "title": "アルゴリズムとデータ構造の基礎",
+      "summary": "探す・並べ替えるなどの処理を、効率よく行うための考え方です。",
+      "canDo": "よく使われる探索や並べ替えの方法を説明し、使い分けられる。",
+      "domainIds": [
+        "programming-basics"
+      ],
+      "prerequisites": [
+        "python-basics"
+      ],
+      "volatility": "low",
+      "technologyIds": [
+        "algorithm"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-shinmeikai-python-algo-2e",
+          "level": "intro",
+          "reason": "探索やソートなどの基本を、図表と動くPythonのプログラムで学べます。2025年の第2版です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "aws-basics",
+      "slug": "aws-basics",
+      "title": "AWSの基本",
+      "summary": "AWSでサーバー・ネットワーク・保存場所を用意するための基本です。",
+      "canDo": "AWS上にサーバーを用意して、サービスを動かせる。",
+      "domainIds": [
+        "cloud"
+      ],
+      "prerequisites": [
+        "linux-basics",
+        "network-basics"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "aws"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-aws-zukai-2",
+          "level": "intro",
+          "reason": "クラウドの基礎から主要なAWSサービスの役割とつながりまでを、図解で一通り押さえられます。2025年の改訂2版です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "cloud-architecture",
+      "slug": "cloud-architecture",
+      "title": "クラウドの設計（AWS認定の範囲）",
+      "summary": "止まりにくく、費用と安全性のバランスが取れた構成を考える方法です。",
+      "canDo": "要件に合わせて、AWSの構成を理由つきで設計できる。",
+      "domainIds": [
+        "cloud"
+      ],
+      "prerequisites": [
+        "aws-basics"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "aws"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-aws-saa-text-2",
+          "level": "intro",
+          "reason": "AWS認定ソリューションアーキテクト アソシエイト（SAA-C03）の出題範囲に沿っているので、構成を考えるうえで押さえる項目の地図として使えます。2026年刊です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "css-animation",
+      "slug": "css-animation",
+      "title": "CSSとJavaScriptのアニメーション",
+      "summary": "ボタンの動き、スクロールで現れる表示、画面の切り替えなど、ページに動きをつける実装です。",
+      "canDo": "よく使われる動きを、CSSとJavaScriptで自分で実装して調整できる。",
+      "domainIds": [
+        "web-animation"
+      ],
+      "prerequisites": [
+        "css",
+        "javascript-basics"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "css-animation",
+        "css",
+        "javascript"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-mana-moving-ui",
+          "level": "intro",
+          "reason": "ボタン、画像、画面遷移、スクロールなどの動きを、基本編と応用編に分けてサンプルコードつきで説明しています。HTML・CSS・JavaScriptの基礎を終えた人が対象です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "css",
+      "slug": "css",
+      "title": "CSS",
+      "summary": "色・文字・レイアウト・スマホでの表示など、ページの見た目を指定する言語です。",
+      "canDo": "パソコンとスマホの両方で崩れないレイアウトを作れる。",
+      "domainIds": [
+        "web"
+      ],
+      "prerequisites": [
+        "html"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "css"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-mana-html-css-2e",
+          "level": "intro",
+          "reason": "HTMLと同じ本で、Flexboxやレスポンシブ、モバイルファーストなど、今のレイアウトの組み方まで学べます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "data-analysis",
+      "slug": "data-analysis",
+      "title": "Pythonでのデータ分析",
+      "summary": "表形式のデータを読み込み、集計してグラフにする方法です。",
+      "canDo": "手元のデータを集計し、グラフにして傾向を説明できる。",
+      "domainIds": [
+        "data-ai"
+      ],
+      "prerequisites": [
+        "python-basics"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "pandas"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-python-data-analysis-3e",
+          "level": "intro",
+          "reason": "pandasの開発者による本で、データの読み込み・整形・集計・グラフ化を網羅しています。出版社の分類は中級〜上級なので、Pythonの基礎を終えてから読みます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "db-design",
+      "slug": "db-design",
+      "title": "データベース設計",
+      "summary": "データを重複なく、あとから使いやすい形で保存するための表の設計方法です。",
+      "canDo": "業務の内容から、表と表の関係を設計できる。",
+      "domainIds": [
+        "database"
+      ],
+      "prerequisites": [
+        "sql"
+      ],
+      "volatility": "low",
+      "technologyIds": [
+        "db-design"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-db-design-2e",
+          "level": "intro",
+          "reason": "正規化などの論理設計の基本から、やってはいけない設計までを、理由とあわせて学べます。出版社の分類は中級〜上級なので、SQLの基本を終えてから読みます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "design-basics",
+      "slug": "design-basics",
+      "title": "デザインの基本（配色・文字・レイアウト）",
+      "summary": "近接・整列・反復・コントラストなど、見やすい画面や資料を作るための基本原則です。",
+      "canDo": "要素の並べ方や余白、文字の大きさを、理由をつけて決められる。",
+      "domainIds": [
+        "web-design",
+        "design-tools"
+      ],
+      "prerequisites": [],
+      "volatility": "low",
+      "technologyIds": [
+        "graphic-design"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-non-designers-4e",
+          "level": "intro",
+          "reason": "デザインを専門に学んでいない人向けに、4つの基本原則を修正前と修正後の作例で説明しています。日本語版には和文の作例もあります。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "figma",
+      "slug": "figma",
+      "title": "Figma",
+      "summary": "Webサイトやアプリの画面デザイン（デザインカンプ）を作るためのツールです。",
+      "canDo": "ページのデザインカンプと、クリックできる試作（プロトタイプ）をFigmaで作れる。",
+      "domainIds": [
+        "design-tools",
+        "web-design"
+      ],
+      "prerequisites": [],
+      "volatility": "medium",
+      "technologyIds": [
+        "figma"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-figma-tsukutte",
+          "level": "intro",
+          "reason": "手順に沿って手を動かしながら、Figmaの操作とWeb・UIデザインの基本を学べます。2025年刊です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "freelance-business",
+      "slug": "freelance-business",
+      "title": "Web制作の見積もり・契約・進行",
+      "summary": "案件の見積もり、契約、ヒアリング、進行管理など、仕事として受けるための基本です。",
+      "canDo": "作業範囲を決めて見積もりを出し、契約から納品まで進められる。",
+      "domainIds": [
+        "web-career"
+      ],
+      "prerequisites": [],
+      "volatility": "low",
+      "technologyIds": [
+        "web-business"
+      ],
+      "status": "planned",
+      "resources": [],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "game-js",
+      "slug": "game-js",
+      "title": "JavaScriptでのゲーム作り（Canvas）",
+      "summary": "ブラウザの描画機能を使って、JavaScriptでゲームを作る方法です。",
+      "canDo": "ブラウザで遊べる簡単なゲームを作れる。",
+      "domainIds": [
+        "game"
+      ],
+      "prerequisites": [
+        "javascript-basics"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "canvas"
+      ],
+      "status": "planned",
+      "resources": [],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "generative-ai-use",
+      "slug": "generative-ai-use",
+      "title": "生成AIの仕事での使い方",
+      "summary": "文章や画像を作る生成AIを、仕事で安全に使うための指示の書き方と確認の仕方です。",
+      "canDo": "目的に合う指示を書き、出力の誤りを確認して使える。",
+      "domainIds": [
+        "data-ai"
+      ],
+      "prerequisites": [],
+      "volatility": "medium",
+      "technologyIds": [
+        "generative-ai"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-genai-saisoku",
+          "level": "intro",
+          "reason": "日報・議事録・メールなど身近な仕事を例に、指示（プロンプト）の型と、用途に合わせたツールの使い分けを学べます。2025年刊です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "git",
+      "slug": "git",
+      "title": "Git・GitHub",
+      "summary": "ファイルの変更履歴を記録し、チームで同じコードを安全に共有するための仕組みです。",
+      "canDo": "変更を記録して前の状態に戻したり、GitHubでほかの人と一緒に作業したりできる。",
+      "domainIds": [
+        "team-dev"
+      ],
+      "prerequisites": [],
+      "volatility": "low",
+      "technologyIds": [
+        "git",
+        "github"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-ichiban-git-3e",
+          "level": "intro",
+          "reason": "前半は手元のパソコンでのバージョン管理、後半はGitHubを使ったチームでの進め方を、コマンド操作を中心に学べます。2025年の第3版です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "gsap-animation",
+      "slug": "gsap-animation",
+      "title": "スクロール連動アニメーション（GSAP）",
+      "summary": "スクロールの位置に合わせて、要素を細かく動かす演出を作るためのライブラリです。",
+      "canDo": "スクロールに合わせた演出を、ライブラリを使って実装できる。",
+      "domainIds": [
+        "web-animation"
+      ],
+      "prerequisites": [
+        "css-animation"
+      ],
+      "volatility": "high",
+      "technologyIds": [
+        "gsap"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "res-gsap-official",
+          "level": "intro",
+          "reason": "スクロール連動の演出を作るScrollTriggerを含め、使い方とコード例が公式サイトにまとまっています。日本語で読める現行の入門書は見つかっていないため、公式サイトから始めます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "html",
+      "slug": "html",
+      "title": "HTML",
+      "summary": "ページの中身（見出し・文章・画像・リンク）を、意味のある構造で書くための言語です。",
+      "canDo": "文章や画像を、見出し・段落・リストなどの構造で1枚のページにできる。",
+      "domainIds": [
+        "web"
+      ],
+      "prerequisites": [
+        "web-basics"
+      ],
+      "volatility": "low",
+      "technologyIds": [
+        "html"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-mana-html-css-2e",
+          "level": "intro",
+          "reason": "HTMLとCSSを、1つのサイトを作りながら順に学べます。前半がHTMLの基本です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "javascript-basics",
+      "slug": "javascript-basics",
+      "title": "JavaScriptの基礎",
+      "summary": "メニューの開閉やスライドなど、ページに動きをつけるためのプログラミング言語の基本です。",
+      "canDo": "ボタンを押したらメニューが開く、といった動きを自分で書ける。",
+      "domainIds": [
+        "web"
+      ],
+      "prerequisites": [
+        "html",
+        "css"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "javascript"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-mana-javascript",
+          "level": "intro",
+          "reason": "jQueryを使わない今の書き方で、イベントやアニメーションまで学べます。最後にエラーの読み方と解決方法の章があります。"
+        },
+        {
+          "resourceId": "book-javascript-7e-ja",
+          "level": "reference",
+          "reason": "言語の仕様を体系的に確かめたいときに引く本です。入門書を終えてから使います。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "jquery",
+      "slug": "jquery",
+      "title": "jQuery",
+      "summary": "JavaScriptを短く書くために広く使われてきたライブラリです。",
+      "canDo": "既存サイトに書かれたjQueryのコードを読んで直せる。",
+      "domainIds": [
+        "web"
+      ],
+      "prerequisites": [],
+      "volatility": "medium",
+      "technologyIds": [
+        "jquery"
+      ],
+      "status": "legacy",
+      "legacyNote": "今のJavaScriptは標準の機能だけで同じことが書けるため、これから学ぶ順番には入れません。既存サイトの改修でjQueryのコードに出会ったときに、必要な範囲だけ覚えれば十分です。",
+      "resources": [],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "kotlin-android",
+      "slug": "kotlin-android",
+      "title": "KotlinとAndroidアプリ開発",
+      "summary": "Androidアプリを作るための言語Kotlinと、開発の基本です。",
+      "canDo": "画面と簡単な機能を持つAndroidアプリを作れる。",
+      "domainIds": [
+        "app"
+      ],
+      "prerequisites": [
+        "programming-basics"
+      ],
+      "volatility": "high",
+      "technologyIds": [
+        "kotlin"
+      ],
+      "status": "planned",
+      "resources": [],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "laravel",
+      "slug": "laravel",
+      "title": "Laravel",
+      "summary": "PHPでWebアプリを効率よく作るためのフレームワークです。",
+      "canDo": "会員登録や予約などの機能を持つWebアプリを作れる。",
+      "domainIds": [
+        "backend"
+      ],
+      "prerequisites": [
+        "php-basics",
+        "sql"
+      ],
+      "volatility": "high",
+      "technologyIds": [
+        "laravel"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-laravel-jissen",
+          "level": "intro",
+          "reason": "Laravelの基礎から、認証・認可などWebアプリに必要な機能までを、サンプルで体系的に学べます。2026年刊で、サンプルはLaravel 13で動作確認されています。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "linuc-level1",
+      "slug": "linuc-level1",
+      "title": "Linuxの体系的な整理（LinuCレベル1の範囲）",
+      "summary": "Linuxの運用で必要な項目を、資格の出題範囲を地図にして一通り押さえます。",
+      "canDo": "Linuxの運用で必要な操作と管理を、抜けなく一通り扱える。",
+      "domainIds": [
+        "infra-ops"
+      ],
+      "prerequisites": [
+        "linux-basics"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "linux",
+        "linuc"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "cert-linuc-level1",
+          "level": "intro",
+          "reason": "資格を取ること自体より、出題範囲が「Linuxの運用で必要な項目の一覧」になります。何を学べば一通りかの地図として使います。"
+        },
+        {
+          "resourceId": "book-saitan-linuc1-v10",
+          "level": "practice",
+          "reason": "出題範囲に沿って章が並んでいるので、地図の項目を順に埋めていけます。現行のVersion 10.0に対応しています。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "linux-basics",
+      "slug": "linux-basics",
+      "title": "Linuxの基本操作",
+      "summary": "サーバーで使われるLinuxを、コマンドで操作するための基本です。",
+      "canDo": "サーバーにログインして、ファイルの確認・編集・権限の変更ができる。",
+      "domainIds": [
+        "infra-ops",
+        "security"
+      ],
+      "prerequisites": [],
+      "volatility": "low",
+      "technologyIds": [
+        "linux",
+        "almalinux"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-illust-linux-2e",
+          "level": "intro",
+          "reason": "「コマンドって何？」という段階から、図解で学べます。学習用の仮想マシンで実際に動かしながら進められます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "monitoring",
+      "slug": "monitoring",
+      "title": "監視の考え方",
+      "summary": "サーバーやサービスの異常に早く気づくために、何をどう監視するかの考え方です。",
+      "canDo": "何を監視し、いつ誰に知らせるかを、理由をつけて決められる。",
+      "domainIds": [
+        "infra-ops"
+      ],
+      "prerequisites": [
+        "linux-basics",
+        "network-basics"
+      ],
+      "volatility": "low",
+      "technologyIds": [
+        "monitoring"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-intro-monitoring",
+          "level": "intro",
+          "reason": "特定のツールではなく、何を監視すべきかという原則から書かれているので、職場のツールが変わっても使えます。出版社の分類は初級〜中級です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "network-basics",
+      "slug": "network-basics",
+      "title": "ネットワークの基礎（TCP/IP）",
+      "summary": "IPアドレス、ルーティング、TCPなど、コンピューター同士がつながる仕組みです。",
+      "canDo": "「つながらない」ときに、どこで止まっているかを順に切り分けられる。",
+      "domainIds": [
+        "infra-ops",
+        "security"
+      ],
+      "prerequisites": [],
+      "volatility": "low",
+      "technologyIds": [
+        "tcp-ip"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-mastering-tcpip-6e",
+          "level": "intro",
+          "reason": "TCP/IPの基本を体系的に学べる定番です。分量が多いので、最初はネットワークとTCP/IPの基礎知識の章、IPとTCPの章から読みます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "nginx-web-server",
+      "slug": "nginx-web-server",
+      "title": "Webサーバーの構築（nginx）",
+      "summary": "Linuxサーバーにnginxを入れて、Webサイトを公開する方法です。",
+      "canDo": "自分で用意したサーバーで、Webサイトを公開して運用できる。",
+      "domainIds": [
+        "infra-ops"
+      ],
+      "prerequisites": [
+        "linux-basics",
+        "network-basics"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "nginx"
+      ],
+      "status": "planned",
+      "resources": [],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "photoshop",
+      "slug": "photoshop",
+      "title": "Photoshop",
+      "summary": "写真の補正・切り抜き・合成など、Webで使う画像を加工するためのソフトです。",
+      "canDo": "サイトに載せる写真の明るさや色を整え、切り抜き・合成して書き出せる。",
+      "domainIds": [
+        "design-tools"
+      ],
+      "prerequisites": [],
+      "volatility": "medium",
+      "technologyIds": [
+        "photoshop"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-photoshop-school-2026",
+          "level": "intro",
+          "reason": "補正・トリミング・合成などの基本操作を、練習ファイルつきでひととおり学べます。2026年対応版です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "php-basics",
+      "slug": "php-basics",
+      "title": "PHPの基礎",
+      "summary": "問い合わせフォームの送信処理など、サーバー側で動くプログラムを書くための言語の基本です。",
+      "canDo": "フォームから送られた内容を受け取り、処理して表示できる。",
+      "domainIds": [
+        "backend",
+        "cms"
+      ],
+      "prerequisites": [
+        "html"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "php"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-dokushu-php-4e",
+          "level": "intro",
+          "reason": "基本構文からフォーム処理、データベース連携、セキュリティまで、練習問題を解きながら順に学べます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "programming-basics",
+      "slug": "programming-basics",
+      "title": "プログラミングの基本（変数・条件分岐・繰り返し）",
+      "summary": "どの言語にも共通する、プログラムの基本的な組み立て方です。",
+      "canDo": "変数・条件分岐・繰り返しを使って、簡単な処理を書ける。",
+      "domainIds": [
+        "programming-basics"
+      ],
+      "prerequisites": [],
+      "volatility": "low",
+      "technologyIds": [
+        "programming"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-sukkiri-python-2e",
+          "level": "intro",
+          "reason": "変数・条件分岐・繰り返しといった、どの言語にも共通する基本を、Pythonを使ってゼロから学べます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "python-basics",
+      "slug": "python-basics",
+      "title": "Pythonの基礎",
+      "summary": "データ分析や自動化でよく使われる言語Pythonの基本です。",
+      "canDo": "Pythonで簡単なプログラムを書いて実行できる。",
+      "domainIds": [
+        "data-ai",
+        "programming-basics"
+      ],
+      "prerequisites": [
+        "programming-basics"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "python"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-sukkiri-python-2e",
+          "level": "intro",
+          "reason": "Pythonの文法を図解と例題で順に学べる入門書です。データ分析やアルゴリズムに進む前の土台になります。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "react",
+      "slug": "react",
+      "title": "React",
+      "summary": "画面を部品（コンポーネント）に分けて組み立てる、Webアプリの画面を作るためのライブラリです。",
+      "canDo": "画面を部品に分け、データに応じて表示が変わる画面を作れる。",
+      "domainIds": [
+        "frontend"
+      ],
+      "prerequisites": [
+        "javascript-basics"
+      ],
+      "volatility": "high",
+      "technologyIds": [
+        "react"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-react-design",
+          "level": "intro",
+          "reason": "React 19を対象に、画面を部品へ分ける考え方、propsとstate、状態の管理を日本語で学べます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "security-basics",
+      "slug": "security-basics",
+      "title": "情報セキュリティの基礎",
+      "summary": "脅威・脆弱性・リスクの考え方と、組織として情報を守るための基本的な対策です。",
+      "canDo": "社内で起きやすい事故と、その対策の優先順位を説明できる。",
+      "domainIds": [
+        "security"
+      ],
+      "prerequisites": [
+        "network-basics"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "information-security"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "cert-ipa-sg",
+          "level": "intro",
+          "reason": "国家試験のシラバスが、組織の情報セキュリティで押さえるべき項目の一覧になっています。取得よりも、学ぶ範囲の地図として使います。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "seo",
+      "slug": "seo",
+      "title": "SEOの基本",
+      "summary": "検索エンジンが何を評価するかを理解し、必要な人に見つけてもらえるページを作る考え方です。",
+      "canDo": "検索する人が知りたいことに合わせて、ページの内容とタイトルを決められる。",
+      "domainIds": [
+        "web-marketing"
+      ],
+      "prerequisites": [
+        "html"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "seo"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-seo-10years-new",
+          "level": "intro",
+          "reason": "会話形式で、検索エンジンが何を評価しているか、検索キーワードの裏にある質問は何かを学べる入門書です。2026年の改訂でAI検索にも対応しています。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "shell-script",
+      "slug": "shell-script",
+      "title": "シェルスクリプト",
+      "summary": "Linuxのコマンドを組み合わせて、毎日の定型作業を自動にするための書き方です。",
+      "canDo": "ログの整理や定期的な作業を、スクリプトで自動で動かせる。",
+      "domainIds": [
+        "infra-ops"
+      ],
+      "prerequisites": [
+        "linux-basics"
+      ],
+      "volatility": "low",
+      "technologyIds": [
+        "shell",
+        "linux"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-saitan-linuc1-v10",
+          "level": "intro",
+          "reason": "LinuCレベル1の出題範囲にシェルスクリプトとジョブの自動実行が含まれるため、この本の該当する章から始められます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "sql",
+      "slug": "sql",
+      "title": "SQLの基本",
+      "summary": "データベースからデータを取り出したり、追加・更新したりするための言語です。",
+      "canDo": "必要なデータを条件で絞り込み、並べ替えて取り出せる。",
+      "domainIds": [
+        "database",
+        "data-ai"
+      ],
+      "prerequisites": [],
+      "volatility": "low",
+      "technologyIds": [
+        "sql"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-sukkiri-sql-4e",
+          "level": "intro",
+          "reason": "図解と256問のドリルで、データベースとSQLを基礎から学べます。購入者特典のクラウド環境で、すぐにSQLを試せます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "studio-nocode",
+      "slug": "studio-nocode",
+      "title": "Studio（ノーコード）",
+      "summary": "コードを書かずに、画面上の操作でホームページを作って公開できるツールです。",
+      "canDo": "Studioでレスポンシブ対応のサイトを作り、お知らせ（CMS）を更新して公開できる。",
+      "domainIds": [
+        "web"
+      ],
+      "prerequisites": [
+        "web-basics"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "studio"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-studio-nocode",
+          "level": "intro",
+          "reason": "レスポンシブ対応の前提になるボックスレイアウトの考え方から、CMS、SEO、公開後の運用までを、基本と実践の演習で学べます。2026年刊です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "swift-ios",
+      "slug": "swift-ios",
+      "title": "SwiftとiPhoneアプリ開発",
+      "summary": "iPhoneアプリを作るための言語Swiftと、開発の基本です。",
+      "canDo": "画面と簡単な機能を持つiPhoneアプリを作れる。",
+      "domainIds": [
+        "app"
+      ],
+      "prerequisites": [
+        "programming-basics"
+      ],
+      "volatility": "high",
+      "technologyIds": [
+        "swift"
+      ],
+      "status": "planned",
+      "resources": [],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "team-development",
+      "slug": "team-development",
+      "title": "チーム開発の進め方（レビュー・タスク管理）",
+      "summary": "コードレビューやタスク管理など、複数人で開発を進めるための方法です。",
+      "canDo": "タスクを分けて担当し、レビューを受けながら開発を進められる。",
+      "domainIds": [
+        "team-dev"
+      ],
+      "prerequisites": [
+        "git"
+      ],
+      "volatility": "low",
+      "technologyIds": [
+        "team-development"
+      ],
+      "status": "planned",
+      "resources": [],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "test-automation",
+      "slug": "test-automation",
+      "title": "自動テストの考え方と導入",
+      "summary": "どの部分を自動テストにするかを決め、開発の流れに組み込むための考え方です。",
+      "canDo": "壊れると困る部分から自動テストにする計画を立て、導入の進め方を説明できる。",
+      "domainIds": [
+        "testing"
+      ],
+      "prerequisites": [
+        "web-testing",
+        "git"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "test-automation",
+        "software-testing"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-test-tetteishinan",
+          "level": "intro",
+          "reason": "テスト自動化を含むテスト技術を体系的に学び、どこから自動にするか、どう導入するかを判断できるようになります。2025年刊です。"
+        },
+        {
+          "resourceId": "book-test-theory",
+          "level": "reference",
+          "reason": "自動テストの章で、手で行うテストとの違いと役割分担を確認できます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "typescript",
+      "slug": "typescript",
+      "title": "TypeScript",
+      "summary": "JavaScriptに型を加えて、書き間違いを実行前に見つけられるようにした言語です。",
+      "canDo": "型をつけてJavaScriptのコードを書き、エディターのエラーを手がかりに直せる。",
+      "domainIds": [
+        "frontend"
+      ],
+      "prerequisites": [
+        "javascript-basics"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "typescript"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-pro-typescript",
+          "level": "intro",
+          "reason": "基本的な文法と型から高度な型の使い方まで、順に学べる入門書です。JavaScriptの基礎を終えてから読みます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "ui-design",
+      "slug": "ui-design",
+      "title": "UIデザインの基本",
+      "summary": "ボタンやメニュー、フォームなどを、迷わず使える形にするための考え方です。",
+      "canDo": "使いにくい画面を見て、どこが悪いのかを説明して直せる。",
+      "domainIds": [
+        "web-design"
+      ],
+      "prerequisites": [
+        "design-basics"
+      ],
+      "volatility": "low",
+      "technologyIds": [
+        "ui-design"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-ui-design-textbook-new",
+          "level": "intro",
+          "reason": "UIの定義から、画面などの制約、人の心理による影響、デザインを形にする方法までを、図で体系的に説明しています。"
+        },
+        {
+          "resourceId": "book-ui-design-41",
+          "level": "practice",
+          "reason": "現場でよくある使いにくさを41の改善例で示しているので、基本を学んだ後に自分の画面を見直すのに使えます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "unity",
+      "slug": "unity",
+      "title": "Unityの基本",
+      "summary": "パソコンやスマホのゲームを作るためのゲームエンジンの基本です。",
+      "canDo": "キャラクターを動かし、得点やゲームオーバーがある簡単なゲームを作れる。",
+      "domainIds": [
+        "game"
+      ],
+      "prerequisites": [
+        "programming-basics"
+      ],
+      "volatility": "high",
+      "technologyIds": [
+        "unity"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-unity-kyokasho-6",
+          "level": "intro",
+          "reason": "簡単な2Dゲームから順に作りながら、Unityの機能とゲーム作りの知識を学べます。Unity 6に対応した版です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "web-accessibility",
+      "slug": "web-accessibility",
+      "title": "Webアクセシビリティ",
+      "summary": "障害のある人や高齢の人を含め、誰でも情報を得て操作できるようにサイトを作るための基準と方法です。",
+      "canDo": "WCAGの考え方に沿って、画像の代替テキストや色、キーボード操作などを確認して直せる。",
+      "domainIds": [
+        "accessibility"
+      ],
+      "prerequisites": [
+        "html",
+        "css"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "web-accessibility",
+        "wcag"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "res-digital-agency-a11y-guidebook",
+          "level": "intro",
+          "reason": "デジタル庁が公開している無料の入門資料です。何を達成すべきかを、JIS X 8341-3の基準に沿って説明しています。"
+        },
+        {
+          "resourceId": "book-ichiban-a11y",
+          "level": "intro",
+          "reason": "WCAGの理解から、方針の策定、実装、評価までの流れを、実務の事例とあわせて学べます。2026年刊です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "web-analytics",
+      "slug": "web-analytics",
+      "title": "アクセス解析（Googleアナリティクス）",
+      "summary": "サイトにどこから人が来て、何を見ているかを数字で確認する方法です。",
+      "canDo": "目的に関係する数字を選び、サイトの改善点を見つけられる。",
+      "domainIds": [
+        "web-marketing"
+      ],
+      "prerequisites": [
+        "seo"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "ga4"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-ga4-yasashii-new",
+          "level": "intro",
+          "reason": "GA4の画面の見方から、集客・行動などの軸で分析するケーススタディまで、解説動画つきで学べます。2025年の改訂版です。"
+        },
+        {
+          "resourceId": "book-web-analysis-kaizen-3",
+          "level": "practice",
+          "reason": "分析の結果を改善策にどうつなげるか、改善の進め方とあわせて学べます。GA4の操作に慣れてから読みます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "web-app-security",
+      "slug": "web-app-security",
+      "title": "Webアプリの脆弱性と対策",
+      "summary": "SQLインジェクションやクロスサイト・スクリプティングなど、Webアプリで起きる脆弱性の原理と対策です。",
+      "canDo": "自社のWebサイトにどんな脆弱性がありうるかを、原理から説明できる。",
+      "domainIds": [
+        "security",
+        "web"
+      ],
+      "prerequisites": [
+        "web-basics",
+        "security-basics"
+      ],
+      "volatility": "medium",
+      "technologyIds": [
+        "web-security"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-tokumaru-2e",
+          "level": "intro",
+          "reason": "Webセキュリティの定番で、脆弱性が生まれる原理から学べます。分量が多いので、最初は原理を説明した章から読みます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "web-basics",
+      "slug": "web-basics",
+      "title": "Webの仕組み",
+      "summary": "ブラウザでページを開いたときに、サーバー・DNS・HTTPで何が起きているかの全体像です。",
+      "canDo": "HTMLやCSSを書く前に、作ったファイルがどこに置かれ、どうやって閲覧者に届くのかを説明できる。",
+      "domainIds": [
+        "web",
+        "security"
+      ],
+      "prerequisites": [],
+      "volatility": "low",
+      "technologyIds": [
+        "http"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "res-mdn-web-standards",
+          "level": "intro",
+          "reason": "無料で読める公式の学習資料です。ページが表示されるまでの流れを短く押さえられます。"
+        },
+        {
+          "resourceId": "book-web-gijutsu-kihon-2e",
+          "level": "intro",
+          "reason": "HTTP、DNS、サーバーなど、Web制作で出てくる用語と仕組みを、見開きの図解で一通り確認できます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "web-portfolio",
+      "slug": "web-portfolio",
+      "title": "ポートフォリオの作り方",
+      "summary": "自分が作ったものと、その考え方を伝えるための作品集の作り方です。",
+      "canDo": "制作物の目的・工夫・担当範囲を説明できる作品集を作れる。",
+      "domainIds": [
+        "web-career"
+      ],
+      "prerequisites": [
+        "html",
+        "css"
+      ],
+      "volatility": "low",
+      "technologyIds": [
+        "portfolio"
+      ],
+      "status": "planned",
+      "resources": [],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "web-testing",
+      "slug": "web-testing",
+      "title": "テストの基本（確認項目の作り方と進め方）",
+      "summary": "作ったサイトやアプリで、何をどう確認すればよいかを、テスト技法を使って洗い出す方法です。",
+      "canDo": "確認する項目をテスト技法で洗い出し、表示崩れや不具合を見つけて報告できる。",
+      "domainIds": [
+        "testing"
+      ],
+      "prerequisites": [
+        "html",
+        "css"
+      ],
+      "volatility": "low",
+      "technologyIds": [
+        "web-testing",
+        "software-testing"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-test-theory",
+          "level": "intro",
+          "reason": "テストの全体像と、確認する項目を洗い出すテスト技法を、初歩から体系的に学べます。Webサイトの確認にもそのまま当てはめられます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "wordpress-theme-dev",
+      "slug": "wordpress-theme-dev",
+      "title": "WordPressのオリジナルテーマ制作",
+      "summary": "デザインに合わせて、WordPressの見た目と構造を一から作る方法です。",
+      "canDo": "デザインカンプをもとに、WordPressのオリジナルテーマを作れる。",
+      "domainIds": [
+        "cms"
+      ],
+      "prerequisites": [
+        "wordpress",
+        "php-basics"
+      ],
+      "volatility": "high",
+      "technologyIds": [
+        "wordpress",
+        "php"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-wp-block-theme",
+          "level": "intro",
+          "reason": "今のWordPressの標準であるブロックテーマを、サイトエディターとtheme.jsonで作る流れを、作りながら学べます。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    },
+    {
+      "id": "wordpress",
+      "slug": "wordpress",
+      "title": "WordPress",
+      "summary": "お知らせやブログを、管理画面から自分で更新できるようにする仕組み（CMS）です。",
+      "canDo": "お店の人が自分でお知らせやメニューを更新できるサイトを作って公開できる。",
+      "domainIds": [
+        "web"
+      ],
+      "prerequisites": [
+        "html",
+        "css"
+      ],
+      "volatility": "high",
+      "technologyIds": [
+        "wordpress"
+      ],
+      "status": "active",
+      "resources": [
+        {
+          "resourceId": "book-ichiban-wordpress-7e",
+          "level": "intro",
+          "reason": "サーバーの準備から公開、プラグイン、安全な運用まで、手順どおりに進められる入門書です。"
+        }
+      ],
+      "lastReviewed": "2026-10-10"
+    }
+  ],
+  "technologies": [
+    {
+      "id": "threejs",
+      "officialUrl": "https://threejs.org/",
+      "releaseApi": "https://api.github.com/repos/mrdoob/three.js/releases/latest",
+      "volatility": "high",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "r3f",
+      "officialUrl": "https://r3f.docs.pmnd.rs/",
+      "releaseApi": "https://api.github.com/repos/pmndrs/react-three-fiber/releases/latest",
+      "volatility": "high",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "drei",
+      "officialUrl": "https://github.com/pmndrs/drei",
+      "releaseApi": "https://api.github.com/repos/pmndrs/drei/releases/latest",
+      "volatility": "high",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "model-viewer",
+      "officialUrl": "https://modelviewer.dev/",
+      "releaseApi": "https://api.github.com/repos/google/model-viewer/releases/latest",
+      "volatility": "high",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "babylonjs",
+      "officialUrl": "https://www.babylonjs.com/",
+      "releaseApi": "https://api.github.com/repos/BabylonJS/Babylon.js/releases/latest",
+      "volatility": "high",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "officialUrl": "https://react.dev/",
+      "releaseApi": "https://api.github.com/repos/facebook/react/releases/latest",
+      "volatility": "medium",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "nextjs",
+      "officialUrl": "https://nextjs.org/",
+      "releaseApi": "https://api.github.com/repos/vercel/next.js/releases/latest",
+      "volatility": "high",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "gsap",
+      "officialUrl": "https://gsap.com/",
+      "releaseApi": "https://api.github.com/repos/greensock/GSAP/releases/latest",
+      "volatility": "medium",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "webgpu",
+      "officialUrl": "https://www.w3.org/TR/webgpu/",
+      "releaseApi": null,
+      "volatility": "high",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "webgl",
+      "officialUrl": "https://registry.khronos.org/webgl/specs/latest/2.0/",
+      "releaseApi": null,
+      "volatility": "low",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "glsl",
+      "officialUrl": "https://registry.khronos.org/OpenGL/index_gl.php",
+      "releaseApi": null,
+      "volatility": "low",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "gltf",
+      "officialUrl": "https://www.khronos.org/gltf/",
+      "releaseApi": "https://api.github.com/repos/KhronosGroup/glTF/releases/latest",
+      "volatility": "medium",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "html",
+      "name": "HTML",
+      "officialUrl": "https://html.spec.whatwg.org/",
+      "releaseApi": null,
+      "volatility": "low",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "css",
+      "name": "CSS",
+      "officialUrl": "https://www.w3.org/Style/CSS/",
+      "releaseApi": null,
+      "volatility": "medium",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "officialUrl": "https://tc39.es/ecma262/",
+      "releaseApi": null,
+      "volatility": "medium",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "jquery",
+      "name": "jQuery",
+      "officialUrl": "https://jquery.com/",
+      "releaseApi": "https://api.github.com/repos/jquery/jquery/releases/latest",
+      "volatility": "medium",
+      "lastKnownVersion": null
+    },
+    {
+      "id": "wordpress",
+      "name": "WordPress",
+      "officialUrl": "https://wordpress.org/",
+      "releaseApi": null,
+      "volatility": "high",
+      "lastKnownVersion": null,
+      "currentVersion": "7.0",
+      "currentVersionCheckedAt": "2026-10-10",
+      "currentVersionSource": "https://raidboxes.io/en/blog/wordpress/wordpress-7-0/"
+    },
+    {
+      "id": "almalinux",
+      "name": "AlmaLinux",
+      "officialUrl": "https://almalinux.org/",
+      "releaseApi": null,
+      "volatility": "medium",
+      "lastKnownVersion": null,
+      "currentVersion": "10",
+      "currentVersionCheckedAt": "2026-10-10",
+      "currentVersionSource": "https://wiki.almalinux.org/release-notes/10.0.html"
+    },
+    {
+      "id": "laravel",
+      "name": "Laravel",
+      "officialUrl": "https://laravel.com/",
+      "releaseApi": "https://api.github.com/repos/laravel/framework/releases/latest",
+      "volatility": "high",
+      "lastKnownVersion": null,
+      "currentVersion": "13",
+      "currentVersionCheckedAt": "2026-10-10",
+      "currentVersionSource": "https://www.maruzenjunkudo.co.jp/products/9784815625290"
+    },
+    {
+      "id": "unity",
+      "name": "Unity",
+      "officialUrl": "https://unity.com/",
+      "releaseApi": null,
+      "volatility": "high",
+      "lastKnownVersion": null,
+      "currentVersion": null
+    }
+  ],
+  "situations": [
+    {
+      "id": "3d-product-viewer",
+      "slug": "3d-product-viewer",
+      "title": "3D商品ビューアを作りたい",
+      "summary": "商品モデルの回転・拡大・AR・UI連携を、要件と工数に合わせて選ぶための判断ページです。",
+      "type": "build",
+      "category": "products",
+      "published": true,
+      "defaultConditionIds": [
+        "mobile-priority"
+      ],
+      "conditionIds": [
+        "react-existing",
+        "ar-required",
+        "mobile-priority",
+        "short-deadline",
+        "advanced-visuals",
+        "maintainability-priority",
+        "existing-glsl-assets",
+        "small-team",
+        "performance-priority",
+        "simple-display"
+      ],
+      "approachIds": [
+        "model-viewer-product",
+        "threejs-gltf-product",
+        "r3f-product",
+        "babylonjs-product"
+      ],
+      "lastReviewed": "2026-08-23",
+      "body": "商品を3Dで見せるだけでも、実装方法によって自由度・工数・保守範囲が大きく変わります。\n\nこのページでは、単純な商品表示、AR、高度なシェーダー、React連携などの条件から、候補を絞り込みます。表示された順位は絶対評価ではなく、選択した条件に対する相対的な判断です。"
+    }
+  ],
+  "approaches": [
+    {
+      "id": "babylonjs-product",
+      "slug": "babylonjs-product",
+      "title": "Babylon.jsによる3Dアプリ型ビューア",
+      "shortTitle": "Babylon.js",
+      "summary": "エンジン機能を広く利用し、商品表示から複雑な3Dアプリへ拡張する構成です。",
+      "defaultLabel": "specialized",
+      "baseScore": 0,
+      "technologyIds": [
+        "babylonjs",
+        "gltf",
+        "typescript"
+      ],
+      "concepts": [
+        "scene",
+        "asset-loading",
+        "engine-tooling"
+      ],
+      "recommendedWhen": [
+        "ビューアから複雑な3Dアプリへ発展する",
+        "Babylon.jsの統合機能を活用したい"
+      ],
+      "notRecommendedWhen": [
+        "単純表示だけでよい",
+        "小さなチームで短期間に作る"
+      ],
+      "advantages": [
+        "統合された3Dエンジン機能が豊富",
+        "開発ツールを利用できる"
+      ],
+      "disadvantages": [
+        "小規模用途には機能と学習範囲が大きい",
+        "Three.js資産をそのまま流用できない"
+      ],
+      "learningPath": [
+        {
+          "resourceId": "res-babylon-loading",
+          "stage": "start",
+          "reason": "商品モデルの読み込み方法と対応形式を、まず公式ガイドで確認します。",
+          "showWhenAny": []
+        },
+        {
+          "resourceId": "book-going-the-distance-babylon",
+          "stage": "deepen",
+          "reason": "ビューアから複雑な3Dアプリへ広げる段階で、Babylon.jsの機能を一つのアプリを作りながら通しで学べます（英語、題材はゲーム）。",
+          "showWhenAny": []
+        }
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "model-viewer-product",
+      "slug": "model-viewer-product",
+      "title": "model-viewerによる商品表示",
+      "shortTitle": "model-viewer",
+      "summary": "Web Componentを使い、モデル表示・操作・AR導線を小さな実装範囲で提供する方法です。",
+      "defaultLabel": "fast",
+      "baseScore": 2,
+      "technologyIds": [
+        "model-viewer",
+        "web-components",
+        "gltf"
+      ],
+      "concepts": [
+        "gltf",
+        "ar",
+        "progressive-enhancement"
+      ],
+      "recommendedWhen": [
+        "単純な回転・拡大表示が中心",
+        "AR導線を短期間で実装したい",
+        "3D専任者がいない"
+      ],
+      "notRecommendedWhen": [
+        "独自シェーダーが主要要件",
+        "複雑な3Dシーンやゲームロジックが必要"
+      ],
+      "advantages": [
+        "実装範囲を抑えやすい",
+        "AR導線を組み込みやすい"
+      ],
+      "disadvantages": [
+        "レンダリング制御の自由度は低い",
+        "独自表現では内部制約を受ける"
+      ],
+      "learningPath": [
+        {
+          "resourceId": "res-model-viewer-docs",
+          "stage": "start",
+          "reason": "タグに属性を書くだけで回転・拡大・ARを付けられるため、本より先に公式の例を動かして確認するのが最短です。",
+          "showWhenAny": []
+        },
+        {
+          "resourceId": "res-model-viewer-ar-examples",
+          "stage": "start",
+          "reason": "AR表示の設定方法と、iPhone・Androidで動きがどう違うかを公式の実例で確認できます。",
+          "showWhenAny": [
+            "ar-required"
+          ]
+        },
+        {
+          "resourceId": "res-gltf-spec",
+          "stage": "stuck",
+          "reason": "モデルが表示されない、色や向きがおかしいなど、ファイル側の問題を疑うときにglTFの形式を確認します。",
+          "showWhenAny": []
+        }
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r3f-product",
+      "slug": "r3f-product",
+      "title": "React Three FiberによるReact統合型ビューア",
+      "shortTitle": "R3F + Three.js",
+      "summary": "Reactの宣言的な構成と状態管理の中にThree.jsシーンを組み込む方法です。",
+      "defaultLabel": "alternative",
+      "baseScore": 1,
+      "technologyIds": [
+        "react",
+        "r3f",
+        "threejs"
+      ],
+      "concepts": [
+        "react-reconciliation",
+        "scene",
+        "state-management"
+      ],
+      "recommendedWhen": [
+        "既存Reactアプリで3DとUI状態を連携する",
+        "チームがReactに習熟している"
+      ],
+      "notRecommendedWhen": [
+        "Reactを使用していない",
+        "単純表示だけで依存を増やしたくない"
+      ],
+      "advantages": [
+        "Reactコンポーネントとして管理できる",
+        "Dreiなど周辺機能を利用できる"
+      ],
+      "disadvantages": [
+        "ReactとThree.js双方の理解が必要",
+        "抽象化の挙動を理解せず最適化すると難しい"
+      ],
+      "learningPath": [
+        {
+          "resourceId": "res-r3f-intro",
+          "stage": "start",
+          "reason": "R3FのコードがThree.jsのどの機能に対応しているかを、まず公式の導入ガイドで確認します。",
+          "showWhenAny": []
+        },
+        {
+          "resourceId": "book-react-design",
+          "stage": "start",
+          "reason": "R3FはReactのコンポーネントと状態管理の上で動くため、Reactに慣れていない場合はこの本から始めます。",
+          "showWhenAny": []
+        },
+        {
+          "resourceId": "course-threejs-journey",
+          "stage": "start",
+          "reason": "Three.jsの基礎から始めて、後半の章でReact Three Fiberを扱う動画講座です（英語）。",
+          "showWhenAny": []
+        },
+        {
+          "resourceId": "res-r3f-performance",
+          "stage": "stuck",
+          "reason": "表示が重くなったときに、再描画の抑え方や同じモデルの使い回しなど、R3F特有の対処を確認します。",
+          "showWhenAny": []
+        },
+        {
+          "resourceId": "book-learn-threejs-4e",
+          "stage": "deepen",
+          "reason": "R3Fの下で動いているThree.jsそのものを理解したくなったときに読みます。ReactやTypeScriptとの組み合わせも扱っています（英語）。",
+          "showWhenAny": []
+        }
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "threejs-gltf-product",
+      "slug": "threejs-gltf-product",
+      "title": "Three.js + glTFによる商品ビューア",
+      "shortTitle": "Three.js + glTF",
+      "summary": "Three.jsでシーン・カメラ・ライト・モデル・UI連携を個別に設計する王道構成です。",
+      "defaultLabel": "canonical",
+      "baseScore": 3,
+      "technologyIds": [
+        "threejs",
+        "gltf",
+        "javascript"
+      ],
+      "concepts": [
+        "scene",
+        "camera",
+        "lighting",
+        "gltf",
+        "rendering",
+        "shader"
+      ],
+      "recommendedWhen": [
+        "独自演出やUI連携が必要",
+        "ライティングやマテリアルを調整したい"
+      ],
+      "notRecommendedWhen": [
+        "表示だけで十分で実装期間が短い",
+        "3D保守を担当できる人がいない"
+      ],
+      "advantages": [
+        "自由度が高い",
+        "3D Webの情報と事例が多い"
+      ],
+      "disadvantages": [
+        "設計・最適化・アクセシビリティを自分で担う",
+        "更新時の確認範囲が広い"
+      ],
+      "learningPath": [
+        {
+          "resourceId": "res-three-gltf",
+          "stage": "start",
+          "reason": "商品モデルの読み込みはGLTFLoaderが入口になるため、まず公式資料で現在の使い方を確認します。",
+          "showWhenAny": []
+        },
+        {
+          "resourceId": "course-threejs-journey",
+          "stage": "start",
+          "reason": "Three.jsを基礎から順に学べる動画講座で、シーン・カメラ・ライト・モデルの読み込みまで一通り扱います（英語）。",
+          "showWhenAny": []
+        },
+        {
+          "resourceId": "book-learn-threejs-4e",
+          "stage": "stuck",
+          "reason": "ライト、マテリアル、glTFなど外部モデルの読み込み、アニメーションを章ごとに引けるため、実装中に詰まった箇所を調べるのに向きます（英語）。",
+          "showWhenAny": []
+        },
+        {
+          "resourceId": "book-javascript-7e-ja",
+          "stage": "stuck",
+          "reason": "Three.jsのコードで、クラス・モジュール・非同期の読み込みなど、JavaScript自体の書き方でつまずいたときに引きます。",
+          "showWhenAny": []
+        },
+        {
+          "resourceId": "book-book-of-shaders",
+          "stage": "deepen",
+          "reason": "独自の質感や演出をシェーダーで作る段階で、GLSLの考え方を小さな例から学べます。",
+          "showWhenAny": [
+            "advanced-visuals",
+            "existing-glsl-assets"
+          ]
+        },
+        {
+          "resourceId": "book-webgl2-intro-2e-ja",
+          "stage": "deepen",
+          "reason": "描画が重い、独自シェーダーが思った通りに動かないなど、Three.jsの内側のWebGLまで確認する必要が出たときに読みます。",
+          "showWhenAny": [
+            "advanced-visuals",
+            "performance-priority",
+            "existing-glsl-assets"
+          ]
+        },
+        {
+          "resourceId": "book-real-time-rendering",
+          "stage": "deepen",
+          "reason": "ライティングやマテリアルを自分で作り込む段階で、描画の原理を体系的に確認する専門書です（英語）。",
+          "showWhenAny": [
+            "advanced-visuals"
+          ]
+        }
+      ],
+      "lastReviewed": "2026-08-23"
+    }
+  ],
+  "rules": [
+    {
+      "id": "r-pv-advanced-exclude-model",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "model-viewer-product",
+      "when": {
+        "all": [
+          "advanced-visuals"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "exclude"
+      },
+      "reason": "独自シェーダーや複雑なシーン制御が主要要件の場合、model-viewerの抽象化範囲を超えるため除外します。",
+      "evidenceIds": [
+        "ev-model-viewer-docs",
+        "ev-three-webgpu"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-advanced-three",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "threejs-gltf-product",
+      "when": {
+        "all": [
+          "advanced-visuals"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "マテリアル、ライト、カメラ、シェーダーを個別設計できるため独自表現に適します。",
+      "evidenceIds": [
+        "ev-three-gltfloader",
+        "ev-three-webgpu"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-ar-advanced-warning",
+      "situationId": "3d-product-viewer",
+      "when": {
+        "all": [
+          "ar-required",
+          "advanced-visuals"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "warn"
+      },
+      "reason": "ARの最短実装と高度な独自表現は同じApproachで両立しにくいため、AR導線とWeb内表現を分離する案も検討してください。",
+      "evidenceIds": [
+        "ev-model-viewer-ar",
+        "ev-three-webgpu"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-ar-model",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "model-viewer-product",
+      "when": {
+        "all": [
+          "ar-required"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 4
+      },
+      "reason": "AR導線を既成機能で提供できるため、AR必須ではmodel-viewerを優先します。",
+      "evidenceIds": [
+        "ev-model-viewer-ar"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-glsl-three",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "threejs-gltf-product",
+      "when": {
+        "all": [
+          "existing-glsl-assets"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "既存GLSL資産を直接活用する自由度が高いためThree.js構成を優先します。",
+      "evidenceIds": [
+        "ev-three-webgpu"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-maint-model",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "model-viewer-product",
+      "when": {
+        "all": [
+          "maintainability-priority",
+          "simple-display"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 1
+      },
+      "reason": "単純表示で保守性を重視する場合、公開API範囲が小さい構成を優先します。",
+      "evidenceIds": [
+        "ev-model-viewer-docs"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-no-react-r3f",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "r3f-product",
+      "when": {
+        "all": [],
+        "any": [],
+        "none": [
+          "react-existing"
+        ]
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 2
+      },
+      "reason": "Reactを使わない案件ではR3Fを導入する必然性が弱く、依存と学習範囲が増えます。",
+      "evidenceIds": [
+        "ev-r3f-intro"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-react-r3f",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "r3f-product",
+      "when": {
+        "all": [
+          "react-existing"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "既存React状態と3D UIを同じコンポーネントモデルで連携しやすいためR3Fを上げます。",
+      "evidenceIds": [
+        "ev-r3f-intro"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-short-babylon",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "babylonjs-product",
+      "when": {
+        "all": [
+          "short-deadline"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 2
+      },
+      "reason": "短納期の単純ビューアでは、統合エンジン全体を選ぶ利点より導入範囲が大きくなります。",
+      "evidenceIds": [
+        "ev-babylon-loading"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-short-model",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "model-viewer-product",
+      "when": {
+        "all": [
+          "short-deadline"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 2
+      },
+      "reason": "短納期ではシーン制御を一から構築せずに済む構成を優先します。",
+      "evidenceIds": [
+        "ev-model-viewer-docs"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-simple-model",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "model-viewer-product",
+      "when": {
+        "all": [
+          "simple-display"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "boost",
+        "weight": 3
+      },
+      "reason": "基本的なモデル表示と操作が中心なら、専用Web Componentで実装範囲を抑えられます。",
+      "evidenceIds": [
+        "ev-model-viewer-docs"
+      ],
+      "lastReviewed": "2026-08-23"
+    },
+    {
+      "id": "r-pv-small-babylon",
+      "situationId": "3d-product-viewer",
+      "targetApproachId": "babylonjs-product",
+      "when": {
+        "all": [
+          "small-team"
+        ],
+        "any": [],
+        "none": []
+      },
+      "effect": {
+        "type": "penalize",
+        "weight": 1
+      },
+      "reason": "小規模な商品表示では、広いエンジン機能を習得・保守する範囲が相対的に大きくなります。",
+      "evidenceIds": [
+        "ev-babylon-loading"
+      ],
+      "lastReviewed": "2026-08-23"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-babylon-loading",
+      "title": "Babylon.js asset loading",
+      "claim": "Babylon.jsはglTFを含む3D資産をシーンへ読み込むための公式ローダーと手順を提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Babylon.js",
+      "url": "https://doc.babylonjs.com/features/featuresDeepDive/importers/loadingFileTypes",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-model-viewer-ar",
+      "title": "model-viewer AR examples",
+      "claim": "model-viewerは対応環境でWebXRや各プラットフォームのAR表示へつなぐための機能を提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "model-viewer",
+      "url": "https://modelviewer.dev/examples/augmentedreality/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-model-viewer-docs",
+      "title": "model-viewer documentation",
+      "claim": "model-viewerはWeb Componentとして3Dモデル表示とユーザー操作を組み込むための公開APIを提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "model-viewer",
+      "url": "https://modelviewer.dev/docs/",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-r3f-intro",
+      "title": "React Three Fiber introduction",
+      "claim": "React Three FiberはThree.jsのReact rendererであり、Three.jsシーンをReactの宣言的構成で記述する。",
+      "sourceType": "official-documentation",
+      "sourceName": "React Three Fiber",
+      "url": "https://r3f.docs.pmnd.rs/getting-started/introduction",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-three-gltfloader",
+      "title": "Three.js GLTFLoader",
+      "claim": "Three.jsはglTF 2.0資産を読み込むGLTFLoaderを公式アドオンとして提供する。",
+      "sourceType": "official-documentation",
+      "sourceName": "Three.js",
+      "url": "https://threejs.org/docs/pages/GLTFLoader.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    },
+    {
+      "id": "ev-three-webgpu",
+      "title": "Three.js WebGPURenderer manual",
+      "claim": "Three.jsはWebGPURendererを提供し、WebGPU利用と対応状況に応じたバックエンド選択について説明している。",
+      "sourceType": "official-documentation",
+      "sourceName": "Three.js",
+      "url": "https://threejs.org/manual/en/webgpurenderer.html",
+      "primary": true,
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-08-23",
+      "conflictsWith": []
+    }
+  ],
+  "resources": [
+    {
+      "id": "book-a11y-kyokasho",
+      "type": "book",
+      "title": "具体例と解決策で学ぶ Webアクセシビリティの教科書",
+      "url": "https://www.maruzenjunkudo.co.jp/products/9784862466617",
+      "authors": [
+        "伊原力也",
+        "太田良典",
+        "秋山豊志",
+        "佐野実生",
+        "富本弥生",
+        "平尾優典",
+        "堀口真人"
+      ],
+      "language": "日本語",
+      "versionNote": "2026年刊・WCAG 2.2対応",
+      "isbn": "978-4-86246-661-7",
+      "bookTopicIds": [
+        "accessibility"
+      ],
+      "description": "よくあるアクセシビリティの問題点をイラストで示し、解決のアプローチを実例つきで説明する本。『デザイニングWebアクセシビリティ』をWCAG 2.2に対応させた増補改訂版で、Web制作会社による組織での取り組みの事例も収録。",
+      "technologyIds": [
+        "web-accessibility",
+        "wcag"
+      ],
+      "concepts": [
+        "accessibility"
+      ],
+      "currentUse": "制作の各工程で起きやすいアクセシビリティの問題を、パターンとして見つけて直せるようにする。",
+      "limitations": "営業・ディレクター・デザイナー・エンジニアなど、受発注に関わる人全体を対象にした本。実装の細かいコードは各仕様で確認する。",
+      "publishedYear": 2026,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-aws-saa-text-2",
+      "type": "book",
+      "title": "AWS認定ソリューションアーキテクト アソシエイト テキスト&問題集 第2版",
+      "url": "https://ndlsearch.ndl.go.jp/en/books/R100000002-I034507504",
+      "authors": [
+        "煤田弘法",
+        "西城俊介",
+        "上堂薗健"
+      ],
+      "language": "日本語",
+      "edition": "第2版",
+      "versionNote": "2026年刊・SAA-C03対応",
+      "isbn": "978-4-7981-9492-9",
+      "bookTopicIds": [
+        "architecture-operations"
+      ],
+      "description": "AWS認定ソリューションアーキテクト アソシエイト（SAA-C03）の出題範囲に沿ったテキストと問題集。模擬試験をダウンロードできる。",
+      "technologyIds": [
+        "aws"
+      ],
+      "concepts": [
+        "cloud-architecture"
+      ],
+      "currentUse": "出題範囲を、AWSの構成を考えるうえで押さえる項目の地図として使う。",
+      "limitations": "試験の版（SAA-C03）が改訂されたら差し替える。資格の取得そのものより、実際に構成を作って確かめることを優先する。",
+      "publishedYear": 2026,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-aws-zukai-2",
+      "type": "book",
+      "title": "図解即戦力 Amazon Web Servicesのしくみと技術がこれ1冊でしっかりわかる教科書［改訂2版］",
+      "url": "https://gihyo.jp/book/2025/978-4-297-14820-1",
+      "authors": [
+        "小笠原種高"
+      ],
+      "language": "日本語",
+      "edition": "改訂2版",
+      "versionNote": "2025年刊",
+      "isbn": "978-4-297-14820-1",
+      "bookTopicIds": [
+        "architecture-operations"
+      ],
+      "description": "クラウドとシステム構築の基礎から、主要なAWSサービスの役割とつながりまでを、図解で説明する本。",
+      "technologyIds": [
+        "aws"
+      ],
+      "concepts": [
+        "cloud"
+      ],
+      "currentUse": "AWSの主要なサービスが何をするもので、どう組み合わせるのかを理解する。",
+      "limitations": "手順書ではないため、実際の操作はAWSの公式ドキュメントで確認する。",
+      "publishedYear": 2025,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-book-of-shaders",
+      "type": "book",
+      "title": "The Book of Shaders",
+      "url": "https://thebookofshaders.com/?lan=jp",
+      "authors": [
+        "Patricio Gonzalez Vivo",
+        "Jen Lowe"
+      ],
+      "language": "日本語（一部英語）",
+      "versionNote": "無料オンラインブック",
+      "coverImageUrl": "https://thebookofshaders.com/thumb.png",
+      "coverImageAlt": "The Book of Shadersの公式画像",
+      "coverSourceName": "The Book of Shaders公式サイト",
+      "coverSourceUrl": "https://thebookofshaders.com/?lan=jp",
+      "bookTopicIds": [
+        "performance-graphics"
+      ],
+      "description": "GLSLとシェーダー表現を、実際に動かせる小さな例から学べる無料のオンラインブック。",
+      "technologyIds": [
+        "glsl"
+      ],
+      "concepts": [
+        "shader"
+      ],
+      "currentUse": "シェーダーの基本的な考え方と、形や色を数式で表現する方法を学ぶ。",
+      "limitations": "一部の章は日本語化されていない。Three.jsのWebGPURendererではGLSLで書いたShaderMaterialが使えずTSLへの書き換えが必要になるため、使うレンダラーを先に確認する。",
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-db-design-2e",
+      "type": "book",
+      "title": "達人に学ぶDB設計徹底指南書 第2版",
+      "url": "https://www.maruzenjunkudo.co.jp/products/9784798186627",
+      "authors": [
+        "ミック"
+      ],
+      "language": "日本語",
+      "edition": "第2版",
+      "versionNote": "2024年刊",
+      "isbn": "978-4-7981-8662-7",
+      "bookTopicIds": [
+        "data-ai-search"
+      ],
+      "description": "論理設計の基本、正規化、パフォーマンス、やってはいけないアンチパターンまでを、練習問題つきで体系的に説明する本。第2版でクラウドにも対応。",
+      "technologyIds": [
+        "db-design",
+        "sql"
+      ],
+      "concepts": [
+        "normalization"
+      ],
+      "currentUse": "業務の内容から、表と表の関係を理由をつけて設計できるようにする。",
+      "limitations": "出版社の分類は中級〜上級。SQLの基本を終えてから読む。",
+      "publishedYear": 2024,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-dokushu-php-4e",
+      "type": "book",
+      "title": "独習PHP 第4版",
+      "url": "https://www.kinokuniya.co.jp/f/dsg-01-9784798168494",
+      "authors": [
+        "山田祥寛"
+      ],
+      "language": "日本語",
+      "edition": "第4版",
+      "versionNote": "2021年刊・PHP 8対応",
+      "isbn": "978-4-7981-6849-4",
+      "bookTopicIds": [
+        "architecture-operations"
+      ],
+      "description": "PHP 8の基本構文から、クラス、データベース連携、セキュリティ、オブジェクト指向まで、Webアプリケーション開発に必要な基礎を練習問題つきで学ぶ入門書。",
+      "technologyIds": [
+        "php"
+      ],
+      "concepts": [
+        "server-side"
+      ],
+      "currentUse": "フォームの受け取りやデータベース連携など、サーバー側の処理をPHPで書けるようにする。",
+      "limitations": "2021年刊でPHP 8.0の時点の内容。その後のバージョンで増えた機能は公式マニュアルで確認する。647ページあるので、最初は基本構文、フォーム処理、データベース連携の章から読む。",
+      "publishedYear": 2021,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-figma-tsukutte",
+      "type": "book",
+      "title": "作って学ぶFigma入門［完全版］ ステップ・バイ・ステップで身につくWeb/UIデザインの基本",
+      "url": "https://www.kinokuniya.co.jp/f/dsg-01-9784297146788",
+      "authors": [
+        "古尾谷眞人"
+      ],
+      "language": "日本語",
+      "edition": "完全版",
+      "versionNote": "2025年刊",
+      "isbn": "978-4-297-14678-8",
+      "bookTopicIds": [
+        "design-ux"
+      ],
+      "description": "手順に沿って手を動かしながら、Figmaの操作とWeb・UIデザインの基本を学ぶ本。",
+      "technologyIds": [
+        "figma"
+      ],
+      "concepts": [
+        "prototyping"
+      ],
+      "currentUse": "Figmaでページのデザインカンプとプロトタイプを作れるようにする。",
+      "limitations": "Figmaは画面の変更が多いため、刊行後に変わった操作は公式ヘルプで確認する。辞書のように引く使い方には向かない。",
+      "publishedYear": 2025,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-ga4-yasashii-new",
+      "type": "book",
+      "title": "Googleアナリティクス4のやさしい教科書。改訂新版 手を動かしながら学ぶアクセス解析の基本と実践ポイント",
+      "url": "https://webtan.impress.co.jp/q/2025/07/49542",
+      "authors": [
+        "山野勉"
+      ],
+      "language": "日本語",
+      "edition": "改訂新版",
+      "versionNote": "2025年刊",
+      "isbn": "978-4-295-20750-4",
+      "bookTopicIds": [
+        "data-ai-search"
+      ],
+      "description": "GA4の管理画面と分析機能、ユーザー・集客・行動の軸で分析するケーススタディ、各種設定までを、解説動画つきで学ぶ本。",
+      "technologyIds": [
+        "ga4"
+      ],
+      "concepts": [
+        "web-analytics"
+      ],
+      "currentUse": "GA4の画面の見方と設定を覚え、数字からサイトの改善点を見つけられるようにする。",
+      "limitations": "GA4は画面の変更や機能の追加が多いため、刊行後に変わった画面は公式ヘルプで確認する。",
+      "publishedYear": 2025,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-genai-saisoku",
+      "type": "book",
+      "title": "生成AI最速仕事術",
+      "url": "https://www.kinokuniya.co.jp/f/dsg-08-EK-2122919",
+      "authors": [
+        "たてばやし淳"
+      ],
+      "language": "日本語",
+      "versionNote": "2025年刊",
+      "isbn": "978-4-7612-7805-2",
+      "bookTopicIds": [
+        "data-ai-search"
+      ],
+      "description": "日報、議事録、メール作成などの身近な仕事を例に、生成AIへの指示（プロンプト）の型と、用途に合わせたツールの使い分けを説明する本。",
+      "technologyIds": [
+        "generative-ai"
+      ],
+      "concepts": [
+        "prompting"
+      ],
+      "currentUse": "仕事の作業ごとに、生成AIへの指示の書き方を身につける。",
+      "limitations": "ツールの画面・機能・料金は変わりやすいため、使う前に各サービスの公式情報を確認する。出力に誤りがないかは、自分で確認する必要がある。",
+      "publishedYear": 2025,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-going-the-distance-babylon",
+      "type": "book",
+      "title": "Going the Distance with Babylon.js",
+      "url": "https://packtpub.com/en-gr/product/going-the-distance-with-babylon-dot-js-9781801073721",
+      "authors": [
+        "Josh Elster"
+      ],
+      "language": "英語",
+      "versionNote": "2022年刊・Babylon.js v5.0対象",
+      "isbn": "978-1-80107-372-1",
+      "bookTopicIds": [
+        "performance-graphics",
+        "architecture-operations"
+      ],
+      "description": "Babylon.jsで一つのブラウザゲームを作りながら、シーンの構成、PBRマテリアル、パーティクル、アニメーション、公開までを扱う本。",
+      "technologyIds": [
+        "babylonjs"
+      ],
+      "concepts": [
+        "scene",
+        "engine-tooling"
+      ],
+      "currentUse": "商品表示から複雑な3Dアプリへ広げるときに、Babylon.jsの機能とコードの組み立て方を通しで学ぶ。",
+      "limitations": "英語の書籍。対象はBabylon.js v5.0で、このサイトの検証環境はv8系のため差分は公式資料で確認する。題材はゲームで、商品ビューアの作り方を直接扱う本ではない。",
+      "publishedYear": 2022,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-ichiban-a11y",
+      "type": "book",
+      "title": "いちばんやさしいウェブアクセシビリティの教本 人気講師が教える誰もが使えるコンテンツ作り",
+      "url": "https://webtan.impress.co.jp/q/2026/05/52555",
+      "authors": [
+        "加藤善規"
+      ],
+      "language": "日本語",
+      "versionNote": "2026年刊",
+      "isbn": "978-4-295-02389-0",
+      "bookTopicIds": [
+        "accessibility"
+      ],
+      "description": "ウェブアクセシビリティの基礎とWCAGの理解から、方針の策定、実装、評価までの流れを、実務の事例とあわせて説明する入門書。",
+      "technologyIds": [
+        "web-accessibility",
+        "wcag"
+      ],
+      "concepts": [
+        "accessibility"
+      ],
+      "currentUse": "WCAGの考え方に沿って、自分のサイトの問題を見つけて直せるようにする。",
+      "limitations": "企業での取り組み方の章もあり、個人で作る人には一部読み飛ばしてよい部分がある。",
+      "publishedYear": 2026,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-ichiban-git-3e",
+      "type": "book",
+      "title": "いちばんやさしいGit&GitHubの教本 第3版 人気講師が教えるバージョン管理&共有入門",
+      "url": "https://webtan.impress.co.jp/q/2025/02/48515",
+      "authors": [
+        "横田紋奈",
+        "宇賀神みずき"
+      ],
+      "language": "日本語",
+      "edition": "第3版",
+      "versionNote": "2025年刊",
+      "isbn": "978-4-295-02092-9",
+      "bookTopicIds": [
+        "architecture-operations"
+      ],
+      "description": "前半は手元のパソコンでのバージョン管理、後半はGitHubを使ったチームでの開発の進め方を、コマンド操作を中心に説明する入門書。",
+      "technologyIds": [
+        "git",
+        "github"
+      ],
+      "concepts": [
+        "version-control"
+      ],
+      "currentUse": "変更の記録・取り消し・共有・衝突の解決ができるようにする。",
+      "limitations": "GUIのツールではなく、コマンド操作が中心。",
+      "publishedYear": 2025,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-ichiban-wordpress-7e",
+      "type": "book",
+      "title": "いちばんやさしいWordPressの教本 第7版 6.x対応",
+      "url": "https://www.kinokuniya.co.jp/f/dsg-08-EK-2249242",
+      "authors": [
+        "石川栄和",
+        "大串肇",
+        "星野邦敏"
+      ],
+      "language": "日本語",
+      "edition": "第7版",
+      "versionNote": "2025年刊・WordPress 6.x対応",
+      "isbn": "978-4-295-02290-9",
+      "bookTopicIds": [
+        "frontend",
+        "architecture-operations"
+      ],
+      "description": "サーバーとドメインの準備から、フルサイト編集でのサイト作り、プラグイン、集客、安全な運用までを手順どおりに進める入門書。",
+      "technologyIds": [
+        "wordpress"
+      ],
+      "concepts": [
+        "cms"
+      ],
+      "currentUse": "お店の人が管理画面からお知らせなどを更新できるサイトを、WordPressで作って公開する。",
+      "limitations": "HTMLやPHPの知識がなくても進められる操作中心の本。テーマを自作する段階では、PHPを別に学ぶ必要がある。",
+      "publishedYear": 2025,
+      "targetVersions": [
+        {
+          "technologyId": "wordpress",
+          "version": "6.x"
+        }
+      ],
+      "usesLegacySkillIds": [],
+      "outdatedNote": "2026年5月にWordPress 7.0が出ているため、管理画面の表示や一部の手順が本と違う場合があります。",
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-illust-linux-2e",
+      "type": "book",
+      "title": "イラストでそこそこわかるLinux 第2版 コマンド入力からネットワークのきほんのきまで",
+      "url": "https://www.maruzenjunkudo.co.jp/products/9784798181974",
+      "authors": [
+        "河野寿"
+      ],
+      "language": "日本語",
+      "edition": "第2版",
+      "versionNote": "2024年刊・AlmaLinux 9対応",
+      "isbn": "978-4-7981-8197-4",
+      "bookTopicIds": [
+        "architecture-operations"
+      ],
+      "description": "コマンドやディレクトリといった最初の言葉から、図解イラストで学ぶLinuxの入門書。学習用の仮想マシンで実際に動かしながら読み進められる。",
+      "technologyIds": [
+        "linux",
+        "almalinux"
+      ],
+      "concepts": [
+        "linux-administration"
+      ],
+      "currentUse": "Linuxを初めて触る人が、サーバーにログインしてファイルを操作できるところまで進める。",
+      "limitations": "入門の範囲に絞った本で、サーバー構築や運用の細かい設定は扱わない。",
+      "publishedYear": 2024,
+      "targetVersions": [
+        {
+          "technologyId": "almalinux",
+          "version": "9"
+        }
+      ],
+      "usesLegacySkillIds": [],
+      "outdatedNote": "基本的なコマンドは共通ですが、インストール画面などは現行の10と違う場合があります。",
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-intro-monitoring",
+      "type": "book",
+      "title": "入門 監視 ―モダンなモニタリングのためのデザインパターン",
+      "url": "https://www.oreilly.com/library/view/-/9784873118642/",
+      "authors": [
+        "Mike Julian",
+        "松浦隼人（訳）"
+      ],
+      "language": "日本語",
+      "versionNote": "2019年日本語版",
+      "isbn": "978-4-87311-864-2",
+      "bookTopicIds": [
+        "architecture-operations"
+      ],
+      "description": "何をどう監視すべきかを、アンチパターンとデザインパターン、アラートとインシデント対応から説明し、フロントエンド、アプリケーション、サーバ、ネットワーク、セキュリティの監視へ広げる本。",
+      "technologyIds": [
+        "monitoring"
+      ],
+      "concepts": [
+        "monitoring"
+      ],
+      "currentUse": "特定のツールに頼らず、何を監視し、いつ誰に知らせるかを決める考え方を身につける。",
+      "limitations": "監視ツールの操作手順の本ではない。使うツールの設定は各公式資料で確認する。",
+      "publishedYear": 2019,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-javascript-7e-ja",
+      "type": "book",
+      "title": "JavaScript 第7版",
+      "url": "https://www.oreilly.co.jp/books/9784873119700/",
+      "authors": [
+        "David Flanagan",
+        "村上列（訳）"
+      ],
+      "language": "日本語",
+      "edition": "第7版",
+      "versionNote": "2021年日本語版",
+      "isbn": "978-4-87311-970-0",
+      "coverImageUrl": "https://www.oreilly.co.jp/books/images/picture_large978-4-87311-970-0.jpeg",
+      "coverImageAlt": "JavaScript 第7版の表紙",
+      "coverSourceName": "オライリー・ジャパン",
+      "coverSourceUrl": "https://www.oreilly.co.jp/books/9784873119700/",
+      "bookTopicIds": [
+        "frontend",
+        "architecture-operations"
+      ],
+      "description": "JavaScriptの型、式、オブジェクト、クラス、モジュール、非同期処理、ブラウザとNode.jsでの利用を体系的に扱う本。",
+      "technologyIds": [
+        "javascript",
+        "nodejs"
+      ],
+      "concepts": [
+        "language-fundamentals",
+        "asynchronous-programming",
+        "modules"
+      ],
+      "currentUse": "ライブラリの使い方だけでは不足する、JavaScriptの言語仕様と実行の仕組みを確認する。",
+      "limitations": "2021年日本語版のため、その後に追加されたECMAScript機能とブラウザ・Node.jsのAPIは現在の公式資料で補う。",
+      "publishedYear": 2021,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-laravel-jissen",
+      "type": "book",
+      "title": "これからはじめるLaravel実践入門 MVCの基本からReact連携によるモダン開発まで",
+      "url": "https://www.maruzenjunkudo.co.jp/products/9784815625290",
+      "authors": [
+        "山田祥寛"
+      ],
+      "language": "日本語",
+      "versionNote": "2026年刊・Laravel 12以降対応（サンプルはLaravel 13で動作確認済み）",
+      "isbn": "978-4-8156-2529-0",
+      "bookTopicIds": [
+        "architecture-operations"
+      ],
+      "description": "Laravelの基礎から、Webアプリ開発に必要な知識をサンプルで体系的に学ぶ本。後半ではLaravelとReact（Inertia.js）の組み合わせや、認証・認可も扱う。",
+      "technologyIds": [
+        "laravel",
+        "php"
+      ],
+      "concepts": [
+        "web-framework"
+      ],
+      "currentUse": "会員登録や予約などの機能を持つWebアプリを、Laravelで作れるようにする。",
+      "limitations": "601ページある。後半のReactとの連携は、Laravelの基本を終えてから読む。",
+      "publishedYear": 2026,
+      "targetVersions": [
+        {
+          "technologyId": "laravel",
+          "version": "13"
+        }
+      ],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-learn-threejs-4e",
+      "type": "book",
+      "title": "Learn Three.js, Fourth Edition",
+      "url": "https://www.oreilly.com/library/view/-/9781803233871",
+      "authors": [
+        "Jos Dirksen"
+      ],
+      "language": "英語",
+      "edition": "第4版",
+      "versionNote": "2023年刊",
+      "isbn": "978-1-80323-387-1",
+      "bookTopicIds": [
+        "performance-graphics",
+        "frontend"
+      ],
+      "description": "Three.jsのシーン、ライト、マテリアル、ジオメトリ、glTFなど外部モデルの読み込み、アニメーション、シェーダーを章ごとに扱う本。Blender、React、TypeScriptとの組み合わせにも触れる。",
+      "technologyIds": [
+        "threejs",
+        "gltf",
+        "react",
+        "typescript"
+      ],
+      "concepts": [
+        "scene",
+        "lighting",
+        "rendering"
+      ],
+      "currentUse": "Three.jsで商品ビューアを実装しながら、ライト・マテリアル・モデルの読み込みで詰まった箇所を調べる。",
+      "limitations": "英語の書籍で、出版社の分類は中級〜上級。2023年刊のため、その後のThree.jsの変更（WebGPURendererやTSLなど）は公式資料で確認する。",
+      "publishedYear": 2023,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-mana-html-css-2e",
+      "type": "book",
+      "title": "1冊ですべて身につくHTML & CSSとWebデザイン入門講座［第2版］",
+      "url": "https://www.maruzenjunkudo.co.jp/products/9784815618469",
+      "authors": [
+        "Mana"
+      ],
+      "language": "日本語",
+      "edition": "第2版",
+      "versionNote": "2024年刊",
+      "isbn": "978-4-8156-1846-9",
+      "bookTopicIds": [
+        "frontend",
+        "design-ux"
+      ],
+      "description": "HTMLとCSSの基本から、レスポンシブ、モバイルファースト、Flexbox、アニメーションまでを、サイトを作りながら学ぶ入門書。",
+      "technologyIds": [
+        "html",
+        "css"
+      ],
+      "concepts": [
+        "semantic-html",
+        "responsive-layout"
+      ],
+      "currentUse": "HTMLとCSSでホームページを1つ作り上げるところまでを、順番に学ぶ。",
+      "limitations": "Webデザインと静的なサイト制作の本で、JavaScriptやWordPressは別の本で学ぶ。",
+      "publishedYear": 2024,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-mana-javascript",
+      "type": "book",
+      "title": "1冊ですべて身につくJavaScript入門講座",
+      "url": "https://www.kinokuniya.co.jp/f/dsg-01-9784815615758",
+      "authors": [
+        "Mana"
+      ],
+      "language": "日本語",
+      "versionNote": "2023年刊",
+      "isbn": "978-4-8156-1575-8",
+      "bookTopicIds": [
+        "frontend"
+      ],
+      "description": "JavaScriptの基本、イベント、配列などのデータ、アニメーション、Webページへの組み込み、エラーの解決方法までを扱う入門書。",
+      "technologyIds": [
+        "javascript"
+      ],
+      "concepts": [
+        "language-fundamentals",
+        "dom-events"
+      ],
+      "currentUse": "ホームページに、メニューの開閉やスライドなどの動きを自分で付けられるようにする。",
+      "limitations": "Webページに動きを付けるための入門書で、ReactなどのフレームワークやNode.jsは扱わない。",
+      "publishedYear": 2023,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-mana-moving-ui",
+      "type": "book",
+      "title": "CSSとJavaScriptで作る動くUIアイデアレシピ",
+      "url": "https://webtan.impress.co.jp/q/2025/04/48986",
+      "authors": [
+        "Mana"
+      ],
+      "language": "日本語",
+      "versionNote": "2025年刊",
+      "isbn": "978-4-295-02128-5",
+      "bookTopicIds": [
+        "frontend",
+        "design-ux"
+      ],
+      "description": "ボタン、画像、背景・画面遷移、ナビゲーションメニュー、スクロールなど、Webサイトでよく使う動きを、基本編・応用編とカスタマイズのポイントに分けて説明するレシピ集。",
+      "technologyIds": [
+        "css-animation",
+        "css",
+        "javascript"
+      ],
+      "concepts": [
+        "animation"
+      ],
+      "currentUse": "HTML・CSS・JavaScriptの基礎を終えた後に、よく使う動きを自分で実装して調整できるようにする。",
+      "limitations": "HTML・CSS・JavaScriptの基礎を学び終えた人が対象。",
+      "publishedYear": 2025,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-mastering-tcpip-6e",
+      "type": "book",
+      "title": "マスタリングTCP/IP 入門編（第6版）",
+      "url": "https://www.kinokuniya.co.jp/f/dsg-08-EK-0793146",
+      "authors": [
+        "井上直也",
+        "村山公保",
+        "竹下隆史",
+        "荒井透",
+        "苅田幸雄"
+      ],
+      "language": "日本語",
+      "edition": "第6版",
+      "versionNote": "2019年刊",
+      "isbn": "978-4-274-22447-8",
+      "bookTopicIds": [
+        "architecture-operations"
+      ],
+      "description": "ネットワークの基礎知識、TCP/IPの階層、IP、TCPとUDP、ルーティング、アプリケーションプロトコル、セキュリティまでを図と脚注で説明する定番書。",
+      "technologyIds": [
+        "tcp-ip"
+      ],
+      "concepts": [
+        "networking"
+      ],
+      "currentUse": "IPアドレス、ルーティング、TCPの仕組みを体系的に理解し、通信の問題を切り分けられるようにする。",
+      "limitations": "分量が多い（電子版で約690ページ）。最初から通読せず、基礎の章から読み始める。",
+      "publishedYear": 2019,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-non-designers-4e",
+      "type": "book",
+      "title": "ノンデザイナーズ・デザインブック［第4版］",
+      "url": "https://www.hanmoto.com/bd/isbn/9784839955557",
+      "authors": [
+        "Robin Williams"
+      ],
+      "language": "日本語",
+      "edition": "第4版",
+      "versionNote": "2016年刊",
+      "isbn": "978-4-8399-5555-7",
+      "bookTopicIds": [
+        "design-ux"
+      ],
+      "description": "デザインを専門に学んでいない人向けに、近接・整列・反復・コントラストの4つの基本原則を、修正前と修正後の作例で説明する本。日本語版には和文の作例も追加されている。",
+      "technologyIds": [
+        "graphic-design"
+      ],
+      "concepts": [
+        "layout"
+      ],
+      "currentUse": "見やすい画面や資料を作るための基本原則を身につける。",
+      "limitations": "Webに特化した本ではなく、印刷物やスライドの作例も多い。",
+      "publishedYear": 2016,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-photoshop-school-2026",
+      "type": "book",
+      "title": "デザインの学校 これからはじめるPhotoshopの本 2026年対応［改訂第10版］",
+      "url": "https://gihyo.jp/book/2026/978-4-297-15527-8",
+      "authors": [
+        "宮川千春",
+        "木俣カイ"
+      ],
+      "language": "日本語",
+      "edition": "改訂第10版",
+      "versionNote": "2026年刊・2026年対応",
+      "isbn": "978-4-297-15527-8",
+      "bookTopicIds": [
+        "design-ux"
+      ],
+      "description": "補正、トリミング、合成など、Photoshopのひととおりの基本操作とレタッチの基礎知識を、練習ファイルつきで学ぶ入門書。生成AIの機能も扱う。",
+      "technologyIds": [
+        "photoshop"
+      ],
+      "concepts": [
+        "image-editing"
+      ],
+      "currentUse": "サイトに載せる写真を補正・切り抜き・合成して書き出せるようにする。",
+      "limitations": "毎年改訂されるシリーズのため、新しい年の版が出たら差し替える。",
+      "publishedYear": 2026,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-pro-typescript",
+      "type": "book",
+      "title": "プロを目指す人のためのTypeScript入門 安全なコードの書き方から高度な型の使い方まで",
+      "url": "https://gihyo.jp/book/2022/978-4-297-12747-3",
+      "authors": [
+        "鈴木僚太"
+      ],
+      "language": "日本語",
+      "versionNote": "2022年刊",
+      "isbn": "978-4-297-12747-3",
+      "bookTopicIds": [
+        "frontend"
+      ],
+      "description": "TypeScriptの基本的な文法と型から、高度な型の使い方までを順に説明する入門書。",
+      "technologyIds": [
+        "typescript"
+      ],
+      "concepts": [
+        "type-safety"
+      ],
+      "currentUse": "JavaScriptに型をつけて書き、エラーを手がかりにコードを直せるようにする。",
+      "limitations": "後半の高度な型の章は、最初は読み飛ばしてよい。",
+      "publishedYear": 2022,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-python-data-analysis-3e",
+      "type": "book",
+      "title": "Pythonによるデータ分析入門 第3版 pandas、NumPy、Jupyterを使ったデータ処理",
+      "url": "https://www.kinokuniya.co.jp/f/dsg-01-9784814400195",
+      "authors": [
+        "Wes McKinney",
+        "瀬戸山雅人（訳）",
+        "小林儀匡（訳）"
+      ],
+      "language": "日本語",
+      "edition": "第3版",
+      "versionNote": "2023年刊・pandas 2.0対応",
+      "isbn": "978-4-8144-0019-5",
+      "bookTopicIds": [
+        "data-ai-search"
+      ],
+      "description": "pandasの開発者が、pandas・NumPy・Jupyterを使ったデータ処理の基本を網羅して説明する本。pandas 2.0に対応。",
+      "technologyIds": [
+        "pandas",
+        "python"
+      ],
+      "concepts": [
+        "data-analysis"
+      ],
+      "currentUse": "表形式のデータを読み込み、整形・集計してグラフにできるようにする。",
+      "limitations": "出版社の分類は中級〜上級。612ページあるので、データの読み込み・整形・集計・グラフの章から読む。",
+      "publishedYear": 2023,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-react-design",
+      "type": "book",
+      "title": "React本格入門 ～実践力が身に付くコンポーネント開発～",
+      "url": "https://gihyo.jp/book/2026/978-4-297-15523-0",
+      "authors": [
+        "樹下雅章"
+      ],
+      "language": "日本語",
+      "versionNote": "React 19対応",
+      "isbn": "978-4-297-15523-0",
+      "coverImageUrl": "https://gihyo.jp/assets/images/cover/2026/thumb/TH800_9784297155230.jpg",
+      "coverImageAlt": "React本格入門の表紙",
+      "coverSourceName": "技術評論社",
+      "coverSourceUrl": "https://gihyo.jp/book/2026/978-4-297-15523-0",
+      "bookTopicIds": [
+        "frontend",
+        "architecture-operations"
+      ],
+      "description": "React 19を対象に、画面を部品へ分ける考え方、propsとstate、状態管理を日本語で学べる本。",
+      "technologyIds": [
+        "react"
+      ],
+      "concepts": [
+        "component-design",
+        "state-management"
+      ],
+      "currentUse": "React Three FiberをReactアプリへ組み込む際の、コンポーネント設計と状態の分け方を理解する。",
+      "limitations": "React Three FiberやThree.js自体の詳しい使い方は扱わないため、それぞれの公式資料も確認する。",
+      "publishedYear": 2026,
+      "targetVersions": [
+        {
+          "technologyId": "react",
+          "version": "19"
+        }
+      ],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-real-time-rendering",
+      "type": "book",
+      "title": "Real-Time Rendering, Fourth Edition",
+      "url": "https://www.routledge.com/Real-Time-Rendering-Fourth-Edition/Akenine-Moller-Haines-Hillaire-Hoffman-Iwanicki-Pesce/p/book/9781138627000",
+      "authors": [
+        "Tomas Akenine-Möller",
+        "Eric Haines",
+        "Naty Hoffman",
+        "Angelo Pesce",
+        "Michał Iwanicki",
+        "Sébastien Hillaire"
+      ],
+      "language": "英語",
+      "edition": "第4版",
+      "isbn": "978-1-138-62700-0",
+      "coverImageUrl": "https://covers.openlibrary.org/b/id/9234619-M.jpg",
+      "coverImageAlt": "Real-Time Rendering 第4版の表紙",
+      "coverSourceName": "Open Library",
+      "coverSourceUrl": "https://openlibrary.org/isbn/9781138627000",
+      "bookTopicIds": [
+        "performance-graphics"
+      ],
+      "description": "リアルタイムで3Dを描画するための原理とアルゴリズムを、幅広く体系的に学べる本。",
+      "technologyIds": [
+        "webgl",
+        "webgpu"
+      ],
+      "concepts": [
+        "rendering",
+        "lighting",
+        "gpu"
+      ],
+      "currentUse": "個別のAPIに依存しない、描画・光・GPU処理の基本原理を理解する。",
+      "limitations": "英語の書籍であり、Three.jsなど個別ライブラリの最新API解説ではない。",
+      "publishedYear": 2018,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-saitan-linuc1-v10",
+      "type": "book",
+      "title": "最短突破 LinuCレベル1 バージョン10.0合格教本［101試験, 102試験対応］改訂新版",
+      "url": "https://gihyo.jp/book/2024/978-4-297-14236-0",
+      "authors": [
+        "河原木忠司"
+      ],
+      "language": "日本語",
+      "edition": "改訂新版",
+      "versionNote": "2024年刊・LinuC Version 10.0対応",
+      "isbn": "978-4-297-14236-0",
+      "bookTopicIds": [
+        "architecture-operations"
+      ],
+      "description": "LinuCレベル1（101試験・102試験）の出題範囲に沿って、Linuxの操作と管理を解説する教科書。",
+      "technologyIds": [
+        "linuc",
+        "linux"
+      ],
+      "concepts": [
+        "linux-administration"
+      ],
+      "currentUse": "出題範囲を地図にして、Linuxの運用で必要な項目を一つずつ埋めていく。",
+      "limitations": "資格試験の範囲に沿った本のため、実際の職場の構成や手順とは違う部分がある。",
+      "publishedYear": 2024,
+      "targetVersions": [],
+      "targetExam": {
+        "certificationId": "cert-linuc-level1",
+        "version": "10.0"
+      },
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-seo-10years-new",
+      "type": "book",
+      "title": "10年つかえるSEOの基本【改訂新版】",
+      "url": "https://gihyo.jp/book/2026/978-4-297-15616-9",
+      "authors": [
+        "土居健太郎"
+      ],
+      "language": "日本語",
+      "edition": "改訂新版",
+      "versionNote": "2026年刊・AI検索対応",
+      "isbn": "978-4-297-15616-9",
+      "bookTopicIds": [
+        "data-ai-search"
+      ],
+      "description": "検索エンジンが何を評価しているか、検索キーワードの裏にある本当の質問は何かを、会話形式で学ぶSEOの入門書。2026年の改訂でAI検索に対応。",
+      "technologyIds": [
+        "seo"
+      ],
+      "concepts": [
+        "search"
+      ],
+      "currentUse": "検索する人の質問に応えるページを作るための考え方を身につける。",
+      "limitations": "128ページの入門書で、細かい設定や分析の手順は扱わない。",
+      "publishedYear": 2026,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-shinmeikai-python-algo-2e",
+      "type": "book",
+      "title": "新・明解Pythonで学ぶアルゴリズムとデータ構造 第2版",
+      "url": "https://www.maruzenjunkudo.co.jp/products/9784815637217",
+      "authors": [
+        "柴田望洋"
+      ],
+      "language": "日本語",
+      "edition": "第2版",
+      "versionNote": "2025年刊",
+      "isbn": "978-4-8156-3721-7",
+      "bookTopicIds": [
+        "data-ai-search"
+      ],
+      "description": "探索、ソート、スタック・キュー、再帰、線形リスト、2分探索木などを、216点の図表と166本の動くプログラムで学ぶ本。",
+      "technologyIds": [
+        "algorithm",
+        "python"
+      ],
+      "concepts": [
+        "data-structure"
+      ],
+      "currentUse": "よく使われる探索や並べ替えの方法を、図とPythonのコードで理解する。",
+      "limitations": "Pythonの基本文法は分かっている前提で読む。",
+      "publishedYear": 2025,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-studio-nocode",
+      "type": "book",
+      "title": "基礎と実践で学ぶ Studio ノーコードの教科書",
+      "url": "https://gihyo.jp/book/2026/978-4-297-15747-0",
+      "authors": [
+        "飛企画株式会社"
+      ],
+      "language": "日本語",
+      "versionNote": "2026年刊",
+      "isbn": "978-4-297-15747-0",
+      "bookTopicIds": [
+        "frontend",
+        "design-ux"
+      ],
+      "description": "Studioの基本操作、レスポンシブ対応の前提となるボックスレイアウトの考え方、CMSの構築、SEO対策、Google Analytics連携、公開後の運用までを、基本と実践の演習で学ぶ本。",
+      "technologyIds": [
+        "studio"
+      ],
+      "concepts": [
+        "no-code"
+      ],
+      "currentUse": "Studioでレスポンシブ対応のサイトを作り、CMSで更新して公開できるようにする。",
+      "limitations": "Studioの画面や機能は更新されるため、刊行後の変更は公式のヘルプで確認する。",
+      "publishedYear": 2026,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-sukkiri-python-2e",
+      "type": "book",
+      "title": "スッキリわかるPython入門 第2版",
+      "url": "https://www.kinokuniya.co.jp/f/dsg-01-9784295016366",
+      "authors": [
+        "国本大悟",
+        "須藤秋良"
+      ],
+      "language": "日本語",
+      "edition": "第2版",
+      "versionNote": "2023年刊",
+      "isbn": "978-4-295-01636-6",
+      "bookTopicIds": [
+        "data-ai-search"
+      ],
+      "description": "Pythonの基本を、図解と例題を使ってゼロから学ぶ入門書。",
+      "technologyIds": [
+        "python",
+        "programming"
+      ],
+      "concepts": [
+        "language-fundamentals"
+      ],
+      "currentUse": "変数・条件分岐・繰り返しなど、プログラミングの基本をPythonで身につける。",
+      "limitations": "入門書のため、データ分析やWebアプリの作り方は別の本で学ぶ。",
+      "publishedYear": 2023,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-sukkiri-sql-4e",
+      "type": "book",
+      "title": "スッキリわかるSQL入門 第4版 ドリル256問付き！",
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033284494",
+      "authors": [
+        "中山清喬",
+        "飯田理恵子"
+      ],
+      "language": "日本語",
+      "edition": "第4版",
+      "versionNote": "2024年刊",
+      "isbn": "978-4-295-01846-9",
+      "bookTopicIds": [
+        "data-ai-search"
+      ],
+      "description": "図解と256問のドリルで、データベースとSQLを基礎から学ぶ入門書。購入者特典のクラウド環境「dokoQL」で、すぐにSQLを実行できる。",
+      "technologyIds": [
+        "sql"
+      ],
+      "concepts": [
+        "relational-database"
+      ],
+      "currentUse": "データを条件で絞り込み、並べ替え、集計して取り出せるようにする。",
+      "limitations": "約530ページと分量が多い。ドリルは理解が足りない章だけ解く使い方でもよい。",
+      "publishedYear": 2024,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-test-tetteishinan",
+      "type": "book",
+      "title": "ソフトウェアテスト徹底指南書 開発の高品質と高スピードを両立させる実践アプローチ",
+      "url": "https://gihyo.jp/book/2025/978-4-297-14909-3",
+      "authors": [
+        "井芹洋輝"
+      ],
+      "language": "日本語",
+      "versionNote": "2025年刊",
+      "isbn": "978-4-297-14909-3",
+      "bookTopicIds": [
+        "testing-quality"
+      ],
+      "description": "ソフトウェアテストの知識と技術を体系的に学び、アジャイルや継続的デリバリー、テスト自動化の導入にどう対応するかを説明する本。",
+      "technologyIds": [
+        "test-automation",
+        "software-testing"
+      ],
+      "concepts": [
+        "test-strategy"
+      ],
+      "currentUse": "どの部分を自動テストにするか、どう導入するかを判断できるようにする。",
+      "limitations": "544ページある。特定のテストツールの使い方は、各ツールの公式資料で確認する。",
+      "publishedYear": 2025,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-test-theory",
+      "type": "book",
+      "title": "ソフトウェアテストのセオリー 土台からしっかり学ぶ",
+      "url": "https://www.ric.co.jp/book/development/detail/2395",
+      "authors": [
+        "小川秀人",
+        "佐藤陽春",
+        "森拓郎",
+        "加賀洋渡"
+      ],
+      "language": "日本語",
+      "versionNote": "2023年刊",
+      "isbn": "978-4-86594-362-7",
+      "bookTopicIds": [
+        "testing-quality"
+      ],
+      "description": "テストの全体像を、テストプロセス、テスト設計と各種の技法、テスト環境、計画と管理、自動テストまで、初歩から体系的に整理した本。",
+      "technologyIds": [
+        "web-testing",
+        "test-automation",
+        "software-testing"
+      ],
+      "concepts": [
+        "test-design"
+      ],
+      "currentUse": "何をどう確認すればよいかを、テスト技法を使って洗い出せるようにする。",
+      "limitations": "Webサイトに限らない一般的なソフトウェアテストの本。ブラウザや端末ごとの確認方法は、自分のサイトに合わせて当てはめる。",
+      "publishedYear": 2023,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-tokumaru-2e",
+      "type": "book",
+      "title": "体系的に学ぶ 安全なWebアプリケーションの作り方 第2版 脆弱性が生まれる原理と対策の実践",
+      "url": "https://www.kinokuniya.co.jp/f/dsg-01-9784797393163",
+      "authors": [
+        "徳丸浩"
+      ],
+      "language": "日本語",
+      "edition": "第2版",
+      "versionNote": "2018年刊・OWASP Top 10 2017対応",
+      "isbn": "978-4-7973-9316-3",
+      "bookTopicIds": [
+        "security-auth"
+      ],
+      "description": "PHPのサンプルへの攻撃を通して、Webアプリケーションに脆弱性が生まれる原理と、その対策を学ぶ本。",
+      "technologyIds": [
+        "web-security"
+      ],
+      "concepts": [
+        "vulnerability"
+      ],
+      "currentUse": "SQLインジェクションやクロスサイト・スクリプティングなどの脆弱性を、原理から理解する。",
+      "limitations": "分量が多い（約650ページ）。最初は脆弱性の原理を説明した章から読む。",
+      "publishedYear": 2018,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "outdatedNote": "2018年刊でOWASP Top 10 2017に対応した内容です。その後の脆弱性の傾向やブラウザの仕様変更は公式資料で確認してください。",
+      "editionNote": "2026年8月に、第3版への改訂が進んでいると報じられています。刊行されたら差し替えます。",
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-ui-design-41",
+      "type": "book",
+      "title": "現場の「あるある」から学んだ 今すぐ使える「UIデザイン」41の法則",
+      "url": "https://www.maruzenjunkudo.co.jp/products/9784798189925",
+      "authors": [
+        "佐々木祐真",
+        "直原杏花",
+        "岩本あかり",
+        "大林志帆"
+      ],
+      "language": "日本語",
+      "versionNote": "2025年刊",
+      "isbn": "978-4-7981-8992-5",
+      "bookTopicIds": [
+        "design-ux"
+      ],
+      "description": "著者がクライアントのプロダクトのデザイン改善で得た、ユーザビリティを良くするための41のヒントをまとめた本。",
+      "technologyIds": [
+        "ui-design"
+      ],
+      "concepts": [
+        "usability"
+      ],
+      "currentUse": "基本を学んだ後に、自分の画面の使いにくい部分を見つけて直す。",
+      "limitations": "出版社の分類は中級。UIの基本を学んでから読む。",
+      "publishedYear": 2025,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-ui-design-textbook-new",
+      "type": "book",
+      "title": "UIデザインの教科書［新版］ マルチデバイス時代のインターフェース設計",
+      "url": "https://www.kinokuniya.co.jp/f/dsg-01-9784798155456",
+      "authors": [
+        "原田秀司"
+      ],
+      "language": "日本語",
+      "edition": "新版",
+      "versionNote": "2019年刊",
+      "isbn": "978-4-7981-5545-6",
+      "bookTopicIds": [
+        "design-ux"
+      ],
+      "description": "UIにおけるデザインの定義から、ハードとソフトによる制約、人間の心理による影響、具体的にデザインを形にする方法までを、図と画像で体系的に説明する本。",
+      "technologyIds": [
+        "ui-design"
+      ],
+      "concepts": [
+        "usability"
+      ],
+      "currentUse": "「わかりやすさ」と「使いやすさ」の要点を、理由とあわせて理解する。",
+      "limitations": "2019年刊のため、画面例の一部は今の主流の見た目と違う。考え方は今も使える。",
+      "publishedYear": 2019,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-unity-kyokasho-6",
+      "type": "book",
+      "title": "Unityの教科書 Unity 6完全対応版",
+      "url": "https://www.maruzenjunkudo.co.jp/products/9784815628192",
+      "authors": [
+        "北村愛実"
+      ],
+      "language": "日本語",
+      "versionNote": "2024年刊・Unity 6対応",
+      "isbn": "978-4-8156-2819-2",
+      "bookTopicIds": [
+        "performance-graphics"
+      ],
+      "description": "簡単な2Dゲームから始めて、少しずつ難しいゲームへ進みながら、Unityの機能とゲーム作りの知識を身につける入門書。",
+      "technologyIds": [
+        "unity"
+      ],
+      "concepts": [
+        "game-development"
+      ],
+      "currentUse": "Unityで簡単なゲームを最後まで作れるようにする。",
+      "limitations": "Unityのバージョンに合わせて改訂されるシリーズのため、新しいバージョンに対応した版が出たら差し替える。",
+      "publishedYear": 2024,
+      "targetVersions": [
+        {
+          "technologyId": "unity",
+          "version": "6"
+        }
+      ],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-web-analysis-kaizen-3",
+      "type": "book",
+      "title": "現場のプロがやさしく書いたWebサイトの分析・改善の教科書【改訂3版 GA4対応】",
+      "url": "https://www.maruzenjunkudo.co.jp/products/9784839982935",
+      "authors": [
+        "小川卓"
+      ],
+      "language": "日本語",
+      "edition": "改訂3版",
+      "versionNote": "2023年刊・GA4対応",
+      "isbn": "978-4-8399-8293-5",
+      "bookTopicIds": [
+        "data-ai-search"
+      ],
+      "description": "Webサイトを成長させるための施策と分析方法、改善の考え方と進め方、GA4の基本的な設定と操作をまとめた本。",
+      "technologyIds": [
+        "ga4"
+      ],
+      "concepts": [
+        "site-improvement"
+      ],
+      "currentUse": "分析の結果を、どの改善策にどうつなげるかを考えられるようにする。",
+      "limitations": "GA4の操作の章は2023年時点の画面。最新の画面は公式ヘルプで確認する。",
+      "publishedYear": 2023,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-web-gijutsu-kihon-2e",
+      "type": "book",
+      "title": "イラスト図解式 この一冊で全部わかるWeb技術の基本 第2版",
+      "url": "https://www.maruzenjunkudo.co.jp/products/9784815625948",
+      "authors": [
+        "小林恭平",
+        "坂本陽"
+      ],
+      "language": "日本語",
+      "edition": "第2版",
+      "versionNote": "2024年刊",
+      "isbn": "978-4-8156-2594-8",
+      "bookTopicIds": [
+        "frontend",
+        "architecture-operations"
+      ],
+      "description": "Webの基本概念、HTTP通信の仕組み、データ形式、Webアプリケーション、セキュリティ、構築と運用までを、見開きのイラスト図解で説明する本。",
+      "technologyIds": [
+        "http"
+      ],
+      "concepts": [
+        "web-basics"
+      ],
+      "currentUse": "Web制作やWebの仕事で出てくる用語と仕組みの全体像をつかむ。",
+      "limitations": "広く浅く全体を見渡す本で、HTMLやCSSの書き方を教える本ではない。",
+      "publishedYear": 2024,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-webgl2-intro-2e-ja",
+      "type": "book",
+      "title": "初めてのWebGL 2 第2版――JavaScriptで開発するリアルタイム3Dアプリケーション",
+      "url": "https://www.oreilly.co.jp/books/9784873119373/",
+      "authors": [
+        "Farhad Ghayour",
+        "Diego Cantor",
+        "あんどうやすし（訳）"
+      ],
+      "language": "日本語",
+      "edition": "第2版",
+      "versionNote": "2021年日本語版",
+      "isbn": "978-4-87311-937-3",
+      "coverImageUrl": "https://www.oreilly.co.jp/books/images/picture_large978-4-87311-937-3.jpeg",
+      "coverImageAlt": "初めてのWebGL 2 第2版の表紙",
+      "coverSourceName": "オライリー・ジャパン",
+      "coverSourceUrl": "https://www.oreilly.co.jp/books/9784873119373/",
+      "bookTopicIds": [
+        "performance-graphics",
+        "frontend"
+      ],
+      "description": "WebGL 2の描画パイプライン、バッファ、シェーダー、行列、照明、テクスチャをJavaScriptの実装から学ぶ本。",
+      "technologyIds": [
+        "webgl",
+        "javascript"
+      ],
+      "concepts": [
+        "graphics-pipeline",
+        "shader",
+        "real-time-rendering"
+      ],
+      "currentUse": "Three.jsなどの背後でGPU描画がどう動くかを理解し、描画負荷や表現上の問題を切り分ける際に使う。",
+      "limitations": "WebGL 2を直接扱う本で、Three.jsやReact Three Fiberの現行APIを説明するものではない。各ライブラリの公式資料で補う。",
+      "publishedYear": 2021,
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "book-wp-block-theme",
+      "type": "book",
+      "title": "作って学ぶ WordPress ブロックテーマ",
+      "url": "https://www.kinokuniya.co.jp/f/dsg-08-EK-1388340",
+      "authors": [
+        "エビスコム"
+      ],
+      "language": "日本語",
+      "versionNote": "2023年刊・WordPress 6.x時代",
+      "isbn": "978-4-8399-8187-7",
+      "bookTopicIds": [
+        "frontend"
+      ],
+      "description": "ブロックテーマを作る過程を通して、サイトエディターの使い方、theme.jsonの作成方法と目的、theme.jsonを中心としたスタイリングを学ぶ本。",
+      "technologyIds": [
+        "wordpress"
+      ],
+      "concepts": [
+        "block-theme"
+      ],
+      "currentUse": "デザインに合わせたWordPressのブロックテーマを、サイトエディターとtheme.jsonで作れるようにする。",
+      "limitations": "ブロックテーマの作り方が中心で、PHPのテンプレートで作る従来の方法の説明は多くない。",
+      "publishedYear": 2023,
+      "targetVersions": [
+        {
+          "technologyId": "wordpress",
+          "version": "6.x"
+        }
+      ],
+      "usesLegacySkillIds": [],
+      "outdatedNote": "2023年1月刊でWordPress 6.x時代の内容です。2026年5月に7.0が出ているため、画面や手順の一部は公式資料で確認してください。",
+      "syllabusUrls": []
+    },
+    {
+      "id": "cert-ipa-sg",
+      "type": "certification",
+      "title": "情報セキュリティマネジメント試験（IPA）",
+      "url": "https://www.ipa.go.jp/shiken/syllabus/gaiyou.html",
+      "language": "日本語",
+      "description": "IPAが実施する国家試験。組織の情報セキュリティを守るための知識と技能を範囲とする。",
+      "technologyIds": [
+        "information-security"
+      ],
+      "concepts": [
+        "information-security"
+      ],
+      "currentUse": "取得すること自体より、シラバスを「組織の情報セキュリティで押さえるべき項目の一覧」として使う。",
+      "limitations": "シラバスは試験向けの項目一覧で、読み物ではない。各項目の理解には別の資料が必要になる。",
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "provider": "IPA（情報処理推進機構）",
+      "examVersion": "現行制度（2026年度まで）",
+      "syllabusUrls": [
+        "https://www.ipa.go.jp/shiken/syllabus/gaiyou.html"
+      ],
+      "revisionNote": "IPAは2027年度から新しい試験制度を始める予定で、2026年に新制度のシラバス案を順次公開しています。対策本は、新制度に対応した版が出てから選んでください。",
+      "revisionSourceUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2026/20260630.html",
+      "verifiedAt": "2026-10-10"
+    },
+    {
+      "id": "cert-linuc-level1",
+      "type": "certification",
+      "title": "LinuC レベル1",
+      "url": "https://linuc.org/",
+      "language": "日本語",
+      "description": "LPI-Japanが運営するLinux技術者認定。レベル1は101試験と102試験からなり、Linuxの操作と管理の基本を範囲とする。",
+      "technologyIds": [
+        "linuc",
+        "linux"
+      ],
+      "concepts": [
+        "linux-administration"
+      ],
+      "currentUse": "取得すること自体より、出題範囲を「Linuxの運用で必要な項目の一覧」として使う。",
+      "limitations": "出題範囲の詳細ページは英語版のURLを載せています。日本語の範囲は公式サイトのLinuCレベル1のページで確認してください。",
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "provider": "LPI-Japan",
+      "examVersion": "10.0",
+      "syllabusUrls": [
+        "https://linuc.org/en/linuc1/range/101.html",
+        "https://linuc.org/en/linuc1/range/102.html"
+      ],
+      "verifiedAt": "2026-10-10"
+    },
+    {
+      "id": "course-threejs-journey",
+      "type": "course",
+      "title": "Three.js Journey",
+      "url": "https://threejs-journey.com/",
+      "authors": [
+        "Bruno Simon"
+      ],
+      "language": "英語（動画講座）",
+      "description": "Three.jsを初めて触る人向けに、基礎から応用までを動画と課題で学ぶ有料講座。後半の章でReact Three Fiberも扱う。",
+      "technologyIds": [
+        "threejs",
+        "r3f",
+        "react",
+        "glsl"
+      ],
+      "concepts": [
+        "scene",
+        "lighting",
+        "shader"
+      ],
+      "currentUse": "Three.jsまたはR3Fで商品ビューアを作る前に、シーン・カメラ・ライト・モデル読み込みの基本を一通り身につける。",
+      "limitations": "英語の有料講座。講座の更新時期と現在のThree.jsのAPIに差がある場合は公式資料で確認する。",
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "res-babylon-loading",
+      "type": "official",
+      "title": "Babylon.js Asset Loading",
+      "url": "https://doc.babylonjs.com/features/featuresDeepDive/importers/loadingFileTypes",
+      "description": "Babylon.jsへ3Dモデルを読み込むための公式ガイド。",
+      "technologyIds": [
+        "babylonjs",
+        "gltf"
+      ],
+      "concepts": [
+        "asset-loading"
+      ],
+      "currentUse": "現在のLoaderと対応形式の確認。",
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "res-digital-agency-a11y-guidebook",
+      "type": "official",
+      "title": "ウェブアクセシビリティ導入ガイドブック（デジタル庁）",
+      "url": "https://www.digital.go.jp/resources/introduction-to-web-accessibility-guidebook",
+      "language": "日本語",
+      "description": "デジタル庁が公開している、ウェブアクセシビリティを初めて学ぶ人向けの無料の資料。何を達成すべきかを、JIS X 8341-3の達成基準に沿って説明している。",
+      "technologyIds": [
+        "web-accessibility"
+      ],
+      "concepts": [
+        "accessibility"
+      ],
+      "currentUse": "ウェブアクセシビリティの全体像と、対応で何を目指すのかを無料で確認する。",
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "res-gltf-spec",
+      "type": "official",
+      "title": "glTF 2.0 Specification",
+      "url": "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html",
+      "description": "glTFのデータ構造と意味を定義する仕様。",
+      "technologyIds": [
+        "gltf"
+      ],
+      "concepts": [
+        "asset-format"
+      ],
+      "currentUse": "データ形式の正確な理解。",
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "res-gsap-official",
+      "type": "official",
+      "title": "GSAP公式サイト（ドキュメント）",
+      "url": "https://gsap.com/",
+      "language": "英語",
+      "description": "JavaScriptのアニメーションライブラリGSAPの公式サイト。スクロールに連動した演出を作るScrollTriggerプラグインの使い方も含まれる。",
+      "technologyIds": [
+        "gsap"
+      ],
+      "concepts": [
+        "animation"
+      ],
+      "currentUse": "スクロール連動の演出を、公式の説明とコード例で確認しながら実装する。",
+      "limitations": "英語のサイト。日本語で読める現行の入門書は見つかっていない。",
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "res-mdn-web-standards",
+      "type": "official",
+      "title": "MDN「ウェブ標準」（ウェブのしくみ）",
+      "url": "https://developer.mozilla.org/ja/docs/Learn_web_development/Getting_started/Web_standards",
+      "language": "日本語（一部英語）",
+      "description": "ブラウザでページを開いたときに何が起きているか、ウェブ標準がどう作られているかを説明するMDNの学習モジュール。",
+      "technologyIds": [
+        "http"
+      ],
+      "concepts": [
+        "web-basics"
+      ],
+      "currentUse": "サーバー、DNS、HTTPなど、ページが表示されるまでの流れを無料で確認する。",
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "res-model-viewer-ar-examples",
+      "type": "official",
+      "title": "model-viewer AR Examples",
+      "url": "https://modelviewer.dev/examples/augmentedreality/",
+      "description": "model-viewerでAR表示を有効にする設定と、その動作例をまとめた公式の実例集。",
+      "technologyIds": [
+        "model-viewer"
+      ],
+      "concepts": [
+        "ar"
+      ],
+      "currentUse": "AR導線の設定方法と、対応端末での動きを確認する。",
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "res-model-viewer-docs",
+      "type": "official",
+      "title": "model-viewer Documentation",
+      "url": "https://modelviewer.dev/docs/",
+      "description": "model-viewerの属性、イベント、AR、操作方法を確認する公式資料。",
+      "technologyIds": [
+        "model-viewer"
+      ],
+      "concepts": [
+        "ar",
+        "gltf"
+      ],
+      "currentUse": "現在のAPIと実装方法の確認。",
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "res-r3f-intro",
+      "type": "official",
+      "title": "React Three Fiber Introduction",
+      "url": "https://r3f.docs.pmnd.rs/getting-started/introduction",
+      "description": "R3Fの基本構造とThree.jsとの関係を説明する公式ガイド。",
+      "technologyIds": [
+        "r3f",
+        "react"
+      ],
+      "concepts": [
+        "component-design"
+      ],
+      "currentUse": "現在の導入方法と設計前提。",
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "res-r3f-performance",
+      "type": "official",
+      "title": "R3F Scaling Performance",
+      "url": "https://r3f.docs.pmnd.rs/advanced/scaling-performance",
+      "description": "R3Fでの再利用、状態更新、Instancingなどの性能ガイド。",
+      "technologyIds": [
+        "r3f"
+      ],
+      "concepts": [
+        "performance"
+      ],
+      "currentUse": "R3F特有の最適化確認。",
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    },
+    {
+      "id": "res-three-gltf",
+      "type": "official",
+      "title": "Three.js GLTFLoader",
+      "url": "https://threejs.org/docs/pages/GLTFLoader.html",
+      "description": "Three.jsでglTFを読み込むための公式API資料。",
+      "technologyIds": [
+        "threejs",
+        "gltf"
+      ],
+      "concepts": [
+        "asset-loading"
+      ],
+      "currentUse": "現在のLoader APIと拡張対応の確認。",
+      "targetVersions": [],
+      "usesLegacySkillIds": [],
+      "syllabusUrls": []
+    }
+  ],
+  "conditions": [
+    {
+      "id": "react-existing",
+      "label": "Reactを利用",
+      "description": "既存プロジェクトがReactで構成されている。",
+      "category": "environment",
+      "conflictsWith": []
+    },
+    {
+      "id": "ar-required",
+      "label": "ARが必要",
+      "description": "端末のAR表示へつなぐ導線が要件に含まれる。",
+      "category": "requirement",
+      "conflictsWith": []
+    },
+    {
+      "id": "mobile-priority",
+      "label": "モバイル重視",
+      "description": "スマートフォンでの表示品質と操作性を優先する。",
+      "category": "priority",
+      "conflictsWith": []
+    },
+    {
+      "id": "short-deadline",
+      "label": "短納期",
+      "description": "実装と検証に使える期間が短い。",
+      "category": "priority",
+      "conflictsWith": [
+        "advanced-visuals"
+      ]
+    },
+    {
+      "id": "advanced-visuals",
+      "label": "高度な独自表現",
+      "description": "既成機能では足りないシェーダーや独自インタラクションが必要。",
+      "category": "requirement",
+      "conflictsWith": [
+        "short-deadline",
+        "simple-display"
+      ]
+    },
+    {
+      "id": "maintainability-priority",
+      "label": "保守性重視",
+      "description": "長期運用、引き継ぎ、変更容易性を優先する。",
+      "category": "priority",
+      "conflictsWith": []
+    },
+    {
+      "id": "existing-glsl-assets",
+      "label": "既存GLSL資産あり",
+      "description": "再利用したいGLSLシェーダーやWebGL資産が存在する。",
+      "category": "asset",
+      "conflictsWith": []
+    },
+    {
+      "id": "small-team",
+      "label": "少人数チーム",
+      "description": "専任担当者を多く置けず、設計・実装・運用を少人数で分担する。",
+      "category": "team",
+      "conflictsWith": []
+    },
+    {
+      "id": "performance-priority",
+      "label": "性能重視",
+      "description": "描画性能、初期表示、実行負荷を優先して判断する。",
+      "category": "priority",
+      "conflictsWith": []
+    },
+    {
+      "id": "simple-display",
+      "label": "単純表示が中心",
+      "description": "回転・拡大など基本操作が中心で、独自演出は少ない。",
+      "category": "requirement",
+      "conflictsWith": [
+        "advanced-visuals"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "dec-pv-ar-fast-2026-08",
+      "slug": "ar-fast",
+      "situationId": "3d-product-viewer",
+      "title": "AR・短納期・単純表示",
+      "conditionIds": [
+        "ar-required",
+        "short-deadline",
+        "simple-display",
+        "mobile-priority"
+      ],
+      "snapshotDate": "2026-08-23",
+      "summary": "AR導線と短納期を優先するためmodel-viewerを第一候補とします。",
+      "expectedTopApproachIds": [
+        "model-viewer-product"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "dec-pv-default-2026-08",
+      "slug": "default",
+      "situationId": "3d-product-viewer",
+      "title": "モバイル重視の標準構成",
+      "conditionIds": [
+        "mobile-priority"
+      ],
+      "snapshotDate": "2026-08-23",
+      "summary": "独自要件が未確定な段階ではThree.js + glTFを基準案とし、単純表示ならmodel-viewerへ寄せます。",
+      "expectedTopApproachIds": [
+        "threejs-gltf-product"
+      ],
+      "status": "published"
+    }
+  ],
+  "benchmarks": [
+    {
+      "id": "bench-product-viewer-baseline",
+      "title": "3D商品ビューア4方式の合成シーン比較",
+      "situationId": "3d-product-viewer",
+      "approachIds": [
+        "model-viewer-product",
+        "threejs-gltf-product",
+        "r3f-product",
+        "babylonjs-product"
+      ],
+      "status": "planned",
+      "metrics": [
+        "fpsMedian",
+        "firstContentfulPaintMs",
+        "transferredBytes",
+        "jsHeapBytes",
+        "drawCalls",
+        "triangles"
+      ],
+      "fixture": "同一寸法・同一カメラ条件の回転Cube。公開判断に使う前に実商品glTFで再計測する。",
+      "protocol": [
+        "同一viewportとChromiumバージョンで各ページを読み込む。",
+        "Ready signal後に5秒間requestAnimationFrameを測定する。",
+        "3回以上のRunを行い、生データと環境をGitへ保存する。"
+      ]
+    }
+  ]
+}

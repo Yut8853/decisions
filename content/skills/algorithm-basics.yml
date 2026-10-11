@@ -1,0 +1,17 @@
+id: algorithm-basics
+slug: algorithm-basics
+title: "アルゴリズムとデータ構造の基礎"
+summary: "探す・並べ替えるなどの処理を、効率よく行うための考え方です。"
+canDo: "よく使われる探索や並べ替えの方法を説明し、使い分けられる。"
+domainIds:
+- "programming-basics"
+prerequisites:
+- "python-basics"
+volatility: low
+technologyIds:
+- "algorithm"
+resources:
+- resourceId: book-shinmeikai-python-algo-2e
+  level: intro
+  reason: "探索やソートなどの基本を、図表と動くPythonのプログラムで学べます。2025年の第2版です。"
+lastReviewed: "2026-10-10"

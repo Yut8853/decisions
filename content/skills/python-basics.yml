@@ -1,0 +1,18 @@
+id: python-basics
+slug: python-basics
+title: "Pythonの基礎"
+summary: "データ分析や自動化でよく使われる言語Pythonの基本です。"
+canDo: "Pythonで簡単なプログラムを書いて実行できる。"
+domainIds:
+- "data-ai"
+- "programming-basics"
+prerequisites:
+- "programming-basics"
+volatility: medium
+technologyIds:
+- "python"
+resources:
+- resourceId: book-sukkiri-python-2e
+  level: intro
+  reason: "Pythonの文法を図解と例題で順に学べる入門書です。データ分析やアルゴリズムに進む前の土台になります。"
+lastReviewed: "2026-10-10"

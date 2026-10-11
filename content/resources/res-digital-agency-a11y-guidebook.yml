@@ -1,0 +1,11 @@
+id: res-digital-agency-a11y-guidebook
+type: official
+title: ウェブアクセシビリティ導入ガイドブック（デジタル庁）
+url: https://www.digital.go.jp/resources/introduction-to-web-accessibility-guidebook
+language: 日本語
+description: デジタル庁が公開している、ウェブアクセシビリティを初めて学ぶ人向けの無料の資料。何を達成すべきかを、JIS X 8341-3の達成基準に沿って説明している。
+technologyIds:
+- web-accessibility
+concepts:
+- accessibility
+currentUse: ウェブアクセシビリティの全体像と、対応で何を目指すのかを無料で確認する。

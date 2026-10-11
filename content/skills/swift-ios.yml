@@ -1,0 +1,15 @@
+id: swift-ios
+slug: swift-ios
+title: "SwiftとiPhoneアプリ開発"
+summary: "iPhoneアプリを作るための言語Swiftと、開発の基本です。"
+canDo: "画面と簡単な機能を持つiPhoneアプリを作れる。"
+domainIds:
+- "app"
+prerequisites:
+- "programming-basics"
+volatility: high
+technologyIds:
+- "swift"
+status: planned
+resources: []
+lastReviewed: "2026-10-10"

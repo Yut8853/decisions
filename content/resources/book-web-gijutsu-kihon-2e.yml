@@ -1,0 +1,22 @@
+id: book-web-gijutsu-kihon-2e
+type: book
+title: イラスト図解式 この一冊で全部わかるWeb技術の基本 第2版
+url: https://www.maruzenjunkudo.co.jp/products/9784815625948
+authors:
+- 小林恭平
+- 坂本陽
+language: 日本語
+edition: 第2版
+versionNote: 2024年刊
+publishedYear: 2024
+isbn: 978-4-8156-2594-8
+bookTopicIds:
+- frontend
+- architecture-operations
+description: Webの基本概念、HTTP通信の仕組み、データ形式、Webアプリケーション、セキュリティ、構築と運用までを、見開きのイラスト図解で説明する本。
+technologyIds:
+- http
+concepts:
+- web-basics
+currentUse: Web制作やWebの仕事で出てくる用語と仕組みの全体像をつかむ。
+limitations: 広く浅く全体を見渡す本で、HTMLやCSSの書き方を教える本ではない。

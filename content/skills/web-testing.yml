@@ -1,0 +1,19 @@
+id: web-testing
+slug: web-testing
+title: "テストの基本（確認項目の作り方と進め方）"
+summary: "作ったサイトやアプリで、何をどう確認すればよいかを、テスト技法を使って洗い出す方法です。"
+canDo: "確認する項目をテスト技法で洗い出し、表示崩れや不具合を見つけて報告できる。"
+domainIds:
+- "testing"
+prerequisites:
+- "html"
+- "css"
+volatility: low
+technologyIds:
+- "web-testing"
+- "software-testing"
+resources:
+- resourceId: book-test-theory
+  level: intro
+  reason: "テストの全体像と、確認する項目を洗い出すテスト技法を、初歩から体系的に学べます。Webサイトの確認にもそのまま当てはめられます。"
+lastReviewed: "2026-10-10"

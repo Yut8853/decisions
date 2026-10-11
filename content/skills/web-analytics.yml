@@ -1,0 +1,20 @@
+id: web-analytics
+slug: web-analytics
+title: "アクセス解析（Googleアナリティクス）"
+summary: "サイトにどこから人が来て、何を見ているかを数字で確認する方法です。"
+canDo: "目的に関係する数字を選び、サイトの改善点を見つけられる。"
+domainIds:
+- "web-marketing"
+prerequisites:
+- "seo"
+volatility: medium
+technologyIds:
+- "ga4"
+resources:
+- resourceId: book-ga4-yasashii-new
+  level: intro
+  reason: "GA4の画面の見方から、集客・行動などの軸で分析するケーススタディまで、解説動画つきで学べます。2025年の改訂版です。"
+- resourceId: book-web-analysis-kaizen-3
+  level: practice
+  reason: "分析の結果を改善策にどうつなげるか、改善の進め方とあわせて学べます。GA4の操作に慣れてから読みます。"
+lastReviewed: "2026-10-10"

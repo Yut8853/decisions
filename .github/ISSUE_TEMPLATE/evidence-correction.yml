@@ -1,0 +1,26 @@
+name: Evidence correction
+about: Report an outdated source, unsupported claim or missing counterexample
+labels: [evidence-correction]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Decision page
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: Evidence or Rule id
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or outdated?
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Direct source or reproducible example
+    validations:
+      required: true

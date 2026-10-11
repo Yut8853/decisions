@@ -1,0 +1,27 @@
+id: book-ichiban-wordpress-7e
+type: book
+title: いちばんやさしいWordPressの教本 第7版 6.x対応
+url: https://www.kinokuniya.co.jp/f/dsg-08-EK-2249242
+authors:
+- 石川栄和
+- 大串肇
+- 星野邦敏
+language: 日本語
+edition: 第7版
+versionNote: 2025年刊・WordPress 6.x対応
+publishedYear: 2025
+isbn: 978-4-295-02290-9
+bookTopicIds:
+- frontend
+- architecture-operations
+description: サーバーとドメインの準備から、フルサイト編集でのサイト作り、プラグイン、集客、安全な運用までを手順どおりに進める入門書。
+technologyIds:
+- wordpress
+concepts:
+- cms
+currentUse: お店の人が管理画面からお知らせなどを更新できるサイトを、WordPressで作って公開する。
+limitations: HTMLやPHPの知識がなくても進められる操作中心の本。テーマを自作する段階では、PHPを別に学ぶ必要がある。
+targetVersions:
+- technologyId: wordpress
+  version: "6.x"
+outdatedNote: 2026年5月にWordPress 7.0が出ているため、管理画面の表示や一部の手順が本と違う場合があります。

@@ -1,0 +1,17 @@
+id: react
+slug: react
+title: "React"
+summary: "画面を部品（コンポーネント）に分けて組み立てる、Webアプリの画面を作るためのライブラリです。"
+canDo: "画面を部品に分け、データに応じて表示が変わる画面を作れる。"
+domainIds:
+- "frontend"
+prerequisites:
+- "javascript-basics"
+volatility: high
+technologyIds:
+- "react"
+resources:
+- resourceId: book-react-design
+  level: intro
+  reason: "React 19を対象に、画面を部品へ分ける考え方、propsとstate、状態の管理を日本語で学べます。"
+lastReviewed: "2026-10-10"

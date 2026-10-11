@@ -1,0 +1,16 @@
+id: nginx-web-server
+slug: nginx-web-server
+title: "Webサーバーの構築（nginx）"
+summary: "Linuxサーバーにnginxを入れて、Webサイトを公開する方法です。"
+canDo: "自分で用意したサーバーで、Webサイトを公開して運用できる。"
+domainIds:
+- "infra-ops"
+prerequisites:
+- "linux-basics"
+- "network-basics"
+volatility: medium
+technologyIds:
+- "nginx"
+status: planned
+resources: []
+lastReviewed: "2026-10-10"

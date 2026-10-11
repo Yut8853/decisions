@@ -1,0 +1,22 @@
+id: book-sukkiri-python-2e
+type: book
+title: "スッキリわかるPython入門 第2版"
+url: https://www.kinokuniya.co.jp/f/dsg-01-9784295016366
+authors:
+- "国本大悟"
+- "須藤秋良"
+language: 日本語
+edition: "第2版"
+versionNote: "2023年刊"
+publishedYear: 2023
+isbn: 978-4-295-01636-6
+bookTopicIds:
+- "data-ai-search"
+description: "Pythonの基本を、図解と例題を使ってゼロから学ぶ入門書。"
+technologyIds:
+- "python"
+- "programming"
+concepts:
+- "language-fundamentals"
+currentUse: "変数・条件分岐・繰り返しなど、プログラミングの基本をPythonで身につける。"
+limitations: "入門書のため、データ分析やWebアプリの作り方は別の本で学ぶ。"

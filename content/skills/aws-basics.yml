@@ -1,0 +1,18 @@
+id: aws-basics
+slug: aws-basics
+title: "AWSの基本"
+summary: "AWSでサーバー・ネットワーク・保存場所を用意するための基本です。"
+canDo: "AWS上にサーバーを用意して、サービスを動かせる。"
+domainIds:
+- "cloud"
+prerequisites:
+- "linux-basics"
+- "network-basics"
+volatility: medium
+technologyIds:
+- "aws"
+resources:
+- resourceId: book-aws-zukai-2
+  level: intro
+  reason: "クラウドの基礎から主要なAWSサービスの役割とつながりまでを、図解で一通り押さえられます。2025年の改訂2版です。"
+lastReviewed: "2026-10-10"

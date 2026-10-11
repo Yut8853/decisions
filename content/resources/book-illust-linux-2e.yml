@@ -1,0 +1,25 @@
+id: book-illust-linux-2e
+type: book
+title: イラストでそこそこわかるLinux 第2版 コマンド入力からネットワークのきほんのきまで
+url: https://www.maruzenjunkudo.co.jp/products/9784798181974
+authors:
+- 河野寿
+language: 日本語
+edition: 第2版
+versionNote: 2024年刊・AlmaLinux 9対応
+publishedYear: 2024
+isbn: 978-4-7981-8197-4
+bookTopicIds:
+- architecture-operations
+description: コマンドやディレクトリといった最初の言葉から、図解イラストで学ぶLinuxの入門書。学習用の仮想マシンで実際に動かしながら読み進められる。
+technologyIds:
+- linux
+- almalinux
+concepts:
+- linux-administration
+currentUse: Linuxを初めて触る人が、サーバーにログインしてファイルを操作できるところまで進める。
+limitations: 入門の範囲に絞った本で、サーバー構築や運用の細かい設定は扱わない。
+targetVersions:
+- technologyId: almalinux
+  version: "9"
+outdatedNote: 基本的なコマンドは共通ですが、インストール画面などは現行の10と違う場合があります。

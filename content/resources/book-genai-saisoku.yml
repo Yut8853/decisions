@@ -1,0 +1,19 @@
+id: book-genai-saisoku
+type: book
+title: "生成AI最速仕事術"
+url: https://www.kinokuniya.co.jp/f/dsg-08-EK-2122919
+authors:
+- "たてばやし淳"
+language: 日本語
+versionNote: "2025年刊"
+publishedYear: 2025
+isbn: 978-4-7612-7805-2
+bookTopicIds:
+- "data-ai-search"
+description: "日報、議事録、メール作成などの身近な仕事を例に、生成AIへの指示（プロンプト）の型と、用途に合わせたツールの使い分けを説明する本。"
+technologyIds:
+- "generative-ai"
+concepts:
+- "prompting"
+currentUse: "仕事の作業ごとに、生成AIへの指示の書き方を身につける。"
+limitations: "ツールの画面・機能・料金は変わりやすいため、使う前に各サービスの公式情報を確認する。出力に誤りがないかは、自分で確認する必要がある。"

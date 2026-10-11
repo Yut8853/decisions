@@ -1,0 +1,11 @@
+id: res-three-gltf
+type: official
+title: Three.js GLTFLoader
+url: https://threejs.org/docs/pages/GLTFLoader.html
+description: Three.jsでglTFを読み込むための公式API資料。
+technologyIds:
+- threejs
+- gltf
+concepts:
+- asset-loading
+currentUse: 現在のLoader APIと拡張対応の確認。

@@ -1,0 +1,26 @@
+id: book-a11y-kyokasho
+type: book
+title: "具体例と解決策で学ぶ Webアクセシビリティの教科書"
+url: https://www.maruzenjunkudo.co.jp/products/9784862466617
+authors:
+- "伊原力也"
+- "太田良典"
+- "秋山豊志"
+- "佐野実生"
+- "富本弥生"
+- "平尾優典"
+- "堀口真人"
+language: 日本語
+versionNote: "2026年刊・WCAG 2.2対応"
+publishedYear: 2026
+isbn: 978-4-86246-661-7
+bookTopicIds:
+- "accessibility"
+description: "よくあるアクセシビリティの問題点をイラストで示し、解決のアプローチを実例つきで説明する本。『デザイニングWebアクセシビリティ』をWCAG 2.2に対応させた増補改訂版で、Web制作会社による組織での取り組みの事例も収録。"
+technologyIds:
+- "web-accessibility"
+- "wcag"
+concepts:
+- "accessibility"
+currentUse: "制作の各工程で起きやすいアクセシビリティの問題を、パターンとして見つけて直せるようにする。"
+limitations: "営業・ディレクター・デザイナー・エンジニアなど、受発注に関わる人全体を対象にした本。実装の細かいコードは各仕様で確認する。"

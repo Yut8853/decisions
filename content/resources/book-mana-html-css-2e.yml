@@ -1,0 +1,23 @@
+id: book-mana-html-css-2e
+type: book
+title: 1冊ですべて身につくHTML & CSSとWebデザイン入門講座［第2版］
+url: https://www.maruzenjunkudo.co.jp/products/9784815618469
+authors:
+- Mana
+language: 日本語
+edition: 第2版
+versionNote: 2024年刊
+publishedYear: 2024
+isbn: 978-4-8156-1846-9
+bookTopicIds:
+- frontend
+- design-ux
+description: HTMLとCSSの基本から、レスポンシブ、モバイルファースト、Flexbox、アニメーションまでを、サイトを作りながら学ぶ入門書。
+technologyIds:
+- html
+- css
+concepts:
+- semantic-html
+- responsive-layout
+currentUse: HTMLとCSSでホームページを1つ作り上げるところまでを、順番に学ぶ。
+limitations: Webデザインと静的なサイト制作の本で、JavaScriptやWordPressは別の本で学ぶ。

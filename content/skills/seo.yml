@@ -1,0 +1,17 @@
+id: seo
+slug: seo
+title: "SEOの基本"
+summary: "検索エンジンが何を評価するかを理解し、必要な人に見つけてもらえるページを作る考え方です。"
+canDo: "検索する人が知りたいことに合わせて、ページの内容とタイトルを決められる。"
+domainIds:
+- "web-marketing"
+prerequisites:
+- "html"
+volatility: medium
+technologyIds:
+- "seo"
+resources:
+- resourceId: book-seo-10years-new
+  level: intro
+  reason: "会話形式で、検索エンジンが何を評価しているか、検索キーワードの裏にある質問は何かを学べる入門書です。2026年の改訂でAI検索にも対応しています。"
+lastReviewed: "2026-10-10"

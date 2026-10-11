@@ -1,0 +1,15 @@
+id: r-pv-short-model
+situationId: 3d-product-viewer
+when:
+  all:
+  - short-deadline
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 2
+reason: 短納期ではシーン制御を一から構築せずに済む構成を優先します。
+evidenceIds:
+- ev-model-viewer-docs
+lastReviewed: '2026-08-23'
+targetApproachId: model-viewer-product

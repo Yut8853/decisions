@@ -1,0 +1,41 @@
+id: model-viewer-product
+slug: model-viewer-product
+title: model-viewerによる商品表示
+shortTitle: model-viewer
+summary: Web Componentを使い、モデル表示・操作・AR導線を小さな実装範囲で提供する方法です。
+defaultLabel: fast
+baseScore: 2
+technologyIds:
+- model-viewer
+- web-components
+- gltf
+concepts:
+- gltf
+- ar
+- progressive-enhancement
+recommendedWhen:
+- 単純な回転・拡大表示が中心
+- AR導線を短期間で実装したい
+- 3D専任者がいない
+notRecommendedWhen:
+- 独自シェーダーが主要要件
+- 複雑な3Dシーンやゲームロジックが必要
+advantages:
+- 実装範囲を抑えやすい
+- AR導線を組み込みやすい
+disadvantages:
+- レンダリング制御の自由度は低い
+- 独自表現では内部制約を受ける
+learningPath:
+- resourceId: res-model-viewer-docs
+  stage: start
+  reason: タグに属性を書くだけで回転・拡大・ARを付けられるため、本より先に公式の例を動かして確認するのが最短です。
+- resourceId: res-model-viewer-ar-examples
+  stage: start
+  reason: AR表示の設定方法と、iPhone・Androidで動きがどう違うかを公式の実例で確認できます。
+  showWhenAny:
+  - ar-required
+- resourceId: res-gltf-spec
+  stage: stuck
+  reason: モデルが表示されない、色や向きがおかしいなど、ファイル側の問題を疑うときにglTFの形式を確認します。
+lastReviewed: '2026-08-23'

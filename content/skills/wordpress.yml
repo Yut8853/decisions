@@ -1,0 +1,14 @@
+id: wordpress
+slug: wordpress
+title: WordPress
+summary: お知らせやブログを、管理画面から自分で更新できるようにする仕組み（CMS）です。
+canDo: お店の人が自分でお知らせやメニューを更新できるサイトを作って公開できる。
+domainIds: [web]
+prerequisites: [html, css]
+volatility: high
+technologyIds: [wordpress]
+resources:
+- resourceId: book-ichiban-wordpress-7e
+  level: intro
+  reason: サーバーの準備から公開、プラグイン、安全な運用まで、手順どおりに進められる入門書です。
+lastReviewed: "2026-10-10"

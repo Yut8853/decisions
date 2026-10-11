@@ -1,0 +1,20 @@
+id: css-animation
+slug: css-animation
+title: "CSSとJavaScriptのアニメーション"
+summary: "ボタンの動き、スクロールで現れる表示、画面の切り替えなど、ページに動きをつける実装です。"
+canDo: "よく使われる動きを、CSSとJavaScriptで自分で実装して調整できる。"
+domainIds:
+- "web-animation"
+prerequisites:
+- "css"
+- "javascript-basics"
+volatility: medium
+technologyIds:
+- "css-animation"
+- "css"
+- "javascript"
+resources:
+- resourceId: book-mana-moving-ui
+  level: intro
+  reason: "ボタン、画像、画面遷移、スクロールなどの動きを、基本編と応用編に分けてサンプルコードつきで説明しています。HTML・CSS・JavaScriptの基礎を終えた人が対象です。"
+lastReviewed: "2026-10-10"

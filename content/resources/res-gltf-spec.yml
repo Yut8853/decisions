@@ -1,0 +1,10 @@
+id: res-gltf-spec
+type: official
+title: glTF 2.0 Specification
+url: https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html
+description: glTFのデータ構造と意味を定義する仕様。
+technologyIds:
+- gltf
+concepts:
+- asset-format
+currentUse: データ形式の正確な理解。

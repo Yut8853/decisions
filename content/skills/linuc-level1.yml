@@ -1,0 +1,17 @@
+id: linuc-level1
+slug: linuc-level1
+title: Linuxの体系的な整理（LinuCレベル1の範囲）
+summary: Linuxの運用で必要な項目を、資格の出題範囲を地図にして一通り押さえます。
+canDo: Linuxの運用で必要な操作と管理を、抜けなく一通り扱える。
+domainIds: [infra-ops]
+prerequisites: [linux-basics]
+volatility: medium
+technologyIds: [linux, linuc]
+resources:
+- resourceId: cert-linuc-level1
+  level: intro
+  reason: 資格を取ること自体より、出題範囲が「Linuxの運用で必要な項目の一覧」になります。何を学べば一通りかの地図として使います。
+- resourceId: book-saitan-linuc1-v10
+  level: practice
+  reason: 出題範囲に沿って章が並んでいるので、地図の項目を順に埋めていけます。現行のVersion 10.0に対応しています。
+lastReviewed: "2026-10-10"

@@ -1,0 +1,10 @@
+id: ev-model-viewer-docs
+title: model-viewer documentation
+claim: model-viewerはWeb Componentとして3Dモデル表示とユーザー操作を組み込むための公開APIを提供する。
+sourceType: official-documentation
+sourceName: model-viewer
+url: https://modelviewer.dev/docs/
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

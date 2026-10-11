@@ -1,0 +1,21 @@
+id: book-shinmeikai-python-algo-2e
+type: book
+title: "新・明解Pythonで学ぶアルゴリズムとデータ構造 第2版"
+url: https://www.maruzenjunkudo.co.jp/products/9784815637217
+authors:
+- "柴田望洋"
+language: 日本語
+edition: "第2版"
+versionNote: "2025年刊"
+publishedYear: 2025
+isbn: 978-4-8156-3721-7
+bookTopicIds:
+- "data-ai-search"
+description: "探索、ソート、スタック・キュー、再帰、線形リスト、2分探索木などを、216点の図表と166本の動くプログラムで学ぶ本。"
+technologyIds:
+- "algorithm"
+- "python"
+concepts:
+- "data-structure"
+currentUse: "よく使われる探索や並べ替えの方法を、図とPythonのコードで理解する。"
+limitations: "Pythonの基本文法は分かっている前提で読む。"

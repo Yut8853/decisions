@@ -1,0 +1,22 @@
+id: book-ui-design-41
+type: book
+title: "現場の「あるある」から学んだ 今すぐ使える「UIデザイン」41の法則"
+url: https://www.maruzenjunkudo.co.jp/products/9784798189925
+authors:
+- "佐々木祐真"
+- "直原杏花"
+- "岩本あかり"
+- "大林志帆"
+language: 日本語
+versionNote: "2025年刊"
+publishedYear: 2025
+isbn: 978-4-7981-8992-5
+bookTopicIds:
+- "design-ux"
+description: "著者がクライアントのプロダクトのデザイン改善で得た、ユーザビリティを良くするための41のヒントをまとめた本。"
+technologyIds:
+- "ui-design"
+concepts:
+- "usability"
+currentUse: "基本を学んだ後に、自分の画面の使いにくい部分を見つけて直す。"
+limitations: "出版社の分類は中級。UIの基本を学んでから読む。"

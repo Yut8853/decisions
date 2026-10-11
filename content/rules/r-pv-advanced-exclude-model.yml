@@ -1,0 +1,15 @@
+id: r-pv-advanced-exclude-model
+situationId: 3d-product-viewer
+when:
+  all:
+  - advanced-visuals
+  any: []
+  none: []
+effect:
+  type: exclude
+reason: 独自シェーダーや複雑なシーン制御が主要要件の場合、model-viewerの抽象化範囲を超えるため除外します。
+evidenceIds:
+- ev-model-viewer-docs
+- ev-three-webgpu
+lastReviewed: '2026-08-23'
+targetApproachId: model-viewer-product

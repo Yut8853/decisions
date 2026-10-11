@@ -1,0 +1,21 @@
+id: a11y-standards
+slug: a11y-standards
+title: "基準に沿ったアクセシビリティ改善（WCAG 2.2・JIS X 8341-3）"
+summary: "WCAGやJIS X 8341-3の基準に沿って、制作の各工程でアクセシビリティの問題を見つけて直す方法です。"
+canDo: "自社サイトの問題を基準に照らして洗い出し、直す順番を決めて改善を進められる。"
+domainIds:
+- "accessibility"
+prerequisites:
+- "web-accessibility"
+volatility: medium
+technologyIds:
+- "web-accessibility"
+- "jis-x-8341-3"
+resources:
+- resourceId: res-digital-agency-a11y-guidebook
+  level: intro
+  reason: "何を達成すべきかを、JIS X 8341-3の達成基準に沿って説明している無料の資料です。対応の範囲を決めるときの土台になります。"
+- resourceId: book-a11y-kyokasho
+  level: intro
+  reason: "制作の各工程で起きやすい問題と解決策を、実例つきのパターンで学べます。WCAG 2.2に対応した2026年刊です。"
+lastReviewed: "2026-10-10"

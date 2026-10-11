@@ -1,0 +1,20 @@
+id: book-web-analysis-kaizen-3
+type: book
+title: "現場のプロがやさしく書いたWebサイトの分析・改善の教科書【改訂3版 GA4対応】"
+url: https://www.maruzenjunkudo.co.jp/products/9784839982935
+authors:
+- "小川卓"
+language: 日本語
+edition: "改訂3版"
+versionNote: "2023年刊・GA4対応"
+publishedYear: 2023
+isbn: 978-4-8399-8293-5
+bookTopicIds:
+- "data-ai-search"
+description: "Webサイトを成長させるための施策と分析方法、改善の考え方と進め方、GA4の基本的な設定と操作をまとめた本。"
+technologyIds:
+- "ga4"
+concepts:
+- "site-improvement"
+currentUse: "分析の結果を、どの改善策にどうつなげるかを考えられるようにする。"
+limitations: "GA4の操作の章は2023年時点の画面。最新の画面は公式ヘルプで確認する。"

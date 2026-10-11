@@ -1,0 +1,14 @@
+id: shell-script
+slug: shell-script
+title: シェルスクリプト
+summary: Linuxのコマンドを組み合わせて、毎日の定型作業を自動にするための書き方です。
+canDo: ログの整理や定期的な作業を、スクリプトで自動で動かせる。
+domainIds: [infra-ops]
+prerequisites: [linux-basics]
+volatility: low
+technologyIds: [shell, linux]
+resources:
+- resourceId: book-saitan-linuc1-v10
+  level: intro
+  reason: LinuCレベル1の出題範囲にシェルスクリプトとジョブの自動実行が含まれるため、この本の該当する章から始められます。
+lastReviewed: "2026-10-10"

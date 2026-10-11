@@ -1,0 +1,18 @@
+id: php-basics
+slug: php-basics
+title: "PHPの基礎"
+summary: "問い合わせフォームの送信処理など、サーバー側で動くプログラムを書くための言語の基本です。"
+canDo: "フォームから送られた内容を受け取り、処理して表示できる。"
+domainIds:
+- "backend"
+- "cms"
+prerequisites:
+- "html"
+volatility: medium
+technologyIds:
+- "php"
+resources:
+- resourceId: book-dokushu-php-4e
+  level: intro
+  reason: "基本構文からフォーム処理、データベース連携、セキュリティまで、練習問題を解きながら順に学べます。"
+lastReviewed: "2026-10-10"

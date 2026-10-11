@@ -1,0 +1,22 @@
+id: web-accessibility
+slug: web-accessibility
+title: "Webアクセシビリティ"
+summary: "障害のある人や高齢の人を含め、誰でも情報を得て操作できるようにサイトを作るための基準と方法です。"
+canDo: "WCAGの考え方に沿って、画像の代替テキストや色、キーボード操作などを確認して直せる。"
+domainIds:
+- "accessibility"
+prerequisites:
+- "html"
+- "css"
+volatility: medium
+technologyIds:
+- "web-accessibility"
+- "wcag"
+resources:
+- resourceId: res-digital-agency-a11y-guidebook
+  level: intro
+  reason: "デジタル庁が公開している無料の入門資料です。何を達成すべきかを、JIS X 8341-3の基準に沿って説明しています。"
+- resourceId: book-ichiban-a11y
+  level: intro
+  reason: "WCAGの理解から、方針の策定、実装、評価までの流れを、実務の事例とあわせて学べます。2026年刊です。"
+lastReviewed: "2026-10-10"

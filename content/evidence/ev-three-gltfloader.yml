@@ -1,0 +1,10 @@
+id: ev-three-gltfloader
+title: Three.js GLTFLoader
+claim: Three.jsはglTF 2.0資産を読み込むGLTFLoaderを公式アドオンとして提供する。
+sourceType: official-documentation
+sourceName: Three.js
+url: https://threejs.org/docs/pages/GLTFLoader.html
+primary: true
+verificationStatus: verified
+verifiedAt: '2026-08-23'
+conflictsWith: []

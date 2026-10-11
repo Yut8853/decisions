@@ -1,0 +1,14 @@
+id: security-basics
+slug: security-basics
+title: 情報セキュリティの基礎
+summary: 脅威・脆弱性・リスクの考え方と、組織として情報を守るための基本的な対策です。
+canDo: 社内で起きやすい事故と、その対策の優先順位を説明できる。
+domainIds: [security]
+prerequisites: [network-basics]
+volatility: medium
+technologyIds: [information-security]
+resources:
+- resourceId: cert-ipa-sg
+  level: intro
+  reason: 国家試験のシラバスが、組織の情報セキュリティで押さえるべき項目の一覧になっています。取得よりも、学ぶ範囲の地図として使います。
+lastReviewed: "2026-10-10"

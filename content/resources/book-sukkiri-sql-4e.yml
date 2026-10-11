@@ -1,0 +1,21 @@
+id: book-sukkiri-sql-4e
+type: book
+title: "スッキリわかるSQL入門 第4版 ドリル256問付き！"
+url: https://ndlsearch.ndl.go.jp/books/R100000002-I033284494
+authors:
+- "中山清喬"
+- "飯田理恵子"
+language: 日本語
+edition: "第4版"
+versionNote: "2024年刊"
+publishedYear: 2024
+isbn: 978-4-295-01846-9
+bookTopicIds:
+- "data-ai-search"
+description: "図解と256問のドリルで、データベースとSQLを基礎から学ぶ入門書。購入者特典のクラウド環境「dokoQL」で、すぐにSQLを実行できる。"
+technologyIds:
+- "sql"
+concepts:
+- "relational-database"
+currentUse: "データを条件で絞り込み、並べ替え、集計して取り出せるようにする。"
+limitations: "約530ページと分量が多い。ドリルは理解が足りない章だけ解く使い方でもよい。"

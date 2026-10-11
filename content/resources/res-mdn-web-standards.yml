@@ -1,0 +1,11 @@
+id: res-mdn-web-standards
+type: official
+title: MDN「ウェブ標準」（ウェブのしくみ）
+url: https://developer.mozilla.org/ja/docs/Learn_web_development/Getting_started/Web_standards
+language: 日本語（一部英語）
+description: ブラウザでページを開いたときに何が起きているか、ウェブ標準がどう作られているかを説明するMDNの学習モジュール。
+technologyIds:
+- http
+concepts:
+- web-basics
+currentUse: サーバー、DNS、HTTPなど、ページが表示されるまでの流れを無料で確認する。

@@ -1,0 +1,23 @@
+id: book-python-data-analysis-3e
+type: book
+title: "Pythonによるデータ分析入門 第3版 pandas、NumPy、Jupyterを使ったデータ処理"
+url: https://www.kinokuniya.co.jp/f/dsg-01-9784814400195
+authors:
+- "Wes McKinney"
+- "瀬戸山雅人（訳）"
+- "小林儀匡（訳）"
+language: 日本語
+edition: "第3版"
+versionNote: "2023年刊・pandas 2.0対応"
+publishedYear: 2023
+isbn: 978-4-8144-0019-5
+bookTopicIds:
+- "data-ai-search"
+description: "pandasの開発者が、pandas・NumPy・Jupyterを使ったデータ処理の基本を網羅して説明する本。pandas 2.0に対応。"
+technologyIds:
+- "pandas"
+- "python"
+concepts:
+- "data-analysis"
+currentUse: "表形式のデータを読み込み、整形・集計してグラフにできるようにする。"
+limitations: "出版社の分類は中級〜上級。612ページあるので、データの読み込み・整形・集計・グラフの章から読む。"

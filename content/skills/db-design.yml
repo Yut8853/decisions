@@ -1,0 +1,17 @@
+id: db-design
+slug: db-design
+title: "データベース設計"
+summary: "データを重複なく、あとから使いやすい形で保存するための表の設計方法です。"
+canDo: "業務の内容から、表と表の関係を設計できる。"
+domainIds:
+- "database"
+prerequisites:
+- "sql"
+volatility: low
+technologyIds:
+- "db-design"
+resources:
+- resourceId: book-db-design-2e
+  level: intro
+  reason: "正規化などの論理設計の基本から、やってはいけない設計までを、理由とあわせて学べます。出版社の分類は中級〜上級なので、SQLの基本を終えてから読みます。"
+lastReviewed: "2026-10-10"

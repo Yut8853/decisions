@@ -1,0 +1,31 @@
+id: book-real-time-rendering
+type: book
+title: Real-Time Rendering, Fourth Edition
+url: https://www.routledge.com/Real-Time-Rendering-Fourth-Edition/Akenine-Moller-Haines-Hillaire-Hoffman-Iwanicki-Pesce/p/book/9781138627000
+authors:
+- Tomas Akenine-Möller
+- Eric Haines
+- Naty Hoffman
+- Angelo Pesce
+- Michał Iwanicki
+- Sébastien Hillaire
+language: 英語
+edition: 第4版
+publishedYear: 2018
+isbn: 978-1-138-62700-0
+coverImageUrl: https://covers.openlibrary.org/b/id/9234619-M.jpg
+coverImageAlt: Real-Time Rendering 第4版の表紙
+coverSourceName: Open Library
+coverSourceUrl: https://openlibrary.org/isbn/9781138627000
+bookTopicIds:
+- performance-graphics
+description: リアルタイムで3Dを描画するための原理とアルゴリズムを、幅広く体系的に学べる本。
+technologyIds:
+- webgl
+- webgpu
+concepts:
+- rendering
+- lighting
+- gpu
+currentUse: 個別のAPIに依存しない、描画・光・GPU処理の基本原理を理解する。
+limitations: 英語の書籍であり、Three.jsなど個別ライブラリの最新API解説ではない。

@@ -1,0 +1,17 @@
+id: design-basics
+slug: design-basics
+title: "デザインの基本（配色・文字・レイアウト）"
+summary: "近接・整列・反復・コントラストなど、見やすい画面や資料を作るための基本原則です。"
+canDo: "要素の並べ方や余白、文字の大きさを、理由をつけて決められる。"
+domainIds:
+- "web-design"
+- "design-tools"
+prerequisites: []
+volatility: low
+technologyIds:
+- "graphic-design"
+resources:
+- resourceId: book-non-designers-4e
+  level: intro
+  reason: "デザインを専門に学んでいない人向けに、4つの基本原則を修正前と修正後の作例で説明しています。日本語版には和文の作例もあります。"
+lastReviewed: "2026-10-10"

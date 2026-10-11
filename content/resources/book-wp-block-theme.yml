@@ -1,0 +1,23 @@
+id: book-wp-block-theme
+type: book
+title: "作って学ぶ WordPress ブロックテーマ"
+url: https://www.kinokuniya.co.jp/f/dsg-08-EK-1388340
+authors:
+- "エビスコム"
+language: 日本語
+versionNote: "2023年刊・WordPress 6.x時代"
+publishedYear: 2023
+isbn: 978-4-8399-8187-7
+bookTopicIds:
+- "frontend"
+description: "ブロックテーマを作る過程を通して、サイトエディターの使い方、theme.jsonの作成方法と目的、theme.jsonを中心としたスタイリングを学ぶ本。"
+technologyIds:
+- "wordpress"
+concepts:
+- "block-theme"
+currentUse: "デザインに合わせたWordPressのブロックテーマを、サイトエディターとtheme.jsonで作れるようにする。"
+limitations: "ブロックテーマの作り方が中心で、PHPのテンプレートで作る従来の方法の説明は多くない。"
+targetVersions:
+- technologyId: wordpress
+  version: "6.x"
+outdatedNote: "2023年1月刊でWordPress 6.x時代の内容です。2026年5月に7.0が出ているため、画面や手順の一部は公式資料で確認してください。"

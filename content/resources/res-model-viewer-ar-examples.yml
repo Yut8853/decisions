@@ -1,0 +1,10 @@
+id: res-model-viewer-ar-examples
+type: official
+title: model-viewer AR Examples
+url: https://modelviewer.dev/examples/augmentedreality/
+description: model-viewerでAR表示を有効にする設定と、その動作例をまとめた公式の実例集。
+technologyIds:
+- model-viewer
+concepts:
+- ar
+currentUse: AR導線の設定方法と、対応端末での動きを確認する。

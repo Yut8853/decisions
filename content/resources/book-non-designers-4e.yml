@@ -1,0 +1,20 @@
+id: book-non-designers-4e
+type: book
+title: "ノンデザイナーズ・デザインブック［第4版］"
+url: https://www.hanmoto.com/bd/isbn/9784839955557
+authors:
+- "Robin Williams"
+language: 日本語
+edition: "第4版"
+versionNote: "2016年刊"
+publishedYear: 2016
+isbn: 978-4-8399-5555-7
+bookTopicIds:
+- "design-ux"
+description: "デザインを専門に学んでいない人向けに、近接・整列・反復・コントラストの4つの基本原則を、修正前と修正後の作例で説明する本。日本語版には和文の作例も追加されている。"
+technologyIds:
+- "graphic-design"
+concepts:
+- "layout"
+currentUse: "見やすい画面や資料を作るための基本原則を身につける。"
+limitations: "Webに特化した本ではなく、印刷物やスライドの作例も多い。"

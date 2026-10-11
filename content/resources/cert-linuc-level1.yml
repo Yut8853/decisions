@@ -1,0 +1,19 @@
+id: cert-linuc-level1
+type: certification
+title: LinuC レベル1
+url: https://linuc.org/
+provider: LPI-Japan
+examVersion: "10.0"
+syllabusUrls:
+- https://linuc.org/en/linuc1/range/101.html
+- https://linuc.org/en/linuc1/range/102.html
+verifiedAt: "2026-10-10"
+language: 日本語
+description: LPI-Japanが運営するLinux技術者認定。レベル1は101試験と102試験からなり、Linuxの操作と管理の基本を範囲とする。
+technologyIds:
+- linuc
+- linux
+concepts:
+- linux-administration
+currentUse: 取得すること自体より、出題範囲を「Linuxの運用で必要な項目の一覧」として使う。
+limitations: 出題範囲の詳細ページは英語版のURLを載せています。日本語の範囲は公式サイトのLinuCレベル1のページで確認してください。

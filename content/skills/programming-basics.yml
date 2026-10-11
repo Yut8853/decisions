@@ -1,0 +1,16 @@
+id: programming-basics
+slug: programming-basics
+title: "プログラミングの基本（変数・条件分岐・繰り返し）"
+summary: "どの言語にも共通する、プログラムの基本的な組み立て方です。"
+canDo: "変数・条件分岐・繰り返しを使って、簡単な処理を書ける。"
+domainIds:
+- "programming-basics"
+prerequisites: []
+volatility: low
+technologyIds:
+- "programming"
+resources:
+- resourceId: book-sukkiri-python-2e
+  level: intro
+  reason: "変数・条件分岐・繰り返しといった、どの言語にも共通する基本を、Pythonを使ってゼロから学べます。"
+lastReviewed: "2026-10-10"

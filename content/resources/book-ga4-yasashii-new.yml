@@ -1,0 +1,20 @@
+id: book-ga4-yasashii-new
+type: book
+title: "Googleアナリティクス4のやさしい教科書。改訂新版 手を動かしながら学ぶアクセス解析の基本と実践ポイント"
+url: https://webtan.impress.co.jp/q/2025/07/49542
+authors:
+- "山野勉"
+language: 日本語
+edition: "改訂新版"
+versionNote: "2025年刊"
+publishedYear: 2025
+isbn: 978-4-295-20750-4
+bookTopicIds:
+- "data-ai-search"
+description: "GA4の管理画面と分析機能、ユーザー・集客・行動の軸で分析するケーススタディ、各種設定までを、解説動画つきで学ぶ本。"
+technologyIds:
+- "ga4"
+concepts:
+- "web-analytics"
+currentUse: "GA4の画面の見方と設定を覚え、数字からサイトの改善点を見つけられるようにする。"
+limitations: "GA4は画面の変更や機能の追加が多いため、刊行後に変わった画面は公式ヘルプで確認する。"

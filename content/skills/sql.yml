@@ -1,0 +1,17 @@
+id: sql
+slug: sql
+title: "SQLの基本"
+summary: "データベースからデータを取り出したり、追加・更新したりするための言語です。"
+canDo: "必要なデータを条件で絞り込み、並べ替えて取り出せる。"
+domainIds:
+- "database"
+- "data-ai"
+prerequisites: []
+volatility: low
+technologyIds:
+- "sql"
+resources:
+- resourceId: book-sukkiri-sql-4e
+  level: intro
+  reason: "図解と256問のドリルで、データベースとSQLを基礎から学べます。購入者特典のクラウド環境で、すぐにSQLを試せます。"
+lastReviewed: "2026-10-10"

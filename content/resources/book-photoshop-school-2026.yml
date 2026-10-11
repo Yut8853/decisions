@@ -1,0 +1,21 @@
+id: book-photoshop-school-2026
+type: book
+title: "デザインの学校 これからはじめるPhotoshopの本 2026年対応［改訂第10版］"
+url: https://gihyo.jp/book/2026/978-4-297-15527-8
+authors:
+- "宮川千春"
+- "木俣カイ"
+language: 日本語
+edition: "改訂第10版"
+versionNote: "2026年刊・2026年対応"
+publishedYear: 2026
+isbn: 978-4-297-15527-8
+bookTopicIds:
+- "design-ux"
+description: "補正、トリミング、合成など、Photoshopのひととおりの基本操作とレタッチの基礎知識を、練習ファイルつきで学ぶ入門書。生成AIの機能も扱う。"
+technologyIds:
+- "photoshop"
+concepts:
+- "image-editing"
+currentUse: "サイトに載せる写真を補正・切り抜き・合成して書き出せるようにする。"
+limitations: "毎年改訂されるシリーズのため、新しい年の版が出たら差し替える。"

@@ -1,0 +1,20 @@
+id: book-ui-design-textbook-new
+type: book
+title: "UIデザインの教科書［新版］ マルチデバイス時代のインターフェース設計"
+url: https://www.kinokuniya.co.jp/f/dsg-01-9784798155456
+authors:
+- "原田秀司"
+language: 日本語
+edition: "新版"
+versionNote: "2019年刊"
+publishedYear: 2019
+isbn: 978-4-7981-5545-6
+bookTopicIds:
+- "design-ux"
+description: "UIにおけるデザインの定義から、ハードとソフトによる制約、人間の心理による影響、具体的にデザインを形にする方法までを、図と画像で体系的に説明する本。"
+technologyIds:
+- "ui-design"
+concepts:
+- "usability"
+currentUse: "「わかりやすさ」と「使いやすさ」の要点を、理由とあわせて理解する。"
+limitations: "2019年刊のため、画面例の一部は今の主流の見た目と違う。考え方は今も使える。"

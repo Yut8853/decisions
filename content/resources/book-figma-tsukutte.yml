@@ -1,0 +1,20 @@
+id: book-figma-tsukutte
+type: book
+title: "作って学ぶFigma入門［完全版］ ステップ・バイ・ステップで身につくWeb/UIデザインの基本"
+url: https://www.kinokuniya.co.jp/f/dsg-01-9784297146788
+authors:
+- "古尾谷眞人"
+language: 日本語
+edition: "完全版"
+versionNote: "2025年刊"
+publishedYear: 2025
+isbn: 978-4-297-14678-8
+bookTopicIds:
+- "design-ux"
+description: "手順に沿って手を動かしながら、Figmaの操作とWeb・UIデザインの基本を学ぶ本。"
+technologyIds:
+- "figma"
+concepts:
+- "prototyping"
+currentUse: "Figmaでページのデザインカンプとプロトタイプを作れるようにする。"
+limitations: "Figmaは画面の変更が多いため、刊行後に変わった操作は公式ヘルプで確認する。辞書のように引く使い方には向かない。"

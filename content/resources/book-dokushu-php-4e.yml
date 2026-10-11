@@ -1,0 +1,20 @@
+id: book-dokushu-php-4e
+type: book
+title: "独習PHP 第4版"
+url: https://www.kinokuniya.co.jp/f/dsg-01-9784798168494
+authors:
+- "山田祥寛"
+language: 日本語
+edition: "第4版"
+versionNote: "2021年刊・PHP 8対応"
+publishedYear: 2021
+isbn: 978-4-7981-6849-4
+bookTopicIds:
+- "architecture-operations"
+description: "PHP 8の基本構文から、クラス、データベース連携、セキュリティ、オブジェクト指向まで、Webアプリケーション開発に必要な基礎を練習問題つきで学ぶ入門書。"
+technologyIds:
+- "php"
+concepts:
+- "server-side"
+currentUse: "フォームの受け取りやデータベース連携など、サーバー側の処理をPHPで書けるようにする。"
+limitations: "2021年刊でPHP 8.0の時点の内容。その後のバージョンで増えた機能は公式マニュアルで確認する。647ページあるので、最初は基本構文、フォーム処理、データベース連携の章から読む。"

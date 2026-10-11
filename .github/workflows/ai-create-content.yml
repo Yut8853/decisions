@@ -1,0 +1,81 @@
+name: AI — Create decision content
+
+on:
+  workflow_dispatch:
+    inputs:
+      brief:
+        description: "作成するSituationと要件。例：WebGPUへ移行すべきか"
+        required: true
+        type: string
+      slug:
+        description: "新規kebab-case slug"
+        required: true
+        type: string
+      publish_mode:
+        description: "draftが安全な既定値。publishはRepository Variablesでも許可が必要"
+        required: true
+        default: draft
+        type: choice
+        options: [draft, publish]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: ai-create-${{ inputs.slug }}
+  cancel-in-progress: false
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+      OPENAI_ENABLE_WEB_SEARCH: "true"
+      OPENAI_WEB_SEARCH_TOOL: ${{ vars.OPENAI_WEB_SEARCH_TOOL || 'web_search' }}
+      AI_ALLOW_PUBLISH: ${{ inputs.publish_mode == 'publish' && vars.AI_ALLOW_PUBLISH == 'true' && 'true' || 'false' }}
+      AI_ALLOW_EXISTING_DECISION_UPDATE: "false"
+      AI_REQUIRE_PRIMARY_SOURCES: "true"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Generate through five-stage pipeline
+        run: pnpm ai:pipeline -- --brief "${{ inputs.brief }}" --slug "${{ inputs.slug }}" --mode "${{ inputs.publish_mode }}"
+      - run: pnpm content:validate
+      - run: pnpm test
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-run-${{ github.run_id }}
+          path: .ai/runs
+          if-no-files-found: error
+          retention-days: 30
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ai/content-${{ inputs.slug }}-${{ github.run_id }}
+          delete-branch: true
+          commit-message: "content(ai): propose ${{ inputs.slug }}"
+          title: "AI proposal: ${{ inputs.slug }}"
+          body: |
+            ## Automated content proposal
+
+            - Brief: `${{ inputs.brief }}`
+            - Mode: `${{ inputs.publish_mode }}`
+            - Pipeline: Researcher → Author → Reviewer → Fact Checker → Publisher Gate
+            - AI run artifact: `${{ github.run_id }}`
+
+            This PR must still pass CI and the independent PR review workflow. Auto-merge is disabled unless the repository owner enables it and adds `ai-approved`.
+          labels: |
+            ai-generated
+            needs-editorial-review

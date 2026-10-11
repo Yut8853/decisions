@@ -1,0 +1,18 @@
+id: laravel
+slug: laravel
+title: "Laravel"
+summary: "PHPでWebアプリを効率よく作るためのフレームワークです。"
+canDo: "会員登録や予約などの機能を持つWebアプリを作れる。"
+domainIds:
+- "backend"
+prerequisites:
+- "php-basics"
+- "sql"
+volatility: high
+technologyIds:
+- "laravel"
+resources:
+- resourceId: book-laravel-jissen
+  level: intro
+  reason: "Laravelの基礎から、認証・認可などWebアプリに必要な機能までを、サンプルで体系的に学べます。2026年刊で、サンプルはLaravel 13で動作確認されています。"
+lastReviewed: "2026-10-10"

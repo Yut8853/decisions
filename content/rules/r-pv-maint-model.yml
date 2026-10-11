@@ -1,0 +1,16 @@
+id: r-pv-maint-model
+situationId: 3d-product-viewer
+when:
+  all:
+  - maintainability-priority
+  - simple-display
+  any: []
+  none: []
+effect:
+  type: boost
+  weight: 1
+reason: 単純表示で保守性を重視する場合、公開API範囲が小さい構成を優先します。
+evidenceIds:
+- ev-model-viewer-docs
+lastReviewed: '2026-08-23'
+targetApproachId: model-viewer-product

@@ -1,0 +1,17 @@
+id: cloud-architecture
+slug: cloud-architecture
+title: "クラウドの設計（AWS認定の範囲）"
+summary: "止まりにくく、費用と安全性のバランスが取れた構成を考える方法です。"
+canDo: "要件に合わせて、AWSの構成を理由つきで設計できる。"
+domainIds:
+- "cloud"
+prerequisites:
+- "aws-basics"
+volatility: medium
+technologyIds:
+- "aws"
+resources:
+- resourceId: book-aws-saa-text-2
+  level: intro
+  reason: "AWS認定ソリューションアーキテクト アソシエイト（SAA-C03）の出題範囲に沿っているので、構成を考えるうえで押さえる項目の地図として使えます。2026年刊です。"
+lastReviewed: "2026-10-10"

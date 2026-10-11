@@ -1,0 +1,14 @@
+id: css
+slug: css
+title: CSS
+summary: 色・文字・レイアウト・スマホでの表示など、ページの見た目を指定する言語です。
+canDo: パソコンとスマホの両方で崩れないレイアウトを作れる。
+domainIds: [web]
+prerequisites: [html]
+volatility: medium
+technologyIds: [css]
+resources:
+- resourceId: book-mana-html-css-2e
+  level: intro
+  reason: HTMLと同じ本で、Flexboxやレスポンシブ、モバイルファーストなど、今のレイアウトの組み方まで学べます。
+lastReviewed: "2026-10-10"

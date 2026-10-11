@@ -1,0 +1,11 @@
+id: res-model-viewer-docs
+type: official
+title: model-viewer Documentation
+url: https://modelviewer.dev/docs/
+description: model-viewerの属性、イベント、AR、操作方法を確認する公式資料。
+technologyIds:
+- model-viewer
+concepts:
+- ar
+- gltf
+currentUse: 現在のAPIと実装方法の確認。
