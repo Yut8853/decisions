@@ -27,6 +27,113 @@ export const situationFrontmatterSchema = z.object({
   lastReviewed: isoDate
 });
 
+// ISBNのチェックディジットを検証する。AIがそれらしい番号を作った場合の最低限の検出。
+export function isValidIsbn(raw: string): boolean {
+  const digits = raw.replace(/[-\s]/g, "").toUpperCase();
+  if (/^\d{13}$/.test(digits)) {
+    const sum = digits.slice(0, 12).split("").reduce((acc, ch, index) => acc + Number(ch) * (index % 2 === 0 ? 1 : 3), 0);
+    return (10 - (sum % 10)) % 10 === Number(digits[12]);
+  }
+  if (/^\d{9}[\dX]$/.test(digits)) {
+    const sum = digits.split("").reduce((acc, ch, index) => acc + (ch === "X" ? 10 : Number(ch)) * (10 - index), 0);
+    return sum % 11 === 0;
+  }
+  return false;
+}
+
+export const volatilityIds = ["high", "medium", "low"] as const;
+
+export const technologySchema = z.object({
+  id,
+  name: z.string().min(1).optional(),
+  officialUrl: z.string().url(),
+  releaseApi: z.string().url().nullable().optional(),
+  volatility: z.enum(volatilityIds),
+  lastKnownVersion: z.string().nullable().optional(),
+  // 現行バージョン。人または月次監査のPRで更新する。未確認ならnull。
+  currentVersion: z.string().nullable().optional(),
+  currentVersionCheckedAt: isoDate.nullable().optional(),
+  currentVersionSource: z.string().url().nullable().optional()
+});
+
+export const domainSchema = z.object({
+  id,
+  title: z.string().min(1),
+  description: z.string().min(10),
+  // 運営元のスクールへの案内を出してよい分野か。
+  schoolEligible: z.boolean().default(false)
+});
+
+export const skillResourceLevelIds = ["intro", "practice", "reference"] as const;
+
+export const skillResourceSchema = z.object({
+  resourceId: id,
+  level: z.enum(skillResourceLevelIds),
+  reason: z.string().min(20)
+});
+
+export const skillSchema = z.object({
+  id,
+  slug: id,
+  title: z.string().min(1),
+  summary: z.string().min(20),
+  canDo: z.string().min(10),
+  domainIds: z.array(id).min(1),
+  prerequisites: z.array(id).default([]),
+  volatility: z.enum(volatilityIds),
+  technologyIds: z.array(id).default([]),
+  // planned: 学ぶ順番の骨組みだけ作り、本の確認がまだのもの。公開中の目標には使えない。
+  status: z.enum(["active", "legacy", "planned"]).default("active"),
+  legacyNote: z.string().min(20).optional(),
+  resources: z.array(skillResourceSchema).default([]),
+  lastReviewed: isoDate
+}).superRefine((value, ctx) => {
+  if (value.status === "legacy" && !value.legacyNote) {
+    ctx.addIssue({ code: "custom", path: ["legacyNote"], message: "A legacy skill requires legacyNote." });
+  }
+  if (value.status === "active" && value.resources.length === 0) {
+    ctx.addIssue({ code: "custom", path: ["resources"], message: "An active skill requires at least one resource." });
+  }
+});
+
+export const goalFrontmatterSchema = z.object({
+  id,
+  slug: id,
+  title: z.string().min(1),
+  summary: z.string().min(20),
+  kind: z.enum(["build", "career", "protect"]),
+  domainId: id,
+  aliases: z.array(z.string().min(1)).default([]),
+  published: z.boolean(),
+  skillIds: z.array(id).min(1),
+  branches: z.array(z.object({
+    id,
+    question: z.string().min(5),
+    options: z.array(z.object({
+      label: z.string().min(1),
+      note: z.string().optional(),
+      skillIds: z.array(id).default([])
+    })).min(2)
+  })).default([]),
+  notNeededNow: z.array(z.object({
+    label: z.string().min(1),
+    skillId: id.optional(),
+    reason: z.string().min(20)
+  })).min(1),
+  relatedSituationIds: z.array(id).default([]),
+  lastReviewed: isoDate
+});
+
+export const learningStageIds = ["start", "stuck", "deepen"] as const;
+
+// 実装案ごとの「読む順番」。本・公式資料・講座を、なぜこの案に必要かの理由つきで並べる。
+export const learningStepSchema = z.object({
+  resourceId: id,
+  stage: z.enum(learningStageIds),
+  reason: z.string().min(20),
+  showWhenAny: z.array(id).default([])
+});
+
 export const approachSchema = z.object({
   id,
   slug: id,
@@ -41,7 +148,7 @@ export const approachSchema = z.object({
   notRecommendedWhen: z.array(z.string().min(1)).min(1),
   advantages: z.array(z.string().min(1)).min(1),
   disadvantages: z.array(z.string().min(1)).min(1),
-  resourceIds: z.array(id).default([]),
+  learningPath: z.array(learningStepSchema).min(1),
   lastReviewed: isoDate
 });
 
@@ -95,7 +202,7 @@ export const evidenceSchema = z.object({
 
 export const resourceSchema = z.object({
   id,
-  type: z.enum(["official", "book", "article", "course"]),
+  type: z.enum(["official", "book", "article", "course", "certification"]),
   title: z.string().min(1),
   url: z.string().url().optional(),
   amazonUrl: z.string().url().optional(),
@@ -113,27 +220,63 @@ export const resourceSchema = z.object({
   technologyIds: z.array(id).default([]),
   concepts: z.array(id).default([]),
   currentUse: z.string().min(5),
-  limitations: z.string().optional()
+  limitations: z.string().optional(),
+  // 書籍のバージョン情報
+  publishedYear: z.number().int().min(1990).max(2100).optional(),
+  targetVersions: z.array(z.object({ technologyId: id, version: z.string().min(1) })).default([]),
+  targetExam: z.object({ certificationId: id, version: z.string().min(1) }).optional(),
+  usesLegacySkillIds: z.array(id).default([]),
+  outdatedNote: z.string().min(10).optional(),
+  editionNote: z.string().min(10).optional(),
+  // 資格（出題範囲を学ぶ順番の地図として使う）
+  provider: z.string().min(1).optional(),
+  examVersion: z.string().min(1).optional(),
+  syllabusUrls: z.array(z.string().url()).default([]),
+  revisionNote: z.string().min(10).optional(),
+  revisionSourceUrl: z.string().url().optional(),
+  verifiedAt: isoDate.optional()
 }).superRefine((value, ctx) => {
   if (!value.url && !value.amazonUrl) {
     ctx.addIssue({ code: "custom", message: "A resource requires url or amazonUrl." });
   }
+  if (value.isbn && !isValidIsbn(value.isbn)) {
+    ctx.addIssue({ code: "custom", path: ["isbn"], message: `ISBN check digit is invalid: ${value.isbn}` });
+  }
+  if (value.type === "certification") {
+    for (const [field, fieldValue] of [
+      ["provider", value.provider],
+      ["examVersion", value.examVersion],
+      ["syllabusUrls", value.syllabusUrls.length],
+      ["verifiedAt", value.verifiedAt]
+    ] as const) {
+      if (!fieldValue) ctx.addIssue({ code: "custom", path: [field], message: `A certification requires ${field}.` });
+    }
+  }
   if (value.type !== "book") return;
+  if (value.isbn && !value.publishedYear) {
+    ctx.addIssue({ code: "custom", path: ["publishedYear"], message: "A book with ISBN requires publishedYear." });
+  }
 
   const requiredBookFields = [
     ["url", value.url],
     ["authors", value.authors?.length],
     ["language", value.language],
-    ["coverImageUrl", value.coverImageUrl],
-    ["coverImageAlt", value.coverImageAlt],
-    ["coverSourceName", value.coverSourceName],
-    ["coverSourceUrl", value.coverSourceUrl],
     ["bookTopicIds", value.bookTopicIds?.length],
     ["limitations", value.limitations]
   ] as const;
   for (const [field, fieldValue] of requiredBookFields) {
     if (!fieldValue) {
       ctx.addIssue({ code: "custom", path: [field], message: `A book resource requires ${field}.` });
+    }
+  }
+  // 表紙は任意。載せる場合だけ、代替テキストと出典を必須にする。
+  if (value.coverImageUrl) {
+    for (const [field, fieldValue] of [
+      ["coverImageAlt", value.coverImageAlt],
+      ["coverSourceName", value.coverSourceName],
+      ["coverSourceUrl", value.coverSourceUrl]
+    ] as const) {
+      if (!fieldValue) ctx.addIssue({ code: "custom", path: [field], message: `A book cover requires ${field}.` });
     }
   }
 });

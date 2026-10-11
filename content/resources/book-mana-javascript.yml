@@ -1,0 +1,20 @@
+id: book-mana-javascript
+type: book
+title: 1冊ですべて身につくJavaScript入門講座
+url: https://www.kinokuniya.co.jp/f/dsg-01-9784815615758
+authors:
+- Mana
+language: 日本語
+versionNote: 2023年刊
+publishedYear: 2023
+isbn: 978-4-8156-1575-8
+bookTopicIds:
+- frontend
+description: JavaScriptの基本、イベント、配列などのデータ、アニメーション、Webページへの組み込み、エラーの解決方法までを扱う入門書。
+technologyIds:
+- javascript
+concepts:
+- language-fundamentals
+- dom-events
+currentUse: ホームページに、メニューの開閉やスライドなどの動きを自分で付けられるようにする。
+limitations: Webページに動きを付けるための入門書で、ReactなどのフレームワークやNode.jsは扱わない。

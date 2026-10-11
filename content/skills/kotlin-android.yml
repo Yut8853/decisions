@@ -1,0 +1,15 @@
+id: kotlin-android
+slug: kotlin-android
+title: "KotlinとAndroidアプリ開発"
+summary: "Androidアプリを作るための言語Kotlinと、開発の基本です。"
+canDo: "画面と簡単な機能を持つAndroidアプリを作れる。"
+domainIds:
+- "app"
+prerequisites:
+- "programming-basics"
+volatility: high
+technologyIds:
+- "kotlin"
+status: planned
+resources: []
+lastReviewed: "2026-10-10"

@@ -1,0 +1,23 @@
+id: book-laravel-jissen
+type: book
+title: "これからはじめるLaravel実践入門 MVCの基本からReact連携によるモダン開発まで"
+url: https://www.maruzenjunkudo.co.jp/products/9784815625290
+authors:
+- "山田祥寛"
+language: 日本語
+versionNote: "2026年刊・Laravel 12以降対応（サンプルはLaravel 13で動作確認済み）"
+publishedYear: 2026
+isbn: 978-4-8156-2529-0
+bookTopicIds:
+- "architecture-operations"
+description: "Laravelの基礎から、Webアプリ開発に必要な知識をサンプルで体系的に学ぶ本。後半ではLaravelとReact（Inertia.js）の組み合わせや、認証・認可も扱う。"
+technologyIds:
+- "laravel"
+- "php"
+concepts:
+- "web-framework"
+currentUse: "会員登録や予約などの機能を持つWebアプリを、Laravelで作れるようにする。"
+limitations: "601ページある。後半のReactとの連携は、Laravelの基本を終えてから読む。"
+targetVersions:
+- technologyId: laravel
+  version: "13"

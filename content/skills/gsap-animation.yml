@@ -1,0 +1,17 @@
+id: gsap-animation
+slug: gsap-animation
+title: "スクロール連動アニメーション（GSAP）"
+summary: "スクロールの位置に合わせて、要素を細かく動かす演出を作るためのライブラリです。"
+canDo: "スクロールに合わせた演出を、ライブラリを使って実装できる。"
+domainIds:
+- "web-animation"
+prerequisites:
+- "css-animation"
+volatility: high
+technologyIds:
+- "gsap"
+resources:
+- resourceId: res-gsap-official
+  level: intro
+  reason: "スクロール連動の演出を作るScrollTriggerを含め、使い方とコード例が公式サイトにまとまっています。日本語で読める現行の入門書は見つかっていないため、公式サイトから始めます。"
+lastReviewed: "2026-10-10"

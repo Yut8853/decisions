@@ -11,6 +11,7 @@ Settings → Secrets and variables → Actions。
 ### Secret
 
 - `OPENAI_API_KEY`
+- `AI_PR_TOKEN`（推奨）: AIが作るPull RequestでCIを起動するための、Fine-grained Personal Access TokenまたはGitHub Appのトークン（contents / pull-requests の書き込み権限）。`GITHUB_TOKEN` で作ったPRでは、GitHubの仕様でCIが起動しません。
 
 ### Variables
 
@@ -26,6 +27,7 @@ Workflowが自動作成を試みますが、事前作成しても構いません
 ```text
 ai-generated
 needs-editorial-review
+needs-human-review
 ai-approved
 source-audit
 benchmark
@@ -87,3 +89,7 @@ Actions → Run reproducible benchmarkを手動実行。Result JSONに `generate
 ## 7. Vercel連携
 
 Vercel側で同じGitHub RepositoryをImportすると、PRごとにPreview、`main` MergeでProductionが作成されます。AI WorkflowからVercel Tokenを扱う必要はありません。
+
+## 6. 本の照合
+
+`Verify books (ISBN lookup)` が、資料・学ぶものを変更したPRと毎月1日に、ISBNを書誌データ（openBD → 国立国会図書館サーチ → Google Books）と照合します。書名・刊行年が合わない本や見つからない本があると失敗します。Required checkに追加することを推奨します。

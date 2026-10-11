@@ -2,23 +2,76 @@
 
 Evidence-first technology decisions with explicit conditions, negative recommendations, and review dates.
 
-- [3Dポートフォリオサイトを作りたい](https://decisions.junkbranding.com/decisions/3d-portfolio): 作品性と読みやすさを両立するために、3D中心・DOM中心・映像中心の構成を比較します。
+## Learning routes (goal → ordered skills → verified books)
+- [会社のサイトを、アクセシビリティの基準に沿って改善したい](https://decisions.junkbranding.com/goals/a11y-compliance): Webアクセシビリティの基本を押さえたうえで、WCAG 2.2やJIS X 8341-3の基準に沿って、問題を洗い出して直す方法を学びます。
+- [入力ミスがあっても直しやすいフォーム画面を作りたい](https://decisions.junkbranding.com/goals/accessible-contact-form): 項目名、入力例、必須項目、エラーの場所が伝わるフォーム画面を作ります。HTMLの構造と入力を助ける表示を学びます。
+- [生成AIを仕事に使いたい](https://decisions.junkbranding.com/goals/ai-at-work): 生成AIへの指示の書き方と、出力の確認の仕方を学び、仕事で安全に使えるようにします。
+- [アルゴリズムの基礎を身につけたい](https://decisions.junkbranding.com/goals/algorithm-goal): プログラミングの基本を押さえたうえで、探索や並べ替えなどの考え方を学びます。
+- [AWSの操作権限を担当者の仕事に合わせて分けたい](https://decisions.junkbranding.com/goals/aws-access-control): 閲覧だけの人と設定を変える人の権限を分けます。IAMの基本を学び、必要な操作だけができるかを確認します。
+- [AWSで止まりにくい構成を設計したい](https://decisions.junkbranding.com/goals/aws-architecture): AWSの基本を押さえたうえで、資格の出題範囲を地図にして構成の考え方を学びます。
+- [AWSで何に料金がかかっているか確認したい](https://decisions.junkbranding.com/goals/aws-cost-check): 利用料金をサービス別に確認し、予算の通知を設定する考え方を学びます。通知が来れば課金が止まる、という誤解も避けます。
+- [AWSでサーバーを動かしたい](https://decisions.junkbranding.com/goals/aws-start): Linuxとネットワークの基本を押さえたうえで、AWSでサーバーを用意してサービスを動かします。
+- [写真と文字を組み合わせた告知バナーを作りたい](https://decisions.junkbranding.com/goals/banner-design): イベント名や日付が読み取れる告知画像を作ります。情報の優先順位を決め、Photoshopで写真と文字を編集できる形にします。
+- [メールやSNSの案内から何人がサイトに来たか調べたい](https://decisions.junkbranding.com/goals/campaign-measurement): 案内に載せるURLへ識別用の情報を付け、GA4で流入元を分けて確認します。命名ルールと、比較する指標の決め方を学びます。
+- [会社の情報をセキュリティで守りたい](https://decisions.junkbranding.com/goals/company-security): ネットワークとLinuxの基本を押さえたうえで、組織のセキュリティの考え方と、Webサイトの脆弱性の原理を学びます。
+- [CSVの空欄や重複を整理して集計できるようにしたい](https://decisions.junkbranding.com/goals/csv-cleaning): CSVをPythonで読み込み、空欄、重複、表記の違いを整理します。元データを残し、何を変更したか説明できる前処理を学びます。
+- [途中で失敗してもデータのつじつまが合う更新を学びたい](https://decisions.junkbranding.com/goals/database-transactions): 複数の更新をひとまとめにして確定・取り消しするトランザクションを学びます。練習用データで、途中失敗の前後を比較します。
+- [データベースを設計したい](https://decisions.junkbranding.com/goals/db-design-goal): SQLの基本を押さえたうえで、表の設計（正規化）の考え方を学びます。
+- [配色・文字・レイアウトの基本を身につけたい](https://decisions.junkbranding.com/goals/design-principles): デザインを専門に学んでいない人が、見やすい画面や資料を作れるようになるための基本原則を学びます。
+- [Figmaでデザインカンプを作りたい](https://decisions.junkbranding.com/goals/figma-basics): デザインの基本原則を押さえたうえで、Figmaでページのデザインカンプと試作（プロトタイプ）を作れるようにします。
+- [Figmaのボタンやカードをまとめて修正できるようにしたい](https://decisions.junkbranding.com/goals/figma-components): 同じ部品を何度も描き直さずに済むよう、Figmaのコンポーネントを使います。文章の長さが変わっても使える部品に整えます。
+- [Figmaでクリックして試せる画面を作りたい](https://decisions.junkbranding.com/goals/figma-prototype): 一覧から詳細へ進み、前の画面へ戻れる試作品をFigmaで作ります。画面の見た目だけでなく、操作の流れを確認します。
+- [Gitでファイルの変更を管理したい](https://decisions.junkbranding.com/goals/git-basics): ファイルの変更履歴を記録し、GitHubでほかの人と共有する方法を、コマンド操作から学びます。
+- [Gitで間違えた変更を安全に取り消したい](https://decisions.junkbranding.com/goals/git-undo): 未記録の変更と共有済みの変更を分け、履歴を確認して取り消します。残したい変更を消さずに戻す方法を練習します。
+- [ホームページにアニメーションを実装したい](https://decisions.junkbranding.com/goals/homepage-animation): HTML・CSS・JavaScriptの基礎を押さえたうえで、ボタンやスクロールの動きを自分で実装できるようにします。
+- [お店や会社のホームページを作りたい](https://decisions.junkbranding.com/goals/homepage): HTMLとCSSで見た目を作り、JavaScriptで少し動きをつけるところまでを、順番に学びます。
+- [APIから取得した情報をページに表示したい](https://decisions.junkbranding.com/goals/javascript-api): JSON形式の情報を取得し、読み込み中・成功・失敗を表示する画面を作ります。通信と画面更新を分けて考える練習です。
+- [商品一覧を条件で絞り込めるようにしたい](https://decisions.junkbranding.com/goals/javascript-filter): カテゴリを選ぶと一覧が切り替わる画面を、JavaScriptで作ります。元データ、条件、表示を分け、該当する商品がない場合も扱います。
+- [マウスなしでも操作できるサイトに直したい](https://decisions.junkbranding.com/goals/keyboard-navigation): リンクやボタンをキーボードで順に操作し、現在位置が見えるように直します。操作できない場所と移動順を調べます。
+- [商品やイベントを紹介する1ページを作りたい](https://decisions.junkbranding.com/goals/landing-page): 商品説明、料金、よくある質問、申込先を1ページにまとめます。情報の並べ方と、スマホでも読めるHTML・CSSを学びます。
+- [Laravelで予約システムを作りたい](https://decisions.junkbranding.com/goals/laravel-app): PHPとSQLの基本を押さえたうえで、Laravelで機能のあるWebアプリを作ります。
+- [Linuxでファイルを読めない・書けない原因を調べたい](https://decisions.junkbranding.com/goals/linux-permissions): 所有者、グループ、読み書きの権限を確認し、必要な範囲だけ直します。全員へ権限を広げずに原因を切り分ける練習です。
+- [サイトにつながらない原因を順番に調べたい](https://decisions.junkbranding.com/goals/network-troubleshooting): 名前解決、接続、HTTPの応答を分けて調べます。やみくもに設定を変えず、どの段階で止まっているかを記録する練習です。
+- [コードを書かずにホームページを作りたい](https://decisions.junkbranding.com/goals/nocode-homepage): ノーコードツールのStudioで、デザインから公開・更新までを進めます。HTMLやCSSを書かずに始められます。
+- [Photoshopでホームページ用の画像を加工したい](https://decisions.junkbranding.com/goals/photoshop-basics): 写真の補正・切り抜き・合成など、サイトに載せる画像を整える基本操作を学びます。
+- [PHPでJSONを返す小さなAPIを作りたい](https://decisions.junkbranding.com/goals/php-json-api): HTMLの代わりにJSONを返す処理をPHPで作ります。入力パラメーター、HTTPの結果、返すデータの形を決めます。
+- [PHPで問い合わせフォームや会員機能を作りたい](https://decisions.junkbranding.com/goals/php-webapp): HTMLとSQLの基本を押さえたうえで、PHPでサーバー側の処理を書けるようにします。
+- [商品写真の背景を切り抜いてサイトに載せたい](https://decisions.junkbranding.com/goals/product-photo): 商品の輪郭を整えて背景を切り抜き、明るさと大きさを揃えます。元画像を残しながら、サイト用の画像を書き出します。
+- [プログラミングを初めて学びたい](https://decisions.junkbranding.com/goals/programming-first): どの言語にも共通する基本を押さえ、Pythonで簡単なプログラムを書けるようにします。
+- [GitHubで変更内容を説明してレビューを受けたい](https://decisions.junkbranding.com/goals/pull-request-review): 小さな変更をブランチで作り、理由と確認結果を添えてPull Requestにします。指摘への対応と差分の読み方を学びます。
+- [Pythonでデータ分析をしたい](https://decisions.junkbranding.com/goals/python-data): Pythonの基礎を押さえたうえで、表形式のデータを集計してグラフにする方法を学びます。
+- [Pythonのエラーを読んで原因を切り分けたい](https://decisions.junkbranding.com/goals/python-error-handling): エラーの種類と発生した行を読み、少ないコードで再現して直します。例外を無視せず、入力ミスとプログラムの不具合を分けて扱います。
+- [たくさんのファイル名をルールに沿って整理したい](https://decisions.junkbranding.com/goals/python-file-automation): Pythonでフォルダ内のファイルを調べ、変更前と変更後の名前を一覧にします。実行前の確認と、同名ファイルの衝突を避ける処理を学びます。
+- [Reactで画面を作れるようになりたい](https://decisions.junkbranding.com/goals/react-app): HTML・CSS・JavaScriptの基礎を押さえたうえで、画面を部品に分けて組み立てるReactを学びます。
+- [Reactで入力内容を確認しながら進める画面を作りたい](https://decisions.junkbranding.com/goals/react-form): 入力した内容を確認画面へ引き継ぎ、戻って修正できる画面をReactで作ります。stateとイベント、部品間のデータの渡し方を学びます。
+- [動きが苦手な人には演出を控えたページを見せたい](https://decisions.junkbranding.com/goals/reduced-motion-animation): 端末の「動きを減らす」設定に合わせて、アニメーションを控える表示を作ります。動かなくても情報と操作が伝わるようにします。
+- [修正のたびに確認するテストを決めたい](https://decisions.junkbranding.com/goals/regression-scenarios): 変更で壊れると困る操作を選び、繰り返し確認する手順にします。手動で残す確認と自動化の候補を分けます。
+- [スマホで横にはみ出すホームページを直したい](https://decisions.junkbranding.com/goals/responsive-layout): 画面が狭いと文字や画像がはみ出すページを、CSSで読みやすく直します。幅・段組み・画像の指定を順に確認します。
+- [スクロールに合わせた演出を作りたい](https://decisions.junkbranding.com/goals/scroll-animation): CSSとJavaScriptのアニメーションを押さえたうえで、スクロールに連動する演出をライブラリで作ります。
+- [検索で表示されるのに読まれないページを調べたい](https://decisions.junkbranding.com/goals/search-console-improvements): Search Consoleで検索語とページを確認し、表示回数とクリック数から見直す候補を探します。順位だけで良し悪しを決めない読み方を学びます。
+- [ホームページを検索で見つけてもらいたい](https://decisions.junkbranding.com/goals/seo-basics): HTMLの基本を押さえたうえで、検索エンジンが何を評価するかと、検索する人に合わせたページの作り方を学びます。
+- [サーバーの運用保守の仕事がしたい](https://decisions.junkbranding.com/goals/server-operations): Linuxとネットワークの基本から始めて、資格の出題範囲を地図に運用で必要な範囲を一通り押さえ、監視の考え方まで学びます。
+- [サイトの異常に気づいて対応できる監視を考えたい](https://decisions.junkbranding.com/goals/service-monitoring): 利用者が困る状態を決め、確認する項目と通知後の手順を用意します。通知を増やすだけで終わらない監視の設計を学びます。
+- [ログから必要な行を取り出す定型作業を自動化したい](https://decisions.junkbranding.com/goals/shell-log-summary): ログの検索と集計をシェルスクリプトにまとめます。入力ファイル、出力先、失敗したときの動きを決めて同じ作業を繰り返せるようにします。
+- [SQLでデータを扱えるようになりたい](https://decisions.junkbranding.com/goals/sql-basics): データベースからデータを取り出す・追加する・更新するためのSQLを、基礎から学びます。
+- [顧客表と注文表をつないで一覧を作りたい](https://decisions.junkbranding.com/goals/sql-join-reports): 別々の表にある顧客名と注文情報をSQLで組み合わせます。結合の条件、注文のない顧客、重複する行の扱いを学びます。
+- [売上データをSQLで月別・商品別に集計したい](https://decisions.junkbranding.com/goals/sql-sales-report): 明細データを集計し、月や商品ごとの売上を表にします。集計前の条件と集計後の条件を区別して学びます。
+- [自動テストを書けるようになりたい](https://decisions.junkbranding.com/goals/test-automation-goal): JavaScriptとGitの基本を押さえたうえで、壊れると困る部分から自動テストを書く方法を学びます。
+- [入力欄で試すべき値を整理したい](https://decisions.junkbranding.com/goals/test-boundaries): 文字数や数値の上限・下限から、確認する入力値を選びます。思いついた値だけで試すのをやめ、期待する結果を先に書きます。
+- [TypeScriptで安全にコードを書きたい](https://decisions.junkbranding.com/goals/typescript-basics): JavaScriptの基礎を押さえたうえで、型を使って書き間違いを実行前に見つける書き方を学びます。
+- [ホームページのUIデザインを学びたい](https://decisions.junkbranding.com/goals/ui-design-basics): デザインの基本原則から始めて、迷わず使えるボタンやメニューを作るためのUIデザインの考え方を学び、Figmaで画面にします。
+- [Unityでゲームを作りたい](https://decisions.junkbranding.com/goals/unity-game): プログラミングの基本を押さえたうえで、Unityで簡単なゲームを最後まで作ります。
+- [誰でも使えるホームページを作りたい](https://decisions.junkbranding.com/goals/web-accessibility): HTML・CSSの基本を押さえたうえで、WCAGの考え方に沿って、障害のある人や高齢の人も使えるサイトにする方法を学びます。
+- [アクセス解析でサイトを改善したい](https://decisions.junkbranding.com/goals/web-analytics-improve): SEOの基本を押さえたうえで、アクセス解析の数字からサイトの改善点を見つける方法を学びます。
+- [安全なWebアプリを作りたい](https://decisions.junkbranding.com/goals/web-security-dev): SQLとWebの仕組み、情報セキュリティの基礎を押さえたうえで、Webアプリの脆弱性が生まれる原理と対策を学びます。
+- [作ったサイトの表示崩れや不具合を確認したい](https://decisions.junkbranding.com/goals/web-testing-goal): 確認する項目の作り方と、ブラウザや端末ごとの確認の進め方を学びます。
+- [WordPressを更新する前にバックアップと復元を練習したい](https://decisions.junkbranding.com/goals/wordpress-backup): 更新で不具合が出たときに戻せるよう、データとファイルを保存します。バックアップを取るだけでなく、練習環境で復元まで試します。
+- [WordPressのお知らせを複数人で確認してから公開したい](https://decisions.junkbranding.com/goals/wordpress-editor-workflow): 書く人と公開を確認する人の役割を分け、お知らせを下書きから公開へ進めます。管理者権限を配る前に権限の違いを学びます。
+- [WordPressでサイトを作って自分で更新したい](https://decisions.junkbranding.com/goals/wordpress-site): Webの仕組みとHTML・CSSの基本を押さえたうえで、WordPressでサイトを作り、管理画面から更新できるようにします。
+- [WordPressのオリジナルテーマを作りたい](https://decisions.junkbranding.com/goals/wordpress-theme): WordPressの使い方とPHPの基礎を押さえたうえで、デザインに合わせたテーマを一から作ります。
+
+## Technology decisions
 - [3D商品ビューアを作りたい](https://decisions.junkbranding.com/decisions/3d-product-viewer): 商品モデルの回転・拡大・AR・UI連携を、要件と工数に合わせて選ぶための判断ページです。
-- [Webサイトの使いやすさを検証したい](https://decisions.junkbranding.com/decisions/accessibility-evaluation): アクセシビリティの自動検査、規格に沿った手動評価、障害のある利用者を含む利用確認のうち、最初に重点を置く方法を選びます。
-- [Webアプリのログイン方法を選びたい](https://decisions.junkbranding.com/decisions/authentication-method): パスキー、組織の共通ログイン、アプリで管理するパスワードを、利用者の要望と運用体制に合わせて比較します。
-- [更新しやすいCMS構成を選びたい](https://decisions.junkbranding.com/decisions/cms-architecture-selection): Git管理コンテンツ、API型ヘッドレスCMS、表示統合型CMSを、編集と配信の流れから比較します。
-- [データを分かりやすく可視化したい](https://decisions.junkbranding.com/decisions/data-visualization-rendering): HTML表とSVG、Canvas、WebGLを、情報の読み取りやすさ、データ量、操作、静的な出力の条件から選びます。
-- [公開後の画面エラーを見つけたい](https://decisions.junkbranding.com/decisions/frontend-error-monitoring): 管理型のエラー監視、既存の追跡基盤との連携、自前収集を、発見までの速さとデータ管理方針に合わせて比較します。
-- [最初に整備するテストを選びたい](https://decisions.junkbranding.com/decisions/frontend-test-priority): ロジックの単体テスト、ブラウザ内のコンポーネントテスト、主要な利用導線のE2Eテストから、最初に厚くする層を選びます。
-- [Webサイト・アプリの公開先を選びたい](https://decisions.junkbranding.com/decisions/hosting-runtime-selection): 静的・エッジ配信、サーバーレス関数、マネージドコンテナ、それらを分ける構成を、実行時処理と運用要件から比較します。
-- [自社資料に答える質問機能を作りたい](https://decisions.junkbranding.com/decisions/knowledge-qa): 承認済みFAQの検索、ホスト型ファイル検索を使う生成AI、自前の検索と生成AIの組み合わせを、回答の確実さと資料の扱いから選びます。
-- [スクロール連動のリッチサイトを作りたい](https://decisions.junkbranding.com/decisions/scroll-linked-3d): DOM、Three.js、React Three Fiber、画像シーケンスによるスクロール演出を比較します。
-- [問い合わせフォームを安全に運用したい](https://decisions.junkbranding.com/decisions/secure-contact-form): フォーム受付サービス、サーバーレス関数、既存または新設するバックエンドを、入力内容と運用体制から選ぶ判断ページです。
-- [SEOを維持しながらリッチな3Dサイトを作りたい](https://decisions.junkbranding.com/decisions/seo-rich-3d): HTML本文を保ちながら3Dを組み込む構成と、Canvas中心構成の違いを判断します。
-- [サイト内検索を実装したい](https://decisions.junkbranding.com/decisions/site-search): 公開時の検索索引、外部または自前の検索サーバー、既存データベースの全文検索を、更新頻度と運用条件から選ぶ判断ページです。
-- [Three.jsで大量オブジェクトを表示すると重い](https://decisions.junkbranding.com/decisions/threejs-many-objects): Instancing、Geometry統合、LODとカリングを、シーンの性質から選び分けます。
-- [最初に導入するセキュリティ検査を選びたい](https://decisions.junkbranding.com/decisions/web-security-check-priority): 依存パッケージの脆弱性監視、ソースコード解析、稼働中アプリの検査を、優先するリスクと運用体制に合わせて比較します。
-- [実際の表示品質を継続して測りたい](https://decisions.junkbranding.com/decisions/web-vitals-monitoring): 公開された実利用データ、自前の利用者計測、公開前の自動検査を、調べたい範囲と運用条件に合わせて比較します。
 
 Policy version: 1.0.0
-Generated: 2026-08-24T13:07:30.627Z
+Generated: 2026-10-11T01:44:38.620Z

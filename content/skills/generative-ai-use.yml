@@ -1,0 +1,16 @@
+id: generative-ai-use
+slug: generative-ai-use
+title: "生成AIの仕事での使い方"
+summary: "文章や画像を作る生成AIを、仕事で安全に使うための指示の書き方と確認の仕方です。"
+canDo: "目的に合う指示を書き、出力の誤りを確認して使える。"
+domainIds:
+- "data-ai"
+prerequisites: []
+volatility: medium
+technologyIds:
+- "generative-ai"
+resources:
+- resourceId: book-genai-saisoku
+  level: intro
+  reason: "日報・議事録・メールなど身近な仕事を例に、指示（プロンプト）の型と、用途に合わせたツールの使い分けを学べます。2025年刊です。"
+lastReviewed: "2026-10-10"

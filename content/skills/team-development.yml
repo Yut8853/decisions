@@ -1,0 +1,15 @@
+id: team-development
+slug: team-development
+title: "チーム開発の進め方（レビュー・タスク管理）"
+summary: "コードレビューやタスク管理など、複数人で開発を進めるための方法です。"
+canDo: "タスクを分けて担当し、レビューを受けながら開発を進められる。"
+domainIds:
+- "team-dev"
+prerequisites:
+- "git"
+volatility: low
+technologyIds:
+- "team-development"
+status: planned
+resources: []
+lastReviewed: "2026-10-10"

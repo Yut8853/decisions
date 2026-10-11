@@ -1,0 +1,16 @@
+id: photoshop
+slug: photoshop
+title: "Photoshop"
+summary: "写真の補正・切り抜き・合成など、Webで使う画像を加工するためのソフトです。"
+canDo: "サイトに載せる写真の明るさや色を整え、切り抜き・合成して書き出せる。"
+domainIds:
+- "design-tools"
+prerequisites: []
+volatility: medium
+technologyIds:
+- "photoshop"
+resources:
+- resourceId: book-photoshop-school-2026
+  level: intro
+  reason: "補正・トリミング・合成などの基本操作を、練習ファイルつきでひととおり学べます。2026年対応版です。"
+lastReviewed: "2026-10-10"

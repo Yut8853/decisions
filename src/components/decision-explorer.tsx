@@ -64,6 +64,7 @@ export function DecisionExplorer(props: {
 
   const evidenceMap = new Map(props.evidence.map((item) => [item.id, item]));
   const resourceMap = new Map(props.resources.map((item) => [item.id, item]));
+  const conditionLabels = new Map(props.conditions.map((item) => [item.id, item.label]));
 
   return (
     <div className="explorer">
@@ -124,6 +125,8 @@ export function DecisionExplorer(props: {
               item={item}
               evidenceMap={evidenceMap}
               resourceMap={resourceMap}
+              activeConditionIds={result.activeConditionIds}
+              conditionLabels={conditionLabels}
               situationSlug={props.situation.slug}
             />
           ))}

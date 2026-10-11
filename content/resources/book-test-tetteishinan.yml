@@ -1,0 +1,20 @@
+id: book-test-tetteishinan
+type: book
+title: "ソフトウェアテスト徹底指南書 開発の高品質と高スピードを両立させる実践アプローチ"
+url: https://gihyo.jp/book/2025/978-4-297-14909-3
+authors:
+- "井芹洋輝"
+language: 日本語
+versionNote: "2025年刊"
+publishedYear: 2025
+isbn: 978-4-297-14909-3
+bookTopicIds:
+- "testing-quality"
+description: "ソフトウェアテストの知識と技術を体系的に学び、アジャイルや継続的デリバリー、テスト自動化の導入にどう対応するかを説明する本。"
+technologyIds:
+- "test-automation"
+- "software-testing"
+concepts:
+- "test-strategy"
+currentUse: "どの部分を自動テストにするか、どう導入するかを判断できるようにする。"
+limitations: "544ページある。特定のテストツールの使い方は、各ツールの公式資料で確認する。"

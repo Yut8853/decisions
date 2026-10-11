@@ -1,0 +1,20 @@
+id: book-seo-10years-new
+type: book
+title: "10年つかえるSEOの基本【改訂新版】"
+url: https://gihyo.jp/book/2026/978-4-297-15616-9
+authors:
+- "土居健太郎"
+language: 日本語
+edition: "改訂新版"
+versionNote: "2026年刊・AI検索対応"
+publishedYear: 2026
+isbn: 978-4-297-15616-9
+bookTopicIds:
+- "data-ai-search"
+description: "検索エンジンが何を評価しているか、検索キーワードの裏にある本当の質問は何かを、会話形式で学ぶSEOの入門書。2026年の改訂でAI検索に対応。"
+technologyIds:
+- "seo"
+concepts:
+- "search"
+currentUse: "検索する人の質問に応えるページを作るための考え方を身につける。"
+limitations: "128ページの入門書で、細かい設定や分析の手順は扱わない。"

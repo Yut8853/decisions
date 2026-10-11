@@ -1,0 +1,30 @@
+id: book-webgl2-intro-2e-ja
+type: book
+title: 初めてのWebGL 2 第2版――JavaScriptで開発するリアルタイム3Dアプリケーション
+url: https://www.oreilly.co.jp/books/9784873119373/
+authors:
+- Farhad Ghayour
+- Diego Cantor
+- あんどうやすし（訳）
+language: 日本語
+edition: 第2版
+versionNote: 2021年日本語版
+publishedYear: 2021
+isbn: 978-4-87311-937-3
+coverImageUrl: https://www.oreilly.co.jp/books/images/picture_large978-4-87311-937-3.jpeg
+coverImageAlt: 初めてのWebGL 2 第2版の表紙
+coverSourceName: オライリー・ジャパン
+coverSourceUrl: https://www.oreilly.co.jp/books/9784873119373/
+bookTopicIds:
+- performance-graphics
+- frontend
+description: WebGL 2の描画パイプライン、バッファ、シェーダー、行列、照明、テクスチャをJavaScriptの実装から学ぶ本。
+technologyIds:
+- webgl
+- javascript
+concepts:
+- graphics-pipeline
+- shader
+- real-time-rendering
+currentUse: Three.jsなどの背後でGPU描画がどう動くかを理解し、描画負荷や表現上の問題を切り分ける際に使う。
+limitations: WebGL 2を直接扱う本で、Three.jsやReact Three Fiberの現行APIを説明するものではない。各ライブラリの公式資料で補う。

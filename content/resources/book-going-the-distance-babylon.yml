@@ -1,0 +1,21 @@
+id: book-going-the-distance-babylon
+type: book
+title: Going the Distance with Babylon.js
+url: https://packtpub.com/en-gr/product/going-the-distance-with-babylon-dot-js-9781801073721
+authors:
+- Josh Elster
+language: 英語
+versionNote: 2022年刊・Babylon.js v5.0対象
+publishedYear: 2022
+isbn: 978-1-80107-372-1
+bookTopicIds:
+- performance-graphics
+- architecture-operations
+description: Babylon.jsで一つのブラウザゲームを作りながら、シーンの構成、PBRマテリアル、パーティクル、アニメーション、公開までを扱う本。
+technologyIds:
+- babylonjs
+concepts:
+- scene
+- engine-tooling
+currentUse: 商品表示から複雑な3Dアプリへ広げるときに、Babylon.jsの機能とコードの組み立て方を通しで学ぶ。
+limitations: 英語の書籍。対象はBabylon.js v5.0で、このサイトの検証環境はv8系のため差分は公式資料で確認する。題材はゲームで、商品ビューアの作り方を直接扱う本ではない。

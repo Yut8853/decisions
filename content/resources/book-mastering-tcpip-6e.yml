@@ -1,0 +1,24 @@
+id: book-mastering-tcpip-6e
+type: book
+title: マスタリングTCP/IP 入門編（第6版）
+url: https://www.kinokuniya.co.jp/f/dsg-08-EK-0793146
+authors:
+- 井上直也
+- 村山公保
+- 竹下隆史
+- 荒井透
+- 苅田幸雄
+language: 日本語
+edition: 第6版
+versionNote: 2019年刊
+publishedYear: 2019
+isbn: 978-4-274-22447-8
+bookTopicIds:
+- architecture-operations
+description: ネットワークの基礎知識、TCP/IPの階層、IP、TCPとUDP、ルーティング、アプリケーションプロトコル、セキュリティまでを図と脚注で説明する定番書。
+technologyIds:
+- tcp-ip
+concepts:
+- networking
+currentUse: IPアドレス、ルーティング、TCPの仕組みを体系的に理解し、通信の問題を切り分けられるようにする。
+limitations: 分量が多い（電子版で約690ページ）。最初から通読せず、基礎の章から読み始める。

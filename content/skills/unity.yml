@@ -1,0 +1,17 @@
+id: unity
+slug: unity
+title: "Unityの基本"
+summary: "パソコンやスマホのゲームを作るためのゲームエンジンの基本です。"
+canDo: "キャラクターを動かし、得点やゲームオーバーがある簡単なゲームを作れる。"
+domainIds:
+- "game"
+prerequisites:
+- "programming-basics"
+volatility: high
+technologyIds:
+- "unity"
+resources:
+- resourceId: book-unity-kyokasho-6
+  level: intro
+  reason: "簡単な2Dゲームから順に作りながら、Unityの機能とゲーム作りの知識を学べます。Unity 6に対応した版です。"
+lastReviewed: "2026-10-10"

@@ -1,0 +1,17 @@
+id: data-analysis
+slug: data-analysis
+title: "Pythonでのデータ分析"
+summary: "表形式のデータを読み込み、集計してグラフにする方法です。"
+canDo: "手元のデータを集計し、グラフにして傾向を説明できる。"
+domainIds:
+- "data-ai"
+prerequisites:
+- "python-basics"
+volatility: medium
+technologyIds:
+- "pandas"
+resources:
+- resourceId: book-python-data-analysis-3e
+  level: intro
+  reason: "pandasの開発者による本で、データの読み込み・整形・集計・グラフ化を網羅しています。出版社の分類は中級〜上級なので、Pythonの基礎を終えてから読みます。"
+lastReviewed: "2026-10-10"

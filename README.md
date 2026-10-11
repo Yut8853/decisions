@@ -1,14 +1,23 @@
 # Verified Technology Decisions
 
-JUNKBRANDINGが運営する、**SituationとConditionから実装Approachを比較し、根拠・非推奨条件・確認日を公開する技術判断サイト**です。
+JUNKBRANDINGが運営する、**初学者が「やりたいこと」から学ぶ順番と読むべき本を探せるサイト**です。方向が決まった人向けに、SituationとConditionから実装Approachを比較する技術判断ページもあります。
 
 既定公開先は `https://decisions.junkbranding.com` です。別のサブドメインへ変更する場合は `NEXT_PUBLIC_SITE_URL` を変更してください。
 
 ## 入っているもの
 
+- 目標（やりたいこと）→ 学ぶもの（前提関係で順番を自動計算）→ 本・資格・公式資料の3層構造
+- 初期データ：20分野・73記事（うち66記事は本の確認まで終えて公開、7記事は本の確認待ちの下書き）、学ぶもの49件（うち準備中7件）、本・資格・公式資料57件
+- Amazonアソシエイトのリンク（ISBNから商品ページのURLを自動で作成）と広告表記。環境変数 `AMAZON_ASSOCIATE_TAG` を設定すると表示される
+- 本のバージョン判定（対象バージョン・刊行年・試験の版を現行と比較し、古すぎる本は公開できない）
+- 「今は学ばなくていいもの」と、jQueryなどlegacy技術の扱い
+- ISBNのチェックディジット検証と、書誌データ（openBD・国立国会図書館サーチ・Google Books）との照合
+- 目標の重複チェック（表記ゆれを含む）
+- Web制作分野だけに出る、運営元のスクールへの案内
+- 目標を追加するAIパイプライン（調査 → 執筆 → 独立レビュー → プログラムによる検証 → PR、人が確認する範囲をラベルで分ける）
 - Next.js App Router / TypeScript / Vercel向け構成
 - Git内のMarkdown・YAMLを原本にするContent system
-- 9カテゴリー・17件の目的・56件の実装案・173件の判定基準・104件の根拠資料
+- サンプル記事1件（3D商品ビューア）・4件の実装案・12件の判定基準・6件の根拠資料
 - Conditionで順位・除外・警告を再計算する決定論的Rule Engine
 - Zod Schema、参照整合性、公開Presetの自動検証
 - VitestとPlaywright
@@ -64,6 +73,7 @@ GitHub Repositoryに以下を登録します。
 
 ```text
 OPENAI_API_KEY
+AI_PR_TOKEN   # 推奨。AIが作るPRでCIを起動するため（docs/AUTOMATION_SETUP.md）
 ```
 
 ### Repository Variables
@@ -107,6 +117,8 @@ pnpm test:e2e             # UIとLabをPlaywrightで確認
 pnpm build                # Vercelと同じProduction Build
 pnpm check                # validate + test + build
 pnpm content:audit        # Evidence URLとRelease観測Reportを作成
+pnpm books:verify         # 本のISBNを書誌データと照合（ネットワークが必要）
+pnpm ai:goal -- --brief "中小企業のセキュリティ担当になりたい" --slug smb-security --mode draft
 pnpm ai:pipeline -- --brief "..." --slug example --mode draft
 pnpm benchmark:run -- --id bench-product-viewer-baseline --base-url http://127.0.0.1:3000
 ```
@@ -141,6 +153,8 @@ app/** / src/components/**
 
 ## ドキュメント
 
+- [Codexに記事追加を頼むときのプロンプト](.ai/codex/ADD_ARTICLES.md)
+- [目標（学ぶ順番）の追加手順](docs/ADDING_A_GOAL.md)
 - [データモデル](docs/DATA_MODEL.md)
 - [Content作成ルール](docs/CONTENT_RULES.md)
 - [AI運用](docs/AI_OPERATIONS.md)
@@ -150,3 +164,7 @@ app/** / src/components/**
 - [Benchmark規約](docs/BENCHMARKING.md)
 - [Security](docs/SECURITY.md)
 - [新規Situation追加手順](docs/ADDING_A_SITUATION.md)
+
+## ローカル容量を抑える
+
+`.next`、`node_modules`、`test-results` は再生成可能なため、使用しないときは削除できます。開発を再開する場合は Node.js 22〜24 で `pnpm install --frozen-lockfile` を実行し、`pnpm dev` で起動してください。依存パッケージのバックアップを `.ai/runs` に保管しないでください。

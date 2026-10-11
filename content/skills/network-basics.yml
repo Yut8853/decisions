@@ -1,0 +1,14 @@
+id: network-basics
+slug: network-basics
+title: ネットワークの基礎（TCP/IP）
+summary: IPアドレス、ルーティング、TCPなど、コンピューター同士がつながる仕組みです。
+canDo: 「つながらない」ときに、どこで止まっているかを順に切り分けられる。
+domainIds: [infra-ops, security]
+prerequisites: []
+volatility: low
+technologyIds: [tcp-ip]
+resources:
+- resourceId: book-mastering-tcpip-6e
+  level: intro
+  reason: TCP/IPの基本を体系的に学べる定番です。分量が多いので、最初はネットワークとTCP/IPの基礎知識の章、IPとTCPの章から読みます。
+lastReviewed: "2026-10-10"

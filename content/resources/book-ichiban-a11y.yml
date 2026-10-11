@@ -1,0 +1,20 @@
+id: book-ichiban-a11y
+type: book
+title: "いちばんやさしいウェブアクセシビリティの教本 人気講師が教える誰もが使えるコンテンツ作り"
+url: https://webtan.impress.co.jp/q/2026/05/52555
+authors:
+- "加藤善規"
+language: 日本語
+versionNote: "2026年刊"
+publishedYear: 2026
+isbn: 978-4-295-02389-0
+bookTopicIds:
+- "accessibility"
+description: "ウェブアクセシビリティの基礎とWCAGの理解から、方針の策定、実装、評価までの流れを、実務の事例とあわせて説明する入門書。"
+technologyIds:
+- "web-accessibility"
+- "wcag"
+concepts:
+- "accessibility"
+currentUse: "WCAGの考え方に沿って、自分のサイトの問題を見つけて直せるようにする。"
+limitations: "企業での取り組み方の章もあり、個人で作る人には一部読み飛ばしてよい部分がある。"

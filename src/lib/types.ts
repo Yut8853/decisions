@@ -37,6 +37,15 @@ export type Situation = {
   body: string;
 };
 
+export type LearningStage = "start" | "stuck" | "deepen";
+
+export type LearningStep = {
+  resourceId: string;
+  stage: LearningStage;
+  reason: string;
+  showWhenAny: string[];
+};
+
 export type Approach = {
   id: string;
   slug: string;
@@ -51,7 +60,7 @@ export type Approach = {
   notRecommendedWhen: string[];
   advantages: string[];
   disadvantages: string[];
-  resourceIds: string[];
+  learningPath: LearningStep[];
   lastReviewed: string;
 };
 
@@ -90,9 +99,77 @@ export type Evidence = {
   notes?: string;
 };
 
+export type Volatility = "high" | "medium" | "low";
+
+export type Technology = {
+  id: string;
+  name?: string;
+  officialUrl: string;
+  releaseApi?: string | null;
+  volatility: Volatility;
+  lastKnownVersion?: string | null;
+  currentVersion?: string | null;
+  currentVersionCheckedAt?: string | null;
+  currentVersionSource?: string | null;
+};
+
+export type Domain = {
+  id: string;
+  title: string;
+  description: string;
+  schoolEligible: boolean;
+};
+
+export type SkillResourceLevel = "intro" | "practice" | "reference";
+
+export type SkillResource = {
+  resourceId: string;
+  level: SkillResourceLevel;
+  reason: string;
+};
+
+export type Skill = {
+  id: string;
+  slug: string;
+  title: string;
+  summary: string;
+  canDo: string;
+  domainIds: string[];
+  prerequisites: string[];
+  volatility: Volatility;
+  technologyIds: string[];
+  status: "active" | "legacy" | "planned";
+  legacyNote?: string;
+  resources: SkillResource[];
+  lastReviewed: string;
+};
+
+export type GoalBranch = {
+  id: string;
+  question: string;
+  options: { label: string; note?: string; skillIds: string[] }[];
+};
+
+export type Goal = {
+  id: string;
+  slug: string;
+  title: string;
+  summary: string;
+  kind: "build" | "career" | "protect";
+  domainId: string;
+  aliases: string[];
+  published: boolean;
+  skillIds: string[];
+  branches: GoalBranch[];
+  notNeededNow: { label: string; skillId?: string; reason: string }[];
+  relatedSituationIds: string[];
+  lastReviewed: string;
+  body: string;
+};
+
 export type Resource = {
   id: string;
-  type: "official" | "book" | "article" | "course";
+  type: "official" | "book" | "article" | "course" | "certification";
   title: string;
   url?: string;
   amazonUrl?: string;
@@ -111,6 +188,18 @@ export type Resource = {
   concepts: string[];
   currentUse: string;
   limitations?: string;
+  publishedYear?: number;
+  targetVersions: { technologyId: string; version: string }[];
+  targetExam?: { certificationId: string; version: string };
+  usesLegacySkillIds: string[];
+  outdatedNote?: string;
+  editionNote?: string;
+  provider?: string;
+  examVersion?: string;
+  syllabusUrls: string[];
+  revisionNote?: string;
+  revisionSourceUrl?: string;
+  verifiedAt?: string;
 };
 
 export type BookResource = Resource & {
@@ -118,10 +207,6 @@ export type BookResource = Resource & {
   url: string;
   authors: string[];
   language: string;
-  coverImageUrl: string;
-  coverImageAlt: string;
-  coverSourceName: string;
-  coverSourceUrl: string;
   bookTopicIds: BookTopicId[];
   limitations: string;
 };
@@ -151,6 +236,10 @@ export type BenchmarkPlan = {
 
 export type ContentBundle = {
   generatedAt: string;
+  domains: Domain[];
+  goals: Goal[];
+  skills: Skill[];
+  technologies: Technology[];
   situations: Situation[];
   approaches: Approach[];
   rules: Rule[];

@@ -1,0 +1,14 @@
+id: freelance-business
+slug: freelance-business
+title: "Web制作の見積もり・契約・進行"
+summary: "案件の見積もり、契約、ヒアリング、進行管理など、仕事として受けるための基本です。"
+canDo: "作業範囲を決めて見積もりを出し、契約から納品まで進められる。"
+domainIds:
+- "web-career"
+prerequisites: []
+volatility: low
+technologyIds:
+- "web-business"
+status: planned
+resources: []
+lastReviewed: "2026-10-10"

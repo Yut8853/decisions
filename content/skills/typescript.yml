@@ -1,0 +1,17 @@
+id: typescript
+slug: typescript
+title: "TypeScript"
+summary: "JavaScriptに型を加えて、書き間違いを実行前に見つけられるようにした言語です。"
+canDo: "型をつけてJavaScriptのコードを書き、エディターのエラーを手がかりに直せる。"
+domainIds:
+- "frontend"
+prerequisites:
+- "javascript-basics"
+volatility: medium
+technologyIds:
+- "typescript"
+resources:
+- resourceId: book-pro-typescript
+  level: intro
+  reason: "基本的な文法と型から高度な型の使い方まで、順に学べる入門書です。JavaScriptの基礎を終えてから読みます。"
+lastReviewed: "2026-10-10"

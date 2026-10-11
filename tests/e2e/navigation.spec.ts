@@ -1,13 +1,14 @@
 import { test, expect, type Page } from "@playwright/test";
 import content from "../../src/generated/content.json";
-import { bookTopics, getBookTopicsWithCounts } from "../../src/lib/book-topics";
-import { getFeaturedSituationChoices, getVisibleSituationCategories } from "../../src/lib/situation-categories";
+import { getBookTopicsWithCounts } from "../../src/lib/book-topics";
+import { getVisibleSituationCategories } from "../../src/lib/situation-categories";
 import type { BookResource, Situation } from "../../src/lib/types";
 
 const publishedSituations = content.situations.filter((situation) => situation.published) as Situation[];
+const publishedGoals = content.goals.filter((goal) => goal.published);
 const visibleCategories = getVisibleSituationCategories(publishedSituations);
-const featuredSituations = getFeaturedSituationChoices(visibleCategories);
 const bookResources = content.resources.filter((resource) => resource.type === "book") as BookResource[];
+const japaneseBookResources = bookResources.filter((book) => book.language.startsWith("日本語"));
 const bookTopicsWithCounts = getBookTopicsWithCounts(bookResources);
 
 async function expectStableLayout(page: Page) {
@@ -22,51 +23,90 @@ async function expectStableLayout(page: Page) {
   expect(layout.overflows).toBe(false);
 }
 
-test("home exposes representative goals and every category route", async ({ page }) => {
+test("home starts from goals and links to learning routes", async ({ page }) => {
   await page.goto("/");
 
   const mainNavigation = page.getByRole("navigation", { name: "メインナビゲーション" });
+  await expect(mainNavigation.getByRole("link", { name: "学ぶ順番" })).toBeVisible();
   await expect(mainNavigation.getByRole("link", { name: "技術判断" })).toBeVisible();
   await expect(mainNavigation.getByRole("link", { name: "書籍" })).toBeVisible();
-  await expect(mainNavigation.getByRole("link", { name: "判定方法" })).toBeVisible();
 
-  const goals = page.getByRole("navigation", { name: "具体的な目的から選ぶ" });
-  await expect(goals.getByRole("link")).toHaveCount(featuredSituations.length);
-  for (const { situation } of featuredSituations) {
-    const link = goals.locator(`a[href="/decisions/${situation.slug}"]`);
-    await expect(link).toHaveCount(1);
-    await expect(link).toContainText(situation.title);
+  const hero = page.locator(".hero");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveCount(1);
+  await expect(hero.getByRole("heading", { level: 1, name: /何をしたいですか？/ })).toBeVisible();
+  await expect(hero.locator("ol > li")).toHaveCount(3);
+  await expect(hero.getByRole("link", { name: "やりたいことを選ぶ" })).toHaveAttribute("href", "#goals");
+
+  for (const goal of publishedGoals) {
+    await expect(page.locator(`#goals a[href="/goals/${goal.slug}"]`)).toHaveCount(1);
   }
+  await expectStableLayout(page);
 
-  const categories = page.getByRole("navigation", { name: "カテゴリーで絞る" });
-  await expect(categories.getByRole("link")).toHaveCount(visibleCategories.length);
-  await expect(categories.getByRole("heading", { name: "計測して改善する" })).toBeVisible();
+  await page.locator('#goals a[href="/goals/homepage"]').click();
+  await expect(page).toHaveURL(/\/goals\/homepage$/);
+});
+
+test("home hero stays readable at 320px and honors reduced motion", async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 720 });
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/");
 
   await expectStableLayout(page);
 
-  await goals.getByRole("link", { name: /問い合わせフォームを安全に運用したい/ }).click();
-  await expect(page).toHaveURL(/\/decisions\/secure-contact-form$/);
+  const primaryAction = page.locator(".hero").getByRole("link", { name: "やりたいことを選ぶ" });
+  const actionBox = await primaryAction.boundingBox();
+  expect(actionBox).not.toBeNull();
+  expect(actionBox!.height).toBeGreaterThanOrEqual(44);
+
+  await primaryAction.focus();
+  const focusStyle = await primaryAction.evaluate((element) => {
+    const style = getComputedStyle(element);
+    return { outlineStyle: style.outlineStyle, outlineWidth: Number.parseFloat(style.outlineWidth) };
+  });
+  expect(focusStyle.outlineStyle).not.toBe("none");
+  expect(focusStyle.outlineWidth).toBeGreaterThanOrEqual(2);
+
+  const scrollBehavior = await page.locator("html").evaluate((element) => getComputedStyle(element).scrollBehavior);
+  expect(scrollBehavior).toBe("auto");
+
+  await primaryAction.click();
+  await expect(page).toHaveURL(/\/#goals$/);
+  const headingBox = await page.getByRole("heading", { level: 2, name: "近いものを選んでください" }).boundingBox();
+  expect(headingBox).not.toBeNull();
+  expect(headingBox!.y).toBeGreaterThanOrEqual(50);
+  expect(headingBox!.y).toBeLessThan(180);
 });
 
-test("category links restore the selected directory from the URL", async ({ page }) => {
-  await page.goto("/");
-  await page.getByRole("navigation", { name: "カテゴリーで絞る" }).getByRole("link", { name: /品質・使いやすさを高める/ }).click();
+test("goal page shows ordered steps, a branch, detours, version cautions and the school guidance", async ({ page }) => {
+  await page.goto("/goals/homepage");
+  await expect(page.getByRole("heading", { level: 1, name: "お店や会社のホームページを作りたい" })).toBeVisible();
 
-  await expect(page).toHaveURL(/\/decisions#category-quality$/);
-  await expect(page.getByRole("radio", { name: /品質・使いやすさを高める/ })).toBeChecked();
-  const purposeNavigation = page.getByRole("navigation", { name: "具体的な目的を選ぶ" });
-  await expect(purposeNavigation.getByRole("link", { name: "Webサイトの使いやすさを検証したい", exact: true })).toBeVisible();
-  await expect(purposeNavigation.getByRole("link", { name: "最初に整備するテストを選びたい", exact: true })).toBeVisible();
-  await expect(purposeNavigation.getByRole("link")).toHaveCount(2);
+  const steps = page.locator("section.route-section > ol > li.route-step h3");
+  await expect(steps).toHaveText(["Webの仕組み", "HTML", "CSS", "JavaScriptの基礎"]);
 
-  await page.getByRole("radio", { name: /安全性を高める/ }).check();
-  await expect(page).toHaveURL(/\/decisions#category-security$/);
-  await page.goBack();
-  await expect(page.getByRole("radio", { name: /品質・使いやすさを高める/ })).toBeChecked();
-  await expect(purposeNavigation.getByRole("link")).toHaveCount(2);
-  await page.goForward();
-  await expect(page.getByRole("radio", { name: /安全性を高める/ })).toBeChecked();
-  await expect(purposeNavigation.getByRole("link")).toHaveCount(2);
+  await expect(page.getByRole("heading", { name: "必要に応じて、WordPressを学ぶ" })).toBeVisible();
+  const wordpress = page.locator(".branch-section .resource-card").filter({ hasText: "WordPress" });
+  await expect(wordpress.locator(".resource-caution")).toContainText("現行は7.0");
+
+  const skip = page.locator(".skip-list");
+  await expect(skip).toContainText("jQuery");
+  await expect(skip).toContainText("Ruby");
+
+  await expect(page.locator(".school-cta")).toHaveCount(2);
+  await expect(page.locator(".school-cta a").first()).toHaveAttribute("href", /school\.junkbranding\.com.*utm_content=homepage-/);
+  await expectStableLayout(page);
+});
+
+test("non-web goals do not show the school guidance", async ({ page }) => {
+  await page.goto("/goals/company-security");
+  await expect(page.locator(".school-cta")).toHaveCount(0);
+  await expect(page.locator(".resource-card").filter({ hasText: "情報セキュリティマネジメント試験" }).locator(".resource-caution")).toContainText("2027年度");
+});
+
+test("legacy skill page explains why it is not in the route", async ({ page }) => {
+  await page.goto("/skills/jquery");
+  await expect(page.locator(".legacy-box")).toContainText("これから学ぶ順番には入れていません");
+  await expect(page.getByRole("link", { name: /お店や会社のホームページを作りたい/ })).toBeVisible();
 });
 
 test("category directory filters and searches decisions", async ({ page }) => {
@@ -84,8 +124,8 @@ test("category directory filters and searches decisions", async ({ page }) => {
 
   await allCategories.focus();
   await page.keyboard.press("ArrowRight");
-  await expect(categoryFilter.getByRole("radio", { name: /サイトをつくる/ })).toBeChecked();
-  await expect(page).toHaveURL(/\/decisions#category-sites$/);
+  await expect(categoryFilter.getByRole("radio", { name: /商品を見せる/ })).toBeChecked();
+  await expect(page).toHaveURL(/\/decisions#category-products$/);
 
   await page.getByRole("radio", { name: /商品を見せる/ }).check();
   await expect(purposeNavigation.getByRole("link")).toHaveCount(1);
@@ -103,94 +143,67 @@ test("category directory filters and searches decisions", async ({ page }) => {
   await expect(page.getByRole("status")).toHaveText(`${publishedSituations.length}件の目的が見つかりました`);
 });
 
-test("expanded categories expose real decisions", async ({ page }) => {
-  await page.goto("/decisions");
-
-  const expectations = [
-    ["品質・使いやすさを高める", "Webサイトの使いやすさを検証したい", "最初に整備するテストを選びたい"],
-    ["安全性を高める", "Webアプリのログイン方法を選びたい", "最初に導入するセキュリティ検査を選びたい"],
-    ["データ・生成AIを活用する", "自社資料に答える質問機能を作りたい", "データを分かりやすく可視化したい"],
-    ["計測して改善する", "実際の表示品質を継続して測りたい", "公開後の画面エラーを見つけたい"]
-  ] as const;
-
-  for (const [category, firstDecision, secondDecision] of expectations) {
-    await page.getByRole("radio", { name: new RegExp(category) }).check();
-    const purposeNavigation = page.getByRole("navigation", { name: "具体的な目的を選ぶ" });
-    await expect(purposeNavigation.getByRole("link", { name: firstDecision, exact: true })).toBeVisible();
-    await expect(purposeNavigation.getByRole("link", { name: secondDecision, exact: true })).toBeVisible();
-  }
-});
-
 test("book library shows covers, authors and direct links", async ({ page }) => {
   await page.goto("/books");
 
   const cards = page.locator(".book-library-card");
   await expect(cards).toHaveCount(bookResources.length);
+  await expect(page.locator(".book-library-note")).toContainText(`現在${japaneseBookResources.length}冊`);
   await expect(page.getByRole("heading", { name: "分野から本を探す" })).toBeVisible();
   const topicFilter = page.getByRole("group", { name: "書籍の分野を選ぶ" });
-  await expect(topicFilter.getByRole("radio")).toHaveCount(bookTopics.length + 1);
+  await expect(topicFilter.getByRole("radio")).toHaveCount(bookTopicsWithCounts.filter((topic) => topic.count > 0).length + 1);
 
   for (const book of bookResources) {
     const card = cards.filter({ has: page.getByRole("heading", { name: book.title, exact: true }) });
     await expect(card).toHaveCount(1);
     await card.scrollIntoViewIfNeeded();
-    await expect(card.locator("img")).toHaveAttribute("src", /^https:\/\//);
-    await expect(card.locator("img")).toHaveAttribute("alt", /.+/);
-    await expect.poll(() => card.locator("img").evaluate((image) => {
-      const cover = image as HTMLImageElement;
-      return cover.complete && cover.naturalWidth > 0;
-    })).toBe(true);
-    await expect(card.getByRole("link", { name: /出版社・公式ページを開く/ })).toHaveAttribute("href", book.url);
-    await expect(card.getByRole("link", { name: /出版社・公式ページを開く/ })).toContainText("新しいタブで開きます");
+    if (book.coverImageUrl) {
+      await expect(card.locator("img")).toHaveAttribute("src", /^https:\/\//);
+      await expect(card.locator("img")).toHaveAttribute("alt", /.+/);
+      await expect.poll(() => card.locator("img").evaluate((image) => {
+        const cover = image as HTMLImageElement;
+        return cover.complete && cover.naturalWidth > 0;
+      })).toBe(true);
+    } else {
+      await expect(card.locator(".book-cover-placeholder")).toHaveText(book.title);
+    }
+    await expect(card.getByRole("link", { name: /書籍の詳細を開く/ })).toHaveAttribute("href", book.url);
+    await expect(card.getByRole("link", { name: /書籍の詳細を開く/ })).toContainText("新しいタブで開きます");
     await expect(card).toContainText("著者：");
+  }
+
+  for (const section of await page.locator(".book-topic-section").all()) {
+    const languages = await section.locator(".book-library-labels li:first-child").allTextContents();
+    const firstEnglishIndex = languages.findIndex((language) => !language.startsWith("日本語"));
+    if (firstEnglishIndex >= 0) {
+      expect(languages.slice(firstEnglishIndex).every((language) => !language.startsWith("日本語"))).toBe(true);
+    }
   }
   await expectStableLayout(page);
 });
 
-test("book library filters by topic, search and URL history", async ({ page }) => {
-  await page.goto("/books");
-  const accessibilityCount = bookTopicsWithCounts.find((topic) => topic.id === "accessibility")?.count ?? 0;
-  const cards = page.locator(".book-library-card");
+test("each approach lists learning resources with a reason for that approach", async ({ page }) => {
+  await page.goto("/decisions/3d-product-viewer");
 
-  await page.getByRole("radio", { name: /アクセシビリティ/ }).check();
-  await expect(page).toHaveURL(/\/books#book-topic-accessibility$/);
-  await expect(cards).toHaveCount(accessibilityCount);
-  await expect(page.getByRole("heading", { name: "具体例と解決策で学ぶ Webアクセシビリティの教科書", exact: true })).toBeVisible();
-
-  await page.getByRole("radio", { name: /セキュリティ・認証/ }).check();
-  await expect(page).toHaveURL(/\/books#book-topic-security-auth$/);
-  await page.goBack();
-  await expect(page.getByRole("radio", { name: /アクセシビリティ/ })).toBeChecked();
-
-  await page.getByRole("radio", { name: /すべての分野/ }).check();
-  const search = page.getByRole("searchbox", { name: "書名・著者・学びたい内容で探す" });
-  await search.fill("OpenID Connect");
-  await expect(page.getByRole("status")).toHaveText("1冊の書籍が見つかりました");
-  await expect(cards).toHaveCount(1);
-  await expect(cards.first()).toContainText("OpenID Connect入門");
-  await search.fill("該当しない検索語");
-  await expect(page.getByRole("button", { name: "検索と絞り込みを解除する" })).toBeVisible();
-  await page.getByRole("button", { name: "検索と絞り込みを解除する" }).click();
-  await expect(search).toBeFocused();
-  await expect(cards).toHaveCount(bookResources.length);
+  const paths = page.locator(".learning-path");
+  await expect(paths.first()).toBeVisible();
+  for (const path of await paths.all()) {
+    await expect(path.locator(".learning-stage").first()).toContainText("最初に読む");
+    for (const reason of await path.locator(".learning-reason").all()) {
+      await expect(reason).not.toBeEmpty();
+    }
+  }
 });
 
-test("decision approaches show related book covers without expanding details", async ({ page }) => {
-  await page.goto("/decisions/3d-portfolio");
+test("condition-specific books appear only after choosing the condition", async ({ page }) => {
+  await page.goto("/decisions/3d-product-viewer");
+  const threeCard = page.locator(".approach-card").filter({ hasText: "Three.js + glTFによる商品ビューア" });
+  await expect(threeCard.locator(".learning-item").filter({ hasText: "The Book of Shaders" })).toHaveCount(0);
 
-  const relatedBooks = page.locator(".approach-books");
-  await expect(relatedBooks.first()).toBeVisible();
-  await expect(relatedBooks.first().locator("img")).toBeVisible();
-  await expect(relatedBooks.first().getByRole("link", { name: /The Book of Shaders/ })).toHaveAttribute("href", "https://thebookofshaders.com/?lan=jp");
-});
-
-test("accessibility decision exposes implementation, evaluation and participant books", async ({ page }) => {
-  await page.goto("/decisions/accessibility-evaluation");
-
-  const relatedBooks = page.locator(".approach-books");
-  await expect(relatedBooks.getByRole("link", { name: /Webアクセシビリティの教科書/ }).first()).toBeVisible();
-  await expect(relatedBooks.getByRole("link", { name: /Webアプリケーションアクセシビリティ/ }).first()).toBeVisible();
-  await expect(relatedBooks.getByRole("link", { name: /ウェブ・インクルーシブデザイン/ }).first()).toBeVisible();
+  await page.locator(".condition-chip").filter({ hasText: "高度な独自表現" }).click();
+  const shaderBook = threeCard.locator(".learning-item").filter({ hasText: "The Book of Shaders" });
+  await expect(shaderBook).toHaveCount(1);
+  await expect(shaderBook).toContainText("「高度な独自表現」を選んだため表示");
 });
 
 test("decision page recalculates after a condition toggle", async ({ page }) => {

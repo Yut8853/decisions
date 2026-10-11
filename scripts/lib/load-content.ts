@@ -3,6 +3,10 @@ import path from "node:path";
 import matter from "gray-matter";
 import YAML from "yaml";
 import {
+  domainSchema,
+  goalFrontmatterSchema,
+  skillSchema,
+  technologySchema,
   approachSchema,
   benchmarkPlanSchema,
   conditionSchema,
@@ -58,12 +62,32 @@ export function loadContent(): ContentBundle {
     }
   });
 
+  const goals = files(path.join(CONTENT, "goals"), ".md").map((file) => {
+    const parsed = matter(fs.readFileSync(file, "utf8"));
+    try {
+      return { ...goalFrontmatterSchema.parse(parsed.data), body: parsed.content.trim() };
+    } catch (error) {
+      throw new Error(`Invalid goal: ${path.relative(ROOT, file)}\n${String(error)}`);
+    }
+  });
+
+  const domainsRaw = parseYaml(path.join(CONTENT, "domains.yml"));
+  if (!Array.isArray(domainsRaw)) throw new Error("content/domains.yml must contain an array.");
+  const domains = domainsRaw.map((value) => domainSchema.parse(value));
+
+  const registryRaw = parseYaml(path.join(CONTENT, "technology-registry.yml")) as { technologies?: unknown[] };
+  const technologies = (registryRaw.technologies ?? []).map((value) => technologySchema.parse(value));
+
   const conditionsRaw = parseYaml(path.join(CONTENT, "conditions", "conditions.yml"));
   if (!Array.isArray(conditionsRaw)) throw new Error("content/conditions/conditions.yml must contain an array.");
   const conditions = conditionsRaw.map((value) => conditionSchema.parse(value));
 
   return {
     generatedAt: new Date().toISOString(),
+    domains,
+    goals,
+    skills: parseMany(path.join(CONTENT, "skills"), skillSchema),
+    technologies,
     situations,
     approaches: parseMany(path.join(CONTENT, "approaches"), approachSchema),
     rules: parseMany(path.join(CONTENT, "rules"), ruleSchema),

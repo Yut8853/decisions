@@ -25,7 +25,9 @@
     "build": "next build",
     "start": "next start",
     "check": "pnpm content:validate && pnpm test && pnpm build",
-    "setup:check": "tsx scripts/setup-check.ts"
+    "setup:check": "tsx scripts/setup-check.ts",
+    "books:verify": "tsx scripts/verify-books.ts",
+    "ai:goal": "tsx scripts/ai/goal-pipeline.ts"
   },
   "dependencies": {
     "@babylonjs/core": "^8.0.0",

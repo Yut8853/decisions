@@ -1,0 +1,19 @@
+id: book-pro-typescript
+type: book
+title: "プロを目指す人のためのTypeScript入門 安全なコードの書き方から高度な型の使い方まで"
+url: https://gihyo.jp/book/2022/978-4-297-12747-3
+authors:
+- "鈴木僚太"
+language: 日本語
+versionNote: "2022年刊"
+publishedYear: 2022
+isbn: 978-4-297-12747-3
+bookTopicIds:
+- "frontend"
+description: "TypeScriptの基本的な文法と型から、高度な型の使い方までを順に説明する入門書。"
+technologyIds:
+- "typescript"
+concepts:
+- "type-safety"
+currentUse: "JavaScriptに型をつけて書き、エラーを手がかりにコードを直せるようにする。"
+limitations: "後半の高度な型の章は、最初は読み飛ばしてよい。"

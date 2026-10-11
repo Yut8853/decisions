@@ -25,7 +25,11 @@ advantages:
 disadvantages:
 - 小規模用途には機能と学習範囲が大きい
 - Three.js資産をそのまま流用できない
-resourceIds:
-- res-babylon-loading
-- book-real-time-rendering
+learningPath:
+- resourceId: res-babylon-loading
+  stage: start
+  reason: 商品モデルの読み込み方法と対応形式を、まず公式ガイドで確認します。
+- resourceId: book-going-the-distance-babylon
+  stage: deepen
+  reason: ビューアから複雑な3Dアプリへ広げる段階で、Babylon.jsの機能を一つのアプリを作りながら通しで学べます（英語、題材はゲーム）。
 lastReviewed: '2026-08-23'

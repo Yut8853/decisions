@@ -1,0 +1,20 @@
+id: ui-design
+slug: ui-design
+title: "UIデザインの基本"
+summary: "ボタンやメニュー、フォームなどを、迷わず使える形にするための考え方です。"
+canDo: "使いにくい画面を見て、どこが悪いのかを説明して直せる。"
+domainIds:
+- "web-design"
+prerequisites:
+- "design-basics"
+volatility: low
+technologyIds:
+- "ui-design"
+resources:
+- resourceId: book-ui-design-textbook-new
+  level: intro
+  reason: "UIの定義から、画面などの制約、人の心理による影響、デザインを形にする方法までを、図で体系的に説明しています。"
+- resourceId: book-ui-design-41
+  level: practice
+  reason: "現場でよくある使いにくさを41の改善例で示しているので、基本を学んだ後に自分の画面を見直すのに使えます。"
+lastReviewed: "2026-10-10"

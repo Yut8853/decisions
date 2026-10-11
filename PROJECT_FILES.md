@@ -7,7 +7,10 @@
 | `app/` | Next.jsのPage、API、共通Layout |
 | `src/components/` | 判断画面、Category一覧、検証画面のUI |
 | `src/lib/` | Schema、Content読込、判定Engine |
-| `content/situations/` | ユーザーの目的・悩み |
+| `content/goals/` | 初学者のやりたいこと（学ぶ順番の入口） |
+| `content/skills/` | 学ぶもの（前提関係・変化の速さ・資料と読む理由） |
+| `content/domains.yml` | 目標の分野とスクール案内の可否 |
+| `content/situations/` | 技術の選び方（方向が決まった人向け） |
 | `content/approaches/` | 比較する実装案と非推奨条件 |
 | `content/rules/` | 条件から順位・除外・警告を決めるRule |
 | `content/evidence/` | 確認日つきの根拠Claim |

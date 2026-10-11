@@ -1,0 +1,22 @@
+id: book-unity-kyokasho-6
+type: book
+title: "Unityの教科書 Unity 6完全対応版"
+url: https://www.maruzenjunkudo.co.jp/products/9784815628192
+authors:
+- "北村愛実"
+language: 日本語
+versionNote: "2024年刊・Unity 6対応"
+publishedYear: 2024
+isbn: 978-4-8156-2819-2
+bookTopicIds:
+- "performance-graphics"
+description: "簡単な2Dゲームから始めて、少しずつ難しいゲームへ進みながら、Unityの機能とゲーム作りの知識を身につける入門書。"
+technologyIds:
+- "unity"
+concepts:
+- "game-development"
+currentUse: "Unityで簡単なゲームを最後まで作れるようにする。"
+limitations: "Unityのバージョンに合わせて改訂されるシリーズのため、新しいバージョンに対応した版が出たら差し替える。"
+targetVersions:
+- technologyId: unity
+  version: "6"

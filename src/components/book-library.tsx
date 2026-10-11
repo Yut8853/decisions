@@ -1,6 +1,8 @@
 "use client";
 
+import { track } from "@vercel/analytics";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { compareBooksByLanguageAndTitle } from "@/lib/book-language";
 import { bookTopics, getBookTopicsWithCounts } from "@/lib/book-topics";
 import type { BookResource, BookTopicId } from "@/lib/types";
 
@@ -10,8 +12,8 @@ function normalize(value: string) {
   return value.normalize("NFKC").trim().toLocaleLowerCase("ja");
 }
 
-export function BookLibrary({ books }: { books: BookResource[] }) {
-  const topics = useMemo(() => getBookTopicsWithCounts(books), [books]);
+export function BookLibrary({ books, versionNotes = {}, amazonUrls = {} }: { books: BookResource[]; versionNotes?: Record<string, { severity: string; label: string; messages: string[] }>; amazonUrls?: Record<string, string> }) {
+  const topics = useMemo(() => getBookTopicsWithCounts(books).filter((topic) => topic.count > 0), [books]);
   const [activeTopic, setActiveTopic] = useState<TopicFilter>("all");
   const [query, setQuery] = useState("");
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -59,7 +61,7 @@ export function BookLibrary({ books }: { books: BookResource[] }) {
         .map((topic) => ({ ...topic, books: filteredBooks })))
     .map((section) => ({
       ...section,
-      books: [...section.books].sort((left, right) => left.title.localeCompare(right.title, "ja"))
+      books: [...section.books].sort(compareBooksByLanguageAndTitle)
     }))
     .filter((section) => section.books.length > 0);
 
@@ -119,7 +121,7 @@ export function BookLibrary({ books }: { books: BookResource[] }) {
           type="search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="例：アクセシビリティ、テスト、認証、生成AI"
+          placeholder="例：Three.js、シェーダー、React"
         />
       </label>
 
@@ -145,7 +147,9 @@ export function BookLibrary({ books }: { books: BookResource[] }) {
                   return (
                     <article className="book-library-card" data-book-id={book.id} key={book.id}>
                       <div className="book-library-cover">
-                        <img src={book.coverImageUrl} alt={book.coverImageAlt} loading="lazy" decoding="async" />
+                        {book.coverImageUrl
+                          ? <img src={book.coverImageUrl} alt={book.coverImageAlt ?? ""} loading="lazy" decoding="async" />
+                          : <span className="book-cover-placeholder">{book.title}</span>}
                       </div>
                       <div className="book-library-body">
                         <ul className="book-library-labels" aria-label="書籍情報">
@@ -166,6 +170,18 @@ export function BookLibrary({ books }: { books: BookResource[] }) {
                             <dt>読む前に確認</dt>
                             <dd>{book.limitations}</dd>
                           </div>
+                          {versionNotes[book.id]?.label ? (
+                            <div>
+                              <dt>バージョン</dt>
+                              <dd>{versionNotes[book.id].label}</dd>
+                            </div>
+                          ) : null}
+                          {versionNotes[book.id]?.messages.length ? (
+                            <div className="book-version-caution">
+                              <dt>買う前に確認</dt>
+                              <dd>{versionNotes[book.id].messages.join(" ")}</dd>
+                            </div>
+                          ) : null}
                           {book.isbn ? (
                             <div>
                               <dt>ISBN</dt>
@@ -175,10 +191,15 @@ export function BookLibrary({ books }: { books: BookResource[] }) {
                         </dl>
                         <div className="book-library-actions">
                           <a className="book-library-link" href={book.url} target="_blank" rel="noreferrer">
-                            出版社・公式ページを開く
+                            書籍の詳細を開く
                             <span className="sr-only">（新しいタブで開きます）</span>
                             <span aria-hidden="true">↗</span>
                           </a>
+                        {amazonUrls[book.id] ? (
+                          <a className="amazon-link" href={amazonUrls[book.id]} target="_blank" rel="sponsored noopener noreferrer" onClick={() => track("amazon_click", { context: "books", resource: book.id })}>
+                            Amazonで見る（広告）<span className="sr-only">（新しいタブで開きます）</span> ↗
+                          </a>
+                        ) : null}
                           {book.amazonUrl ? (
                             <a className="book-library-link secondary" href={book.amazonUrl} target="_blank" rel="sponsored noreferrer">
                               Amazonで確認する
@@ -187,11 +208,13 @@ export function BookLibrary({ books }: { books: BookResource[] }) {
                             </a>
                           ) : null}
                         </div>
-                        <small className="book-cover-credit">
-                          表紙画像：{book.coverSourceUrl === book.url
-                            ? book.coverSourceName
-                            : <a href={book.coverSourceUrl} target="_blank" rel="noreferrer">{book.coverSourceName}</a>}
-                        </small>
+                        {book.coverImageUrl ? (
+                          <small className="book-cover-credit">
+                            表紙画像：{book.coverSourceUrl === book.url
+                              ? book.coverSourceName
+                              : <a href={book.coverSourceUrl} target="_blank" rel="noreferrer">{book.coverSourceName}</a>}
+                          </small>
+                        ) : null}
                       </div>
                     </article>
                   );

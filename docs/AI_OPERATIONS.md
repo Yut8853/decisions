@@ -4,7 +4,19 @@
 
 AIに調査、構成、執筆、独立レビュー、Fact Check、PR作成を担当させながら、自己承認と無制限公開を防ぎます。
 
-## 5段階Pipeline
+## 学ぶ順番（目標）のPipeline
+
+`pnpm ai:goal -- --brief "..." --slug ... --mode draft|publish`、またはActionsの **AI — Create learning route (goal)**。
+
+1. Goal Researcher（Web search）: 必要な学ぶもの、回り道、本の候補（ISBN・刊行年・対象バージョン・出典URL）、現行バージョンを集める。既存の学ぶもの・本を優先して再利用する。
+2. Goal Author: 公開用のデータ一式を作る。文章は日本語で、制作現場の普通の言葉で書く。
+3. Goal Reviewer（Web search）: 順番、回り道、本の実在と範囲、バージョンを独立に確認する。
+4. Goal Gate（プログラム）: 追加後の全体に `validateBundle` をかけ、新しい本を書誌データで照合する。
+5. 書き出しとラベル: 新しい学ぶもの・本・資格・現行バージョンの更新・分野の最初の3本を含む場合は `needs-human-review`、それ以外は `ai-approved`。
+
+AIが直接できないこと：既存IDの上書き、ISBNのない本の追加、照合できない本の公開、検証に通らない学ぶ順番の公開。
+
+## 技術の選び方（Situation）の5段階Pipeline
 
 ### 1. Researcher
 

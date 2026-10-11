@@ -1,0 +1,16 @@
+id: web-portfolio
+slug: web-portfolio
+title: "ポートフォリオの作り方"
+summary: "自分が作ったものと、その考え方を伝えるための作品集の作り方です。"
+canDo: "制作物の目的・工夫・担当範囲を説明できる作品集を作れる。"
+domainIds:
+- "web-career"
+prerequisites:
+- "html"
+- "css"
+volatility: low
+technologyIds:
+- "portfolio"
+status: planned
+resources: []
+lastReviewed: "2026-10-10"

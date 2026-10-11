@@ -1,0 +1,14 @@
+id: linux-basics
+slug: linux-basics
+title: Linuxの基本操作
+summary: サーバーで使われるLinuxを、コマンドで操作するための基本です。
+canDo: サーバーにログインして、ファイルの確認・編集・権限の変更ができる。
+domainIds: [infra-ops, security]
+prerequisites: []
+volatility: low
+technologyIds: [linux, almalinux]
+resources:
+- resourceId: book-illust-linux-2e
+  level: intro
+  reason: 「コマンドって何？」という段階から、図解で学べます。学習用の仮想マシンで実際に動かしながら進められます。
+lastReviewed: "2026-10-10"

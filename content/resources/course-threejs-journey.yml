@@ -1,0 +1,19 @@
+id: course-threejs-journey
+type: course
+title: Three.js Journey
+url: https://threejs-journey.com/
+authors:
+- Bruno Simon
+language: 英語（動画講座）
+description: Three.jsを初めて触る人向けに、基礎から応用までを動画と課題で学ぶ有料講座。後半の章でReact Three Fiberも扱う。
+technologyIds:
+- threejs
+- r3f
+- react
+- glsl
+concepts:
+- scene
+- lighting
+- shader
+currentUse: Three.jsまたはR3Fで商品ビューアを作る前に、シーン・カメラ・ライト・モデル読み込みの基本を一通り身につける。
+limitations: 英語の有料講座。講座の更新時期と現在のThree.jsのAPIに差がある場合は公式資料で確認する。

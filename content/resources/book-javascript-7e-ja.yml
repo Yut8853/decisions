@@ -1,0 +1,29 @@
+id: book-javascript-7e-ja
+type: book
+title: JavaScript 第7版
+url: https://www.oreilly.co.jp/books/9784873119700/
+authors:
+- David Flanagan
+- 村上列（訳）
+language: 日本語
+edition: 第7版
+versionNote: 2021年日本語版
+publishedYear: 2021
+isbn: 978-4-87311-970-0
+coverImageUrl: https://www.oreilly.co.jp/books/images/picture_large978-4-87311-970-0.jpeg
+coverImageAlt: JavaScript 第7版の表紙
+coverSourceName: オライリー・ジャパン
+coverSourceUrl: https://www.oreilly.co.jp/books/9784873119700/
+bookTopicIds:
+- frontend
+- architecture-operations
+description: JavaScriptの型、式、オブジェクト、クラス、モジュール、非同期処理、ブラウザとNode.jsでの利用を体系的に扱う本。
+technologyIds:
+- javascript
+- nodejs
+concepts:
+- language-fundamentals
+- asynchronous-programming
+- modules
+currentUse: ライブラリの使い方だけでは不足する、JavaScriptの言語仕様と実行の仕組みを確認する。
+limitations: 2021年日本語版のため、その後に追加されたECMAScript機能とブラウザ・Node.jsのAPIは現在の公式資料で補う。

@@ -1,0 +1,22 @@
+id: book-mana-moving-ui
+type: book
+title: "CSSとJavaScriptで作る動くUIアイデアレシピ"
+url: https://webtan.impress.co.jp/q/2025/04/48986
+authors:
+- "Mana"
+language: 日本語
+versionNote: "2025年刊"
+publishedYear: 2025
+isbn: 978-4-295-02128-5
+bookTopicIds:
+- "frontend"
+- "design-ux"
+description: "ボタン、画像、背景・画面遷移、ナビゲーションメニュー、スクロールなど、Webサイトでよく使う動きを、基本編・応用編とカスタマイズのポイントに分けて説明するレシピ集。"
+technologyIds:
+- "css-animation"
+- "css"
+- "javascript"
+concepts:
+- "animation"
+currentUse: "HTML・CSS・JavaScriptの基礎を終えた後に、よく使う動きを自分で実装して調整できるようにする。"
+limitations: "HTML・CSS・JavaScriptの基礎を学び終えた人が対象。"

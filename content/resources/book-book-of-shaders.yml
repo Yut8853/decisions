@@ -19,4 +19,4 @@ technologyIds:
 concepts:
 - shader
 currentUse: シェーダーの基本的な考え方と、形や色を数式で表現する方法を学ぶ。
-limitations: 一部の章は日本語化されていない。Three.js固有APIの最新手順は公式資料で確認する。
+limitations: 一部の章は日本語化されていない。Three.jsのWebGPURendererではGLSLで書いたShaderMaterialが使えずTSLへの書き換えが必要になるため、使うレンダラーを先に確認する。

@@ -1,0 +1,14 @@
+id: html
+slug: html
+title: HTML
+summary: ページの中身（見出し・文章・画像・リンク）を、意味のある構造で書くための言語です。
+canDo: 文章や画像を、見出し・段落・リストなどの構造で1枚のページにできる。
+domainIds: [web]
+prerequisites: [web-basics]
+volatility: low
+technologyIds: [html]
+resources:
+- resourceId: book-mana-html-css-2e
+  level: intro
+  reason: HTMLとCSSを、1つのサイトを作りながら順に学べます。前半がHTMLの基本です。
+lastReviewed: "2026-10-10"

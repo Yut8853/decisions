@@ -25,8 +25,20 @@ advantages:
 disadvantages:
 - ReactとThree.js双方の理解が必要
 - 抽象化の挙動を理解せず最適化すると難しい
-resourceIds:
-- res-r3f-intro
-- res-r3f-performance
-- book-react-design
+learningPath:
+- resourceId: res-r3f-intro
+  stage: start
+  reason: R3FのコードがThree.jsのどの機能に対応しているかを、まず公式の導入ガイドで確認します。
+- resourceId: book-react-design
+  stage: start
+  reason: R3FはReactのコンポーネントと状態管理の上で動くため、Reactに慣れていない場合はこの本から始めます。
+- resourceId: course-threejs-journey
+  stage: start
+  reason: Three.jsの基礎から始めて、後半の章でReact Three Fiberを扱う動画講座です（英語）。
+- resourceId: res-r3f-performance
+  stage: stuck
+  reason: 表示が重くなったときに、再描画の抑え方や同じモデルの使い回しなど、R3F特有の対処を確認します。
+- resourceId: book-learn-threejs-4e
+  stage: deepen
+  reason: R3Fの下で動いているThree.jsそのものを理解したくなったときに読みます。ReactやTypeScriptとの組み合わせも扱っています（英語）。
 lastReviewed: '2026-08-23'

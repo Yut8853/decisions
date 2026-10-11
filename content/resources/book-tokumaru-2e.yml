@@ -1,0 +1,22 @@
+id: book-tokumaru-2e
+type: book
+title: 体系的に学ぶ 安全なWebアプリケーションの作り方 第2版 脆弱性が生まれる原理と対策の実践
+url: https://www.kinokuniya.co.jp/f/dsg-01-9784797393163
+authors:
+- 徳丸浩
+language: 日本語
+edition: 第2版
+versionNote: 2018年刊・OWASP Top 10 2017対応
+publishedYear: 2018
+isbn: 978-4-7973-9316-3
+bookTopicIds:
+- security-auth
+description: PHPのサンプルへの攻撃を通して、Webアプリケーションに脆弱性が生まれる原理と、その対策を学ぶ本。
+technologyIds:
+- web-security
+concepts:
+- vulnerability
+currentUse: SQLインジェクションやクロスサイト・スクリプティングなどの脆弱性を、原理から理解する。
+limitations: 分量が多い（約650ページ）。最初は脆弱性の原理を説明した章から読む。
+outdatedNote: 2018年刊でOWASP Top 10 2017に対応した内容です。その後の脆弱性の傾向やブラウザの仕様変更は公式資料で確認してください。
+editionNote: 2026年8月に、第3版への改訂が進んでいると報じられています。刊行されたら差し替えます。

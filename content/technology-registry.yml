@@ -26,6 +26,7 @@ technologies:
   volatility: high
   lastKnownVersion: null
 - id: react
+  name: React
   officialUrl: https://react.dev/
   releaseApi: https://api.github.com/repos/facebook/react/releases/latest
   volatility: medium
@@ -60,3 +61,61 @@ technologies:
   releaseApi: https://api.github.com/repos/KhronosGroup/glTF/releases/latest
   volatility: medium
   lastKnownVersion: null
+- id: html
+  name: HTML
+  officialUrl: https://html.spec.whatwg.org/
+  releaseApi: null
+  volatility: low
+  lastKnownVersion: null
+- id: css
+  name: CSS
+  officialUrl: https://www.w3.org/Style/CSS/
+  releaseApi: null
+  volatility: medium
+  lastKnownVersion: null
+- id: javascript
+  name: JavaScript
+  officialUrl: https://tc39.es/ecma262/
+  releaseApi: null
+  volatility: medium
+  lastKnownVersion: null
+- id: jquery
+  name: jQuery
+  officialUrl: https://jquery.com/
+  releaseApi: https://api.github.com/repos/jquery/jquery/releases/latest
+  volatility: medium
+  lastKnownVersion: null
+- id: wordpress
+  name: WordPress
+  officialUrl: https://wordpress.org/
+  releaseApi: null
+  volatility: high
+  lastKnownVersion: null
+  currentVersion: "7.0"
+  currentVersionCheckedAt: "2026-10-10"
+  currentVersionSource: https://raidboxes.io/en/blog/wordpress/wordpress-7-0/
+- id: almalinux
+  name: AlmaLinux
+  officialUrl: https://almalinux.org/
+  releaseApi: null
+  volatility: medium
+  lastKnownVersion: null
+  currentVersion: "10"
+  currentVersionCheckedAt: "2026-10-10"
+  currentVersionSource: https://wiki.almalinux.org/release-notes/10.0.html
+- id: laravel
+  name: Laravel
+  officialUrl: https://laravel.com/
+  releaseApi: https://api.github.com/repos/laravel/framework/releases/latest
+  volatility: high
+  lastKnownVersion: null
+  currentVersion: "13"
+  currentVersionCheckedAt: "2026-10-10"
+  currentVersionSource: https://www.maruzenjunkudo.co.jp/products/9784815625290
+- id: unity
+  name: Unity
+  officialUrl: https://unity.com/
+  releaseApi: null
+  volatility: high
+  lastKnownVersion: null
+  currentVersion: null

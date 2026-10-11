@@ -21,10 +21,14 @@ const llms = [
   "",
   "Evidence-first technology decisions with explicit conditions, negative recommendations, and review dates.",
   "",
+  "## Learning routes (goal → ordered skills → verified books)",
+  ...bundle.goals.filter((item) => item.published).map((item) => `- [${item.title}](${manifest.defaultDomain}/goals/${item.slug}): ${item.summary}`),
+  "",
+  "## Technology decisions",
   ...bundle.situations.filter((item) => item.published).map((item) => `- [${item.title}](${manifest.defaultDomain}/decisions/${item.slug}): ${item.summary}`),
   "",
   `Policy version: ${manifest.policyVersion}`,
   `Generated: ${bundle.generatedAt}`
 ].join("\n");
 fs.writeFileSync(path.join(process.cwd(), "public", "llms.txt"), `${llms}\n`);
-console.log(`Generated ${bundle.situations.length} situations and ${bundle.rules.length} rules.`);
+console.log(`Generated ${bundle.goals.length} goals, ${bundle.skills.length} skills, ${bundle.situations.length} situations and ${bundle.rules.length} rules.`);

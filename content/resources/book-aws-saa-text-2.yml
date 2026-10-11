@@ -1,0 +1,22 @@
+id: book-aws-saa-text-2
+type: book
+title: "AWS認定ソリューションアーキテクト アソシエイト テキスト&問題集 第2版"
+url: https://ndlsearch.ndl.go.jp/en/books/R100000002-I034507504
+authors:
+- "煤田弘法"
+- "西城俊介"
+- "上堂薗健"
+language: 日本語
+edition: "第2版"
+versionNote: "2026年刊・SAA-C03対応"
+publishedYear: 2026
+isbn: 978-4-7981-9492-9
+bookTopicIds:
+- "architecture-operations"
+description: "AWS認定ソリューションアーキテクト アソシエイト（SAA-C03）の出題範囲に沿ったテキストと問題集。模擬試験をダウンロードできる。"
+technologyIds:
+- "aws"
+concepts:
+- "cloud-architecture"
+currentUse: "出題範囲を、AWSの構成を考えるうえで押さえる項目の地図として使う。"
+limitations: "試験の版（SAA-C03）が改訂されたら差し替える。資格の取得そのものより、実際に構成を作って確かめることを優先する。"

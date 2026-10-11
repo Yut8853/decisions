@@ -1,0 +1,22 @@
+id: book-ichiban-git-3e
+type: book
+title: "いちばんやさしいGit&GitHubの教本 第3版 人気講師が教えるバージョン管理&共有入門"
+url: https://webtan.impress.co.jp/q/2025/02/48515
+authors:
+- "横田紋奈"
+- "宇賀神みずき"
+language: 日本語
+edition: "第3版"
+versionNote: "2025年刊"
+publishedYear: 2025
+isbn: 978-4-295-02092-9
+bookTopicIds:
+- "architecture-operations"
+description: "前半は手元のパソコンでのバージョン管理、後半はGitHubを使ったチームでの開発の進め方を、コマンド操作を中心に説明する入門書。"
+technologyIds:
+- "git"
+- "github"
+concepts:
+- "version-control"
+currentUse: "変更の記録・取り消し・共有・衝突の解決ができるようにする。"
+limitations: "GUIのツールではなく、コマンド操作が中心。"

@@ -1,0 +1,26 @@
+id: book-learn-threejs-4e
+type: book
+title: Learn Three.js, Fourth Edition
+url: https://www.oreilly.com/library/view/-/9781803233871
+authors:
+- Jos Dirksen
+language: 英語
+edition: 第4版
+versionNote: 2023年刊
+publishedYear: 2023
+isbn: 978-1-80323-387-1
+bookTopicIds:
+- performance-graphics
+- frontend
+description: Three.jsのシーン、ライト、マテリアル、ジオメトリ、glTFなど外部モデルの読み込み、アニメーション、シェーダーを章ごとに扱う本。Blender、React、TypeScriptとの組み合わせにも触れる。
+technologyIds:
+- threejs
+- gltf
+- react
+- typescript
+concepts:
+- scene
+- lighting
+- rendering
+currentUse: Three.jsで商品ビューアを実装しながら、ライト・マテリアル・モデルの読み込みで詰まった箇所を調べる。
+limitations: 英語の書籍で、出版社の分類は中級〜上級。2023年刊のため、その後のThree.jsの変更（WebGPURendererやTSLなど）は公式資料で確認する。

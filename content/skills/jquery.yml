@@ -1,0 +1,13 @@
+id: jquery
+slug: jquery
+title: jQuery
+summary: JavaScriptを短く書くために広く使われてきたライブラリです。
+canDo: 既存サイトに書かれたjQueryのコードを読んで直せる。
+domainIds: [web]
+prerequisites: []
+volatility: medium
+technologyIds: [jquery]
+status: legacy
+legacyNote: 今のJavaScriptは標準の機能だけで同じことが書けるため、これから学ぶ順番には入れません。既存サイトの改修でjQueryのコードに出会ったときに、必要な範囲だけ覚えれば十分です。
+resources: []
+lastReviewed: "2026-10-10"

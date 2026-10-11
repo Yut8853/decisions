@@ -1,0 +1,19 @@
+id: wordpress-theme-dev
+slug: wordpress-theme-dev
+title: "WordPressのオリジナルテーマ制作"
+summary: "デザインに合わせて、WordPressの見た目と構造を一から作る方法です。"
+canDo: "デザインカンプをもとに、WordPressのオリジナルテーマを作れる。"
+domainIds:
+- "cms"
+prerequisites:
+- "wordpress"
+- "php-basics"
+volatility: high
+technologyIds:
+- "wordpress"
+- "php"
+resources:
+- resourceId: book-wp-block-theme
+  level: intro
+  reason: "今のWordPressの標準であるブロックテーマを、サイトエディターとtheme.jsonで作る流れを、作りながら学べます。"
+lastReviewed: "2026-10-10"

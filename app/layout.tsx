@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { siteConfig } from "@/lib/site";
+import { schoolConfig, siteConfig } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -41,6 +41,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             </span>
           </Link>
           <nav aria-label="メインナビゲーション">
+            <Link href="/goals">学ぶ順番</Link>
             <Link href="/decisions">技術判断</Link>
             <Link href="/books">書籍</Link>
             <Link href="/methodology">判定方法</Link>
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </div>
           <div className="footer-links">
             <Link href="/about">このサイトについて</Link>
+            <a href={`${schoolConfig.url}?utm_source=decisions&utm_medium=referral&utm_campaign=footer`} target="_blank" rel="noreferrer">Web制作の学び方を相談する（運営元のスクール）</a>
             <a href="https://junkbranding.com" target="_blank" rel="noreferrer">junkbranding.com</a>
           </div>
         </footer>

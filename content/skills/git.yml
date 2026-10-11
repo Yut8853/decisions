@@ -1,0 +1,17 @@
+id: git
+slug: git
+title: "Git・GitHub"
+summary: "ファイルの変更履歴を記録し、チームで同じコードを安全に共有するための仕組みです。"
+canDo: "変更を記録して前の状態に戻したり、GitHubでほかの人と一緒に作業したりできる。"
+domainIds:
+- "team-dev"
+prerequisites: []
+volatility: low
+technologyIds:
+- "git"
+- "github"
+resources:
+- resourceId: book-ichiban-git-3e
+  level: intro
+  reason: "前半は手元のパソコンでのバージョン管理、後半はGitHubを使ったチームでの進め方を、コマンド操作を中心に学べます。2025年の第3版です。"
+lastReviewed: "2026-10-10"

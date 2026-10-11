@@ -1,0 +1,24 @@
+id: book-saitan-linuc1-v10
+type: book
+title: 最短突破 LinuCレベル1 バージョン10.0合格教本［101試験, 102試験対応］改訂新版
+url: https://gihyo.jp/book/2024/978-4-297-14236-0
+authors:
+- 河原木忠司
+language: 日本語
+edition: 改訂新版
+versionNote: 2024年刊・LinuC Version 10.0対応
+publishedYear: 2024
+isbn: 978-4-297-14236-0
+bookTopicIds:
+- architecture-operations
+description: LinuCレベル1（101試験・102試験）の出題範囲に沿って、Linuxの操作と管理を解説する教科書。
+technologyIds:
+- linuc
+- linux
+concepts:
+- linux-administration
+currentUse: 出題範囲を地図にして、Linuxの運用で必要な項目を一つずつ埋めていく。
+limitations: 資格試験の範囲に沿った本のため、実際の職場の構成や手順とは違う部分がある。
+targetExam:
+  certificationId: cert-linuc-level1
+  version: "10.0"

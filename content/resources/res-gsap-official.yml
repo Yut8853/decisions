@@ -1,0 +1,12 @@
+id: res-gsap-official
+type: official
+title: GSAP公式サイト（ドキュメント）
+url: https://gsap.com/
+language: 英語
+description: JavaScriptのアニメーションライブラリGSAPの公式サイト。スクロールに連動した演出を作るScrollTriggerプラグインの使い方も含まれる。
+technologyIds:
+- gsap
+concepts:
+- animation
+currentUse: スクロール連動の演出を、公式の説明とコード例で確認しながら実装する。
+limitations: 英語のサイト。日本語で読める現行の入門書は見つかっていない。

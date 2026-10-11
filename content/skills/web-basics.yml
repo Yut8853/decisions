@@ -1,0 +1,17 @@
+id: web-basics
+slug: web-basics
+title: Webの仕組み
+summary: ブラウザでページを開いたときに、サーバー・DNS・HTTPで何が起きているかの全体像です。
+canDo: HTMLやCSSを書く前に、作ったファイルがどこに置かれ、どうやって閲覧者に届くのかを説明できる。
+domainIds: [web, security]
+prerequisites: []
+volatility: low
+technologyIds: [http]
+resources:
+- resourceId: res-mdn-web-standards
+  level: intro
+  reason: 無料で読める公式の学習資料です。ページが表示されるまでの流れを短く押さえられます。
+- resourceId: book-web-gijutsu-kihon-2e
+  level: intro
+  reason: HTTP、DNS、サーバーなど、Web制作で出てくる用語と仕組みを、見開きの図解で一通り確認できます。
+lastReviewed: "2026-10-10"

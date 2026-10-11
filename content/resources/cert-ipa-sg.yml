@@ -1,0 +1,19 @@
+id: cert-ipa-sg
+type: certification
+title: 情報セキュリティマネジメント試験（IPA）
+url: https://www.ipa.go.jp/shiken/syllabus/gaiyou.html
+provider: IPA（情報処理推進機構）
+examVersion: 現行制度（2026年度まで）
+syllabusUrls:
+- https://www.ipa.go.jp/shiken/syllabus/gaiyou.html
+revisionNote: IPAは2027年度から新しい試験制度を始める予定で、2026年に新制度のシラバス案を順次公開しています。対策本は、新制度に対応した版が出てから選んでください。
+revisionSourceUrl: https://www.ipa.go.jp/shiken/syllabus/henkou/2026/20260630.html
+verifiedAt: "2026-10-10"
+language: 日本語
+description: IPAが実施する国家試験。組織の情報セキュリティを守るための知識と技能を範囲とする。
+technologyIds:
+- information-security
+concepts:
+- information-security
+currentUse: 取得すること自体より、シラバスを「組織の情報セキュリティで押さえるべき項目の一覧」として使う。
+limitations: シラバスは試験向けの項目一覧で、読み物ではない。各項目の理解には別の資料が必要になる。

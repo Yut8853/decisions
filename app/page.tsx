@@ -1,84 +1,100 @@
 import Link from "next/link";
-import { getPublishedSituations } from "@/lib/content";
-import { getFeaturedSituationChoices, getVisibleSituationCategories } from "@/lib/situation-categories";
+import { getDomainsWithGoals } from "@/lib/content";
 
 export default function HomePage() {
-  const situations = getPublishedSituations();
-  const categories = getVisibleSituationCategories(situations);
-  const situationChoices = getFeaturedSituationChoices(categories);
+  const domains = getDomainsWithGoals();
+  const goalCount = domains.reduce((sum, domain) => sum + domain.goals.length, 0);
 
   return (
     <>
-      <section className="hero shell">
-        <p className="eyebrow">JUNKBRANDINGの技術判断集</p>
-        <h1>
-          技術を薦めるのではなく、<br />
-          <em>判断できる根拠</em>を残す。
-        </h1>
-        <p className="hero-copy">
-          作りたいものと条件を選ぶと、おすすめの実装案と避けるべき案が分かります。判断の根拠、確認日、向いていない条件も掲載しています。
-        </p>
-        <div className="hero-actions">
-          <Link className="button primary" href="#categories">やりたいことから探す</Link>
-          <Link className="button ghost" href="/decisions">すべての判断を見る</Link>
+      <section aria-labelledby="home-hero-title" className="hero shell">
+        <div className="hero-main">
+          <p className="eyebrow">作りたいもの・やりたい仕事から、学ぶ順番と本を探す</p>
+          <h1 id="home-hero-title">
+            何をしたいですか？
+            <span>学ぶ順番と、今読むべき本を案内します。</span>
+          </h1>
+          <p className="hero-copy">
+            やりたいことを選ぶと、何をどの順番で学べばよいか、各段階で読む本、今は学ばなくていいものを、理由とバージョンの確認つきで表示します。
+          </p>
+          <div className="hero-actions">
+            <Link className="button primary" href="#goals">やりたいことを選ぶ</Link>
+          </div>
         </div>
+
+        <aside aria-labelledby="hero-guide-title" className="hero-guide">
+          <div className="hero-guide-header">
+            <div>
+              <h2 id="hero-guide-title">使い方は3段階</h2>
+              <p>目的、順番、本の順に見ていきます。</p>
+            </div>
+            <span>{domains.length}分野・{goalCount}件</span>
+          </div>
+          <ol role="list">
+            <li>
+              <span aria-hidden="true" className="hero-step-number">01</span>
+              <div>
+                <h3>やりたいことを選ぶ</h3>
+                <p>作りたいもの、就きたい仕事、守りたいものから選びます。</p>
+              </div>
+            </li>
+            <li>
+              <span aria-hidden="true" className="hero-step-number">02</span>
+              <div>
+                <h3>学ぶ順番を見る</h3>
+                <p>土台になるものから順に並んでいます。回り道になるものも分かります。</p>
+              </div>
+            </li>
+            <li>
+              <span aria-hidden="true" className="hero-step-number">03</span>
+              <div>
+                <h3>本を選ぶ</h3>
+                <p>対象バージョンと刊行年を確認した本を、その段階で読む理由つきで紹介します。</p>
+              </div>
+            </li>
+          </ol>
+        </aside>
       </section>
 
-      <section className="shell section-block" id="categories">
+      <section className="shell section-block" id="goals">
         <div className="section-heading">
           <div>
             <p className="eyebrow">やりたいことから探す</p>
-            <h2>まず、近いカテゴリーを選ぶ</h2>
+            <h2>近いものを選んでください</h2>
           </div>
-          <Link href="/decisions">全{situations.length}件を一覧で見る →</Link>
+          <Link href="/goals">一覧で見る →</Link>
         </div>
-
-        <nav aria-label="カテゴリーで絞る" className="home-category-grid">
-          {categories.map((category) => (
-            <Link className="home-category-card" href={`/decisions#category-${category.id}`} key={category.id}>
-              <div>
-                <small>{category.situations.length}件</small>
-                <h3>{category.title}</h3>
-                <p>{category.prompt}</p>
-              </div>
-              <span>まとめて見る →</span>
-            </Link>
-          ))}
-        </nav>
-
-        <div className="home-category-heading">
-          <div>
-            <h3 id="home-purpose-heading">具体的な目的から選ぶ</h3>
-            <p>各カテゴリーから代表的な目的を掲載しています。</p>
+        {domains.map((domain) => (
+          <div className="goal-domain" key={domain.id}>
+            <h3 id={`home-domain-${domain.id}`}>{domain.title}</h3>
+            <nav aria-labelledby={`home-domain-${domain.id}`}>
+              <ul className="home-choice-grid">
+                {domain.goals.map((goal) => (
+                  <li key={goal.id}>
+                    <Link className="home-choice-card" href={`/goals/${goal.slug}`}>
+                      <span className="home-choice-category">{domain.title}</span>
+                      <h3>{goal.title}</h3>
+                      <p>{goal.summary}</p>
+                      <span className="home-choice-link">学ぶ順番を見る →</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
-          <Link href="/decisions">全{situations.length}件を見る →</Link>
-        </div>
-        <nav aria-labelledby="home-purpose-heading">
-          <ul className="home-choice-grid">
-            {situationChoices.map(({ situation, categoryTitle }) => (
-              <li key={situation.id}>
-                <Link className="home-choice-card" href={`/decisions/${situation.slug}`}>
-                  <span className="home-choice-category">{categoryTitle}</span>
-                  <h3>{situation.title}</h3>
-                  <p>{situation.summary}</p>
-                  <span className="home-choice-link">条件を選んで比較する →</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        ))}
       </section>
 
       <section className="shell principles section-block">
         <div>
-          <p className="eyebrow">このサイトが残すもの</p>
-          <h2>AIの回答だけでは見えにくい判断材料を、公開記録にする。</h2>
+          <p className="eyebrow">このサイトの決めごと</p>
+          <h2>学ぶ順番と本の選び方を、理由つきで公開する。</h2>
         </div>
         <ol>
-          <li><strong>条件</strong><span>同じ目的でも、検索で見つけてもらうこと、納期、使用中の開発環境、端末などの条件に合わせて答えを変える。</span></li>
-          <li><strong>向いていない条件</strong><span>何を使うかだけでなく、どんな場合に使わないかも必ず示す。</span></li>
-          <li><strong>根拠と確認日</strong><span>何を根拠に、いつ確認した判断なのかをたどれるようにする。</span></li>
-          <li><strong>再現できる判定基準</strong><span>曖昧な点数ではなく、該当した判定基準から理由を組み立てる。</span></li>
+          <li><strong>順番は前提関係から決める</strong><span>「この技術の前に何が必要か」を記録し、そこから学ぶ順番を組み立てます。</span></li>
+          <li><strong>今は学ばなくていいものも書く</strong><span>目的に対して回り道になる技術を、理由とあわせて示します。</span></li>
+          <li><strong>本はバージョンを確認してから載せる</strong><span>対象バージョン、刊行年、試験の版を現行と比べ、古くなった部分があれば書きます。</span></li>
+          <li><strong>資格は学ぶ範囲の地図として使う</strong><span>取ること自体より、出題範囲を「何を学べば一通りか」の一覧として使います。</span></li>
         </ol>
       </section>
     </>

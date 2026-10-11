@@ -1,0 +1,20 @@
+id: book-aws-zukai-2
+type: book
+title: "図解即戦力 Amazon Web Servicesのしくみと技術がこれ1冊でしっかりわかる教科書［改訂2版］"
+url: https://gihyo.jp/book/2025/978-4-297-14820-1
+authors:
+- "小笠原種高"
+language: 日本語
+edition: "改訂2版"
+versionNote: "2025年刊"
+publishedYear: 2025
+isbn: 978-4-297-14820-1
+bookTopicIds:
+- "architecture-operations"
+description: "クラウドとシステム構築の基礎から、主要なAWSサービスの役割とつながりまでを、図解で説明する本。"
+technologyIds:
+- "aws"
+concepts:
+- "cloud"
+currentUse: "AWSの主要なサービスが何をするもので、どう組み合わせるのかを理解する。"
+limitations: "手順書ではないため、実際の操作はAWSの公式ドキュメントで確認する。"

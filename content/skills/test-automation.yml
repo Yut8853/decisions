@@ -1,0 +1,22 @@
+id: test-automation
+slug: test-automation
+title: "自動テストの考え方と導入"
+summary: "どの部分を自動テストにするかを決め、開発の流れに組み込むための考え方です。"
+canDo: "壊れると困る部分から自動テストにする計画を立て、導入の進め方を説明できる。"
+domainIds:
+- "testing"
+prerequisites:
+- "web-testing"
+- "git"
+volatility: medium
+technologyIds:
+- "test-automation"
+- "software-testing"
+resources:
+- resourceId: book-test-tetteishinan
+  level: intro
+  reason: "テスト自動化を含むテスト技術を体系的に学び、どこから自動にするか、どう導入するかを判断できるようになります。2025年刊です。"
+- resourceId: book-test-theory
+  level: reference
+  reason: "自動テストの章で、手で行うテストとの違いと役割分担を確認できます。"
+lastReviewed: "2026-10-10"

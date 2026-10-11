@@ -1,0 +1,20 @@
+id: book-studio-nocode
+type: book
+title: "基礎と実践で学ぶ Studio ノーコードの教科書"
+url: https://gihyo.jp/book/2026/978-4-297-15747-0
+authors:
+- "飛企画株式会社"
+language: 日本語
+versionNote: "2026年刊"
+publishedYear: 2026
+isbn: 978-4-297-15747-0
+bookTopicIds:
+- "frontend"
+- "design-ux"
+description: "Studioの基本操作、レスポンシブ対応の前提となるボックスレイアウトの考え方、CMSの構築、SEO対策、Google Analytics連携、公開後の運用までを、基本と実践の演習で学ぶ本。"
+technologyIds:
+- "studio"
+concepts:
+- "no-code"
+currentUse: "Studioでレスポンシブ対応のサイトを作り、CMSで更新して公開できるようにする。"
+limitations: "Studioの画面や機能は更新されるため、刊行後の変更は公式のヘルプで確認する。"

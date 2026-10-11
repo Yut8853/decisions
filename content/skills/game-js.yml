@@ -1,0 +1,15 @@
+id: game-js
+slug: game-js
+title: "JavaScriptでのゲーム作り（Canvas）"
+summary: "ブラウザの描画機能を使って、JavaScriptでゲームを作る方法です。"
+canDo: "ブラウザで遊べる簡単なゲームを作れる。"
+domainIds:
+- "game"
+prerequisites:
+- "javascript-basics"
+volatility: medium
+technologyIds:
+- "canvas"
+status: planned
+resources: []
+lastReviewed: "2026-10-10"
